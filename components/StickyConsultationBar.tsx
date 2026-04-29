@@ -9,7 +9,7 @@ export default function StickyConsultationBar() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > window.innerHeight * 0.9)
+    const handleScroll = () => setScrolled(window.scrollY > window.innerHeight * 0.5)
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])

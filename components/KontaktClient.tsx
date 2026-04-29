@@ -107,6 +107,17 @@ export default function KontaktClient() {
           >
             Klar til å starte et prosjekt, eller vil du bare utforske mulighetene? Vi svarer alltid raskt.
           </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={heroInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.4, delay: 0.35 }}
+            className="text-sm text-fg-muted mt-4"
+          >
+            Har du et konkret prosjekt?{' '}
+            <Link href="/tilbud" className="text-accent font-semibold hover:underline">
+              Gå til tilbudsskjema →
+            </Link>
+          </motion.p>
 
           <motion.div
             initial={{ opacity: 0, scale: 0.85, y: 8 }}

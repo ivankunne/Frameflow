@@ -17,7 +17,7 @@ export default function AvailabilityPill() {
 
   return (
     <div
-      className={`fixed right-5 z-40 transition-all duration-500 ${
+      className={`fixed right-5 z-40 transition-all duration-500 hidden md:block ${
         visible
           ? 'opacity-100 translate-y-0'
           : 'opacity-0 translate-y-3 pointer-events-none'

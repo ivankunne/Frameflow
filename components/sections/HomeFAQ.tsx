@@ -5,16 +5,17 @@ import Link from 'next/link'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
 
 const faqs = [
-  { q: 'Hvilke tjenester tilbyr dere?', a: 'Frameflow leverer webdesign, sosiale medier strategi, foto og video produksjon, branding og SEO. Vi skreddersyr tjenestene til hver enkelt bedrifts behov for å skape målbare resultater.' },
-  { q: 'Kan dere håndtere alle sosiale medieplattformer?', a: 'Ja, vi jobber med Instagram, Facebook, TikTok, LinkedIn og Pinterest. Vi holder oss oppdatert på de nyeste trendene for hver plattform slik at innholdet ditt engasjerer maksimalt.' },
-  { q: 'Hva gjør Frameflow annerledes enn andre byrå?', a: 'Som et lite byrå snakker du alltid direkte med personen som faktisk gjør jobben – ingen mellommenn. Vi kombinerer kreativitet med datadrevne strategier og skreddersyr alle løsninger til din bedrift.' },
-  { q: 'Hvor lang tid tar det å lage en nettside?', a: 'En standard bedriftsnettside tar typisk 3–6 uker fra oppstart til lansering, avhengig av omfang og tilgang på innhold. Vi setter opp en klar tidsplan ved prosjektoppstart.' },
-  { q: 'Hvordan kommer vi i gang?', a: 'Kontakt oss via kontaktskjemaet, e-post eller ring +47 99 85 37 81. Vi starter med en gratis konsultasjon for å diskutere dine mål, og lager deretter en skreddersydd strategi.' },
+  { q: 'Hva koster en nettside i Bergen?', a: 'En bedriftsnettside starter fra 12 000 kr. Prisen avhenger av omfang, funksjonalitet og design. Vi gir alltid fast pris – ingen overraskelser etterpå. Be om et uforpliktende tilbud, så får du et konkret tall innen 24 timer.' },
+  { q: 'Hvilke tjenester tilbyr dere?', a: 'Frameflow leverer webdesign, app utvikling, foto og video produksjon, branding og sosiale medier – alt under ett tak. Vi skreddersyr tjenestene til din bedrift og leverer målbare resultater.' },
+  { q: 'Hva gjør Frameflow annerledes enn andre byrå?', a: 'Du snakker alltid direkte med Ivan – personen som faktisk gjør jobben. Ingen mellommenn, ingen junior-leveranser. Vi kjenner Bergen-markedet og jobber med fast pris og fornøyd garanti.' },
+  { q: 'Hvor lang tid tar det å lage en nettside?', a: 'En standard bedriftsnettside tar typisk 3–6 uker fra oppstart til lansering, avhengig av omfang og tilgang på innhold. Vi setter opp en klar tidsplan fra dag én.' },
+  { q: 'Jobber dere kun med bedrifter i Bergen?', a: 'Vi har base i Bergen og kjenner det lokale markedet godt, men jobber like gjerne med bedrifter i resten av Norge og internasjonalt – som med Marbesa Project 94 i Marbella.' },
+  { q: 'Hvordan kommer vi i gang?', a: 'Book en gratis 30-minutters samtale via kontaktskjemaet, e-post eller ring +47 99 85 37 81. Ingen forpliktelser – vi hører om prosjektet ditt og forteller deg ærlig hva vi kan gjøre.' },
 ]
 
 const chatMessages = [
   { from: 'client', text: 'Hei! Hva koster en nettside?' },
-  { from: 'ivan', text: 'Hei! La oss ta en gratis samtale og se hva som passer for deg.' },
+  { from: 'ivan', text: 'Nettsider starter fra 12 000 kr. Book en gratis samtale, så gir vi deg fast pris!' },
   { from: 'client', text: 'Perfekt, når passer det?' },
 ]
 

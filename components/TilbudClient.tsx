@@ -103,9 +103,20 @@ export default function TilbudClient() {
             initial={{ opacity: 0, y: 20 }}
             animate={heroInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.25 }}
-            className="text-fg-muted text-lg leading-relaxed mb-8"
+            className="text-fg-muted text-lg leading-relaxed mb-3"
           >
             Fortell oss om prosjektet ditt. Svar innen 24 timer – ingen forpliktelser.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={heroInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.4, delay: 0.35 }}
+            className="text-sm text-fg-muted mb-8"
+          >
+            Vil du bare ta en prat først?{' '}
+            <Link href="/kontakt" className="text-accent font-semibold hover:underline">
+              Book en gratis samtale →
+            </Link>
           </motion.p>
 
           {/* Risk-removal trio */}

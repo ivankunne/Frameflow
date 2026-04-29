@@ -79,9 +79,15 @@ export default function Navigation() {
           <div className="hidden md:flex items-center gap-3">
             <Link
               href="/kontakt"
+              className="text-sm font-semibold text-fg-muted hover:text-fg border border-border hover:border-accent/40 bg-bg px-5 py-2 rounded-lg transition-all min-h-[44px] flex items-center shadow-card"
+            >
+              Book samtale
+            </Link>
+            <Link
+              href="/tilbud"
               className="text-sm font-semibold bg-accent hover:bg-accent-hover text-white px-5 py-2 rounded-lg transition-colors shadow-blue-sm min-h-[44px] flex items-center"
             >
-              Book gratis samtale
+              Få tilbud →
             </Link>
           </div>
 

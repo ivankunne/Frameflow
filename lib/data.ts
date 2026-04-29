@@ -416,6 +416,96 @@ Start med å optimalisere Google Business Profile og nettsiden, bygg e-postliste
 Lurer du på hvor du bør starte for din spesifikke bedrift? Kontakt Frameflow for en gratis strategisamtale.
     `.trim(),
   },
+  {
+    slug: 'hva-koster-webdesign-bergen-prisguide-2025',
+    title: 'Hva koster webdesign i Bergen? Prisguide 2025',
+    excerpt: 'Hva bør du egentlig betale for en nettside i Bergen? Vi gir deg en ærlig prisguide – fra enkle løsninger til skreddersydde nettsider med SEO og CMS.',
+    category: 'Web design',
+    date: '10. mars 2025',
+    updatedAt: '2025-03-10',
+    readTime: '6 min',
+    relatedService: { title: 'Web design', href: '/tjenester/webdesign' },
+    content: `
+## Hva koster en nettside i Bergen?
+
+Dette er et av de vanligste spørsmålene vi får fra Bergen-bedrifter. Svaret avhenger av hva du faktisk trenger – men vi gir deg en ærlig oversikt her.
+
+## Typiske priser i Bergen-markedet
+
+### Enkle løsninger (5 000 – 12 000 kr)
+Maler fra Squarespace, Wix eller WordPress. Passer for nystartede bedrifter med begrenset budsjett. Begrensede muligheter for tilpasning og SEO-optimalisering, men en god start.
+
+### Skreddersydde nettsider (12 000 – 40 000 kr)
+Profesjonelt design bygget fra bunnen – tilpasset din merkevare, optimalisert for søkemotorer og konvertering. Dette er hva de fleste etablerte Bergen-bedrifter bør investere i.
+
+### E-handel og komplekse løsninger (40 000 kr+)
+Nettbutikker, bookingsystemer, kundeportaler og integrasjoner mot back-end systemer. Krever mer tid og kompetanse.
+
+## Hva er inkludert i prisen?
+
+Hos Frameflow inkluderer en nettside alltid:
+- Responsivt design (fungerer på alle enheter)
+- SEO-optimalisering fra dag én
+- CMS slik at du selv kan oppdatere innhold
+- Grunnleggende analytics-oppsett
+- Én runde med revisjoner etter levering
+
+## Hva bør du unngå?
+
+**Billigste alternativ vinner ikke alltid.** En nettside til 3 000 kr som ingen finner på Google er ikke en investering – det er en utgift. En nettside som rangerer for relevante søk i Bergen og konverterer besøkende til kunder er derimot en av de beste markedsføringsinvesteringene du kan gjøre.
+
+## Vår anbefaling
+
+For de fleste Bergen-bedrifter er 12 000 – 25 000 kr et realistisk og fornuftig budsjett for en profesjonell nettside som faktisk leverer resultater. Vi gir alltid fast pris og uforpliktende tilbud.
+
+Kontakt Frameflow for en gratis prat om hva som passer din bedrift.
+    `.trim(),
+  },
+  {
+    slug: 'beste-markedsforingsbyrå-bergen-2025',
+    title: 'Markedsføringsbyrå i Bergen: Slik velger du riktig partner i 2025',
+    excerpt: 'Ikke alle byråer i Bergen passer for alle bedrifter. Her er hva du bør se etter – og spørre om – når du velger markedsføringsbyrå i Bergen.',
+    category: 'Markedsføring',
+    date: '5. april 2025',
+    updatedAt: '2025-04-05',
+    readTime: '7 min',
+    relatedService: { title: 'Tjenester', href: '/tjenester' },
+    content: `
+## Å velge riktig byrå er avgjørende
+
+Bergen har et voksende marked av digitale byråer og frilanser. Valget du tar her kan ha stor innvirkning på veksten din – i begge retninger. Her er hva vi mener du bør se etter.
+
+## 1. Spesialisering vs. bredde
+
+Noen byråer er dypt spesialiserte (f.eks. kun SEO, kun Meta-annonser). Andre, som Frameflow, tilbyr helhetlige løsninger under ett tak – web, branding, foto og sosiale medier. Spørsmålet er: hva trenger du mest?
+
+Hvis du trenger en komplett digital tilstedeværelse bygget opp fra bunnen, er ett byrå som kan håndtere alt ofte mer effektivt enn å koordinere mellom fire leverandører.
+
+## 2. Hvem gjør faktisk jobben?
+
+Dette er et kritisk spørsmål. Mange byråer selger prosjektet via erfarne folk – og leverer via juniorer eller outsourcer arbeidet. Spør direkte: "Hvem vil jobbe på kontoen vår dag til dag?"
+
+Hos Frameflow er svaret alltid: Ivan. Én person, full ansvarlighet.
+
+## 3. Kjenner de Bergen-markedet?
+
+Lokal kunnskap gir konkurransefortrinn. Et byrå som forstår Bergen-mentaliteten, vet hvilke kanaler som funker for lokale bedrifter, og har referanser fra Bergen-kunder, er verdt mer enn et oslobyrå som behandler Bergen som et generisk marked.
+
+## 4. Transparente priser og tydelige leveranser
+
+Unngå byråer som ikke kan gi deg et konkret tilbud uten ukesvis med "analyse". Et godt byrå skal kunne gi deg en fast pris og tydelige leveranser etter en innledende samtale.
+
+## 5. Resultater – ikke aktivitet
+
+Spør om konkrete resultater: Rangerer de nettsidene sine kunder på Google? Kan de vise til økt trafikk, leads eller salg? Aktivitet (antall innlegg, timer brukt) er ikke det samme som resultater.
+
+## Hva Frameflow tilbyr Bergen-bedrifter
+
+Vi er et lite byrå med én kontaktperson, fast pris, fornøyd garanti og dyp lokalkunnskap om Bergen. Vi tar på oss 2–3 nye prosjekter i måneden – og prioriterer bedrifter vi tror vi kan hjelpe til å vokse.
+
+Nysgjerrig? Book en gratis samtale og se om vi passer for deg.
+    `.trim(),
+  },
 ]
 
 export const projects: Project[] = [

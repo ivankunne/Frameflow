@@ -7,10 +7,10 @@ import { WebMockup, CameraMockup, SocialMockup, BrandMockup, AppMockup } from '@
 
 // ─── Service data ──────────────────────────────────────────────────────────
 const services = [
-  { number: '01', title: 'Web design', description: 'Raske, konverteringsfokuserte nettsider for Bergen-bedrifter med SEO innebygd fra dag én. Ingen rot – bare det som fungerer.', href: '/tjenester/webdesign', tags: ['Next.js', 'Webflow', 'SEO'], Mockup: WebMockup },
-  { number: '02', title: 'App utvikling', description: 'Skreddersydde apper som løser reelle problemer – fra MVP til fullskala. Vi bygger apper som folk faktisk bruker daglig.', href: '/tjenester/app-utvikling', tags: ['React', 'React Native', 'Full-stack'], Mockup: AppMockup },
-  { number: '03', title: 'Foto og videografi', description: 'Autentisk foto og video produksjon i Bergen – ser profesjonelt ut, forteller din historie og fungerer på alle flater.', href: '/tjenester/foto-og-videografi', tags: ['Produktfoto', 'Reels', 'Video'], Mockup: CameraMockup },
-  { number: '04', title: 'Branding', description: 'Vi former utseendet, stemmen og følelsen av merkevaren din – skreddersydd for Bergen-markedet, konsekvent og umiskjennelig.', href: '/tjenester/branding', tags: ['Logo', 'Identitet', 'Guidelines'], Mockup: BrandMockup },
+  { number: '01', title: 'Web design', pricingFrom: 'Fra 12 000 kr', description: 'Raske, konverteringsfokuserte nettsider for Bergen-bedrifter med SEO innebygd fra dag én. Ingen rot – bare det som fungerer.', href: '/tjenester/webdesign', tags: ['Next.js', 'Webflow', 'SEO'], Mockup: WebMockup },
+  { number: '02', title: 'App utvikling', pricingFrom: 'Fra 35 000 kr', description: 'Skreddersydde apper som løser reelle problemer – fra MVP til fullskala. Vi bygger apper som folk faktisk bruker daglig.', href: '/tjenester/app-utvikling', tags: ['React', 'React Native', 'Full-stack'], Mockup: AppMockup },
+  { number: '03', title: 'Foto og videografi', pricingFrom: 'Fra 3 500 kr', description: 'Autentisk foto og video produksjon i Bergen – ser profesjonelt ut, forteller din historie og fungerer på alle flater.', href: '/tjenester/foto-og-videografi', tags: ['Produktfoto', 'Reels', 'Video'], Mockup: CameraMockup },
+  { number: '04', title: 'Branding', pricingFrom: 'Fra 6 000 kr', description: 'Vi former utseendet, stemmen og følelsen av merkevaren din – skreddersydd for Bergen-markedet, konsekvent og umiskjennelig.', href: '/tjenester/branding', tags: ['Logo', 'Identitet', 'Guidelines'], Mockup: BrandMockup },
 ]
 
 export default function HomeServices() {
@@ -31,13 +31,13 @@ export default function HomeServices() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {services.map(({ number, title, description, href, tags, Mockup }, i) => (
+          {services.map(({ number, title, pricingFrom, description, href, tags, Mockup }, i) => (
             <motion.div key={number} initial={{ opacity: 0, scale: 0.96, y: 16 }} animate={isInView ? { opacity: 1, scale: 1, y: 0 } : {}} transition={{ duration: 0.4, delay: 0.12 + i * 0.09 }}>
               <Link href={href} className="group block bg-white border border-border rounded-xl p-6 hover:border-accent hover:shadow-blue-sm transition-all duration-250 h-full">
                 <div className="mb-6"><Mockup visible={isInView} /></div>
                 <div className="flex items-start justify-between mb-3">
                   <span className="text-xs font-semibold text-fg-muted font-mono">{number}</span>
-                  <span aria-hidden className="text-fg-muted group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200 text-sm">↗</span>
+                  <span className="text-xs font-semibold text-accent bg-accent-light border border-accent/20 px-2.5 py-1 rounded-full">{pricingFrom}</span>
                 </div>
                 <h3 className="display-text text-2xl text-fg mb-2 group-hover:text-accent transition-colors duration-200">{title}</h3>
                 <p className="text-fg text-[15px] leading-relaxed mb-5">{description}</p>

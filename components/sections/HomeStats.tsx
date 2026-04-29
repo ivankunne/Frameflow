@@ -17,10 +17,10 @@ const stats = [
     note: 'Web, foto, sosiale medier og branding',
   },
   {
-    value: 300,
+    value: 140,
     suffix: '%',
-    label: 'Mer engasjement',
-    note: 'Gjennomsnitt på tvers av kanaler',
+    label: 'Mer organisk trafikk',
+    note: 'Artadent · 3 måneder etter lansering',
   },
   {
     value: 24,
