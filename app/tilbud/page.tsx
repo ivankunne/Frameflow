@@ -3,7 +3,7 @@ import { JsonLd, organizationSchema } from '@/components/JsonLd'
 import TilbudClient from '@/components/TilbudClient'
 
 export const metadata: Metadata = {
-  title: 'Be om tilbud',
+  title: 'Få gratis tilbud – Frameflow markedsføringsbyrå Bergen',
   description:
     'Få et skreddersydd tilbud fra Frameflow markedsføringsbyrå i Bergen. Webdesign, foto og video, sosiale medier og branding. Svar innen 24 timer.',
   alternates: { canonical: 'https://www.frameflow.no/tilbud' },

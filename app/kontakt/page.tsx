@@ -3,7 +3,7 @@ import { JsonLd, organizationSchema } from '@/components/JsonLd'
 import KontaktClient from '@/components/KontaktClient'
 
 export const metadata: Metadata = {
-  title: 'Kontakt Frameflow',
+  title: 'Kontakt Frameflow – Markedsføringsbyrå i Bergen',
   description:
     'Ta kontakt med Frameflow markedsføringsbyrå i Bergen. Ring +47 99 85 37 81 eller send oss en melding. Gratis konsultasjon.',
   alternates: { canonical: 'https://www.frameflow.no/kontakt' },

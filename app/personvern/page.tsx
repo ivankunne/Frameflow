@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { JsonLd } from '@/components/JsonLd'
 
 export const metadata: Metadata = {
   title: 'Personvernserklæring – Frameflow Bergen',
@@ -20,8 +21,19 @@ export const metadata: Metadata = {
   },
 }
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.frameflow.no' },
+    { '@type': 'ListItem', position: 2, name: 'Personvern', item: 'https://www.frameflow.no/personvern' },
+  ],
+}
+
 export default function PersonvernPage() {
   return (
+    <>
+    <JsonLd data={breadcrumbSchema} />
     <section className="pt-32 pb-24 px-6 lg:px-8 bg-white min-h-screen">
       <div className="max-w-3xl mx-auto">
         {/* Breadcrumb */}
@@ -189,5 +201,6 @@ export default function PersonvernPage() {
         </div>
       </div>
     </section>
+    </>
   )
 }

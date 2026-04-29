@@ -29,6 +29,7 @@ export const FOOTER_NAV_LINKS = [
 
 export const SERVICE_LINKS = [
   { href: '/tjenester/webdesign', label: 'Web design' },
+  { href: '/tjenester/app-utvikling', label: 'App utvikling' },
   { href: '/tjenester/foto-og-videografi', label: 'Foto og videografi' },
   { href: '/tjenester/sosiale-medier', label: 'Sosiale medier' },
   { href: '/tjenester/branding', label: 'Branding' },

@@ -127,7 +127,69 @@ export default function HomeHero() {
             </motion.div>
           </div>
 
-          {/* Right — animated browser mockup */}
+          {/* Mobile-only proof cards */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.55 }}
+            className="block lg:hidden mt-8"
+          >
+            <div className="grid grid-cols-2 gap-3">
+              {/* Artadent result card */}
+              <div className="bg-white border border-border rounded-xl p-3.5 shadow-card relative overflow-hidden">
+                <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-accent to-blue-400" />
+                <p className="text-[9px] font-semibold text-fg-muted uppercase tracking-widest mb-1">Web · SEO</p>
+                <p className="text-xs font-bold text-fg mb-3">Artadent</p>
+                <div className="flex items-end gap-0.5 h-7 mb-2">
+                  {[30, 42, 55, 68, 82, 100].map((h, i) => (
+                    <motion.div
+                      key={i}
+                      className="flex-1 rounded-sm"
+                      style={{ background: `rgba(33,114,181,${0.25 + i * 0.13})` }}
+                      initial={{ height: 0 }}
+                      animate={isInView ? { height: `${h * 0.28}px` } : {}}
+                      transition={{ duration: 0.4, delay: 0.7 + i * 0.06, ease: 'easeOut' }}
+                    />
+                  ))}
+                </div>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-sm font-bold text-accent">+140%</span>
+                  <span className="text-[9px] text-fg-muted">trafikk</span>
+                </div>
+              </div>
+
+              {/* h-orbit result card */}
+              <div className="bg-white border border-border rounded-xl p-3.5 shadow-card relative overflow-hidden">
+                <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500" />
+                <p className="text-[9px] font-semibold text-fg-muted uppercase tracking-widest mb-1">App utvikling</p>
+                <p className="text-xs font-bold text-fg mb-3">h-orbit</p>
+                <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-lg p-2 mb-2">
+                  <div className="flex items-center gap-1.5 mb-1.5">
+                    <div className="w-3.5 h-3.5 rounded bg-cyan-300/50 flex items-center justify-center shrink-0">
+                      <span className="text-[7px] text-cyan-600 font-bold">♪</span>
+                    </div>
+                    <div className="h-1.5 w-10 bg-fg/10 rounded" />
+                  </div>
+                  <div className="flex gap-1">
+                    {[1, 2, 3].map((n) => (
+                      <div key={n} className="flex-1 h-1 bg-fg/10 rounded" />
+                    ))}
+                  </div>
+                </div>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-sm font-bold text-cyan-600">2 000+</span>
+                  <span className="text-[9px] text-fg-muted">artister</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-center gap-1.5 mt-3">
+              <span className="w-1 h-1 rounded-full bg-accent/60" />
+              <span className="text-[10px] text-fg-muted">Siste prosjekter · Bergen, Norge</span>
+            </div>
+          </motion.div>
+
+          {/* Right — animated browser mockup (desktop only) */}
           <motion.div
             initial={{ opacity: 0, x: 24 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}

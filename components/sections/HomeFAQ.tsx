@@ -23,17 +23,21 @@ function ChatWidget({ visible }: { visible: boolean }) {
   return (
     <div className="mt-8 bg-white border border-border rounded-xl overflow-hidden shadow-card">
       {/* Header */}
-      <div className="flex items-center gap-3 px-4 py-3 border-b border-border bg-bg-2">
-        <div className="relative">
-          <div className="w-7 h-7 rounded-full bg-accent flex items-center justify-center">
-            <span className="text-white text-[10px] font-bold display-text">FF</span>
+      <div className="flex items-center justify-between px-4 py-3 border-b border-border bg-bg-2">
+        <div className="flex items-center gap-3">
+          <div className="relative">
+            <div className="w-7 h-7 rounded-full bg-accent flex items-center justify-center">
+              <span className="text-white text-[10px] font-bold display-text">FF</span>
+            </div>
           </div>
-          <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-green-400 border-2 border-white" />
+          <div>
+            <p className="text-xs font-semibold text-fg leading-none">Ivan · Frameflow</p>
+            <p className="text-[10px] text-fg-muted mt-0.5">Svarer innen 24 timer</p>
+          </div>
         </div>
-        <div>
-          <p className="text-xs font-semibold text-fg leading-none">Frameflow</p>
-          <p className="text-[10px] text-green-600 font-medium mt-0.5">Online nå</p>
-        </div>
+        <span className="text-[9px] font-semibold uppercase tracking-widest text-fg-muted bg-bg border border-border px-2 py-0.5 rounded-full">
+          Eksempel
+        </span>
       </div>
 
       {/* Messages */}

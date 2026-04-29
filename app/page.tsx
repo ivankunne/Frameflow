@@ -141,11 +141,11 @@ export default function HomePage() {
       <HomeHero />
       <HomeLogoStrip />
       <HomeServices />
+      <HomeAbout />
       <HomeProcess />
       <HomeProjects />
       <HomeStats />
       <HomeTestimonials />
-      <HomeAbout />
       <HomeFAQ />
       <HomeCTA />
     </>

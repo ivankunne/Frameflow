@@ -95,7 +95,7 @@ Har du spørsmål om lokal SEO for din Bergen-bedrift? Ta gjerne kontakt med oss
     date: '5. mars 2025',
     updatedAt: '2025-03-05',
     readTime: '7 min',
-    relatedService: { title: 'Web design', href: '/tjenester' },
+    relatedService: { title: 'Web design', href: '/tjenester/webdesign' },
     content: `
 ## Hvorfor de fleste nettsider ikke konverterer
 
@@ -193,7 +193,7 @@ Ta kontakt med Frameflow for en gratis gjennomgang av din Google Business-profil
     date: '20. februar 2025',
     updatedAt: '2025-02-20',
     readTime: '6 min',
-    relatedService: { title: 'Web design', href: '/tjenester' },
+    relatedService: { title: 'Web design', href: '/tjenester/webdesign' },
     content: `
 ## Hvorfor varierer nettside-priser så mye?
 
@@ -236,7 +236,7 @@ Hos Frameflow inkluderer vi alltid strategisk gjennomgang, skreddersydd design, 
     date: '12. februar 2025',
     updatedAt: '2025-02-12',
     readTime: '8 min',
-    relatedService: { title: 'Sosiale medier', href: '/tjenester' },
+    relatedService: { title: 'Sosiale medier', href: '/tjenester/sosiale-medier' },
     content: `
 ## Virkeligheten om sosiale medier for lokale bedrifter
 
@@ -281,7 +281,7 @@ Mål nettstedtrafikk fra sosiale medier, direkte meldinger og forespørsler, rek
     date: '5. februar 2025',
     updatedAt: '2025-02-05',
     readTime: '7 min',
-    relatedService: { title: 'Branding', href: '/tjenester' },
+    relatedService: { title: 'Branding', href: '/tjenester/branding' },
     content: `
 ## Hva er egentlig branding?
 
@@ -332,7 +332,7 @@ Frameflow tilbyr skreddersydd branding for Bergen-bedrifter – fra logodesign t
     date: '25. januar 2025',
     updatedAt: '2025-01-25',
     readTime: '6 min',
-    relatedService: { title: 'Foto og video', href: '/tjenester' },
+    relatedService: { title: 'Foto og video', href: '/tjenester/foto-og-videografi' },
     content: `
 ## Bildet som koster deg kunder
 

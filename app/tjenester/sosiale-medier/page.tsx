@@ -3,7 +3,7 @@ import ServicePageTemplate from '@/components/ServicePageTemplate'
 import { JsonLd } from '@/components/JsonLd'
 
 export const metadata: Metadata = {
-  title: 'Sosiale medier i Bergen',
+  title: 'Sosiale medier Bergen – Strategi og innhold | Frameflow',
   description:
     'Profesjonell håndtering av sosiale medier for Bergen-bedrifter. Innholdsproduksjon, strategi og community management. Ta kontakt i dag.',
   alternates: { canonical: 'https://www.frameflow.no/tjenester/sosiale-medier' },
