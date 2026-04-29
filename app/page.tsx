@@ -59,6 +59,13 @@ const localBusinessSchema = {
     { '@type': 'City', name: 'Bergen' },
     { '@type': 'AdministrativeArea', name: 'Vestland' },
   ],
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5',
+    reviewCount: '3',
+    bestRating: '5',
+    worstRating: '1',
+  },
   priceRange: '$$',
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
@@ -75,18 +82,18 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Hvilke tjenester tilbyr Frameflow?',
+      name: 'Hva koster en nettside i Bergen?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Frameflow i Bergen leverer webdesign, sosiale medier strategi, foto og video produksjon, branding og SEO-optimalisering.',
+        text: 'En bedriftsnettside hos Frameflow starter fra 12 000 kr. Prisen avhenger av omfang, funksjonalitet og design. Vi gir alltid fast pris – ingen overraskelser etterpå. Be om et uforpliktende tilbud, så får du et konkret tall innen 24 timer.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Kan Frameflow håndtere alle sosiale medieplattformer?',
+      name: 'Hvilke tjenester tilbyr Frameflow?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Ja, vi jobber med alle relevante sosiale medier plattformer inkludert Instagram, Facebook, TikTok, LinkedIn og Pinterest.',
+        text: 'Frameflow leverer webdesign, app utvikling, foto og video produksjon, branding og sosiale medier – alt under ett tak i Bergen. Vi skreddersyr tjenestene til din bedrift og leverer målbare resultater.',
       },
     },
     {
@@ -94,7 +101,23 @@ const faqSchema = {
       name: 'Hva gjør Frameflow annerledes enn andre markedsføringsbyrå i Bergen?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Frameflow kombinerer kreativitet med datadrevne strategier for å skape innhold som engasjerer din målgruppe. Vi prioriterer tett kommunikasjon og skreddersyr alle løsninger.',
+        text: 'Du snakker alltid direkte med Ivan – personen som faktisk gjør jobben. Ingen mellommenn, ingen junior-leveranser. Vi kjenner Bergen-markedet og jobber med fast pris og fornøyd garanti.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Hvor lang tid tar det å lage en nettside?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'En standard bedriftsnettside tar typisk 3–6 uker fra oppstart til lansering, avhengig av omfang og tilgang på innhold. Vi setter opp en klar tidsplan fra dag én.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Jobber dere kun med bedrifter i Bergen?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Vi har base i Bergen og kjenner det lokale markedet godt, men jobber like gjerne med bedrifter i resten av Norge og internasjonalt – som med Marbesa Project 94 i Marbella.',
       },
     },
     {
@@ -102,7 +125,7 @@ const faqSchema = {
       name: 'Hvordan kommer vi i gang med Frameflow?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Kontakt oss via kontaktskjemaet, e-post eller ring oss på +47 99 85 37 81. Vi starter med en gratis konsultasjon.',
+        text: 'Book en gratis 30-minutters samtale via kontaktskjemaet, e-post eller ring +47 99 85 37 81. Ingen forpliktelser – vi hører om prosjektet ditt og forteller deg ærlig hva vi kan gjøre.',
       },
     },
   ],
