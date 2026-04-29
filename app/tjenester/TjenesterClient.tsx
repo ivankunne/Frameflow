@@ -166,7 +166,7 @@ export default function TjenesterClient() {
   )
 }
 
-function ServiceVisual({ visual, accentHex, visible }: { visual: (typeof services)[0]['visual']; accentHex: string; visible: boolean }) {
+function ServiceVisual({ visual, accentHex, visible }: { visual: (typeof services)[number]['visual']; accentHex: string; visible: boolean }) {
   if (visual === 'web') {
     return (
       <div className="h-full w-full rounded-xl overflow-hidden border border-border bg-white shadow-card-hover flex flex-col">
@@ -221,7 +221,7 @@ function ServiceVisual({ visual, accentHex, visible }: { visual: (typeof service
   return <BrandVisual visible={visible} />
 }
 
-function ServiceSection({ service, index }: { service: (typeof services)[0]; index: number }) {
+function ServiceSection({ service, index }: { service: (typeof services)[number]; index: number }) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-80px' })
   const isEven = index % 2 === 0
