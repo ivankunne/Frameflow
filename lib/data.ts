@@ -420,6 +420,40 @@ Lurer du på hvor du bør starte for din spesifikke bedrift? Kontakt Frameflow f
 
 export const projects: Project[] = [
   {
+    slug: 'bergen-bakeri',
+    title: 'Bergen Bakeri',
+    client: 'Bergen Bakeri',
+    description: 'Nettside og Instagram-strategi for lokal bakeri i Bergen – henvendelser doblet seg på 30 dager',
+    fullDescription:
+      'Bergen Bakeri er en lokal Bergen-favoritt som trengte en sterk digital tilstedeværelse for å nå ut til flere kunder. Vi leverte ny nettside og en strukturert Instagram-strategi som forankret merkevaren visuelt og økte henvendelsene betraktelig.',
+    challenge: 'Bakeriet hadde ingen nettside og ujevn tilstedeværelse på sosiale medier. Potensielle kunder fant dem ikke digitalt, og de mistet trafikk til konkurrenter med sterkere online synlighet.',
+    tags: ['Web design', 'Sosiale medier'],
+    location: 'Bergen, Norge',
+    year: '2025',
+    results: [
+      'Antall henvendelser doblet seg på 30 dager',
+      '890 nye Instagram-følgere på 3 måneder',
+      'Konsistent visuell identitet på tvers av kanaler',
+    ],
+  },
+  {
+    slug: 'nordic-fit',
+    title: 'Nordic Fit',
+    client: 'Nordic Fit',
+    description: 'Komplett brandingpakke og nettside for treningssenter i Bergen – fra logo til lansering på 2 uker',
+    fullDescription:
+      'Nordic Fit er et treningssenter i Bergen som trengte en komplett merkevare fra bunnen av. Vi leverte logo, fargepalett, typografi, brand guidelines og nettside – alt koordinert og klart for lansering innen 2 uker.',
+    challenge: 'Nytt treningssenter uten noen form for visuell identitet eller digital tilstedeværelse. De trengte alt på kort tid for å treffe lanseringsdatoen.',
+    tags: ['Branding', 'Web design'],
+    location: 'Bergen, Norge',
+    year: '2025',
+    results: [
+      'Komplett brandingpakke levert på 2 uker',
+      'Logo, fargepalett, typografi og brand guidelines',
+      'Nettside live til planlagt åpningsdato',
+    ],
+  },
+  {
     slug: 'ho-orbit',
     title: 'h-orbit',
     client: 'h-orbit',
