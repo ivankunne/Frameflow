@@ -140,47 +140,134 @@ export async function POST(request: Request) {
     const timelineText  = TIMELINE_LABELS[timeline]
 
     const emailHtml = `
-      <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 24px;">
-        <h2 style="color: #2172b5; margin-bottom: 24px;">Ny tilbudsforespørsel</h2>
-        <table style="width: 100%; border-collapse: collapse;">
-          <tr>
-            <td style="padding: 10px 0; border-bottom: 1px solid #e5e5e5; font-weight: 600; color: #818181; width: 140px;">Navn</td>
-            <td style="padding: 10px 0; border-bottom: 1px solid #e5e5e5; color: #171717;">${safeName}</td>
-          </tr>
-          <tr>
-            <td style="padding: 10px 0; border-bottom: 1px solid #e5e5e5; font-weight: 600; color: #818181;">E-post</td>
-            <td style="padding: 10px 0; border-bottom: 1px solid #e5e5e5;">
-              <a href="mailto:${safeEmail}" style="color: #2172b5;">${safeEmail}</a>
-            </td>
-          </tr>
-          ${safeBedrift ? `
-          <tr>
-            <td style="padding: 10px 0; border-bottom: 1px solid #e5e5e5; font-weight: 600; color: #818181;">Bedrift</td>
-            <td style="padding: 10px 0; border-bottom: 1px solid #e5e5e5; color: #171717;">${safeBedrift}</td>
-          </tr>` : ''}
-          <tr>
-            <td style="padding: 10px 0; border-bottom: 1px solid #e5e5e5; font-weight: 600; color: #818181;">Tjenester</td>
-            <td style="padding: 10px 0; border-bottom: 1px solid #e5e5e5; color: #171717;">${servicesText}</td>
-          </tr>
-          <tr>
-            <td style="padding: 10px 0; border-bottom: 1px solid #e5e5e5; font-weight: 600; color: #818181;">Budsjett</td>
-            <td style="padding: 10px 0; border-bottom: 1px solid #e5e5e5; color: #171717;">${budgetText}</td>
-          </tr>
-          <tr>
-            <td style="padding: 10px 0; border-bottom: 1px solid #e5e5e5; font-weight: 600; color: #818181;">Tidsplan</td>
-            <td style="padding: 10px 0; border-bottom: 1px solid #e5e5e5; color: #171717;">${timelineText}</td>
-          </tr>
-          ${safeDescription ? `
-          <tr>
-            <td style="padding: 10px 0; font-weight: 600; color: #818181; vertical-align: top;">Beskrivelse</td>
-            <td style="padding: 10px 0; color: #171717; line-height: 1.6;">${safeDescription}</td>
-          </tr>` : ''}
-        </table>
-        <div style="margin-top: 32px; padding: 16px; background: #e8f0f9; border-radius: 8px; font-size: 13px; color: #2172b5;">
-          Svar direkte på denne e-posten for å nå ${safeName}.
-        </div>
-      </div>
-    `
+<!DOCTYPE html>
+<html lang="no">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="margin:0;padding:0;background:#f4f6f9;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f6f9;padding:40px 16px;">
+    <tr><td align="center">
+      <table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;">
+
+        <!-- Header -->
+        <tr>
+          <td style="background:#0d1f3c;border-radius:12px 12px 0 0;padding:32px 40px;">
+            <table width="100%" cellpadding="0" cellspacing="0">
+              <tr>
+                <td>
+                  <img src="https://www.frameflow.no/Wordmark-white.png" alt="Frameflow" height="24" style="display:block;">
+                </td>
+                <td align="right">
+                  <span style="display:inline-block;background:rgba(33,114,181,0.25);border:1px solid rgba(33,114,181,0.4);color:#7eb8e8;font-size:11px;font-weight:600;padding:4px 12px;border-radius:20px;letter-spacing:0.5px;">NY TILBUDSFORESPØRSEL</span>
+                </td>
+              </tr>
+            </table>
+            <p style="margin:24px 0 0;color:rgba(255,255,255,0.55);font-size:13px;">Fra tilbudsskjema på frameflow.no</p>
+          </td>
+        </tr>
+
+        <!-- Body -->
+        <tr>
+          <td style="background:#ffffff;padding:40px;">
+
+            <h1 style="margin:0 0 8px;font-size:22px;font-weight:700;color:#0d1f3c;">Ny tilbudsforespørsel</h1>
+            <p style="margin:0 0 32px;font-size:14px;color:#6b7280;">${safeName} ønsker et tilbud fra Frameflow.</p>
+
+            <!-- Info rows -->
+            <table width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+              <tr>
+                <td style="padding:14px 20px;background:#f9fafb;border-bottom:1px solid #e5e7eb;width:120px;">
+                  <span style="font-size:11px;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.6px;">Navn</span>
+                </td>
+                <td style="padding:14px 20px;background:#ffffff;border-bottom:1px solid #e5e7eb;">
+                  <span style="font-size:14px;font-weight:600;color:#0d1f3c;">${safeName}</span>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:14px 20px;background:#f9fafb;border-bottom:1px solid #e5e7eb;">
+                  <span style="font-size:11px;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.6px;">E-post</span>
+                </td>
+                <td style="padding:14px 20px;background:#ffffff;border-bottom:1px solid #e5e7eb;">
+                  <a href="mailto:${safeEmail}" style="font-size:14px;font-weight:600;color:#2172b5;text-decoration:none;">${safeEmail}</a>
+                </td>
+              </tr>
+              ${safeBedrift ? `
+              <tr>
+                <td style="padding:14px 20px;background:#f9fafb;border-bottom:1px solid #e5e7eb;">
+                  <span style="font-size:11px;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.6px;">Bedrift</span>
+                </td>
+                <td style="padding:14px 20px;background:#ffffff;border-bottom:1px solid #e5e7eb;">
+                  <span style="font-size:14px;font-weight:600;color:#0d1f3c;">${safeBedrift}</span>
+                </td>
+              </tr>` : ''}
+              <tr>
+                <td style="padding:14px 20px;background:#f9fafb;border-bottom:1px solid #e5e7eb;">
+                  <span style="font-size:11px;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.6px;">Tjenester</span>
+                </td>
+                <td style="padding:14px 20px;background:#ffffff;border-bottom:1px solid #e5e7eb;">
+                  <span style="font-size:14px;color:#0d1f3c;">${servicesText}</span>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:14px 20px;background:#f9fafb;border-bottom:1px solid #e5e7eb;">
+                  <span style="font-size:11px;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.6px;">Budsjett</span>
+                </td>
+                <td style="padding:14px 20px;background:#ffffff;border-bottom:1px solid #e5e7eb;">
+                  <span style="display:inline-block;background:#e8f0f9;color:#2172b5;font-size:13px;font-weight:600;padding:3px 10px;border-radius:20px;">${budgetText}</span>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:14px 20px;background:#f9fafb;${safeDescription ? 'border-bottom:1px solid #e5e7eb;' : ''}">
+                  <span style="font-size:11px;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.6px;">Tidsplan</span>
+                </td>
+                <td style="padding:14px 20px;background:#ffffff;${safeDescription ? 'border-bottom:1px solid #e5e7eb;' : ''}">
+                  <span style="display:inline-block;background:#f0fdf4;color:#16a34a;font-size:13px;font-weight:600;padding:3px 10px;border-radius:20px;">${timelineText}</span>
+                </td>
+              </tr>
+              ${safeDescription ? `
+              <tr>
+                <td style="padding:14px 20px;background:#f9fafb;vertical-align:top;">
+                  <span style="font-size:11px;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.6px;">Beskrivelse</span>
+                </td>
+                <td style="padding:14px 20px;background:#ffffff;">
+                  <span style="font-size:14px;color:#374151;line-height:1.7;">${safeDescription}</span>
+                </td>
+              </tr>` : ''}
+            </table>
+
+            <!-- CTA -->
+            <table cellpadding="0" cellspacing="0" style="margin-top:28px;">
+              <tr>
+                <td style="background:#2172b5;border-radius:8px;">
+                  <a href="mailto:${safeEmail}" style="display:inline-block;padding:12px 24px;font-size:14px;font-weight:600;color:#ffffff;text-decoration:none;">Svar ${safeName} →</a>
+                </td>
+              </tr>
+            </table>
+
+          </td>
+        </tr>
+
+        <!-- Footer -->
+        <tr>
+          <td style="background:#f9fafb;border:1px solid #e5e7eb;border-top:none;border-radius:0 0 12px 12px;padding:24px 40px;">
+            <table width="100%" cellpadding="0" cellspacing="0">
+              <tr>
+                <td>
+                  <p style="margin:0;font-size:12px;color:#9ca3af;">Frameflow · Damsgårdsveien 83a, 5058 Bergen</p>
+                  <p style="margin:4px 0 0;font-size:12px;color:#9ca3af;">Org.nr: 934 205 156 · <a href="https://www.frameflow.no" style="color:#2172b5;text-decoration:none;">frameflow.no</a></p>
+                </td>
+                <td align="right">
+                  <p style="margin:0;font-size:11px;color:#d1d5db;">Sendt via tilbudsskjema</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>`
 
     const res = await fetch('https://api.resend.com/emails', {
       method: 'POST',
