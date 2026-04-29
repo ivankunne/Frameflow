@@ -10,9 +10,7 @@ export default function Error({
   error: Error & { digest?: string }
   reset: () => void
 }) {
-  useEffect(() => {
-    console.error(error)
-  }, [error])
+  useEffect(() => {}, [error])
 
   return (
     <section className="min-h-screen flex flex-col items-center justify-center px-6 text-center bg-bg-2">

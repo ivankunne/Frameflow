@@ -64,10 +64,10 @@ export default function Footer() {
                   Book gratis samtale →
                 </Link>
                 <a
-                  href="mailto:Ivan@frameflow.no"
+                  href={EMAIL_HREF}
                   className="text-sm font-medium border border-white/25 text-white/85 hover:text-white hover:border-white/50 bg-white/5 hover:bg-white/10 px-7 py-3.5 rounded-xl transition-all min-h-[44px] flex items-center justify-center"
                 >
-                  Ivan@frameflow.no
+                  {EMAIL}
                 </a>
               </div>
               <p className="text-xs text-white/35 text-center sm:text-right">Org.nr: 934 205 156 · Registrert i Brønnøysundregistrene</p>
