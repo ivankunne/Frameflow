@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────────────────
+   Color tokens — light mode (default)
+   All values are space-separated R G B (no commas) so
+   Tailwind's opacity modifier syntax works: bg-bg/50
+───────────────────────────────────────────────────────── */
+:root {
+  --color-bg:           255 255 255;
+  --color-bg-2:         248 248 248;
+  --color-bg-3:         240 238 235;
+  --color-fg:           23 23 23;
+  --color-fg-muted:     129 129 129;
+  --color-accent:       33 114 181;
+  --color-accent-hover: 26 93 154;
+  --color-accent-light: 232 240 249;
+  --color-border:       229 229 229;
+  --color-amber:        245 158 11;
+  --color-amber-light:  255 251 235;
+
+  --font-bricolage: 'Bricolage Grotesque', system-ui, sans-serif;
+  --font-figtree:   'Figtree', system-ui, sans-serif;
+  --font-mono:      'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* ─────────────────────────────────────────────────────────
+   Base resets
+───────────────────────────────────────────────────────── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: rgb(var(--color-bg));
+  color: rgb(var(--color-fg));
+  font-family: var(--font-figtree);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Selection */
+::selection {
+  background: rgb(var(--color-accent));
+  color: #ffffff;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: rgb(var(--color-bg-2)); }
+::-webkit-scrollbar-thumb { background: rgb(var(--color-border)); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: rgb(var(--color-accent)); }
+
+/* Focus */
+:focus-visible {
+  outline: 2px solid rgb(var(--color-accent));
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* ─────────────────────────────────────────────────────────
+   Typography utilities
+───────────────────────────────────────────────────────── */
+.display-text {
+  font-family: var(--font-bricolage);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.label-text {
+  font-family: var(--font-figtree);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.mono-text {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* Blue dot accent */
+.blue-dot::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgb(var(--color-accent));
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, rgb(var(--color-accent)) 0%, #4a9fd4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Tech grid background */
+.tech-grid {
+  background-image:
+    linear-gradient(rgba(33,114,181,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(33,114,181,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Blue glow */
+.blue-glow {
+  box-shadow: 0 0 40px rgba(33, 114, 181, 0.15);
+}
+
+/* Logo marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Seamless marquee — 4 copies, moves exactly one set (25% of total) */
+@keyframes marquee-quarter {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-25%); }
+}
