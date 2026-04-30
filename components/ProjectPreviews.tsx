@@ -146,65 +146,48 @@ export function GvRentalsPreview({ visible }: { visible: boolean }) {
   )
 }
 
-// ─── Bergen Bakeri ───────────────────────────────────────────────────────────
-export function BergenBakeriPreview({ visible }: { visible: boolean }) {
+// ─── h-orbit ─────────────────────────────────────────────────────────────────
+export function HoOrbitPreview({ visible }: { visible: boolean }) {
   return (
-    <div className="h-full w-full rounded-xl overflow-hidden relative" style={{ background: '#fef9f0' }}>
-      <div className="absolute inset-0 p-3 flex flex-col">
-        <motion.div initial={{ opacity: 0, y: -6 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.3, delay: 0.3 }} className="flex items-center justify-between mb-2.5">
-          <div className="w-16 h-2.5 bg-[#f59e0b]/50 rounded" />
-          <div className="flex gap-2">{[...Array(3)].map((_, i) => <div key={i} className="w-7 h-2 bg-[#f59e0b]/25 rounded" />)}</div>
+    <div className="h-full w-full rounded-xl overflow-hidden relative bg-gradient-to-br from-cyan-900 to-cyan-800">
+      <div className="absolute inset-0 p-3 flex">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5, rotate: -20 }}
+          animate={visible ? { opacity: 1, scale: 1, rotate: 0 } : {}}
+          transition={{ type: 'spring', stiffness: 220, damping: 16, delay: 0.3 }}
+          className="w-9 h-9 rounded-xl bg-cyan-400 flex items-center justify-center shrink-0 mb-auto"
+        >
+          <span className="text-cyan-900 text-[10px] font-bold">HO</span>
         </motion.div>
-        <motion.div initial={{ opacity: 0 }} animate={visible ? { opacity: 1 } : {}} transition={{ duration: 0.4, delay: 0.42 }} className="h-12 rounded-xl mb-2.5 flex items-center px-3" style={{ background: 'linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%)' }}>
-          <div className="w-28 h-3 bg-white/80 rounded" />
-        </motion.div>
-        <div className="grid grid-cols-3 gap-2 mb-2.5">
-          {[0, 1, 2].map((i) => (
-            <motion.div key={i} initial={{ opacity: 0, scale: 0.8 }} animate={visible ? { opacity: 1, scale: 1 } : {}} transition={{ type: 'spring', stiffness: 240, damping: 16, delay: 0.62 + i * 0.09 }} className="h-8 rounded-lg bg-[#f59e0b]/15 border border-[#f59e0b]/20 flex items-end p-1.5">
-              <div className="w-full h-2 bg-[#f59e0b]/30 rounded" />
-            </motion.div>
+        <div className="flex-1 flex flex-col gap-1.5 px-2 ml-2">
+          <motion.div initial={{ opacity: 0, x: -10 }} animate={visible ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.3, delay: 0.4 }} className="w-14 h-2 bg-cyan-500/40 rounded" />
+          {[0.5, 0.8, 1.1].map((delay) => (
+            <motion.div key={delay} initial={{ opacity: 0, x: -10 }} animate={visible ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.28, delay }} className="w-10 h-1.5 bg-cyan-400/30 rounded" />
           ))}
         </div>
-        <motion.div initial={{ opacity: 0, y: 4 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.3, delay: 0.9 }} className="w-24 h-6 rounded-lg bg-[#f59e0b] flex items-center justify-center">
-          <span className="text-white text-[9px] font-semibold">Bestill nå</span>
-        </motion.div>
+        <div className="flex flex-col gap-2 ml-auto">
+          {[{ color: '#3b82f6', delay: 0.5 }, { color: '#fbbf24', delay: 0.65 }, { color: '#34c759', delay: 0.8 }].map((task, i) => (
+            <motion.div key={i} initial={{ opacity: 0, x: 12 }} animate={visible ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.3, delay: task.delay }} className="w-12 h-4 rounded-lg" style={{ background: task.color }} />
+          ))}
+        </div>
       </div>
-      <motion.div initial={{ opacity: 0, scale: 0.75, y: 6 }} animate={visible ? { opacity: 1, scale: 1, y: 0 } : {}} transition={{ type: 'spring', stiffness: 220, damping: 18, delay: 1.0 }} className="absolute bottom-3 right-3 bg-green-500 rounded-lg px-2.5 py-1.5 shadow-card">
-        <span className="text-white text-[10px] font-bold">+234% trafikk</span>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.75, y: 6 }}
+        animate={visible ? { opacity: 1, scale: 1, y: 0 } : {}}
+        transition={{ type: 'spring', stiffness: 220, damping: 18, delay: 1.0 }}
+        className="absolute bottom-3 right-3 bg-green-500 rounded-lg px-2.5 py-1.5 shadow-card flex items-center gap-1.5"
+      >
+        <span className="text-white text-[10px] font-bold">Live</span>
       </motion.div>
     </div>
   )
 }
 
-// ─── Nordic Fit ──────────────────────────────────────────────────────────────
-export function NordicFitPreview({ visible }: { visible: boolean }) {
-  return (
-    <div className="h-full w-full rounded-xl overflow-hidden relative" style={{ background: '#0f0a1e' }}>
-      <div className="absolute inset-0 p-4 flex flex-col">
-        <motion.div initial={{ opacity: 0, scale: 0.5, rotate: -20 }} animate={visible ? { opacity: 1, scale: 1, rotate: 0 } : {}} transition={{ type: 'spring', stiffness: 200, damping: 16, delay: 0.35 }} className="w-12 h-12 rounded-full bg-purple-600 flex items-center justify-center mb-3 border-2 border-purple-400/30">
-          <span className="text-white text-xs font-bold">NF</span>
-        </motion.div>
-        <div className="flex gap-2 mb-4">
-          {[{ color: '#8b5cf6', delay: 0.52 }, { color: '#ffffff', delay: 0.62 }, { color: '#1a1a1a', delay: 0.72 }].map((s, i) => (
-            <motion.div key={i} initial={{ scaleY: 0 }} animate={visible ? { scaleY: 1 } : {}} transition={{ duration: 0.3, delay: s.delay, ease: 'easeOut' }} style={{ transformOrigin: 'bottom', background: s.color }} className="w-10 h-10 rounded-lg border border-white/10" />
-          ))}
-        </div>
-        <div className="flex flex-col gap-2">
-          {[{ w: '70%', h: 'h-3', delay: 0.78 }, { w: '50%', h: 'h-2.5', delay: 0.86 }, { w: '80%', h: 'h-2', delay: 0.92 }].map((bar, i) => (
-            <motion.div key={i} initial={{ opacity: 0, x: 10 }} animate={visible ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.3, delay: bar.delay }} className={`${bar.h} rounded bg-white/20`} style={{ width: bar.w }} />
-          ))}
-        </div>
-      </div>
-      <motion.div initial={{ opacity: 0, scale: 0.75, y: 6 }} animate={visible ? { opacity: 1, scale: 1, y: 0 } : {}} transition={{ type: 'spring', stiffness: 220, damping: 18, delay: 1.05 }} className="absolute bottom-3 right-3 bg-purple-600 rounded-lg px-2.5 py-1.5 shadow-card">
-        <span className="text-white text-[10px] font-bold">Brand guidelines ✓</span>
-      </motion.div>
-    </div>
-  )
-}
-
-// ─── Slug → component map ─────────────────────────────────────────────────────
+// ─── Slug → Preview map (used by ProsjekterClient) ───────────────────────────
+import type React from 'react'
 export const projectPreviews: Record<string, React.ComponentType<{ visible: boolean }>> = {
-  'artadent':          ArtadentPreview,
+  'artadent':           ArtadentPreview,
   'marbesa-project-94': MarbesaPreview,
-  'gv-rentals':        GvRentalsPreview,
+  'gv-rentals':         GvRentalsPreview,
+  'ho-orbit':           HoOrbitPreview,
 }

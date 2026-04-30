@@ -73,7 +73,7 @@ const localBusinessSchema = {
     opens: '09:00',
     closes: '17:00',
   },
-  sameAs: ['https://www.instagram.com/frameflow.no', 'https://www.tiktok.com/@frameflow.no'],
+  sameAs: ['https://www.instagram.com/frameflow_no/', 'https://www.tiktok.com/@frameflow.no'],
 }
 
 const faqSchema = {

@@ -211,81 +211,10 @@ function GvRentalsPreview({ visible }: { visible: boolean }) {
   )
 }
 
-function BergenBakeriPreview({ visible }: { visible: boolean }) {
-  return (
-    <div className="h-36 rounded-lg overflow-hidden relative" style={{ background: '#fef9f0' }}>
-      <div className="absolute inset-0 p-3 flex flex-col">
-        {/* Nav */}
-        <motion.div
-          initial={{ opacity: 0, y: -6 }}
-          animate={visible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.3, delay: 0.3 }}
-          className="flex items-center justify-between mb-2"
-        >
-          <div className="w-14 h-2 bg-[#f59e0b]/50 rounded" />
-          <div className="flex gap-1.5">
-            {[...Array(3)].map((_, i) => (
-              <div key={i} className="w-6 h-1.5 bg-[#f59e0b]/25 rounded" />
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Hero — amber gradient */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={visible ? { opacity: 1 } : {}}
-          transition={{ duration: 0.4, delay: 0.42 }}
-          className="h-10 rounded-lg mb-2 flex items-center px-3"
-          style={{ background: 'linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%)' }}
-        >
-          <div className="w-24 h-2.5 bg-white/80 rounded" />
-        </motion.div>
-
-        {/* Product cards */}
-        <div className="grid grid-cols-3 gap-1.5 mb-2">
-          {[0, 1, 2].map((i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={visible ? { opacity: 1, scale: 1 } : {}}
-              transition={{ type: 'spring', stiffness: 240, damping: 16, delay: 0.62 + i * 0.09 }}
-              className="h-7 rounded-md bg-[#f59e0b]/15 border border-[#f59e0b]/20 flex items-end p-1"
-            >
-              <div className="w-full h-1.5 bg-[#f59e0b]/30 rounded" />
-            </motion.div>
-          ))}
-        </div>
-
-        {/* CTA button */}
-        <motion.div
-          initial={{ opacity: 0, y: 4 }}
-          animate={visible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.3, delay: 0.9 }}
-          className="w-20 h-5 rounded-md bg-[#f59e0b] flex items-center justify-center"
-        >
-          <span className="text-white text-[8px] font-semibold">Bestill nå</span>
-        </motion.div>
-      </div>
-
-      {/* Floating badge */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.75, y: 6 }}
-        animate={visible ? { opacity: 1, scale: 1, y: 0 } : {}}
-        transition={{ type: 'spring', stiffness: 220, damping: 18, delay: 1.0 }}
-        className="absolute bottom-2.5 right-2.5 bg-green-500 rounded-lg px-2.5 py-1.5 shadow-card flex items-center gap-1.5"
-      >
-        <span className="text-white text-[9px] font-bold">+234% trafikk</span>
-      </motion.div>
-    </div>
-  )
-}
-
 function HoOrbitPreview({ visible }: { visible: boolean }) {
-  // Animation language: app dashboard — icon pops, sidebar fades in, tasks slide in from right
   return (
     <div className="h-36 rounded-lg overflow-hidden relative bg-gradient-to-br from-cyan-900 to-cyan-800">
       <div className="absolute inset-0 p-2.5 flex">
-        {/* Logo/icon — spring pop */}
         <motion.div
           initial={{ opacity: 0, scale: 0.5, rotate: -20 }}
           animate={visible ? { opacity: 1, scale: 1, rotate: 0 } : {}}
@@ -294,46 +223,18 @@ function HoOrbitPreview({ visible }: { visible: boolean }) {
         >
           <span className="text-cyan-900 text-[9px] font-bold">HO</span>
         </motion.div>
-
-        {/* Sidebar — fade in left */}
         <div className="flex-1 flex flex-col gap-1 px-1.5 ml-1.5">
-          <motion.div
-            initial={{ opacity: 0, x: -10 }}
-            animate={visible ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.3, delay: 0.4 }}
-            className="w-12 h-1.5 bg-cyan-500/40 rounded"
-          />
+          <motion.div initial={{ opacity: 0, x: -10 }} animate={visible ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.3, delay: 0.4 }} className="w-12 h-1.5 bg-cyan-500/40 rounded" />
           {[0.5, 0.8, 1.1].map((delay) => (
-            <motion.div
-              key={delay}
-              initial={{ opacity: 0, x: -10 }}
-              animate={visible ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.28, delay }}
-              className="w-10 h-1 bg-cyan-400/30 rounded"
-            />
+            <motion.div key={delay} initial={{ opacity: 0, x: -10 }} animate={visible ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.28, delay }} className="w-10 h-1 bg-cyan-400/30 rounded" />
           ))}
         </div>
-
-        {/* Tasks column — slide from right */}
         <div className="flex flex-col gap-1.5 ml-auto">
-          {[
-            { color: '#3b82f6', delay: 0.5 },
-            { color: '#fbbf24', delay: 0.65 },
-            { color: '#34c759', delay: 0.8 },
-          ].map((task, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, x: 12 }}
-              animate={visible ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.3, delay: task.delay }}
-              className="w-10 h-3 rounded-md"
-              style={{ background: task.color }}
-            />
+          {[{ color: '#3b82f6', delay: 0.5 }, { color: '#fbbf24', delay: 0.65 }, { color: '#34c759', delay: 0.8 }].map((task, i) => (
+            <motion.div key={i} initial={{ opacity: 0, x: 12 }} animate={visible ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.3, delay: task.delay }} className="w-10 h-3 rounded-md" style={{ background: task.color }} />
           ))}
         </div>
       </div>
-
-      {/* Live indicator badge */}
       <motion.div
         initial={{ opacity: 0, scale: 0.75, y: 6 }}
         animate={visible ? { opacity: 1, scale: 1, y: 0 } : {}}
@@ -341,66 +242,6 @@ function HoOrbitPreview({ visible }: { visible: boolean }) {
         className="absolute bottom-2.5 right-2.5 bg-green-500 rounded-lg px-2 py-1 shadow-card flex items-center gap-1"
       >
         <span className="text-white text-[9px] font-bold">Live</span>
-      </motion.div>
-    </div>
-  )
-}
-
-function NordicFitPreview({ visible }: { visible: boolean }) {
-  return (
-    <div className="h-36 rounded-lg overflow-hidden relative" style={{ background: '#0f0a1e' }}>
-      <div className="absolute inset-0 p-3 flex flex-col">
-        {/* Logo mark */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5, rotate: -20 }}
-          animate={visible ? { opacity: 1, scale: 1, rotate: 0 } : {}}
-          transition={{ type: 'spring', stiffness: 200, damping: 16, delay: 0.35 }}
-          className="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center mb-2 border-2 border-purple-400/30"
-        >
-          <span className="text-white text-[10px] font-bold">NF</span>
-        </motion.div>
-
-        {/* Colour swatches */}
-        <div className="flex gap-1.5 mb-3">
-          {[
-            { color: '#8b5cf6', delay: 0.52 },
-            { color: '#ffffff', delay: 0.62 },
-            { color: '#1a1a1a', delay: 0.72 },
-          ].map((swatch, i) => (
-            <motion.div
-              key={i}
-              initial={{ scaleY: 0 }}
-              animate={visible ? { scaleY: 1 } : {}}
-              transition={{ duration: 0.3, delay: swatch.delay, ease: 'easeOut' }}
-              style={{ transformOrigin: 'bottom', background: swatch.color }}
-              className="w-8 h-8 rounded-md border border-white/10"
-            />
-          ))}
-        </div>
-
-        {/* Typography bars */}
-        <div className="flex flex-col gap-1.5">
-          {[{ w: '70%', h: 'h-2.5', delay: 0.78 }, { w: '50%', h: 'h-2', delay: 0.86 }, { w: '80%', h: 'h-1.5', delay: 0.92 }].map((bar, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, x: 10 }}
-              animate={visible ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.3, delay: bar.delay }}
-              className={`${bar.h} rounded bg-white/20`}
-              style={{ width: bar.w }}
-            />
-          ))}
-        </div>
-      </div>
-
-      {/* Badge */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.75, y: 6 }}
-        animate={visible ? { opacity: 1, scale: 1, y: 0 } : {}}
-        transition={{ type: 'spring', stiffness: 220, damping: 18, delay: 1.05 }}
-        className="absolute bottom-2.5 right-2.5 bg-purple-600 rounded-lg px-2.5 py-1.5 shadow-card"
-      >
-        <span className="text-white text-[9px] font-bold">Brand guidelines ✓</span>
       </motion.div>
     </div>
   )
@@ -447,26 +288,6 @@ const projects = [
     result: '+67% bookingrate',
     color: '#34C759',
     Preview: GvRentalsPreview,
-  },
-  {
-    slug: 'bergen-bakeri',
-    title: 'Bergen Bakeri',
-    description: 'Ny nettside og Instagram-strategi som doblet antall henvendelser på 30 dager.',
-    tags: ['Web design', 'Sosiale medier'],
-    location: 'Bergen, Norge',
-    result: '2× henvendelser på 30 dager',
-    color: '#f59e0b',
-    Preview: BergenBakeriPreview,
-  },
-  {
-    slug: 'nordic-fit',
-    title: 'Nordic Fit',
-    description: 'Komplett brandingpakke og nettside for treningssenter i Bergen – fra logo til lansering.',
-    tags: ['Branding', 'Web design'],
-    location: 'Bergen, Norge',
-    result: 'Komplett brand på 2 uker',
-    color: '#8b5cf6',
-    Preview: NordicFitPreview,
   },
 ]
 

@@ -1,10 +1,8 @@
 const logos: { name: string; weight: string }[] = [
-  { name: 'Artadent',      weight: 'font-semibold' },
-  { name: 'Bergen Bakeri', weight: 'font-light tracking-wider' },
-  { name: 'GV Rentals',    weight: 'font-bold' },
-  { name: 'Nordic Fit',    weight: 'font-semibold tracking-widest uppercase text-xs' },
-  { name: 'VisitBergen',   weight: 'font-medium' },
-  { name: 'Marbesa',       weight: 'font-extrabold tracking-tight' },
+  { name: 'Artadent',   weight: 'font-semibold' },
+  { name: 'h-orbit',    weight: 'font-bold tracking-tight' },
+  { name: 'GV Rentals', weight: 'font-bold' },
+  { name: 'Marbesa',    weight: 'font-extrabold tracking-tight' },
 ]
 
 export default function HomeLogoStrip() {

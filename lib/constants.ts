@@ -8,7 +8,7 @@ export const ADDRESS = 'Damsgårdsveien 83a, 5058 Bergen'
 export const ADDRESS_MAPS_HREF = 'https://maps.google.com/?q=Damsgårdsveien+83a+5058+Bergen'
 
 // ── Social ────────────────────────────────────────────────────────────────────
-export const INSTAGRAM_URL = 'https://instagram.com/frameflow.no'
+export const INSTAGRAM_URL = 'https://www.instagram.com/frameflow_no/'
 export const TIKTOK_URL = 'https://tiktok.com/@frameflow.no'
 
 // ── Navigation ────────────────────────────────────────────────────────────────

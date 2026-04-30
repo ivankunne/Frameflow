@@ -58,7 +58,7 @@ const services = [
     description: 'Sosiale medier-håndtering for Bergen-bedrifter. Fra innholdsproduksjon til strategi og community management – konsekvent, autentisk og alltid på merkevaren din.',
     metric: '+890',
     metricLabel: 'følgere på 3 måneder',
-    metricSub: 'Bergen Bakeri · Instagram',
+    metricSub: 'GV Rentals · Instagram',
     includes: ['Innholdskalender', 'Instagram, TikTok, LinkedIn', 'Hashtag-strategi', 'Community management', 'Månedlig rapportering'],
     accentHex: '#7c3aed',
     visual: 'social' as const,

@@ -47,7 +47,7 @@ export const organizationSchema = {
     },
   ],
   sameAs: [
-    'https://www.instagram.com/frameflow.no',
+    'https://www.instagram.com/frameflow_no/',
     'https://www.tiktok.com/@frameflow.no',
   ],
   founder: {

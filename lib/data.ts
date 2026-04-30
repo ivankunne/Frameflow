@@ -246,7 +246,7 @@ De fleste Bergen-bedrifter bruker sosiale medier feil. De poster sporadisk, uten
 
 ### Instagram
 
-Best for restauranter, kafeer, frisører, interiørbutikker og alle bransjer med visuelt appell. Bergen er en vakker by – og Instagram elsker vakre byer. Bruk hashtags som #Bergen, #VisitBergen, #BergenNorway og bydel-tags. Lokale hashtags har langt høyere engasjement per post enn generelle.
+Best for restauranter, kafeer, frisører, interiørbutikker og alle bransjer med visuelt appell. Bergen er en vakker by – og Instagram elsker vakre byer. Bruk hashtags som #Bergen, #BergenCity, #BergenNorway og bydel-tags. Lokale hashtags har langt høyere engasjement per post enn generelle.
 
 ### Facebook
 
