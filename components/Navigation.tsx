@@ -79,7 +79,7 @@ export default function Navigation() {
           <div className="hidden md:flex items-center gap-3">
             <Link
               href="/kontakt"
-              className="text-sm font-semibold text-fg-muted hover:text-fg border border-border hover:border-accent/40 bg-bg px-5 py-2 rounded-lg transition-all min-h-[44px] flex items-center shadow-card"
+              className="text-sm font-semibold text-fg hover:text-accent border border-fg/15 hover:border-accent/50 bg-bg-2 px-5 py-2 rounded-lg transition-all min-h-[44px] flex items-center shadow-card"
             >
               Book samtale
             </Link>

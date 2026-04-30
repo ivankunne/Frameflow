@@ -184,37 +184,35 @@ export default function Footer() {
         </div>
 
         {/* ── Bottom bar ── */}
-        <div className="mt-12 pt-8 border-t border-white/8 flex flex-col gap-6">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6">
-              <p className="text-xs text-white/45">© {new Date().getFullYear()} Frameflow. Alle rettigheter forbeholdt.</p>
-              <p className="text-xs text-white/45">Org.nr: 934 205 156</p>
-            </div>
-            <div className="flex items-center gap-4 flex-wrap">
-              <Link href="/personvern" className="text-xs text-white/45 hover:text-white/75 transition-colors">Personvern</Link>
-              <span className="text-xs text-white/25">·</span>
-              <a href="/sitemap.xml" className="text-xs text-white/45 hover:text-white/75 transition-colors">Sitemap</a>
-              <span className="text-xs text-white/25">·</span>
-              <p className="text-xs text-white/45">Bergen, Norge</p>
-            </div>
-          </div>
-
-          {/* Trust signals */}
-          <div className="flex flex-wrap gap-4 text-xs text-white/35">
-            <span className="flex items-center gap-1">
-              <span className="w-1 h-1 rounded-full bg-green-400/60"></span>
+        <div className="mt-12 pt-8 border-t border-white/8 flex flex-col gap-5">
+          {/* Trust signals — last thing the user reads before copyright */}
+          <div className="flex flex-wrap gap-x-5 gap-y-2 text-xs text-white/50">
+            <span className="flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-green-400/70 shrink-0" />
               Svar innen 24 timer
             </span>
-            <span>·</span>
-            <span className="flex items-center gap-1">
-              <span className="w-1 h-1 rounded-full bg-green-400/60"></span>
+            <span className="flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-green-400/70 shrink-0" />
               Ingen oppstartsgebyr
             </span>
-            <span>·</span>
-            <span className="flex items-center gap-1">
-              <span className="w-1 h-1 rounded-full bg-green-400/60"></span>
+            <span className="flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-green-400/70 shrink-0" />
               Fornøyd eller pengene tilbake
             </span>
+          </div>
+
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 border-t border-white/8">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6">
+              <p className="text-xs text-white/35">© {new Date().getFullYear()} Frameflow. Alle rettigheter forbeholdt.</p>
+              <p className="text-xs text-white/35">Org.nr: 934 205 156</p>
+            </div>
+            <div className="flex items-center gap-4 flex-wrap">
+              <Link href="/personvern" className="text-xs text-white/35 hover:text-white/65 transition-colors">Personvern</Link>
+              <span className="text-xs text-white/20">·</span>
+              <a href="/sitemap.xml" className="text-xs text-white/35 hover:text-white/65 transition-colors">Sitemap</a>
+              <span className="text-xs text-white/20">·</span>
+              <p className="text-xs text-white/35">Bergen, Norge</p>
+            </div>
           </div>
         </div>
       </div>

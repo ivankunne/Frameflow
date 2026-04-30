@@ -140,11 +140,11 @@ export default function HomePage() {
       <JsonLd data={faqSchema} />
       <HomeHero />
       <HomeLogoStrip />
+      <HomeStats />
       <HomeServices />
       <HomeAbout />
       <HomeProcess />
       <HomeProjects />
-      <HomeStats />
       <HomeTestimonials />
       <HomeFAQ />
       <HomeCTA />
