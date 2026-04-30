@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 import { blogPosts, projects } from '@/lib/data'
 
 const BASE_URL = 'https://www.frameflow.no'
-const SITE_UPDATED = new Date('2026-03-24')
+const SITE_UPDATED = new Date('2026-04-30')
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/tjenester/webdesign`, lastModified: SITE_UPDATED, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/tjenester/foto-og-videografi`, lastModified: SITE_UPDATED, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/tjenester/sosiale-medier`, lastModified: SITE_UPDATED, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/tjenester/app-utvikling`, lastModified: SITE_UPDATED, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/tjenester/branding`, lastModified: SITE_UPDATED, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/prosjekter`, lastModified: SITE_UPDATED, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/blogg`, lastModified: SITE_UPDATED, changeFrequency: 'weekly', priority: 0.8 },
