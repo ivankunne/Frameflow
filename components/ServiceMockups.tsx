@@ -492,7 +492,7 @@ export function BrandMockup({ visible }: { visible: boolean }) {
 // Animation language: app header fades in, sidebar items slide, tasks pop with colors
 export function AppMockup({ visible }: { visible: boolean }) {
   return (
-    <div className="h-44 bg-white rounded-xl border border-border overflow-hidden shadow-card flex flex-col">
+    <div className="h-full w-full bg-white rounded-xl border border-border overflow-hidden shadow-card flex flex-col">
       {/* App header */}
       <motion.div
         initial={{ opacity: 0, y: -8 }}
