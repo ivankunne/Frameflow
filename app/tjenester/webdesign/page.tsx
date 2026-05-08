@@ -3,20 +3,20 @@ import ServicePageTemplate from '@/components/ServicePageTemplate'
 import { JsonLd } from '@/components/JsonLd'
 
 export const metadata: Metadata = {
-  title: 'Web design i Bergen | Rask, SEO-optimalisert nettside',
+  title: 'Webdesign Bergen | Nettsider som konverterer – Frameflow',
   description:
-    'Lær hvordan raske, SEO-optimaliserte nettsider i Bergen øker organisk trafikk +140%. Vi bygger konverteringsfokuserte design – be om tilbud i dag.',
+    'Frameflow lager nettsider for Bergen-bedrifter som konverterer besøkende til kunder – SEO innebygd fra dag én. Ingen oppstartsgebyr, svar innen 24 timer.',
   alternates: { canonical: 'https://www.frameflow.no/tjenester/webdesign' },
   openGraph: {
-    title: 'Web design i Bergen | Frameflow',
-    description: 'Raske, SEO-optimaliserte nettsider i Bergen som øker organisk trafikk. Konverteringsfokusert design fra dag én.',
+    title: 'Webdesign Bergen | Nettsider som konverterer – Frameflow',
+    description: 'Frameflow lager nettsider for Bergen-bedrifter som konverterer besøkende til kunder – SEO innebygd fra dag én. Ingen oppstartsgebyr, svar innen 24 timer.',
     url: 'https://www.frameflow.no/tjenester/webdesign',
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Web design i Bergen | Frameflow',
-    description: 'Raske, SEO-optimaliserte nettsider som øker organisk trafikk. Konverteringsfokusert design fra dag én.',
+    title: 'Webdesign Bergen | Nettsider som konverterer – Frameflow',
+    description: 'Frameflow lager nettsider for Bergen-bedrifter som konverterer besøkende til kunder – SEO innebygd fra dag én. Ingen oppstartsgebyr, svar innen 24 timer.',
   },
 }
 
