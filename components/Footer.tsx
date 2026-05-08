@@ -27,7 +27,7 @@ export default function Footer() {
       />
 
       {/* ── CTA headline strip ── */}
-      <div className="relative" style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
+      <div className="relative" style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }} data-nosnippet>
         <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-16 lg:pt-24 pb-14 lg:pb-20">
           <motion.div
             initial={{ opacity: 0, y: 6 }}
@@ -165,7 +165,7 @@ export default function Footer() {
             transition={{ duration: 0.5, delay: 0.36 }}
           >
             <p className="text-[11px] font-semibold text-white/45 uppercase tracking-widest mb-5">Kontakt</p>
-            <ul className="flex flex-col gap-3">
+            <ul className="flex flex-col gap-3" data-nosnippet>
               <li>
                 <a href={PHONE_HREF} className="text-sm text-white/70 hover:text-white transition-colors">
                   {PHONE}
