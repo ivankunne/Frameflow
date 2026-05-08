@@ -40,11 +40,39 @@ const serviceSchema = {
   areaServed: { '@type': 'City', name: 'Bergen' },
 }
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Hva koster det å lage en app?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Apputvikling fra Frameflow starter fra 45 000 kr for en MVP. Fullskala løsninger prises individuelt etter scope og kompleksitet.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Lager dere apper til både iOS og Android?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Ja, vi bygger apper i React Native og Flutter som fungerer på både iOS og Android fra én kodebase – noe som sparer tid og kostnader.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Hvor raskt kan vi ha en første versjon klar?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Vi leverer en testbar MVP på 2–4 uker slik at du kan validere ideen med ekte brukere raskt.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Hva skjer etter lansering?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Vi tilbyr løpende support og videreutvikling etter lansering. Du er aldri alene med produktet ditt.' },
+    },
+  ],
+}
+
 export default function AppUtvikling() {
   return (
     <>
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={serviceSchema} />
+      <JsonLd data={faqSchema} />
       <ServicePageTemplate
         label="Tjeneste"
         title="Apper som løser reelle problemer"

@@ -39,11 +39,39 @@ const serviceSchema = {
   areaServed: { '@type': 'City', name: 'Bergen' },
 }
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Hva koster bedriftsfotografering i Bergen?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Bedriftsfotografering fra Frameflow starter fra 4 500 kr. Prisen avhenger av antall timer, lokasjon og antall bilder som skal redigeres.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Leverer dere innhold til sosiale medier?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Ja, vi produserer foto og video optimalisert for Instagram, TikTok, LinkedIn og andre plattformer – i riktig format og størrelse.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Hvor raskt leveres bildene etter fotografering?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Redigerte bilder og video leveres vanligvis innen 5–7 virkedager etter fotografering.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Kan dere kombinere foto og sosiale medier?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Ja, vi tilbyr pakker som kombinerer innholdsproduksjon med administrasjon av sosiale medier for en sømløs løsning.' },
+    },
+  ],
+}
+
 export default function FotoOgVideografiPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={serviceSchema} />
+      <JsonLd data={faqSchema} />
       <ServicePageTemplate
         label="Tjeneste"
         title="Innhold som stopper scrollingen og selger"

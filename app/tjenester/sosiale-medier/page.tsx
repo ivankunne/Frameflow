@@ -39,11 +39,39 @@ const serviceSchema = {
   areaServed: { '@type': 'City', name: 'Bergen' },
 }
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Hva koster administrasjon av sosiale medier?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Sosiale medier-pakker fra Frameflow starter fra 3 500 kr per måned, avhengig av antall plattformer og innholdsmengde.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Hvilke plattformer håndterer dere?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Vi håndterer Instagram, Facebook, TikTok og LinkedIn – tilpasset der målgruppen din befinner seg.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Produserer dere også innhold og bilder?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Ja, vi tilbyr kombinerte pakker der vi produserer foto og video samt håndterer publisering og community management.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Får vi se innholdet før det publiseres?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Ja, vi presenterer en innholdskalender for godkjenning hver måned slik at du alltid har full kontroll.' },
+    },
+  ],
+}
+
 export default function SosialeMedierPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={serviceSchema} />
+      <JsonLd data={faqSchema} />
       <ServicePageTemplate
         label="Tjeneste"
         title="Sosiale medier som vokser, engasjerer og konverterer"

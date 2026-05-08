@@ -39,11 +39,39 @@ const serviceSchema = {
   areaServed: { '@type': 'City', name: 'Bergen' },
 }
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Hva koster en nettside i Bergen?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Nettsider fra Frameflow starter fra 15 000 kr eks. mva. Prisen avhenger av antall sider, funksjoner og designkompleksitet. Vi gir alltid et fast tilbud uten skjulte kostnader.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Hvor lang tid tar det å lage en nettside?',
+      acceptedAnswer: { '@type': 'Answer', text: 'De fleste prosjekter tar 3–6 uker fra oppdagssamtale til lansering, avhengig av størrelse og innholdsleveranse fra deg.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Er nettsiden SEO-optimalisert?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Ja, SEO er innebygd fra dag én. Vi setter opp metadata, strukturert data, sitemap og Google Search Console som standard – uten ekstra kostnad.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Kan jeg oppdatere nettsiden selv?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Ja, alle nettsider leveres med et brukervennlig CMS slik at du kan endre tekst, bilder og innhold uten teknisk kunnskap.' },
+    },
+  ],
+}
+
 export default function WebdesignPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={serviceSchema} />
+      <JsonLd data={faqSchema} />
       <ServicePageTemplate
         label="Tjeneste"
         title="Nettsider som rangerer og konverterer"

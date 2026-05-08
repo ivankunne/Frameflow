@@ -39,11 +39,39 @@ const serviceSchema = {
   areaServed: { '@type': 'City', name: 'Bergen' },
 }
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Hva er inkludert i en brandingpakke?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Alle brandingpakker inkluderer logo, fargepalett, typografi og brand guidelines. Vi leverer alle filer i vektorformat for bruk på nett og i trykk.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Hva koster branding og logo design?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Brandingpakker fra Frameflow starter fra 8 000 kr eks. mva. Prisen avhenger av omfang og leveranser.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Hvor lang tid tar et brandingprosjekt?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Et komplett brandingprosjekt tar typisk 2–4 uker, inkludert konsept, presentasjon og revisjoner.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Kan jeg bruke merkevaren på tvers av alle medier?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Ja, du mottar alle filer i vektorformat (SVG, PDF, PNG) som fungerer i alle størrelser – fra visittkort til bannere.' },
+    },
+  ],
+}
+
 export default function BrandingPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={serviceSchema} />
+      <JsonLd data={faqSchema} />
       <ServicePageTemplate
         label="Tjeneste"
         title="En merkevare som skiller seg ut og huskes"
