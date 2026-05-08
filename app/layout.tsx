@@ -87,7 +87,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="nb" className={`${bricolage.variable} ${figtree.variable}`}>
-<body suppressHydrationWarning>
+      <head>
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly site summary" />
+        <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLM-friendly full site content" />
+      </head>
+      <body suppressHydrationWarning>
         <Providers>
           <Navigation />
           <main>

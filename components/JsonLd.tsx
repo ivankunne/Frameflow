@@ -55,6 +55,18 @@ export const organizationSchema = {
   founder: {
     '@id': 'https://www.frameflow.no/#ivan-kunne',
   },
+  potentialAction: [
+    {
+      '@type': 'ContactAction',
+      target: 'https://www.frameflow.no/kontakt',
+      name: 'Kontakt Frameflow',
+    },
+    {
+      '@type': 'ReserveAction',
+      target: 'https://www.frameflow.no/kontakt',
+      name: 'Book gratis samtale med Frameflow',
+    },
+  ],
   knowsAbout: [
     'Webdesign',
     'Digital markedsføring',
@@ -75,6 +87,14 @@ export const websiteSchema = {
     '@id': 'https://www.frameflow.no/#organization',
   },
   inLanguage: 'nb-NO',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://www.frameflow.no/blogg?q={search_term_string}',
+    },
+    'query-input': 'required name=search_term_string',
+  },
 }
 
 export const personSchema = {

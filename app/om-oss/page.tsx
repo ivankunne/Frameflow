@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { JsonLd, organizationSchema } from '@/components/JsonLd'
+import { JsonLd, organizationSchema, personSchema } from '@/components/JsonLd'
 import OmOssClient from '@/components/OmOssClient'
 
 export const metadata: Metadata = {
@@ -34,6 +34,7 @@ export default function OmOssPage() {
     <>
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={organizationSchema} />
+      <JsonLd data={personSchema} />
       <OmOssClient />
     </>
   )
