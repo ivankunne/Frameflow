@@ -72,6 +72,10 @@ const nextConfig: NextConfig = {
         destination: '/prosjekter/:slug',
         permanent: true,
       },
+      { source: '/services', destination: '/tjenester', permanent: true },
+      { source: '/case-studies', destination: '/prosjekter', permanent: true },
+      { source: '/contact', destination: '/kontakt', permanent: true },
+      { source: '/project-configurator', destination: '/tilbud', permanent: true },
     ]
   },
 }
