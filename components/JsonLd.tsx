@@ -50,7 +50,7 @@ export const organizationSchema = {
     'https://www.instagram.com/frameflow_no/',
     'https://www.tiktok.com/@frameflow.no',
     'https://www.linkedin.com/in/frameflow-ivan-kunne-612106398/',
-    'https://data.brreg.no/enhetsregisteret/api/enheter/934205156',
+    'https://data.brreg.no/enhetsregisteret/api/enheter/936600018',
   ],
   founder: {
     '@id': 'https://www.frameflow.no/#ivan-kunne',

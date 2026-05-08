@@ -253,7 +253,7 @@ export async function POST(request: Request) {
               <tr>
                 <td>
                   <p style="margin:0;font-size:12px;color:#9ca3af;">Frameflow · Damsgårdsveien 83a, 5058 Bergen</p>
-                  <p style="margin:4px 0 0;font-size:12px;color:#9ca3af;">Org.nr: 934 205 156 · <a href="https://www.frameflow.no" style="color:#2172b5;text-decoration:none;">frameflow.no</a></p>
+                  <p style="margin:4px 0 0;font-size:12px;color:#9ca3af;">Org.nr: 936 600 018 · <a href="https://www.frameflow.no" style="color:#2172b5;text-decoration:none;">frameflow.no</a></p>
                 </td>
                 <td align="right">
                   <p style="margin:0;font-size:11px;color:#d1d5db;">Sendt via tilbudsskjema</p>

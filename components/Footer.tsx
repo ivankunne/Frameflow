@@ -70,7 +70,7 @@ export default function Footer() {
                   {EMAIL}
                 </a>
               </div>
-              <p className="text-xs text-white/35 text-center sm:text-right">Org.nr: 934 205 156 · Registrert i Brønnøysundregistrene</p>
+              <p className="text-xs text-white/35 text-center sm:text-right">Org.nr: 936 600 018 · Registrert i Brønnøysundregistrene</p>
             </motion.div>
           </div>
         </div>
@@ -204,7 +204,7 @@ export default function Footer() {
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 border-t border-white/8">
             <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6">
               <p className="text-xs text-white/35">© {new Date().getFullYear()} Frameflow. Alle rettigheter forbeholdt.</p>
-              <p className="text-xs text-white/35">Org.nr: 934 205 156</p>
+              <p className="text-xs text-white/35">Org.nr: 936 600 018</p>
             </div>
             <div className="flex items-center gap-4 flex-wrap">
               <Link href="/personvern" className="text-xs text-white/35 hover:text-white/65 transition-colors">Personvern</Link>

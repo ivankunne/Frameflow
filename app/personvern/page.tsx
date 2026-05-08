@@ -58,7 +58,7 @@ export default function PersonvernPage() {
             </p>
             <div className="mt-4 bg-bg-2 border border-border rounded-xl p-5 text-sm text-fg-muted space-y-1">
               <p><span className="font-medium text-fg">Organisasjon:</span> Frameflow</p>
-              <p><span className="font-medium text-fg">Org.nr:</span> 934 205 156</p>
+              <p><span className="font-medium text-fg">Org.nr:</span> 936 600 018</p>
               <p><span className="font-medium text-fg">Adresse:</span> Damsgårdsveien 83a, 5058 Bergen</p>
               <p><span className="font-medium text-fg">E-post:</span>{' '}
                 <a href="mailto:ivan@frameflow.no" className="text-accent hover:underline">ivan@frameflow.no</a>
