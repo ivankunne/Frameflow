@@ -29,7 +29,7 @@ export async function generateMetadata({
       url: `https://www.frameflow.no/blogg/${post.slug}`,
       images: [{ url: '/og-image.png', width: 1200, height: 630 }],
       authors: ['Ivan Kunne'],
-      publishedTime: post.updatedAt,
+      publishedTime: post.updatedAt ?? post.date,
     },
     twitter: {
       card: 'summary_large_image',
@@ -48,14 +48,26 @@ export default async function BlogPostPage({
   const post = getBlogPost(slug)
   if (!post) notFound()
 
+  const publishedDate = post.updatedAt ?? post.date
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: post.title,
     description: post.excerpt,
-    datePublished: post.updatedAt,
+    datePublished: publishedDate,
+    dateModified: publishedDate,
+    articleSection: post.category,
+    image: {
+      '@type': 'ImageObject',
+      url: 'https://www.frameflow.no/og-image.png',
+      width: 1200,
+      height: 630,
+    },
     author: {
+      '@type': 'Person',
       '@id': 'https://www.frameflow.no/#ivan-kunne',
+      name: 'Ivan Kunne',
+      url: 'https://www.frameflow.no/om-oss',
     },
     publisher: {
       '@id': 'https://www.frameflow.no/#organization',
