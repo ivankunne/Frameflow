@@ -1,0 +1,33 @@
+# Frameflow
+
+> Frameflow er et markedsføringsbyrå i Bergen, Norge. Vi hjelper lokale bedrifter å vokse med webdesign, app utvikling, foto & video, sosiale medier og branding – alt under ett tak. Ingen oppstartsgebyr, svar innen 24 timer.
+
+## Tjenester
+
+- [Webdesign Bergen](https://www.frameflow.no/tjenester/webdesign): Vi lager raske, SEO-optimaliserte nettsider for Bergen-bedrifter som konverterer besøkende til kunder. Pris fra 15 000 kr.
+- [App utvikling Bergen](https://www.frameflow.no/tjenester/app-utvikling): Skreddersydde webapper og mobilapper i React Native, Flutter og Next.js. Fra MVP til fullskala løsninger. Pris fra 45 000 kr.
+- [Sosiale medier Bergen](https://www.frameflow.no/tjenester/sosiale-medier): Strategi, innholdsproduksjon og community management for Instagram, TikTok, Facebook og LinkedIn. Fra 3 500 kr/mnd.
+- [Branding Bergen](https://www.frameflow.no/tjenester/branding): Logo, visuell identitet og brand guidelines som gjør merkevaren din umiskjennelig. Pris fra 8 000 kr.
+- [Foto og videografi Bergen](https://www.frameflow.no/tjenester/foto-og-videografi): Autentisk foto og video for sosiale medier, nettsider og markedsføring. Pris fra 4 500 kr.
+
+## Om oss
+
+- [Om Frameflow](https://www.frameflow.no/om-oss): Frameflow ble grunnlagt av Ivan Kunne i Bergen. Vi er et lite, dedikert byrå med fokus på målbare resultater for lokale bedrifter i Bergen og Vestland.
+
+## Prosjekter
+
+- [Prosjekter](https://www.frameflow.no/prosjekter): Utvalgte prosjekter vi har levert, inkludert Artadent, GV Rentals, HO Orbit og Marbesa Project 94.
+
+## Kontakt og tilbud
+
+- [Kontakt](https://www.frameflow.no/kontakt): Ta kontakt for en gratis konsultasjon. Telefon: +47 99 85 37 81. E-post: ivan@frameflow.no. Adresse: Damsgårdsveien 83a, 5058 Bergen.
+- [Be om tilbud](https://www.frameflow.no/tilbud): Konfigurer og be om tilbud på din neste webdesign-, app- eller markedsføringspakke.
+
+## Blogg
+
+- [Blogg](https://www.frameflow.no/blogg): Artikler om webdesign, SEO, sosiale medier, branding og digital markedsføring for Bergen-bedrifter.
+- [Lokal SEO Bergen – guide 2025](https://www.frameflow.no/blogg/lokal-seo-bergen-guide-2025)
+- [Webdesign Bergen – nettside som konverterer](https://www.frameflow.no/blogg/webdesign-bergen-nettside-som-konverterer)
+- [Google My Business Bergen – guide](https://www.frameflow.no/blogg/google-my-business-bergen-guide)
+- [Hva koster en nettside i Bergen? Prisguide 2025](https://www.frameflow.no/blogg/hva-koster-webdesign-bergen-prisguide-2025)
+- [Beste markedsføringsbyrå i Bergen 2025](https://www.frameflow.no/blogg/beste-markedsforingsbyrå-bergen-2025)
