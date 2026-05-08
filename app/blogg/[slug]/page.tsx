@@ -88,6 +88,7 @@ export default async function BlogPostPage({
         Branding: ['branding Bergen', 'merkevare Bergen', 'logo design Bergen'],
         'Foto & Video': ['bedriftsfoto Bergen', 'videografi Bergen', 'fotograf Bergen'],
         Markedsføring: ['digital markedsføring Bergen', 'markedsføringsbyrå Bergen', 'annonsering Bergen'],
+        'App utvikling': ['app utvikling Bergen', 'apputvikling Bergen', 'mobilapp Bergen'],
       }[post.category] ?? []),
     ].join(', '),
   }

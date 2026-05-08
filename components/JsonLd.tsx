@@ -9,7 +9,7 @@ export function JsonLd({ data }: { data: object }) {
 
 export const organizationSchema = {
   '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
+  '@type': ['LocalBusiness', 'ProfessionalService'],
   '@id': 'https://www.frameflow.no/#organization',
   name: 'Frameflow',
   url: 'https://www.frameflow.no',

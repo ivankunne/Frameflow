@@ -37,6 +37,17 @@ const serviceSchema = {
   provider: { '@id': 'https://www.frameflow.no/#organization' },
   description: 'Profesjonell foto og videografi i Bergen. Autentisk visuelt innhold for sosiale medier, nettsider og markedsføring.',
   areaServed: { '@type': 'City', name: 'Bergen' },
+  offers: {
+    '@type': 'Offer',
+    priceCurrency: 'NOK',
+    priceSpecification: {
+      '@type': 'PriceSpecification',
+      priceCurrency: 'NOK',
+      minPrice: 4500,
+      description: 'Fra 4 500 kr.',
+    },
+    eligibleRegion: { '@type': 'City', name: 'Bergen' },
+  },
 }
 
 const faqSchema = {

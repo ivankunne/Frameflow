@@ -506,6 +506,244 @@ Vi er et lite byrå med én kontaktperson, fast pris, fornøyd garanti og dyp lo
 Nysgjerrig? Book en gratis samtale og se om vi passer for deg.
     `.trim(),
   },
+  {
+    slug: 'app-utvikling-pris-bergen-2025',
+    title: 'Hva koster apputvikling i Bergen? Komplett prisguide 2025',
+    excerpt: 'Prisen på en app varierer enormt – fra 45 000 kr for en MVP til 500 000+ for fullskala løsninger. Her er hva som påvirker prisen og hva du faktisk får for pengene.',
+    category: 'App utvikling',
+    date: '8. mai 2026',
+    updatedAt: '2026-05-08',
+    readTime: '8 min',
+    relatedService: { title: 'App utvikling', href: '/tjenester/app-utvikling' },
+    content: `
+## Hva koster en app i Bergen?
+
+Det korte svaret: mellom 45 000 og 500 000+ kr, avhengig av hva du vil bygge. Det lange svaret krever at vi ser på hva som faktisk driver prisen – og hva du bør forvente fra en seriøs leverandør.
+
+Her er en realistisk prisoversikt for apputvikling i Bergen i 2025:
+
+| Type løsning | Estimert pris |
+|---|---|
+| MVP / testversjon | 45 000 – 80 000 kr |
+| Enkel mobilapp (iOS eller Android) | 80 000 – 150 000 kr |
+| Mobilapp (iOS + Android) | 120 000 – 250 000 kr |
+| Fullskala webapplikasjon | 150 000 – 400 000 kr |
+| Kompleks plattform med integrasjoner | 300 000 – 800 000+ kr |
+
+## Hva påvirker prisen på en app?
+
+### 1. Antall funksjoner (scope)
+
+Dette er den enkeltfaktoren som påvirker prisen mest. Hver funksjon krever design, utvikling, testing og vedlikehold. En app med brukerpålogging, betalingsintegrasjon, push-varslinger og admin-panel koster vesentlig mer enn én med én kjernefunksjon.
+
+Tips: Start med én ting appen skal gjøre bedre enn noe annet. Det er MVP-filosofien, og den er akkurat like relevant i Bergen som i Silicon Valley.
+
+### 2. iOS, Android eller begge?
+
+Native apper (separate kodebase for iOS og Android) er dyrest, men gir best ytelse. Hybride rammeverk som React Native og Flutter lar deg bygge for begge plattformer fra én kodebase – og er derfor langt mer kostnadseffektive for de fleste Bergen-bedrifter.
+
+Hos Frameflow bygger vi i React Native og Flutter for mobilapper, og Next.js for webapplikasjoner. Valget avhenger av hva som gir best resultat for ditt prosjekt.
+
+### 3. Backend og integrasjoner
+
+Trenger appen din en server, database, eller integrasjon mot et tredjepartssystem (betalingsløsning, CRM, booking-system)? Hvert integrasjonspunkt legger til tid og kostnad. Enkel backend kan koste 20 000–50 000 kr i tillegg.
+
+### 4. Design og UX
+
+En gjennomarbeidet brukeropplevelse er ikke gratis – og det er heller ikke billig å rette opp i dårlig UX etter lansering. God UX-design utgjør typisk 20–30 % av totalbudsjettet.
+
+### 5. Hvem utvikler?
+
+Prisene varierer enormt mellom:
+
+- **Lavkost-leverandører (Øst-Europa, Asia):** 20–50 USD/t. Kan fungere for enkle prosjekter, men kommunikasjonsutfordringer og revisjoner spiser fort opp innsparingene.
+- **Norske frilansere:** 800–1 400 kr/t. Fleksibelt, men du koordinerer selv.
+- **Norske byråer:** 1 000–1 800 kr/t. Full prosjektstyring, men dyrere overhead.
+- **Frameflow:** Fast pris per prosjekt. Du vet hva du betaler fra dag én.
+
+## MVP – din beste investering
+
+En MVP (Minimum Viable Product) er en testversjon med kun kjernefunksjonene. Hos Frameflow leverer vi en testbar MVP på 2–4 uker.
+
+Fordelen? Du kan validere idéen med ekte brukere før du investerer 200 000 kr i full utvikling. Mange av Bergens mest vellykkede digitale produkter startet som en enkel MVP.
+
+## Hva bør du be om i et tilbud?
+
+Når du kontakter et apputviklingsbyrå i Bergen, bør tilbudet alltid inkludere:
+
+- Fast pris (ikke timepris der sluttbeløpet er ukjent)
+- Detaljert scope-beskrivelse
+- Milepæler og leveransedatoer
+- Hva som skjer etter lansering (support, vedlikehold)
+- Hvem som eier koden (du bør alltid eie koden)
+
+## Apputvikling i Bergen med Frameflow
+
+Frameflow bygger skreddersydde apper for Bergen-bedrifter. Vi gir alltid fast pris, starter med MVP, og leverer kode du eier. Priser fra 45 000 kr.
+
+Ta kontakt for en gratis samtale om prosjektet ditt – du får et konkret prisestimat innen 24 timer.
+    `.trim(),
+  },
+  {
+    slug: 'seo-byraa-bergen',
+    title: 'SEO-byrå i Bergen: Hva koster det og hva bør du forvente?',
+    excerpt: 'Leter du etter et SEO-byrå i Bergen? Her er hva tjenesten faktisk koster, hva som gir resultater, og hvilke spørsmål du bør stille før du skriver under på en avtale.',
+    category: 'SEO',
+    date: '8. mai 2026',
+    updatedAt: '2026-05-08',
+    readTime: '7 min',
+    relatedService: { title: 'Digital markedsføring', href: '/tjenester' },
+    content: `
+## Hva gjør et SEO-byrå i Bergen?
+
+Et SEO-byrå hjelper bedriften din å rangere høyere på Google for søkeord potensielle kunder faktisk bruker. For Bergen-bedrifter handler dette primært om lokal SEO – å dukke opp når noen søker «[din tjeneste] Bergen».
+
+En god SEO-pakke fra et Bergen-byrå dekker typisk:
+
+- **Teknisk SEO:** Hastighet, mobiloptimalisering, strukturert data, canonical-tagger
+- **On-page SEO:** Titler, metabeskrivelser, H1-struktur, intern lenkebygging
+- **Innhold:** Bloggposter og landingssider rettet mot søkeord du vil rangere på
+- **Lokal SEO:** Google Business Profile, NAP-konsistens, lokale sitering
+
+## Hva koster SEO-tjenester i Bergen?
+
+Her er et realistisk bilde av prisnivåene du vil møte:
+
+| Tjenestenivå | Månedlig pris | Hva du får |
+|---|---|---|
+| Grunnleggende SEO | 2 000 – 4 000 kr/mnd | Teknisk oppsett, månedlig rapport |
+| Standard SEO-pakke | 5 000 – 12 000 kr/mnd | Teknisk + innhold + rapportering |
+| Fullservice SEO | 12 000 – 30 000 kr/mnd | Alt inkludert, tett oppfølging |
+| Engangsoppsett | 8 000 – 25 000 kr | Teknisk SEO, ingen løpende arbeid |
+
+Merk: Billigste alternativ er ikke alltid best. SEO som leverer reelle resultater krever tid og kompetanse – det finnes ingen snarvei.
+
+## Hva skiller et godt SEO-byrå fra et dårlig?
+
+### De gode:
+- Viser deg faktiske rangeringer og trafikktall
+- Forklarer hva de gjør og hvorfor
+- Gir realistiske forventninger (SEO tar tid – typisk 3–6 måneder)
+- Rapporterer på resultater, ikke bare aktivitet
+- Eier ikke domenene dine eller holder deg «låst inne»
+
+### De dårlige:
+- Lover side 1 på Google innen 30 dager (urealistisk)
+- Er vage om metodene sine
+- Selger «100 backlinks» for billig pris (risikabelt)
+- Rapporterer på «aktivitet» (antall timer, innlegg) fremfor resultater
+
+## Lokal SEO vs. nasjonal SEO – hva trenger du?
+
+For de fleste Bergen-bedrifter er **lokal SEO** den høyest-prioriterte investeringen. Det handler om å dominere søk som:
+
+- «tannlege Bergen»
+- «webdesign byrå Bergen»
+- «regnskapsfører Bergenhus»
+- «restaurant Sandviken»
+
+Nasjonal SEO (konkurrere på søkeord uten by-navn) er langt vanskeligere og dyrere – og ofte unødvendig for lokale Bergen-bedrifter.
+
+## Google Business Profile – det viktigste SEO-grepet du kan ta gratis
+
+Før du betaler et SEO-byrå en krone: sørg for at Google Business Profile er 100 % komplett og oppdatert. Det er det enkeltgrepet som gir mest lokal synlighet for minst innsats.
+
+Sjekkliste:
+- Riktig kategori
+- Oppdaterte åpningstider
+- Profesjonelle bilder (minst 5–10)
+- Svar på alle anmeldelser
+- Legg inn Bergen i beskrivelsesteksten
+
+## Hva Frameflow leverer
+
+Hos Frameflow integrerer vi SEO i alt vi gjør – nettsider bygges med SEO fra dag én, ikke som ettertanke. Vi setter opp strukturert data, teknisk SEO og Google Search Console som standard på alle prosjekter.
+
+Ønsker du en gjennomgang av SEO-situasjonen din? Book en gratis samtale – vi ser raskt hva som kan forbedres.
+    `.trim(),
+  },
+  {
+    slug: 'logo-design-bergen',
+    title: 'Logo design i Bergen: Hva koster det og hva bør du forvente?',
+    excerpt: 'En profesjonell logo starter fra 8 000 kr i Bergen. Her er hva som inngår i en logodesign-pakke, hva som påvirker prisen, og hvordan du velger riktig grafisk designer.',
+    category: 'Branding',
+    date: '8. mai 2026',
+    updatedAt: '2026-05-08',
+    readTime: '6 min',
+    relatedService: { title: 'Branding', href: '/tjenester/branding' },
+    content: `
+## Hva koster logo design i Bergen?
+
+Logo design i Bergen varierer i pris fra noen hundre kroner (Fiverr) til 50 000+ kr for store merkevareprosjekter. Her er hva du realistisk sett kan forvente på ulike prisnivåer:
+
+| Tjenestenivå | Pris | Hva du får |
+|---|---|---|
+| Billige plattformer (Fiverr etc.) | 500 – 3 000 kr | Generiske maler, ingen strategi, begrenset støtte |
+| Frilanser | 5 000 – 15 000 kr | Tilpasset design, men varierende kvalitet |
+| Bergen-byrå (basis) | 8 000 – 20 000 kr | Profesjonell prosess, brand guidelines, alle filformater |
+| Bergen-byrå (fullservice) | 20 000 – 50 000+ kr | Komplett merkevarebygging, strategi og identitetssystem |
+
+Hos Frameflow starter logodesign fra 8 000 kr eks. mva. og inkluderer alltid full leveranse i alle nødvendige formater.
+
+## Hva bør en profesjonell logo inkludere?
+
+Når du bestiller logo design fra en seriøs grafisk designer eller et byrå i Bergen, skal du alltid få:
+
+### Logovariasjoner
+- Horisontal og vertikal variant
+- Med og uten bildetekst/tagline
+- Lys og mørk versjon (for bruk på mørk bakgrunn)
+
+### Filformater
+- **SVG og AI:** Vektorfiler – skalerer uten kvalitetstap til enhver størrelse
+- **PDF:** For trykkeri
+- **PNG med transparent bakgrunn:** For nett og sosiale medier
+- **JPG:** For enkel bruk
+
+Hvis en designer ikke leverer SVG-filer, er det et rødt flagg.
+
+### Brand guidelines
+Et minimum av retningslinjer som viser:
+- Godkjente farger med HEX, RGB og CMYK-koder
+- Typografi (hvilke fonter som hører til merkevaren)
+- Soner og mellomrom rundt logoen
+- Hva du ikke skal gjøre med logoen
+
+## Hva er forskjellen på logodesign og branding?
+
+**Logo** er ett element – selve tegnet eller ordmerket.
+
+**Branding** er helheten: logo, farger, typografi, tone of voice, visittkort, sosiale medier-maler, og retningslinjene som holder alt konsistent. En logo uten et system rundt seg mangler kraft.
+
+For Bergen-bedrifter som nettopp har startet, er en god logo med basis brand guidelines det viktigste første steget. Etter hvert kan systemet bygges ut.
+
+## Slik velger du riktig grafisk designer i Bergen
+
+### Sjekk porteføljen
+Se etter arbeid som ligner på din bransje og stil. Ber du om en logo for en tannlegeklinikk i Bergen, bør designeren ha erfaring med profesjonelle, tillitvekkende merkevarer.
+
+### Spør om prosessen
+En god designer starter alltid med spørsmål om bedriften din – hvem du er, hvem målgruppen er, og hva du vil formidle. Designere som hopper rett til skisser uten å forstå merkevaren, leverer sjelden det du trenger.
+
+### Be om fast pris
+Unngå timesprising på logodesign. Du vil vite hva du betaler før prosjektet starter.
+
+### Sjekk hvem som eier filene
+Du skal alltid eie alle logofiler og opphavsretten etter levering. Be om dette skriftlig.
+
+## Grafisk designer Bergen – frilanser eller byrå?
+
+**Frilanser:** Rimeligere, men varierende tilgjengelighet og support. Bra for enkle logoer uten behov for helhetlig identitet.
+
+**Byrå (som Frameflow):** Mer komplett leveranse, langsiktig relasjon, kan hjelpe med alt fra logo til nettside og sosiale medier-maler i ett løp.
+
+## Logo design fra Frameflow i Bergen
+
+Vi lager logoer og visuelle identiteter for Bergen-bedrifter som vil skille seg ut. Fast pris fra 8 000 kr, levering på 2–4 uker, og full rettighet til alle filer.
+
+Ta kontakt for en gratis samtale – vi ser raskt om vi er riktig match for prosjektet ditt.
+    `.trim(),
+  },
 ]
 
 export const projects: Project[] = [

@@ -37,6 +37,17 @@ const serviceSchema = {
   provider: { '@id': 'https://www.frameflow.no/#organization' },
   description: 'Profesjonell webdesign i Bergen med fokus på hastighet, SEO og konvertering.',
   areaServed: { '@type': 'City', name: 'Bergen' },
+  offers: {
+    '@type': 'Offer',
+    priceCurrency: 'NOK',
+    priceSpecification: {
+      '@type': 'PriceSpecification',
+      priceCurrency: 'NOK',
+      minPrice: 15000,
+      description: 'Fra 15 000 kr eks. mva.',
+    },
+    eligibleRegion: { '@type': 'City', name: 'Bergen' },
+  },
 }
 
 const faqSchema = {

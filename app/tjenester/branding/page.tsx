@@ -37,6 +37,17 @@ const serviceSchema = {
   provider: { '@id': 'https://www.frameflow.no/#organization' },
   description: 'Profesjonell branding for bedrifter i Bergen. Logo, visuell identitet og brand guidelines som gjør merkevaren din umiskjennelig.',
   areaServed: { '@type': 'City', name: 'Bergen' },
+  offers: {
+    '@type': 'Offer',
+    priceCurrency: 'NOK',
+    priceSpecification: {
+      '@type': 'PriceSpecification',
+      priceCurrency: 'NOK',
+      minPrice: 8000,
+      description: 'Fra 8 000 kr eks. mva.',
+    },
+    eligibleRegion: { '@type': 'City', name: 'Bergen' },
+  },
 }
 
 const faqSchema = {

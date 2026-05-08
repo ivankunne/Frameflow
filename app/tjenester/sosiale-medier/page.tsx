@@ -37,6 +37,17 @@ const serviceSchema = {
   provider: { '@id': 'https://www.frameflow.no/#organization' },
   description: 'Profesjonell håndtering av sosiale medier for Bergen-bedrifter. Innholdsproduksjon, strategi og community management.',
   areaServed: { '@type': 'City', name: 'Bergen' },
+  offers: {
+    '@type': 'Offer',
+    priceCurrency: 'NOK',
+    priceSpecification: {
+      '@type': 'PriceSpecification',
+      priceCurrency: 'NOK',
+      minPrice: 3500,
+      description: 'Fra 3 500 kr/mnd.',
+    },
+    eligibleRegion: { '@type': 'City', name: 'Bergen' },
+  },
 }
 
 const faqSchema = {

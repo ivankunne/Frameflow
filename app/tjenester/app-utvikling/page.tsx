@@ -38,6 +38,17 @@ const serviceSchema = {
   provider: { '@id': 'https://www.frameflow.no/#organization' },
   description: 'Skreddersydde webapper og mobilapper som løser reelle problemer for bedrifter.',
   areaServed: { '@type': 'City', name: 'Bergen' },
+  offers: {
+    '@type': 'Offer',
+    priceCurrency: 'NOK',
+    priceSpecification: {
+      '@type': 'PriceSpecification',
+      priceCurrency: 'NOK',
+      minPrice: 45000,
+      description: 'Fra 45 000 kr eks. mva.',
+    },
+    eligibleRegion: { '@type': 'City', name: 'Bergen' },
+  },
 }
 
 const faqSchema = {
