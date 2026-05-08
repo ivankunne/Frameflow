@@ -5,7 +5,7 @@ import { JsonLd } from '@/components/JsonLd'
 export const metadata: Metadata = {
   title: 'Foto og videografi i Bergen | Autentisk visuelt innhold',
   description:
-    'Lær hvordan autentisk fotografi og videografi øker engasjement på sosiale medier. Profesjonell produksjon i Bergen – be om tilbud nå.',
+    'Frameflow produserer bedriftsfoto og video i Bergen for sosiale medier, nettsider og annonser. Fra 4 500 kr – levering innen 5–7 virkedager.',
   alternates: { canonical: 'https://www.frameflow.no/tjenester/foto-og-videografi' },
   openGraph: {
     title: 'Foto og videografi i Bergen | Frameflow',

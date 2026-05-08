@@ -6,7 +6,7 @@ import { JsonLd } from '@/components/JsonLd'
 export const metadata: Metadata = {
   title: 'App utvikling i Bergen | Fra MVP til fullskala løsninger',
   description:
-    'Oppdagelse av skræddersydde webapper og mobilapper som løser reelle problemer. Fra MVP til fullskala – be om tilbud for å komme i gang.',
+    'Frameflow bygger skreddersydde apper for Bergen-bedrifter – fra MVP klar på 2–4 uker til fullskala løsninger. iOS, Android og web. Fra 45 000 kr.',
   alternates: { canonical: 'https://www.frameflow.no/tjenester/app-utvikling' },
   openGraph: {
     title: 'App utvikling i Bergen | Frameflow',
