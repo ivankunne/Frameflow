@@ -55,9 +55,7 @@ export default async function BlogPostPage({
     description: post.excerpt,
     datePublished: post.updatedAt,
     author: {
-      '@type': 'Person',
-      name: 'Ivan Kunne',
-      url: 'https://www.frameflow.no/om-oss',
+      '@id': 'https://www.frameflow.no/#ivan-kunne',
     },
     publisher: {
       '@id': 'https://www.frameflow.no/#organization',

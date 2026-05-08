@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import dynamic from 'next/dynamic'
-import { JsonLd, organizationSchema, websiteSchema } from '@/components/JsonLd'
+import { JsonLd, organizationSchema, websiteSchema, personSchema } from '@/components/JsonLd'
 
 import HomeHero from '@/components/sections/HomeHero'
 import HomeLogoStrip from '@/components/sections/HomeLogoStrip'
@@ -136,6 +136,7 @@ export default function HomePage() {
     <>
       <JsonLd data={organizationSchema} />
       <JsonLd data={websiteSchema} />
+      <JsonLd data={personSchema} />
       <JsonLd data={localBusinessSchema} />
       <JsonLd data={faqSchema} />
       <HomeHero />

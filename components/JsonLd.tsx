@@ -49,11 +49,11 @@ export const organizationSchema = {
   sameAs: [
     'https://www.instagram.com/frameflow_no/',
     'https://www.tiktok.com/@frameflow.no',
+    'https://www.linkedin.com/in/frameflow-ivan-kunne-612106398/',
+    'https://data.brreg.no/enhetsregisteret/api/enheter/934205156',
   ],
   founder: {
-    '@type': 'Person',
-    name: 'Ivan Kunne',
-    jobTitle: 'Daglig leder',
+    '@id': 'https://www.frameflow.no/#ivan-kunne',
   },
   knowsAbout: [
     'Webdesign',
@@ -75,4 +75,28 @@ export const websiteSchema = {
     '@id': 'https://www.frameflow.no/#organization',
   },
   inLanguage: 'nb-NO',
+}
+
+export const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': 'https://www.frameflow.no/#ivan-kunne',
+  name: 'Ivan Kunne',
+  jobTitle: 'Daglig leder',
+  url: 'https://www.frameflow.no/om-oss',
+  sameAs: [
+    'https://www.linkedin.com/in/frameflow-ivan-kunne-612106398/',
+  ],
+  worksFor: {
+    '@id': 'https://www.frameflow.no/#organization',
+  },
+  knowsAbout: [
+    'Webdesign',
+    'Digital markedsføring',
+    'Sosiale medier',
+    'Foto og videografi',
+    'Branding',
+    'SEO',
+    'App utvikling',
+  ],
 }
