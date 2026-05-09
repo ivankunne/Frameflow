@@ -8,7 +8,7 @@ import { useLang } from '@/components/LanguageProvider'
 const copy = {
   no: {
     label: '20+ prosjekter levert i Bergen',
-    h1: ['Markeds­føringsbyrå', 'i Bergen –', 'som leverer.'],
+    h1: ['Markedsføring', 'i Bergen –', 'som leverer.'],
     p: 'Webdesign, foto og video, sosiale medier og branding – alt under ett tak. Levert av én person i Bergen som bryr seg om resultatene dine.',
     cta1: 'Ta kontakt',
     cta2: 'Be om tilbud →',
