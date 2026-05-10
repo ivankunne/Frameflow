@@ -209,8 +209,6 @@ export default function Footer() {
             <div className="flex items-center gap-4 flex-wrap">
               <Link href="/personvern" className="text-xs text-white/35 hover:text-white/65 transition-colors">Personvern</Link>
               <span className="text-xs text-white/20">·</span>
-              <a href="/sitemap.xml" className="text-xs text-white/35 hover:text-white/65 transition-colors">Sitemap</a>
-              <span className="text-xs text-white/20">·</span>
               <p className="text-xs text-white/35">Bergen, Norge</p>
             </div>
           </div>
