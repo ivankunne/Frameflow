@@ -25,7 +25,7 @@ function ProjectBrowserMockup({ project, visible }: { project: Project; visible:
             transition={{ delay: 0.4 }}
             className="text-[10px] text-fg-muted font-mono"
           >
-            {slug === 'artadent' ? 'artadent.no' : slug === 'marbesa-project-94' ? 'marbesa-project-94.com' : slug === 'gv-rentals' ? 'gv-rentals.com' : `frameflow.no/${slug}`}
+            {slug === 'artadent' ? 'artadent.no' : slug === 'marbesa-project-94' ? 'marbesa-project-94.com' : slug === 'gv-rentals' ? 'gv-rentals.com' : slug === 'ho-orbit' ? 'h-orbit.nl' : `frameflow.no/${slug}`}
           </motion.span>
         </div>
       </div>
@@ -313,10 +313,173 @@ function ProjectBrowserMockup({ project, visible }: { project: Project; visible:
         </div>
       )}
 
-      {slug !== 'artadent' && slug !== 'marbesa-project-94' && slug !== 'gv-rentals' && (
+      {/* ── H-ORBIT: dark music platform — waveform + artist cards + floating player ── */}
+      {slug === 'ho-orbit' && (
+        <div className="flex-1 h-full relative overflow-hidden" style={{ background: 'linear-gradient(155deg, #08060f 0%, #110d20 55%, #080511 100%)' }}>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={visible ? { opacity: 1 } : {}}
+            transition={{ duration: 0.75, delay: 0.35 }}
+            className="absolute inset-0 p-5 flex flex-col"
+          >
+            {/* Nav */}
+            <div className="flex items-center justify-between mb-5 shrink-0">
+              <div className="flex items-center gap-2">
+                <div className="w-5 h-5 rounded-full" style={{ background: 'radial-gradient(circle at 35% 35%, #a78bfa, #6d28d9)' }} />
+                <div className="w-12 h-2 rounded-full bg-white/60" />
+              </div>
+              <div className="flex gap-3 items-center">
+                {[0, 1, 2].map(i => (
+                  <div key={i} className="w-7 h-1.5 rounded-full bg-white/20" />
+                ))}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={visible ? { opacity: 1, scale: 1 } : {}}
+                  transition={{ type: 'spring', stiffness: 220, damping: 18, delay: 0.55 }}
+                  className="h-6 px-2.5 rounded-full flex items-center"
+                  style={{ background: 'rgba(139,92,246,0.25)', border: '1px solid rgba(139,92,246,0.5)' }}
+                >
+                  <div className="w-7 h-1.5 rounded-full" style={{ background: '#a78bfa' }} />
+                </motion.div>
+              </div>
+            </div>
+
+            {/* Headline clip-reveal */}
+            <div className="mb-4 shrink-0">
+              <div className="overflow-hidden mb-1.5">
+                <motion.div
+                  initial={{ y: '110%' }}
+                  animate={visible ? { y: '0%' } : {}}
+                  transition={{ duration: 0.45, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                  className="w-2/3 h-4 rounded bg-white/75"
+                />
+              </div>
+              <div className="overflow-hidden">
+                <motion.div
+                  initial={{ y: '110%' }}
+                  animate={visible ? { y: '0%' } : {}}
+                  transition={{ duration: 0.38, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                  className="w-2/5 h-2.5 rounded bg-white/30"
+                />
+              </div>
+            </div>
+
+            {/* Waveform visualization */}
+            <div className="flex items-center gap-[2px] mb-4 shrink-0" style={{ height: '44px' }}>
+              {[0.35, 0.6, 0.85, 0.55, 1, 0.7, 0.45, 0.9, 0.65, 0.3, 0.75, 1, 0.5, 0.8, 0.4, 0.95, 0.6, 0.3, 0.7, 0.5, 0.85, 0.4, 0.65, 0.3].map((h, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ scaleY: 0, opacity: 0 }}
+                  animate={visible ? {
+                    opacity: 1,
+                    scaleY: [h, Math.min(h * 1.9, 1), h * 0.45, Math.min(h * 1.5, 1), h],
+                  } : { scaleY: 0, opacity: 0 }}
+                  transition={{
+                    opacity: { duration: 0.18, delay: 0.78 + i * 0.018 },
+                    scaleY: {
+                      duration: 1.4 + (i % 3) * 0.2,
+                      delay: 0.78 + i * 0.018,
+                      repeat: Infinity,
+                      repeatType: 'mirror',
+                      ease: 'easeInOut',
+                    },
+                  }}
+                  style={{
+                    width: '3px',
+                    height: `${h * 44}px`,
+                    transformOrigin: 'center',
+                    borderRadius: '2px',
+                    flexShrink: 0,
+                    background: i < 12
+                      ? `rgba(139,92,246,${0.45 + h * 0.55})`
+                      : `rgba(139,92,246,${0.15 + h * 0.2})`,
+                  }}
+                />
+              ))}
+              {/* Playhead line */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={visible ? { opacity: 1 } : {}}
+                transition={{ duration: 0.3, delay: 0.95 }}
+                style={{ width: '1px', height: '44px', background: 'rgba(167,139,250,0.8)', borderRadius: '1px', marginLeft: '1px', flexShrink: 0 }}
+              />
+            </div>
+
+            {/* Artist cards */}
+            <div className="grid grid-cols-3 gap-2 flex-1 min-h-0">
+              {[
+                { hue: '#7c3aed', delay: 0.92 },
+                { hue: '#6d28d9', delay: 1.02 },
+                { hue: '#5b21b6', delay: 1.12 },
+              ].map((a, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 18, scale: 0.92 }}
+                  animate={visible ? { opacity: 1, y: 0, scale: 1 } : {}}
+                  transition={{ duration: 0.42, delay: a.delay, ease: [0.22, 1, 0.36, 1] }}
+                  className="rounded-lg p-2.5 flex flex-col gap-1.5"
+                  style={{ background: 'rgba(139,92,246,0.08)', border: '1px solid rgba(139,92,246,0.2)' }}
+                >
+                  <div className="w-7 h-7 rounded-full mb-0.5" style={{ background: `radial-gradient(circle at 35% 35%, ${a.hue}88, ${a.hue}33)`, border: `1px solid ${a.hue}55` }} />
+                  <div className="w-full h-1.5 rounded-full bg-white/20" />
+                  <div className="w-3/4 h-1 rounded-full bg-white/12" />
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Floating mini player */}
+          <motion.div
+            initial={{ opacity: 0, y: 16, scale: 0.95 }}
+            animate={visible ? { opacity: 1, y: 0, scale: 1 } : {}}
+            transition={{ type: 'spring', stiffness: 180, damping: 20, delay: 1.22 }}
+            className="absolute bottom-3 right-4 rounded-xl px-3 py-2 flex items-center gap-2"
+            style={{ background: 'rgba(109,40,217,0.22)', border: '1px solid rgba(139,92,246,0.35)', backdropFilter: 'blur(12px)' }}
+          >
+            <div className="w-6 h-6 rounded-lg shrink-0 flex items-center justify-center" style={{ background: 'rgba(139,92,246,0.5)' }}>
+              <div className="w-0 h-0 border-y-[4px] border-y-transparent border-l-[7px] border-l-white/90 ml-0.5" />
+            </div>
+            <div>
+              <div className="w-16 h-1.5 rounded bg-white/55 mb-1" />
+              <div className="w-10 h-1 rounded bg-white/25" />
+            </div>
+            {/* Live waveform bars */}
+            <div className="flex items-center gap-[2px]" style={{ height: '14px' }}>
+              {[0.5, 1, 0.6, 0.85, 0.45].map((h, i) => (
+                <motion.div
+                  key={i}
+                  animate={visible ? {
+                    scaleY: [h, Math.min(h * 2.2, 1), h * 0.3, Math.min(h * 1.6, 1), h],
+                  } : {}}
+                  transition={{
+                    duration: 0.75 + i * 0.08,
+                    delay: 1.3 + i * 0.07,
+                    repeat: Infinity,
+                    repeatType: 'mirror',
+                    ease: 'easeInOut',
+                  }}
+                  style={{
+                    width: '2px',
+                    height: `${h * 14}px`,
+                    borderRadius: '1px',
+                    background: '#a78bfa',
+                    transformOrigin: 'center',
+                    flexShrink: 0,
+                  }}
+                />
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Ambient glow */}
+          <div className="absolute top-8 left-10 w-20 h-20 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.12) 0%, transparent 70%)' }} />
+        </div>
+      )}
+
+      {slug !== 'artadent' && slug !== 'marbesa-project-94' && slug !== 'gv-rentals' && slug !== 'ho-orbit' && (
         <div className="flex-1 relative h-full">
           <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #f0f4fb 0%, #e8f0f9 50%, #f8f8f8 100%)' }} />
-<div className="absolute inset-0 flex items-center justify-center">
+          <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center">
               <p className="display-text text-6xl text-fg/5 mb-4">{project.title}</p>
               <p className="text-xs text-fg-muted font-medium">Prosjektbilde</p>
