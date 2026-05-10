@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useRef, useState } from 'react'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
-import { WebMockup, CameraMockup, SocialMockup, BrandMockup, AppMockup } from '@/components/ServiceMockups'
+import { WebMockup, CameraMockup, SocialMockup, BrandMockup, AppMockup, SEOMockup } from '@/components/ServiceMockups'
 
 interface ServicePageProps {
   label: string
@@ -13,7 +13,7 @@ interface ServicePageProps {
   includes: string[]
   process: { step: string; title: string; description: string }[]
   relatedServices: { title: string; href: string }[]
-  mockupType: 'web' | 'photo' | 'social' | 'brand' | 'app'
+  mockupType: 'web' | 'photo' | 'social' | 'brand' | 'app' | 'seo'
   pricingFrom?: string
 }
 
@@ -72,6 +72,7 @@ const mockupBadgeLabels: Record<string, string> = {
   social: '4.2% engasjement',
   brand: 'Brand guidelines',
   app: '98% uptime',
+  seo: 'Side 1 på Google',
 }
 
 function HeroMockup({ mockupType, visible }: { mockupType: string; visible: boolean }) {
@@ -80,6 +81,7 @@ function HeroMockup({ mockupType, visible }: { mockupType: string; visible: bool
   if (mockupType === 'social') return <SocialMockup visible={visible} />
   if (mockupType === 'brand') return <BrandMockup visible={visible} />
   if (mockupType === 'app') return <AppMockup visible={visible} />
+  if (mockupType === 'seo') return <SEOMockup visible={visible} />
   return null
 }
 

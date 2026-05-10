@@ -568,3 +568,75 @@ export function AppMockup({ visible }: { visible: boolean }) {
     </div>
   )
 }
+
+// ─── SEO: Google Search Console style ranking dashboard ───────────────────
+export function SEOMockup({ visible }: { visible: boolean }) {
+  const results = [
+    { rank: 1, title: 'Frameflow – Markedsføringsbyrå Bergen', url: 'frameflow.no', highlight: true },
+    { rank: 2, title: 'Annet byrå i Bergen', url: 'example.no', highlight: false },
+    { rank: 3, title: 'Digital markedsføring Bergen', url: 'eksempel.no', highlight: false },
+  ]
+  const bars = [22, 35, 28, 48, 42, 60, 55, 74, 68, 88]
+
+  return (
+    <div className="bg-white rounded-xl border border-border overflow-hidden shadow-card">
+      {/* Browser chrome */}
+      <div className="bg-bg-2 border-b border-border px-3 py-2 flex items-center gap-2">
+        <div className="flex gap-1 shrink-0">
+          <div className="w-2 h-2 rounded-full bg-[#ff5f57]" />
+          <div className="w-2 h-2 rounded-full bg-[#febc2e]" />
+          <div className="w-2 h-2 rounded-full bg-[#28c840]" />
+        </div>
+        <div className="flex-1 bg-white border border-border/60 rounded-full px-3 py-0.5 flex items-center gap-2">
+          <span className="text-[9px] text-fg-muted font-mono">google.com · markedsføring Bergen</span>
+        </div>
+      </div>
+
+      {/* SERP results */}
+      <div className="px-3 pt-3 pb-1 space-y-2">
+        {results.map((r, i) => (
+          <motion.div
+            key={r.rank}
+            initial={{ opacity: 0, y: 6 }}
+            animate={visible ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.3, delay: 0.35 + i * 0.1 }}
+            className={`p-2 rounded-lg ${r.highlight ? 'bg-accent/5 border border-accent/20' : 'bg-bg-2 border border-border/50'}`}
+          >
+            <div className="flex items-center gap-1.5 mb-0.5">
+              <span className="text-[8px] font-bold" style={{ color: r.highlight ? '#2172b5' : '#9ca3af' }}>#{r.rank}</span>
+              <span className="text-[8px] text-fg-muted truncate">{r.url}</span>
+              {r.highlight && (
+                <span className="ml-auto text-[7px] font-bold px-1.5 py-0.5 rounded" style={{ background: '#dcfce7', color: '#16a34a' }}>
+                  Din side ↑
+                </span>
+              )}
+            </div>
+            <div className={`text-[9px] font-semibold truncate ${r.highlight ? 'text-accent' : 'text-fg-muted'}`}>{r.title}</div>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Traffic sparkline */}
+      <div className="px-3 pt-2 pb-2">
+        <p className="text-[8px] text-fg-muted mb-1 font-medium">Organisk trafikk · 10 uker</p>
+        <div className="flex items-end gap-0.5" style={{ height: 28 }}>
+          {bars.map((h, i) => (
+            <motion.div
+              key={i}
+              initial={{ scaleY: 0 }}
+              animate={visible ? { scaleY: 1 } : {}}
+              transition={{ duration: 0.25, delay: 0.65 + i * 0.04, ease: 'easeOut' }}
+              style={{
+                flex: 1,
+                height: `${h}%`,
+                transformOrigin: 'bottom',
+                background: `rgba(33,114,181,${0.15 + (h / 100) * 0.6})`,
+                borderRadius: '2px 2px 0 0',
+              }}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}

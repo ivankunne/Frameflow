@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { CameraVisual, SocialVisual, BrandVisual } from '@/components/ServiceVisuals'
+import { CameraVisual, SocialVisual, BrandVisual, SEOVisual } from '@/components/ServiceVisuals'
 import { AppMockup } from '@/components/ServiceMockups'
 
 const services = [
@@ -77,6 +77,20 @@ const services = [
     accentHex: '#0f172a',
     visual: 'brand' as const,
   },
+  {
+    number: '06',
+    title: 'SEO som gir deg kunder fra Google',
+    shortTitle: 'SEO',
+    pricingFrom: 'Fra 4 500 kr/mnd',
+    href: '/tjenester/seo',
+    description: 'Søkemotoroptimalisering for Bergen-bedrifter. Vi hjelper deg til side 1 på Google med lokal SEO, teknisk optimalisering og innhold som rangerer – og bli funnet av folk som aktivt søker etter det du tilbyr.',
+    metric: '#1',
+    metricLabel: 'på Google',
+    metricSub: 'markedsføring Bergen',
+    includes: ['Teknisk SEO-revisjon', 'Lokal SEO Bergen', 'Søkeordsanalyse', 'Innholdsoptimalisering', 'Google Search Console'],
+    accentHex: '#16a34a',
+    visual: 'seo' as const,
+  },
 ] as const
 
 export default function TjenesterClient() {
@@ -115,7 +129,7 @@ export default function TjenesterClient() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-fg-muted text-lg max-w-2xl leading-relaxed mb-10"
           >
-            Fem tjenester. Ett mål: å gi din Bergen-bedrift en digital tilstedeværelse som faktisk konverterer.
+            Seks tjenester. Ett mål: å gi din Bergen-bedrift en digital tilstedeværelse som faktisk konverterer.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 14 }}
@@ -123,7 +137,7 @@ export default function TjenesterClient() {
             transition={{ duration: 0.4, delay: 0.3 }}
             className="flex flex-wrap gap-x-8 gap-y-2 text-sm text-fg-muted"
           >
-            {['05 tjenester', '20+ prosjekter levert', 'Bergen, Norge', 'Svar innen 24 timer'].map((s) => (
+            {['06 tjenester', '20+ prosjekter levert', 'Bergen, Norge', 'Svar innen 24 timer'].map((s) => (
               <span key={s} className="flex items-center gap-2">
                 <span className="w-1 h-1 rounded-full bg-accent inline-block" />
                 {s}
@@ -217,6 +231,7 @@ function ServiceVisual({ visual, accentHex, visible }: { visual: (typeof service
   if (visual === 'app') return <AppMockup visible={visible} />
   if (visual === 'camera') return <CameraVisual visible={visible} />
   if (visual === 'social') return <SocialVisual visible={visible} />
+  if (visual === 'seo') return <SEOVisual visible={visible} />
   // brand
   return <BrandVisual visible={visible} />
 }

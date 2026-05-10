@@ -317,6 +317,115 @@ export function SocialVisual({ visible }: { visible: boolean }) {
   )
 }
 
+// ── 05 SEO — Keyword Ranking Dashboard ────────────────────────────────────
+export function SEOVisual({ visible }: { visible: boolean }) {
+  const keywords = [
+    { kw: 'markedsføring Bergen', pos: 3, change: 8 },
+    { kw: 'webdesign Bergen', pos: 7, change: 12 },
+    { kw: 'SEO Bergen', pos: 4, change: 21 },
+    { kw: 'digitalbyrå Bergen', pos: 2, change: 5 },
+  ]
+  const bars = [18, 26, 22, 34, 28, 42, 38, 56, 48, 68, 58, 78]
+
+  return (
+    <div
+      className="h-full w-full rounded-xl overflow-hidden flex flex-col"
+      style={{ background: '#ffffff', border: '1px solid #e5e7eb' }}
+    >
+      {/* header */}
+      <div
+        className="px-5 pt-4 pb-3 flex items-center justify-between shrink-0"
+        style={{ borderBottom: '1px solid rgba(0,0,0,0.06)' }}
+      >
+        <span className="text-[9px] font-bold uppercase tracking-widest" style={{ color: '#9ca3af' }}>
+          Posisjonssporing · Bergen
+        </span>
+        <motion.span
+          initial={{ opacity: 0 }}
+          animate={visible ? { opacity: 1 } : {}}
+          transition={{ delay: 0.3 }}
+          className="text-[8px] font-semibold px-2 py-0.5 rounded-full"
+          style={{ background: '#dcfce7', color: '#16a34a' }}
+        >
+          ↑ Forbedring
+        </motion.span>
+      </div>
+
+      {/* big number */}
+      <div className="px-5 pt-4 pb-2 shrink-0">
+        <p className="text-[8px] font-semibold uppercase tracking-widest mb-1.5" style={{ color: '#9ca3af' }}>
+          Gjennomsnittlig posisjon
+        </p>
+        <div className="flex items-end gap-2">
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={visible ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.4, delay: 0.38 }}
+            className="font-bold tabular-nums leading-none"
+            style={{ fontSize: 36, color: '#0d1f3c', fontFamily: 'var(--font-bricolage)', letterSpacing: '-0.03em' }}
+          >
+            4.0
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={visible ? { opacity: 1 } : {}}
+            transition={{ delay: 0.55 }}
+            className="pb-1"
+          >
+            <span className="text-[11px] font-bold" style={{ color: '#22c55e' }}>↑ +11.5</span>
+            <span className="text-[9px] ml-1" style={{ color: '#9ca3af' }}>vs 3 mnd siden</span>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* mini sparkline */}
+      <div className="px-5 pb-3 flex items-end gap-px shrink-0" style={{ height: 32 }}>
+        {bars.map((h, i) => (
+          <motion.div
+            key={i}
+            initial={{ scaleY: 0 }}
+            animate={visible ? { scaleY: 1 } : {}}
+            transition={{ duration: 0.25, delay: 0.5 + i * 0.03, ease: 'easeOut' }}
+            style={{
+              flex: 1,
+              height: `${h}%`,
+              transformOrigin: 'bottom',
+              background: `rgba(33,114,181,${0.12 + (h / 100) * 0.55})`,
+              borderRadius: '2px 2px 0 0',
+            }}
+          />
+        ))}
+      </div>
+
+      {/* keyword rows */}
+      <div className="flex-1 px-4 pb-4 flex flex-col gap-1.5 justify-end">
+        {keywords.map((k, i) => (
+          <motion.div
+            key={k.kw}
+            initial={{ opacity: 0, x: -8 }}
+            animate={visible ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.28, delay: 0.62 + i * 0.07 }}
+            className="flex items-center gap-2.5 px-3 py-1.5 rounded-lg"
+            style={{ background: '#f9fafb', border: '1px solid #e5e7eb' }}
+          >
+            <div
+              className="w-6 h-6 rounded-md flex items-center justify-center shrink-0 font-bold text-[11px]"
+              style={{
+                background: k.pos <= 3 ? '#dcfce7' : '#dbeafe',
+                color: k.pos <= 3 ? '#16a34a' : '#2172b5',
+              }}
+            >
+              {k.pos}
+            </div>
+            <span className="text-[9px] font-medium flex-1 truncate" style={{ color: '#374151' }}>{k.kw}</span>
+            <span className="text-[9px] font-bold shrink-0" style={{ color: '#22c55e' }}>+{k.change}</span>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 // ── 04 Branding — Identity System Reveal ─────────────────────────────────
 // Logo assembles, palette expands, type scale appears, manual footer
 export function BrandVisual({ visible }: { visible: boolean }) {
