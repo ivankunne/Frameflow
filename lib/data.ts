@@ -756,7 +756,7 @@ export const projects: Project[] = [
       'h-orbit er en musikkplattform designet for spirende artister. Vi bygde en intuitiv app hvor musikere kan dele musikken sin, finne samarbeidsmuligheter med andre artister, oppdage arrangementer og musikkrelaterte muligheter – alt på ett sted.',
     challenge: 'Unge musikere manglet en sentralisert plass for å dele musikken sin, finne samarbeid og oppdage relevante arrangementer. De måtte bruke flere plattformer (SoundCloud, Instagram, e-post) og mistet ofte muligheter.',
     tags: ['App utvikling'],
-    location: 'Bergen, Norge',
+    location: 'Amsterdam, Nederland',
     year: '2026',
     results: [
       '2000+ artister på plattformen',
