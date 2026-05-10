@@ -80,71 +80,73 @@ export default function TilbudClient() {
 
   return (
     <>
-      {/* Hero */}
-      <section ref={heroRef} className="pt-32 pb-16 px-6 lg:px-8 bg-bg border-b border-border">
-        <div className="max-w-3xl mx-auto">
-          <motion.span
-            initial={{ opacity: 0, y: 10 }}
-            animate={heroInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.4 }}
-            className="inline-flex items-center gap-2 bg-accent-light border border-accent/20 text-accent text-xs font-semibold px-3 py-1.5 rounded-full mb-6"
-          >
-            Start her
-          </motion.span>
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={heroInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="display-text text-5xl lg:text-6xl text-fg mb-4"
-          >
-            Be om tilbud
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={heroInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.25 }}
-            className="text-fg-muted text-lg leading-relaxed mb-3"
-          >
-            Fortell oss om prosjektet ditt. Svar innen 24 timer – ingen forpliktelser.
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={heroInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.4, delay: 0.35 }}
-            className="text-sm text-fg-muted mb-8"
-          >
-            Vil du bare ta en prat først?{' '}
-            <Link href="/kontakt" className="text-accent font-semibold hover:underline">
-              Book en gratis samtale →
-            </Link>
-          </motion.p>
+      {/* Hero + form side by side */}
+      <section ref={heroRef} className="min-h-screen pt-28 pb-16 px-6 lg:px-8 bg-bg-2 flex items-start">
+        <div className="max-w-6xl mx-auto w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-20 items-start">
 
-          {/* Risk-removal trio */}
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={heroInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.4, delay: 0.4 }}
-            className="flex flex-wrap gap-x-6 gap-y-2"
-          >
-            {[
-              'Fast pris – ingen overraskelser',
-              'Fornøyd garanti',
-              'Oppstart innen 48 timer',
-            ].map((line) => (
-              <span key={line} className="flex items-center gap-1.5 text-sm text-fg-muted">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="text-green-500 shrink-0">
-                  <path d="M2.5 7.5l3 3L11.5 3.5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-                {line}
-              </span>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+            {/* Left: intro — sticky on desktop */}
+            <div className="lg:sticky lg:top-28">
+              <motion.span
+                initial={{ opacity: 0, y: 10 }}
+                animate={heroInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.4 }}
+                className="inline-flex items-center gap-2 bg-accent-light border border-accent/20 text-accent text-xs font-semibold px-3 py-1.5 rounded-full mb-6"
+              >
+                Start her
+              </motion.span>
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                animate={heroInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="display-text text-4xl lg:text-5xl text-fg mb-4"
+              >
+                Be om tilbud
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={heroInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.25 }}
+                className="text-fg-muted text-base leading-relaxed mb-3"
+              >
+                Fortell oss om prosjektet ditt. Svar innen 24 timer – ingen forpliktelser.
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 16 }}
+                animate={heroInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.4, delay: 0.35 }}
+                className="text-sm text-fg-muted mb-8"
+              >
+                Vil du bare ta en prat først?{' '}
+                <Link href="/kontakt" className="text-accent font-semibold hover:underline">
+                  Book en gratis samtale →
+                </Link>
+              </motion.p>
 
-      {/* Multi-step form */}
-      <section className="py-24 px-6 lg:px-8 bg-bg-2">
-        <div className="max-w-3xl mx-auto">
+              {/* Risk-removal trio */}
+              <motion.div
+                initial={{ opacity: 0, y: 12 }}
+                animate={heroInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.4, delay: 0.4 }}
+                className="flex flex-col gap-3"
+              >
+                {[
+                  'Fast pris – ingen overraskelser',
+                  'Fornøyd garanti',
+                  'Oppstart innen 48 timer',
+                ].map((line) => (
+                  <span key={line} className="flex items-center gap-2 text-sm text-fg-muted">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="text-green-500 shrink-0">
+                      <path d="M2.5 7.5l3 3L11.5 3.5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                    {line}
+                  </span>
+                ))}
+              </motion.div>
+            </div>
+
+            {/* Right: multi-step form */}
+            <div className="bg-bg border border-border rounded-2xl p-8 shadow-card">
           {submitted ? (
             <motion.div
               initial={{ opacity: 0, scale: 0.96 }}
@@ -340,6 +342,8 @@ export default function TilbudClient() {
               </AnimatePresence>
             </>
           )}
+        </div>
+          </div>
         </div>
       </section>
     </>
