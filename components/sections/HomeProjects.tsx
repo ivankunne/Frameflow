@@ -296,19 +296,7 @@ export default function HomeProjects() {
   const isInView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section ref={ref} className="py-16 md:py-24 lg:py-32 px-6 lg:px-8 bg-bg-dark overflow-hidden relative">
-      {/* Grid overlay */}
-      <div
-        className="absolute inset-0 pointer-events-none opacity-30"
-        style={{
-          backgroundImage: `
-            linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)
-          `,
-          backgroundSize: '60px 60px',
-        }}
-      />
-
+    <section ref={ref} className="py-16 md:py-24 lg:py-32 px-6 lg:px-8 bg-bg-2 overflow-hidden relative">
       <div className="max-w-7xl mx-auto relative">
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
@@ -320,14 +308,14 @@ export default function HomeProjects() {
             <span className="inline-flex items-center gap-2 text-accent text-xs font-semibold uppercase tracking-widest mb-4">
               <span className="w-4 h-px bg-accent" /> Vårt arbeid
             </span>
-            <h2 className="display-text text-3xl sm:text-4xl lg:text-5xl text-fg-light">Utvalgte prosjekter</h2>
+            <h2 className="display-text text-3xl sm:text-4xl lg:text-5xl text-fg">Utvalgte prosjekter</h2>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <Link href="/prosjekter" className="text-sm font-semibold text-fg-light/60 hover:text-fg-light transition-colors inline-flex items-center gap-1.5">
+            <Link href="/prosjekter" className="text-sm font-semibold text-fg-muted hover:text-fg transition-colors inline-flex items-center gap-1.5">
               Se alle prosjekter <span aria-hidden>→</span>
             </Link>
           </motion.div>
@@ -344,7 +332,7 @@ export default function HomeProjects() {
             >
               <Link
                 href={`/prosjekter/${slug}`}
-                className="group block bg-bg-dark-2 border border-border-dark rounded-xl p-5 hover:border-accent transition-all duration-250 hover:shadow-blue-sm h-full"
+                className="group block bg-white border border-border rounded-xl p-5 hover:border-accent transition-all duration-250 hover:shadow-blue-sm h-full"
               >
                 {/* Animated project preview */}
                 <div className="mb-5">
@@ -354,20 +342,20 @@ export default function HomeProjects() {
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {tags.map((tag) => (
-                    <span key={tag} className="text-xs font-medium text-fg-light/40">{tag}</span>
+                    <span key={tag} className="text-xs font-medium text-fg-muted">{tag}</span>
                   ))}
                 </div>
 
                 {/* Title + description */}
-                <h3 className="display-text text-2xl text-fg-light mb-2 group-hover:text-accent transition-colors duration-200">{title}</h3>
-                <p className="text-fg-light/50 text-sm leading-relaxed mb-6">{description}</p>
+                <h3 className="display-text text-2xl text-fg mb-2 group-hover:text-accent transition-colors duration-200">{title}</h3>
+                <p className="text-fg-muted text-sm leading-relaxed mb-6">{description}</p>
 
                 {/* Footer */}
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-semibold px-2.5 py-1 rounded-full" style={{ color, backgroundColor: `${color}18` }}>
                     {result}
                   </span>
-                  <span aria-hidden className="text-fg-light/30 group-hover:text-accent group-hover:translate-x-1 transition-all duration-200">→</span>
+                  <span aria-hidden className="text-fg-muted group-hover:text-accent group-hover:translate-x-1 transition-all duration-200">→</span>
                 </div>
               </Link>
             </motion.div>
