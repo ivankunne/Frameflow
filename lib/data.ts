@@ -215,7 +215,7 @@ Her begynner nettsider å jobbe for deg. Inkluderer skreddersydd design, innebyg
 
 ### Enterprise og e-handel: 100 000 kr+
 
-Store e-handelssider, kundeportaler og komplekse webbapplikasjoner.
+Store e-handelssider, kundeportaler og komplekse webapplikasjoner.
 
 ## Hva påvirker prisen?
 
@@ -262,7 +262,7 @@ Best for B2B, konsulenter og alle som henvender seg til næringsliv og bedrifter
 
 ## Innholdsstrategi som faktisk fungerer
 
-80 % av innholdet skal gi verdi til følgerne. 20 % kan handle om deg og dine tilbud. Konsistens slår perfektion – det er bedre å poste tre ganger i uken konsekvent enn ti ganger én uke og ingenting de neste tre.
+80 % av innholdet skal gi verdi til følgerne. 20 % kan handle om deg og dine tilbud. Konsistens slår perfeksjon – det er bedre å poste tre ganger i uken konsekvent enn ti ganger én uke og ingenting de neste tre.
 
 For Bergen-bedrifter: gjør det lokalt. Nevn Bergen, vis Bergen, tagg Bergen. Samarbeid med andre Bergen-bedrifter og tagg hverandre.
 
@@ -399,7 +399,7 @@ Typisk budsjett i Bergen: 3 000–15 000 kr/mnd.
 
 ## Kanal 3: Instagram og Facebook
 
-For Bergen-bedrifter med visuelt appell er kombinasjonen ekstremt kraftig. Organiske innlegg bygger merkevare. Betalte annonser skalerer rekkevidden. Du kan målrette mot folk innenfor X kilometer fra adressen din.
+For Bergen-bedrifter med visuell appell er kombinasjonen ekstremt kraftig. Organiske innlegg bygger merkevare. Betalte annonser skalerer rekkevidden. Du kan målrette mot folk innenfor X kilometer fra adressen din.
 
 ## Kanal 4: E-postmarkedsføring
 
@@ -540,7 +540,7 @@ Tips: Start med én ting appen skal gjøre bedre enn noe annet. Det er MVP-filos
 
 ### 2. iOS, Android eller begge?
 
-Native apper (separate kodebase for iOS og Android) er dyrest, men gir best ytelse. Hybride rammeverk som React Native og Flutter lar deg bygge for begge plattformer fra én kodebase – og er derfor langt mer kostnadseffektive for de fleste Bergen-bedrifter.
+Native apper (separat kodebase for iOS og Android) er dyrest, men gir best ytelse. Hybride rammeverk som React Native og Flutter lar deg bygge for begge plattformer fra én kodebase – og er derfor langt mer kostnadseffektive for de fleste Bergen-bedrifter.
 
 Hos Frameflow bygger vi i React Native og Flutter for mobilapper, og Next.js for webapplikasjoner. Valget avhenger av hva som gir best resultat for ditt prosjekt.
 
@@ -751,10 +751,10 @@ export const projects: Project[] = [
     slug: 'ho-orbit',
     title: 'h-orbit',
     client: 'h-orbit',
-    description: 'Musikk-plattform for artister – dele musikk, samarbeid og events',
+    description: 'Musikkplattform for artister – dele musikk, samarbeid og arrangementer',
     fullDescription:
-      'h-orbit er en musikk-plattform designet for emerging artists. Vi bygde en intuitiv app hvor musikere kan dele sin musikk, finne samarbeidsmuligheter med andre artister, oppdage events og musikk-relaterte muligheter – alt på ett sted.',
-    challenge: 'Unge musikere manglet en sentralisert plass for å dele sin musikk, finne samarbeid og oppdage relevante events. De måtte bruke flere plattformer (SoundCloud, Instagram, email) og mistet ofte muligheter.',
+      'h-orbit er en musikkplattform designet for spirende artister. Vi bygde en intuitiv app hvor musikere kan dele musikken sin, finne samarbeidsmuligheter med andre artister, oppdage arrangementer og musikkrelaterte muligheter – alt på ett sted.',
+    challenge: 'Unge musikere manglet en sentralisert plass for å dele musikken sin, finne samarbeid og oppdage relevante arrangementer. De måtte bruke flere plattformer (SoundCloud, Instagram, e-post) og mistet ofte muligheter.',
     tags: ['App utvikling'],
     location: 'Bergen, Norge',
     year: '2026',

@@ -109,13 +109,13 @@ export default function OmOssClient() {
             </span>
             <h2 className="display-text text-4xl text-fg mb-5">Ivan Kunne — Daglig leder</h2>
             <p className="text-fg-muted leading-relaxed mb-4">
-              Jeg er opprinnelig fra Nederland, men flyttet til Norge i 2023. Siden den gang har jeg tatt kreativiteten og ferdighetene mine til neste nivå – dykket dypere inn i innhold på sosiale medier, markedsføring, webdesign og merkevarebygging.
+              Jeg er opprinnelig fra Nederland, men flyttet til Norge i 2023. Siden da har jeg bygget solid kompetanse innen sosiale medier, markedsføring, webdesign og merkevarebygging.
             </p>
             <p className="text-fg-muted leading-relaxed mb-4">
-              Nå bruker jeg alt jeg har lært i det virkelige arbeidet: å hjelpe merkevarer med å se bra ut, høres bra ut og fremstå med selvtillit på nett.
+              Nå bruker jeg alt jeg har lært i praksis: å hjelpe bedrifter med å se profesjonelle ut, kommunisere tydelig og fremstå sterkt på nett.
             </p>
             <p className="text-fg-muted leading-relaxed mb-8">
-              Grunnlagt i Bergen i 2025, Frameflow er et moderne byrå med ett mål: å gi bedrifter en digital tilstedeværelse som faktisk leverer resultater.
+              Frameflow ble grunnlagt i Bergen i 2025 med ett mål: å gi bedrifter en digital tilstedeværelse som faktisk leverer resultater.
             </p>
             <div className="flex flex-wrap gap-3">
               <a href={EMAIL_HREF}
