@@ -62,7 +62,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Hvor lang tid tar det å lage en nettside?',
-      acceptedAnswer: { '@type': 'Answer', text: 'De fleste prosjekter tar 3–6 uker fra oppdagssamtale til lansering, avhengig av størrelse og innholdsleveranse fra deg.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'De fleste prosjekter tar 3–6 uker fra første samtale til lansering, avhengig av størrelse og innholdsleveranse fra deg.' },
     },
     {
       '@type': 'Question',
@@ -101,7 +101,7 @@ export default function WebdesignPage() {
         process={[
           {
             step: '01',
-            title: 'Oppdagssamtale',
+            title: 'Første samtale',
             description: 'Vi starter med en gratis konsultasjon for å forstå virksomheten din, målene dine og hvem du ønsker å nå.',
           },
           {

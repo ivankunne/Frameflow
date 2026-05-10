@@ -762,7 +762,7 @@ export const projects: Project[] = [
       '2000+ artister på plattformen',
       '500+ samarbeidsprosjekter startet',
       '98% app uptime og stabilitet',
-      '1000+ events descobret per måned',
+      '1000+ arrangementer oppdaget per måned',
     ],
   },
   {
