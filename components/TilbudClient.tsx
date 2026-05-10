@@ -342,41 +342,6 @@ export default function TilbudClient() {
           )}
         </div>
       </section>
-
-      {/* Pricing signals — shown after form for context */}
-      <section className="py-12 px-6 lg:px-8 bg-bg border-t border-border">
-        <div className="max-w-3xl mx-auto">
-          <p className="text-xs font-semibold text-fg-muted uppercase tracking-widest mb-5">Hva koster det?</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="bg-bg-2 border border-border rounded-2xl p-6 shadow-card">
-              <span className="text-xs font-semibold text-fg-muted uppercase tracking-widest">Enkeltprosjekt</span>
-              <p className="display-text text-3xl text-fg mt-2 mb-1">Fra 15 000 kr</p>
-              <p className="text-sm text-fg-muted mb-4">Én leveranse, fast pris – nettside, branding eller foto/video.</p>
-              <ul className="flex flex-col gap-1.5">
-                {['Webdesign & SEO', 'Branding & logo', 'Foto og video', 'Ferdig på 2–4 uker'].map((f) => (
-                  <li key={f} className="flex items-center gap-2 text-xs text-fg-muted">
-                    <span className="w-1 h-1 rounded-full bg-accent shrink-0" />{f}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-accent-light border border-accent/20 rounded-2xl p-6 shadow-blue-sm relative overflow-hidden">
-              <span className="absolute top-4 right-4 text-[10px] font-bold text-accent bg-white border border-accent/20 px-2 py-0.5 rounded-full">Populær</span>
-              <span className="text-xs font-semibold text-accent uppercase tracking-widest">Månedlig avtale</span>
-              <p className="display-text text-3xl text-fg mt-2 mb-1">Fra 9 900 kr/mnd</p>
-              <p className="text-sm text-fg-muted mb-4">Løpende digital støtte – pauserbar, ingen bindingstid.</p>
-              <ul className="flex flex-col gap-1.5">
-                {['Sosiale medier & innhold', 'Nettside-vedlikehold', 'SEO & rapportering', 'Pause når som helst'].map((f) => (
-                  <li key={f} className="flex items-center gap-2 text-xs text-fg-muted">
-                    <span className="w-1 h-1 rounded-full bg-accent shrink-0" />{f}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <p className="text-xs text-fg-muted mt-4 text-center">Prisene er veiledende – tilbudet tilpasses ditt prosjekt.</p>
-        </div>
-      </section>
     </>
   )
 }
