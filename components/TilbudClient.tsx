@@ -143,6 +143,33 @@ export default function TilbudClient() {
                   </span>
                 ))}
               </motion.div>
+
+              {/* What happens next */}
+              <motion.div
+                initial={{ opacity: 0, y: 12 }}
+                animate={heroInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.4, delay: 0.5 }}
+                className="mt-10 pt-8 border-t border-border"
+              >
+                <p className="text-xs font-semibold text-fg-muted uppercase tracking-widest mb-5">Hva skjer videre?</p>
+                <div className="flex flex-col gap-4">
+                  {[
+                    { n: '1', label: 'Vi gjennomgår', desc: 'Forespørselen din leses samme dag' },
+                    { n: '2', label: 'Vi ringer deg', desc: 'En kort samtale om prosjektet ditt' },
+                    { n: '3', label: 'Fast pris innen 24t', desc: 'Konkret tilbud – ingen overraskelser' },
+                  ].map((step, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <div className="w-6 h-6 rounded-full bg-accent-light border border-accent/20 flex items-center justify-center shrink-0 mt-0.5">
+                        <span className="text-accent text-[10px] font-bold">{step.n}</span>
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold text-fg leading-tight">{step.label}</p>
+                        <p className="text-xs text-fg-muted">{step.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
             </div>
 
             {/* Right: multi-step form */}

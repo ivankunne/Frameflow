@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 import { blogPosts, projects } from '@/lib/data'
 
 const BASE_URL = 'https://www.frameflow.no'
-const SITE_UPDATED = new Date('2026-04-30')
+const SITE_UPDATED = new Date('2026-05-10')
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [

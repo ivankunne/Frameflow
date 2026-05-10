@@ -134,6 +134,12 @@ export default function SEOPage() {
         ]}
         mockupType="seo"
         pricingFrom="4 500 kr/mnd"
+        faqs={[
+          { q: 'Hva koster SEO i Bergen?', a: 'SEO-tjenester fra Frameflow starter fra 4 500 kr/mnd eks. mva. Prisen avhenger av konkurransesituasjonen i din bransje, antall søkeord du vil rangere på og hva slags innholdsarbeid som kreves. Vi gir alltid et fast månedlig tilbud uten skjulte kostnader.' },
+          { q: 'Hvor lang tid tar det å se resultater fra SEO?', a: 'De fleste Bergen-bedrifter ser målbare forbedringer i løpet av 3–6 måneder. Lokal SEO gir ofte raskere resultater enn nasjonal SEO fordi konkurransen er lavere. Tekniske forbedringer og Google Business Profile-oppsett kan gi synlige resultater innen noen uker.' },
+          { q: 'Hva er lokal SEO og trenger jeg det?', a: 'Lokal SEO handler om å rangere på Google når folk søker etter tjenester i Bergen og Vestland. Hvis du driver en lokal bedrift og ønsker kunder fra nærområdet, er lokal SEO langt mer effektivt enn generell SEO. Vi optimaliserer Google Business Profile, NAP-konsistens og lokale søkeord.' },
+          { q: 'Er SEO fortsatt verdt det i 2026?', a: 'Ja – organisk søketrafikk er fortsatt den mest kostnadseffektive og varige kilden til nye kunder. Til forskjell fra annonsering stopper ikke trafikken den dagen du slutter å betale. Godt SEO-arbeid gir synlighet som varer i årevis.' },
+        ]}
       />
     </>
   )

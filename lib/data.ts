@@ -84,7 +84,7 @@ Mange bedrifter har metabeskrivelser uten å nevne Bergen – en enorm bortkaste
 
 Lokal SEO er en investering. Med konsekvent innsats kan du forvente synlig forbedring innen 3–6 måneder, og etablert lokal autoritet innen et år.
 
-Har du spørsmål om lokal SEO for din Bergen-bedrift? Ta gjerne kontakt med oss for en gratis gjennomgang.
+Har du spørsmål om [lokal SEO i Bergen](/tjenester/seo) for din Bergen-bedrift? Ta gjerne kontakt med oss for en gratis gjennomgang.
     `.trim(),
   },
   {
@@ -135,7 +135,7 @@ Ferdigmaler: 5 000–15 000 kr. Frilanser: 15 000–50 000 kr. Lokalt byrå: 30 
 
 Vår anbefaling: ikke se på nettside som en kostnad, men som en investering. En nettside som genererer én ekstra kunde i måneden er raskt nedbetalt.
 
-Er du klar for å oppgradere din digitale tilstedeværelse i Bergen? Vi tilbyr gratis konsultasjon der vi ser på din nåværende nettside og gir konkrete forbedringsforslag.
+Er du klar for å oppgradere din [digitale tilstedeværelse i Bergen](/tjenester/webdesign)? Vi tilbyr gratis konsultasjon der vi ser på din nåværende nettside og gir konkrete forbedringsforslag.
     `.trim(),
   },
   {
@@ -182,7 +182,7 @@ Legg inn dine egne spørsmål og svar proaktivt om parkering, betaling og bookin
 
 Inkonsekvens mellom GBP og nettstedet, ignorerte innsiktsdata, og glemte sekundærkategorier er de tre vanligste fellene.
 
-Ta kontakt med Frameflow for en gratis gjennomgang av din Google Business-profil.
+Ta kontakt med Frameflow for en gratis gjennomgang av din [Google Business-profil og lokal SEO](/tjenester/seo).
     `.trim(),
   },
   {
@@ -225,7 +225,7 @@ Antall sider, om du bruker mal eller skreddersydd design, funksjoner som booking
 
 Hvis en 60 000 kr-nettside genererer to nye kunder i måneden à 5 000 kr, er investeringen nedbetalt på 6 måneder.
 
-Hos Frameflow inkluderer vi alltid strategisk gjennomgang, skreddersydd design, lokal SEO, Google Analytics og 30 dagers gratis support etter lansering.
+Hos Frameflow inkluderer vi alltid strategisk gjennomgang, [skreddersydd webdesign](/tjenester/webdesign), lokal SEO, Google Analytics og 30 dagers gratis support etter lansering.
     `.trim(),
   },
   {
@@ -270,7 +270,7 @@ For Bergen-bedrifter: gjør det lokalt. Nevn Bergen, vis Bergen, tagg Bergen. Sa
 
 Mål nettstedtrafikk fra sosiale medier, direkte meldinger og forespørsler, rekkevidde til Bergen-folk, og lenkeklikk til booking eller kontakt.
 
-Ønsker du å overlate det til profesjonelle? Frameflow tilbyr skreddersydde pakker for sosiale medier til Bergen-bedrifter.
+Ønsker du å overlate det til profesjonelle? Frameflow tilbyr [skreddersydde pakker for sosiale medier](/tjenester/sosiale-medier) til Bergen-bedrifter.
     `.trim(),
   },
   {
@@ -321,7 +321,7 @@ Et konsistent bildespråk forsterker merkevareopplevelsen på tvers av alle flat
 
 Logodesign: 5 000–20 000 kr. Komplett visuell identitet: 20 000–60 000 kr. Full branding inkl. strategi: 50 000–150 000 kr.
 
-Frameflow tilbyr skreddersydd branding for Bergen-bedrifter – fra logodesign til komplett merkevareidentitet.
+Frameflow tilbyr [skreddersydd branding](/tjenester/branding) for Bergen-bedrifter – fra logodesign til komplett merkevareidentitet.
     `.trim(),
   },
   {
@@ -368,7 +368,7 @@ Bergen er utrolig vakker sett ovenfra. Drone-bilder gir et unikt perspektiv som 
 
 Halvdags bedriftsfotografering: 4 000–8 000 kr. Bedriftsfilm (60–90 sek): 12 000–30 000 kr. Månedlig innholdsproduksjon: 3 000–8 000 kr/mnd.
 
-Bergen som kulisse er en av de uunngåelige fordelene med å drive bedrift her. Vi utnytter Bryggen, fjellet og fjorden aktivt i vår innholdsproduksjon.
+Bergen som kulisse er en av de uunngåelige fordelene med å drive bedrift her. Vi utnytter Bryggen, fjellet og fjorden aktivt i vår [foto- og videoproduksjon](/tjenester/foto-og-videografi).
     `.trim(),
   },
   {
@@ -413,7 +413,7 @@ En blogg med SEO-optimaliserte artikler er en langsiktig maskin for gratis trafi
 
 Start med å optimalisere Google Business Profile og nettsiden, bygg e-postliste og vær konsekvent på 1–2 sosiale plattformer, test Google Ads, og bygg bloggen gradvis med kvalitetsartikler.
 
-Lurer du på hvor du bør starte for din spesifikke bedrift? Kontakt Frameflow for en gratis strategisamtale.
+Lurer du på hvor du bør starte for din spesifikke bedrift? Se våre [tjenester for digital markedsføring i Bergen](/tjenester) eller kontakt Frameflow for en gratis strategisamtale.
     `.trim(),
   },
   {
@@ -458,7 +458,7 @@ Hos Frameflow inkluderer en nettside alltid:
 
 For de fleste Bergen-bedrifter er 12 000 – 25 000 kr et realistisk og fornuftig budsjett for en profesjonell nettside som faktisk leverer resultater. Vi gir alltid fast pris og uforpliktende tilbud.
 
-Kontakt Frameflow for en gratis prat om hva som passer din bedrift.
+Les mer om våre [webdesign-tjenester i Bergen](/tjenester/webdesign) eller kontakt Frameflow for en gratis prat om hva som passer din bedrift.
     `.trim(),
   },
   {
@@ -503,7 +503,7 @@ Spør om konkrete resultater: Rangerer de nettsidene sine kunder på Google? Kan
 
 Vi er et lite byrå med én kontaktperson, fast pris, fornøyd garanti og dyp lokalkunnskap om Bergen. Vi tar på oss 2–3 nye prosjekter i måneden – og prioriterer bedrifter vi tror vi kan hjelpe til å vokse.
 
-Nysgjerrig? Book en gratis samtale og se om vi passer for deg.
+Se hva vi tilbyr på våre [tjenestesider](/tjenester), eller book en gratis samtale og se om vi passer for deg.
     `.trim(),
   },
   {
@@ -581,7 +581,7 @@ Når du kontakter et apputviklingsbyrå i Bergen, bør tilbudet alltid inkludere
 
 Frameflow bygger skreddersydde apper for Bergen-bedrifter. Vi gir alltid fast pris, starter med MVP, og leverer kode du eier. Priser fra 45 000 kr.
 
-Ta kontakt for en gratis samtale om prosjektet ditt – du får et konkret prisestimat innen 24 timer.
+Les mer om vår [apputvikling i Bergen](/tjenester/app-utvikling), eller ta kontakt for en gratis samtale om prosjektet ditt – du får et konkret prisestimat innen 24 timer.
     `.trim(),
   },
   {
@@ -659,7 +659,7 @@ Sjekkliste:
 
 Hos Frameflow integrerer vi SEO i alt vi gjør – nettsider bygges med SEO fra dag én, ikke som ettertanke. Vi setter opp strukturert data, teknisk SEO og Google Search Console som standard på alle prosjekter.
 
-Ønsker du en gjennomgang av SEO-situasjonen din? Book en gratis samtale – vi ser raskt hva som kan forbedres.
+Ønsker du en gjennomgang av SEO-situasjonen din? Les mer om vår [SEO-tjeneste i Bergen](/tjenester/seo), eller book en gratis samtale – vi ser raskt hva som kan forbedres.
     `.trim(),
   },
   {
@@ -741,7 +741,7 @@ Du skal alltid eie alle logofiler og opphavsretten etter levering. Be om dette s
 
 Vi lager logoer og visuelle identiteter for Bergen-bedrifter som vil skille seg ut. Fast pris fra 8 000 kr, levering på 2–4 uker, og full rettighet til alle filer.
 
-Ta kontakt for en gratis samtale – vi ser raskt om vi er riktig match for prosjektet ditt.
+Les mer om vår [branding og logodesign i Bergen](/tjenester/branding), eller ta kontakt for en gratis samtale – vi ser raskt om vi er riktig match for prosjektet ditt.
     `.trim(),
   },
 ]

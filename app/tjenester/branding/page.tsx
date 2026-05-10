@@ -121,6 +121,12 @@ export default function BrandingPage() {
         ]}
         mockupType="brand"
         pricingFrom="8 000 kr"
+        faqs={[
+          { q: 'Hva er inkludert i en brandingpakke?', a: 'Alle brandingpakker inkluderer logo, fargepalett, typografi og brand guidelines. Vi leverer alle filer i vektorformat for bruk på nett og i trykk.' },
+          { q: 'Hva koster branding og logo design i Bergen?', a: 'Brandingpakker fra Frameflow starter fra 8 000 kr eks. mva. Prisen avhenger av omfang og leveranser.' },
+          { q: 'Hvor lang tid tar et brandingprosjekt?', a: 'Et komplett brandingprosjekt tar typisk 2–4 uker, inkludert konsept, presentasjon og revisjoner.' },
+          { q: 'Kan jeg bruke merkevaren på tvers av alle medier?', a: 'Ja, du mottar alle filer i vektorformat (SVG, PDF, PNG) som fungerer i alle størrelser – fra visittkort til bannere.' },
+        ]}
       />
     </>
   )

@@ -59,13 +59,6 @@ const localBusinessSchema = {
     { '@type': 'City', name: 'Bergen' },
     { '@type': 'AdministrativeArea', name: 'Vestland' },
   ],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5',
-    reviewCount: '3',
-    bestRating: '5',
-    worstRating: '1',
-  },
   priceRange: '$$',
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',

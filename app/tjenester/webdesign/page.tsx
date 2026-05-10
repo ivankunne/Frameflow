@@ -122,6 +122,12 @@ export default function WebdesignPage() {
         ]}
         mockupType="web"
         pricingFrom="15 000 kr"
+        faqs={[
+          { q: 'Hva koster en nettside i Bergen?', a: 'Nettsider fra Frameflow starter fra 15 000 kr eks. mva. Prisen avhenger av antall sider, funksjoner og designkompleksitet. Vi gir alltid et fast tilbud uten skjulte kostnader.' },
+          { q: 'Hvor lang tid tar det å lage en nettside?', a: 'De fleste prosjekter tar 3–6 uker fra første samtale til lansering, avhengig av størrelse og innholdsleveranse fra deg.' },
+          { q: 'Er nettsiden SEO-optimalisert?', a: 'Ja, SEO er innebygd fra dag én. Vi setter opp metadata, strukturert data, sitemap og Google Search Console som standard – uten ekstra kostnad.' },
+          { q: 'Kan jeg oppdatere nettsiden selv?', a: 'Ja, alle nettsider leveres med et brukervennlig CMS slik at du kan endre tekst, bilder og innhold uten teknisk kunnskap.' },
+        ]}
       />
     </>
   )

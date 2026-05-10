@@ -121,6 +121,12 @@ export default function SosialeMedierPage() {
         ]}
         mockupType="social"
         pricingFrom="3 500 kr / mnd"
+        faqs={[
+          { q: 'Hva koster administrasjon av sosiale medier?', a: 'Sosiale medier-pakker fra Frameflow starter fra 3 500 kr per måned, avhengig av antall plattformer og innholdsmengde.' },
+          { q: 'Hvilke plattformer håndterer dere?', a: 'Vi håndterer Instagram, Facebook, TikTok og LinkedIn – tilpasset der målgruppen din befinner seg.' },
+          { q: 'Produserer dere også innhold og bilder?', a: 'Ja, vi tilbyr kombinerte pakker der vi produserer foto og video samt håndterer publisering og community management.' },
+          { q: 'Får vi se innholdet før det publiseres?', a: 'Ja, vi presenterer en innholdskalender for godkjenning hver måned slik at du alltid har full kontroll.' },
+        ]}
       />
     </>
   )

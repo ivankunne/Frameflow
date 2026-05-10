@@ -15,6 +15,7 @@ interface ServicePageProps {
   relatedServices: { title: string; href: string }[]
   mockupType: 'web' | 'photo' | 'social' | 'brand' | 'app' | 'seo'
   pricingFrom?: string
+  faqs?: { q: string; a: string }[]
 }
 
 const accordionItems = [
@@ -66,6 +67,35 @@ function PricingAccordion() {
   )
 }
 
+function FaqItem({ q, a }: { q: string; a: string }) {
+  const [open, setOpen] = useState(false)
+  return (
+    <div className="py-5">
+      <button
+        type="button"
+        onClick={() => setOpen(!open)}
+        className="w-full flex items-start justify-between gap-4 text-left group"
+      >
+        <span className="font-semibold text-fg text-sm leading-snug group-hover:text-accent transition-colors">{q}</span>
+        <span className={`text-accent text-lg leading-none shrink-0 transition-transform duration-200 ${open ? 'rotate-45' : ''}`}>+</span>
+      </button>
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.div
+            key="a"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25, ease: 'easeInOut' }}
+          >
+            <p className="text-fg-muted text-sm leading-relaxed pt-3">{a}</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  )
+}
+
 const mockupBadgeLabels: Record<string, string> = {
   web: 'SEO optimalisert',
   photo: 'RAW · 24 megapiksel',
@@ -95,6 +125,7 @@ export default function ServicePageTemplate({
   relatedServices,
   mockupType,
   pricingFrom,
+  faqs,
 }: ServicePageProps) {
   const heroRef = useRef(null)
   const heroInView = useInView(heroRef, { once: true })
@@ -319,6 +350,20 @@ export default function ServicePageTemplate({
                 <p className="text-sm font-semibold text-fg mb-4">Hva påvirker prisen?</p>
                 <PricingAccordion />
               </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* FAQ */}
+      {faqs && faqs.length > 0 && (
+        <section className="py-14 md:py-20 px-6 lg:px-8 bg-white border-t border-border">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="display-text text-3xl text-fg mb-10">Vanlige spørsmål</h2>
+            <div className="flex flex-col divide-y divide-border">
+              {faqs.map((faq, i) => (
+                <FaqItem key={i} q={faq.q} a={faq.a} />
+              ))}
             </div>
           </div>
         </section>

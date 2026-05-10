@@ -128,6 +128,12 @@ export default function AppUtvikling() {
         ]}
         mockupType="app"
         pricingFrom="45 000 kr"
+        faqs={[
+          { q: 'Hva koster det å lage en app?', a: 'Apputvikling fra Frameflow starter fra 45 000 kr for en MVP. Fullskala løsninger prises individuelt etter scope og kompleksitet.' },
+          { q: 'Lager dere apper til både iOS og Android?', a: 'Ja, vi bygger apper i React Native og Flutter som fungerer på både iOS og Android fra én kodebase – noe som sparer tid og kostnader.' },
+          { q: 'Hvor raskt kan vi ha en første versjon klar?', a: 'Vi leverer en testbar MVP på 2–4 uker slik at du kan validere ideen med ekte brukere raskt.' },
+          { q: 'Hva skjer etter lansering?', a: 'Vi tilbyr løpende support og videreutvikling etter lansering. Du er aldri alene med produktet ditt.' },
+        ]}
       />
 
       {/* Case study section */}

@@ -1,9 +1,28 @@
 'use client'
 
+import React from 'react'
 import Link from 'next/link'
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import type { BlogPost } from '@/lib/data'
+
+function renderInline(text: string): React.ReactNode {
+  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g
+  const parts: React.ReactNode[] = []
+  let last = 0
+  let m: RegExpExecArray | null
+  while ((m = linkRegex.exec(text)) !== null) {
+    if (m.index > last) parts.push(text.slice(last, m.index))
+    parts.push(
+      <Link key={m.index} href={m[2]} className="text-accent hover:underline font-medium">
+        {m[1]}
+      </Link>
+    )
+    last = m.index + m[0].length
+  }
+  if (last < text.length) parts.push(text.slice(last))
+  return parts.length > 1 ? <>{parts}</> : text
+}
 
 export default function BlogPostClient({
   post,
@@ -126,7 +145,7 @@ export default function BlogPostClient({
                     {items.map((item, j) => (
                       <li key={j} className="flex items-start gap-3 text-fg-muted">
                         <span className="w-1 h-1 rounded-full bg-accent mt-2 shrink-0" />
-                        {item.replace('- ', '')}
+                        {renderInline(item.replace('- ', ''))}
                       </li>
                     ))}
                   </ul>
@@ -134,7 +153,7 @@ export default function BlogPostClient({
               }
               return (
                 <p key={i} className="text-fg-muted leading-relaxed my-5">
-                  {block}
+                  {renderInline(block)}
                 </p>
               )
             })}

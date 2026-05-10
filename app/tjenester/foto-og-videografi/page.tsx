@@ -121,6 +121,12 @@ export default function FotoOgVideografiPage() {
         ]}
         mockupType="photo"
         pricingFrom="4 500 kr"
+        faqs={[
+          { q: 'Hva koster bedriftsfotografering i Bergen?', a: 'Bedriftsfotografering fra Frameflow starter fra 4 500 kr. Prisen avhenger av antall timer, lokasjon og antall bilder som skal redigeres.' },
+          { q: 'Leverer dere innhold til sosiale medier?', a: 'Ja, vi produserer foto og video optimalisert for Instagram, TikTok, LinkedIn og andre plattformer – i riktig format og størrelse.' },
+          { q: 'Hvor raskt leveres bildene etter fotografering?', a: 'Redigerte bilder og video leveres vanligvis innen 5–7 virkedager etter fotografering.' },
+          { q: 'Kan dere kombinere foto og sosiale medier?', a: 'Ja, vi tilbyr pakker som kombinerer innholdsproduksjon med administrasjon av sosiale medier for en sømløs løsning.' },
+        ]}
       />
     </>
   )
