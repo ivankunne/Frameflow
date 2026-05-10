@@ -2,6 +2,41 @@
 
 import { useEffect, useRef, useState } from 'react'
 
+// Light-mode palette
+const L = {
+  dot:         '#0d1f3c',
+  ring:        'rgba(13,31,60,0.5)',
+  hoverBg:     'rgba(13,31,60,0.07)',
+  hoverBorder: 'rgba(13,31,60,0.75)',
+}
+
+// Dark-mode palette (white / light-blue brand tint)
+const D = {
+  dot:         'rgba(255,255,255,0.92)',
+  ring:        'rgba(255,255,255,0.45)',
+  hoverBg:     'rgba(255,255,255,0.10)',
+  hoverBorder: 'rgba(200,228,255,0.85)',
+}
+
+function luminance(r: number, g: number, b: number) {
+  return 0.299 * r + 0.587 * g + 0.114 * b
+}
+
+function bgIsDark(el: Element | null): boolean {
+  let current: Element | null = el
+  while (current && current !== document.body) {
+    const bg = window.getComputedStyle(current as HTMLElement).backgroundColor
+    const m  = bg.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?/)
+    if (m) {
+      const r = +m[1], g = +m[2], b = +m[3]
+      const a = m[4] !== undefined ? +m[4] : 1
+      if (a > 0.4 && luminance(r, g, b) < 128) return true
+    }
+    current = current.parentElement
+  }
+  return false
+}
+
 export default function CursorFollower() {
   const dotRef  = useRef<HTMLDivElement>(null)
   const ringRef = useRef<HTMLDivElement>(null)
@@ -15,10 +50,39 @@ export default function CursorFollower() {
     let rx = -100, ry = -100
     let vx = 0,    vy = 0
 
-    // Lerp-animated scales
     let dotScale  = 1, dotTarget  = 1
     let ringScale = 1, ringTarget = 1
     let hovering  = false
+    let dark      = false
+
+    // ── apply current dark/light palette ────────────────────
+    const palette = () => dark ? D : L
+
+    const applyDotColor = () => {
+      if (dotRef.current) dotRef.current.style.background = palette().dot
+    }
+
+    const applyRingColors = (hover: boolean) => {
+      if (!ringRef.current) return
+      const p = palette()
+      ringRef.current.style.borderColor = hover ? p.hoverBorder : p.ring
+      ringRef.current.style.background  = hover ? p.hoverBg     : 'transparent'
+    }
+
+    // ── throttled dark-background check ─────────────────────
+    let darkTimer = 0
+    const scheduleDarkCheck = () => {
+      if (darkTimer) return
+      darkTimer = window.setTimeout(() => {
+        darkTimer = 0
+        const wasDark = dark
+        dark = bgIsDark(document.elementFromPoint(mx, my))
+        if (dark !== wasDark) {
+          applyDotColor()
+          applyRingColors(hovering)
+        }
+      }, 80)
+    }
 
     // ── helpers ─────────────────────────────────────────────
     const isInteractive = (el: Element | null): boolean => {
@@ -31,45 +95,42 @@ export default function CursorFollower() {
     }
 
     const setRingStyle = (hover: boolean) => {
-      if (!ringRef.current) return
-      ringRef.current.style.background    = hover ? 'rgba(13,31,60,0.07)' : 'transparent'
-      ringRef.current.style.borderColor   = hover ? 'rgba(13,31,60,0.75)' : 'rgba(13,31,60,0.5)'
+      hovering = hover
+      applyRingColors(hover)
     }
 
     // ── event listeners ─────────────────────────────────────
-    const onMove = (e: MouseEvent) => { mx = e.clientX; my = e.clientY }
+    const onMove = (e: MouseEvent) => {
+      mx = e.clientX
+      my = e.clientY
+      scheduleDarkCheck()
+    }
 
     const onOver = (e: MouseEvent) => {
       if (!isInteractive(e.target as Element)) return
-      hovering     = true
-      dotTarget    = 0      // dot shrinks away inside ring
-      ringTarget   = 1.65   // ring expands into highlight bubble
+      dotTarget  = 0
+      ringTarget = 1.65
       setRingStyle(true)
     }
 
     const onOut = (e: MouseEvent) => {
       if (!isInteractive(e.target as Element)) return
-      hovering     = false
-      dotTarget    = 1
-      ringTarget   = 1
+      dotTarget  = 1
+      ringTarget = 1
       setRingStyle(false)
     }
 
     const onDown = () => {
-      // Click: compress both elements
-      dotTarget  = hovering ? 0   : 0.5
-      ringTarget = hovering ? 0.8 : 0.65
+      dotTarget  = hovering ? 0    : 0.5
+      ringTarget = hovering ? 0.8  : 0.65
     }
 
     const onUp = () => {
-      // Re-check what's under the cursor — handles cases where the clicked
-      // element was removed from the DOM (e.g. cookie banner disappearing),
-      // which prevents the normal mouseout from firing.
-      const el = document.elementFromPoint(mx, my)
-      hovering   = isInteractive(el)
-      dotTarget  = hovering ? 0    : 1
-      ringTarget = hovering ? 1.65 : 1
-      setRingStyle(hovering)
+      const el   = document.elementFromPoint(mx, my)
+      const isHov = isInteractive(el)
+      dotTarget  = isHov ? 0    : 1
+      ringTarget = isHov ? 1.65 : 1
+      setRingStyle(isHov)
     }
 
     // ── RAF loop ─────────────────────────────────────────────
@@ -110,6 +171,7 @@ export default function CursorFollower() {
       window.removeEventListener('mousedown',  onDown)
       window.removeEventListener('mouseup',    onUp)
       cancelAnimationFrame(raf)
+      if (darkTimer) clearTimeout(darkTimer)
     }
   }, [])
 
@@ -121,7 +183,11 @@ export default function CursorFollower() {
       <div
         ref={dotRef}
         className="fixed top-0 left-0 w-2 h-2 rounded-full pointer-events-none z-[9998]"
-        style={{ willChange: 'transform', background: '#0d1f3c' }}
+        style={{
+          willChange: 'transform',
+          background: L.dot,
+          transition: 'background 0.2s ease',
+        }}
       />
       {/* Lagging ring — morphs into highlight bubble on hover */}
       <div
@@ -129,8 +195,8 @@ export default function CursorFollower() {
         className="fixed top-0 left-0 w-8 h-8 rounded-full pointer-events-none z-[9997]"
         style={{
           willChange: 'transform',
-          border: '1px solid rgba(13,31,60,0.5)',
-          transition: 'background 0.18s ease, border-color 0.18s ease',
+          border: `1px solid ${L.ring}`,
+          transition: 'background 0.2s ease, border-color 0.2s ease',
         }}
       />
     </>
