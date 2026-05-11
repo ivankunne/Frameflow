@@ -94,13 +94,13 @@ export default function Navigation() {
           {/* Burger */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden p-2 -mr-2 min-w-[44px] min-h-[44px] flex flex-col gap-1.5 items-center justify-center"
+            className="md:hidden w-10 h-10 flex flex-col gap-[5px] items-center justify-center rounded-lg border border-border bg-bg-2 hover:bg-white shadow-card hover:shadow-card-hover transition-all duration-200"
             aria-label={menuOpen ? 'Lukk meny' : 'Åpne meny'}
             aria-expanded={menuOpen}
           >
-            <span className={`block w-5 h-0.5 bg-fg transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-            <span className={`block w-5 h-0.5 bg-fg transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
-            <span className={`block w-5 h-0.5 bg-fg transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+            <span className={`block w-[18px] h-[1.5px] bg-fg rounded-full transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-[6.5px]' : ''}`} />
+            <span className={`block w-[18px] h-[1.5px] bg-fg rounded-full transition-all duration-300 ${menuOpen ? 'opacity-0 scale-x-0' : ''}`} />
+            <span className={`block w-[18px] h-[1.5px] bg-fg rounded-full transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-[6.5px]' : ''}`} />
           </button>
         </nav>
       </header>
@@ -150,21 +150,34 @@ export default function Navigation() {
                 transition={{ delay: links.length * 0.06 + 0.1 }}
                 className="mt-8 flex flex-col gap-3"
               >
-                <Link href="/kontakt" className="text-sm font-medium text-fg-muted">
-                  Ta kontakt
-                </Link>
                 <Link
                   href="/tilbud"
-                  className="text-sm font-semibold bg-accent text-white px-6 py-3.5 rounded-lg text-center"
+                  className="text-sm font-semibold bg-accent hover:bg-accent-hover text-white px-6 py-3.5 rounded-lg text-center shadow-blue-sm transition-colors"
                 >
-                  Få et gratis tilbud
+                  Få et gratis tilbud →
+                </Link>
+                <Link
+                  href="/kontakt"
+                  className="text-sm font-semibold text-fg border border-border hover:border-accent hover:text-accent bg-white px-6 py-3.5 rounded-lg text-center shadow-card transition-all"
+                >
+                  Ta kontakt
                 </Link>
               </motion.div>
             </nav>
 
-            <div className="mt-auto pb-8 text-fg-muted text-sm">
-              +47 99 85 37 81
-            </div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: links.length * 0.06 + 0.25 }}
+              className="mt-auto pb-8 pt-6 border-t border-border flex items-center justify-between"
+            >
+              <a href="tel:+4799853781" className="text-fg-muted text-sm hover:text-fg transition-colors">
+                +47 99 85 37 81
+              </a>
+              <a href="mailto:ivan@frameflow.no" className="text-fg-muted text-sm hover:text-fg transition-colors">
+                ivan@frameflow.no
+              </a>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>

@@ -37,7 +37,7 @@ export default function OmOssClient() {
   return (
     <>
       {/* Hero */}
-      <section ref={heroRef} className="pt-32 pb-16 px-6 lg:px-8 bg-white border-b border-border">
+      <section ref={heroRef} className="pt-28 pb-12 lg:pt-32 lg:pb-16 px-6 lg:px-8 bg-white border-b border-border">
         <div className="max-w-7xl mx-auto">
           <motion.span
             initial={{ opacity: 0, y: 10 }}
@@ -51,15 +51,15 @@ export default function OmOssClient() {
             initial={{ opacity: 0, y: 30 }}
             animate={heroInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="display-text text-5xl lg:text-7xl text-fg max-w-4xl mb-6"
+            className="display-text text-4xl sm:text-5xl lg:text-7xl text-fg max-w-4xl mb-5 lg:mb-6 [hyphens:auto]"
           >
-            Markedsføringsbyrå i Bergen
+            Markeds{'­'}førings{'­'}byrå i Bergen
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={heroInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.25 }}
-            className="text-fg-muted text-lg max-w-2xl leading-relaxed mb-8"
+            className="text-fg-muted text-base sm:text-lg max-w-2xl leading-relaxed mb-6 lg:mb-8"
           >
             Frameflow hjelper bedrifter i Bergen og Vestland med digital vekst. Med ekspertise innen webdesign, sosiale medier, foto og video, og branding gir vi din bedrift verktøyene til å nå sitt publikum.
           </motion.p>
@@ -76,8 +76,8 @@ export default function OmOssClient() {
       </section>
 
       {/* About */}
-      <section ref={aboutRef} className="py-24 px-6 lg:px-8 bg-bg-2">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <section ref={aboutRef} className="py-16 lg:py-24 px-6 lg:px-8 bg-bg-2">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Photo */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -85,7 +85,7 @@ export default function OmOssClient() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-border relative shadow-card-hover">
+            <div className="aspect-[3/4] max-h-[480px] lg:max-h-none rounded-2xl overflow-hidden border border-border relative shadow-card-hover">
               <Image
                 src="/ivan-about.jpg"
                 alt="Ivan Kunne – Daglig leder, Frameflow"
@@ -107,7 +107,7 @@ export default function OmOssClient() {
             <span className="inline-flex items-center gap-2 text-accent text-xs font-semibold uppercase tracking-widest mb-6">
               <span className="w-4 h-px bg-accent" /> Møt teamet
             </span>
-            <h2 className="display-text text-4xl text-fg mb-5">Ivan Kunne — Daglig leder</h2>
+            <h2 className="display-text text-3xl lg:text-4xl text-fg mb-5">Ivan Kunne — Daglig leder</h2>
             <p className="text-fg-muted leading-relaxed mb-4">
               Jeg er opprinnelig fra Nederland, men flyttet til Norge i 2023. Siden da har jeg bygget solid kompetanse innen sosiale medier, markedsføring, webdesign og merkevarebygging.
             </p>
@@ -132,8 +132,8 @@ export default function OmOssClient() {
       </section>
 
       {/* Stats */}
-      <section ref={statsRef} className="py-24 px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <section ref={statsRef} className="py-16 lg:py-24 px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6">
           {[
             { end: 20, suffix: '+', start: 0, label: 'Prosjekter levert', sub: 'Webdesign, branding, sosiale medier' },
             { end: 98, suffix: '%', start: 0, label: 'Kundetilfredshet', sub: 'Basert på kundeevalueringer' },
@@ -157,7 +157,7 @@ export default function OmOssClient() {
       </section>
 
       {/* CTA */}
-      <section ref={ctaRef} className="py-24 px-6 lg:px-8 bg-bg-2">
+      <section ref={ctaRef} className="py-16 lg:py-24 px-6 lg:px-8 bg-bg-2">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -167,10 +167,10 @@ export default function OmOssClient() {
             <span className="inline-flex items-center gap-2 text-accent text-xs font-semibold uppercase tracking-widest mb-6">
               <span className="w-4 h-px bg-accent" /> Klar for vekst?
             </span>
-            <h2 className="display-text text-4xl lg:text-5xl text-fg max-w-3xl mx-auto mb-6">
+            <h2 className="display-text text-3xl sm:text-4xl lg:text-5xl text-fg max-w-3xl mx-auto mb-5 lg:mb-6">
               Klar til å transformere din digitale tilstedeværelse?
             </h2>
-            <p className="text-fg-muted max-w-xl mx-auto mb-10 leading-relaxed">
+            <p className="text-fg-muted text-sm sm:text-base max-w-xl mx-auto mb-8 lg:mb-10 leading-relaxed">
               Kontakt oss for en gratis konsultasjon. Vi finner den rette løsningen for din bedrift.
             </p>
             <Link href="/kontakt" className="text-sm font-semibold bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded-lg transition-colors min-h-[44px] inline-flex items-center gap-2 shadow-blue-sm">
