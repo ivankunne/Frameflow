@@ -11,6 +11,7 @@ const faqs = [
   { q: 'Hvor lang tid tar det å lage en nettside?', a: 'En standard bedriftsnettside tar typisk 3–6 uker fra oppstart til lansering, avhengig av omfang og tilgang på innhold. Vi setter opp en klar tidsplan fra dag én.' },
   { q: 'Jobber dere kun med bedrifter i Bergen?', a: 'Vi har base i Bergen og kjenner det lokale markedet godt, men jobber like gjerne med bedrifter i resten av Norge og internasjonalt – som med Marbesa Project 94 i Marbella.' },
   { q: 'Hvordan kommer vi i gang?', a: 'Book en gratis 30-minutters samtale via kontaktskjemaet, e-post eller ring +47 99 85 37 81. Ingen forpliktelser – vi hører om prosjektet ditt og forteller deg ærlig hva vi kan gjøre.' },
+  { q: 'Er Frameflow et webbyrå i Bergen?', a: 'Ja – Frameflow er et webbyrå i Bergen som hjelper bedrifter med å lage nettside, grafisk design og logodesign. Vi er i tillegg et markedsføringsbyrå med kompetanse innen foto, video og sosiale medier, slik at du kan få alt under ett tak.' },
 ]
 
 const chatMessages = [

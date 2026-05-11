@@ -3,20 +3,20 @@ import ServicePageTemplate from '@/components/ServicePageTemplate'
 import { JsonLd } from '@/components/JsonLd'
 
 export const metadata: Metadata = {
-  title: 'Branding i Bergen | Logo og visuell identitet',
+  title: 'Grafisk design og logodesign Bergen | Branding – Frameflow',
   description:
-    'Frameflow lager logo og visuell identitet for Bergen-bedrifter. Merkevare som gjør deg umiskjennelig – fra 8 000 kr, levering 2–4 uker. Ingen oppstartsgebyr.',
+    'Frameflow leverer grafisk design, logodesign og branding for Bergen-bedrifter. Profesjonell visuell identitet som gjør deg umiskjennelig – fra 8 000 kr, levering 2–4 uker.',
   alternates: { canonical: 'https://www.frameflow.no/tjenester/branding' },
   openGraph: {
-    title: 'Branding i Bergen | Frameflow',
-    description: 'Sterk branding som gjør merkevaren din umiskjennelig. Logo, identitet og guidelines for Bergen-bedrifter.',
+    title: 'Grafisk design og logodesign Bergen | Frameflow',
+    description: 'Grafisk design, logodesign og branding som gjør merkevaren din umiskjennelig. Visuell identitet og guidelines for Bergen-bedrifter.',
     url: 'https://www.frameflow.no/tjenester/branding',
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Branding i Bergen | Frameflow',
-    description: 'Sterk branding og visuell identitet som skiller merkevaren din ut. Logo og guidelines fra eksperter i Bergen.',
+    title: 'Grafisk design og logodesign Bergen | Frameflow',
+    description: 'Grafisk design, logodesign og branding som skiller merkevaren din ut. Visuell identitet og guidelines fra eksperter i Bergen.',
   },
 }
 
@@ -33,9 +33,9 @@ const breadcrumbSchema = {
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Branding i Bergen',
+  name: 'Grafisk design og logodesign i Bergen',
   provider: { '@id': 'https://www.frameflow.no/#organization' },
-  description: 'Profesjonell branding for bedrifter i Bergen. Logo, visuell identitet og brand guidelines som gjør merkevaren din umiskjennelig.',
+  description: 'Profesjonell grafisk design, logodesign og branding for bedrifter i Bergen. Visuell identitet og brand guidelines som gjør merkevaren din umiskjennelig.',
   areaServed: { '@type': 'City', name: 'Bergen' },
   offers: {
     '@type': 'Offer',
@@ -74,6 +74,11 @@ const faqSchema = {
       name: 'Kan jeg bruke merkevaren på tvers av alle medier?',
       acceptedAnswer: { '@type': 'Answer', text: 'Ja, du mottar alle filer i vektorformat (SVG, PDF, PNG) som fungerer i alle størrelser – fra visittkort til bannere.' },
     },
+    {
+      '@type': 'Question',
+      name: 'Hva er forskjellen på grafisk design og logodesign?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Logodesign handler om selve logosymbolet og logotypen – kjernen i merkevaren din. Grafisk design er bredere og inkluderer alt visuelt: fargepalett, typografi, maler, ikoner og trykksaker. Hos Frameflow leverer vi begge deler som en samlet brandingpakke.' },
+    },
   ],
 }
 
@@ -85,9 +90,9 @@ export default function BrandingPage() {
       <JsonLd data={faqSchema} />
       <ServicePageTemplate
         label="Tjeneste"
-        title="En merkevare som skiller seg ut og huskes"
-        description="Vi former utseendet, stemmen og følelsen av merkevaren din slik at alt føles konsekvent, gjennomtenkt og umiskjennelig deg."
-        longDescription="En sterk merkevare er ikke bare en logo – det er summen av alt som gjør bedriften din til det den er. Farger, fonter, tone, verdier og opplevelse. Hos Frameflow lager vi en visuell identitet som holder seg konsistent på nett, i sosiale medier og i trykt materiell."
+        title="Grafisk design og logodesign som huskes"
+        description="Vi leverer grafisk design, logodesign og branding for Bergen-bedrifter – slik at alt føles konsekvent, gjennomtenkt og umiskjennelig deg."
+        longDescription="En sterk merkevare er ikke bare en logo – det er summen av alt som gjør bedriften din til det den er. Farger, fonter, tone, verdier og opplevelse. Hos Frameflow leverer vi grafisk design og logodesign som holder seg konsistent på nett, i sosiale medier og i trykt materiell."
         includes={[
           'Logo og logovariasjoner (farger, svart/hvit, mørk/lys)',
           'Fargepalett med HEX, RGB og CMYK-verdier',
@@ -126,6 +131,7 @@ export default function BrandingPage() {
           { q: 'Hva koster branding og logo design i Bergen?', a: 'Brandingpakker fra Frameflow starter fra 8 000 kr eks. mva. Prisen avhenger av omfang og leveranser.' },
           { q: 'Hvor lang tid tar et brandingprosjekt?', a: 'Et komplett brandingprosjekt tar typisk 2–4 uker, inkludert konsept, presentasjon og revisjoner.' },
           { q: 'Kan jeg bruke merkevaren på tvers av alle medier?', a: 'Ja, du mottar alle filer i vektorformat (SVG, PDF, PNG) som fungerer i alle størrelser – fra visittkort til bannere.' },
+          { q: 'Hva er forskjellen på grafisk design og logodesign?', a: 'Logodesign handler om selve logosymbolet og logotypen – kjernen i merkevaren din. Grafisk design er bredere og inkluderer alt visuelt: fargepalett, typografi, maler, ikoner og trykksaker. Hos Frameflow leverer vi begge deler som en samlet brandingpakke.' },
         ]}
       />
     </>

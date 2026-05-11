@@ -34,7 +34,11 @@ export const metadata: Metadata = {
     'Frameflow er et markedsføringsbyrå i Bergen. Vi leverer webdesign, foto og video, sosiale medier og branding som gir målbare resultater for bedrifter i Bergen og Vestland.',
   keywords: [
     'markedsføringsbyrå Bergen',
+    'webbyrå Bergen',
     'webdesign Bergen',
+    'lage nettside Bergen',
+    'grafisk design Bergen',
+    'logodesign Bergen',
     'sosiale medier Bergen',
     'branding Bergen',
     'foto video Bergen',

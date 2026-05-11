@@ -3,20 +3,20 @@ import ServicePageTemplate from '@/components/ServicePageTemplate'
 import { JsonLd } from '@/components/JsonLd'
 
 export const metadata: Metadata = {
-  title: 'Webdesign Bergen | Nettsider som konverterer – Frameflow',
+  title: 'Webbyrå Bergen | Lage nettside som konverterer – Frameflow',
   description:
-    'Frameflow lager nettsider for Bergen-bedrifter som konverterer besøkende til kunder – SEO innebygd fra dag én. Ingen oppstartsgebyr, svar innen 24 timer.',
+    'Frameflow er et webbyrå i Bergen som hjelper deg å lage nettside med SEO innebygd fra dag én. Konverterer besøkende til kunder. Ingen oppstartsgebyr, svar innen 24 timer.',
   alternates: { canonical: 'https://www.frameflow.no/tjenester/webdesign' },
   openGraph: {
-    title: 'Webdesign Bergen | Nettsider som konverterer – Frameflow',
-    description: 'Frameflow lager nettsider for Bergen-bedrifter som konverterer besøkende til kunder – SEO innebygd fra dag én. Ingen oppstartsgebyr, svar innen 24 timer.',
+    title: 'Webbyrå Bergen | Lage nettside som konverterer – Frameflow',
+    description: 'Frameflow er et webbyrå i Bergen som hjelper deg å lage nettside med SEO innebygd fra dag én. Konverterer besøkende til kunder. Ingen oppstartsgebyr, svar innen 24 timer.',
     url: 'https://www.frameflow.no/tjenester/webdesign',
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Webdesign Bergen | Nettsider som konverterer – Frameflow',
-    description: 'Frameflow lager nettsider for Bergen-bedrifter som konverterer besøkende til kunder – SEO innebygd fra dag én. Ingen oppstartsgebyr, svar innen 24 timer.',
+    title: 'Webbyrå Bergen | Lage nettside som konverterer – Frameflow',
+    description: 'Frameflow er et webbyrå i Bergen som hjelper deg å lage nettside med SEO innebygd fra dag én. Konverterer besøkende til kunder. Ingen oppstartsgebyr, svar innen 24 timer.',
   },
 }
 
@@ -33,9 +33,9 @@ const breadcrumbSchema = {
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Webdesign i Bergen',
+  name: 'Webbyrå og webdesign i Bergen',
   provider: { '@id': 'https://www.frameflow.no/#organization' },
-  description: 'Profesjonell webdesign i Bergen med fokus på hastighet, SEO og konvertering.',
+  description: 'Profesjonelt webbyrå i Bergen – vi lager nettside med fokus på hastighet, SEO og konvertering.',
   areaServed: { '@type': 'City', name: 'Bergen' },
   offers: {
     '@type': 'Offer',
@@ -74,6 +74,11 @@ const faqSchema = {
       name: 'Kan jeg oppdatere nettsiden selv?',
       acceptedAnswer: { '@type': 'Answer', text: 'Ja, alle nettsider leveres med et brukervennlig CMS slik at du kan endre tekst, bilder og innhold uten teknisk kunnskap.' },
     },
+    {
+      '@type': 'Question',
+      name: 'Hva koster det å lage nettside hos et webbyrå i Bergen?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Hos Frameflow starter det å lage nettside fra 15 000 kr eks. mva. Som webbyrå i Bergen gir vi alltid fast pris – ingen overraskelser. Du får en profesjonell nettside med SEO, mobiltilpasning og CMS inkludert.' },
+    },
   ],
 }
 
@@ -85,9 +90,9 @@ export default function WebdesignPage() {
       <JsonLd data={faqSchema} />
       <ServicePageTemplate
         label="Tjeneste"
-        title="Nettsider som rangerer og konverterer"
-        description="Fra 0 til side 1 på Google – og besøkende til kunder. Vi bygger raske, konverteringsfokuserte nettsider i Bergen med SEO innebygd fra dag én."
-        longDescription="En god nettside er mer enn pen design. Den skal laste raskt, rangere på Google, og guide besøkende mot handling. Hos Frameflow bygger vi nettsider i Webflow og Next.js med SEO, hastighet og konvertering innebygd fra dag én – ikke som ettertanke."
+        title="Vil du lage nettside i Bergen? Vi hjelper deg."
+        description="Fra 0 til side 1 på Google – og besøkende til kunder. Vi er et webbyrå i Bergen som bygger raske, konverteringsfokuserte nettsider med SEO innebygd fra dag én."
+        longDescription="En god nettside er mer enn pen design. Den skal laste raskt, rangere på Google, og guide besøkende mot handling. Hos Frameflow – et webbyrå i Bergen – lager vi nettsider i Webflow og Next.js med SEO, hastighet og konvertering innebygd fra dag én – ikke som ettertanke."
         includes={[
           'Responsivt design optimalisert for mobil, nettbrett og desktop',
           'SEO-grunnmur: metadata, strukturert data, sitemap',
@@ -127,6 +132,7 @@ export default function WebdesignPage() {
           { q: 'Hvor lang tid tar det å lage en nettside?', a: 'De fleste prosjekter tar 3–6 uker fra første samtale til lansering, avhengig av størrelse og innholdsleveranse fra deg.' },
           { q: 'Er nettsiden SEO-optimalisert?', a: 'Ja, SEO er innebygd fra dag én. Vi setter opp metadata, strukturert data, sitemap og Google Search Console som standard – uten ekstra kostnad.' },
           { q: 'Kan jeg oppdatere nettsiden selv?', a: 'Ja, alle nettsider leveres med et brukervennlig CMS slik at du kan endre tekst, bilder og innhold uten teknisk kunnskap.' },
+          { q: 'Hva koster det å lage nettside hos et webbyrå i Bergen?', a: 'Hos Frameflow starter det å lage nettside fra 15 000 kr eks. mva. Som webbyrå i Bergen gir vi alltid fast pris – ingen overraskelser. Du får en profesjonell nettside med SEO, mobiltilpasning og CMS inkludert.' },
         ]}
       />
     </>

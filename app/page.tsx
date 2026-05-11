@@ -15,23 +15,23 @@ const HomeFAQ = dynamic(() => import('@/components/sections/HomeFAQ'))
 const HomeCTA = dynamic(() => import('@/components/sections/HomeCTA'))
 
 export const metadata: Metadata = {
-  title: 'Frameflow – Markedsføringsbyrå i Bergen',
+  title: 'Frameflow – Markedsføringsbyrå og webbyrå i Bergen',
   description:
-    'Frameflow er markedsføringsbyrå i Bergen – webdesign, foto & video, sosiale medier og branding under ett tak. Ingen oppstartsgebyr og svar innen 24 timer.',
+    'Frameflow er markedsføringsbyrå og webbyrå i Bergen – vi lager nettside, grafisk design, foto & video, sosiale medier og branding under ett tak. Ingen oppstartsgebyr og svar innen 24 timer.',
   alternates: {
     canonical: 'https://www.frameflow.no',
   },
   openGraph: {
-    title: 'Frameflow – Markedsføringsbyrå i Bergen',
+    title: 'Frameflow – Markedsføringsbyrå og webbyrå i Bergen',
     description:
-      'Frameflow er markedsføringsbyrå i Bergen – webdesign, foto & video, sosiale medier og branding under ett tak. Ingen oppstartsgebyr og svar innen 24 timer.',
+      'Frameflow er markedsføringsbyrå og webbyrå i Bergen – vi lager nettside, grafisk design, foto & video, sosiale medier og branding under ett tak. Ingen oppstartsgebyr og svar innen 24 timer.',
     url: 'https://www.frameflow.no',
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Frameflow – Markedsføringsbyrå i Bergen',
-    description: 'Frameflow er markedsføringsbyrå i Bergen – webdesign, foto & video, sosiale medier og branding under ett tak.',
+    title: 'Frameflow – Markedsføringsbyrå og webbyrå i Bergen',
+    description: 'Frameflow er markedsføringsbyrå og webbyrå i Bergen – vi lager nettside, grafisk design, foto & video, sosiale medier og branding under ett tak.',
   },
 }
 
@@ -39,7 +39,7 @@ const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'Frameflow',
-  description: 'Markedsføringsbyrå i Bergen – webdesign, foto og video, sosiale medier og branding under ett tak.',
+  description: 'Markedsføringsbyrå og webbyrå i Bergen – vi lager nettside, grafisk design, foto og video, sosiale medier og branding under ett tak.',
   url: 'https://www.frameflow.no',
   telephone: '+4799853781',
   email: 'ivan@frameflow.no',
@@ -119,6 +119,22 @@ const faqSchema = {
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Book en gratis 30-minutters samtale via kontaktskjemaet, e-post eller ring +47 99 85 37 81. Ingen forpliktelser – vi hører om prosjektet ditt og forteller deg ærlig hva vi kan gjøre.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Hva er et webbyrå og hva gjør Frameflow?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Et webbyrå hjelper bedrifter med å lage nettside, webdesign og digital tilstedeværelse. Frameflow er et webbyrå i Bergen som i tillegg leverer grafisk design, logodesign, foto, video og sosiale medier – alt under ett tak.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Kan dere hjelpe meg med å lage nettside i Bergen?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Ja, vi hjelper deg med å lage nettside tilpasset din bedrift – fra design til lansering. Alle nettsider vi lager er SEO-optimalisert, mobilvenlig og klar til å konvertere besøkende til kunder. Priser starter fra 15 000 kr eks. mva.',
       },
     },
   ],
