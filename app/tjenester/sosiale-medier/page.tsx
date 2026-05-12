@@ -5,18 +5,18 @@ import { JsonLd } from '@/components/JsonLd'
 export const metadata: Metadata = {
   title: 'Sosiale medier Bergen – Strategi og innhold | Frameflow',
   description:
-    'Profesjonell håndtering av sosiale medier for Bergen-bedrifter. Innholdsproduksjon, strategi og community management. Ta kontakt i dag.',
+    'Profesjonell håndtering av sosiale medier for Bergen-bedrifter. Innholdsproduksjon, strategi og kanalforvaltning. Ta kontakt i dag.',
   alternates: { canonical: 'https://www.frameflow.no/tjenester/sosiale-medier' },
   openGraph: {
-    title: 'Sosiale medier i Bergen | Frameflow',
-    description: 'Profesjonell håndtering av sosiale medier for Bergen-bedrifter. Innholdsproduksjon, strategi og community management. Ta kontakt i dag.',
+    title: 'Sosiale medier Bergen – Strategi og innhold | Frameflow',
+    description: 'Profesjonell håndtering av sosiale medier for Bergen-bedrifter. Innholdsproduksjon, strategi og kanalforvaltning. Ta kontakt i dag.',
     url: 'https://www.frameflow.no/tjenester/sosiale-medier',
     images: [{ url: 'https://www.frameflow.no/og?title=Sosiale+medier+for+Bergen-bedrifter&label=Sosiale+medier', width: 1200, height: 630, alt: 'Sosiale medier Bergen – Frameflow' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sosiale medier i Bergen | Frameflow',
-    description: 'Profesjonell håndtering av sosiale medier for Bergen-bedrifter. Innholdsproduksjon, strategi og community management.',
+    title: 'Sosiale medier Bergen – Strategi og innhold | Frameflow',
+    description: 'Profesjonell håndtering av sosiale medier for Bergen-bedrifter. Innholdsproduksjon, strategi og kanalforvaltning.',
   },
 }
 
@@ -35,7 +35,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'Sosiale medier i Bergen',
   provider: { '@id': 'https://www.frameflow.no/#organization' },
-  description: 'Profesjonell håndtering av sosiale medier for Bergen-bedrifter. Innholdsproduksjon, strategi og community management.',
+  description: 'Profesjonell håndtering av sosiale medier for Bergen-bedrifter. Innholdsproduksjon, strategi og kanalforvaltning.',
   areaServed: { '@type': 'City', name: 'Bergen' },
   offers: {
     '@type': 'Offer',
@@ -67,7 +67,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Produserer dere også innhold og bilder?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Ja, vi tilbyr kombinerte pakker der vi produserer foto og video samt håndterer publisering og community management.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Ja, vi tilbyr kombinerte pakker der vi produserer foto og video samt håndterer publisering og kanalforvaltning.' },
     },
     {
       '@type': 'Question',
@@ -86,7 +86,7 @@ export default function SosialeMedierPage() {
       <ServicePageTemplate
         label="Tjeneste"
         title="Sosiale medier som vokser, engasjerer og konverterer"
-        description="Vi håndterer alt fra innholdsproduksjon til strategi og community management – slik at sosiale medier profilen din alltid er fersk, autentisk og profesjonell."
+        description="Vi håndterer alt fra innholdsproduksjon til strategi og kanalforvaltning – slik at sosiale medier profilen din alltid er fersk, autentisk og profesjonell."
         longDescription="Sosiale medier er ikke lenger valgfritt. Men uten en klar strategi kaster du bort tid og penger. Vi hjelper Bergen-bedrifter med å bygge en sterk tilstedeværelse som faktisk engasjerer og konverterer – med innhold som passer hver plattform."
         includes={[
           'Innholdsstrategi og innholdskalender',
@@ -124,7 +124,7 @@ export default function SosialeMedierPage() {
         faqs={[
           { q: 'Hva koster administrasjon av sosiale medier?', a: 'Sosiale medier-pakker fra Frameflow starter fra 3 500 kr per måned, avhengig av antall plattformer og innholdsmengde.' },
           { q: 'Hvilke plattformer håndterer dere?', a: 'Vi håndterer Instagram, Facebook, TikTok og LinkedIn – tilpasset der målgruppen din befinner seg.' },
-          { q: 'Produserer dere også innhold og bilder?', a: 'Ja, vi tilbyr kombinerte pakker der vi produserer foto og video samt håndterer publisering og community management.' },
+          { q: 'Produserer dere også innhold og bilder?', a: 'Ja, vi tilbyr kombinerte pakker der vi produserer foto og video samt håndterer publisering og kanalforvaltning.' },
           { q: 'Får vi se innholdet før det publiseres?', a: 'Ja, vi presenterer en innholdskalender for godkjenning hver måned slik at du alltid har full kontroll.' },
         ]}
       />

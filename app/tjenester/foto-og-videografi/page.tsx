@@ -8,14 +8,14 @@ export const metadata: Metadata = {
     'Frameflow produserer bedriftsfoto og video i Bergen for sosiale medier, nettsider og annonser. Fra 4 500 kr – levering innen 5–7 virkedager.',
   alternates: { canonical: 'https://www.frameflow.no/tjenester/foto-og-videografi' },
   openGraph: {
-    title: 'Foto og videografi Bergen | Frameflow',
+    title: 'Bedriftsfoto og video i Bergen | Frameflow',
     description: 'Autentisk fotografi og videografi for sosiale medier, nettsider og markedsføring. Profesjonell produksjon i Bergen.',
     url: 'https://www.frameflow.no/tjenester/foto-og-videografi',
     images: [{ url: 'https://www.frameflow.no/og?title=Bedriftsfoto+og+video+i+Bergen&label=Foto+%26+Video', width: 1200, height: 630, alt: 'Foto og videografi Bergen – Frameflow' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Foto og videografi Bergen | Frameflow',
+    title: 'Bedriftsfoto og video i Bergen | Frameflow',
     description: 'Autentisk fotografi og videografi som øker engasjement. Profesjonell produksjon for alle kanaler.',
   },
 }

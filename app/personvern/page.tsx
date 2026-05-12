@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     url: 'https://www.frameflow.no/personvern',
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: false },
   twitter: {
     card: 'summary_large_image',
     title: 'Personvernserklæring – Frameflow Bergen',

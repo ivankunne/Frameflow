@@ -4,19 +4,19 @@ import { HoOrbitCaseStudy } from '@/components/HoOrbitCaseStudy'
 import { JsonLd } from '@/components/JsonLd'
 
 export const metadata: Metadata = {
-  title: 'App utvikling i Bergen | Fra MVP til fullskala løsninger',
+  title: 'App utvikling Bergen – Fra MVP til fullskala | Frameflow',
   description:
     'Frameflow bygger skreddersydde apper for Bergen-bedrifter – fra MVP klar på 2–4 uker til fullskala løsninger. iOS, Android og web. Fra 45 000 kr.',
   alternates: { canonical: 'https://www.frameflow.no/tjenester/app-utvikling' },
   openGraph: {
-    title: 'App utvikling i Bergen | Frameflow',
+    title: 'App utvikling i Bergen – Fra MVP til fullskala | Frameflow',
     description: 'Skreddersydde webapper og mobilapper som løser reelle problemer. Fra MVP til fullskala løsninger for Bergen-bedrifter.',
     url: 'https://www.frameflow.no/tjenester/app-utvikling',
     images: [{ url: 'https://www.frameflow.no/og?title=App+utvikling+i+Bergen&label=App+utvikling', width: 1200, height: 630, alt: 'App utvikling Bergen – Frameflow' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'App utvikling i Bergen | Frameflow',
+    title: 'App utvikling i Bergen – Fra MVP til fullskala | Frameflow',
     description: 'Skreddersydde apper som løser reelle problemer. Fra MVP til fullskala løsninger – raskt og sikkert.',
   },
 }

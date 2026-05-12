@@ -6,6 +6,7 @@ export interface BlogPost {
   date: string
   updatedAt?: string
   readTime: string
+  metaTitle?: string
   content: string
   relatedService?: { title: string; href: string }
 }
@@ -28,6 +29,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'nettbutikk-bergen-ehandel',
     title: 'Nettbutikk i Bergen: Hva koster det å lage nettshop, og hvilken plattform bør du velge?',
     excerpt: 'E-handel vokser – men en nettbutikk som faktisk selger krever mer enn fin design. Hva Bergen-bedrifter bør vite om kostnader, plattformer og konvertering.',
+    metaTitle: 'Nettbutikk i Bergen: Kostnader og plattformer for nettshop',
     category: 'Webdesign',
     date: '8. mai 2026',
     updatedAt: '2026-05-08',
@@ -126,6 +128,7 @@ Vil du diskutere om nettbutikk er riktig for din bedrift? Se vår [webdesign-tje
     slug: 'google-ads-bergen',
     title: 'Google Ads i Bergen: Er betalt annonsering verdt investeringen for lokale bedrifter?',
     excerpt: 'Google Ads gir Bergen-bedriften umiddelbar synlighet – men krever riktig strategi for å ikke brenne pengene. Hva du må vite om betalt annonsering lokalt.',
+    metaTitle: 'Google Ads Bergen: Er betalt annonsering verdt det?',
     category: 'Markedsføring',
     date: '10. mai 2026',
     updatedAt: '2026-05-10',
@@ -206,6 +209,7 @@ Vil du vite om Google Ads er riktig for din Bergen-bedrift? [Ta kontakt med Fram
     slug: 'webbyraa-bergen-guide',
     title: 'Webbyrå i Bergen: Slik velger du riktig webbyrå for din bedrift i 2026',
     excerpt: 'Ikke alle webbyrå i Bergen er like. Her er spørsmålene du må stille – og hva som skiller et godt byrå fra et som bare leverer en pen nettside ingen finner.',
+    metaTitle: 'Webbyrå i Bergen: Slik velger du riktig byrå i 2026',
     category: 'Webdesign',
     date: '12. mai 2026',
     updatedAt: '2026-05-12',
@@ -289,6 +293,7 @@ Vil du ha en uforpliktende prat om hva slags nettside som passer din bedrift? Se
     slug: 'lokal-seo-bergen-guide-2025',
     title: 'Lokal SEO i Bergen: Den komplette guiden til å rangere på Google i 2026',
     excerpt: 'Lær hvordan du får Bergen-bedriften din øverst på Google uten å betale for annonser. En steg-for-steg guide til lokal SEO som faktisk virker.',
+    metaTitle: 'Lokal SEO Bergen: Komplett guide til å rangere på Google',
     category: 'SEO',
     date: '10. mars 2026',
     updatedAt: '2026-03-10',
@@ -356,6 +361,7 @@ Har du spørsmål om [lokal SEO i Bergen](/tjenester/seo) for din Bergen-bedrift
     date: '5. mars 2026',
     updatedAt: '2026-03-05',
     readTime: '7 min',
+    metaTitle: 'Nettside som konverterer: 6 elementer for Bergen-bedrifter',
     relatedService: { title: 'Web design', href: '/tjenester/webdesign' },
     content: `
 ## Hvorfor de fleste nettsider ikke konverterer
@@ -407,6 +413,7 @@ Er du klar for å oppgradere din [digitale tilstedeværelse i Bergen](/tjenester
     date: '28. februar 2026',
     updatedAt: '2026-02-28',
     readTime: '8 min',
+    metaTitle: 'Google Business Profile Bergen: Komplett optimeringsguide',
     relatedService: { title: 'SEO', href: '/tjenester/seo' },
     content: `
 ## Hva er Google Business Profile og hvorfor er det kritisk?
@@ -447,13 +454,14 @@ Ta kontakt med Frameflow for en gratis gjennomgang av din [Google Business-profi
     `.trim(),
   },
   {
-    slug: 'nettside-pris-bergen-2025',
+    slug: 'nettside-pris-bergen-2026',
     title: 'Hva koster en nettside i Bergen? Komplett prisoversikt for 2026',
     excerpt: 'Usikker på hva du bør betale for en ny nettside? Vi bryter ned prisene for Bergen-markedet – fra enkle nettsteder til skreddersydde løsninger.',
     category: 'Webdesign',
     date: '20. februar 2026',
     updatedAt: '2026-02-20',
     readTime: '6 min',
+    metaTitle: 'Hva koster nettside i Bergen? Komplett prisoversikt 2026',
     relatedService: { title: 'Web design', href: '/tjenester/webdesign' },
     content: `
 ## Hvorfor varierer nettside-priser så mye?
@@ -482,9 +490,9 @@ Store e-handelssider, kundeportaler og komplekse webapplikasjoner.
 
 Antall sider, om du bruker mal eller skreddersydd design, funksjoner som booking og nettbutikk, og om innhold og tekst er inkludert.
 
-## ROI: Tenk investering, ikke kostnad
+## Hva er nettside-investeringen verdt?
 
-Hvis en 60 000 kr-nettside genererer to nye kunder i måneden à 5 000 kr, er investeringen nedbetalt på 6 måneder.
+Prisen forteller deg hva du betaler – men ikke hva du faktisk får tilbake. For å forstå hvordan du beregner avkastning og hvilke Bergen-bedrifter som typisk ser best ROI, se vår guide til [nettside-investering og ROI for Bergen-bedrifter](/blogg/hva-koster-webdesign-bergen-prisguide-2025).
 
 Hos Frameflow inkluderer vi alltid strategisk gjennomgang, [skreddersydd webdesign](/tjenester/webdesign), [lokal SEO](/tjenester/seo), Google Analytics og 30 dagers gratis support etter lansering.
     `.trim(),
@@ -497,6 +505,7 @@ Hos Frameflow inkluderer vi alltid strategisk gjennomgang, [skreddersydd webdesi
     date: '12. februar 2026',
     updatedAt: '2026-02-12',
     readTime: '8 min',
+    metaTitle: 'Sosiale medier Bergen: Strategi som faktisk gir resultater',
     relatedService: { title: 'Sosiale medier', href: '/tjenester/sosiale-medier' },
     content: `
 ## Virkeligheten om sosiale medier for lokale bedrifter
@@ -542,6 +551,7 @@ Mål nettstedtrafikk fra sosiale medier, direkte meldinger og forespørsler, rek
     date: '5. februar 2026',
     updatedAt: '2026-02-05',
     readTime: '7 min',
+    metaTitle: 'Branding i Bergen: Bygg en merkevare som folk husker',
     relatedService: { title: 'Branding', href: '/tjenester/branding' },
     content: `
 ## Hva er egentlig branding?
@@ -593,6 +603,7 @@ Frameflow tilbyr [skreddersydd branding](/tjenester/branding) for Bergen-bedrift
     date: '25. januar 2026',
     updatedAt: '2026-01-25',
     readTime: '6 min',
+    metaTitle: 'Bedriftsfoto og video Bergen: Slik vinner du med innhold',
     relatedService: { title: 'Foto og video', href: '/tjenester/foto-og-videografi' },
     content: `
 ## Bildet som koster deg kunder
@@ -640,7 +651,8 @@ Bergen som kulisse er en av de uunngåelige fordelene med å drive bedrift her. 
     date: '15. januar 2026',
     updatedAt: '2026-01-15',
     readTime: '7 min',
-    relatedService: { title: 'Digital markedsføring', href: '/tjenester' },
+    metaTitle: 'Digital markedsføring Bergen: De 5 viktigste kanalene',
+    relatedService: { title: 'Sosiale medier', href: '/tjenester/sosiale-medier' },
     content: `
 ## Ikke alle kanaler passer for alle Bergen-bedrifter
 
@@ -685,6 +697,7 @@ Lurer du på hvor du bør starte for din spesifikke bedrift? Se våre [tjenester
     date: '10. mars 2026',
     updatedAt: '2026-03-10',
     readTime: '6 min',
+    metaTitle: 'Nettside ROI Bergen: Hva gir webdesign deg tilbake?',
     relatedService: { title: 'Web design', href: '/tjenester/webdesign' },
     content: `
 ## Nettside som investering – ikke utgift
@@ -761,13 +774,14 @@ Hos Frameflow bygger vi nettsider der avkastning er målet fra dag én. [Ta kont
     `.trim(),
   },
   {
-    slug: 'beste-markedsforingsbyrå-bergen-2025',
+    slug: 'beste-markedsforingsbyraa-bergen-2025',
     title: 'Markedsføringsbyrå i Bergen: Slik velger du riktig partner i 2026',
     excerpt: 'Ikke alle byråer i Bergen passer for alle bedrifter. Her er hva du bør se etter – og spørre om – når du velger markedsføringsbyrå i Bergen.',
     category: 'Markedsføring',
     date: '5. april 2026',
     updatedAt: '2026-04-05',
     readTime: '7 min',
+    metaTitle: 'Markedsføringsbyrå Bergen: Slik velger du riktig partner',
     relatedService: { title: 'Tjenester', href: '/tjenester' },
     content: `
 ## Å velge riktig byrå er avgjørende
@@ -806,7 +820,7 @@ Se hva vi tilbyr på våre [tjenestesider](/tjenester), eller book en gratis sam
     `.trim(),
   },
   {
-    slug: 'app-utvikling-pris-bergen-2025',
+    slug: 'app-utvikling-pris-bergen-2026',
     title: 'Hva koster apputvikling i Bergen? Komplett prisguide 2026',
     excerpt: 'Prisen på en app varierer enormt – fra 45 000 kr for en MVP til 500 000+ for fullskala løsninger. Her er hva som påvirker prisen og hva du får for pengene.',
     category: 'App utvikling',
@@ -964,7 +978,7 @@ Hos Frameflow integrerer vi SEO i alt vi gjør – nettsider bygges med SEO fra 
   {
     slug: 'logo-design-bergen',
     title: 'Logo design i Bergen: Hva koster det og hva bør du forvente?',
-    excerpt: 'En profesjonell logo starter fra 8 000 kr i Bergen. Her er hva som inngår i pakken, hva som påvirker prisen, og hvordan du velger riktig grafisk designer.',
+    excerpt: 'Kjøperguide for Bergen-bedrifter: hva koster logodesign, hva bør leveransen inkludere, og hvilke spørsmål du MÅ stille designeren din.',
     category: 'Branding',
     date: '8. mai 2026',
     updatedAt: '2026-05-08',
@@ -1036,11 +1050,11 @@ Du skal alltid eie alle logofiler og opphavsretten etter levering. Be om dette s
 
 **Byrå (som Frameflow):** Mer komplett leveranse, langsiktig relasjon, kan hjelpe med alt fra logo til nettside og sosiale medier-maler i ett løp.
 
-## Logo design fra Frameflow i Bergen
+## Klar til å bestille logo i Bergen?
 
-Vi lager logoer og visuelle identiteter for Bergen-bedrifter som vil skille seg ut. Fast pris fra 8 000 kr, levering på 2–4 uker, og full rettighet til alle filer.
+Nå vet du hva du bør se etter, hva du bør betale, og spørsmålene du skal stille. Neste steg er å finne riktig leverandør for deg.
 
-Les mer om vår [branding og logodesign i Bergen](/tjenester/branding), eller ta kontakt for en gratis samtale – vi ser raskt om vi er riktig match for prosjektet ditt.
+Se hva [Frameflow tilbyr innen branding og logodesign](/tjenester/branding) – eller [ta kontakt](/kontakt) for å høre om vi passer for prosjektet ditt.
     `.trim(),
   },
 ]

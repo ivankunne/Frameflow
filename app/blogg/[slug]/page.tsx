@@ -19,21 +19,20 @@ export async function generateMetadata({
   if (!post) return {}
 
   return {
-    title: post.title,
+    title: post.metaTitle ?? post.title,
     description: post.excerpt,
     alternates: { canonical: `https://www.frameflow.no/blogg/${post.slug}` },
     openGraph: {
-      title: post.title,
+      title: post.metaTitle ?? post.title,
       description: post.excerpt,
       type: 'article',
       url: `https://www.frameflow.no/blogg/${post.slug}`,
-      images: [],
       authors: ['Ivan Kunne'],
       publishedTime: post.updatedAt ?? post.date,
     },
     twitter: {
       card: 'summary_large_image',
-      title: post.title,
+      title: post.metaTitle ?? post.title,
       description: post.excerpt,
     },
   }
