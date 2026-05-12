@@ -25,6 +25,267 @@ export interface Project {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'nettbutikk-bergen-ehandel',
+    title: 'Nettbutikk i Bergen: Hva koster det å lage nettshop, og hvilken plattform bør du velge?',
+    excerpt: 'E-handel vokser – men en nettbutikk som faktisk selger krever mer enn fin design. Her er hva Bergen-bedrifter bør vite om kostnader, plattformer og hva som gir konverteringer.',
+    category: 'Webdesign',
+    date: '12. mai 2026',
+    updatedAt: '2026-05-12',
+    readTime: '8 min',
+    relatedService: { title: 'Web design', href: '/tjenester/webdesign' },
+    content: `
+## Nettbutikk i Bergen: muligheter og utfordringer
+
+E-handel vokser i Norge – men mange Bergen-bedrifter undervurderer kompleksiteten. En nettbutikk er ikke bare en vanlig nettside med «Kjøp»-knapp. Det er logistikk, betaling, retur, skatt, lagerstyring og kundeservice – pluss selve nettstedet.
+
+Likevel er mulighetene store. En Bergen-bedrift kan selge til hele landet – og verden – med riktig oppsett.
+
+## Hva koster det å lage nettbutikk i Bergen?
+
+Prisen avhenger av hvilken plattform du velger og hvor kompleks løsningen er:
+
+| Type | Plattform | Pris |
+|---|---|---|
+| Enkel nettbutikk | Shopify / WooCommerce | 20 000–60 000 kr |
+| Mellomskala | WooCommerce / Next.js | 60 000–150 000 kr |
+| Fullskala e-handelsplattform | Skreddersydd | 150 000–500 000+ kr |
+
+I tillegg kommer månedlige kostnader:
+- Shopify: fra 299 kr/mnd
+- WooCommerce-hosting: 500–3 000 kr/mnd
+- Betalingsgebyr: 1,5–3 % per transaksjon (Vipps, Stripe, Klarna)
+
+## De tre vanligste plattformene
+
+### Shopify
+
+**Beste for:** Enkel oppstart, ikke-tekniske eiere, produkter under 500 SKUs
+
+Fordeler: Enkelt å bruke, rask oppsett, mange integrasjoner
+Ulemper: Månedlig kostnad, transaksjonskostnader, begrenset tilpassing
+
+### WooCommerce (WordPress)
+
+**Beste for:** Bedrifter som allerede bruker WordPress, fleksibilitetsbehov
+
+Fordeler: Svært fleksibelt, ingen transaksjonsgebyr til plattformen, store mengder plugins
+Ulemper: Krever mer teknisk vedlikehold og sikkerhetsoppdateringer
+
+### Skreddersydd (Next.js + headless)
+
+**Beste for:** Unik funksjonalitet, høy ytelse, skalering
+
+Fordeler: Full kontroll, beste ytelse, unik brukeropplevelse
+Ulemper: Høyest initialkostnad, krever erfarne utviklere
+
+## Hva Bergen-bedrifter glemmer å ta høyde for
+
+**Moms og regnskapssystem**
+25 % moms på de fleste varer. Sørg for at nettbutikken er koblet til et regnskapssystem som håndterer dette korrekt.
+
+**Frakt og retur**
+Norske netthandlere forventer rask levering og enkel retur. Kalkuler fraktkostnader i prisen – de fleste undervurderer dette kraftig.
+
+**Mobiloptimalisering**
+Over 65 % av norsk netthandel skjer på mobil. En nettbutikk som ikke er mobiloptimalisert, mister mer enn halvparten av kundene sine.
+
+**Produktfoto**
+Dårlige produktbilder er den viktigste enkeltårsaken til at folk ikke kjøper på nett. Invester i profesjonell produktfotografering – det betaler seg raskt.
+
+**Betalingsalternativer**
+Vipps er et must i Norge. I tillegg: Klarna (kjøp nå, betal senere), Stripe (kredittkort) og faktura for B2B.
+
+## Lokal strategi for Bergen-nettbutikker
+
+Mange Bergen-bedrifter gjør feilen å konkurrere nasjonalt fra dag én. En smartere strategi:
+
+1. **Start lokalt** – Dominer «[produkt] Bergen» i Google og bygg opp anmeldelser
+2. **Ekspander regionalt** – Vestland, Hordaland, Sogndal
+3. **Gå nasjonalt** – Når lokal merkevare og anmeldelser er på plass
+
+Lokalt salg er lettere å vinne, marginen er høyere (ingen nasjonal konkurranse), og du kan tilby gratis levering i Bergen som differensiator.
+
+## Er nettbutikk riktig for din Bergen-bedrift?
+
+Det lønner seg hvis:
+
+✅ Du har produkter med god margin (over 40 %)
+✅ Produktene er enkle å pakke og sende
+✅ Du har ressurser til å håndtere kundeservice
+✅ Det finnes et beviselig digitalt marked for produktene dine
+
+Det lønner seg sjelden hvis:
+❌ Marginene er under 20 % (frakt og betalingsgebyr spiser dem)
+❌ Produktene er tunge, skjøre eller krever spesiell emballasje
+❌ Du ikke har kapasitet til å håndtere returer og klager
+
+Vil du diskutere om nettbutikk er riktig for din bedrift? [Ta kontakt med Frameflow](/kontakt) – vi hjelper Bergen-bedrifter med å ta de riktige digitale valgene.
+`,
+  },
+  {
+    slug: 'google-ads-bergen',
+    title: 'Google Ads i Bergen: Er betalt annonsering verdt investeringen for lokale bedrifter?',
+    excerpt: 'Google Ads kan gi Bergen-bedriften din umiddelbar synlighet – men det krever riktig strategi for å ikke brenne pengene. Her er hva du trenger å vite om betalt annonsering lokalt.',
+    category: 'Markedsføring',
+    date: '12. mai 2026',
+    updatedAt: '2026-05-12',
+    readTime: '7 min',
+    relatedService: { title: 'Digital markedsføring', href: '/tjenester' },
+    content: `
+## Hva er Google Ads – og hvorfor bruker Bergen-bedrifter det?
+
+Google Ads er Googles annonseringssystem der du betaler for å vises øverst i søkeresultatene for utvalgte søkeord. Når noen i Bergen søker «elektriker Bergen», kan din bedrift dukke opp på toppen – over alle organiske resultater.
+
+Fordelen er umiddelbar synlighet. Mens SEO tar 3–6 måneder å bygge opp, kan Google Ads gi deg trafikk fra dag én.
+
+## Hva koster Google Ads i Bergen?
+
+Du betaler per klikk (Cost Per Click, CPC). Prisen varierer basert på konkurranse:
+
+| Bransje | Estimert CPC |
+|---|---|
+| Tannlege, advokat | 40–150 kr |
+| Rørlegger, elektriker | 20–80 kr |
+| Restaurant, butikk | 5–25 kr |
+| IT, webbyrå | 15–60 kr |
+
+Med et budsjett på 5 000 kr/mnd og en CPC på 30 kr, får du omtrent 165 klikk. Er konverteringsraten din 10 %, gir det 16 leads. Er Google Ads lønnsomt? Det avhenger av hva en kunde er verdt for deg.
+
+## Når er Google Ads smart for Bergen-bedrifter?
+
+### ✅ Det gir god avkastning når:
+
+- Du selger høyverdi-tjenester (tannlege, advokat, kjøkken, bad)
+- Du trenger leads raskt – lansering, sesong, kampanje
+- Du har spesifikke geografiske målgrupper i Bergen
+- Organisk SEO er for konkurranseutsatt på kort sikt
+
+### ❌ Det er dårlig investering når:
+
+- Budsjettet er under 3 000 kr/mnd (for lite til å lære og optimalisere)
+- Du selger lavmargiprodukter med lav CPC-toleranse
+- Annonsene er ikke koblet til dedikerte landingssider
+- Du mangler konverteringssporing
+
+## De vanligste feilene Bergen-bedrifter gjør
+
+**1. De sender trafikk til forsiden**
+Forsiden din er ikke en landingsside. Kjøper du klikk for «rørlegger Bergenhus», skal besøkende landes på en side som handler om akkurat det – med tydelig kontaktskjema eller telefonnummer.
+
+**2. De glemmer negative søkeord**
+Uten negativliste betaler du for klikk fra folk som søker «rørlegger jobb Bergen» eller «gratis rørlegger Bergen». Negative søkeord er ren pengesparing.
+
+**3. De måler klikk, ikke konverteringer**
+«Vi fikk mange klikk» er ikke et resultat. Sett opp konverteringssporing i Google Ads og Google Analytics. Mål leads, samtaler og salg.
+
+**4. For bredt geografisk målgruppe**
+«Bergen» er ikke alltid presist nok. Vurder om du skal målrette mot spesifikke bydeler: Bergenhus, Fana, Åsane, Arna.
+
+## Google Ads vs. SEO for Bergen-bedrifter
+
+| | Google Ads | SEO |
+|---|---|---|
+| Synlighet | Umiddelbar | 3–6 måneder |
+| Kostnad | Betaler per klikk | Tid og ressurser |
+| Stopper du | Trafikk stopper | Trafikk fortsetter |
+| Troverdighet | Merket «Annonse» | Organisk tillit |
+| Beste for | Kortsiktig / lansering | Langsiktig vekst |
+
+Den ideelle strategien for Bergen-bedrifter: bruk Google Ads for umiddelbar synlighet mens du bygger SEO parallelt.
+
+## Hva bør du betale for Google Ads-hjelp?
+
+- Kampanjeoppsett: 5 000–15 000 kr (engangspris)
+- Månedlig administrasjon: 10–20 % av annonsjebudsjettet
+- Minimumsbudsjett for å lære: 3 000–5 000 kr/mnd til Google
+
+Vil du vite om Google Ads er riktig for din Bergen-bedrift? [Ta kontakt med Frameflow](/kontakt) – vi hjelper deg å se om tallene går opp.
+`,
+  },
+  {
+    slug: 'webbyraa-bergen-guide',
+    title: 'Webbyrå i Bergen: Slik velger du riktig webbyrå for din bedrift i 2026',
+    excerpt: 'Ikke alle webbyrå i Bergen er like. Lær hva du bør se etter, hvilke spørsmål du må stille – og hva som skiller et godt webbyrå fra et som bare leverer en pen nettside ingen finner.',
+    category: 'Webdesign',
+    date: '12. mai 2026',
+    updatedAt: '2026-05-12',
+    readTime: '7 min',
+    relatedService: { title: 'Web design', href: '/tjenester/webdesign' },
+    content: `
+## Hva er egentlig forskjellen på webbyrå i Bergen?
+
+Begrepet «webbyrå» dekker alt fra en frilanser som jobber deltid fra hybelen til et byrå med 50 ansatte og ti millioner i omsetning. Prisen kan variere fra 5 000 kr til 500 000 kr for det som tilsynelatende er samme produkt: en nettside.
+
+Det finnes tre typer aktører i Bergen-markedet:
+
+**Frilansere og enkeltpersonforetak** – Lavest pris, men begrenset kapasitet og ofte smalere kompetanse. Fungerer godt for enkle løsninger.
+
+**Mellomstore byråer** – Typisk 2–10 ansatte med kompetanse innen design, utvikling og markedsføring. God balanse mellom pris og kvalitet.
+
+**Store reklamebyrå** – Full pakke, men til en pris som sjelden forsvares av en SMB i Bergen.
+
+## 7 spørsmål du MÅ stille et webbyrå
+
+### 1. Hvem gjør faktisk jobben?
+
+Noen byrå selger deg prosjektet og outsourcer deretter arbeidet. Be om å møte den personen som faktisk koder og designer siden din.
+
+### 2. Har dere erfaring med Bergen-markedet?
+
+Et byrå som forstår lokale søkeord («tannlege Bergenhus», «rørlegger Fana»), lokale konkurrenter og kundereiser i Bergen, leverer bedre resultater enn et byrå uten lokal kunnskap.
+
+### 3. Er SEO inkludert, eller er det ekstrautstyr?
+
+Mange byrå leverer en fin nettside som ingen finner på Google. Sørg for at teknisk SEO, sidetitler, metabeskrivelser og schema markup er inkludert – ikke solgt som tillegg etterpå.
+
+### 4. Hva skjer etter lansering?
+
+Hvem oppdaterer nettsiden? Hvem fikser sikkerhetsoppdateringer? Er det en supportavtale, eller er du på egenhånd?
+
+### 5. Kan jeg se eksempler på resultater?
+
+Det er lett å vise fine mockups i Figma. Be om faktiske prosjekter med målbare resultater – økt trafikk, økt omsetning, flere leads.
+
+### 6. Hva er betalingsstrukturen?
+
+Advarsel: et byrå som krever 80–100 % betaling i forkant, har lite incitament til å jobbe raskt. Standard er 30–50 % ved start, resten ved godkjent leveranse.
+
+### 7. Hva eier jeg etter prosjektet?
+
+Du bør eie domenet, hostingkontoen og kildekoden til nettsiden. Noen byrå låser deg inn på sin plattform – sjekk dette i kontrakten.
+
+## Hva koster et webbyrå i Bergen i 2026?
+
+| Løsning | Pris |
+|---|---|
+| Malbasert nettside (Wix/Squarespace) | 5 000–15 000 kr |
+| WordPress-nettside med tilpassing | 15 000–45 000 kr |
+| Skreddersydd nettside med SEO | 45 000–150 000 kr |
+| Webapplikasjon / kompleks løsning | 100 000–500 000 kr |
+
+Husk: billigst er sjelden billigst over tid. En nettside som ikke gir kunder, koster penger uansett hva du betalte for den.
+
+## Lokalt vs. nasjonalt webbyrå
+
+Det er fristende å velge et stort oslobyrå med imponerende referanser. Men for en Bergen-bedrift er det ofte bedre å jobbe med noen som:
+
+- Kjenner Bergen-markedet og lokale søk
+- Er tilgjengelig for et møte uten å fakturere reisekostnader
+- Forstår bedriftskultur og kundereiser i Vestland
+
+## Sjekkliste: Er webbyrået seriøst?
+
+✅ Registrert i Brønnøysundregisteret med organisasjonsnummer
+✅ Kan vise til faktiske referanser med navn og kontaktperson
+✅ Tydelig prisstruktur og skriftlig kontrakt
+✅ Inkluderer SEO som standard, ikke tillegg
+✅ Leverer kode og design du eier fullt ut
+✅ Har supportavtale etter lansering
+
+Vil du ha en uforpliktende prat om hva slags nettside som passer din bedrift? [Ta kontakt med Frameflow](/kontakt) – vi er et webbyrå i Bergen som leverer nettsider med SEO innebygd fra dag én.
+`,
+  },
+  {
     slug: 'lokal-seo-bergen-guide-2025',
     title: 'Lokal SEO i Bergen: Den komplette guiden til å rangere på Google i 2026',
     excerpt: 'Lær hvordan du får Bergen-bedriften din øverst på Google uten å betale for annonser. En steg-for-steg guide til lokal SEO som faktisk virker.',

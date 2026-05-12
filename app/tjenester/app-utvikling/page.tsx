@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'App utvikling i Bergen | Frameflow',
     description: 'Skreddersydde webapper og mobilapper som løser reelle problemer. Fra MVP til fullskala løsninger for Bergen-bedrifter.',
     url: 'https://www.frameflow.no/tjenester/app-utvikling',
-    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+    images: [{ url: 'https://www.frameflow.no/og?title=App+utvikling+i+Bergen&label=App+utvikling', width: 1200, height: 630, alt: 'App utvikling Bergen – Frameflow' }],
   },
   twitter: {
     card: 'summary_large_image',

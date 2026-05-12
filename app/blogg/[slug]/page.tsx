@@ -27,7 +27,7 @@ export async function generateMetadata({
       description: post.excerpt,
       type: 'article',
       url: `https://www.frameflow.no/blogg/${post.slug}`,
-      images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+      images: [],
       authors: ['Ivan Kunne'],
       publishedTime: post.updatedAt ?? post.date,
     },

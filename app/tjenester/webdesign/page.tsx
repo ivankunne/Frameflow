@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: 'Webbyrå Bergen | Lage nettside som konverterer – Frameflow',
     description: 'Frameflow lager nettsider i Bergen med SEO innebygd fra dag én. Konverterer besøkende til kunder. Ingen oppstartsgebyr – svar innen 24 timer.',
     url: 'https://www.frameflow.no/tjenester/webdesign',
-    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+    images: [{ url: 'https://www.frameflow.no/og?title=Lage+nettside+i+Bergen&label=Webdesign', width: 1200, height: 630, alt: 'Webdesign Bergen – Frameflow' }],
   },
   twitter: {
     card: 'summary_large_image',

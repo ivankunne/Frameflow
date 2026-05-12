@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: 'Sosiale medier i Bergen | Frameflow',
     description: 'Profesjonell håndtering av sosiale medier for Bergen-bedrifter. Innholdsproduksjon, strategi og community management. Ta kontakt i dag.',
     url: 'https://www.frameflow.no/tjenester/sosiale-medier',
-    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+    images: [{ url: 'https://www.frameflow.no/og?title=Sosiale+medier+for+Bergen-bedrifter&label=Sosiale+medier', width: 1200, height: 630, alt: 'Sosiale medier Bergen – Frameflow' }],
   },
   twitter: {
     card: 'summary_large_image',

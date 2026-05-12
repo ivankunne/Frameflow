@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: 'Grafisk design og logodesign Bergen | Frameflow',
     description: 'Grafisk design, logodesign og branding som gjør merkevaren din umiskjennelig. Visuell identitet og guidelines for Bergen-bedrifter.',
     url: 'https://www.frameflow.no/tjenester/branding',
-    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+    images: [{ url: 'https://www.frameflow.no/og?title=Grafisk+design+og+branding+Bergen&label=Branding', width: 1200, height: 630, alt: 'Branding Bergen – Frameflow' }],
   },
   twitter: {
     card: 'summary_large_image',
