@@ -5,7 +5,7 @@ import { JsonLd } from '@/components/JsonLd'
 export const metadata: Metadata = {
   title: 'SEO Bergen – Lokal søkemotoroptimalisering | Frameflow',
   description:
-    'Frameflow hjelper Bergen-bedrifter å rangere høyere på Google med lokal SEO, teknisk optimalisering og innholdsstrategi. Fra 4 500 kr/mnd. Ingen bindingstid.',
+    'Ingen bindingstid. Frameflow hjelper Bergen-bedrifter å rangere høyere på Google med lokal SEO, teknisk optimalisering og innholdsstrategi. Fra 4 500 kr/mnd.',
   alternates: { canonical: 'https://www.frameflow.no/tjenester/seo' },
   openGraph: {
     title: 'SEO Bergen – Lokal søkemotoroptimalisering | Frameflow',

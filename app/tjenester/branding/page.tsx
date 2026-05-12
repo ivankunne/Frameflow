@@ -5,7 +5,7 @@ import { JsonLd } from '@/components/JsonLd'
 export const metadata: Metadata = {
   title: 'Grafisk design og logodesign Bergen | Branding – Frameflow',
   description:
-    'Frameflow leverer grafisk design, logodesign og branding for Bergen-bedrifter. Visuell identitet som gjør deg umiskjennelig – fra 8 000 kr, levering 2–4 uker.',
+    'Frameflow leverer logodesign og grafisk profilering for Bergen-bedrifter. Visuell identitet som gjør deg umiskjennelig. Fra 8 000 kr – levering 2–4 uker.',
   alternates: { canonical: 'https://www.frameflow.no/tjenester/branding' },
   openGraph: {
     title: 'Grafisk design og logodesign Bergen | Frameflow',
