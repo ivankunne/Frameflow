@@ -26,9 +26,7 @@ const figtree = Figtree({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.frameflow.no'),
-  title: {
-    default: 'Frameflow – Markedsføringsbyrå i Bergen',
-  },
+  title: 'Frameflow – Markedsføringsbyrå i Bergen',
   description:
     'Frameflow er et markedsføringsbyrå i Bergen. Vi leverer webdesign, foto og video, sosiale medier og branding som gir målbare resultater for bedrifter i Bergen og Vestland.',
   keywords: [
