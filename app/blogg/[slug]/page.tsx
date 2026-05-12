@@ -59,7 +59,7 @@ export default async function BlogPostPage({
     articleSection: post.category,
     image: {
       '@type': 'ImageObject',
-      url: 'https://www.frameflow.no/og-image.png',
+      url: `https://www.frameflow.no/blogg/${post.slug}/opengraph-image`,
       width: 1200,
       height: 630,
     },
