@@ -3,19 +3,19 @@ import ServicePageTemplate from '@/components/ServicePageTemplate'
 import { JsonLd } from '@/components/JsonLd'
 
 export const metadata: Metadata = {
-  title: 'SEO Bergen | Søkemotoroptimalisering – Frameflow',
+  title: 'SEO Bergen – Lokal søkemotoroptimalisering | Frameflow',
   description:
     'Frameflow hjelper Bergen-bedrifter å rangere høyere på Google med lokal SEO, teknisk optimalisering og innholdsstrategi. Fra 4 500 kr/mnd. Ingen bindingstid.',
   alternates: { canonical: 'https://www.frameflow.no/tjenester/seo' },
   openGraph: {
-    title: 'SEO Bergen | Søkemotoroptimalisering – Frameflow',
+    title: 'SEO Bergen – Lokal søkemotoroptimalisering | Frameflow',
     description: 'Frameflow hjelper Bergen-bedrifter å rangere høyere på Google med lokal SEO, teknisk optimalisering og innholdsstrategi. Fra 4 500 kr/mnd.',
     url: 'https://www.frameflow.no/tjenester/seo',
     images: [{ url: 'https://www.frameflow.no/og?title=SEO+for+Bergen-bedrifter&label=SEO', width: 1200, height: 630, alt: 'SEO Bergen – Frameflow' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SEO Bergen | Søkemotoroptimalisering – Frameflow',
+    title: 'SEO Bergen – Lokal søkemotoroptimalisering | Frameflow',
     description: 'Frameflow hjelper Bergen-bedrifter å rangere høyere på Google med lokal SEO, teknisk optimalisering og innholdsstrategi. Fra 4 500 kr/mnd.',
   },
 }

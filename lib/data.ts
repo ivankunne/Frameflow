@@ -29,8 +29,8 @@ export const blogPosts: BlogPost[] = [
     title: 'Nettbutikk i Bergen: Hva koster det å lage nettshop, og hvilken plattform bør du velge?',
     excerpt: 'E-handel vokser – men en nettbutikk som faktisk selger krever mer enn fin design. Her er hva Bergen-bedrifter bør vite om kostnader, plattformer og hva som gir konverteringer.',
     category: 'Webdesign',
-    date: '12. mai 2026',
-    updatedAt: '2026-05-12',
+    date: '8. mai 2026',
+    updatedAt: '2026-05-08',
     readTime: '8 min',
     relatedService: { title: 'Web design', href: '/tjenester/webdesign' },
     content: `
@@ -99,7 +99,7 @@ Vipps er et must i Norge. I tillegg: Klarna (kjøp nå, betal senere), Stripe (k
 
 Mange Bergen-bedrifter gjør feilen å konkurrere nasjonalt fra dag én. En smartere strategi:
 
-1. **Start lokalt** – Dominer «[produkt] Bergen» i Google og bygg opp anmeldelser
+1. **Start lokalt** – Dominer «[produkt] Bergen» i Google med [lokal SEO](/tjenester/seo) og bygg opp anmeldelser
 2. **Ekspander regionalt** – Vestland, Hordaland, Sogndal
 3. **Gå nasjonalt** – Når lokal merkevare og anmeldelser er på plass
 
@@ -119,7 +119,7 @@ Det lønner seg sjelden hvis:
 ❌ Produktene er tunge, skjøre eller krever spesiell emballasje
 ❌ Du ikke har kapasitet til å håndtere returer og klager
 
-Vil du diskutere om nettbutikk er riktig for din bedrift? [Ta kontakt med Frameflow](/kontakt) – vi hjelper Bergen-bedrifter med å ta de riktige digitale valgene.
+Vil du diskutere om nettbutikk er riktig for din bedrift? Se vår [webdesign-tjeneste](/tjenester/webdesign) eller [ta kontakt](/kontakt) – vi hjelper Bergen-bedrifter med å ta de riktige digitale valgene.
 `,
   },
   {
@@ -127,10 +127,10 @@ Vil du diskutere om nettbutikk er riktig for din bedrift? [Ta kontakt med Framef
     title: 'Google Ads i Bergen: Er betalt annonsering verdt investeringen for lokale bedrifter?',
     excerpt: 'Google Ads kan gi Bergen-bedriften din umiddelbar synlighet – men det krever riktig strategi for å ikke brenne pengene. Her er hva du trenger å vite om betalt annonsering lokalt.',
     category: 'Markedsføring',
-    date: '12. mai 2026',
-    updatedAt: '2026-05-12',
+    date: '10. mai 2026',
+    updatedAt: '2026-05-10',
     readTime: '7 min',
-    relatedService: { title: 'Digital markedsføring', href: '/tjenester' },
+    relatedService: { title: 'SEO', href: '/tjenester/seo' },
     content: `
 ## Hva er Google Ads – og hvorfor bruker Bergen-bedrifter det?
 
@@ -191,7 +191,7 @@ Uten negativliste betaler du for klikk fra folk som søker «rørlegger jobb Ber
 | Troverdighet | Merket «Annonse» | Organisk tillit |
 | Beste for | Kortsiktig / lansering | Langsiktig vekst |
 
-Den ideelle strategien for Bergen-bedrifter: bruk Google Ads for umiddelbar synlighet mens du bygger SEO parallelt.
+Den ideelle strategien for Bergen-bedrifter: bruk Google Ads for umiddelbar synlighet mens du bygger [SEO](/tjenester/seo) parallelt for langsiktig organisk vekst.
 
 ## Hva bør du betale for Google Ads-hjelp?
 
@@ -236,7 +236,7 @@ Et byrå som forstår lokale søkeord («tannlege Bergenhus», «rørlegger Fana
 
 ### 3. Er SEO inkludert, eller er det ekstrautstyr?
 
-Mange byrå leverer en fin nettside som ingen finner på Google. Sørg for at teknisk SEO, sidetitler, metabeskrivelser og schema markup er inkludert – ikke solgt som tillegg etterpå.
+Mange byrå leverer en fin nettside som ingen finner på Google. Sørg for at teknisk [SEO](/tjenester/seo), sidetitler, metabeskrivelser og schema markup er inkludert – ikke solgt som tillegg etterpå.
 
 ### 4. Hva skjer etter lansering?
 
@@ -282,7 +282,7 @@ Det er fristende å velge et stort oslobyrå med imponerende referanser. Men for
 ✅ Leverer kode og design du eier fullt ut
 ✅ Har supportavtale etter lansering
 
-Vil du ha en uforpliktende prat om hva slags nettside som passer din bedrift? [Ta kontakt med Frameflow](/kontakt) – vi er et webbyrå i Bergen som leverer nettsider med SEO innebygd fra dag én.
+Vil du ha en uforpliktende prat om hva slags nettside som passer din bedrift? Se vår [webdesign-tjeneste i Bergen](/tjenester/webdesign) – eller [ta kontakt](/kontakt) for en gratis prat. Vi leverer nettsider med [SEO](/tjenester/seo) innebygd fra dag én.
 `,
   },
   {
@@ -293,7 +293,7 @@ Vil du ha en uforpliktende prat om hva slags nettside som passer din bedrift? [T
     date: '10. mars 2026',
     updatedAt: '2026-03-10',
     readTime: '9 min',
-    relatedService: { title: 'Digital markedsføring', href: '/tjenester' },
+    relatedService: { title: 'SEO', href: '/tjenester/seo' },
     content: `
 ## Hva er lokal SEO, og hvorfor er det viktig for Bergen-bedrifter?
 
@@ -335,7 +335,7 @@ Lenker fra andre Bergen-nettsteder forteller Google at du er en etablert aktør 
 
 ### 6. Mobiloptimalisering og hastighet
 
-Over 70 % av lokale søk skjer på mobil. Test siden din med PageSpeed Insights og sørg for en score over 80 på mobil.
+Over 70 % av lokale søk skjer på mobil. Test siden din med PageSpeed Insights og sørg for en score over 80 på mobil. En [profesjonelt designet nettside optimalisert for mobil](/tjenester/webdesign) er fundamentet for god lokal SEO.
 
 ## Vanlige SEO-feil Bergen-bedrifter gjør
 
@@ -350,8 +350,8 @@ Har du spørsmål om [lokal SEO i Bergen](/tjenester/seo) for din Bergen-bedrift
   },
   {
     slug: 'webdesign-bergen-nettside-som-konverterer',
-    title: 'Webdesign i Bergen: Slik bygger du en nettside som konverterer besøkende til kunder',
-    excerpt: 'En vakker nettside er ikke nok. Lær hva som skiller en god nettside fra en som faktisk gir deg nye kunder – og hva Bergen-bedrifter bør prioritere.',
+    title: 'Konverteringsoptimalisering i Bergen: 6 elementer som gjør nettsiden din til en salgsmaskin',
+    excerpt: 'En vakker nettside er ikke nok – den må konvertere. Se de 6 elementene som skiller en nettside som selger fra en som bare ser bra ut, for Bergen-bedrifter.',
     category: 'Webdesign',
     date: '5. mars 2026',
     updatedAt: '2026-03-05',
@@ -380,7 +380,7 @@ Bergen-folk stoler på anbefalinger. Inkluder kundeanmeldelser med fullt navn og
 
 ### 4. Hastighet
 
-53 % av mobile brukere forlater en side som bruker mer enn 3 sekunder å laste. Test siden din på Google PageSpeed Insights og sørg for en score over 80 på mobil.
+53 % av mobile brukere forlater en side som bruker mer enn 3 sekunder å laste. Test siden din på Google PageSpeed Insights og sørg for en score over 80 på mobil. Husk: sidehastighet er også en viktig [SEO-rangeringsfaktor](/tjenester/seo).
 
 ### 5. Mobildesign som prioritet
 
@@ -407,7 +407,7 @@ Er du klar for å oppgradere din [digitale tilstedeværelse i Bergen](/tjenester
     date: '28. februar 2026',
     updatedAt: '2026-02-28',
     readTime: '8 min',
-    relatedService: { title: 'Digital markedsføring', href: '/tjenester' },
+    relatedService: { title: 'SEO', href: '/tjenester/seo' },
     content: `
 ## Hva er Google Business Profile og hvorfor er det kritisk?
 
@@ -486,7 +486,7 @@ Antall sider, om du bruker mal eller skreddersydd design, funksjoner som booking
 
 Hvis en 60 000 kr-nettside genererer to nye kunder i måneden à 5 000 kr, er investeringen nedbetalt på 6 måneder.
 
-Hos Frameflow inkluderer vi alltid strategisk gjennomgang, [skreddersydd webdesign](/tjenester/webdesign), lokal SEO, Google Analytics og 30 dagers gratis support etter lansering.
+Hos Frameflow inkluderer vi alltid strategisk gjennomgang, [skreddersydd webdesign](/tjenester/webdesign), [lokal SEO](/tjenester/seo), Google Analytics og 30 dagers gratis support etter lansering.
     `.trim(),
   },
   {
@@ -648,7 +648,7 @@ Det finnes dusinvis av digitale markedsføringskanaler. For en Bergen-bedrift me
 
 ## Kanal 1: Lokal SEO og Google Business Profile
 
-Intet slår organisk trafikk fra Google for kostnadseffektivitet på lang sikt. Google Business Profile er gratis og gir umiddelbar lokal synlighet. Dette er fundamentet all annen digital markedsføring bør bygge på.
+Intet slår organisk trafikk fra Google for kostnadseffektivitet på lang sikt. Google Business Profile er gratis og gir umiddelbar lokal synlighet. Dette er fundamentet all annen digital markedsføring bør bygge på. Se hva som inngår i en profesjonell [SEO-pakke for Bergen-bedrifter](/tjenester/seo).
 
 Hvem bør prioritere dette: Alle Bergen-bedrifter uten unntak.
 
@@ -679,47 +679,85 @@ Lurer du på hvor du bør starte for din spesifikke bedrift? Se våre [tjenester
   },
   {
     slug: 'hva-koster-webdesign-bergen-prisguide-2025',
-    title: 'Hva koster webdesign i Bergen? Prisguide 2026',
-    excerpt: 'Hva bør du egentlig betale for en nettside i Bergen? Vi gir deg en ærlig prisguide – fra enkle løsninger til skreddersydde nettsider med SEO og CMS.',
-    category: 'Web design',
+    title: 'Nettside-investering i Bergen: Hva gir webdesign deg tilbake i ROI?',
+    excerpt: 'En nettside er ikke en utgift – det er en markedsføringsinvestering. Her viser vi Bergen-bedrifter hvordan de beregner ROI på webdesign og hva som faktisk driver avkastning.',
+    category: 'Webdesign',
     date: '10. mars 2026',
     updatedAt: '2026-03-10',
     readTime: '6 min',
     relatedService: { title: 'Web design', href: '/tjenester/webdesign' },
     content: `
-## Hva koster en nettside i Bergen?
+## Nettside som investering – ikke utgift
 
-Dette er et av de vanligste spørsmålene vi får fra Bergen-bedrifter. Svaret avhenger av hva du faktisk trenger – men vi gir deg en ærlig oversikt her.
+De fleste Bergen-bedrifter spør «hva koster en nettside?». Det riktige spørsmålet er: «hva gir nettsiden meg tilbake?»
 
-## Typiske priser i Bergen-markedet
+En nettside til 60 000 kr som genererer to nye kunder i måneden – hver verdt 5 000 kr – er nedbetalt på 6 måneder. Deretter tjener den penger hvert eneste år uten ekstra kostnad.
 
-### Enkle løsninger (5 000 – 12 000 kr)
-Maler fra Squarespace, Wix eller WordPress. Passer for nystartede bedrifter med begrenset budsjett. Begrensede muligheter for tilpasning og SEO-optimalisering, men en god start.
+En nettside til 10 000 kr som ingen finner og ingen konverterer, er bare en utgift.
 
-### Skreddersydde nettsider (12 000 – 40 000 kr)
-Profesjonelt design bygget fra bunnen – tilpasset din merkevare, optimalisert for søkemotorer og konvertering. Dette er hva de fleste etablerte Bergen-bedrifter bør investere i.
+## Slik beregner du ROI på webdesign
 
-### E-handel og komplekse løsninger (40 000 kr+)
-Nettbutikker, bookingsystemer, kundeportaler og integrasjoner mot back-end systemer. Krever mer tid og kompetanse.
+**Formel:** (Nye kunder fra nettside × Verdi per kunde) ÷ Nettsidekostnad × 100
 
-## Hva er inkludert i prisen?
+**Eksempel – Bergen håndverker:**
+- Nettsidekostnad: 55 000 kr
+- Gjennomsnittlig kundeorder: 12 000 kr
+- Nye kunder per måned fra nettside: 2
+- Månedlig inntekt fra nettside: 24 000 kr
+- Nedbetalt på: 2,3 måneder
+- Første år-ROI: over 5 000 %
 
-Hos Frameflow inkluderer en nettside alltid:
-- Responsivt design (fungerer på alle enheter)
-- SEO-optimalisering fra dag én
-- CMS slik at du selv kan oppdatere innhold
-- Grunnleggende analytics-oppsett
-- Én runde med revisjoner etter levering
+Er nettsiden et godt kjøp? For de aller fleste Bergen-bedrifter: ja, hvis den er riktig bygget.
 
-## Hva bør du unngå?
+## Hva som faktisk driver avkastning fra nettsiden din
 
-**Billigste alternativ vinner ikke alltid.** En nettside til 3 000 kr som ingen finner på Google er ikke en investering – det er en utgift. En nettside som rangerer for relevante søk i Bergen og konverterer besøkende til kunder er derimot en av de beste markedsføringsinvesteringene du kan gjøre.
+### 1. Søkemotorsynlighet (lokal SEO)
+
+En nettside ingen finner er en nettside som ikke tjener penger. [Lokal SEO](/tjenester/seo) er det viktigste enkeltgrepet for å sikre at potensielle kunder faktisk havner på siden din.
+
+Bergen-bedrifter som rangerer i topp 3 på Google for relevante søk, kan forvente 30–50 % av all lokal søketrafikk på det søkeordet – gratis, måned etter måned.
+
+### 2. Konverteringsrate
+
+Det nytter lite å drive trafikk til en side som ikke konverterer. En profesjonelt designet nettside med tydelig CTA, sosialt bevis og rask lastetid konverterer 3–8 % av besøkende til leads. En dårlig side konverterer 0,5–1 %.
+
+Differansen er enorm: 100 besøkende per dag gir enten 5 eller 80 leads i måneden.
+
+### 3. 24/7 salgsmaskin
+
+Nettsiden jobber mens du sover. En god nettside erstatter mange timer med manuell salgs- og markedsaktivitet. Prislistene, kundeanmeldelsene, kontaktskjemaet – alt er tilgjengelig uten at du løfter en finger.
+
+### 4. Tillit og troverdighet
+
+85 % av forbrukere sjekker en bedrifts nettside før de kjøper. En profesjonell, rask og oppdatert nettside bygger tillit og øker sannsynligheten for at en potensiell Bergen-kunde faktisk tar kontakt.
+
+## Hva er en realistisk tidshorisont for nedbetaling?
+
+| Nettside-type | Typisk nedbetaling |
+|---|---|
+| Enkel frilanserside (20 000 kr) | 2–4 måneder |
+| Profesjonell byrå-side (60 000 kr) | 3–8 måneder |
+| E-handel / kompleks (150 000+ kr) | 6–18 måneder |
+
+Dette forutsetter at nettsiden er SEO-optimalisert og designet for konvertering – ikke bare at den ser bra ut.
+
+## Hvilke Bergen-bedrifter får best ROI på webdesign?
+
+**Høyest ROI:**
+- Håndverkere og servicebransjen (høy kundeorder, lokal søkeintensjon)
+- Advokater, tannleger, regnskapsførere (høy margin, varige kundeforhold)
+- B2B-bedrifter med lang salgssyklus (nettsiden bygger tillit over tid)
+
+**Lavere ROI:**
+- Bedrifter som allerede har full kapasitet og ikke kan ta imot flere kunder
+- Bransjer uten lokal søkeetterspørsel på nett
+- Bedrifter uten ressurser til å følge opp nye leads
 
 ## Vår anbefaling
 
-For de fleste Bergen-bedrifter er 12 000 – 25 000 kr et realistisk og fornuftig budsjett for en profesjonell nettside som faktisk leverer resultater. Vi gir alltid fast pris og uforpliktende tilbud.
+Invester i en [nettside som er bygget for å rangere og konvertere](/tjenester/webdesign) – ikke bare se bra ut. En nettside uten SEO og konverteringsdesign er som et utstillingsvindu i en gate uten trafikk: vakker, men ulønnsom.
 
-Les mer om våre [webdesign-tjenester i Bergen](/tjenester/webdesign) eller kontakt Frameflow for en gratis prat om hva som passer din bedrift.
+Hos Frameflow bygger vi nettsider der avkastning er målet fra dag én. [Ta kontakt](/kontakt) for en gratis gjennomgang av hva din Bergen-bedrift kan forvente i ROI fra en ny nettside.
     `.trim(),
   },
   {
@@ -738,7 +776,7 @@ Bergen har et voksende marked av digitale byråer og frilanser. Valget du tar he
 
 ## 1. Spesialisering vs. bredde
 
-Noen byråer er dypt spesialiserte (f.eks. kun SEO, kun Meta-annonser). Andre, som Frameflow, tilbyr helhetlige løsninger under ett tak – web, branding, foto og sosiale medier. Spørsmålet er: hva trenger du mest?
+Noen byråer er dypt spesialiserte (f.eks. kun SEO, kun Meta-annonser). Andre, som Frameflow, tilbyr helhetlige løsninger under ett tak – [web](/tjenester/webdesign), [SEO](/tjenester/seo), [branding](/tjenester/branding), [foto](/tjenester/foto-og-videografi) og [sosiale medier](/tjenester/sosiale-medier). Spørsmålet er: hva trenger du mest?
 
 Hvis du trenger en komplett digital tilstedeværelse bygget opp fra bunnen, er ett byrå som kan håndtere alt ofte mer effektivt enn å koordinere mellom fire leverandører.
 
@@ -853,7 +891,7 @@ Les mer om vår [apputvikling i Bergen](/tjenester/app-utvikling), eller ta kont
     date: '8. mai 2026',
     updatedAt: '2026-05-08',
     readTime: '7 min',
-    relatedService: { title: 'Digital markedsføring', href: '/tjenester' },
+    relatedService: { title: 'SEO', href: '/tjenester/seo' },
     content: `
 ## Hva gjør et SEO-byrå i Bergen?
 

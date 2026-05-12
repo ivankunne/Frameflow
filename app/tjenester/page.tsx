@@ -3,18 +3,18 @@ import { JsonLd } from '@/components/JsonLd'
 import TjenesterClient from './TjenesterClient'
 
 export const metadata: Metadata = {
-  title: 'Tjenester | Frameflow – Web, SEO, Apps, Foto, Branding i Bergen',
+  title: 'Tjenester i Bergen | Web, SEO & Branding – Frameflow',
   description: 'Webdesign, SEO, app utvikling, foto og videografi, sosiale medier, og branding for bedrifter i Bergen. Seks tjenester som gir målbare resultater.',
   alternates: { canonical: 'https://www.frameflow.no/tjenester' },
   openGraph: {
-    title: 'Tjenester | Frameflow – Bergen byrå',
+    title: 'Tjenester i Bergen | Frameflow',
     description: 'Webdesign, SEO, app utvikling, foto og videografi, sosiale medier, og branding for bedrifter i Bergen.',
     url: 'https://www.frameflow.no/tjenester',
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Tjenester | Frameflow – Bergen byrå',
+    title: 'Tjenester i Bergen | Frameflow',
     description: 'Webdesign, SEO, app utvikling, foto og videografi, sosiale medier, og branding for bedrifter i Bergen.',
   },
 }
