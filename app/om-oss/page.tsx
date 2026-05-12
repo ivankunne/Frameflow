@@ -5,7 +5,7 @@ import OmOssClient from '@/components/OmOssClient'
 export const metadata: Metadata = {
   title: 'Om oss – Markedsføringsbyrå og webbyrå i Bergen | Frameflow',
   description:
-    'Møt Ivan Kunne og teamet bak Frameflow. Bergen-byrå med ekspertise innen webdesign, sosiale medier, foto og video og branding. Vi er et lite byrå med én kontaktperson og full ansvarlighet.',
+    'Møt Ivan Kunne bak Frameflow – markedsføringsbyrå og webbyrå i Bergen. Ekspertise innen webdesign, SEO, sosiale medier og branding. Én kontaktperson, full ansvarlighet.',
   alternates: { canonical: 'https://www.frameflow.no/om-oss' },
   openGraph: {
     title: 'Om oss – Markedsføringsbyrå og webbyrå i Bergen | Frameflow',
