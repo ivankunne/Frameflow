@@ -104,6 +104,10 @@ export const personSchema = {
   name: 'Ivan Kunne',
   jobTitle: 'Daglig leder',
   url: 'https://www.frameflow.no/om-oss',
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://www.frameflow.no/ivan-about.jpg',
+  },
   sameAs: [
     'https://www.linkedin.com/in/frameflow-ivan-kunne-612106398/',
   ],

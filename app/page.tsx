@@ -17,21 +17,21 @@ const HomeCTA = dynamic(() => import('@/components/sections/HomeCTA'))
 export const metadata: Metadata = {
   title: 'Frameflow – Markedsføringsbyrå og webbyrå i Bergen',
   description:
-    'Frameflow er markedsføringsbyrå og webbyrå i Bergen – vi lager nettside, grafisk design, foto & video, sosiale medier og branding under ett tak. Ingen oppstartsgebyr og svar innen 24 timer.',
+    'Frameflow er markedsføringsbyrå og webbyrå i Bergen. Vi lager nettside, design, foto & video og branding. Ingen oppstartsgebyr – svar innen 24 timer.',
   alternates: {
     canonical: 'https://www.frameflow.no',
   },
   openGraph: {
     title: 'Frameflow – Markedsføringsbyrå og webbyrå i Bergen',
     description:
-      'Frameflow er markedsføringsbyrå og webbyrå i Bergen – vi lager nettside, grafisk design, foto & video, sosiale medier og branding under ett tak. Ingen oppstartsgebyr og svar innen 24 timer.',
+      'Frameflow er markedsføringsbyrå og webbyrå i Bergen. Vi lager nettside, design, foto & video og branding. Ingen oppstartsgebyr – svar innen 24 timer.',
     url: 'https://www.frameflow.no',
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Frameflow – Markedsføringsbyrå og webbyrå i Bergen',
-    description: 'Frameflow er markedsføringsbyrå og webbyrå i Bergen – vi lager nettside, grafisk design, foto & video, sosiale medier og branding under ett tak.',
+    description: 'Frameflow er markedsføringsbyrå og webbyrå i Bergen. Vi lager nettside, design, foto & video og branding. Ingen oppstartsgebyr – svar innen 24 timer.',
   },
 }
 
