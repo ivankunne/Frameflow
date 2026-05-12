@@ -3,20 +3,20 @@ import { JsonLd, organizationSchema, personSchema } from '@/components/JsonLd'
 import OmOssClient from '@/components/OmOssClient'
 
 export const metadata: Metadata = {
-  title: 'Om Frameflow – Markedsføringsbyrå i Bergen',
+  title: 'Om oss – Markedsføringsbyrå og webbyrå i Bergen | Frameflow',
   description:
-    'Møt Ivan Kunne og teamet bak Frameflow. Bergen-byrå med ekspertise innen webdesign, sosiale medier, foto og video og branding. Grunnlagt i Bergen 2025.',
+    'Møt Ivan Kunne og teamet bak Frameflow. Bergen-byrå med ekspertise innen webdesign, sosiale medier, foto og video og branding. Vi er et lite byrå med én kontaktperson og full ansvarlighet.',
   alternates: { canonical: 'https://www.frameflow.no/om-oss' },
   openGraph: {
-    title: 'Om Frameflow – Markedsføringsbyrå i Bergen',
-    description: 'Møt Ivan Kunne og teamet bak Frameflow. Bergen-byrå for webdesign, sosiale medier, foto og branding.',
+    title: 'Om oss – Markedsføringsbyrå og webbyrå i Bergen | Frameflow',
+    description: 'Møt Ivan Kunne og teamet bak Frameflow. Bergen-byrå for webdesign, sosiale medier, foto og branding. Én kontaktperson, full ansvarlighet.',
     url: 'https://www.frameflow.no/om-oss',
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Om Frameflow – Markedsføringsbyrå i Bergen',
-    description: 'Møt Ivan Kunne og teamet bak Frameflow. Bergen-byrå for webdesign, sosiale medier, foto og branding.',
+    title: 'Om oss – Markedsføringsbyrå og webbyrå i Bergen | Frameflow',
+    description: 'Møt Ivan Kunne og teamet bak Frameflow. Bergen-byrå for webdesign, sosiale medier, foto og branding. Én kontaktperson, full ansvarlighet.',
   },
 }
 
