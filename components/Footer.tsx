@@ -90,7 +90,7 @@ export default function Footer() {
             <Link href="/" className="inline-flex" aria-label="Frameflow – tilbake til forsiden">
               <Image
                 src="/Wordmark-white.png"
-                alt="Frameflow"
+                alt=""
                 width={952}
                 height={204}
                 className="h-6 w-auto object-contain"

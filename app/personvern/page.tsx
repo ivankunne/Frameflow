@@ -5,11 +5,11 @@ import { JsonLd } from '@/components/JsonLd'
 export const metadata: Metadata = {
   title: 'Personvernserklæring – Frameflow Bergen',
   description:
-    'Les om hvordan Frameflow behandler personopplysninger, hvilke data vi samler inn og dine rettigheter under GDPR.',
+    'Les om hvordan Frameflow behandler dine personopplysninger. Her finner du hvilke data vi samler inn, hvordan de brukes og dine GDPR-rettigheter.',
   alternates: { canonical: 'https://www.frameflow.no/personvern' },
   openGraph: {
     title: 'Personvernserklæring – Frameflow Bergen',
-    description: 'Les om hvordan Frameflow behandler personopplysninger, hvilke data vi samler inn og dine rettigheter under GDPR.',
+    description: 'Les om hvordan Frameflow behandler dine personopplysninger. Her finner du hvilke data vi samler inn, hvordan de brukes og dine GDPR-rettigheter.',
     url: 'https://www.frameflow.no/personvern',
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Personvernserklæring – Frameflow Bergen',
-    description: 'Les om hvordan Frameflow behandler personopplysninger, hvilke data vi samler inn og dine rettigheter under GDPR.',
+    description: 'Les om hvordan Frameflow behandler dine personopplysninger. Her finner du hvilke data vi samler inn, hvordan de brukes og dine GDPR-rettigheter.',
   },
 }
 

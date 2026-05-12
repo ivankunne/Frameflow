@@ -5,18 +5,18 @@ import { JsonLd } from '@/components/JsonLd'
 export const metadata: Metadata = {
   title: 'Webbyrå Bergen | Lage nettside som konverterer – Frameflow',
   description:
-    'Frameflow er et webbyrå i Bergen som hjelper deg å lage nettside med SEO innebygd fra dag én. Konverterer besøkende til kunder. Ingen oppstartsgebyr, svar innen 24 timer.',
+    'Frameflow lager nettsider i Bergen med SEO innebygd fra dag én. Konverterer besøkende til kunder. Ingen oppstartsgebyr – svar innen 24 timer.',
   alternates: { canonical: 'https://www.frameflow.no/tjenester/webdesign' },
   openGraph: {
     title: 'Webbyrå Bergen | Lage nettside som konverterer – Frameflow',
-    description: 'Frameflow er et webbyrå i Bergen som hjelper deg å lage nettside med SEO innebygd fra dag én. Konverterer besøkende til kunder. Ingen oppstartsgebyr, svar innen 24 timer.',
+    description: 'Frameflow lager nettsider i Bergen med SEO innebygd fra dag én. Konverterer besøkende til kunder. Ingen oppstartsgebyr – svar innen 24 timer.',
     url: 'https://www.frameflow.no/tjenester/webdesign',
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Webbyrå Bergen | Lage nettside som konverterer – Frameflow',
-    description: 'Frameflow er et webbyrå i Bergen som hjelper deg å lage nettside med SEO innebygd fra dag én. Konverterer besøkende til kunder. Ingen oppstartsgebyr, svar innen 24 timer.',
+    description: 'Frameflow lager nettsider i Bergen med SEO innebygd fra dag én. Konverterer besøkende til kunder. Ingen oppstartsgebyr – svar innen 24 timer.',
   },
 }
 

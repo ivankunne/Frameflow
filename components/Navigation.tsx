@@ -11,7 +11,7 @@ function Wordmark() {
   return (
     <Image
       src="/Wordmark.png"
-      alt="Frameflow"
+      alt=""
       width={140}
       height={32}
       priority
@@ -117,7 +117,7 @@ export default function Navigation() {
           >
             {/* Mobile menu logo */}
             <div className="absolute top-0 left-0 right-0 h-16 flex items-center px-6 border-b border-border">
-              <Link href="/" aria-label="Frameflow">
+              <Link href="/" aria-label="Frameflow – tilbake til forsiden">
                 <Wordmark />
               </Link>
             </div>

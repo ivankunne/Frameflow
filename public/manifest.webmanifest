@@ -1,0 +1,28 @@
+{
+  "name": "Frameflow – Markedsføringsbyrå i Bergen",
+  "short_name": "Frameflow",
+  "description": "Markedsføringsbyrå i Bergen. Webdesign, foto og video, sosiale medier og branding.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#2172b5",
+  "background_color": "#ffffff",
+  "lang": "nb",
+  "dir": "ltr",
+  "categories": ["business", "productivity"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    }
+  ]
+}
