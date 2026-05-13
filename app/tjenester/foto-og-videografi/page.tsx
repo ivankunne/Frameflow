@@ -44,7 +44,7 @@ const serviceSchema = {
       '@type': 'PriceSpecification',
       priceCurrency: 'NOK',
       minPrice: 4500,
-      description: 'Fra 4 500 kr.',
+      description: 'Fra 4 500 kr eks. mva.',
     },
     eligibleRegion: { '@type': 'City', name: 'Bergen' },
   },

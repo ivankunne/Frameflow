@@ -5,7 +5,7 @@ import { JsonLd } from '@/components/JsonLd'
 export const metadata: Metadata = {
   title: 'Sosiale medier Bergen – Strategi og innhold | Frameflow',
   description:
-    'Profesjonell håndtering av sosiale medier for Bergen-bedrifter. Innholdsproduksjon, strategi og kanalforvaltning. Ta kontakt i dag.',
+    'Frameflow håndterer sosiale medier for Bergen-bedrifter. Innholdsproduksjon, strategi og kanalforvaltning på Instagram, TikTok og LinkedIn. Fra 3 500 kr/mnd.',
   alternates: { canonical: 'https://www.frameflow.no/tjenester/sosiale-medier' },
   openGraph: {
     title: 'Sosiale medier Bergen – Strategi og innhold | Frameflow',

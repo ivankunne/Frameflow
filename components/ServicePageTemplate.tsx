@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useRef, useState } from 'react'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
-import { WebMockup, CameraMockup, SocialMockup, BrandMockup, AppMockup, SEOMockup } from '@/components/ServiceMockups'
+import { WebMockup, CameraMockup, SocialMockup, BrandMockup, AppMockup, SEOMockup, AIMockup } from '@/components/ServiceMockups'
 
 interface ServicePageProps {
   label: string
@@ -13,7 +13,7 @@ interface ServicePageProps {
   includes: string[]
   process: { step: string; title: string; description: string }[]
   relatedServices: { title: string; href: string }[]
-  mockupType: 'web' | 'photo' | 'social' | 'brand' | 'app' | 'seo'
+  mockupType: 'web' | 'photo' | 'social' | 'brand' | 'app' | 'seo' | 'ai'
   pricingFrom?: string
   faqs?: { q: string; a: string }[]
 }
@@ -103,6 +103,7 @@ const mockupBadgeLabels: Record<string, string> = {
   brand: 'Brand guidelines',
   app: '98% uptime',
   seo: 'Side 1 på Google',
+  ai: '47 timer spart/mnd',
 }
 
 function HeroMockup({ mockupType, visible }: { mockupType: string; visible: boolean }) {
@@ -112,6 +113,7 @@ function HeroMockup({ mockupType, visible }: { mockupType: string; visible: bool
   if (mockupType === 'brand') return <BrandMockup visible={visible} />
   if (mockupType === 'app') return <AppMockup visible={visible} />
   if (mockupType === 'seo') return <SEOMockup visible={visible} />
+  if (mockupType === 'ai') return <AIMockup visible={visible} />
   return null
 }
 

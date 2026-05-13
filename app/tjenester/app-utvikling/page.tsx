@@ -36,7 +36,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'App utvikling i Bergen',
   provider: { '@id': 'https://www.frameflow.no/#organization' },
-  description: 'Skreddersydde webapper og mobilapper som løser reelle problemer for bedrifter.',
+  description: 'Skreddersydde webapper og mobilapper som løser reelle problemer for Bergen-bedrifter.',
   areaServed: { '@type': 'City', name: 'Bergen' },
   offers: {
     '@type': 'Offer',

@@ -569,6 +569,86 @@ export function AppMockup({ visible }: { visible: boolean }) {
   )
 }
 
+// ─── 07 AI Automasjon: workflow pipeline ──────────────────────────────────
+export function AIMockup({ visible }: { visible: boolean }) {
+  const steps = [
+    { label: 'Ny henvendelse mottatt', color: '#6366f1', bg: '#eef2ff', border: '#c7d2fe', icon: '↓' },
+    { label: 'AI behandler og svarer', color: '#8b5cf6', bg: '#f5f3ff', border: '#ddd6fe', icon: '◆' },
+    { label: 'Svar sendt · CRM oppdatert', color: '#16a34a', bg: '#f0fdf4', border: '#bbf7d0', icon: '✓' },
+  ]
+
+  return (
+    <div className="h-44 bg-white rounded-xl border border-border overflow-hidden shadow-card">
+      <div className="bg-bg-2 border-b border-border px-3 py-2 flex items-center justify-between">
+        <span className="text-[9px] font-bold uppercase tracking-widest text-fg-muted">AI Automasjon</span>
+        <div className="flex items-center gap-1.5 bg-green-50 border border-green-200 rounded-full px-2 py-0.5">
+          <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+          <span className="text-[9px] font-semibold text-green-700">Aktiv</span>
+        </div>
+      </div>
+
+      <div className="p-3 flex flex-col gap-1">
+        {steps.map((step, i) => (
+          <div key={step.label}>
+            <motion.div
+              initial={{ opacity: 0, x: -8 }}
+              animate={visible ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.3, delay: 0.35 + i * 0.28 }}
+              className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg"
+              style={{ background: step.bg, border: `1px solid ${step.border}` }}
+            >
+              <span className="text-[9px] font-bold shrink-0" style={{ color: step.color }}>{step.icon}</span>
+              <span className="text-[9px] font-medium text-fg-muted flex-1">{step.label}</span>
+              {i === 1 ? (
+                <motion.span
+                  animate={visible ? { opacity: [1, 0.3, 1] } : {}}
+                  transition={{ duration: 1, delay: 0.8, repeat: Infinity }}
+                  className="text-[8px] font-bold shrink-0"
+                  style={{ color: step.color }}
+                >
+                  ···
+                </motion.span>
+              ) : (
+                <motion.span
+                  initial={{ opacity: 0 }}
+                  animate={visible ? { opacity: 1 } : {}}
+                  transition={{ delay: 0.7 + i * 0.28 }}
+                  className="text-[8px] font-bold shrink-0"
+                  style={{ color: step.color }}
+                >
+                  {i === 0 ? '→' : '✓'}
+                </motion.span>
+              )}
+            </motion.div>
+            {i < 2 && (
+              <motion.div
+                initial={{ opacity: 0, scaleY: 0 }}
+                animate={visible ? { opacity: 1, scaleY: 1 } : {}}
+                transition={{ duration: 0.15, delay: 0.56 + i * 0.28 }}
+                className="ml-4 w-px h-1.5 my-0.5"
+                style={{ background: '#6366f120', transformOrigin: 'top' }}
+              />
+            )}
+          </div>
+        ))}
+      </div>
+
+      <div className="px-3 pt-1 flex items-center justify-between">
+        <span className="text-[8px] text-fg-muted">47 håndtert i dag</span>
+        <motion.span
+          initial={{ opacity: 0 }}
+          animate={visible ? { opacity: 1 } : {}}
+          transition={{ delay: 1.2 }}
+          className="text-[8px] font-semibold"
+          style={{ color: '#16a34a' }}
+        >
+          0 manuelt ✓
+        </motion.span>
+      </div>
+    </div>
+  )
+}
+
 // ─── SEO: Google Search Console style ranking dashboard ───────────────────
 export function SEOMockup({ visible }: { visible: boolean }) {
   const results = [

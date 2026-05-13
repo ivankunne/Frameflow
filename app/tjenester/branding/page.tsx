@@ -61,7 +61,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Hva koster branding og logo design?',
+      name: 'Hva koster branding og logo design i Bergen?',
       acceptedAnswer: { '@type': 'Answer', text: 'Brandingpakker fra Frameflow starter fra 8 000 kr eks. mva. Prisen avhenger av omfang og leveranser.' },
     },
     {

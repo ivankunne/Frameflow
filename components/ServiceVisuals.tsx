@@ -426,6 +426,114 @@ export function SEOVisual({ visible }: { visible: boolean }) {
   )
 }
 
+// ── 07 AI Automasjon — Automation Pipeline Dashboard ─────────────────────
+export function AIVisual({ visible }: { visible: boolean }) {
+  const automations = [
+    { trigger: 'Webskjema', action: 'E-post svar', time: '0.4s', delay: 0.62 },
+    { trigger: 'Chat-melding', action: 'AI chatbot', time: '0.2s', delay: 0.72 },
+    { trigger: 'Bookingforsp.', action: 'Kalender ✓', time: '0.3s', delay: 0.82 },
+    { trigger: 'E-post lead', action: 'CRM logget', time: '0.6s', delay: 0.92 },
+  ]
+  const bars = [12, 18, 24, 16, 32, 28, 44, 36, 52, 48, 62, 58]
+
+  return (
+    <div
+      className="h-full w-full rounded-xl overflow-hidden flex flex-col"
+      style={{ background: '#ffffff', border: '1px solid #e5e7eb' }}
+    >
+      {/* header */}
+      <div
+        className="px-5 pt-4 pb-3 flex items-center justify-between shrink-0"
+        style={{ borderBottom: '1px solid rgba(0,0,0,0.06)' }}
+      >
+        <span className="text-[9px] font-bold uppercase tracking-widest" style={{ color: '#9ca3af' }}>
+          Automasjonssenter · Bergen
+        </span>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={visible ? { opacity: 1 } : {}}
+          transition={{ delay: 0.3 }}
+          className="flex items-center gap-1.5"
+        >
+          <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+          <span className="text-[8px] font-semibold" style={{ color: '#16a34a' }}>94% auto</span>
+        </motion.div>
+      </div>
+
+      {/* big number */}
+      <div className="px-5 pt-4 pb-2 shrink-0">
+        <p className="text-[8px] font-semibold uppercase tracking-widest mb-1.5" style={{ color: '#9ca3af' }}>
+          Automatisk håndtert
+        </p>
+        <div className="flex items-end gap-2">
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={visible ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.4, delay: 0.38 }}
+            className="font-bold tabular-nums leading-none"
+            style={{ fontSize: 36, color: '#0d1f3c', fontFamily: 'var(--font-bricolage)', letterSpacing: '-0.03em' }}
+          >
+            94%
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={visible ? { opacity: 1 } : {}}
+            transition={{ delay: 0.55 }}
+            className="pb-1"
+          >
+            <span className="text-[11px] font-bold" style={{ color: '#22c55e' }}>↑ 47 i dag</span>
+            <span className="text-[9px] ml-1" style={{ color: '#9ca3af' }}>henvendelser</span>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* sparkline */}
+      <div className="px-5 pb-3 flex items-end gap-px shrink-0" style={{ height: 32 }}>
+        {bars.map((h, i) => (
+          <motion.div
+            key={i}
+            initial={{ scaleY: 0 }}
+            animate={visible ? { scaleY: 1 } : {}}
+            transition={{ duration: 0.25, delay: 0.5 + i * 0.03, ease: 'easeOut' }}
+            style={{
+              flex: 1,
+              height: `${h}%`,
+              transformOrigin: 'bottom',
+              background: `rgba(99,102,241,${0.12 + (h / 100) * 0.55})`,
+              borderRadius: '2px 2px 0 0',
+            }}
+          />
+        ))}
+      </div>
+
+      {/* automation rows */}
+      <div className="flex-1 px-4 pb-4 flex flex-col gap-1.5 justify-end">
+        {automations.map((a) => (
+          <motion.div
+            key={a.trigger}
+            initial={{ opacity: 0, x: -8 }}
+            animate={visible ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.28, delay: a.delay }}
+            className="flex items-center gap-2 px-3 py-1.5 rounded-lg"
+            style={{ background: '#f9fafb', border: '1px solid #e5e7eb' }}
+          >
+            <div
+              className="w-6 h-6 rounded-md flex items-center justify-center shrink-0 font-bold text-[10px]"
+              style={{ background: '#eef2ff', color: '#6366f1', border: '1px solid #c7d2fe' }}
+            >
+              →
+            </div>
+            <span className="text-[9px] font-medium flex-1 truncate" style={{ color: '#374151' }}>
+              {a.trigger} → {a.action}
+            </span>
+            <span className="text-[8px] font-mono shrink-0" style={{ color: '#22c55e' }}>{a.time}</span>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 // ── 04 Branding — Identity System Reveal ─────────────────────────────────
 // Logo assembles, palette expands, type scale appears, manual footer
 export function BrandVisual({ visible }: { visible: boolean }) {

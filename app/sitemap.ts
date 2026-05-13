@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/tjenester/app-utvikling`, lastModified: SITE_UPDATED, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/tjenester/branding`, lastModified: SITE_UPDATED, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/tjenester/seo`, lastModified: SITE_UPDATED, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/tjenester/ai-automasjon`, lastModified: SITE_UPDATED, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/prosjekter`, lastModified: SITE_UPDATED, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/blogg`, lastModified: SITE_UPDATED, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE_URL}/kontakt`, lastModified: SITE_UPDATED, changeFrequency: 'yearly', priority: 0.7 },
