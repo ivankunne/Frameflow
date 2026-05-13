@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: 'GV Rentals – Webdesign og sosiale medier',
     description: 'Frameflow leverte nettside og løpende sosiale medier innhold for GV Rentals i Marbella. Økt engasjement og booking-rate.',
     url: 'https://www.frameflow.no/prosjekter/gv-rentals',
-    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+    images: [{ url: 'https://www.frameflow.no/og?title=GV+Rentals+%E2%80%93+Webdesign+og+sosiale+medier&label=Sosiale+medier', width: 1200, height: 630, alt: 'GV Rentals – Webdesign og sosiale medier' }],
   },
   twitter: {
     card: 'summary_large_image',

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: 'Ho-orbit – Workflow app for teams',
     description: 'Frameflow bygde Ho-orbit, en workflow-app som samler oppgaver, chat og dokumenter på ett sted. Brukt av 150+ team-medlemmer.',
     url: 'https://www.frameflow.no/prosjekter/ho-orbit',
-    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+    images: [{ url: 'https://www.frameflow.no/og?title=h-orbit+%E2%80%93+Musikkplattform+for+artister&label=App+utvikling', width: 1200, height: 630, alt: 'h-orbit – Musikkplattform for artister' }],
   },
   twitter: {
     card: 'summary_large_image',

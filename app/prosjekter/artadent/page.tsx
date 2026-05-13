@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: 'Artadent – Webdesign for tannlege i Bergen',
     description: 'Frameflow lagde ny nettside og SEO-strategi for Artadent, tannlege i Bergen. Resulterte i topp 10-rangering på Google.',
     url: 'https://www.frameflow.no/prosjekter/artadent',
-    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+    images: [{ url: 'https://www.frameflow.no/og?title=Artadent+%E2%80%93+Webdesign+og+SEO+for+tannlege+i+Bergen&label=SEO', width: 1200, height: 630, alt: 'Artadent – Webdesign og SEO for tannlege i Bergen' }],
   },
   twitter: {
     card: 'summary_large_image',

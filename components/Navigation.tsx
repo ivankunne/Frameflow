@@ -11,7 +11,7 @@ function Wordmark() {
   return (
     <Image
       src="/Wordmark.png"
-      alt=""
+      alt="Frameflow – Markedsføringsbyrå i Bergen"
       width={140}
       height={32}
       priority

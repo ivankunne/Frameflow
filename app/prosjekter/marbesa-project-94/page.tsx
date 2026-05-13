@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'Marbesa Project 94 – Luksus eiendomsnettside',
     description: 'Frameflow designet en eksklusiv nettside for luksus eiendomsprosjektet Marbesa Project 94 i Marbella, Spania.',
     url: 'https://www.frameflow.no/prosjekter/marbesa-project-94',
-    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+    images: [{ url: 'https://www.frameflow.no/og?title=Marbesa+Project+94+%E2%80%93+Luksus+eiendomsnettside&label=Branding', width: 1200, height: 630, alt: 'Marbesa Project 94 – Luksus eiendomsnettside i Marbella' }],
   },
   twitter: {
     card: 'summary_large_image',

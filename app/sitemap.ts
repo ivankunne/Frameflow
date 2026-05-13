@@ -24,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const projectPages: MetadataRoute.Sitemap = projects.map((project) => ({
     url: `${BASE_URL}/prosjekter/${project.slug}`,
-    lastModified: SITE_UPDATED,
+    lastModified: new Date(`${project.year}-01-01`),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }))
@@ -33,7 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${BASE_URL}/blogg/${post.slug}`,
     lastModified: post.updatedAt ? new Date(post.updatedAt) : SITE_UPDATED,
     changeFrequency: 'monthly' as const,
-    priority: 0.6,
+    priority: 0.7,
   }))
 
   return [...staticPages, ...projectPages, ...blogPages]
