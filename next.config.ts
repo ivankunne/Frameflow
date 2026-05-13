@@ -79,7 +79,7 @@ const nextConfig: NextConfig = {
       { source: '/services/branding', destination: '/tjenester/branding', permanent: true },
       { source: '/services/:path*', destination: '/tjenester', permanent: true },
       { source: '/case-studies', destination: '/prosjekter', permanent: true },
-      { source: '/case-studies/artadent', destination: '/prosjekter/artadent', permanent: true },
+      { source: '/case-studies/sportsbytte', destination: '/prosjekter/sportsbytte', permanent: true },
       { source: '/case-studies/gv-rentals', destination: '/prosjekter/gv-rentals', permanent: true },
       { source: '/case-studies/marbesa-94', destination: '/prosjekter/marbesa-project-94', permanent: true },
       { source: '/case-studies/:path*', destination: '/prosjekter', permanent: true },

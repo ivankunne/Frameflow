@@ -1,5 +1,5 @@
 const logos: { name: string; weight: string }[] = [
-  { name: 'Artadent',   weight: 'font-semibold' },
+  { name: 'Sportsbytte', weight: 'font-semibold' },
   { name: 'h-orbit',    weight: 'font-bold tracking-tight' },
   { name: 'GV Rentals', weight: 'font-bold' },
   { name: 'Marbesa',    weight: 'font-extrabold tracking-tight' },

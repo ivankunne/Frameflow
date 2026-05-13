@@ -2,10 +2,11 @@
 
 import { motion } from 'framer-motion'
 
-// ─── Artadent ────────────────────────────────────────────────────────────────
-export function ArtadentPreview({ visible }: { visible: boolean }) {
+// ─── Sportsbytte ─────────────────────────────────────────────────────────────
+export function SportsbyttePreview({ visible }: { visible: boolean }) {
+  const categories = ['Ski', 'Sykkel', 'Løping']
   return (
-    <div className="h-full w-full rounded-xl overflow-hidden relative" style={{ background: '#f0f6ff' }}>
+    <div className="h-full w-full rounded-xl overflow-hidden relative" style={{ background: '#f0fdf4' }}>
       <div className="absolute inset-0 p-4 flex flex-col">
         <motion.div
           initial={{ opacity: 0, y: -6 }}
@@ -13,35 +14,45 @@ export function ArtadentPreview({ visible }: { visible: boolean }) {
           transition={{ duration: 0.3, delay: 0.3 }}
           className="flex items-center justify-between mb-4"
         >
-          <div className="w-14 h-2.5 bg-[#2172b5]/40 rounded" />
+          <div className="w-16 h-2.5 bg-[#16a34a]/50 rounded" />
           <div className="flex gap-2">
-            {[...Array(3)].map((_, i) => <div key={i} className="w-8 h-2 bg-[#2172b5]/20 rounded" />)}
+            {[...Array(3)].map((_, i) => <div key={i} className="w-8 h-2 bg-[#16a34a]/20 rounded" />)}
           </div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          animate={visible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.35, delay: 0.46 }}
-          className="mb-4"
-        >
-          <div className="w-3/4 h-5 bg-[#171717]/20 rounded mb-2" />
-          <div className="w-1/2 h-3.5 bg-[#171717]/12 rounded mb-3" />
-          <div className="flex gap-2">
-            <div className="w-20 h-7 rounded-lg bg-[#2172b5]" />
-            <div className="w-16 h-7 rounded-lg border border-[#2172b5]/30" />
-          </div>
-        </motion.div>
+        {/* Category pills */}
+        <div className="flex gap-2 mb-4">
+          {categories.map((cat, i) => (
+            <motion.div
+              key={cat}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={visible ? { opacity: 1, scale: 1 } : {}}
+              transition={{ type: 'spring', stiffness: 240, damping: 16, delay: 0.42 + i * 0.08 }}
+              className="px-2.5 h-6 rounded-full text-[9px] font-semibold flex items-center"
+              style={{ background: i === 0 ? '#16a34a' : '#16a34a18', color: i === 0 ? '#fff' : '#16a34a' }}
+            >
+              {cat}
+            </motion.div>
+          ))}
+        </div>
 
-        <div className="grid grid-cols-3 gap-2 flex-1">
+        {/* Product listing rows */}
+        <div className="flex flex-col gap-2 flex-1">
           {[0, 1, 2].map((i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={visible ? { opacity: 1, scale: 1 } : {}}
-              transition={{ type: 'spring', stiffness: 240, damping: 16, delay: 0.72 + i * 0.09 }}
-              className="rounded-lg bg-[#2172b5]/10 border border-[#2172b5]/12"
-            />
+              initial={{ opacity: 0, x: 12 }}
+              animate={visible ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.3, delay: 0.62 + i * 0.1 }}
+              className="flex items-center gap-2.5 bg-white/70 rounded-lg px-3 py-2"
+            >
+              <div className="w-8 h-8 rounded-md shrink-0" style={{ background: '#16a34a18', border: '1px solid #16a34a28' }} />
+              <div className="flex-1">
+                <div className="w-20 h-2 bg-[#171717]/20 rounded mb-1.5" />
+                <div className="w-12 h-1.5 bg-[#171717]/10 rounded" />
+              </div>
+              <div className="w-10 h-5 rounded-md" style={{ background: '#16a34a' }} />
+            </motion.div>
           ))}
         </div>
       </div>
@@ -53,7 +64,7 @@ export function ArtadentPreview({ visible }: { visible: boolean }) {
         className="absolute bottom-3 right-3 bg-white rounded-lg px-3 py-1.5 shadow-card flex items-center gap-2"
       >
         <span className="text-green-500 text-xs font-bold">●</span>
-        <span className="text-xs font-semibold text-[#171717]">Topp 10 Google</span>
+        <span className="text-xs font-semibold text-[#171717]">Ny plattform live</span>
       </motion.div>
     </div>
   )
@@ -186,7 +197,7 @@ export function HoOrbitPreview({ visible }: { visible: boolean }) {
 // ─── Slug → Preview map (used by ProsjekterClient) ───────────────────────────
 import type React from 'react'
 export const projectPreviews: Record<string, React.ComponentType<{ visible: boolean }>> = {
-  'artadent':           ArtadentPreview,
+  'sportsbytte':        SportsbyttePreview,
   'marbesa-project-94': MarbesaPreview,
   'gv-rentals':         GvRentalsPreview,
   'ho-orbit':           HoOrbitPreview,

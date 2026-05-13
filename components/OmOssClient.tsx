@@ -137,7 +137,7 @@ export default function OmOssClient() {
           {[
             { end: 20, suffix: '+', start: 0, label: 'Prosjekter levert', sub: 'Webdesign, branding, sosiale medier' },
             { end: 98, suffix: '%', start: 0, label: 'Kundetilfredshet', sub: 'Basert på kundeevalueringer' },
-            { end: 140, suffix: '%', start: 0, label: 'Mer organisk trafikk', sub: 'Artadent · 3 måneder etter lansering' },
+            { end: 140, suffix: '%', start: 0, label: 'Mer organisk trafikk', sub: 'Sportsbytte · måneder etter lansering' },
           ].map((stat, i) => (
             <motion.div
               key={stat.label}

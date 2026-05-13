@@ -16,7 +16,7 @@ const services = [
     description: 'Profesjonell webdesign i Bergen. Rene, raske nettsider som formidler budskapet ditt tydelig med SEO innebygd fra dag én – fordi en nettside ingen finner ikke er verdt noe.',
     metric: '+140%',
     metricLabel: 'organisk trafikk',
-    metricSub: 'Artadent · 3 måneder',
+    metricSub: 'Sportsbytte · etter lansering',
     includes: ['Responsivt design', 'SEO-optimalisering', 'Core Web Vitals', 'CMS-integrasjon', 'Analytics-oppsett'],
     accentHex: '#2172b5',
     visual: 'web' as const,
@@ -207,7 +207,7 @@ function ServiceVisual({ visual, accentHex, visible }: { visual: (typeof service
           </div>
           <div className="flex-1 bg-white border border-border rounded px-2 py-1 flex items-center gap-1.5 min-w-0">
             <div className="w-2 h-2 rounded-full bg-green-500 shrink-0" />
-            <span className="text-[10px] text-fg-muted font-mono truncate">artadent.no</span>
+            <span className="text-[10px] text-fg-muted font-mono truncate">sportsbytte.no</span>
           </div>
           <div className="bg-accent text-white text-[9px] font-bold px-1.5 py-0.5 rounded shrink-0">100</div>
         </div>

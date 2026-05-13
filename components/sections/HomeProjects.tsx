@@ -6,10 +6,11 @@ import { motion, useInView } from 'framer-motion'
 
 // ─── Project preview visuals ────────────────────────────────────────────────
 
-function ArtadentPreview({ visible }: { visible: boolean }) {
-  // Animation language: top-to-bottom page reveal, cards scale in
+function SportsbyttePreview({ visible }: { visible: boolean }) {
+  // Animation language: marketplace cards slide in, sport category pills pop in
+  const categories = ['Ski', 'Sykkel', 'Løping']
   return (
-    <div className="h-36 rounded-lg overflow-hidden relative" style={{ background: '#f0f6ff' }}>
+    <div className="h-36 rounded-lg overflow-hidden relative" style={{ background: '#f0fdf4' }}>
       <div className="absolute inset-0 p-3 flex flex-col">
         {/* Nav — fade down */}
         <motion.div
@@ -18,44 +19,52 @@ function ArtadentPreview({ visible }: { visible: boolean }) {
           transition={{ duration: 0.3, delay: 0.3 }}
           className="flex items-center justify-between mb-3"
         >
-          <div className="w-12 h-2 bg-[#2172b5]/40 rounded" />
+          <div className="w-14 h-2 bg-[#16a34a]/50 rounded" />
           <div className="flex gap-1.5">
             {[...Array(3)].map((_, i) => (
-              <div key={i} className="w-6 h-1.5 bg-[#2172b5]/20 rounded" />
+              <div key={i} className="w-6 h-1.5 bg-[#16a34a]/20 rounded" />
             ))}
           </div>
         </motion.div>
 
-        {/* Hero text — slide up */}
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          animate={visible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.35, delay: 0.46 }}
-          className="mb-3"
-        >
-          <div className="w-3/4 h-4 bg-[#171717]/20 rounded mb-1.5" />
-          <div className="w-1/2 h-3 bg-[#171717]/13 rounded mb-2.5" />
-          <div className="flex gap-2">
-            <div className="w-16 h-6 rounded-md bg-[#2172b5]" />
-            <div className="w-14 h-6 rounded-md border border-[#2172b5]/30" />
-          </div>
-        </motion.div>
-
-        {/* Feature cards — scale pop stagger */}
-        <div className="grid grid-cols-3 gap-1.5">
-          {[0, 1, 2].map((i) => (
+        {/* Category pills — scale pop stagger */}
+        <div className="flex gap-1.5 mb-3">
+          {categories.map((cat, i) => (
             <motion.div
-              key={i}
+              key={cat}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={visible ? { opacity: 1, scale: 1 } : {}}
-              transition={{ type: 'spring', stiffness: 240, damping: 16, delay: 0.72 + i * 0.09 }}
-              className="h-6 rounded bg-[#2172b5]/10 border border-[#2172b5]/12"
-            />
+              transition={{ type: 'spring', stiffness: 240, damping: 16, delay: 0.42 + i * 0.08 }}
+              className="px-2 h-5 rounded-full text-[8px] font-semibold flex items-center"
+              style={{ background: i === 0 ? '#16a34a' : '#16a34a18', color: i === 0 ? '#fff' : '#16a34a' }}
+            >
+              {cat}
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Product listing cards — slide from right */}
+        <div className="flex flex-col gap-1.5">
+          {[0, 1].map((i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, x: 12 }}
+              animate={visible ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.3, delay: 0.62 + i * 0.1 }}
+              className="flex items-center gap-2 bg-white/70 rounded-md px-2 py-1.5"
+            >
+              <div className="w-6 h-6 rounded shrink-0" style={{ background: '#16a34a18', border: '1px solid #16a34a28' }} />
+              <div className="flex-1">
+                <div className="w-16 h-1.5 bg-[#171717]/20 rounded mb-1" />
+                <div className="w-10 h-1 bg-[#171717]/10 rounded" />
+              </div>
+              <div className="w-8 h-4 rounded" style={{ background: '#16a34a' }} />
+            </motion.div>
           ))}
         </div>
       </div>
 
-      {/* Google rank badge — spring pop */}
+      {/* Launch badge — spring pop */}
       <motion.div
         initial={{ opacity: 0, scale: 0.75, y: 6 }}
         animate={visible ? { opacity: 1, scale: 1, y: 0 } : {}}
@@ -63,7 +72,7 @@ function ArtadentPreview({ visible }: { visible: boolean }) {
         className="absolute bottom-2.5 right-2.5 bg-white rounded-lg px-2.5 py-1.5 shadow-card flex items-center gap-1.5"
       >
         <span className="text-green-500 text-[10px] font-bold">●</span>
-        <span className="text-[10px] font-semibold text-fg">Topp 10 Google</span>
+        <span className="text-[10px] font-semibold text-fg">Ny plattform live</span>
       </motion.div>
     </div>
   )
@@ -260,14 +269,14 @@ const projects = [
     Preview: HoOrbitPreview,
   },
   {
-    slug: 'artadent',
-    title: 'Artadent',
-    description: 'Side 1 på Google for "tannlege Bergen" innen 6 uker etter lansering. Besøkstall økt med 340%.',
-    tags: ['Web design', 'SEO'],
-    location: 'Bergen, Norge',
-    result: 'Side 1 på Google – 6 uker',
-    color: '#2172b5',
-    Preview: ArtadentPreview,
+    slug: 'sportsbytte',
+    title: 'Sportsbytte',
+    description: 'Komplett webdesign og ny visuell identitet for Norges platform for kjøp, salg og bytte av brukt sportsutstyr.',
+    tags: ['Web design', 'Branding'],
+    location: 'Norge',
+    result: 'Ny plattform live',
+    color: '#16a34a',
+    Preview: SportsbyttePreview,
   },
   {
     slug: 'marbesa-project-94',

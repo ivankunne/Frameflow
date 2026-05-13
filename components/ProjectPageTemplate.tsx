@@ -25,20 +25,20 @@ function ProjectBrowserMockup({ project, visible }: { project: Project; visible:
             transition={{ delay: 0.4 }}
             className="text-[10px] text-fg-muted font-mono"
           >
-            {slug === 'artadent' ? 'artadent.no' : slug === 'marbesa-project-94' ? 'marbesa-project-94.com' : slug === 'gv-rentals' ? 'gv-rentals.com' : slug === 'ho-orbit' ? 'h-orbit.nl' : `frameflow.no/${slug}`}
+            {slug === 'sportsbytte' ? 'sportsbytte.no' : slug === 'marbesa-project-94' ? 'marbesa-project-94.com' : slug === 'gv-rentals' ? 'gv-rentals.com' : slug === 'ho-orbit' ? 'h-orbit.nl' : `frameflow.no/${slug}`}
           </motion.span>
         </div>
       </div>
 
-      {/* ── ARTADENT: top-down page build + perspective card flip + SERP result ── */}
-      {slug === 'artadent' && (
-        <div className="flex-1 bg-white flex flex-col h-full relative overflow-hidden">
+      {/* ── SPORTSBYTTE: marketplace build + category pills + launch badge ── */}
+      {slug === 'sportsbytte' && (
+        <div className="flex-1 bg-white flex flex-col h-full relative overflow-hidden" style={{ background: '#f0fdf4' }}>
           {/* Page load progress bar */}
           <motion.div
             initial={{ scaleX: 0 }}
             animate={visible ? { scaleX: [0, 0.65, 1], opacity: [1, 1, 0] } : {}}
             transition={{ duration: 0.8, delay: 0.42, times: [0, 0.65, 1] }}
-            style={{ transformOrigin: 'left', background: '#2172b5' }}
+            style={{ transformOrigin: 'left', background: '#16a34a' }}
             className="absolute top-0 left-0 right-0 h-0.5 z-20"
           />
 
@@ -48,9 +48,9 @@ function ProjectBrowserMockup({ project, visible }: { project: Project; visible:
               initial={{ opacity: 0, y: -8 }}
               animate={visible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.3, delay: 0.52 }}
-              className="flex items-center justify-between mb-6"
+              className="flex items-center justify-between mb-5"
             >
-              <div className="w-16 h-2.5 rounded-full" style={{ background: '#2172b5' }} />
+              <div className="w-20 h-2.5 rounded-full" style={{ background: '#16a34a' }} />
               <div className="flex items-center gap-2">
                 {[0, 1, 2].map((i) => (
                   <motion.div
@@ -61,80 +61,66 @@ function ProjectBrowserMockup({ project, visible }: { project: Project; visible:
                     className="w-10 h-2 bg-fg/12 rounded"
                   />
                 ))}
-                <div className="w-16 h-6 rounded-md" style={{ background: '#2172b5' }} />
+                <div className="w-16 h-6 rounded-md" style={{ background: '#16a34a' }} />
               </div>
             </motion.div>
 
-            {/* Hero — clip reveal upward */}
-            <div className="mb-6">
-              <div className="overflow-hidden mb-2">
+            {/* Category pills — staggered pop */}
+            <motion.div
+              initial={{ opacity: 0, y: 6 }}
+              animate={visible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.3, delay: 0.62 }}
+              className="flex gap-2 mb-5"
+            >
+              {['Ski', 'Sykkel', 'Løping', 'Fotball'].map((cat, i) => (
                 <motion.div
-                  initial={{ y: '100%' }}
-                  animate={visible ? { y: '0%' } : {}}
-                  transition={{ duration: 0.42, delay: 0.65, ease: [0.22, 1, 0.36, 1] }}
-                  className="w-3/4 h-5 bg-fg/20 rounded"
-                />
-              </div>
-              <div className="overflow-hidden mb-4">
-                <motion.div
-                  initial={{ y: '100%' }}
-                  animate={visible ? { y: '0%' } : {}}
-                  transition={{ duration: 0.36, delay: 0.74, ease: [0.22, 1, 0.36, 1] }}
-                  className="w-1/2 h-3.5 bg-fg/12 rounded"
-                />
-              </div>
-              <motion.div
-                initial={{ opacity: 0, y: 8 }}
-                animate={visible ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 0.86 }}
-                className="flex gap-2"
-              >
-                <div className="w-24 h-8 rounded-lg" style={{ background: '#2172b5' }} />
-                <div className="w-24 h-8 border border-border rounded-lg" />
-              </motion.div>
-            </div>
+                  key={cat}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={visible ? { opacity: 1, scale: 1 } : {}}
+                  transition={{ type: 'spring', stiffness: 240, damping: 16, delay: 0.68 + i * 0.07 }}
+                  className="px-3 h-7 rounded-full text-[10px] font-semibold flex items-center"
+                  style={{ background: i === 0 ? '#16a34a' : '#16a34a18', color: i === 0 ? '#fff' : '#16a34a' }}
+                >
+                  {cat}
+                </motion.div>
+              ))}
+            </motion.div>
 
-            {/* Service cards — perspective flip */}
-            <div className="grid grid-cols-3 gap-3" style={{ perspective: '600px' }}>
-              {[0.94, 1.05, 1.16].map((delay, i) => (
+            {/* Product listing rows — slide from right */}
+            <div className="flex flex-col gap-2.5 flex-1">
+              {[0, 1, 2].map((i) => (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, rotateX: 40, y: 14 }}
-                  animate={visible ? { opacity: 1, rotateX: 0, y: 0 } : {}}
-                  transition={{ duration: 0.42, delay, ease: [0.22, 1, 0.36, 1] }}
-                  className="bg-bg-2 border border-border rounded-lg p-3"
+                  initial={{ opacity: 0, x: 16 }}
+                  animate={visible ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 0.32, delay: 0.88 + i * 0.1 }}
+                  className="flex items-center gap-3 bg-white/80 border border-border/40 rounded-xl px-3.5 py-2.5"
                 >
-                  <div className="w-5 h-5 rounded-full mb-2" style={{ background: `rgba(33,114,181,${0.15 + i * 0.06})` }} />
-                  <div className="w-full h-2 bg-fg/15 rounded mb-1.5" />
-                  <div className="w-2/3 h-1.5 bg-fg/8 rounded" />
+                  <div className="w-10 h-10 rounded-lg shrink-0" style={{ background: '#16a34a18', border: '1px solid #16a34a28' }} />
+                  <div className="flex-1">
+                    <div className="w-24 h-2 bg-[#171717]/20 rounded mb-1.5" />
+                    <div className="w-16 h-1.5 bg-[#171717]/10 rounded" />
+                  </div>
+                  <div className="w-14 h-7 rounded-lg shrink-0" style={{ background: '#16a34a' }} />
                 </motion.div>
               ))}
             </div>
           </div>
 
-          {/* Google SERP result — slides in from right */}
+          {/* Launch badge — slides in from right */}
           <motion.div
             initial={{ opacity: 0, x: 28 }}
             animate={visible ? { opacity: 1, x: 0 } : {}}
             transition={{ type: 'spring', stiffness: 190, damping: 20, delay: 1.2 }}
             className="absolute bottom-4 right-4 bg-white border rounded-xl p-3 shadow-card-hover"
-            style={{ borderColor: 'rgba(33,114,181,0.18)', maxWidth: '168px' }}
+            style={{ borderColor: 'rgba(22,163,74,0.2)', maxWidth: '168px' }}
           >
-            <p className="text-[8px] font-mono text-green-600 mb-0.5">artadent.no</p>
-            <p className="text-[9px] font-semibold text-fg mb-1 leading-tight">Tannlege Bergen – Artadent</p>
-            <p className="text-[8px] text-fg-muted leading-tight">Moderne tannklinikk i Bergen sentrum...</p>
-            <div className="flex items-center gap-0.5 mt-1.5">
-              {[0, 1, 2, 3, 4].map((i) => (
-                <motion.span
-                  key={i}
-                  initial={{ opacity: 0, scale: 0.4 }}
-                  animate={visible ? { opacity: 1, scale: 1 } : {}}
-                  transition={{ type: 'spring', stiffness: 320, damping: 16, delay: 1.35 + i * 0.05 }}
-                  className="text-yellow-400 text-[9px]"
-                >
-                  ★
-                </motion.span>
-              ))}
+            <p className="text-[8px] font-mono text-green-600 mb-0.5">sportsbytte.no</p>
+            <p className="text-[9px] font-semibold text-fg mb-1 leading-tight">Sportsbytte – Kjøp og selg sportsutstyr</p>
+            <p className="text-[8px] text-fg-muted leading-tight">Norges markedsplass for brukt utstyr...</p>
+            <div className="flex items-center gap-1 mt-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+              <span className="text-[8px] font-semibold text-green-600">Ny plattform live</span>
             </div>
           </motion.div>
         </div>
@@ -476,7 +462,7 @@ function ProjectBrowserMockup({ project, visible }: { project: Project; visible:
         </div>
       )}
 
-      {slug !== 'artadent' && slug !== 'marbesa-project-94' && slug !== 'gv-rentals' && slug !== 'ho-orbit' && (
+      {slug !== 'sportsbytte' && slug !== 'marbesa-project-94' && slug !== 'gv-rentals' && slug !== 'ho-orbit' && (
         <div className="flex-1 relative h-full">
           <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #f0f4fb 0%, #e8f0f9 50%, #f8f8f8 100%)' }} />
           <div className="absolute inset-0 flex items-center justify-center">

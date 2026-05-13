@@ -29,7 +29,7 @@ export function WebMockup({ visible }: { visible: boolean }) {
             transition={{ delay: 0.55 }}
             className="text-[9px] text-fg-muted font-mono relative z-10"
           >
-            artadent.no
+            sportsbytte.no
           </motion.span>
         </div>
       </div>

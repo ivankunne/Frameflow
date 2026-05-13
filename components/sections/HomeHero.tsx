@@ -135,17 +135,17 @@ export default function HomeHero() {
             className="block lg:hidden mt-8"
           >
             <div className="grid grid-cols-2 gap-3">
-              {/* Artadent result card */}
+              {/* Sportsbytte result card */}
               <div className="bg-white border border-border rounded-xl p-3.5 shadow-card relative overflow-hidden">
-                <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-accent to-blue-400" />
-                <p className="text-[9px] font-semibold text-fg-muted uppercase tracking-widest mb-1">Web · SEO</p>
-                <p className="text-xs font-bold text-fg mb-3">Artadent</p>
+                <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-green-500 to-green-400" />
+                <p className="text-[9px] font-semibold text-fg-muted uppercase tracking-widest mb-1">Web · Branding</p>
+                <p className="text-xs font-bold text-fg mb-3">Sportsbytte</p>
                 <div className="flex items-end gap-0.5 h-7 mb-2">
                   {[30, 42, 55, 68, 82, 100].map((h, i) => (
                     <motion.div
                       key={i}
                       className="flex-1 rounded-sm"
-                      style={{ background: `rgba(33,114,181,${0.25 + i * 0.13})` }}
+                      style={{ background: `rgba(22,163,74,${0.25 + i * 0.13})` }}
                       initial={{ height: 0 }}
                       animate={isInView ? { height: `${h * 0.28}px` } : {}}
                       transition={{ duration: 0.4, delay: 0.7 + i * 0.06, ease: 'easeOut' }}
@@ -153,8 +153,8 @@ export default function HomeHero() {
                   ))}
                 </div>
                 <div className="flex items-baseline gap-1">
-                  <span className="text-sm font-bold text-accent">+140%</span>
-                  <span className="text-[9px] text-fg-muted">trafikk</span>
+                  <span className="text-sm font-bold text-green-600">Live</span>
+                  <span className="text-[9px] text-fg-muted">ny plattform</span>
                 </div>
               </div>
 

@@ -20,7 +20,7 @@ const stats = [
     value: 140,
     suffix: '%',
     label: 'Mer organisk trafikk',
-    note: 'Artadent · 3 måneder etter lansering',
+    note: 'Sportsbytte · måneder etter lansering',
   },
   {
     value: 24,

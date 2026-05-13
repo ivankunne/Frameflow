@@ -5,12 +5,12 @@ import { motion, useInView } from 'framer-motion'
 
 const testimonials = [
   {
-    quote: 'Vi lå ikke synlige på Google i det hele tatt. Etter seks uker med ny nettside fra Frameflow rangerte vi på side 1 for "tannlege Bergen". Antall nye pasienter har økt merkbart, og vi angrer ikke et sekund på investeringen.',
-    name: 'Kari Nilsen',
+    quote: 'Frameflow ga Sportsbytte en profesjonell nettside og en visuell identitet vi er stolte av å vise frem. Resultatet er en moderne plattform som tiltrekker brukere og skaper engasjement – langt bedre enn det vi hadde før.',
+    name: 'Thomas H.',
     role: 'Daglig leder',
-    company: 'Artadent',
-    service: 'Web design + SEO',
-    initials: 'KN',
+    company: 'Sportsbytte',
+    service: 'Web design + Branding',
+    initials: 'TH',
   },
   {
     quote: 'Frameflow leverte en app som teamet vårt faktisk bruker hver dag. Fra idé til ferdig produkt var prosessen strukturert og smidig – Ivan var tett på hele veien, og det merkes i sluttproduktet.',
