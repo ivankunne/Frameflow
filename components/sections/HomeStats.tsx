@@ -11,10 +11,10 @@ const stats = [
     note: 'For bedrifter i Bergen og Vestland',
   },
   {
-    value: 4,
+    value: 7,
     suffix: '',
     label: 'Tjenester under ett tak',
-    note: 'Web, foto, sosiale medier og branding',
+    note: 'Web, SEO, AI, foto, sosiale medier og mer',
   },
   {
     value: 140,
