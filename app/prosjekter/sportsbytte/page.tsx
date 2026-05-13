@@ -28,7 +28,7 @@ const creativeWorkSchema = {
   url: 'https://www.frameflow.no/prosjekter/sportsbytte',
   creator: { '@id': 'https://www.frameflow.no/#organization' },
   dateCreated: '2025',
-  keywords: 'Web design, Branding, sportsbytte, brukt sportsutstyr, Norge',
+  keywords: 'Web design, Branding, SEO, sportsbytte, brukt sportsutstyr, Norge',
   locationCreated: { '@type': 'Place', name: 'Bergen, Norge' },
 }
 

@@ -28,7 +28,7 @@ const creativeWorkSchema = {
   url: 'https://www.frameflow.no/prosjekter/ho-orbit',
   creator: { '@id': 'https://www.frameflow.no/#organization' },
   dateCreated: '2025',
-  keywords: 'App utvikling, React, Full-stack, Workflow, Team collaboration',
+  keywords: 'App utvikling, Branding, React, Full-stack, Workflow, Team collaboration',
   locationCreated: { '@type': 'Place', name: 'Bergen, Norge' },
 }
 

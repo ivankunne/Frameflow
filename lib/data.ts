@@ -1068,7 +1068,7 @@ export const projects: Project[] = [
     fullDescription:
       'h-orbit er en musikkplattform designet for spirende artister. Vi bygde en intuitiv app hvor musikere kan dele musikken sin, finne samarbeidsmuligheter med andre artister, oppdage arrangementer og musikkrelaterte muligheter – alt på ett sted.',
     challenge: 'Unge musikere manglet en sentralisert plass for å dele musikken sin, finne samarbeid og oppdage relevante arrangementer. De måtte bruke flere plattformer (SoundCloud, Instagram, e-post) og mistet ofte muligheter.',
-    tags: ['App utvikling'],
+    tags: ['App utvikling', 'Branding'],
     location: 'Amsterdam, Nederland',
     year: '2026',
     results: [
@@ -1086,7 +1086,7 @@ export const projects: Project[] = [
     fullDescription:
       'Sportsbytte er en norsk plattform for kjøp, salg og bytte av brukt sportsutstyr. Plattformen trengte en moderne nettside og sterk visuell identitet som appellerte til sportsinteresserte nordmenn og forenklet prosessen med å finne og tilby utstyr.',
     challenge: 'Plattformen manglet en profesjonell digital tilstedeværelse som reflekterte ambisjonene til en nasjonal markedsplass. Den eksisterende løsningen var utdatert og konverterte dårlig – potensielle brukere fant ikke frem til tilbudene.',
-    tags: ['Web design', 'Branding'],
+    tags: ['Web design', 'Branding', 'SEO'],
     location: 'Norge',
     year: '2026',
     results: [
