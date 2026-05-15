@@ -1,9 +1,11 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Link from 'next/link'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 
 export default function CookieBanner() {
+  const t = useTranslations('cookies')
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
@@ -32,9 +34,9 @@ export default function CookieBanner() {
     >
       <div className="max-w-3xl mx-auto bg-bg border border-border rounded-2xl shadow-card-hover px-6 py-5 flex flex-col sm:flex-row sm:items-center gap-4">
         <p className="text-sm text-fg-muted flex-1 leading-relaxed">
-          Vi bruker informasjonskapsler for å forbedre brukeropplevelsen og håndtere henvendelser via kontaktskjemaet.{' '}
+          {t('description')}{' '}
           <Link href="/personvern" className="text-accent hover:underline font-medium">
-            Les mer
+            {t('readMore')}
           </Link>
           .
         </p>
@@ -43,13 +45,13 @@ export default function CookieBanner() {
             onClick={reject}
             className="text-sm font-medium text-fg-muted hover:text-fg border border-border px-4 py-2.5 rounded-lg transition-colors min-h-[44px] bg-bg-2"
           >
-            Avslå
+            {t('decline')}
           </button>
           <button
             onClick={accept}
             className="text-sm font-semibold bg-accent hover:bg-accent-hover text-white px-5 py-2.5 rounded-lg transition-colors min-h-[44px] shadow-blue-sm"
           >
-            Godta
+            {t('accept')}
           </button>
         </div>
       </div>

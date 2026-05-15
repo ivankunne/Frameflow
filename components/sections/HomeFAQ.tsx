@@ -1,47 +1,42 @@
 'use client'
 
 import { useState, useRef } from 'react'
-import Link from 'next/link'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 
-const faqs = [
-  { q: 'Hva koster en nettside i Bergen?', a: 'En bedriftsnettside starter fra 12 000 kr. Prisen avhenger av omfang, funksjonalitet og design. Vi gir alltid fast pris – ingen overraskelser etterpå. Be om et uforpliktende tilbud, så får du et konkret tall innen 24 timer.' },
-  { q: 'Hvilke tjenester tilbyr dere?', a: 'Frameflow leverer webdesign, app utvikling, foto og video produksjon, branding og sosiale medier – alt under ett tak. Vi skreddersyr tjenestene til din bedrift og leverer målbare resultater.' },
-  { q: 'Hva gjør Frameflow annerledes enn andre byrå?', a: 'Du snakker alltid direkte med Ivan – personen som faktisk gjør jobben. Ingen mellommenn, ingen junior-leveranser. Vi kjenner Bergen-markedet og jobber med fast pris og fornøyd garanti.' },
-  { q: 'Hvor lang tid tar det å lage en nettside?', a: 'En standard bedriftsnettside tar typisk 3–6 uker fra oppstart til lansering, avhengig av omfang og tilgang på innhold. Vi setter opp en klar tidsplan fra dag én.' },
-  { q: 'Jobber dere kun med bedrifter i Bergen?', a: 'Vi har base i Bergen og kjenner det lokale markedet godt, men jobber like gjerne med bedrifter i resten av Norge og internasjonalt – som med Marbesa Project 94 i Marbella.' },
-  { q: 'Hvordan kommer vi i gang?', a: 'Book en gratis 30-minutters samtale via kontaktskjemaet, e-post eller ring +47 99 85 37 81. Ingen forpliktelser – vi hører om prosjektet ditt og forteller deg ærlig hva vi kan gjøre.' },
-  { q: 'Er Frameflow et webbyrå i Bergen?', a: 'Ja – Frameflow er et webbyrå i Bergen som hjelper bedrifter med å lage nettside, grafisk design og logodesign. Vi er i tillegg et markedsføringsbyrå med kompetanse innen foto, video og sosiale medier, slik at du kan få alt under ett tak.' },
-]
+function ChatWidget({ visible, chatResponds, chatExample, chatStart, msg1Client, msg1Ivan, msg2Client }: {
+  visible: boolean
+  chatResponds: string
+  chatExample: string
+  chatStart: string
+  msg1Client: string
+  msg1Ivan: string
+  msg2Client: string
+}) {
+  const chatMessages = [
+    { from: 'client', text: msg1Client },
+    { from: 'ivan', text: msg1Ivan },
+    { from: 'client', text: msg2Client },
+  ]
 
-const chatMessages = [
-  { from: 'client', text: 'Hei! Hva koster en nettside?' },
-  { from: 'ivan', text: 'Nettsider starter fra 12 000 kr. Book en gratis samtale, så gir vi deg fast pris!' },
-  { from: 'client', text: 'Perfekt, når passer det?' },
-]
-
-function ChatWidget({ visible }: { visible: boolean }) {
   return (
     <div className="mt-8 bg-white border border-border rounded-xl overflow-hidden shadow-card">
-      {/* Header */}
       <div className="flex items-center justify-between px-4 py-3 border-b border-border bg-bg-2">
         <div className="flex items-center gap-3">
-          <div className="relative">
-            <div className="w-7 h-7 rounded-full bg-accent flex items-center justify-center">
-              <span className="text-white text-[10px] font-bold display-text">FF</span>
-            </div>
+          <div className="w-7 h-7 rounded-full bg-accent flex items-center justify-center">
+            <span className="text-white text-[10px] font-bold display-text">FF</span>
           </div>
           <div>
             <p className="text-xs font-semibold text-fg leading-none">Ivan · Frameflow</p>
-            <p className="text-[10px] text-fg-muted mt-0.5">Svarer innen 24 timer</p>
+            <p className="text-[10px] text-fg-muted mt-0.5">{chatResponds}</p>
           </div>
         </div>
         <span className="text-[9px] font-semibold uppercase tracking-widest text-fg-muted bg-bg border border-border px-2 py-0.5 rounded-full">
-          Eksempel
+          {chatExample}
         </span>
       </div>
 
-      {/* Messages */}
       <div className="px-4 py-3 flex flex-col gap-2.5">
         {chatMessages.map((msg, i) => (
           <motion.div
@@ -61,7 +56,6 @@ function ChatWidget({ visible }: { visible: boolean }) {
           </motion.div>
         ))}
 
-        {/* Typing indicator */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={visible ? { opacity: 1 } : {}}
@@ -79,7 +73,6 @@ function ChatWidget({ visible }: { visible: boolean }) {
         </motion.div>
       </div>
 
-      {/* CTA */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={visible ? { opacity: 1 } : {}}
@@ -90,7 +83,7 @@ function ChatWidget({ visible }: { visible: boolean }) {
           href="/kontakt"
           className="w-full flex items-center justify-center gap-1.5 text-xs font-semibold bg-accent hover:bg-accent-hover text-white py-2.5 rounded-lg transition-colors"
         >
-          Start samtale →
+          {chatStart}
         </Link>
       </motion.div>
     </div>
@@ -101,24 +94,41 @@ export default function HomeFAQ() {
   const [open, setOpen] = useState<number | null>(0)
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-80px' })
+  const t = useTranslations('home.faq')
+
+  const faqs = [
+    { q: t('q1'), a: t('a1') },
+    { q: t('q2'), a: t('a2') },
+    { q: t('q3'), a: t('a3') },
+    { q: t('q4'), a: t('a4') },
+    { q: t('q5'), a: t('a5') },
+    { q: t('q6'), a: t('a6') },
+    { q: t('q7'), a: t('a7') },
+  ]
 
   return (
     <section ref={ref} className="py-16 md:py-24 lg:py-32 px-6 lg:px-8 bg-bg-2">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
 
-          {/* Left */}
           <motion.div initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5 }} className="lg:col-span-4">
-            <span className="inline-flex items-center gap-2 text-accent text-xs font-semibold uppercase tracking-widest mb-6"><span className="w-4 h-px bg-accent" /> FAQ</span>
-            <h2 className="display-text text-3xl sm:text-4xl lg:text-5xl text-fg mb-6 leading-tight">Ofte stilte spørsmål</h2>
-            <p className="text-fg-muted leading-relaxed mb-6">Ikke funnet svaret? Ta kontakt direkte – vi svarer raskt.</p>
+            <span className="inline-flex items-center gap-2 text-accent text-xs font-semibold uppercase tracking-widest mb-6"><span className="w-4 h-px bg-accent" /> {t('label')}</span>
+            <h2 className="display-text text-3xl sm:text-4xl lg:text-5xl text-fg mb-6 leading-tight">{t('title')}</h2>
+            <p className="text-fg-muted leading-relaxed mb-6">{t('subtitle')}</p>
             <Link href="/kontakt" className="text-sm font-semibold text-fg border border-border hover:border-accent hover:text-accent px-6 py-3 rounded-lg transition-all duration-200 inline-flex items-center gap-2 min-h-[44px] bg-white shadow-card">
-              Ta kontakt →
+              {t('contact')}
             </Link>
-            <ChatWidget visible={isInView} />
+            <ChatWidget
+              visible={isInView}
+              chatResponds={t('chatResponds')}
+              chatExample={t('chatExample')}
+              chatStart={t('chatStart')}
+              msg1Client={t('msg1Client')}
+              msg1Ivan={t('msg1Ivan')}
+              msg2Client={t('msg2Client')}
+            />
           </motion.div>
 
-          {/* Accordion */}
           <div className="lg:col-span-8">
             {faqs.map((faq, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 12 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.4, delay: 0.1 + i * 0.07 }} className={`bg-white border rounded-xl mb-3 overflow-hidden transition-all duration-200 ${open === i ? 'border-accent shadow-blue-sm' : 'border-border shadow-card'}`}>

@@ -1,8 +1,9 @@
 'use client'
 
-import Link from 'next/link'
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 import type { Project } from '@/lib/data'
 
 // ─── Project-specific browser mockup ──────────────────────────────────────
@@ -479,6 +480,7 @@ function ProjectBrowserMockup({ project, visible }: { project: Project; visible:
 }
 
 export default function ProjectPageTemplate({ project }: { project: Project }) {
+  const t = useTranslations('projectTemplate')
   const heroRef = useRef(null)
   const heroInView = useInView(heroRef, { once: true })
   const contentRef = useRef(null)
@@ -497,9 +499,9 @@ export default function ProjectPageTemplate({ project }: { project: Project }) {
             aria-label="Brødsmuler"
             className="flex items-center gap-2 text-xs text-fg-muted font-medium mb-8"
           >
-            <Link href="/" className="hover:text-fg transition-colors">Hjem</Link>
+            <Link href="/" className="hover:text-fg transition-colors">{t('breadcrumbHome')}</Link>
             <span>/</span>
-            <Link href="/prosjekter" className="hover:text-fg transition-colors">Prosjekter</Link>
+            <Link href="/prosjekter" className="hover:text-fg transition-colors">{t('breadcrumbProjects')}</Link>
             <span>/</span>
             <span className="text-fg">{project.title}</span>
           </motion.nav>
@@ -530,9 +532,9 @@ export default function ProjectPageTemplate({ project }: { project: Project }) {
               className="lg:col-span-4 flex flex-col gap-6 lg:border-l lg:border-border lg:pl-12 self-end pb-2"
             >
               {[
-                { label: 'Klient', value: project.client },
-                { label: 'Sted', value: project.location },
-                { label: 'År', value: project.year },
+                { label: t('labelClient'), value: project.client },
+                { label: t('labelLocation'), value: project.location },
+                { label: t('labelYear'), value: project.year },
               ].map((item) => (
                 <div key={item.label}>
                   <p className="text-xs font-semibold text-fg-muted uppercase tracking-widest mb-1">{item.label}</p>
@@ -562,7 +564,7 @@ export default function ProjectPageTemplate({ project }: { project: Project }) {
               className="absolute -top-4 -left-4 z-10 bg-white border border-border rounded-xl px-3 py-2 shadow-card hidden sm:flex items-center gap-2"
             >
               <span className="w-2 h-2 rounded-full bg-green-500" />
-              <span className="text-[11px] font-semibold text-fg">Lansert · {project.year}</span>
+              <span className="text-[11px] font-semibold text-fg">{t('launched')} · {project.year}</span>
             </motion.div>
 
             <ProjectBrowserMockup project={project} visible={contentInView} />
@@ -594,7 +596,7 @@ export default function ProjectPageTemplate({ project }: { project: Project }) {
                 transition={{ duration: 0.5, delay: 0.1 }}
               >
                 <span className="inline-flex items-center gap-2 text-fg-muted text-xs font-semibold uppercase tracking-widest mb-4">
-                  <span className="w-4 h-px bg-fg-muted/40" /> Utfordring
+                  <span className="w-4 h-px bg-fg-muted/40" /> {t('labelChallenge')}
                 </span>
                 <p className="text-fg-muted text-sm leading-relaxed">{project.challenge}</p>
               </motion.div>
@@ -607,7 +609,7 @@ export default function ProjectPageTemplate({ project }: { project: Project }) {
               transition={{ duration: 0.5, delay: 0.18 }}
             >
               <span className="inline-flex items-center gap-2 text-accent text-xs font-semibold uppercase tracking-widest mb-4">
-                <span className="w-4 h-px bg-accent" /> Løsning
+                <span className="w-4 h-px bg-accent" /> {t('labelSolution')}
               </span>
               <p className="text-fg-muted text-sm leading-relaxed">{project.fullDescription}</p>
             </motion.div>
@@ -620,7 +622,7 @@ export default function ProjectPageTemplate({ project }: { project: Project }) {
                 transition={{ duration: 0.5, delay: 0.26 }}
               >
                 <span className="inline-flex items-center gap-2 text-green-600 text-xs font-semibold uppercase tracking-widest mb-4">
-                  <span className="w-4 h-px bg-green-500" /> Resultater
+                  <span className="w-4 h-px bg-green-500" /> {t('labelResults')}
                 </span>
                 <ul className="flex flex-col gap-3">
                   {project.results.map((result, i) => (
@@ -642,15 +644,15 @@ export default function ProjectPageTemplate({ project }: { project: Project }) {
       <section className="py-16 px-6 lg:px-8 bg-white border-t border-border">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-center justify-between gap-8">
           <div>
-            <h2 className="display-text text-3xl text-fg mb-2">Lignende resultater for deg?</h2>
-            <p className="text-fg-muted">La oss ta en gratis prat om prosjektet ditt.</p>
+            <h2 className="display-text text-3xl text-fg mb-2">{t('ctaH2')}</h2>
+            <p className="text-fg-muted">{t('ctaDesc')}</p>
           </div>
           <div className="flex flex-wrap gap-3 shrink-0">
             <Link href="/prosjekter" className="text-sm font-semibold text-fg border border-border hover:border-accent hover:text-accent px-6 py-3 rounded-lg transition-all duration-200 min-h-[44px] inline-flex items-center bg-white shadow-card">
-              Alle prosjekter
+              {t('ctaAllProjects')}
             </Link>
             <Link href="/tilbud" className="text-sm font-semibold bg-accent hover:bg-accent-hover text-white px-6 py-3 rounded-lg transition-colors min-h-[44px] inline-flex items-center gap-2 shadow-blue-sm">
-              Be om tilbud
+              {t('ctaQuote')}
             </Link>
           </div>
         </div>

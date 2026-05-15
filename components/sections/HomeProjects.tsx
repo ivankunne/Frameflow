@@ -1,76 +1,35 @@
 'use client'
 
-import Link from 'next/link'
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-
-// ─── Project preview visuals ────────────────────────────────────────────────
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 
 function SportsbyttePreview({ visible }: { visible: boolean }) {
-  // Animation language: marketplace cards slide in, sport category pills pop in
   const categories = ['Ski', 'Sykkel', 'Løping']
   return (
     <div className="h-36 rounded-lg overflow-hidden relative" style={{ background: '#f0fdf4' }}>
       <div className="absolute inset-0 p-3 flex flex-col">
-        {/* Nav — fade down */}
-        <motion.div
-          initial={{ opacity: 0, y: -6 }}
-          animate={visible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.3, delay: 0.3 }}
-          className="flex items-center justify-between mb-3"
-        >
+        <motion.div initial={{ opacity: 0, y: -6 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.3, delay: 0.3 }} className="flex items-center justify-between mb-3">
           <div className="w-14 h-2 bg-[#16a34a]/50 rounded" />
-          <div className="flex gap-1.5">
-            {[...Array(3)].map((_, i) => (
-              <div key={i} className="w-6 h-1.5 bg-[#16a34a]/20 rounded" />
-            ))}
-          </div>
+          <div className="flex gap-1.5">{[...Array(3)].map((_, i) => <div key={i} className="w-6 h-1.5 bg-[#16a34a]/20 rounded" />)}</div>
         </motion.div>
-
-        {/* Category pills — scale pop stagger */}
         <div className="flex gap-1.5 mb-3">
           {categories.map((cat, i) => (
-            <motion.div
-              key={cat}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={visible ? { opacity: 1, scale: 1 } : {}}
-              transition={{ type: 'spring', stiffness: 240, damping: 16, delay: 0.42 + i * 0.08 }}
-              className="px-2 h-5 rounded-full text-[8px] font-semibold flex items-center"
-              style={{ background: i === 0 ? '#16a34a' : '#16a34a18', color: i === 0 ? '#fff' : '#16a34a' }}
-            >
-              {cat}
-            </motion.div>
+            <motion.div key={cat} initial={{ opacity: 0, scale: 0.8 }} animate={visible ? { opacity: 1, scale: 1 } : {}} transition={{ type: 'spring', stiffness: 240, damping: 16, delay: 0.42 + i * 0.08 }} className="px-2 h-5 rounded-full text-[8px] font-semibold flex items-center" style={{ background: i === 0 ? '#16a34a' : '#16a34a18', color: i === 0 ? '#fff' : '#16a34a' }}>{cat}</motion.div>
           ))}
         </div>
-
-        {/* Product listing cards — slide from right */}
         <div className="flex flex-col gap-1.5">
           {[0, 1].map((i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, x: 12 }}
-              animate={visible ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.3, delay: 0.62 + i * 0.1 }}
-              className="flex items-center gap-2 bg-white/70 rounded-md px-2 py-1.5"
-            >
+            <motion.div key={i} initial={{ opacity: 0, x: 12 }} animate={visible ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.3, delay: 0.62 + i * 0.1 }} className="flex items-center gap-2 bg-white/70 rounded-md px-2 py-1.5">
               <div className="w-6 h-6 rounded shrink-0" style={{ background: '#16a34a18', border: '1px solid #16a34a28' }} />
-              <div className="flex-1">
-                <div className="w-16 h-1.5 bg-[#171717]/20 rounded mb-1" />
-                <div className="w-10 h-1 bg-[#171717]/10 rounded" />
-              </div>
+              <div className="flex-1"><div className="w-16 h-1.5 bg-[#171717]/20 rounded mb-1" /><div className="w-10 h-1 bg-[#171717]/10 rounded" /></div>
               <div className="w-8 h-4 rounded" style={{ background: '#16a34a' }} />
             </motion.div>
           ))}
         </div>
       </div>
-
-      {/* Launch badge — spring pop */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.75, y: 6 }}
-        animate={visible ? { opacity: 1, scale: 1, y: 0 } : {}}
-        transition={{ type: 'spring', stiffness: 220, damping: 18, delay: 0.95 }}
-        className="absolute bottom-2.5 right-2.5 bg-white rounded-lg px-2.5 py-1.5 shadow-card flex items-center gap-1.5"
-      >
+      <motion.div initial={{ opacity: 0, scale: 0.75, y: 6 }} animate={visible ? { opacity: 1, scale: 1, y: 0 } : {}} transition={{ type: 'spring', stiffness: 220, damping: 18, delay: 0.95 }} className="absolute bottom-2.5 right-2.5 bg-white rounded-lg px-2.5 py-1.5 shadow-card flex items-center gap-1.5">
         <span className="text-green-500 text-[10px] font-bold">●</span>
         <span className="text-[10px] font-semibold text-fg">Ny plattform live</span>
       </motion.div>
@@ -79,143 +38,42 @@ function SportsbyttePreview({ visible }: { visible: boolean }) {
 }
 
 function MarbesaPreview({ visible }: { visible: boolean }) {
-  // Animation language: luxury reveal — image wipes in from right, text fades left-to-right
   return (
-    <div
-      className="h-36 rounded-lg overflow-hidden relative"
-      style={{ background: 'linear-gradient(160deg, #12100e 0%, #1c1710 50%, #241d13 100%)' }}
-    >
+    <div className="h-36 rounded-lg overflow-hidden relative" style={{ background: 'linear-gradient(160deg, #12100e 0%, #1c1710 50%, #241d13 100%)' }}>
       <div className="absolute inset-0 flex">
-        {/* Left: text — staggered fade + x-slide */}
         <div className="flex-1 p-3 flex flex-col justify-center gap-1.5">
-          <motion.div
-            initial={{ opacity: 0, x: -10 }}
-            animate={visible ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.35, delay: 0.32 }}
-            className="w-8 h-1.5 rounded"
-            style={{ background: '#c9a96e' }}
-          />
-          <motion.div
-            initial={{ opacity: 0, x: -10 }}
-            animate={visible ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.3, delay: 0.44 }}
-            className="w-20 h-3 bg-white/25 rounded"
-          />
-          <motion.div
-            initial={{ opacity: 0, x: -10 }}
-            animate={visible ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.28, delay: 0.54 }}
-            className="w-14 h-2.5 bg-white/15 rounded"
-          />
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={visible ? { opacity: 1, scale: 1 } : {}}
-            transition={{ type: 'spring', stiffness: 200, damping: 16, delay: 0.68 }}
-            className="w-14 h-5 rounded-md mt-1"
-            style={{ background: '#c9a96e' }}
-          />
+          <motion.div initial={{ opacity: 0, x: -10 }} animate={visible ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.35, delay: 0.32 }} className="w-8 h-1.5 rounded" style={{ background: '#c9a96e' }} />
+          <motion.div initial={{ opacity: 0, x: -10 }} animate={visible ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.3, delay: 0.44 }} className="w-20 h-3 bg-white/25 rounded" />
+          <motion.div initial={{ opacity: 0, x: -10 }} animate={visible ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.28, delay: 0.54 }} className="w-14 h-2.5 bg-white/15 rounded" />
+          <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={visible ? { opacity: 1, scale: 1 } : {}} transition={{ type: 'spring', stiffness: 200, damping: 16, delay: 0.68 }} className="w-14 h-5 rounded-md mt-1" style={{ background: '#c9a96e' }} />
         </div>
-
-        {/* Right: image — wipes in from the right edge */}
         <div className="w-24 m-2 rounded-md overflow-hidden flex-shrink-0 relative">
-          <div
-            className="absolute inset-0"
-            style={{ background: 'linear-gradient(160deg, #2a2016 0%, #3d3020 50%, #2a2016 100%)' }}
-          />
-          {/* Wipe reveal curtain */}
-          <motion.div
-            initial={{ x: 0 }}
-            animate={visible ? { x: '100%' } : {}}
-            transition={{ duration: 0.55, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute inset-0 z-10"
-            style={{ background: '#1c1710' }}
-          />
-          <div className="relative h-full flex items-center justify-center z-0">
-            <div className="text-center">
-              <div className="w-12 h-1.5 mx-auto rounded mb-1.5" style={{ background: 'rgba(201,169,110,0.45)' }} />
-              <div className="w-8 h-1 mx-auto rounded" style={{ background: 'rgba(201,169,110,0.25)' }} />
-            </div>
-          </div>
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(160deg, #2a2016 0%, #3d3020 50%, #2a2016 100%)' }} />
+          <motion.div initial={{ x: 0 }} animate={visible ? { x: '100%' } : {}} transition={{ duration: 0.55, delay: 0.5, ease: [0.22, 1, 0.36, 1] }} className="absolute inset-0 z-10" style={{ background: '#1c1710' }} />
+          <div className="relative h-full flex items-center justify-center z-0"><div className="text-center"><div className="w-12 h-1.5 mx-auto rounded mb-1.5" style={{ background: 'rgba(201,169,110,0.45)' }} /><div className="w-8 h-1 mx-auto rounded" style={{ background: 'rgba(201,169,110,0.25)' }} /></div></div>
         </div>
       </div>
-
-      {/* Gold shimmer */}
-      <div
-        className="absolute inset-0 opacity-5 pointer-events-none"
-        style={{
-          background: 'linear-gradient(45deg, transparent 40%, rgba(201,169,110,0.6) 50%, transparent 60%)',
-        }}
-      />
     </div>
   )
 }
 
 function GvRentalsPreview({ visible }: { visible: boolean }) {
-  // Animation language: listings slide in from right (not left), availability dots pulse in
-  const listings = [
-    { color: '#34C759', label: 'Villa Sol', avail: true },
-    { color: '#2172b5', label: 'Ocean View', avail: false },
-    { color: '#f59e0b', label: 'Casa Blanca', avail: true },
-  ]
+  const listings = [{ color: '#34C759', label: 'Villa Sol', avail: true }, { color: '#2172b5', label: 'Ocean View', avail: false }, { color: '#f59e0b', label: 'Casa Blanca', avail: true }]
   return (
     <div className="h-36 rounded-lg overflow-hidden relative bg-white border border-border/40">
       <div className="absolute inset-0 p-2.5 flex flex-col gap-1.5">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: -6 }}
-          animate={visible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.28, delay: 0.3 }}
-          className="flex items-center justify-between pb-1.5 border-b border-border/40"
-        >
+        <motion.div initial={{ opacity: 0, y: -6 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.28, delay: 0.3 }} className="flex items-center justify-between pb-1.5 border-b border-border/40">
           <div className="w-14 h-2 bg-fg/20 rounded" />
-          <div className="flex gap-1">
-            <div className="w-5 h-4 bg-bg-2 border border-border rounded text-[8px] flex items-center justify-center text-fg-muted">
-              ≡
-            </div>
-            <div className="w-12 h-4 bg-accent rounded text-[8px] flex items-center justify-center text-white font-semibold">
-              Book
-            </div>
-          </div>
+          <div className="flex gap-1"><div className="w-5 h-4 bg-bg-2 border border-border rounded text-[8px] flex items-center justify-center text-fg-muted">≡</div><div className="w-12 h-4 bg-accent rounded text-[8px] flex items-center justify-center text-white font-semibold">Book</div></div>
         </motion.div>
-
-        {/* Listing rows — slide from right */}
         {listings.map((item, i) => (
-          <motion.div
-            key={item.label}
-            initial={{ opacity: 0, x: 14 }}
-            animate={visible ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.32, delay: 0.42 + i * 0.1 }}
-            className="flex items-center gap-2 bg-bg-2/60 rounded-md px-2 py-1.5"
-          >
-            <div
-              className="w-7 h-7 rounded shrink-0"
-              style={{ background: `${item.color}22`, border: `1px solid ${item.color}28` }}
-            />
-            <div className="flex-1">
-              <div className="w-14 h-1.5 bg-fg/20 rounded mb-1" />
-              <div className="w-10 h-1 bg-fg/10 rounded" />
-            </div>
-            {/* Availability dot */}
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={visible ? { scale: 1 } : {}}
-              transition={{ type: 'spring', stiffness: 280, damping: 14, delay: 0.65 + i * 0.1 }}
-              className="w-2 h-2 rounded-full shrink-0"
-              style={{ background: item.avail ? '#34C759' : '#94a3b8' }}
-            />
+          <motion.div key={item.label} initial={{ opacity: 0, x: 14 }} animate={visible ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.32, delay: 0.42 + i * 0.1 }} className="flex items-center gap-2 bg-bg-2/60 rounded-md px-2 py-1.5">
+            <div className="w-7 h-7 rounded shrink-0" style={{ background: `${item.color}22`, border: `1px solid ${item.color}28` }} />
+            <div className="flex-1"><div className="w-14 h-1.5 bg-fg/20 rounded mb-1" /><div className="w-10 h-1 bg-fg/10 rounded" /></div>
+            <motion.div initial={{ scale: 0 }} animate={visible ? { scale: 1 } : {}} transition={{ type: 'spring', stiffness: 280, damping: 14, delay: 0.65 + i * 0.1 }} className="w-2 h-2 rounded-full shrink-0" style={{ background: item.avail ? '#34C759' : '#94a3b8' }} />
           </motion.div>
         ))}
       </div>
-
-      {/* Booking badge */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.75, y: 6 }}
-        animate={visible ? { opacity: 1, scale: 1, y: 0 } : {}}
-        transition={{ type: 'spring', stiffness: 220, damping: 18, delay: 0.92 }}
-        className="absolute bottom-2 right-2 bg-[#34C759] rounded-lg px-2 py-1 shadow-card"
-      >
-        <span className="text-white text-[9px] font-bold">↑ Økt booking</span>
-      </motion.div>
     </div>
   )
 }
@@ -224,146 +82,58 @@ function HoOrbitPreview({ visible }: { visible: boolean }) {
   return (
     <div className="h-36 rounded-lg overflow-hidden relative bg-gradient-to-br from-cyan-900 to-cyan-800">
       <div className="absolute inset-0 p-2.5 flex">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5, rotate: -20 }}
-          animate={visible ? { opacity: 1, scale: 1, rotate: 0 } : {}}
-          transition={{ type: 'spring', stiffness: 220, damping: 16, delay: 0.3 }}
-          className="w-8 h-8 rounded-lg bg-cyan-400 flex items-center justify-center shrink-0 mb-auto"
-        >
-          <span className="text-cyan-900 text-[9px] font-bold">HO</span>
-        </motion.div>
+        <motion.div initial={{ opacity: 0, scale: 0.5, rotate: -20 }} animate={visible ? { opacity: 1, scale: 1, rotate: 0 } : {}} transition={{ type: 'spring', stiffness: 220, damping: 16, delay: 0.3 }} className="w-8 h-8 rounded-lg bg-cyan-400 flex items-center justify-center shrink-0 mb-auto"><span className="text-cyan-900 text-[9px] font-bold">HO</span></motion.div>
         <div className="flex-1 flex flex-col gap-1 px-1.5 ml-1.5">
           <motion.div initial={{ opacity: 0, x: -10 }} animate={visible ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.3, delay: 0.4 }} className="w-12 h-1.5 bg-cyan-500/40 rounded" />
-          {[0.5, 0.8, 1.1].map((delay) => (
-            <motion.div key={delay} initial={{ opacity: 0, x: -10 }} animate={visible ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.28, delay }} className="w-10 h-1 bg-cyan-400/30 rounded" />
-          ))}
+          {[0.5, 0.8, 1.1].map((delay) => (<motion.div key={delay} initial={{ opacity: 0, x: -10 }} animate={visible ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.28, delay }} className="w-10 h-1 bg-cyan-400/30 rounded" />))}
         </div>
         <div className="flex flex-col gap-1.5 ml-auto">
-          {[{ color: '#3b82f6', delay: 0.5 }, { color: '#fbbf24', delay: 0.65 }, { color: '#34c759', delay: 0.8 }].map((task, i) => (
-            <motion.div key={i} initial={{ opacity: 0, x: 12 }} animate={visible ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.3, delay: task.delay }} className="w-10 h-3 rounded-md" style={{ background: task.color }} />
-          ))}
+          {[{ color: '#3b82f6', delay: 0.5 }, { color: '#fbbf24', delay: 0.65 }, { color: '#34c759', delay: 0.8 }].map((task, i) => (<motion.div key={i} initial={{ opacity: 0, x: 12 }} animate={visible ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.3, delay: task.delay }} className="w-10 h-3 rounded-md" style={{ background: task.color }} />))}
         </div>
       </div>
-      <motion.div
-        initial={{ opacity: 0, scale: 0.75, y: 6 }}
-        animate={visible ? { opacity: 1, scale: 1, y: 0 } : {}}
-        transition={{ type: 'spring', stiffness: 220, damping: 18, delay: 1.0 }}
-        className="absolute bottom-2.5 right-2.5 bg-green-500 rounded-lg px-2 py-1 shadow-card flex items-center gap-1"
-      >
-        <span className="text-white text-[9px] font-bold">Live</span>
-      </motion.div>
     </div>
   )
 }
 
-// ─── Project data ────────────────────────────────────────────────────────────
-const projects = [
-  {
-    slug: 'ho-orbit',
-    title: 'h-orbit',
-    description: 'Workflow-app som samler oppgaver, chat og dokumenter. 150+ team-medlemmer og 5000+ daglige interaksjoner.',
-    tags: ['App utvikling', 'Branding', 'Full-stack'],
-    location: 'Bergen, Norge',
-    result: '5000+ daily interactions',
-    color: '#06b6d4',
-    Preview: HoOrbitPreview,
-  },
-  {
-    slug: 'sportsbytte',
-    title: 'Sportsbytte',
-    description: 'Komplett webdesign og ny visuell identitet for Norges platform for kjøp, salg og bytte av brukt sportsutstyr.',
-    tags: ['Web design', 'Branding', 'SEO'],
-    location: 'Norge',
-    result: 'Ny plattform live',
-    color: '#16a34a',
-    Preview: SportsbyttePreview,
-  },
-  {
-    slug: 'marbesa-project-94',
-    title: 'Marbesa Project 94',
-    description: 'Luksus eiendomsnettside lansert på 3 uker. Genererte 12 kvalifiserte leads i første måned.',
-    tags: ['Web design', 'Branding'],
-    location: 'Marbella, Spania',
-    result: 'Premium luksusestetikk',
-    color: '#C8A882',
-    Preview: MarbesaPreview,
-  },
-  {
-    slug: 'gv-rentals',
-    title: 'GV Rentals',
-    description: 'Nettside og sosiale medier som økte bookingrate med 67% i første kvartal etter lansering.',
-    tags: ['Web design', 'Sosiale medier'],
-    location: 'Marbella, Spania',
-    result: '+67% bookingrate',
-    color: '#34C759',
-    Preview: GvRentalsPreview,
-  },
-]
-
 export default function HomeProjects() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-80px' })
+  const t = useTranslations('home.projects')
+
+  const projects = [
+    { slug: 'ho-orbit', title: 'h-orbit', description: t('horbitDesc'), tags: ['App utvikling', 'Branding', 'Full-stack'], location: 'Bergen, Norge', result: t('horbitStat'), color: '#06b6d4', Preview: HoOrbitPreview },
+    { slug: 'sportsbytte', title: 'Sportsbytte', description: t('sportsbytteDesc'), tags: ['Web design', 'Branding', 'SEO'], location: 'Norge', result: t('sportsbytteStat'), color: '#16a34a', Preview: SportsbyttePreview },
+    { slug: 'marbesa-project-94', title: 'Marbesa Project 94', description: t('marbesaDesc'), tags: ['Web design', 'Branding'], location: 'Marbella, Spania', result: t('marbesaStat'), color: '#C8A882', Preview: MarbesaPreview },
+    { slug: 'gv-rentals', title: 'GV Rentals', description: t('gvDesc'), tags: ['Web design', 'Sosiale medier'], location: 'Marbella, Spania', result: t('gvStat'), color: '#34C759', Preview: GvRentalsPreview },
+  ]
 
   return (
     <section ref={ref} className="py-16 md:py-24 lg:py-32 px-6 lg:px-8 bg-bg-2 overflow-hidden relative">
       <div className="max-w-7xl mx-auto relative">
-        {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5 }}
-          >
-            <span className="inline-flex items-center gap-2 text-accent text-xs font-semibold uppercase tracking-widest mb-4">
-              <span className="w-4 h-px bg-accent" /> Vårt arbeid
-            </span>
-            <h2 className="display-text text-3xl sm:text-4xl lg:text-5xl text-fg">Utvalgte prosjekter</h2>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5 }}>
+            <span className="inline-flex items-center gap-2 text-accent text-xs font-semibold uppercase tracking-widest mb-4"><span className="w-4 h-px bg-accent" /> {t('label')}</span>
+            <h2 className="display-text text-3xl sm:text-4xl lg:text-5xl text-fg">{t('title')}</h2>
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.1 }}>
             <Link href="/prosjekter" className="text-sm font-semibold text-fg-muted hover:text-fg transition-colors inline-flex items-center gap-1.5">
-              Se alle prosjekter <span aria-hidden>→</span>
+              {t('seeAll')} <span aria-hidden>→</span>
             </Link>
           </motion.div>
         </div>
 
-        {/* Project cards — 3 featured */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {projects.slice(0, 3).map(({ slug, title, description, tags, location, result, color, Preview }, i) => (
-            <motion.div
-              key={slug}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
-            >
-              <Link
-                href={`/prosjekter/${slug}`}
-                className="group block bg-white border border-border rounded-xl p-5 hover:border-accent transition-all duration-250 hover:shadow-blue-sm h-full"
-              >
-                {/* Animated project preview */}
-                <div className="mb-5">
-                  <Preview visible={isInView} />
-                </div>
-
-                {/* Tags */}
+          {projects.slice(0, 3).map(({ slug, title, description, tags, result, color, Preview }, i) => (
+            <motion.div key={slug} initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}>
+              <Link href={`/prosjekter/${slug}` as any} className="group block bg-white border border-border rounded-xl p-5 hover:border-accent transition-all duration-250 hover:shadow-blue-sm h-full">
+                <div className="mb-5"><Preview visible={isInView} /></div>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {tags.map((tag) => (
-                    <span key={tag} className="text-xs font-medium text-fg-muted">{tag}</span>
-                  ))}
+                  {tags.map((tag) => <span key={tag} className="text-xs font-medium text-fg-muted">{tag}</span>)}
                 </div>
-
-                {/* Title + description */}
                 <h3 className="display-text text-2xl text-fg mb-2 group-hover:text-accent transition-colors duration-200">{title}</h3>
                 <p className="text-fg-muted text-sm leading-relaxed mb-6">{description}</p>
-
-                {/* Footer */}
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold px-2.5 py-1 rounded-full" style={{ color, backgroundColor: `${color}18` }}>
-                    {result}
-                  </span>
+                  <span className="text-xs font-semibold px-2.5 py-1 rounded-full" style={{ color, backgroundColor: `${color}18` }}>{result}</span>
                   <span aria-hidden className="text-fg-muted group-hover:text-accent group-hover:translate-x-1 transition-all duration-200">→</span>
                 </div>
               </Link>

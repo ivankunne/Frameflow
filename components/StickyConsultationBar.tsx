@@ -1,12 +1,14 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 
 export default function StickyConsultationBar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const t = useTranslations('sticky')
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > window.innerHeight * 0.5)
@@ -37,12 +39,12 @@ export default function StickyConsultationBar() {
           transition={{ duration: 0.25, ease: 'easeOut' }}
           className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-bg border-t border-border shadow-lg px-4 py-3 flex items-center justify-between"
         >
-          <p className="text-sm font-semibold text-fg">Klar for å starte?</p>
+          <p className="text-sm font-semibold text-fg">{t('cta')}</p>
           <Link
             href="/kontakt"
             className="text-sm font-semibold bg-accent hover:bg-accent-hover text-white px-5 py-2.5 rounded-lg transition-colors min-h-[44px] flex items-center shadow-blue-sm"
           >
-            Book gratis samtale →
+            {t('btn')}
           </Link>
         </motion.div>
       )}

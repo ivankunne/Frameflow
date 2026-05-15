@@ -1,9 +1,11 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Link from 'next/link'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 
 export default function AvailabilityPill() {
+  const t = useTranslations('availability')
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
@@ -35,7 +37,7 @@ export default function AvailabilityPill() {
         </span>
 
         <span className="text-xs font-semibold text-fg whitespace-nowrap">
-          Tilgjengelig for nye prosjekter
+          {t('label')}
         </span>
 
         <svg

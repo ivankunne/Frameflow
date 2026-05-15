@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import type { BlogPost } from '@/lib/data'
@@ -14,7 +14,7 @@ function renderInline(text: string): React.ReactNode {
   while ((m = linkRegex.exec(text)) !== null) {
     if (m.index > last) parts.push(text.slice(last, m.index))
     parts.push(
-      <Link key={m.index} href={m[2]} className="text-accent hover:underline font-medium">
+      <Link key={m.index} href={m[2] as any} className="text-accent hover:underline font-medium">
         {m[1]}
       </Link>
     )
@@ -167,7 +167,7 @@ export default function BlogPostClient({
                 <p className="text-sm font-semibold text-fg">{post.relatedService.title}</p>
               </div>
               <Link
-                href={post.relatedService.href}
+                href={post.relatedService.href as any}
                 className="text-sm font-semibold text-accent hover:text-accent-hover flex items-center gap-1.5 transition-colors shrink-0"
               >
                 Les mer →
@@ -238,7 +238,7 @@ export default function BlogPostClient({
               {relatedPosts.map((p) => (
                 <Link
                   key={p.slug}
-                  href={`/blogg/${p.slug}`}
+                  href={`/blogg/${p.slug}` as any}
                   className="group block bg-white border border-border rounded-xl p-6 hover:border-accent hover:shadow-blue-sm transition-all duration-200 shadow-card"
                 >
                   <p className="text-xs font-semibold text-accent mb-3">{p.category}</p>

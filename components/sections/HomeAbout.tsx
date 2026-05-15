@@ -1,20 +1,23 @@
 'use client'
 
-import Link from 'next/link'
 import Image from 'next/image'
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 
 export default function HomeAbout() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-80px' })
+  const t = useTranslations('home.about')
+
+  const points = [t('point1'), t('point2'), t('point3'), t('point4')]
 
   return (
     <section ref={ref} className="py-16 md:py-24 lg:py-32 px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 items-center">
 
-          {/* Visual side */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -32,8 +35,6 @@ export default function HomeAbout() {
               />
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-accent to-blue-400" />
             </div>
-
-            {/* Floating availability badge */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
@@ -42,13 +43,12 @@ export default function HomeAbout() {
             >
               <div className="flex items-center gap-2 mb-0.5">
                 <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                <p className="text-xs font-semibold text-fg">Tilgjengelig</p>
+                <p className="text-xs font-semibold text-fg">{t('available')}</p>
               </div>
-              <p className="text-[10px] text-fg-muted">Nye prosjekter</p>
+              <p className="text-[10px] text-fg-muted">{t('newProjects')}</p>
             </motion.div>
           </motion.div>
 
-          {/* Text */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -56,26 +56,21 @@ export default function HomeAbout() {
             className="order-1 lg:order-2"
           >
             <span className="inline-flex items-center gap-2 text-accent text-xs font-semibold uppercase tracking-widest mb-6">
-              <span className="w-4 h-px bg-accent" /> Om oss
+              <span className="w-4 h-px bg-accent" /> {t('label')}
             </span>
             <h2 className="display-text text-3xl sm:text-4xl lg:text-5xl text-fg mb-6 leading-tight">
-              Én person.<br />Hele byrået.
+              {t('title')}
             </h2>
-            <p className="text-fg leading-relaxed mb-5 max-w-prose">
-              Jeg heter Ivan Kunne og er Frameflow. Den som skriver tilbudet ditt, er den samme som bygger nettsiden din, tar bildene, styrer sosiale medier – og svarer på telefonen klokken 20:00 hvis noe butter. Det er ikke vanlig. Og det er hele poenget.
-            </p>
-            <p className="text-fg-muted leading-relaxed mb-6 max-w-prose">
-              Opprinnelig fra Nederland, men Bergen ble mitt hjem i 2023. Siden da har jeg hjulpet bedrifter i Bergen og internasjonalt med å bygge en digital tilstedeværelse som faktisk konverterer – ikke bare ser bra ut.
-            </p>
+            <p className="text-fg leading-relaxed mb-5 max-w-prose">{t('intro')}</p>
+            <p className="text-fg-muted leading-relaxed mb-6 max-w-prose">{t('origin')}</p>
 
-            {/* Callout box */}
             <div className="bg-accent-light border border-accent/20 rounded-xl px-5 py-4 mb-6">
-              <p className="text-sm font-semibold text-accent mb-1">Ingen mellommenn. Aldri.</p>
-              <p className="text-sm text-fg-muted leading-relaxed">Alle prosjekter fullføres av meg personlig – ingen vikarer, ingen junior-leveranser, ingen overraskelser. Alle filer og tilganger er alltid dine.</p>
+              <p className="text-sm font-semibold text-accent mb-1">{t('guarantee')}</p>
+              <p className="text-sm text-fg-muted leading-relaxed">{t('guaranteeDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-8">
-              {['Du snakker alltid med meg, ikke en account manager', 'Én kontaktperson fra idé til lansering', 'Lokalkunnskap om Bergen-markedet', 'Svar innen 24 timer – alltid'].map((point) => (
+              {points.map((point) => (
                 <div key={point} className="flex items-start gap-2">
                   <span className="w-4 h-4 rounded-full bg-accent-light border border-accent/20 flex items-center justify-center shrink-0 mt-0.5">
                     <span className="text-accent text-[10px]">✓</span>
@@ -89,7 +84,7 @@ export default function HomeAbout() {
               href="/om-oss"
               className="text-sm font-semibold text-fg border border-border hover:border-accent hover:text-accent px-6 py-3 rounded-lg transition-all duration-200 inline-flex items-center gap-2 min-h-[44px] shadow-card"
             >
-              Les mer om meg →
+              {t('readMore')}
             </Link>
           </motion.div>
         </div>

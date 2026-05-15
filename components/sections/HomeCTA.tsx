@@ -1,18 +1,20 @@
 'use client'
 
-import Link from 'next/link'
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 import { PHONE, PHONE_HREF, EMAIL, EMAIL_HREF, ADDRESS } from '@/lib/constants'
-
-const floatingBadges = [
-  { label: 'Gratis konsultasjon', sub: 'Ingen forpliktelser', icon: '✓', delay: 0.5, pos: 'top-6 right-6 lg:right-16' },
-  { label: 'Svar innen 24 timer', sub: 'Direkte kontakt', icon: '⚡', delay: 0.7, pos: 'bottom-20 right-6 lg:right-24' },
-]
 
 export default function HomeCTA() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-80px' })
+  const t = useTranslations('home.cta')
+
+  const floatingBadges = [
+    { label: t('badge1'), sub: t('badge1Sub'), icon: '✓', delay: 0.5, pos: 'top-6 right-6 lg:right-16' },
+    { label: t('badge2'), sub: t('badge2Sub'), icon: '⚡', delay: 0.7, pos: 'bottom-20 right-6 lg:right-24' },
+  ]
 
   return (
     <section ref={ref} className="py-16 md:py-24 lg:py-32 px-6 lg:px-8 bg-white">
@@ -77,14 +79,14 @@ export default function HomeCTA() {
           {/* Main content */}
           <div className="relative flex flex-col lg:flex-row lg:items-center justify-between gap-10 lg:pr-56">
             <div className="max-w-xl">
-              <p className="text-white/70 text-xs font-semibold uppercase tracking-widest mb-4">⚡ Ta kontakt i dag</p>
-              <h2 className="display-text text-3xl sm:text-4xl lg:text-5xl text-white leading-tight mb-4">Start i dag. Resultater fra uke én.</h2>
-              <p className="text-white/70 leading-relaxed">Gratis konsultasjon. Svar innen 24 timer. Ingen forpliktelser.</p>
+              <p className="text-white/70 text-xs font-semibold uppercase tracking-widest mb-4">⚡ {t('title')}</p>
+              <h2 className="display-text text-3xl sm:text-4xl lg:text-5xl text-white leading-tight mb-4">{t('subtitle')}</h2>
+              <p className="text-white/70 leading-relaxed">{t('description')}</p>
             </div>
 
             <div className="flex flex-wrap sm:flex-row gap-3 shrink-0">
-              <Link href="/tilbud" className="text-sm font-semibold bg-white text-accent hover:bg-white/90 px-8 py-4 rounded-xl transition-colors min-h-[44px] flex items-center justify-center shadow-lg">Få et gratis tilbud →</Link>
-              <Link href="/prosjekter" className="text-sm font-semibold border-2 border-white/30 text-white hover:border-white/60 hover:bg-white/10 px-8 py-4 rounded-xl transition-all duration-200 min-h-[44px] flex items-center justify-center">Se våre prosjekter</Link>
+              <Link href="/tilbud" className="text-sm font-semibold bg-white text-accent hover:bg-white/90 px-8 py-4 rounded-xl transition-colors min-h-[44px] flex items-center justify-center shadow-lg">{t('getQuote')}</Link>
+              <Link href="/prosjekter" className="text-sm font-semibold border-2 border-white/30 text-white hover:border-white/60 hover:bg-white/10 px-8 py-4 rounded-xl transition-all duration-200 min-h-[44px] flex items-center justify-center">{t('seeProjects')}</Link>
             </div>
           </div>
 

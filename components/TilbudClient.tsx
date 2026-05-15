@@ -1,33 +1,14 @@
 'use client'
 
 import { useState, useRef } from 'react'
-import Link from 'next/link'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
-
-const services = [
-  { id: 'webdesign', label: 'Web design', description: 'Ny nettside eller redesign' },
-  { id: 'foto-video', label: 'Foto og video', description: 'Produkt-, team- eller innholdsfoto/-video' },
-  { id: 'sosiale-medier', label: 'Sosiale medier', description: 'Strategi, innhold og håndtering' },
-  { id: 'branding', label: 'Branding', description: 'Logo, identitet og brand guidelines' },
-]
-
-const budgets = [
-  { id: 'under-10k', label: 'Under 10 000 kr' },
-  { id: '10-25k', label: '10 000 – 25 000 kr' },
-  { id: '25-50k', label: '25 000 – 50 000 kr' },
-  { id: 'over-50k', label: 'Over 50 000 kr' },
-]
-
-const timelines = [
-  { id: 'asap', label: 'Så raskt som mulig' },
-  { id: '1-2mnd', label: '1–2 måneder' },
-  { id: '3-6mnd', label: '3–6 måneder' },
-  { id: 'fleksibel', label: 'Fleksibel' },
-]
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 
 type Step = 1 | 2 | 3
 
 export default function TilbudClient() {
+  const t = useTranslations('quote')
   const heroRef = useRef(null)
   const heroInView = useInView(heroRef, { once: true })
 
@@ -42,6 +23,27 @@ export default function TilbudClient() {
   const [epostError, setEpostError] = useState('')
   const [consent, setConsent] = useState(false)
 
+  const services = [
+    { id: 'webdesign', label: t('service1Label'), description: t('service1Desc') },
+    { id: 'foto-video', label: t('service2Label'), description: t('service2Desc') },
+    { id: 'sosiale-medier', label: t('service3Label'), description: t('service3Desc') },
+    { id: 'branding', label: t('service4Label'), description: t('service4Desc') },
+  ]
+
+  const budgets = [
+    { id: 'under-10k', label: t('budget1') },
+    { id: '10-25k', label: t('budget2') },
+    { id: '25-50k', label: t('budget3') },
+    { id: 'over-50k', label: t('budget4') },
+  ]
+
+  const timelines = [
+    { id: 'asap', label: t('timeline1') },
+    { id: '1-2mnd', label: t('timeline2') },
+    { id: '3-6mnd', label: t('timeline3') },
+    { id: 'fleksibel', label: t('timeline4') },
+  ]
+
   const toggleService = (id: string) => {
     setSelectedServices((prev) => prev.includes(id) ? prev.filter((s) => s !== id) : [...prev, id])
   }
@@ -49,7 +51,7 @@ export default function TilbudClient() {
   const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault()
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.epost)) {
-      setEpostError('Oppgi en gyldig e-postadresse')
+      setEpostError(t('emailError'))
       return
     }
     setEpostError('')
@@ -70,7 +72,7 @@ export default function TilbudClient() {
       if (!res.ok) throw new Error('server')
       setSubmitted(true)
     } catch {
-      setServerError('Noe gikk galt. Prøv igjen eller ring oss direkte.')
+      setServerError(t('serverError'))
     } finally {
       setLoading(false)
     }
@@ -78,9 +80,14 @@ export default function TilbudClient() {
 
   const inputClass = "w-full bg-bg border border-border text-fg placeholder-fg-muted px-4 py-3 rounded-lg focus:border-accent focus:ring-2 focus:ring-accent/10 focus:outline-none transition-all text-sm min-h-[44px] shadow-card"
 
+  const stepLabels: Record<Step, string> = {
+    1: t('step1Active'),
+    2: t('step2Active'),
+    3: t('step3Active'),
+  }
+
   return (
     <>
-      {/* Hero + form side by side */}
       <section ref={heroRef} className="min-h-screen pt-28 pb-16 px-6 lg:px-8 bg-bg-2 flex items-start">
         <div className="max-w-6xl mx-auto w-full">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-20 items-start">
@@ -93,7 +100,7 @@ export default function TilbudClient() {
                 transition={{ duration: 0.4 }}
                 className="inline-flex items-center gap-2 bg-accent-light border border-accent/20 text-accent text-xs font-semibold px-3 py-1.5 rounded-full mb-6"
               >
-                Start her
+                {t('label')}
               </motion.span>
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
@@ -101,7 +108,7 @@ export default function TilbudClient() {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="display-text text-4xl lg:text-5xl text-fg mb-4"
               >
-                Be om tilbud
+                {t('title')}
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -109,7 +116,7 @@ export default function TilbudClient() {
                 transition={{ duration: 0.5, delay: 0.25 }}
                 className="text-fg-muted text-base leading-relaxed mb-3"
               >
-                Fortell oss om prosjektet ditt. Svar innen 24 timer – ingen forpliktelser.
+                {t('desc')}
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 16 }}
@@ -117,9 +124,9 @@ export default function TilbudClient() {
                 transition={{ duration: 0.4, delay: 0.35 }}
                 className="text-sm text-fg-muted mb-8"
               >
-                Vil du bare ta en prat først?{' '}
+                {t('contactPrompt')}{' '}
                 <Link href="/kontakt" className="text-accent font-semibold hover:underline">
-                  Book en gratis samtale →
+                  {t('contactCta')}
                 </Link>
               </motion.p>
 
@@ -130,11 +137,7 @@ export default function TilbudClient() {
                 transition={{ duration: 0.4, delay: 0.4 }}
                 className="flex flex-col gap-3"
               >
-                {[
-                  'Fast pris – ingen overraskelser',
-                  'Fornøyd garanti',
-                  'Oppstart innen 48 timer',
-                ].map((line) => (
+                {[t('guarantee1'), t('guarantee2'), t('guarantee3')].map((line) => (
                   <span key={line} className="flex items-center gap-2 text-sm text-fg-muted">
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="text-green-500 shrink-0">
                       <path d="M2.5 7.5l3 3L11.5 3.5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"/>
@@ -151,20 +154,20 @@ export default function TilbudClient() {
                 transition={{ duration: 0.4, delay: 0.5 }}
                 className="mt-10 pt-8 border-t border-border"
               >
-                <p className="text-xs font-semibold text-fg-muted uppercase tracking-widest mb-5">Hva skjer videre?</p>
+                <p className="text-xs font-semibold text-fg-muted uppercase tracking-widest mb-5">{t('nextTitle')}</p>
                 <div className="flex flex-col gap-4">
                   {[
-                    { n: '1', label: 'Vi gjennomgår', desc: 'Forespørselen din leses samme dag' },
-                    { n: '2', label: 'Vi ringer deg', desc: 'En kort samtale om prosjektet ditt' },
-                    { n: '3', label: 'Fast pris innen 24t', desc: 'Konkret tilbud – ingen overraskelser' },
-                  ].map((step, i) => (
+                    { n: '1', label: t('next1Label'), desc: t('next1Desc') },
+                    { n: '2', label: t('next2Label'), desc: t('next2Desc') },
+                    { n: '3', label: t('next3Label'), desc: t('next3Desc') },
+                  ].map((item, i) => (
                     <div key={i} className="flex items-start gap-3">
                       <div className="w-6 h-6 rounded-full bg-accent-light border border-accent/20 flex items-center justify-center shrink-0 mt-0.5">
-                        <span className="text-accent text-[10px] font-bold">{step.n}</span>
+                        <span className="text-accent text-[10px] font-bold">{item.n}</span>
                       </div>
                       <div>
-                        <p className="text-sm font-semibold text-fg leading-tight">{step.label}</p>
-                        <p className="text-xs text-fg-muted">{step.desc}</p>
+                        <p className="text-sm font-semibold text-fg leading-tight">{item.label}</p>
+                        <p className="text-xs text-fg-muted">{item.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -174,202 +177,196 @@ export default function TilbudClient() {
 
             {/* Right: multi-step form */}
             <div className="bg-bg border border-border rounded-2xl p-8 shadow-card">
-          {submitted ? (
-            <motion.div
-              initial={{ opacity: 0, scale: 0.96 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="text-center py-16"
-            >
-              <div className="w-16 h-16 rounded-xl bg-accent flex items-center justify-center mx-auto mb-8 shadow-blue-md text-white text-2xl">
-                ✓
-              </div>
-              <h2 className="display-text text-4xl text-fg mb-4">Forespørselen er mottatt!</h2>
-              <p className="text-fg-muted leading-relaxed mb-8 max-w-md mx-auto">
-                Takk! Vi gjennomgår detaljene og sender deg et skreddersydd tilbud innen 24 timer.
-              </p>
-              <Link
-                href="/"
-                className="text-sm font-semibold text-fg border border-border hover:border-accent hover:text-accent px-6 py-3 rounded-lg transition-all duration-200 min-h-[44px] inline-flex items-center gap-2 bg-bg shadow-card"
-              >
-                ← Tilbake til forsiden
-              </Link>
-            </motion.div>
-          ) : (
-            <>
-              {/* Step indicator */}
-              <div className="mb-10">
-                <div className="flex items-center justify-between mb-3">
-                  <p className="text-xs font-semibold text-fg-muted">Steg {step} av 3</p>
-                  <p className="text-xs font-semibold text-accent">
-                    {step === 1 && 'Velg tjenester'}
-                    {step === 2 && 'Budsjett og tidsplan'}
-                    {step === 3 && 'Kontaktdetaljer'}
-                  </p>
-                </div>
-                {/* Progress bar */}
-                <div className="w-full h-1.5 bg-border rounded-full overflow-hidden mb-5">
-                  <motion.div
-                    className="h-full bg-accent rounded-full"
-                    animate={{ width: `${((step - 1) / 2) * 100 + 33.33}%` }}
-                    transition={{ duration: 0.4, ease: 'easeInOut' }}
-                  />
-                </div>
-                {/* Step circles with labels */}
-                <div className="flex items-start justify-between">
-                  {([
-                    { s: 1, label: 'Tjenester' },
-                    { s: 2, label: 'Budsjett' },
-                    { s: 3, label: 'Kontakt' },
-                  ] as { s: Step; label: string }[]).map(({ s, label }) => (
-                    <div key={s} className="flex flex-col items-center gap-1.5">
-                      <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-semibold transition-all duration-200 ${
-                        step === s ? 'bg-accent text-white shadow-blue-sm' :
-                        step > s ? 'bg-accent text-white' :
-                        'bg-bg text-fg-muted border border-border'
-                      }`}>
-                        {step > s ? (
-                          <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5.5l2 2L8 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                        ) : s}
-                      </div>
-                      <span className={`text-xs font-medium ${step >= s ? 'text-accent' : 'text-fg-muted'}`}>{label}</span>
+              {submitted ? (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.96 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="text-center py-16"
+                >
+                  <div className="w-16 h-16 rounded-xl bg-accent flex items-center justify-center mx-auto mb-8 shadow-blue-md text-white text-2xl">
+                    ✓
+                  </div>
+                  <h2 className="display-text text-4xl text-fg mb-4">{t('successTitle')}</h2>
+                  <p className="text-fg-muted leading-relaxed mb-8 max-w-md mx-auto">{t('successDesc')}</p>
+                  <Link
+                    href="/"
+                    className="text-sm font-semibold text-fg border border-border hover:border-accent hover:text-accent px-6 py-3 rounded-lg transition-all duration-200 min-h-[44px] inline-flex items-center gap-2 bg-bg shadow-card"
+                  >
+                    {t('backHome')}
+                  </Link>
+                </motion.div>
+              ) : (
+                <>
+                  {/* Step indicator */}
+                  <div className="mb-10">
+                    <div className="flex items-center justify-between mb-3">
+                      <p className="text-xs font-semibold text-fg-muted">{t('stepOf', { step })}</p>
+                      <p className="text-xs font-semibold text-accent">{stepLabels[step]}</p>
                     </div>
-                  ))}
-                </div>
-              </div>
-
-              <AnimatePresence mode="wait">
-                {step === 1 && (
-                  <motion.div key="step1" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.25 }}>
-                    <h2 className="display-text text-3xl text-fg mb-8">Hvilke tjenester trenger du?</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10">
-                      {services.map((service) => {
-                        const selected = selectedServices.includes(service.id)
-                        return (
-                          <button
-                            key={service.id}
-                            onClick={() => toggleService(service.id)}
-                            className={`p-5 rounded-xl border text-left transition-all duration-200 min-h-[80px] ${
-                              selected ? 'border-accent bg-accent-light shadow-blue-sm' : 'border-border bg-bg shadow-card hover:border-accent/40'
-                            }`}
-                          >
-                            <p className="font-semibold text-fg text-sm mb-1">{service.label}</p>
-                            <p className="text-xs text-fg-muted">{service.description}</p>
-                          </button>
-                        )
-                      })}
+                    {/* Progress bar */}
+                    <div className="w-full h-1.5 bg-border rounded-full overflow-hidden mb-5">
+                      <motion.div
+                        className="h-full bg-accent rounded-full"
+                        animate={{ width: `${((step - 1) / 2) * 100 + 33.33}%` }}
+                        transition={{ duration: 0.4, ease: 'easeInOut' }}
+                      />
                     </div>
-                    <button
-                      onClick={() => setStep(2)}
-                      disabled={selectedServices.length === 0}
-                      className="text-sm font-semibold bg-accent hover:bg-accent-hover disabled:opacity-40 disabled:cursor-not-allowed text-white px-8 py-4 rounded-lg transition-colors min-h-[44px] flex items-center gap-2 shadow-blue-sm"
-                    >
-                      Neste →
-                    </button>
-                  </motion.div>
-                )}
-
-                {step === 2 && (
-                  <motion.div key="step2" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.25 }}>
-                    <h2 className="display-text text-3xl text-fg mb-8">Budsjett og tidsplan</h2>
-                    <div className="mb-8">
-                      <p className="text-xs font-semibold text-fg-muted uppercase tracking-widest mb-4">Budsjett (ca.)</p>
-                      <div className="grid grid-cols-2 gap-3">
-                        {budgets.map((b) => (
-                          <button key={b.id} onClick={() => setSelectedBudget(b.id)}
-                            className={`p-4 rounded-xl border text-left text-sm font-medium transition-all duration-200 min-h-[44px] ${selectedBudget === b.id ? 'border-accent bg-accent-light text-accent shadow-blue-sm' : 'border-border bg-bg text-fg-muted shadow-card hover:border-accent/40'}`}
-                          >{b.label}</button>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="mb-10">
-                      <p className="text-xs font-semibold text-fg-muted uppercase tracking-widest mb-4">Når vil du starte?</p>
-                      <div className="grid grid-cols-2 gap-3">
-                        {timelines.map((t) => (
-                          <button key={t.id} onClick={() => setSelectedTimeline(t.id)}
-                            className={`p-4 rounded-xl border text-left text-sm font-medium transition-all duration-200 min-h-[44px] ${selectedTimeline === t.id ? 'border-accent bg-accent-light text-accent shadow-blue-sm' : 'border-border bg-bg text-fg-muted shadow-card hover:border-accent/40'}`}
-                          >{t.label}</button>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="flex gap-3">
-                      <button onClick={() => setStep(1)} className="text-sm font-semibold text-fg border border-border hover:border-accent hover:text-accent px-6 py-3 rounded-lg transition-all duration-200 min-h-[44px] bg-bg shadow-card">← Tilbake</button>
-                      <button onClick={() => setStep(3)} disabled={!selectedBudget || !selectedTimeline}
-                        className="text-sm font-semibold bg-accent hover:bg-accent-hover disabled:opacity-40 disabled:cursor-not-allowed text-white px-8 py-4 rounded-lg transition-colors min-h-[44px] flex items-center gap-2 shadow-blue-sm"
-                      >Neste →</button>
-                    </div>
-                  </motion.div>
-                )}
-
-                {step === 3 && (
-                  <motion.div key="step3" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.25 }}>
-                    <h2 className="display-text text-3xl text-fg mb-8">Dine kontaktdetaljer</h2>
-                    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                          <label htmlFor="t-navn" className="text-xs font-semibold text-fg block mb-2">Navn *</label>
-                          <input id="t-navn" type="text" required value={formData.navn} onChange={(e) => setFormData({ ...formData, navn: e.target.value })} className={inputClass} placeholder="Ditt navn" />
+                    {/* Step circles with labels */}
+                    <div className="flex items-start justify-between">
+                      {([
+                        { s: 1, label: t('stepServices') },
+                        { s: 2, label: t('stepBudget') },
+                        { s: 3, label: t('stepContact') },
+                      ] as { s: Step; label: string }[]).map(({ s, label }) => (
+                        <div key={s} className="flex flex-col items-center gap-1.5">
+                          <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-semibold transition-all duration-200 ${
+                            step === s ? 'bg-accent text-white shadow-blue-sm' :
+                            step > s ? 'bg-accent text-white' :
+                            'bg-bg text-fg-muted border border-border'
+                          }`}>
+                            {step > s ? (
+                              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5.5l2 2L8 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                            ) : s}
+                          </div>
+                          <span className={`text-xs font-medium ${step >= s ? 'text-accent' : 'text-fg-muted'}`}>{label}</span>
                         </div>
-                        <div>
-                          <label htmlFor="t-epost" className="text-xs font-semibold text-fg block mb-2">E-post *</label>
-                          <input
-                            id="t-epost" type="email" required
-                            value={formData.epost}
-                            onChange={(e) => { setFormData({ ...formData, epost: e.target.value }); if (epostError) setEpostError('') }}
-                            aria-invalid={!!epostError}
-                            aria-describedby={epostError ? 't-epost-error' : undefined}
-                            className={epostError ? `${inputClass} border-red-400 focus:border-red-400 focus:ring-red-100` : inputClass}
-                            placeholder="din@epost.no"
-                          />
-                          {epostError && <p id="t-epost-error" className="text-xs text-red-600 mt-1">{epostError}</p>}
+                      ))}
+                    </div>
+                  </div>
+
+                  <AnimatePresence mode="wait">
+                    {step === 1 && (
+                      <motion.div key="step1" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.25 }}>
+                        <h2 className="display-text text-3xl text-fg mb-8">{t('step1Question')}</h2>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10">
+                          {services.map((service) => {
+                            const selected = selectedServices.includes(service.id)
+                            return (
+                              <button
+                                key={service.id}
+                                onClick={() => toggleService(service.id)}
+                                className={`p-5 rounded-xl border text-left transition-all duration-200 min-h-[80px] ${
+                                  selected ? 'border-accent bg-accent-light shadow-blue-sm' : 'border-border bg-bg shadow-card hover:border-accent/40'
+                                }`}
+                              >
+                                <p className="font-semibold text-fg text-sm mb-1">{service.label}</p>
+                                <p className="text-xs text-fg-muted">{service.description}</p>
+                              </button>
+                            )
+                          })}
                         </div>
-                      </div>
-                      <div>
-                        <label htmlFor="t-bedrift" className="text-xs font-semibold text-fg block mb-2">Bedrift</label>
-                        <input id="t-bedrift" type="text" value={formData.bedrift} onChange={(e) => setFormData({ ...formData, bedrift: e.target.value })} className={inputClass} placeholder="Bedriftsnavn" />
-                      </div>
-                      <div>
-                        <label htmlFor="t-beskrivelse" className="text-xs font-semibold text-fg block mb-2">Beskriv prosjektet</label>
-                        <textarea id="t-beskrivelse" value={formData.beskrivelse} onChange={(e) => setFormData({ ...formData, beskrivelse: e.target.value })} rows={4} className={`${inputClass} resize-none`} placeholder="Hva har du i tankene?" />
-                      </div>
-                      <div className="flex items-start gap-2.5 mt-1">
-                        <input
-                          type="checkbox"
-                          id="t-consent"
-                          required
-                          checked={consent}
-                          onChange={(e) => setConsent(e.target.checked)}
-                          className="mt-0.5 w-4 h-4 accent-accent shrink-0 cursor-pointer"
-                        />
-                        <label htmlFor="t-consent" className="text-xs text-fg-muted leading-relaxed cursor-pointer">
-                          Jeg godtar at Frameflow behandler mine kontaktopplysninger i henhold til{' '}
-                          <Link href="/personvern" className="text-accent hover:underline">personvernerklæringen</Link>.
-                        </label>
-                      </div>
-                      {serverError && (
-                        <p className="text-xs text-red-600 bg-red-50 border border-red-200 px-3 py-2 rounded-lg">{serverError}</p>
-                      )}
-                      <div className="flex gap-3 mt-2">
-                        <button type="button" onClick={() => setStep(2)} className="text-sm font-semibold text-fg border border-border hover:border-accent hover:text-accent px-6 py-3 rounded-lg transition-all duration-200 min-h-[44px] bg-bg shadow-card">← Tilbake</button>
                         <button
-                          type="submit"
-                          disabled={!consent || loading}
-                          className="text-sm font-semibold bg-accent hover:bg-accent-hover disabled:opacity-50 disabled:cursor-not-allowed text-white px-8 py-4 rounded-lg transition-colors min-h-[44px] flex items-center gap-2 shadow-blue-sm"
+                          onClick={() => setStep(2)}
+                          disabled={selectedServices.length === 0}
+                          className="text-sm font-semibold bg-accent hover:bg-accent-hover disabled:opacity-40 disabled:cursor-not-allowed text-white px-8 py-4 rounded-lg transition-colors min-h-[44px] flex items-center gap-2 shadow-blue-sm"
                         >
-                          {loading ? (
-                            <>
-                              <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                              Sender…
-                            </>
-                          ) : 'Send forespørsel →'}
+                          {t('nextBtn')}
                         </button>
-                      </div>
-                    </form>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </>
-          )}
-        </div>
+                      </motion.div>
+                    )}
+
+                    {step === 2 && (
+                      <motion.div key="step2" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.25 }}>
+                        <h2 className="display-text text-3xl text-fg mb-8">{t('step2Question')}</h2>
+                        <div className="mb-8">
+                          <p className="text-xs font-semibold text-fg-muted uppercase tracking-widest mb-4">{t('budgetLabel')}</p>
+                          <div className="grid grid-cols-2 gap-3">
+                            {budgets.map((b) => (
+                              <button key={b.id} onClick={() => setSelectedBudget(b.id)}
+                                className={`p-4 rounded-xl border text-left text-sm font-medium transition-all duration-200 min-h-[44px] ${selectedBudget === b.id ? 'border-accent bg-accent-light text-accent shadow-blue-sm' : 'border-border bg-bg text-fg-muted shadow-card hover:border-accent/40'}`}
+                              >{b.label}</button>
+                            ))}
+                          </div>
+                        </div>
+                        <div className="mb-10">
+                          <p className="text-xs font-semibold text-fg-muted uppercase tracking-widest mb-4">{t('timelineLabel')}</p>
+                          <div className="grid grid-cols-2 gap-3">
+                            {timelines.map((item) => (
+                              <button key={item.id} onClick={() => setSelectedTimeline(item.id)}
+                                className={`p-4 rounded-xl border text-left text-sm font-medium transition-all duration-200 min-h-[44px] ${selectedTimeline === item.id ? 'border-accent bg-accent-light text-accent shadow-blue-sm' : 'border-border bg-bg text-fg-muted shadow-card hover:border-accent/40'}`}
+                              >{item.label}</button>
+                            ))}
+                          </div>
+                        </div>
+                        <div className="flex gap-3">
+                          <button onClick={() => setStep(1)} className="text-sm font-semibold text-fg border border-border hover:border-accent hover:text-accent px-6 py-3 rounded-lg transition-all duration-200 min-h-[44px] bg-bg shadow-card">{t('backBtn')}</button>
+                          <button onClick={() => setStep(3)} disabled={!selectedBudget || !selectedTimeline}
+                            className="text-sm font-semibold bg-accent hover:bg-accent-hover disabled:opacity-40 disabled:cursor-not-allowed text-white px-8 py-4 rounded-lg transition-colors min-h-[44px] flex items-center gap-2 shadow-blue-sm"
+                          >{t('nextBtn')}</button>
+                        </div>
+                      </motion.div>
+                    )}
+
+                    {step === 3 && (
+                      <motion.div key="step3" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.25 }}>
+                        <h2 className="display-text text-3xl text-fg mb-8">{t('step3Question')}</h2>
+                        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                              <label htmlFor="t-navn" className="text-xs font-semibold text-fg block mb-2">{t('fieldName')}</label>
+                              <input id="t-navn" type="text" required value={formData.navn} onChange={(e) => setFormData({ ...formData, navn: e.target.value })} className={inputClass} placeholder={t('namePlaceholder')} />
+                            </div>
+                            <div>
+                              <label htmlFor="t-epost" className="text-xs font-semibold text-fg block mb-2">{t('fieldEmail')}</label>
+                              <input
+                                id="t-epost" type="email" required
+                                value={formData.epost}
+                                onChange={(e) => { setFormData({ ...formData, epost: e.target.value }); if (epostError) setEpostError('') }}
+                                aria-invalid={!!epostError}
+                                aria-describedby={epostError ? 't-epost-error' : undefined}
+                                className={epostError ? `${inputClass} border-red-400 focus:border-red-400 focus:ring-red-100` : inputClass}
+                                placeholder={t('emailPlaceholder')}
+                              />
+                              {epostError && <p id="t-epost-error" className="text-xs text-red-600 mt-1">{epostError}</p>}
+                            </div>
+                          </div>
+                          <div>
+                            <label htmlFor="t-bedrift" className="text-xs font-semibold text-fg block mb-2">{t('fieldCompany')}</label>
+                            <input id="t-bedrift" type="text" value={formData.bedrift} onChange={(e) => setFormData({ ...formData, bedrift: e.target.value })} className={inputClass} placeholder={t('companyPlaceholder')} />
+                          </div>
+                          <div>
+                            <label htmlFor="t-beskrivelse" className="text-xs font-semibold text-fg block mb-2">{t('fieldDesc')}</label>
+                            <textarea id="t-beskrivelse" value={formData.beskrivelse} onChange={(e) => setFormData({ ...formData, beskrivelse: e.target.value })} rows={4} className={`${inputClass} resize-none`} placeholder={t('descPlaceholder')} />
+                          </div>
+                          <div className="flex items-start gap-2.5 mt-1">
+                            <input
+                              type="checkbox"
+                              id="t-consent"
+                              required
+                              checked={consent}
+                              onChange={(e) => setConsent(e.target.checked)}
+                              className="mt-0.5 w-4 h-4 accent-accent shrink-0 cursor-pointer"
+                            />
+                            <label htmlFor="t-consent" className="text-xs text-fg-muted leading-relaxed cursor-pointer">
+                              {t('consentText')}{' '}
+                              <Link href="/personvern" className="text-accent hover:underline">{t('consentPrivacy')}</Link>.
+                            </label>
+                          </div>
+                          {serverError && (
+                            <p className="text-xs text-red-600 bg-red-50 border border-red-200 px-3 py-2 rounded-lg">{serverError}</p>
+                          )}
+                          <div className="flex gap-3 mt-2">
+                            <button type="button" onClick={() => setStep(2)} className="text-sm font-semibold text-fg border border-border hover:border-accent hover:text-accent px-6 py-3 rounded-lg transition-all duration-200 min-h-[44px] bg-bg shadow-card">{t('backBtn')}</button>
+                            <button
+                              type="submit"
+                              disabled={!consent || loading}
+                              className="text-sm font-semibold bg-accent hover:bg-accent-hover disabled:opacity-50 disabled:cursor-not-allowed text-white px-8 py-4 rounded-lg transition-colors min-h-[44px] flex items-center gap-2 shadow-blue-sm"
+                            >
+                              {loading ? (
+                                <>
+                                  <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                                  {t('submitting')}
+                                </>
+                              ) : t('submitBtn')}
+                            </button>
+                          </div>
+                        </form>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </>
+              )}
+            </div>
           </div>
         </div>
       </section>

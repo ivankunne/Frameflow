@@ -1,0 +1,631 @@
+export type ServiceContent = {
+  meta: {
+    title: string
+    description: string
+    ogTitle: string
+    ogImageTitle: string
+    ogImageLabel: string
+    ogAlt: string
+    canonical: string
+  }
+  label: string
+  title: string
+  description: string
+  longDescription: string
+  includes: string[]
+  process: { step: string; title: string; description: string }[]
+  relatedServices: { title: string; href: string }[]
+  pricingFrom: string
+  faqs: { q: string; a: string }[]
+}
+
+export const webdesign: Record<'no' | 'en', ServiceContent> = {
+  no: {
+    meta: {
+      title: 'Webbyrå Bergen | Lage nettside som konverterer – Frameflow',
+      description: 'Frameflow lager nettsider i Bergen med SEO innebygd fra dag én. Konverterer besøkende til kunder. Ingen oppstartsgebyr – svar innen 24 timer.',
+      ogTitle: 'Webbyrå Bergen | Lage nettside som konverterer – Frameflow',
+      ogImageTitle: 'Lage nettside i Bergen',
+      ogImageLabel: 'Webdesign',
+      ogAlt: 'Webdesign Bergen – Frameflow',
+      canonical: 'https://www.frameflow.no/tjenester/webdesign',
+    },
+    label: 'Tjeneste',
+    title: 'Vil du lage nettside i Bergen? Vi hjelper deg.',
+    description: 'Fra 0 til side 1 på Google – og besøkende til kunder. Vi er et webbyrå i Bergen som bygger raske, konverteringsfokuserte nettsider med SEO innebygd fra dag én.',
+    longDescription: 'En god nettside er mer enn pen design. Den skal laste raskt, rangere på Google, og guide besøkende mot handling. Hos Frameflow – et webbyrå i Bergen – lager vi nettsider i Webflow og Next.js med SEO, hastighet og konvertering innebygd fra dag én – ikke som ettertanke.',
+    includes: [
+      'Responsivt design optimalisert for mobil, nettbrett og desktop',
+      'SEO-grunnmur: metadata, strukturert data, sitemap',
+      'Rask lastetid – Core Web Vitals i grønt',
+      'CMS for enkel oppdatering uten utvikler',
+      'Google Analytics og Search Console-oppsett',
+      'Kontaktskjema og lead capture',
+      'SSL og sikker hosting',
+      '30 dagers support etter lansering',
+    ],
+    process: [
+      { step: '01', title: 'Første samtale', description: 'Vi starter med en gratis konsultasjon for å forstå virksomheten din, målene dine og hvem du ønsker å nå.' },
+      { step: '02', title: 'Design og utvikling', description: 'Vi designer og bygger nettsiden med fokus på din merkevare, brukervennlighet og konvertering.' },
+      { step: '03', title: 'Lansering og oppfølging', description: 'Vi lanserer, setter opp analytics og gir deg opplæring. Du er aldri alene etter leveranse.' },
+    ],
+    relatedServices: [
+      { title: 'Foto og videografi', href: '/tjenester/foto-og-videografi' },
+      { title: 'Branding', href: '/tjenester/branding' },
+      { title: 'Sosiale medier', href: '/tjenester/sosiale-medier' },
+    ],
+    pricingFrom: '15 000 kr',
+    faqs: [
+      { q: 'Hva koster en nettside i Bergen?', a: 'Nettsider fra Frameflow starter fra 15 000 kr eks. mva. Prisen avhenger av antall sider, funksjoner og designkompleksitet. Vi gir alltid et fast tilbud uten skjulte kostnader.' },
+      { q: 'Hvor lang tid tar det å lage en nettside?', a: 'De fleste prosjekter tar 3–6 uker fra første samtale til lansering, avhengig av størrelse og innholdsleveranse fra deg.' },
+      { q: 'Er nettsiden SEO-optimalisert?', a: 'Ja, SEO er innebygd fra dag én. Vi setter opp metadata, strukturert data, sitemap og Google Search Console som standard – uten ekstra kostnad.' },
+      { q: 'Kan jeg oppdatere nettsiden selv?', a: 'Ja, alle nettsider leveres med et brukervennlig CMS slik at du kan endre tekst, bilder og innhold uten teknisk kunnskap.' },
+      { q: 'Hva koster det å lage nettside hos et webbyrå i Bergen?', a: 'Hos Frameflow starter det å lage nettside fra 15 000 kr eks. mva. Som webbyrå i Bergen gir vi alltid fast pris – ingen overraskelser. Du får en profesjonell nettside med SEO, mobiltilpasning og CMS inkludert.' },
+    ],
+  },
+  en: {
+    meta: {
+      title: 'Web Design Agency Bergen | Websites that convert – Frameflow',
+      description: 'Frameflow builds high-converting websites with SEO built in from day one. No setup fee — reply within 24 hours.',
+      ogTitle: 'Web Design Agency Bergen | Websites that convert – Frameflow',
+      ogImageTitle: 'Web design in Bergen',
+      ogImageLabel: 'Web design',
+      ogAlt: 'Web design Bergen – Frameflow',
+      canonical: 'https://www.frameflow.no/en/services/web-design',
+    },
+    label: 'Service',
+    title: 'Need a website that actually converts?',
+    description: 'From launch to page 1 on Google — and visitors into customers. We build fast, conversion-focused websites with SEO built in from day one.',
+    longDescription: 'A great website is more than pretty design. It needs to load fast, rank on Google, and guide visitors towards action. At Frameflow we build websites in Webflow and Next.js with SEO, speed and conversion built in from day one — not as an afterthought.',
+    includes: [
+      'Responsive design optimised for mobile, tablet and desktop',
+      'SEO foundation: metadata, structured data, sitemap',
+      'Fast load times — Core Web Vitals in the green',
+      'CMS for easy updates without a developer',
+      'Google Analytics and Search Console setup',
+      'Contact form and lead capture',
+      'SSL and secure hosting',
+      '30 days support after launch',
+    ],
+    process: [
+      { step: '01', title: 'First call', description: 'We start with a free consultation to understand your business, your goals and who you want to reach.' },
+      { step: '02', title: 'Design and development', description: 'We design and build the website focusing on your brand, usability and conversion.' },
+      { step: '03', title: 'Launch and follow-up', description: 'We launch, set up analytics and give you training. You are never alone after delivery.' },
+    ],
+    relatedServices: [
+      { title: 'Photo & video', href: '/tjenester/foto-og-videografi' },
+      { title: 'Branding', href: '/tjenester/branding' },
+      { title: 'Social media', href: '/tjenester/sosiale-medier' },
+    ],
+    pricingFrom: 'NOK 15,000',
+    faqs: [
+      { q: 'How much does a website cost?', a: 'Websites from Frameflow start from NOK 15,000 excl. VAT. The price depends on the number of pages, features and design complexity. We always give a fixed quote with no hidden costs.' },
+      { q: 'How long does it take to build a website?', a: 'Most projects take 3–6 weeks from first call to launch, depending on size and your delivery of content.' },
+      { q: 'Is the website SEO-optimised?', a: 'Yes, SEO is built in from day one. We set up metadata, structured data, sitemap and Google Search Console as standard — at no extra cost.' },
+      { q: 'Can I update the website myself?', a: 'Yes, all websites are delivered with a user-friendly CMS so you can change text, images and content without technical knowledge.' },
+      { q: 'What makes Frameflow different from other web agencies?', a: 'You always work directly with Ivan — the person who actually does the work. No middlemen, no junior deliverables. Fixed price and a satisfaction guarantee on every project.' },
+    ],
+  },
+}
+
+export const seo: Record<'no' | 'en', ServiceContent> = {
+  no: {
+    meta: {
+      title: 'SEO Bergen – Lokal søkemotoroptimalisering | Frameflow',
+      description: 'Ingen bindingstid. Frameflow hjelper Bergen-bedrifter å rangere høyere på Google med lokal SEO, teknisk optimalisering og innholdsstrategi. Fra 4 500 kr/mnd.',
+      ogTitle: 'SEO Bergen – Lokal søkemotoroptimalisering | Frameflow',
+      ogImageTitle: 'SEO for Bergen-bedrifter',
+      ogImageLabel: 'SEO',
+      ogAlt: 'SEO Bergen – Frameflow',
+      canonical: 'https://www.frameflow.no/tjenester/seo',
+    },
+    label: 'Tjeneste',
+    title: 'SEO som gir deg kunder fra Google',
+    description: 'Rangeringen din på Google avgjør hvem som finner deg – og hvem som finner konkurrenten din. Vi hjelper Bergen-bedrifter til side 1 med lokal SEO, teknisk optimalisering og innhold som rangerer.',
+    longDescription: 'SEO er ikke en engangsoppgave – det er et kontinuerlig arbeid som bygger opp din synlighet over tid. Hos Frameflow starter vi alltid med en grundig teknisk revisjon, analyserer hvilke søkeord kundene dine bruker, og lager en innholdsstrategi som treffer dem i riktig øyeblikk. Vi spesialiserer oss på lokal SEO for Bergen og Vestland, der du har størst sjanse for å slå konkurrentene raskt.',
+    includes: [
+      'Teknisk SEO-revisjon og feilretting',
+      'Lokal SEO og Google Business Profile',
+      'Søkeordsanalyse for Bergen-markedet',
+      'Innholdsoptimalisering og nye tekster',
+      'Backlink-analyse og lenkebygging',
+      'Core Web Vitals og sidehastighetsforbedring',
+      'Google Search Console-oppfølging',
+      'Månedlig rangeringsrapport',
+    ],
+    process: [
+      { step: '01', title: 'SEO-revisjon og analyse', description: 'Vi gjennomgår nettstedet ditt teknisk, kartlegger søkeordmuligheter i Bergen-markedet og analyserer hva konkurrentene gjør riktig.' },
+      { step: '02', title: 'Optimalisering og innhold', description: 'Vi retter tekniske feil, optimaliserer eksisterende sider og lager nytt innhold som treffer søkeintensjonene til dine fremtidige kunder.' },
+      { step: '03', title: 'Rapportering og forbedring', description: 'Hver måned får du en klar rapport over rangeringer, trafikk og resultater – og vi justerer strategien basert på hva dataene forteller oss.' },
+    ],
+    relatedServices: [
+      { title: 'Webdesign', href: '/tjenester/webdesign' },
+      { title: 'Sosiale medier', href: '/tjenester/sosiale-medier' },
+      { title: 'Branding', href: '/tjenester/branding' },
+    ],
+    pricingFrom: '4 500 kr/mnd',
+    faqs: [
+      { q: 'Hva koster SEO i Bergen?', a: 'SEO-tjenester fra Frameflow starter fra 4 500 kr/mnd eks. mva. Prisen avhenger av konkurransesituasjonen i din bransje, antall søkeord du vil rangere på og hva slags innholdsarbeid som kreves. Vi gir alltid et fast månedlig tilbud uten skjulte kostnader.' },
+      { q: 'Hvor lang tid tar det å se resultater fra SEO?', a: 'De fleste Bergen-bedrifter ser målbare forbedringer i løpet av 3–6 måneder. Lokal SEO gir ofte raskere resultater enn nasjonal SEO fordi konkurransen er lavere. Tekniske forbedringer og Google Business Profile-oppsett kan gi synlige resultater innen noen uker.' },
+      { q: 'Hva er lokal SEO og trenger jeg det?', a: 'Lokal SEO handler om å rangere på Google når folk søker etter tjenester i Bergen og Vestland. Hvis du driver en lokal bedrift og ønsker kunder fra nærområdet, er lokal SEO langt mer effektivt enn generell SEO. Vi optimaliserer Google Business Profile, NAP-konsistens og lokale søkeord.' },
+      { q: 'Er SEO fortsatt verdt det i 2026?', a: 'Ja – organisk søketrafikk er fortsatt den mest kostnadseffektive og varige kilden til nye kunder. Til forskjell fra annonsering stopper ikke trafikken den dagen du slutter å betale. Godt SEO-arbeid gir synlighet som varer i årevis.' },
+    ],
+  },
+  en: {
+    meta: {
+      title: 'SEO Bergen – Local search engine optimisation | Frameflow',
+      description: 'No lock-in. Frameflow helps businesses rank higher on Google with local SEO, technical optimisation and content strategy. From NOK 4,500/mo.',
+      ogTitle: 'SEO Bergen – Local search engine optimisation | Frameflow',
+      ogImageTitle: 'SEO for businesses in Bergen',
+      ogImageLabel: 'SEO',
+      ogAlt: 'SEO Bergen – Frameflow',
+      canonical: 'https://www.frameflow.no/en/services/seo',
+    },
+    label: 'Service',
+    title: 'SEO that gets you customers from Google',
+    description: 'Your Google ranking determines who finds you — and who finds your competitor. We help businesses reach page 1 with local SEO, technical optimisation and content that ranks.',
+    longDescription: 'SEO is not a one-time task — it is continuous work that builds your visibility over time. At Frameflow we always start with a thorough technical audit, analyse which keywords your customers use, and create a content strategy that reaches them at the right moment. We specialise in local SEO for Bergen and the surrounding region.',
+    includes: [
+      'Technical SEO audit and fixes',
+      'Local SEO and Google Business Profile',
+      'Keyword research for the Bergen market',
+      'Content optimisation and new articles',
+      'Backlink analysis and link building',
+      'Core Web Vitals and page speed improvements',
+      'Google Search Console monitoring',
+      'Monthly rankings report',
+    ],
+    process: [
+      { step: '01', title: 'SEO audit and analysis', description: 'We review your site technically, map keyword opportunities in the Bergen market and analyse what your competitors are doing right.' },
+      { step: '02', title: 'Optimisation and content', description: 'We fix technical issues, optimise existing pages and create new content that matches the search intent of your future customers.' },
+      { step: '03', title: 'Reporting and improvement', description: 'Each month you get a clear report on rankings, traffic and results — and we adjust the strategy based on what the data tells us.' },
+    ],
+    relatedServices: [
+      { title: 'Web design', href: '/tjenester/webdesign' },
+      { title: 'Social media', href: '/tjenester/sosiale-medier' },
+      { title: 'Branding', href: '/tjenester/branding' },
+    ],
+    pricingFrom: 'NOK 4,500/mo',
+    faqs: [
+      { q: 'How much does SEO cost?', a: 'SEO services from Frameflow start from NOK 4,500/mo excl. VAT. The price depends on competition in your industry, the number of keywords you want to rank for and the amount of content work required.' },
+      { q: 'How long does it take to see results from SEO?', a: 'Most businesses see measurable improvements within 3–6 months. Local SEO often gives faster results than national SEO because competition is lower.' },
+      { q: 'What is local SEO and do I need it?', a: 'Local SEO is about ranking on Google when people search for services near Bergen. If you run a local business and want customers from your area, local SEO is far more effective than generic SEO.' },
+      { q: 'Is SEO still worth it in 2026?', a: 'Yes — organic search traffic is still the most cost-effective and lasting source of new customers. Unlike advertising, the traffic does not stop when you stop paying. Good SEO work gives visibility that lasts for years.' },
+    ],
+  },
+}
+
+export const appUtvikling: Record<'no' | 'en', ServiceContent> = {
+  no: {
+    meta: {
+      title: 'App utvikling Bergen – Fra MVP til fullskala | Frameflow',
+      description: 'Frameflow bygger skreddersydde apper for Bergen-bedrifter – fra MVP klar på 2–4 uker til fullskala løsninger. iOS, Android og web. Fra 45 000 kr.',
+      ogTitle: 'App utvikling i Bergen – Fra MVP til fullskala | Frameflow',
+      ogImageTitle: 'App utvikling i Bergen',
+      ogImageLabel: 'App utvikling',
+      ogAlt: 'App utvikling Bergen – Frameflow',
+      canonical: 'https://www.frameflow.no/tjenester/app-utvikling',
+    },
+    label: 'Tjeneste',
+    title: 'Apper som løser reelle problemer',
+    description: 'Fra idé til live-app. Vi bygger skreddersydde webapper og mobilapper som gjør jobben – raskere, smartere, og på måten som passer din bedrift.',
+    longDescription: 'En app er ikke en nettside. Det handler om å løse ett spesifikt problem så godt at folk bruker det daglig. Vi bygger apper i React, Next.js, React Native og Flutter – valget avhenger av hva som gir best resultat for deg. Fra MVP som du kan teste med kunder på dag 14, til fullskala løsninger som skalerer til tusenvis av brukere.',
+    includes: [
+      'Full-stack utvikling (frontend, backend, database)',
+      'API design og integrasjon med tredjepartstjenester',
+      'Responsive og mobiloptimalisert design',
+      'Database design og optimalisering',
+      'Sikkerhet og data-compliance (GDPR-klar)',
+      'Testing og kvalitetssikring',
+      'Deployment, hosting og overvåking',
+      'Dokumentasjon og opplæring for teamet ditt',
+    ],
+    process: [
+      { step: '01', title: 'Discovery og planlegging', description: 'Vi starter med å forstå problemet du løser, hvem som bruker appen, og hva som er success. Vi lager wireframes og user flows sammen med deg.' },
+      { step: '02', title: 'MVP-utvikling', description: 'Vi bygger et minimum viable product raskt – nok til å teste med ekte brukere og validere idéen før vi investerer i full utbygging.' },
+      { step: '03', title: 'Full-scale lansering', description: 'Når appen er validert, skalerer vi den. Flere features, større brukerbaser, integrasjoner – vi legger grunnmuren for vekst.' },
+      { step: '04', title: 'Support og vedlikehold', description: 'Etter lansering tilbyr vi løpende support, bug-fixes og nye features basert på bruker-feedback.' },
+    ],
+    relatedServices: [
+      { title: 'Branding', href: '/tjenester/branding' },
+      { title: 'Web design', href: '/tjenester/webdesign' },
+      { title: 'Foto og videografi', href: '/tjenester/foto-og-videografi' },
+    ],
+    pricingFrom: '45 000 kr',
+    faqs: [
+      { q: 'Hva koster det å lage en app?', a: 'Apputvikling fra Frameflow starter fra 45 000 kr for en MVP. Fullskala løsninger prises individuelt etter scope og kompleksitet.' },
+      { q: 'Lager dere apper til både iOS og Android?', a: 'Ja, vi bygger apper i React Native og Flutter som fungerer på både iOS og Android fra én kodebase – noe som sparer tid og kostnader.' },
+      { q: 'Hvor raskt kan vi ha en første versjon klar?', a: 'Vi leverer en testbar MVP på 2–4 uker slik at du kan validere ideen med ekte brukere raskt.' },
+      { q: 'Hva skjer etter lansering?', a: 'Vi tilbyr løpende support og videreutvikling etter lansering. Du er aldri alene med produktet ditt.' },
+    ],
+  },
+  en: {
+    meta: {
+      title: 'App Development Bergen – From MVP to full scale | Frameflow',
+      description: 'Frameflow builds custom apps — from an MVP ready in 2–4 weeks to full-scale solutions. iOS, Android and web. From NOK 45,000.',
+      ogTitle: 'App Development in Bergen – From MVP to full scale | Frameflow',
+      ogImageTitle: 'App development in Bergen',
+      ogImageLabel: 'App development',
+      ogAlt: 'App development Bergen – Frameflow',
+      canonical: 'https://www.frameflow.no/en/services/app-development',
+    },
+    label: 'Service',
+    title: 'Apps that solve real problems',
+    description: 'From idea to live app. We build custom web apps and mobile apps that get the job done — faster, smarter and the way that suits your business.',
+    longDescription: 'An app is not a website. It is about solving one specific problem so well that people use it every day. We build apps in React, Next.js, React Native and Flutter — the choice depends on what gives the best result for you. From an MVP you can test with customers on day 14, to full-scale solutions that scale to thousands of users.',
+    includes: [
+      'Full-stack development (frontend, backend, database)',
+      'API design and integration with third-party services',
+      'Responsive and mobile-optimised design',
+      'Database design and optimisation',
+      'Security and data compliance (GDPR-ready)',
+      'Testing and quality assurance',
+      'Deployment, hosting and monitoring',
+      'Documentation and training for your team',
+    ],
+    process: [
+      { step: '01', title: 'Discovery and planning', description: 'We start by understanding the problem you are solving, who uses the app and what success looks like. We create wireframes and user flows together with you.' },
+      { step: '02', title: 'MVP development', description: 'We build a minimum viable product quickly — enough to test with real users and validate the idea before investing in full development.' },
+      { step: '03', title: 'Full-scale launch', description: 'Once the app is validated we scale it. More features, larger user bases, integrations — we lay the foundation for growth.' },
+      { step: '04', title: 'Support and maintenance', description: 'After launch we offer ongoing support, bug fixes and new features based on user feedback.' },
+    ],
+    relatedServices: [
+      { title: 'Branding', href: '/tjenester/branding' },
+      { title: 'Web design', href: '/tjenester/webdesign' },
+      { title: 'Photo & video', href: '/tjenester/foto-og-videografi' },
+    ],
+    pricingFrom: 'NOK 45,000',
+    faqs: [
+      { q: 'How much does it cost to build an app?', a: 'App development from Frameflow starts from NOK 45,000 for an MVP. Full-scale solutions are priced individually based on scope and complexity.' },
+      { q: 'Do you build apps for both iOS and Android?', a: 'Yes, we build apps in React Native and Flutter that work on both iOS and Android from one codebase — saving time and costs.' },
+      { q: 'How quickly can we have a first version ready?', a: 'We deliver a testable MVP in 2–4 weeks so you can validate the idea with real users quickly.' },
+      { q: 'What happens after launch?', a: 'We offer ongoing support and further development after launch. You are never alone with your product.' },
+    ],
+  },
+}
+
+export const fotoOgVideografi: Record<'no' | 'en', ServiceContent> = {
+  no: {
+    meta: {
+      title: 'Foto og videografi Bergen – Bedriftsfoto og video | Frameflow',
+      description: 'Frameflow produserer bedriftsfoto og video i Bergen for sosiale medier, nettsider og annonser. Fra 4 500 kr – levering innen 5–7 virkedager.',
+      ogTitle: 'Bedriftsfoto og video i Bergen | Frameflow',
+      ogImageTitle: 'Bedriftsfoto og video i Bergen',
+      ogImageLabel: 'Foto & Video',
+      ogAlt: 'Foto og videografi Bergen – Frameflow',
+      canonical: 'https://www.frameflow.no/tjenester/foto-og-videografi',
+    },
+    label: 'Tjeneste',
+    title: 'Innhold som stopper scrollingen og selger',
+    description: 'Vi produserer foto og video som ser profesjonelt ut, føles naturlig og forteller din historie tydelig. Autentisk visuelt innhold som fungerer på tvers av alle kanaler.',
+    longDescription: 'I 2026 er over-editerte, perfekte bilder ut. Forbrukere ønsker autentisitet. Vi fotograferer og filmer bedriften din, produktene dine og menneskene bak – på en måte som er profesjonell men ekte. Innhold som faktisk bygger tillit og engasjement.',
+    includes: [
+      'Produkt- og bedriftsfotografering',
+      'Video for sosiale medier, nettsider og annonser',
+      'Instagram Reels og TikTok-videoer',
+      'Behind-the-scenes og team-innhold',
+      'Redigering og fargekorrigering',
+      'Levering i alle nødvendige formater',
+      'Rettighetsfri bruk av alt materiale',
+    ],
+    process: [
+      { step: '01', title: 'Briefing', description: 'Vi diskuterer stil, formål og hva du ønsker å formidle. Vi planlegger location, rekvisitter og innholdstype.' },
+      { step: '02', title: 'Produksjon', description: 'Vi gjennomfører fotografering og filming. Naturlig, effektivt og alltid med fokus på det autentiske.' },
+      { step: '03', title: 'Levering', description: 'Redigert og klart materiale leveres i avtalte formater, klart til bruk på alle kanaler.' },
+    ],
+    relatedServices: [
+      { title: 'Web design', href: '/tjenester/webdesign' },
+      { title: 'Sosiale medier', href: '/tjenester/sosiale-medier' },
+      { title: 'Branding', href: '/tjenester/branding' },
+    ],
+    pricingFrom: '4 500 kr',
+    faqs: [
+      { q: 'Hva koster bedriftsfotografering i Bergen?', a: 'Bedriftsfotografering fra Frameflow starter fra 4 500 kr. Prisen avhenger av antall timer, lokasjon og antall bilder som skal redigeres.' },
+      { q: 'Leverer dere innhold til sosiale medier?', a: 'Ja, vi produserer foto og video optimalisert for Instagram, TikTok, LinkedIn og andre plattformer – i riktig format og størrelse.' },
+      { q: 'Hvor raskt leveres bildene etter fotografering?', a: 'Redigerte bilder og video leveres vanligvis innen 5–7 virkedager etter fotografering.' },
+      { q: 'Kan dere kombinere foto og sosiale medier?', a: 'Ja, vi tilbyr pakker som kombinerer innholdsproduksjon med administrasjon av sosiale medier for en sømløs løsning.' },
+    ],
+  },
+  en: {
+    meta: {
+      title: 'Photo & Video Production Bergen | Business photography – Frameflow',
+      description: 'Frameflow produces business photos and video in Bergen for social media, websites and adverts. From NOK 4,500 — delivery within 5–7 working days.',
+      ogTitle: 'Business photo and video in Bergen | Frameflow',
+      ogImageTitle: 'Business photo and video in Bergen',
+      ogImageLabel: 'Photo & Video',
+      ogAlt: 'Photo and video Bergen – Frameflow',
+      canonical: 'https://www.frameflow.no/en/services/photo-video',
+    },
+    label: 'Service',
+    title: 'Content that stops the scroll and sells',
+    description: 'We produce photos and video that look professional, feel natural and tell your story clearly. Authentic visual content that works across all channels.',
+    longDescription: 'In 2026, over-edited, perfect images are out. Consumers want authenticity. We photograph and film your business, your products and the people behind it — in a way that is professional yet genuine. Content that actually builds trust and engagement.',
+    includes: [
+      'Product and business photography',
+      'Video for social media, websites and adverts',
+      'Instagram Reels and TikTok videos',
+      'Behind-the-scenes and team content',
+      'Editing and colour grading',
+      'Delivery in all required formats',
+      'Royalty-free use of all material',
+    ],
+    process: [
+      { step: '01', title: 'Briefing', description: 'We discuss style, purpose and what you want to communicate. We plan location, props and content type.' },
+      { step: '02', title: 'Production', description: 'We carry out the photography and filming. Natural, efficient and always focused on authenticity.' },
+      { step: '03', title: 'Delivery', description: 'Edited and ready material is delivered in agreed formats, ready to use on all channels.' },
+    ],
+    relatedServices: [
+      { title: 'Web design', href: '/tjenester/webdesign' },
+      { title: 'Social media', href: '/tjenester/sosiale-medier' },
+      { title: 'Branding', href: '/tjenester/branding' },
+    ],
+    pricingFrom: 'NOK 4,500',
+    faqs: [
+      { q: 'How much does business photography cost?', a: 'Business photography from Frameflow starts from NOK 4,500. The price depends on the number of hours, location and number of images to be edited.' },
+      { q: 'Do you produce content for social media?', a: 'Yes, we produce photos and video optimised for Instagram, TikTok, LinkedIn and other platforms — in the right format and size.' },
+      { q: 'How quickly are the images delivered after the shoot?', a: 'Edited images and video are normally delivered within 5–7 working days after the shoot.' },
+      { q: 'Can you combine photo and social media?', a: 'Yes, we offer packages that combine content production with social media management for a seamless solution.' },
+    ],
+  },
+}
+
+export const sosialeMedier: Record<'no' | 'en', ServiceContent> = {
+  no: {
+    meta: {
+      title: 'Sosiale medier Bergen – Strategi og innhold | Frameflow',
+      description: 'Frameflow håndterer sosiale medier for Bergen-bedrifter. Innholdsproduksjon, strategi og kanalforvaltning på Instagram, TikTok og LinkedIn. Fra 3 500 kr/mnd.',
+      ogTitle: 'Sosiale medier Bergen – Strategi og innhold | Frameflow',
+      ogImageTitle: 'Sosiale medier for Bergen-bedrifter',
+      ogImageLabel: 'Sosiale medier',
+      ogAlt: 'Sosiale medier Bergen – Frameflow',
+      canonical: 'https://www.frameflow.no/tjenester/sosiale-medier',
+    },
+    label: 'Tjeneste',
+    title: 'Sosiale medier som vokser, engasjerer og konverterer',
+    description: 'Vi håndterer alt fra innholdsproduksjon til strategi og kanalforvaltning – slik at sosiale medier profilen din alltid er fersk, autentisk og profesjonell.',
+    longDescription: 'Sosiale medier er ikke lenger valgfritt. Men uten en klar strategi kaster du bort tid og penger. Vi hjelper Bergen-bedrifter med å bygge en sterk tilstedeværelse som faktisk engasjerer og konverterer – med innhold som passer hver plattform.',
+    includes: [
+      'Innholdsstrategi og innholdskalender',
+      'Foto og video-produksjon for sosiale medier',
+      'Instagram, TikTok, Facebook, LinkedIn',
+      'Hashtag-strategi og rekkeviddeoptimalisering',
+      'Community management og kommentarsvar',
+      'Månedlig analyse og rapportering',
+      'Betalt annonsering (Facebook/Instagram Ads)',
+    ],
+    process: [
+      { step: '01', title: 'Strategi', description: 'Vi analyserer målgruppen din, konkurrenter og nåværende tilstedeværelse. Vi definerer mål og plattformstrategi.' },
+      { step: '02', title: 'Innholdsproduksjon', description: 'Vi planlegger, produserer og publiserer innhold konsekvent. Du godkjenner alt på forhånd.' },
+      { step: '03', title: 'Vekst og optimalisering', description: 'Vi analyserer hva som fungerer og tilpasser strategien løpende for maksimal vekst.' },
+    ],
+    relatedServices: [
+      { title: 'Foto og videografi', href: '/tjenester/foto-og-videografi' },
+      { title: 'Branding', href: '/tjenester/branding' },
+      { title: 'Web design', href: '/tjenester/webdesign' },
+    ],
+    pricingFrom: '3 500 kr / mnd',
+    faqs: [
+      { q: 'Hva koster administrasjon av sosiale medier?', a: 'Sosiale medier-pakker fra Frameflow starter fra 3 500 kr per måned, avhengig av antall plattformer og innholdsmengde.' },
+      { q: 'Hvilke plattformer håndterer dere?', a: 'Vi håndterer Instagram, Facebook, TikTok og LinkedIn – tilpasset der målgruppen din befinner seg.' },
+      { q: 'Produserer dere også innhold og bilder?', a: 'Ja, vi tilbyr kombinerte pakker der vi produserer foto og video samt håndterer publisering og kanalforvaltning.' },
+      { q: 'Får vi se innholdet før det publiseres?', a: 'Ja, vi presenterer en innholdskalender for godkjenning hver måned slik at du alltid har full kontroll.' },
+    ],
+  },
+  en: {
+    meta: {
+      title: 'Social Media Bergen – Strategy and content | Frameflow',
+      description: 'Frameflow manages social media for businesses in Bergen. Content production, strategy and channel management on Instagram, TikTok and LinkedIn. From NOK 3,500/mo.',
+      ogTitle: 'Social Media Bergen – Strategy and content | Frameflow',
+      ogImageTitle: 'Social media for businesses in Bergen',
+      ogImageLabel: 'Social media',
+      ogAlt: 'Social media Bergen – Frameflow',
+      canonical: 'https://www.frameflow.no/en/services/social-media',
+    },
+    label: 'Service',
+    title: 'Social media that grows, engages and converts',
+    description: 'We handle everything from content production to strategy and channel management — so your social media presence is always fresh, authentic and professional.',
+    longDescription: 'Social media is no longer optional. But without a clear strategy you are wasting time and money. We help businesses build a strong presence that actually engages and converts — with content that suits each platform.',
+    includes: [
+      'Content strategy and content calendar',
+      'Photo and video production for social media',
+      'Instagram, TikTok, Facebook, LinkedIn',
+      'Hashtag strategy and reach optimisation',
+      'Community management and comment replies',
+      'Monthly analysis and reporting',
+      'Paid advertising (Facebook/Instagram Ads)',
+    ],
+    process: [
+      { step: '01', title: 'Strategy', description: 'We analyse your target audience, competitors and current presence. We define goals and platform strategy.' },
+      { step: '02', title: 'Content production', description: 'We plan, produce and publish content consistently. You approve everything in advance.' },
+      { step: '03', title: 'Growth and optimisation', description: 'We analyse what works and adapt the strategy continuously for maximum growth.' },
+    ],
+    relatedServices: [
+      { title: 'Photo & video', href: '/tjenester/foto-og-videografi' },
+      { title: 'Branding', href: '/tjenester/branding' },
+      { title: 'Web design', href: '/tjenester/webdesign' },
+    ],
+    pricingFrom: 'NOK 3,500/mo',
+    faqs: [
+      { q: 'How much does social media management cost?', a: 'Social media packages from Frameflow start from NOK 3,500 per month, depending on the number of platforms and amount of content.' },
+      { q: 'Which platforms do you manage?', a: 'We manage Instagram, Facebook, TikTok and LinkedIn — tailored to where your target audience is.' },
+      { q: 'Do you also produce content and photos?', a: 'Yes, we offer combined packages where we produce photo and video and handle publishing and channel management.' },
+      { q: 'Can we see the content before it is published?', a: 'Yes, we present a content calendar for approval each month so you always have full control.' },
+    ],
+  },
+}
+
+export const branding: Record<'no' | 'en', ServiceContent> = {
+  no: {
+    meta: {
+      title: 'Grafisk design og logodesign Bergen | Branding – Frameflow',
+      description: 'Frameflow leverer logodesign og grafisk profilering for Bergen-bedrifter. Visuell identitet som gjør deg umiskjennelig. Fra 8 000 kr – levering 2–4 uker.',
+      ogTitle: 'Grafisk design og logodesign Bergen | Frameflow',
+      ogImageTitle: 'Grafisk design og branding Bergen',
+      ogImageLabel: 'Branding',
+      ogAlt: 'Branding Bergen – Frameflow',
+      canonical: 'https://www.frameflow.no/tjenester/branding',
+    },
+    label: 'Tjeneste',
+    title: 'Grafisk design og logodesign som huskes',
+    description: 'Vi leverer grafisk design, logodesign og branding for Bergen-bedrifter – slik at alt føles konsekvent, gjennomtenkt og umiskjennelig deg.',
+    longDescription: 'En sterk merkevare er ikke bare en logo – det er summen av alt som gjør bedriften din til det den er. Farger, fonter, tone, verdier og opplevelse. Hos Frameflow leverer vi grafisk design og logodesign som holder seg konsistent på nett, i sosiale medier og i trykt materiell.',
+    includes: [
+      'Logo og logovariasjoner (farger, svart/hvit, mørk/lys)',
+      'Fargepalett med HEX, RGB og CMYK-verdier',
+      'Typografi-system med font-par',
+      'Brand guidelines-dokument',
+      'Ikoner og grafiske elementer',
+      'Visittkort og profilering',
+      'Digitale maler for sosiale medier',
+    ],
+    process: [
+      { step: '01', title: 'Oppdagelse', description: 'Vi kartlegger hvem du er, hvem målgruppen er, og hva som skiller deg fra konkurrentene i Bergen-markedet.' },
+      { step: '02', title: 'Design', description: 'Vi utvikler konsepter og itererer til vi har en identitet som treffer. Du er involvert gjennom hele prosessen.' },
+      { step: '03', title: 'Levering', description: 'Du mottar alle filer i alle nødvendige formater, pluss en brand guide som gjør det enkelt å bruke identiteten korrekt.' },
+    ],
+    relatedServices: [
+      { title: 'Web design', href: '/tjenester/webdesign' },
+      { title: 'Foto og videografi', href: '/tjenester/foto-og-videografi' },
+      { title: 'Sosiale medier', href: '/tjenester/sosiale-medier' },
+    ],
+    pricingFrom: '8 000 kr',
+    faqs: [
+      { q: 'Hva er inkludert i en brandingpakke?', a: 'Alle brandingpakker inkluderer logo, fargepalett, typografi og brand guidelines. Vi leverer alle filer i vektorformat for bruk på nett og i trykk.' },
+      { q: 'Hva koster branding og logo design i Bergen?', a: 'Brandingpakker fra Frameflow starter fra 8 000 kr eks. mva. Prisen avhenger av omfang og leveranser.' },
+      { q: 'Hvor lang tid tar et brandingprosjekt?', a: 'Et komplett brandingprosjekt tar typisk 2–4 uker, inkludert konsept, presentasjon og revisjoner.' },
+      { q: 'Kan jeg bruke merkevaren på tvers av alle medier?', a: 'Ja, du mottar alle filer i vektorformat (SVG, PDF, PNG) som fungerer i alle størrelser – fra visittkort til bannere.' },
+      { q: 'Hva er forskjellen på grafisk design og logodesign?', a: 'Logodesign handler om selve logosymbolet og logotypen – kjernen i merkevaren din. Grafisk design er bredere og inkluderer alt visuelt: fargepalett, typografi, maler, ikoner og trykksaker. Hos Frameflow leverer vi begge deler som en samlet brandingpakke.' },
+    ],
+  },
+  en: {
+    meta: {
+      title: 'Graphic design and logo design Bergen | Branding – Frameflow',
+      description: 'Frameflow delivers logo design and graphic branding for businesses. Visual identity that makes you unmistakeable. From NOK 8,000 — delivery 2–4 weeks.',
+      ogTitle: 'Graphic design and logo design Bergen | Frameflow',
+      ogImageTitle: 'Graphic design and branding Bergen',
+      ogImageLabel: 'Branding',
+      ogAlt: 'Branding Bergen – Frameflow',
+      canonical: 'https://www.frameflow.no/en/services/branding',
+    },
+    label: 'Service',
+    title: 'Graphic design and logo design that is remembered',
+    description: 'We deliver graphic design, logo design and branding — so that everything feels consistent, considered and unmistakeably you.',
+    longDescription: 'A strong brand is not just a logo — it is the sum of everything that makes your business what it is. Colours, fonts, tone, values and experience. At Frameflow we deliver graphic design and logo design that stays consistent online, on social media and in print.',
+    includes: [
+      'Logo and logo variations (colour, black/white, dark/light)',
+      'Colour palette with HEX, RGB and CMYK values',
+      'Typography system with font pairs',
+      'Brand guidelines document',
+      'Icons and graphic elements',
+      'Business cards and corporate identity',
+      'Digital templates for social media',
+    ],
+    process: [
+      { step: '01', title: 'Discovery', description: 'We map who you are, who your audience is and what differentiates you from competitors.' },
+      { step: '02', title: 'Design', description: 'We develop concepts and iterate until we have an identity that hits the mark. You are involved throughout the process.' },
+      { step: '03', title: 'Delivery', description: 'You receive all files in all required formats, plus a brand guide that makes it easy to use the identity correctly.' },
+    ],
+    relatedServices: [
+      { title: 'Web design', href: '/tjenester/webdesign' },
+      { title: 'Photo & video', href: '/tjenester/foto-og-videografi' },
+      { title: 'Social media', href: '/tjenester/sosiale-medier' },
+    ],
+    pricingFrom: 'NOK 8,000',
+    faqs: [
+      { q: 'What is included in a branding package?', a: 'All branding packages include logo, colour palette, typography and brand guidelines. We deliver all files in vector format for use online and in print.' },
+      { q: 'How much does branding and logo design cost?', a: 'Branding packages from Frameflow start from NOK 8,000 excl. VAT. The price depends on scope and deliverables.' },
+      { q: 'How long does a branding project take?', a: 'A complete branding project typically takes 2–4 weeks, including concept, presentation and revisions.' },
+      { q: 'Can I use the brand across all media?', a: 'Yes, you receive all files in vector format (SVG, PDF, PNG) that work in all sizes — from business cards to banners.' },
+      { q: 'What is the difference between graphic design and logo design?', a: 'Logo design is about the logo symbol and logotype — the core of your brand. Graphic design is broader and includes everything visual: colour palette, typography, templates, icons and printed materials. At Frameflow we deliver both as a combined branding package.' },
+    ],
+  },
+}
+
+export const aiAutomasjon: Record<'no' | 'en', ServiceContent> = {
+  no: {
+    meta: {
+      title: 'AI Automasjon Bergen – Automatiser tidstyvene | Frameflow',
+      description: 'Frameflow bygger AI-automasjoner for Bergen-bedrifter. Henvendelseshåndtering, AI-chatbot, lead-kvalifisering og CRM-integrasjon – frigjør timer ukentlig. Fra 8 000 kr.',
+      ogTitle: 'AI Automasjon Bergen – Automatiser tidstyvene | Frameflow',
+      ogImageTitle: 'AI Automasjon Bergen',
+      ogImageLabel: 'AI Automasjon',
+      ogAlt: 'AI Automasjon Bergen – Frameflow',
+      canonical: 'https://www.frameflow.no/tjenester/ai-automasjon',
+    },
+    label: 'Tjeneste',
+    title: 'La AI håndtere det manuelle. Du fokuserer på vekst.',
+    description: 'Vi bygger smarte automasjoner for Bergen-bedrifter som håndterer henvendelser, kvalifiserer leads og følger opp kunder – automatisk, konsekvent, uten at du løfter en finger.',
+    longDescription: 'AI-automasjon handler ikke om å erstatte mennesker – det handler om å frigjøre dem. Hver uke bruker bedrifter som din timer på oppgaver som en smart automasjon kan gjøre på sekunder: svare på standardspørsmål, flytte data mellom systemer, sende påminnelser, logge leads i CRM. Vi kartlegger nøyaktig hvor du taper tid, og bygger robuste automatiseringer som fungerer i bakgrunnen – alltid på, alltid konsekvent, aldri syk.',
+    includes: [
+      'Automatisk henvendelseshåndtering via e-post og nett',
+      'AI-chatbot på nettsiden (24/7 svar til kunder)',
+      'Lead-kvalifisering og automatisk CRM-logging',
+      'Booking og avtalebehandling (Calendly, Cal.com)',
+      'E-postsekvenser og automatiske oppfølginger',
+      'Integrasjon mot HubSpot, Pipedrive, Notion, Slack m.fl.',
+      'Oppsett via Make, n8n eller Zapier',
+      'Månedlig gjennomgang og optimalisering',
+    ],
+    process: [
+      { step: '01', title: 'Kartlegging', description: 'Vi gjennomgår arbeidsflyten din steg for steg og identifiserer oppgavene som stjeler mest tid – og som er enklest å automatisere uten risiko.' },
+      { step: '02', title: 'Bygging og testing', description: 'Vi bygger automasjonen, kobler den mot dine eksisterende systemer og tester grundig mot reelle scenarioer. Ingenting lanseres før det er pålitelig.' },
+      { step: '03', title: 'Lansering og optimalisering', description: 'Etter lansering overvåker vi ytelsen, retter avvik og optimaliserer basert på ekte data. Du får full innsikt i hva som skjer og hva det sparer deg.' },
+    ],
+    relatedServices: [
+      { title: 'Webdesign', href: '/tjenester/webdesign' },
+      { title: 'App utvikling', href: '/tjenester/app-utvikling' },
+      { title: 'SEO', href: '/tjenester/seo' },
+    ],
+    pricingFrom: '8 000 kr',
+    faqs: [
+      { q: 'Hva kan AI-automasjon gjøre for bedriften min?', a: 'Den kan håndtere alle repetitive, regelbaserte oppgaver: svare på standardhenvendelser, sortere og videresende e-poster, logge leads i CRM, sende oppfølgings-e-poster, bekrefte bookinger og mye mer. En god tommelfingerregel: hvis du kan beskrive oppgaven som en serie trinn, kan den automatiseres.' },
+      { q: 'Hva koster AI-automasjon i Bergen?', a: 'Prisen avhenger av kompleksiteten. En enkel automasjon starter fra 8 000 kr eks. mva. Mer komplekse flyter med AI-behandling, chatbot og flere integrasjoner koster mer. Vi gir alltid et fast tilbud uten skjulte kostnader.' },
+      { q: 'Trenger bedriften min teknisk kompetanse for å bruke AI-automasjon?', a: 'Nei. Vi setter opp alt, dokumenterer systemet og opplærer deg. Du trenger ikke vite noe om kode eller teknologi – bare bruke resultatet og se at henvendelsene håndteres mens du er opptatt med andre ting.' },
+      { q: 'Hvilke systemer kan dere integrere mot?', a: 'De fleste. Vi jobber med HubSpot, Pipedrive, Notion, Slack, Google Workspace, Calendly, Stripe, WooCommerce og hundrevis av andre via Make, n8n og Zapier. Har du et system du bruker, spør oss – sannsynligheten er stor for at vi kan koble det til.' },
+      { q: 'Kan AI-automasjon erstatte personlig kundekontakt?', a: 'Nei – og det skal den ikke. Den håndterer det rutinepregede slik at du kan bruke mer tid på relasjonsbygging og komplekse kundesituasjoner. Alle systemer vi bygger har tydelig «human handoff» for henvendelser som krever personlig oppfølging.' },
+    ],
+  },
+  en: {
+    meta: {
+      title: 'AI Automation Bergen – Automate the time-thieves | Frameflow',
+      description: 'Frameflow builds AI automations for businesses. Enquiry handling, AI chatbot, lead qualification and CRM integration — free up hours every week. From NOK 8,000.',
+      ogTitle: 'AI Automation Bergen – Automate the time-thieves | Frameflow',
+      ogImageTitle: 'AI Automation Bergen',
+      ogImageLabel: 'AI Automation',
+      ogAlt: 'AI Automation Bergen – Frameflow',
+      canonical: 'https://www.frameflow.no/en/services/ai-automation',
+    },
+    label: 'Service',
+    title: 'Let AI handle the manual work. You focus on growth.',
+    description: 'We build smart automations that handle enquiries, qualify leads and follow up customers — automatically, consistently, without you lifting a finger.',
+    longDescription: 'AI automation is not about replacing people — it is about freeing them. Every week businesses like yours spend hours on tasks a smart automation can do in seconds: answering standard questions, moving data between systems, sending reminders, logging leads in CRM. We map exactly where you are losing time and build robust automations that run in the background — always on, always consistent, never sick.',
+    includes: [
+      'Automatic enquiry handling via email and web',
+      'AI chatbot on the website (24/7 replies to customers)',
+      'Lead qualification and automatic CRM logging',
+      'Booking and appointment handling (Calendly, Cal.com)',
+      'Email sequences and automatic follow-ups',
+      'Integration with HubSpot, Pipedrive, Notion, Slack and more',
+      'Setup via Make, n8n or Zapier',
+      'Monthly review and optimisation',
+    ],
+    process: [
+      { step: '01', title: 'Mapping', description: 'We go through your workflow step by step and identify the tasks that steal the most time — and that are easiest to automate without risk.' },
+      { step: '02', title: 'Build and test', description: 'We build the automation, connect it to your existing systems and test thoroughly against real scenarios. Nothing is launched until it is reliable.' },
+      { step: '03', title: 'Launch and optimise', description: 'After launch we monitor performance, fix deviations and optimise based on real data. You get full insight into what is happening and what it saves you.' },
+    ],
+    relatedServices: [
+      { title: 'Web design', href: '/tjenester/webdesign' },
+      { title: 'App development', href: '/tjenester/app-utvikling' },
+      { title: 'SEO', href: '/tjenester/seo' },
+    ],
+    pricingFrom: 'NOK 8,000',
+    faqs: [
+      { q: 'What can AI automation do for my business?', a: 'It can handle all repetitive, rule-based tasks: reply to standard enquiries, sort and forward emails, log leads in CRM, send follow-up emails, confirm bookings and much more. A good rule of thumb: if you can describe the task as a series of steps, it can be automated.' },
+      { q: 'How much does AI automation cost?', a: 'The price depends on complexity. A simple automation starts from NOK 8,000 excl. VAT. More complex flows with AI processing, chatbot and multiple integrations cost more. We always give a fixed quote with no hidden costs.' },
+      { q: 'Does my business need technical expertise to use AI automation?', a: 'No. We set everything up, document the system and train you. You do not need to know anything about code or technology — just use the result and see enquiries being handled while you focus on other things.' },
+      { q: 'Which systems can you integrate with?', a: 'Most of them. We work with HubSpot, Pipedrive, Notion, Slack, Google Workspace, Calendly, Stripe, WooCommerce and hundreds of others via Make, n8n and Zapier.' },
+      { q: 'Can AI automation replace personal customer contact?', a: 'No — and it should not. It handles the routine work so you can spend more time on relationship building and complex customer situations. All systems we build have a clear human handoff for enquiries that require personal follow-up.' },
+    ],
+  },
+}

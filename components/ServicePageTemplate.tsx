@@ -1,8 +1,9 @@
 'use client'
 
-import Link from 'next/link'
 import { useRef, useState } from 'react'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 import { WebMockup, CameraMockup, SocialMockup, BrandMockup, AppMockup, SEOMockup, AIMockup } from '@/components/ServiceMockups'
 
 interface ServicePageProps {
@@ -18,23 +19,15 @@ interface ServicePageProps {
   faqs?: { q: string; a: string }[]
 }
 
-const accordionItems = [
-  {
-    title: 'Omfang og sider',
-    body: 'Antall undersider, funksjoner og integrasjoner påvirker prisen direkte.',
-  },
-  {
-    title: 'Design kompleksitet',
-    body: 'Skreddersydd design tar lengre tid enn templater, men gir bedre resultater.',
-  },
-  {
-    title: 'Innhold og bilder',
-    body: 'Trenger du foto/video i tillegg? Vi tilbyr pakker som kombinerer tjenester.',
-  },
-]
-
 function PricingAccordion() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const t = useTranslations('serviceTemplate')
+
+  const accordionItems = [
+    { title: t('factor1Title'), body: t('factor1Desc') },
+    { title: t('factor2Title'), body: t('factor2Desc') },
+    { title: t('factor3Title'), body: t('factor3Desc') },
+  ]
 
   return (
     <div className="flex flex-col gap-2">
@@ -96,16 +89,6 @@ function FaqItem({ q, a }: { q: string; a: string }) {
   )
 }
 
-const mockupBadgeLabels: Record<string, string> = {
-  web: 'SEO optimalisert',
-  photo: 'RAW · 24 megapiksel',
-  social: '4.2% engasjement',
-  brand: 'Brand guidelines',
-  app: '98% uptime',
-  seo: 'Side 1 på Google',
-  ai: '47 timer spart/mnd',
-}
-
 function HeroMockup({ mockupType, visible }: { mockupType: string; visible: boolean }) {
   if (mockupType === 'web') return <WebMockup visible={visible} />
   if (mockupType === 'photo') return <CameraMockup visible={visible} />
@@ -129,12 +112,23 @@ export default function ServicePageTemplate({
   pricingFrom,
   faqs,
 }: ServicePageProps) {
+  const t = useTranslations('serviceTemplate')
   const heroRef = useRef(null)
   const heroInView = useInView(heroRef, { once: true })
   const contentRef = useRef(null)
   const contentInView = useInView(contentRef, { once: true, margin: '-80px' })
   const processRef = useRef(null)
   const processInView = useInView(processRef, { once: true, margin: '-80px' })
+
+  const mockupBadgeLabels: Record<string, string> = {
+    web: t('badgeWeb'),
+    photo: t('badgePhoto'),
+    social: t('badgeSocial'),
+    brand: t('badgeBrand'),
+    app: t('badgeApp'),
+    seo: t('badgeSeo'),
+    ai: t('badgeAi'),
+  }
 
   const badgeLabel = mockupBadgeLabels[mockupType] ?? 'Frameflow'
 
@@ -143,24 +137,21 @@ export default function ServicePageTemplate({
       {/* Hero */}
       <section ref={heroRef} className="pt-28 md:pt-32 pb-14 md:pb-20 px-6 lg:px-8 bg-white border-b border-border">
         <div className="max-w-7xl mx-auto">
-          {/* Breadcrumb */}
           <motion.nav
             initial={{ opacity: 0 }}
             animate={heroInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.4 }}
-            aria-label="Brødsmuler"
+            aria-label="Breadcrumbs"
             className="flex items-center gap-2 text-xs text-fg-muted font-medium mb-8"
           >
-            <Link href="/" className="hover:text-fg transition-colors">Hjem</Link>
+            <Link href="/" className="hover:text-fg transition-colors">{t('home')}</Link>
             <span>/</span>
-            <Link href="/tjenester" className="hover:text-fg transition-colors">Tjenester</Link>
+            <Link href="/tjenester" className="hover:text-fg transition-colors">{t('services')}</Link>
             <span>/</span>
             <span className="text-fg">{title}</span>
           </motion.nav>
 
-          {/* Two-column grid */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left: text */}
             <div className="lg:col-span-7">
               <motion.span
                 initial={{ opacity: 0, y: 10 }}
@@ -197,18 +188,17 @@ export default function ServicePageTemplate({
                   href="/tilbud"
                   className="text-sm font-semibold bg-accent hover:bg-accent-hover text-white px-6 py-3 rounded-lg transition-colors min-h-[44px] inline-flex items-center gap-2 shadow-blue-sm"
                 >
-                  Be om tilbud
+                  {t('getQuote')}
                 </Link>
                 <Link
                   href="/kontakt"
                   className="text-sm font-semibold text-fg border border-border hover:border-accent hover:text-accent px-6 py-3 rounded-lg transition-all duration-200 min-h-[44px] inline-flex items-center gap-2 bg-white shadow-card"
                 >
-                  Ta kontakt
+                  {t('contact')}
                 </Link>
               </motion.div>
             </div>
 
-            {/* Right: mockup — hidden on mobile */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={heroInView ? { opacity: 1, x: 0 } : {}}
@@ -216,7 +206,6 @@ export default function ServicePageTemplate({
               className="lg:col-span-5 hidden lg:block"
             >
               <div className="relative">
-                {/* Top-left badge */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.85 }}
                   animate={heroInView ? { opacity: 1, scale: 1 } : {}}
@@ -224,14 +213,13 @@ export default function ServicePageTemplate({
                   className="absolute -top-4 -left-4 z-10 bg-white border border-border rounded-xl px-3 py-2 shadow-card flex items-center gap-2"
                 >
                   <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                  <span className="text-[11px] font-semibold text-fg">{mockupType === 'app' ? '5000+ installs' : 'Levert i Bergen'}</span>
+                  <span className="text-[11px] font-semibold text-fg">{mockupType === 'app' ? '5000+ installs' : t('deliveredIn')}</span>
                 </motion.div>
 
                 <div className="rounded-2xl overflow-hidden shadow-card-hover border border-border">
                   <HeroMockup mockupType={mockupType} visible={heroInView} />
                 </div>
 
-                {/* Bottom-right badge */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.85 }}
                   animate={heroInView ? { opacity: 1, scale: 1 } : {}}
@@ -262,7 +250,7 @@ export default function ServicePageTemplate({
             animate={contentInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="display-text text-3xl text-fg mb-6">Hva vi leverer</h2>
+            <h2 className="display-text text-3xl text-fg mb-6">{t('includes')}</h2>
             <p className="text-fg-muted leading-relaxed">{longDescription}</p>
           </motion.div>
           <motion.div
@@ -270,7 +258,7 @@ export default function ServicePageTemplate({
             animate={contentInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <p className="text-xs font-semibold text-fg-muted uppercase tracking-widest mb-6">Inkluderer</p>
+            <p className="text-xs font-semibold text-fg-muted uppercase tracking-widest mb-6">{t('includesLabel')}</p>
             <ul className="flex flex-col gap-3">
               {includes.map((item, i) => (
                 <motion.li
@@ -301,9 +289,9 @@ export default function ServicePageTemplate({
             className="mb-14"
           >
             <span className="inline-flex items-center gap-2 text-accent text-xs font-semibold uppercase tracking-widest mb-4">
-              <span className="w-4 h-px bg-accent" /> Slik jobber vi
+              <span className="w-4 h-px bg-accent" /> {t('process')}
             </span>
-            <h2 className="display-text text-3xl sm:text-4xl text-fg">Prosessen vår</h2>
+            <h2 className="display-text text-3xl sm:text-4xl text-fg">{t('processLabel')}</h2>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {process.map((step, i) => (
@@ -329,27 +317,25 @@ export default function ServicePageTemplate({
           <div className="max-w-7xl mx-auto">
             <div className="mb-10">
               <span className="inline-flex items-center gap-2 text-accent text-xs font-semibold uppercase tracking-widest mb-4">
-                <span className="w-4 h-px bg-accent" /> Investering
+                <span className="w-4 h-px bg-accent" /> {t('pricing')}
               </span>
-              <h2 className="display-text text-4xl text-fg">Hva koster det?</h2>
+              <h2 className="display-text text-4xl text-fg">{t('pricingLabel')}</h2>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-              {/* Pricing card */}
               <div className="bg-white border border-border rounded-xl p-8 shadow-card-hover">
-                <p className="text-xs font-semibold text-fg-muted uppercase tracking-widest mb-3">Fra</p>
+                <p className="text-xs font-semibold text-fg-muted uppercase tracking-widest mb-3">{t('from')}</p>
                 <p className="display-text text-4xl text-fg mb-2">{pricingFrom}</p>
-                <p className="text-sm text-fg-muted mb-8">per prosjekt, eks. mva</p>
+                <p className="text-sm text-fg-muted mb-8">{t('perProject')}</p>
                 <Link
                   href="/kontakt"
                   className="text-sm font-semibold bg-accent hover:bg-accent-hover text-white px-6 py-3 rounded-lg transition-colors min-h-[44px] inline-flex items-center gap-2 shadow-blue-sm"
                 >
-                  Book gratis samtale
+                  {t('bookCall')}
                 </Link>
               </div>
 
-              {/* Accordion */}
               <div>
-                <p className="text-sm font-semibold text-fg mb-4">Hva påvirker prisen?</p>
+                <p className="text-sm font-semibold text-fg mb-4">{t('priceFactors')}</p>
                 <PricingAccordion />
               </div>
             </div>
@@ -361,7 +347,7 @@ export default function ServicePageTemplate({
       {faqs && faqs.length > 0 && (
         <section className="py-14 md:py-20 px-6 lg:px-8 bg-white border-t border-border">
           <div className="max-w-3xl mx-auto">
-            <h2 className="display-text text-3xl text-fg mb-10">Vanlige spørsmål</h2>
+            <h2 className="display-text text-3xl text-fg mb-10">{t('faq')}</h2>
             <div className="flex flex-col divide-y divide-border">
               {faqs.map((faq, i) => (
                 <FaqItem key={i} q={faq.q} a={faq.a} />
@@ -375,12 +361,12 @@ export default function ServicePageTemplate({
       <section className="py-16 px-6 lg:px-8 bg-bg-2 border-t border-border">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between gap-10">
           <div>
-            <p className="text-xs font-semibold text-fg-muted uppercase tracking-widest mb-5">Andre tjenester</p>
+            <p className="text-xs font-semibold text-fg-muted uppercase tracking-widest mb-5">{t('related')}</p>
             <div className="flex flex-wrap gap-3">
               {relatedServices.map((s) => (
                 <Link
                   key={s.href}
-                  href={s.href}
+                  href={s.href as any}
                   className="text-sm font-medium text-fg border border-border hover:border-accent hover:text-accent px-4 py-2 rounded-lg transition-all duration-200 min-h-[44px] flex items-center bg-white shadow-card"
                 >
                   {s.title}
@@ -394,16 +380,16 @@ export default function ServicePageTemplate({
                 href="/tilbud"
                 className="text-sm font-semibold bg-accent hover:bg-accent-hover text-white px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center shadow-blue-sm"
               >
-                Be om tilbud
+                {t('getQuote')}
               </Link>
               <Link
                 href="/kontakt"
                 className="text-sm font-semibold text-fg border border-border hover:border-accent hover:text-accent px-6 py-3 rounded-lg transition-all duration-200 min-h-[44px] flex items-center bg-white shadow-card"
               >
-                Book gratis samtale
+                {t('bookCall')}
               </Link>
             </div>
-            <p className="text-xs text-fg-muted">Svar innen 24 timer – alltid</p>
+            <p className="text-xs text-fg-muted">{t('response')}</p>
           </div>
         </div>
       </section>

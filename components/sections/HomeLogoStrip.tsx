@@ -1,3 +1,7 @@
+'use client'
+
+import { useTranslations } from 'next-intl'
+
 const logos: { name: string; weight: string }[] = [
   { name: 'Sportsbytte', weight: 'font-semibold' },
   { name: 'h-orbit',    weight: 'font-bold tracking-tight' },
@@ -6,10 +10,12 @@ const logos: { name: string; weight: string }[] = [
 ]
 
 export default function HomeLogoStrip() {
+  const t = useTranslations('home.logos')
+
   return (
     <section className="py-12 bg-bg border-y border-border overflow-hidden">
       <p className="text-center text-xs font-semibold tracking-widest uppercase text-fg-muted mb-8 px-6">
-        Bedrifter vi har hjulpet å vokse
+        {t('label')}
       </p>
 
       <div className="relative overflow-hidden">

@@ -2,71 +2,36 @@
 
 import { useRef, useEffect, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 
-const stats = [
-  {
-    value: 20,
-    suffix: '+',
-    label: 'Prosjekter levert',
-    note: 'For bedrifter i Bergen og Vestland',
-  },
-  {
-    value: 7,
-    suffix: '',
-    label: 'Tjenester under ett tak',
-    note: 'Web, SEO, AI, foto, sosiale medier og mer',
-  },
-  {
-    value: 140,
-    suffix: '%',
-    label: 'Mer organisk trafikk',
-    note: 'Sportsbytte · måneder etter lansering',
-  },
-  {
-    value: 24,
-    suffix: 't',
-    label: 'Svartid',
-    note: 'Svar garantert innen 24 timer',
-  },
-]
-
-function Counter({
-  target,
-  suffix,
-  trigger,
-}: {
-  target: number
-  suffix: string
-  trigger: boolean
-}) {
+function Counter({ target, suffix, trigger }: { target: number; suffix: string; trigger: boolean }) {
   const [count, setCount] = useState(0)
-
   useEffect(() => {
     if (!trigger) return
     let frame = 0
     const totalFrames = 80
     const id = setInterval(() => {
       frame++
-      const progress = frame / totalFrames
-      // Ease-out cubic
-      const eased = 1 - Math.pow(1 - progress, 3)
+      const eased = 1 - Math.pow(1 - frame / totalFrames, 3)
       setCount(Math.round(eased * target))
       if (frame >= totalFrames) clearInterval(id)
     }, 16)
     return () => clearInterval(id)
   }, [trigger, target])
-
-  return (
-    <span>
-      {count}
-      {suffix}
-    </span>
-  )
+  return <span>{count}{suffix}</span>
 }
 
 export default function HomeStats() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-80px' })
+  const t = useTranslations('home.stats')
+
+  const stats = [
+    { value: 20, suffix: '+', label: t('projects'), note: t('projectsSub') },
+    { value: 7, suffix: '', label: t('services'), note: t('servicesSub') },
+    { value: 140, suffix: '%', label: t('traffic'), note: t('trafficSub') },
+    { value: 24, suffix: 't', label: t('response'), note: t('responseSub') },
+  ]
 
   return (
     <section ref={ref} className="py-14 px-6 lg:px-8 bg-white border-y border-border">

@@ -1,17 +1,17 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter, Link } from '@/i18n/navigation'
+import { useLocale, useTranslations } from 'next-intl'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
-import { NAV_LINKS as links } from '@/lib/constants'
 
 function Wordmark() {
+  const t = useTranslations('nav')
   return (
     <Image
       src="/Wordmark.png"
-      alt="Frameflow – Markedsføringsbyrå i Bergen"
+      alt={t('wordmarkAlt')}
       width={140}
       height={32}
       priority
@@ -24,6 +24,21 @@ export default function Navigation() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const pathname = usePathname()
+  const router = useRouter()
+  const locale = useLocale()
+  const t = useTranslations('nav')
+
+  const links = [
+    { href: '/om-oss' as const, label: t('about') },
+    { href: '/tjenester' as const, label: t('services') },
+    { href: '/prosjekter' as const, label: t('projects') },
+    { href: '/blogg' as const, label: t('blog') },
+  ]
+
+  const switchLocale = () => {
+    const next = locale === 'no' ? 'en' : 'no'
+    router.replace(pathname as any, { locale: next })
+  }
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -50,7 +65,7 @@ export default function Navigation() {
       >
         <nav className="max-w-7xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center shrink-0" aria-label="Frameflow – tilbake til forsiden">
+          <Link href="/" className="flex items-center shrink-0" aria-label={t('backToHome')}>
             <Wordmark />
           </Link>
 
@@ -75,19 +90,26 @@ export default function Navigation() {
             })}
           </div>
 
-          {/* Desktop CTA */}
+          {/* Desktop CTA + lang switcher */}
           <div className="hidden md:flex items-center gap-3">
+            <button
+              onClick={switchLocale}
+              className="text-xs font-semibold text-fg-muted hover:text-fg border border-fg/15 hover:border-fg/30 bg-bg-2 px-3 py-1.5 rounded-lg transition-all min-h-[36px]"
+              aria-label={t('langSwitch')}
+            >
+              {t('langSwitch')}
+            </button>
             <Link
               href="/kontakt"
               className="text-sm font-semibold text-fg hover:text-accent border border-fg/15 hover:border-accent/50 bg-bg-2 px-5 py-2 rounded-lg transition-all min-h-[44px] flex items-center shadow-card"
             >
-              Book samtale
+              {t('bookCall')}
             </Link>
             <Link
               href="/tilbud"
               className="text-sm font-semibold bg-accent hover:bg-accent-hover text-white px-5 py-2 rounded-lg transition-colors shadow-blue-sm min-h-[44px] flex items-center"
             >
-              Få tilbud →
+              {t('getQuote')}
             </Link>
           </div>
 
@@ -95,7 +117,7 @@ export default function Navigation() {
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="md:hidden w-10 h-10 flex flex-col gap-[5px] items-center justify-center rounded-lg border border-border bg-bg-2 hover:bg-white shadow-card hover:shadow-card-hover transition-all duration-200"
-            aria-label={menuOpen ? 'Lukk meny' : 'Åpne meny'}
+            aria-label={menuOpen ? t('closeMenu') : t('openMenu')}
             aria-expanded={menuOpen}
           >
             <span className={`block w-[18px] h-[1.5px] bg-fg rounded-full transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-[6.5px]' : ''}`} />
@@ -116,10 +138,16 @@ export default function Navigation() {
             className="fixed inset-0 z-40 bg-bg flex flex-col pt-24 px-8 overflow-y-auto"
           >
             {/* Mobile menu logo */}
-            <div className="absolute top-0 left-0 right-0 h-16 flex items-center px-6 border-b border-border">
-              <Link href="/" aria-label="Frameflow – tilbake til forsiden">
+            <div className="absolute top-0 left-0 right-0 h-16 flex items-center justify-between px-6 border-b border-border">
+              <Link href="/" aria-label={t('backToHome')}>
                 <Wordmark />
               </Link>
+              <button
+                onClick={switchLocale}
+                className="text-xs font-semibold text-fg-muted hover:text-fg border border-fg/15 hover:border-fg/30 bg-bg-2 px-3 py-1.5 rounded-lg transition-all"
+              >
+                {t('langSwitch')}
+              </button>
             </div>
 
             <nav className="flex flex-col gap-2">
@@ -154,13 +182,13 @@ export default function Navigation() {
                   href="/tilbud"
                   className="text-sm font-semibold bg-accent hover:bg-accent-hover text-white px-6 py-3.5 rounded-lg text-center shadow-blue-sm transition-colors"
                 >
-                  Få et gratis tilbud →
+                  {t('getQuoteFree')}
                 </Link>
                 <Link
                   href="/kontakt"
                   className="text-sm font-semibold text-fg border border-border hover:border-accent hover:text-accent bg-white px-6 py-3.5 rounded-lg text-center shadow-card transition-all"
                 >
-                  Ta kontakt
+                  {t('contact')}
                 </Link>
               </motion.div>
             </nav>

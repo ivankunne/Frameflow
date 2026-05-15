@@ -1,32 +1,35 @@
 'use client'
 
-import Link from 'next/link'
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { WebMockup, CameraMockup, SocialMockup, BrandMockup, AppMockup } from '@/components/ServiceMockups'
-
-// ─── Service data ──────────────────────────────────────────────────────────
-const services = [
-  { number: '01', title: 'Web design', pricingFrom: 'Fra 12 000 kr', description: 'Raske, konverteringsfokuserte nettsider for Bergen-bedrifter med SEO innebygd fra dag én. Ingen rot – bare det som fungerer.', href: '/tjenester/webdesign', tags: ['Next.js', 'Webflow', 'SEO'], Mockup: WebMockup },
-  { number: '02', title: 'App utvikling', pricingFrom: 'Fra 35 000 kr', description: 'Skreddersydde apper som løser reelle problemer – fra MVP til fullskala. Vi bygger apper som folk faktisk bruker daglig.', href: '/tjenester/app-utvikling', tags: ['React', 'React Native', 'Full-stack'], Mockup: AppMockup },
-  { number: '03', title: 'Foto og videografi', pricingFrom: 'Fra 3 500 kr', description: 'Autentisk foto og video produksjon i Bergen – ser profesjonelt ut, forteller din historie og fungerer på alle flater.', href: '/tjenester/foto-og-videografi', tags: ['Produktfoto', 'Reels', 'Video'], Mockup: CameraMockup },
-  { number: '04', title: 'Branding', pricingFrom: 'Fra 6 000 kr', description: 'Vi former utseendet, stemmen og følelsen av merkevaren din – skreddersydd for Bergen-markedet, konsekvent og umiskjennelig.', href: '/tjenester/branding', tags: ['Logo', 'Identitet', 'Guidelines'], Mockup: BrandMockup },
-]
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
+import { WebMockup, CameraMockup, BrandMockup, AppMockup } from '@/components/ServiceMockups'
 
 export default function HomeServices() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-80px' })
+  const t = useTranslations('home.services')
+
+  const services = [
+    { number: '01', title: t('webTitle'), pricingFrom: t('webPrice'), description: t('webDesc'), href: '/tjenester/webdesign' as const, tags: ['Next.js', 'Webflow', 'SEO'], Mockup: WebMockup },
+    { number: '02', title: t('appTitle'), pricingFrom: t('appPrice'), description: t('appDesc'), href: '/tjenester/app-utvikling' as const, tags: ['React', 'React Native', 'Full-stack'], Mockup: AppMockup },
+    { number: '03', title: t('photoTitle'), pricingFrom: t('photoPrice'), description: t('photoDesc'), href: '/tjenester/foto-og-videografi' as const, tags: ['Produktfoto', 'Reels', 'Video'], Mockup: CameraMockup },
+    { number: '04', title: t('brandingTitle'), pricingFrom: t('brandingPrice'), description: t('brandingDesc'), href: '/tjenester/branding' as const, tags: ['Logo', 'Identitet', 'Guidelines'], Mockup: BrandMockup },
+  ]
 
   return (
     <section ref={ref} className="py-16 md:py-24 lg:py-32 px-6 lg:px-8 bg-bg-2">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5 }}>
-            <span className="inline-flex items-center gap-2 text-accent text-xs font-semibold uppercase tracking-widest mb-4"><span className="w-4 h-px bg-accent" /> Hva vi gjør</span>
-            <h2 className="display-text text-3xl sm:text-4xl lg:text-5xl text-fg">Våre tjenester</h2>
+            <span className="inline-flex items-center gap-2 text-accent text-xs font-semibold uppercase tracking-widest mb-4">
+              <span className="w-4 h-px bg-accent" /> {t('label')}
+            </span>
+            <h2 className="display-text text-3xl sm:text-4xl lg:text-5xl text-fg">{t('title')}</h2>
           </motion.div>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.1 }} className="text-fg-muted max-w-sm leading-relaxed">
-            Helhetlige løsninger som styrker din digitale tilstedeværelse og gir målbare resultater.
+            {t('subtitle')}
           </motion.p>
         </div>
 
@@ -47,7 +50,7 @@ export default function HomeServices() {
                   ))}
                 </div>
                 <div className="mt-auto flex items-center gap-1 text-sm font-semibold text-accent">
-                  Se mer
+                  {t('seeMore')}
                   <span aria-hidden className="group-hover:translate-x-1 transition-transform duration-200 inline-block">→</span>
                 </div>
               </Link>
@@ -56,7 +59,9 @@ export default function HomeServices() {
         </div>
 
         <motion.div initial={{ opacity: 0, y: 16 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.45, delay: 0.6 }} className="mt-8 flex justify-end">
-          <Link href="/tjenester" className="text-sm font-semibold text-accent hover:text-accent-hover transition-colors inline-flex items-center gap-1.5">Se alle tjenester <span aria-hidden>→</span></Link>
+          <Link href="/tjenester" className="text-sm font-semibold text-accent hover:text-accent-hover transition-colors inline-flex items-center gap-1.5">
+            {t('seeAll')} <span aria-hidden>→</span>
+          </Link>
         </motion.div>
       </div>
     </section>
