@@ -21,8 +21,8 @@ function Wordmark() {
 }
 
 const LANGUAGES = [
-  { code: 'no', flag: '🇳🇴', label: 'Norsk' },
-  { code: 'en', flag: '🇬🇧', label: 'English' },
+  { code: 'no', flag: '/norway.png', label: 'Norsk' },
+  { code: 'en', flag: '/united-kingdom.png', label: 'English' },
 ] as const
 
 function LangDropdown({ locale, onSwitch }: { locale: string; onSwitch: (code: string) => void }) {
@@ -47,7 +47,7 @@ function LangDropdown({ locale, onSwitch }: { locale: string; onSwitch: (code: s
         aria-haspopup="listbox"
         aria-expanded={open}
       >
-        <span className="text-base leading-none">{current.flag}</span>
+        <Image src={current.flag} alt={current.label} width={18} height={18} className="rounded-sm object-cover" />
         <span>{current.label}</span>
         <svg
           className={`w-3 h-3 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
@@ -78,7 +78,7 @@ function LangDropdown({ locale, onSwitch }: { locale: string; onSwitch: (code: s
                       : 'text-fg hover:bg-bg-2 font-medium'
                   }`}
                 >
-                  <span className="text-base leading-none">{lang.flag}</span>
+                  <Image src={lang.flag} alt={lang.label} width={18} height={18} className="rounded-sm object-cover shrink-0" />
                   <span>{lang.label}</span>
                   {locale === lang.code && (
                     <svg className="ml-auto w-3.5 h-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
