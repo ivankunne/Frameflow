@@ -81,8 +81,8 @@ const localBusinessSchema = {
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-    opens: '09:00',
-    closes: '17:00',
+    opens: '07:00',
+    closes: '18:00',
   },
   sameAs: ['https://www.instagram.com/frameflow_no/', 'https://www.tiktok.com/@frameflow.no'],
 }
