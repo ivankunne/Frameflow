@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { usePathname, useRouter, Link } from '@/i18n/navigation'
 import { useLocale, useTranslations } from 'next-intl'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -20,6 +20,81 @@ function Wordmark() {
   )
 }
 
+const LANGUAGES = [
+  { code: 'no', flag: '🇳🇴', label: 'Norsk' },
+  { code: 'en', flag: '🇬🇧', label: 'English' },
+] as const
+
+function LangDropdown({ locale, onSwitch }: { locale: string; onSwitch: (code: string) => void }) {
+  const [open, setOpen] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false)
+    }
+    document.addEventListener('mousedown', handler)
+    return () => document.removeEventListener('mousedown', handler)
+  }, [])
+
+  const current = LANGUAGES.find(l => l.code === locale) ?? LANGUAGES[0]
+
+  return (
+    <div ref={ref} className="relative">
+      <button
+        onClick={() => setOpen(v => !v)}
+        className="flex items-center gap-1.5 text-xs font-semibold text-fg-muted hover:text-fg border border-fg/15 hover:border-fg/30 bg-bg-2 px-3 py-1.5 rounded-lg transition-all min-h-[36px]"
+        aria-haspopup="listbox"
+        aria-expanded={open}
+      >
+        <span className="text-base leading-none">{current.flag}</span>
+        <span>{current.label}</span>
+        <svg
+          className={`w-3 h-3 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
+          fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <AnimatePresence>
+        {open && (
+          <motion.ul
+            initial={{ opacity: 0, y: -6, scale: 0.97 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -6, scale: 0.97 }}
+            transition={{ duration: 0.15 }}
+            role="listbox"
+            className="absolute right-0 mt-1.5 w-36 bg-bg border border-border rounded-xl shadow-card-hover overflow-hidden z-50"
+          >
+            {LANGUAGES.map(lang => (
+              <li key={lang.code}>
+                <button
+                  role="option"
+                  aria-selected={locale === lang.code}
+                  onClick={() => { onSwitch(lang.code); setOpen(false) }}
+                  className={`w-full flex items-center gap-2.5 px-3.5 py-2.5 text-sm transition-colors ${
+                    locale === lang.code
+                      ? 'bg-accent/10 text-accent font-semibold'
+                      : 'text-fg hover:bg-bg-2 font-medium'
+                  }`}
+                >
+                  <span className="text-base leading-none">{lang.flag}</span>
+                  <span>{lang.label}</span>
+                  {locale === lang.code && (
+                    <svg className="ml-auto w-3.5 h-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  )}
+                </button>
+              </li>
+            ))}
+          </motion.ul>
+        )}
+      </AnimatePresence>
+    </div>
+  )
+}
+
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
@@ -35,9 +110,8 @@ export default function Navigation() {
     { href: '/blogg' as const, label: t('blog') },
   ]
 
-  const switchLocale = () => {
-    const next = locale === 'no' ? 'en' : 'no'
-    router.replace(pathname as any, { locale: next })
+  const switchLocale = (code: string) => {
+    router.replace(pathname as any, { locale: code })
   }
 
   useEffect(() => {
@@ -92,13 +166,7 @@ export default function Navigation() {
 
           {/* Desktop CTA + lang switcher */}
           <div className="hidden md:flex items-center gap-3">
-            <button
-              onClick={switchLocale}
-              className="text-xs font-semibold text-fg-muted hover:text-fg border border-fg/15 hover:border-fg/30 bg-bg-2 px-3 py-1.5 rounded-lg transition-all min-h-[36px]"
-              aria-label={t('langSwitch')}
-            >
-              {t('langSwitch')}
-            </button>
+            <LangDropdown locale={locale} onSwitch={switchLocale} />
             <Link
               href="/kontakt"
               className="text-sm font-semibold text-fg hover:text-accent border border-fg/15 hover:border-accent/50 bg-bg-2 px-5 py-2 rounded-lg transition-all min-h-[44px] flex items-center shadow-card"
@@ -142,12 +210,7 @@ export default function Navigation() {
               <Link href="/" aria-label={t('backToHome')}>
                 <Wordmark />
               </Link>
-              <button
-                onClick={switchLocale}
-                className="text-xs font-semibold text-fg-muted hover:text-fg border border-fg/15 hover:border-fg/30 bg-bg-2 px-3 py-1.5 rounded-lg transition-all"
-              >
-                {t('langSwitch')}
-              </button>
+              <LangDropdown locale={locale} onSwitch={switchLocale} />
             </div>
 
             <nav className="flex flex-col gap-2">
