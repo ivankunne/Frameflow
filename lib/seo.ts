@@ -9,7 +9,6 @@ export function buildAlternates(noPath: string, enPath: string, locale: string) 
     languages: {
       'nb-NO': noUrl,
       'en': enUrl,
-      'x-default': noUrl,
     },
   }
 }

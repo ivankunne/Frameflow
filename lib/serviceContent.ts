@@ -22,9 +22,9 @@ export type ServiceContent = {
 export const webdesign: Record<'no' | 'en', ServiceContent> = {
   no: {
     meta: {
-      title: 'Webbyrå Bergen | Lage nettside som konverterer – Frameflow',
+      title: 'Webbyrå Bergen – Nettside som konverterer | Frameflow',
       description: 'Frameflow lager nettsider i Bergen med SEO innebygd fra dag én. Konverterer besøkende til kunder. Ingen oppstartsgebyr – svar innen 24 timer.',
-      ogTitle: 'Webbyrå Bergen | Lage nettside som konverterer – Frameflow',
+      ogTitle: 'Webbyrå Bergen – Nettside som konverterer | Frameflow',
       ogImageTitle: 'Lage nettside i Bergen',
       ogImageLabel: 'Webdesign',
       ogAlt: 'Webdesign Bergen – Frameflow',
@@ -287,7 +287,7 @@ export const appUtvikling: Record<'no' | 'en', ServiceContent> = {
 export const fotoOgVideografi: Record<'no' | 'en', ServiceContent> = {
   no: {
     meta: {
-      title: 'Foto og videografi Bergen – Bedriftsfoto og video | Frameflow',
+      title: 'Bedriftsfoto Bergen – Foto og videografi | Frameflow',
       description: 'Frameflow produserer bedriftsfoto og video i Bergen for sosiale medier, nettsider og annonser. Fra 4 500 kr – levering innen 5–7 virkedager.',
       ogTitle: 'Bedriftsfoto og video i Bergen | Frameflow',
       ogImageTitle: 'Bedriftsfoto og video i Bergen',
@@ -547,8 +547,8 @@ export const branding: Record<'no' | 'en', ServiceContent> = {
 export const markedsforing: Record<'no' | 'en', ServiceContent> = {
   no: {
     meta: {
-      title: 'Markedsføringsbyrå Bergen – Digital markedsføring | Frameflow',
-      description: 'Frameflow er markedsføringsbyrå i Bergen. Vi leverer webdesign, SEO, sosiale medier, branding og foto – alt under ett tak. Ingen mellommenn, fast pris, svar innen 24 timer.',
+      title: 'Markedsføringsbyrå Bergen | Frameflow',
+      description: 'Frameflow er markedsføringsbyrå i Bergen. Vi leverer webdesign, SEO, sosiale medier og branding under ett tak. Fast pris, ingen mellommenn, svar innen 24 timer.',
       ogTitle: 'Markedsføringsbyrå Bergen | Frameflow',
       ogImageTitle: 'Markedsføringsbyrå Bergen',
       ogImageLabel: 'Digital markedsføring',

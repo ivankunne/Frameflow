@@ -3,7 +3,7 @@ import { blogPosts, projects } from '@/lib/data'
 
 const BASE_URL = 'https://www.frameflow.no'
 const EN_BASE = `${BASE_URL}/en`
-const SITE_UPDATED = new Date('2026-05-10')
+const SITE_UPDATED = new Date('2026-05-25')
 
 type SitemapEntry = {
   url: string
@@ -48,9 +48,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return dual(`/prosjekter/${project.slug}`, `/projects/${project.slug}`, 'monthly', 0.7, mod)
   })
 
-  const blogPages: SitemapEntry[] = blogPosts.flatMap((post) => {
+  const blogPages: SitemapEntry[] = blogPosts.map((post) => {
     const mod = post.updatedAt ? new Date(post.updatedAt) : SITE_UPDATED
-    return dual(`/blogg/${post.slug}`, `/blog/${post.slug}`, 'monthly', 0.7, mod)
+    const noUrl = `${BASE_URL}/blogg/${post.slug}`
+    return { url: noUrl, lastModified: mod, changeFrequency: 'monthly' as const, priority: 0.7 }
   })
 
   return [...staticPages, ...projectPages, ...blogPages]
