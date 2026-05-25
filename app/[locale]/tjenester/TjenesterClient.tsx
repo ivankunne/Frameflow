@@ -87,6 +87,15 @@ const servicesData: Record<'no' | 'en', ServiceEntry[]> = {
       metric: '47', metricLabel: 'timer spart/mnd', metricSub: 'Gjennomsnitt · små bedrifter',
       includes: ['Automatisk henvendelseshåndtering', 'AI-chatbot 24/7', 'Lead-kvalifisering', 'CRM-integrasjon', 'E-postsekvenser', 'Make / n8n / Zapier'],
     },
+    {
+      number: '08', visual: 'social', accentHex: '#d97706',
+      href: '/tjenester/markedsforing',
+      shortTitle: 'Markedsføring', pricingFrom: 'Fra 4 500 kr/mnd',
+      title: 'Markedsføringsbyrå Bergen – ett byrå, alle kanaler',
+      description: 'Helhetlig digital markedsføring for Bergen-bedrifter under ett tak. SEO, webdesign, sosiale medier og branding – levert av én person uten mellommenn. Du snakker alltid direkte med Ivan.',
+      metric: '#1', metricLabel: 'markedsføringsbyrå', metricSub: 'Bergen · direkte kontakt',
+      includes: ['Webdesign og SEO', 'Sosiale medier', 'Branding og logo', 'Foto og video', 'Google Ads', 'Månedlig rapportering'],
+    },
   ],
   en: [
     {
@@ -151,6 +160,15 @@ const servicesData: Record<'no' | 'en', ServiceEntry[]> = {
       description: 'AI automation for Bergen businesses. We build systems that handle enquiries, qualify leads and update CRM automatically – without manual effort. You focus on what actually grows your business.',
       metric: '47', metricLabel: 'hours saved/mo', metricSub: 'Average · small businesses',
       includes: ['Automatic enquiry handling', 'AI chatbot 24/7', 'Lead qualification', 'CRM integration', 'Email sequences', 'Make / n8n / Zapier'],
+    },
+    {
+      number: '08', visual: 'social', accentHex: '#d97706',
+      href: '/tjenester/markedsforing',
+      shortTitle: 'Marketing', pricingFrom: 'From 4,500 kr/mo',
+      title: 'Marketing agency Bergen – one agency, all channels',
+      description: 'Full-service digital marketing for Bergen businesses under one roof. SEO, web design, social media and branding – delivered by one person with no middlemen. You always speak directly with Ivan.',
+      metric: '#1', metricLabel: 'marketing agency', metricSub: 'Bergen · direct contact',
+      includes: ['Web design and SEO', 'Social media', 'Branding and logo', 'Photo and video', 'Google Ads', 'Monthly reporting'],
     },
   ],
 }

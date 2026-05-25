@@ -33,6 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...dual('/tjenester/app-utvikling', '/services/app-development', 'monthly', 0.8),
     ...dual('/tjenester/branding', '/services/branding', 'monthly', 0.8),
     ...dual('/tjenester/seo', '/services/seo', 'monthly', 0.8),
+    ...dual('/tjenester/markedsforing', '/services/marketing', 'monthly', 0.9),
     ...dual('/tjenester/ai-automasjon', '/services/ai-automation', 'monthly', 0.8),
     ...dual('/prosjekter', '/projects', 'monthly', 0.8),
     ...dual('/blogg', '/blog', 'weekly', 0.8),

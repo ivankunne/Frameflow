@@ -45,7 +45,7 @@ const serviceListSchema = {
   '@type': 'ItemList',
   name: 'Tjenester – Frameflow Bergen',
   description: 'Digitale tjenester for bedrifter i Bergen: webdesign, SEO, AI automasjon, app utvikling, foto og videografi, sosiale medier og branding.',
-  numberOfItems: 7,
+  numberOfItems: 8,
   itemListElement: [
     {
       '@type': 'ListItem',
@@ -128,6 +128,19 @@ const serviceListSchema = {
     {
       '@type': 'ListItem',
       position: 7,
+      item: {
+        '@type': 'Service',
+        name: 'Markedsføringsbyrå i Bergen – digital markedsføring',
+        description: 'Helhetlig digital markedsføring for Bergen-bedrifter – webdesign, SEO, sosiale medier og branding under ett tak.',
+        url: 'https://www.frameflow.no/tjenester/markedsforing',
+        provider: { '@id': 'https://www.frameflow.no/#organization' },
+        areaServed: { '@type': 'City', name: 'Bergen' },
+        offers: { '@type': 'Offer', priceCurrency: 'NOK', priceSpecification: { '@type': 'PriceSpecification', minPrice: 4500 } },
+      },
+    },
+    {
+      '@type': 'ListItem',
+      position: 8,
       item: {
         '@type': 'Service',
         name: 'AI Automasjon for bedrifter i Bergen',

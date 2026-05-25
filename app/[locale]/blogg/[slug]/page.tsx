@@ -19,14 +19,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const isEn = locale === 'en'
   const noUrl = `https://www.frameflow.no/blogg/${post.slug}`
   const enUrl = `https://www.frameflow.no/en/blog/${post.slug}`
-  const canonical = isEn ? enUrl : noUrl
 
   return {
     title: post.metaTitle ?? post.title,
     description: post.excerpt,
+    // EN blog posts serve Norwegian content — canonical to NO to avoid duplicate-language penalty
+    ...(isEn && { robots: { index: false, follow: true } }),
     alternates: {
-      canonical,
-      languages: { 'nb-NO': noUrl, 'en': enUrl, 'x-default': noUrl },
+      canonical: noUrl,
+      languages: { 'nb-NO': noUrl, 'x-default': noUrl },
     },
     openGraph: {
       title: post.metaTitle ?? post.title,
@@ -34,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'article',
       locale: ogLocale(locale),
       siteName: 'Frameflow',
-      url: canonical,
+      url: noUrl,
       authors: ['Ivan Kunne'],
       publishedTime: post.updatedAt ?? post.date,
       images: [{ url: '/og-image.png', width: 1200, height: 630, alt: post.metaTitle ?? post.title }],
@@ -105,12 +106,33 @@ export default async function BlogPostPage({ params }: Props) {
     ],
   }
 
-  const relatedPosts = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 3)
+  const relatedPosts = [
+    ...blogPosts.filter((p) => p.slug !== post.slug && p.category === post.category),
+    ...blogPosts.filter((p) => p.slug !== post.slug && p.category !== post.category),
+  ].slice(0, 3)
+
+  const howToSchema = post.slug === 'lokal-seo-bergen-guide-2025' ? {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'Slik optimaliserer du lokal SEO for Bergen-bedriften din',
+    description: 'En steg-for-steg guide til lokal SEO for Bergen-bedrifter – fra Google Business Profile til innholdsstrategi og mobiloptimalisering.',
+    author: { '@id': 'https://www.frameflow.no/#ivan-kunne' },
+    publisher: { '@id': 'https://www.frameflow.no/#organization' },
+    step: [
+      { '@type': 'HowToStep', name: 'Optimaliser Google Business Profile', text: 'Fyll ut alle felt: navn, adresse, telefon, åpningstider og nettsted. Velg riktige kategorier og legg Bergen-spesifikke søkeord i beskrivelsesteksten. Last opp profesjonelle bilder av lokalet, teamet og produktene.' },
+      { '@type': 'HowToStep', name: 'Sikre NAP-konsistens', text: 'Kontroller at bedriftsnavnet, adressen og telefonnummeret er identisk skrevet på alle nettsteder: nettside, GBP, 1881, Finn.no, Facebook og andre kataloger.' },
+      { '@type': 'HowToStep', name: 'Integrer lokale søkeord på nettsiden', text: 'Legg inn Bergen-spesifikke søkeord naturlig i sidetitler, metabeskrivelser og innhold. Nevn bydeler som Bergenhus, Fana, Åsane, Fyllingsdalen og Laksevåg der det er relevant for bedriften.' },
+      { '@type': 'HowToStep', name: 'Bygg en lokal innholdsstrategi', text: 'Publiser regelmessig relevant, lokalt innhold på bloggen. Skriv om hendelser og nyheter i Bergen som er relevante for bransjen din for å signalisere lokal autoritet til Google.' },
+      { '@type': 'HowToStep', name: 'Skaff tilbakekoblinger fra lokale nettsteder', text: 'Få lenker fra Bergen-baserte nettsteder som Bergen Næringsråd, Bergens Tidende og lokale samarbeidspartnere. Lokale backlinks er sterke signaler for lokal SEO.' },
+      { '@type': 'HowToStep', name: 'Optimaliser for mobil og hastighet', text: 'Over 70 % av lokale søk skjer på mobil. Test nettsiden din med Google PageSpeed Insights og sørg for en score over 80 på mobil. Sidehastighet er en viktig rangeringsfaktor for Google.' },
+    ],
+  } : null
 
   return (
     <>
       <JsonLd data={articleSchema} />
       <JsonLd data={breadcrumbSchema} />
+      {howToSchema && <JsonLd data={howToSchema} />}
       <BlogPostClient post={post} relatedPosts={relatedPosts} />
     </>
   )

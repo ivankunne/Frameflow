@@ -194,7 +194,7 @@ Uten negativliste betaler du for klikk fra folk som søker «rørlegger jobb Ber
 | Troverdighet | Merket «Annonse» | Organisk tillit |
 | Beste for | Kortsiktig / lansering | Langsiktig vekst |
 
-Den ideelle strategien for Bergen-bedrifter: bruk Google Ads for umiddelbar synlighet mens du bygger [SEO](/tjenester/seo) parallelt for langsiktig organisk vekst.
+Den ideelle strategien for Bergen-bedrifter: bruk Google Ads for umiddelbar synlighet mens du bygger [SEO](/tjenester/seo) parallelt for langsiktig organisk vekst. Sørg for at annonseklikk lander på en [konverteringsoptimalisert nettside](/tjenester/webdesign) – ikke bare forsiden.
 
 ## Hva bør du betale for Google Ads-hjelp?
 
@@ -450,7 +450,7 @@ Legg inn dine egne spørsmål og svar proaktivt om parkering, betaling og bookin
 
 Inkonsekvens mellom GBP og nettstedet, ignorerte innsiktsdata, og glemte sekundærkategorier er de tre vanligste fellene.
 
-Ta kontakt med Frameflow for en gratis gjennomgang av din [Google Business-profil og lokal SEO](/tjenester/seo).
+Ta kontakt med Frameflow for en gratis gjennomgang av din [Google Business-profil og lokal SEO](/tjenester/seo). En solid [nettside i Bergen](/tjenester/webdesign) forsterker effekten av en optimalisert GBP-profil betraktelig.
     `.trim(),
   },
   {
@@ -540,7 +540,7 @@ For Bergen-bedrifter: gjør det lokalt. Nevn Bergen, vis Bergen, tagg Bergen. Sa
 
 Mål nettstedtrafikk fra sosiale medier, direkte meldinger og forespørsler, rekkevidde til Bergen-folk, og lenkeklikk til booking eller kontakt.
 
-Ønsker du å overlate det til profesjonelle? Frameflow tilbyr [skreddersydde pakker for sosiale medier](/tjenester/sosiale-medier) til Bergen-bedrifter.
+Ønsker du å overlate det til profesjonelle? Frameflow tilbyr [skreddersydde pakker for sosiale medier](/tjenester/sosiale-medier) til Bergen-bedrifter. For best effekt: kombiner sosiale medier med en sterk [merkevare og visuell identitet](/tjenester/branding) som gjør innholdet ditt umiskjennelig.
     `.trim(),
   },
   {
@@ -592,7 +592,7 @@ Et konsistent bildespråk forsterker merkevareopplevelsen på tvers av alle flat
 
 Logodesign: 5 000–20 000 kr. Komplett visuell identitet: 20 000–60 000 kr. Full branding inkl. strategi: 50 000–150 000 kr.
 
-Frameflow tilbyr [skreddersydd branding](/tjenester/branding) for Bergen-bedrifter – fra logodesign til komplett merkevareidentitet.
+Frameflow tilbyr [skreddersydd branding](/tjenester/branding) for Bergen-bedrifter – fra logodesign til komplett merkevareidentitet. En sterk merkevare trenger en nettside som gjenspeiler den – se vår [webdesign-tjeneste i Bergen](/tjenester/webdesign).
     `.trim(),
   },
   {
@@ -640,7 +640,7 @@ Bergen er utrolig vakker sett ovenfra. Drone-bilder gir et unikt perspektiv som 
 
 Halvdags bedriftsfotografering: 4 000–8 000 kr. Bedriftsfilm (60–90 sek): 12 000–30 000 kr. Månedlig innholdsproduksjon: 3 000–8 000 kr/mnd.
 
-Bergen som kulisse er en av de uunngåelige fordelene med å drive bedrift her. Vi utnytter Bryggen, fjellet og fjorden aktivt i vår [foto- og videoproduksjon](/tjenester/foto-og-videografi).
+Bergen som kulisse er en av de uunngåelige fordelene med å drive bedrift her. Vi utnytter Bryggen, fjellet og fjorden aktivt i vår [foto- og videoproduksjon](/tjenester/foto-og-videografi). Godt visuelt innhold er fundamentet for effektive [sosiale medier](/tjenester/sosiale-medier) og profesjonelt presenterte nettsider.
     `.trim(),
   },
   {
@@ -894,7 +894,7 @@ Når du kontakter et apputviklingsbyrå i Bergen, bør tilbudet alltid inkludere
 
 Frameflow bygger skreddersydde apper for Bergen-bedrifter. Vi gir alltid fast pris, starter med MVP, og leverer kode du eier. Priser fra 45 000 kr.
 
-Les mer om vår [apputvikling i Bergen](/tjenester/app-utvikling), eller ta kontakt for en gratis samtale om prosjektet ditt – du får et konkret prisestimat innen 24 timer.
+Les mer om vår [apputvikling i Bergen](/tjenester/app-utvikling), eller ta kontakt for en gratis samtale om prosjektet ditt – du får et konkret prisestimat innen 24 timer. Mange app-prosjekter starter med et [nettsted som konverterer](/tjenester/webdesign) – vi tilbyr begge deler under ett tak.
     `.trim(),
   },
   {
@@ -972,7 +972,7 @@ Sjekkliste:
 
 Hos Frameflow integrerer vi SEO i alt vi gjør – nettsider bygges med SEO fra dag én, ikke som ettertanke. Vi setter opp strukturert data, teknisk SEO og Google Search Console som standard på alle prosjekter.
 
-Ønsker du en gjennomgang av SEO-situasjonen din? Les mer om vår [SEO-tjeneste i Bergen](/tjenester/seo), eller book en gratis samtale – vi ser raskt hva som kan forbedres.
+Ønsker du en gjennomgang av SEO-situasjonen din? Les mer om vår [SEO-tjeneste i Bergen](/tjenester/seo), eller book en gratis samtale – vi ser raskt hva som kan forbedres. SEO og en [profesjonell nettside i Bergen](/tjenester/webdesign) henger tett sammen – vi bygger begge med synlighet fra dag én.
     `.trim(),
   },
   {
@@ -1054,7 +1054,7 @@ Du skal alltid eie alle logofiler og opphavsretten etter levering. Be om dette s
 
 Nå vet du hva du bør se etter, hva du bør betale, og spørsmålene du skal stille. Neste steg er å finne riktig leverandør for deg.
 
-Se hva [Frameflow tilbyr innen branding og logodesign](/tjenester/branding) – eller [ta kontakt](/kontakt) for å høre om vi passer for prosjektet ditt.
+Se hva [Frameflow tilbyr innen branding og logodesign](/tjenester/branding) – eller [ta kontakt](/kontakt) for å høre om vi passer for prosjektet ditt. Etter at logoen er på plass, er neste steg gjerne en [profesjonell nettside i Bergen](/tjenester/webdesign) som presenterer merkevaren din korrekt.
     `.trim(),
   },
 ]
