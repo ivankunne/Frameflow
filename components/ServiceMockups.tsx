@@ -720,3 +720,60 @@ export function SEOMockup({ visible }: { visible: boolean }) {
     </div>
   )
 }
+
+// ─── Marketing: multi-channel dashboard ────────────────────────────────────
+export function MarketingMockup({ visible }: { visible: boolean }) {
+  const channels = [
+    { label: 'Nettside', value: '+140%', color: '#2172b5' },
+    { label: 'SEO', value: '#1', color: '#16a34a' },
+    { label: 'Sosiale', value: '+890', color: '#7c3aed' },
+    { label: 'Branding', value: '100%', color: '#d97706' },
+  ]
+  const bars = [30, 45, 38, 55, 50, 68, 62, 78, 72, 90]
+
+  return (
+    <div className="bg-white rounded-xl border border-border overflow-hidden shadow-card">
+      <div className="bg-bg-2 border-b border-border px-3 py-2 flex items-center justify-between">
+        <span className="text-[9px] font-semibold text-fg-muted">Frameflow · Bergen · Alle kanaler</span>
+        <span className="text-[8px] font-bold px-1.5 py-0.5 rounded" style={{ background: '#dcfce7', color: '#16a34a' }}>Live</span>
+      </div>
+
+      <div className="grid grid-cols-4 gap-1.5 px-3 pt-3">
+        {channels.map((c, i) => (
+          <motion.div
+            key={c.label}
+            initial={{ opacity: 0, y: 6 }}
+            animate={visible ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.3, delay: 0.2 + i * 0.1 }}
+            className="rounded-lg p-1.5 text-center"
+            style={{ background: c.color + '12', border: `1px solid ${c.color}28` }}
+          >
+            <p className="text-[10px] font-bold leading-tight" style={{ color: c.color }}>{c.value}</p>
+            <p className="text-[8px] text-fg-muted mt-0.5 leading-tight">{c.label}</p>
+          </motion.div>
+        ))}
+      </div>
+
+      <div className="px-3 pt-3 pb-2">
+        <p className="text-[8px] text-fg-muted mb-1.5 font-medium">Samlet digital synlighet · 10 uker</p>
+        <div className="flex items-end gap-0.5" style={{ height: 32 }}>
+          {bars.map((h, i) => (
+            <motion.div
+              key={i}
+              initial={{ scaleY: 0 }}
+              animate={visible ? { scaleY: 1 } : {}}
+              transition={{ duration: 0.25, delay: 0.6 + i * 0.04, ease: 'easeOut' }}
+              style={{
+                flex: 1,
+                height: `${h}%`,
+                transformOrigin: 'bottom',
+                background: `rgba(33,114,181,${0.15 + (h / 100) * 0.65})`,
+                borderRadius: '2px 2px 0 0',
+              }}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}

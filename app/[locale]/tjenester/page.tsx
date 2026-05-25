@@ -91,6 +91,19 @@ const serviceListSchema = {
       position: 4,
       item: {
         '@type': 'Service',
+        name: 'Markedsføringsbyrå i Bergen – digital markedsføring',
+        description: 'Helhetlig digital markedsføring for Bergen-bedrifter – webdesign, SEO, sosiale medier og branding under ett tak.',
+        url: 'https://www.frameflow.no/tjenester/markedsforing',
+        provider: { '@id': 'https://www.frameflow.no/#organization' },
+        areaServed: { '@type': 'City', name: 'Bergen' },
+        offers: { '@type': 'Offer', priceCurrency: 'NOK', priceSpecification: { '@type': 'PriceSpecification', minPrice: 4500 } },
+      },
+    },
+    {
+      '@type': 'ListItem',
+      position: 5,
+      item: {
+        '@type': 'Service',
         name: 'Foto og videografi i Bergen',
         description: 'Profesjonell bedriftsfoto og video for sosiale medier, nettsider og annonser.',
         url: 'https://www.frameflow.no/tjenester/foto-og-videografi',
@@ -101,7 +114,7 @@ const serviceListSchema = {
     },
     {
       '@type': 'ListItem',
-      position: 5,
+      position: 6,
       item: {
         '@type': 'Service',
         name: 'Sosiale medier i Bergen',
@@ -114,7 +127,7 @@ const serviceListSchema = {
     },
     {
       '@type': 'ListItem',
-      position: 6,
+      position: 7,
       item: {
         '@type': 'Service',
         name: 'Branding og logodesign i Bergen',
@@ -123,19 +136,6 @@ const serviceListSchema = {
         provider: { '@id': 'https://www.frameflow.no/#organization' },
         areaServed: { '@type': 'City', name: 'Bergen' },
         offers: { '@type': 'Offer', priceCurrency: 'NOK', priceSpecification: { '@type': 'PriceSpecification', minPrice: 8000 } },
-      },
-    },
-    {
-      '@type': 'ListItem',
-      position: 7,
-      item: {
-        '@type': 'Service',
-        name: 'Markedsføringsbyrå i Bergen – digital markedsføring',
-        description: 'Helhetlig digital markedsføring for Bergen-bedrifter – webdesign, SEO, sosiale medier og branding under ett tak.',
-        url: 'https://www.frameflow.no/tjenester/markedsforing',
-        provider: { '@id': 'https://www.frameflow.no/#organization' },
-        areaServed: { '@type': 'City', name: 'Bergen' },
-        offers: { '@type': 'Offer', priceCurrency: 'NOK', priceSpecification: { '@type': 'PriceSpecification', minPrice: 4500 } },
       },
     },
     {

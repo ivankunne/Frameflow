@@ -14,6 +14,7 @@ export const routing = defineRouting({
     '/tjenester/foto-og-videografi': { no: '/tjenester/foto-og-videografi', en: '/services/photo-video' },
     '/tjenester/sosiale-medier': { no: '/tjenester/sosiale-medier', en: '/services/social-media' },
     '/tjenester/branding': { no: '/tjenester/branding', en: '/services/branding' },
+    '/tjenester/markedsforing': { no: '/tjenester/markedsforing', en: '/services/marketing' },
     '/tjenester/ai-automasjon': { no: '/tjenester/ai-automasjon', en: '/services/ai-automation' },
     '/prosjekter': { no: '/prosjekter', en: '/projects' },
     '/prosjekter/[slug]': { no: '/prosjekter/[slug]', en: '/projects/[slug]' },

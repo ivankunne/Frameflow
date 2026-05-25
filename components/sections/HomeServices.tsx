@@ -4,7 +4,7 @@ import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
-import { WebMockup, CameraMockup, BrandMockup, AppMockup } from '@/components/ServiceMockups'
+import { WebMockup, CameraMockup, AppMockup, MarketingMockup } from '@/components/ServiceMockups'
 
 export default function HomeServices() {
   const ref = useRef(null)
@@ -15,7 +15,7 @@ export default function HomeServices() {
     { number: '01', title: t('webTitle'), pricingFrom: t('webPrice'), description: t('webDesc'), href: '/tjenester/webdesign' as const, tags: ['Next.js', 'Webflow', 'SEO'], Mockup: WebMockup },
     { number: '02', title: t('appTitle'), pricingFrom: t('appPrice'), description: t('appDesc'), href: '/tjenester/app-utvikling' as const, tags: ['React', 'React Native', 'Full-stack'], Mockup: AppMockup },
     { number: '03', title: t('photoTitle'), pricingFrom: t('photoPrice'), description: t('photoDesc'), href: '/tjenester/foto-og-videografi' as const, tags: ['Produktfoto', 'Reels', 'Video'], Mockup: CameraMockup },
-    { number: '04', title: t('brandingTitle'), pricingFrom: t('brandingPrice'), description: t('brandingDesc'), href: '/tjenester/branding' as const, tags: ['Logo', 'Identitet', 'Guidelines'], Mockup: BrandMockup },
+    { number: '04', title: t('marketingTitle'), pricingFrom: t('marketingPrice'), description: t('marketingDesc'), href: '/tjenester/markedsforing' as const, tags: ['Webdesign', 'SEO', 'Sosiale medier'], Mockup: MarketingMockup },
   ]
 
   return (
