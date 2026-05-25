@@ -27,7 +27,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ...(isEn && { robots: { index: false, follow: true } }),
     alternates: {
       canonical: noUrl,
-      languages: { 'nb-NO': noUrl },
+      // hreflang only on the canonical (NO) version — non-canonical EN pages must not carry hreflang
+      ...(isEn ? {} : { languages: { 'nb-NO': noUrl } }),
     },
     openGraph: {
       title: post.metaTitle ?? post.title,

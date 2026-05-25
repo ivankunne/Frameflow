@@ -548,7 +548,7 @@ export const markedsforing: Record<'no' | 'en', ServiceContent> = {
   no: {
     meta: {
       title: 'Markedsføringsbyrå Bergen | Frameflow',
-      description: 'Frameflow er markedsføringsbyrå i Bergen. Vi leverer webdesign, SEO, sosiale medier og branding under ett tak. Fast pris, ingen mellommenn, svar innen 24 timer.',
+      description: 'Frameflow er markedsføringsbyrå i Bergen. Webdesign, SEO, sosiale medier og branding under ett tak. Fast pris, ingen mellommenn, svar innen 24 timer.',
       ogTitle: 'Markedsføringsbyrå Bergen | Frameflow',
       ogImageTitle: 'Markedsføringsbyrå Bergen',
       ogImageLabel: 'Digital markedsføring',
