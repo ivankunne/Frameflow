@@ -414,7 +414,7 @@ export const sosialeMedier: Record<'no' | 'en', ServiceContent> = {
   en: {
     meta: {
       title: 'Social Media Bergen – Strategy and content | Frameflow',
-      description: 'Frameflow manages social media for businesses in Bergen. Content production, strategy and channel management on Instagram, TikTok and LinkedIn. From NOK 3,500/mo.',
+      description: 'Frameflow manages social media for Bergen businesses. Content production, strategy and channel management on Instagram, TikTok and LinkedIn. From NOK 3,500/mo.',
       ogTitle: 'Social Media Bergen – Strategy and content | Frameflow',
       ogImageTitle: 'Social media for businesses in Bergen',
       ogImageLabel: 'Social media',
@@ -591,7 +591,7 @@ export const markedsforing: Record<'no' | 'en', ServiceContent> = {
   en: {
     meta: {
       title: 'Marketing Agency Bergen – Digital marketing | Frameflow',
-      description: 'Frameflow is a marketing agency in Bergen. We deliver web design, SEO, social media, branding and photo – all under one roof. No middlemen, fixed price, reply within 24 hours.',
+      description: 'Frameflow is a marketing agency in Bergen delivering web design, SEO, social media, branding and photo. No middlemen, fixed price, reply within 24 hours.',
       ogTitle: 'Marketing Agency Bergen | Frameflow',
       ogImageTitle: 'Marketing Agency Bergen',
       ogImageLabel: 'Digital marketing',
@@ -637,7 +637,7 @@ export const aiAutomasjon: Record<'no' | 'en', ServiceContent> = {
   no: {
     meta: {
       title: 'AI Automasjon Bergen – Automatiser tidstyvene | Frameflow',
-      description: 'Frameflow bygger AI-automasjoner for Bergen-bedrifter. Henvendelseshåndtering, AI-chatbot, lead-kvalifisering og CRM-integrasjon – frigjør timer ukentlig. Fra 8 000 kr.',
+      description: 'AI-automasjon Bergen. Henvendelseshåndtering, AI-chatbot, lead-kvalifisering og CRM-integrasjon – frigjør timer ukentlig for Bergen-bedrifter. Fra 8 000 kr.',
       ogTitle: 'AI Automasjon Bergen – Automatiser tidstyvene | Frameflow',
       ogImageTitle: 'AI Automasjon Bergen',
       ogImageLabel: 'AI Automasjon',

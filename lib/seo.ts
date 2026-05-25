@@ -7,7 +7,7 @@ export function buildAlternates(noPath: string, enPath: string, locale: string) 
   return {
     canonical: locale === 'en' ? enUrl : noUrl,
     languages: {
-      'nb-NO': noUrl,
+      'no': noUrl,
       'en': enUrl,
     },
   }

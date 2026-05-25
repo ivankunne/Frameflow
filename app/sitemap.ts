@@ -17,8 +17,8 @@ function dual(noPath: string, enPath: string, freq: SitemapEntry['changeFrequenc
   const noUrl = `${BASE_URL}${noPath}`
   const enUrl = `${EN_BASE}${enPath}`
   return [
-    { url: noUrl, lastModified: mod, changeFrequency: freq, priority, alternates: { languages: { 'nb-NO': noUrl, 'en': enUrl } } },
-    { url: enUrl, lastModified: mod, changeFrequency: freq, priority: priority * 0.9, alternates: { languages: { 'nb-NO': noUrl, 'en': enUrl } } },
+    { url: noUrl, lastModified: mod, changeFrequency: freq, priority, alternates: { languages: { 'no': noUrl, 'en': enUrl } } },
+    { url: enUrl, lastModified: mod, changeFrequency: freq, priority: priority * 0.9, alternates: { languages: { 'no': noUrl, 'en': enUrl } } },
   ]
 }
 
@@ -39,8 +39,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...dual('/blogg', '/blog', 'weekly', 0.8),
     ...dual('/kontakt', '/contact', 'yearly', 0.7),
     ...dual('/tilbud', '/quote', 'yearly', 0.6),
-    { url: `${BASE_URL}/personvern`, lastModified: SITE_UPDATED, changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${EN_BASE}/privacy`, lastModified: SITE_UPDATED, changeFrequency: 'yearly', priority: 0.2 },
   ]
 
   const projectPages: SitemapEntry[] = projects.flatMap((project) => {
