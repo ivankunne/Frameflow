@@ -4,7 +4,7 @@ import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { useTranslations, useLocale } from 'next-intl'
 import { Link } from '@/i18n/navigation'
-import { CameraVisual, SocialVisual, BrandVisual, SEOVisual, AIVisual } from '@/components/ServiceVisuals'
+import { CameraVisual, SocialVisual, BrandVisual, SEOVisual, AIVisual, MarketingVisual } from '@/components/ServiceVisuals'
 import { AppMockup } from '@/components/ServiceMockups'
 
 type ServiceEntry = {
@@ -19,7 +19,7 @@ type ServiceEntry = {
   metricSub: string
   includes: readonly string[]
   accentHex: string
-  visual: 'web' | 'app' | 'camera' | 'social' | 'brand' | 'seo' | 'ai'
+  visual: 'web' | 'app' | 'camera' | 'social' | 'brand' | 'seo' | 'ai' | 'marketing'
 }
 
 const servicesData: Record<'no' | 'en', ServiceEntry[]> = {
@@ -52,7 +52,7 @@ const servicesData: Record<'no' | 'en', ServiceEntry[]> = {
       includes: ['Produktfotografering', 'Video for sosiale medier', 'Reels og TikTok', 'Redigering', 'Alle formater'],
     },
     {
-      number: '04', visual: 'social', accentHex: '#d97706',
+      number: '04', visual: 'marketing', accentHex: '#d97706',
       href: '/tjenester/markedsforing',
       shortTitle: 'Markedsføring', pricingFrom: 'Fra 4 500 kr/mnd',
       title: 'Markedsføringsbyrå Bergen – ett byrå, alle kanaler',
@@ -126,7 +126,7 @@ const servicesData: Record<'no' | 'en', ServiceEntry[]> = {
       includes: ['Product photography', 'Video for social media', 'Reels and TikTok', 'Editing', 'All formats'],
     },
     {
-      number: '04', visual: 'social', accentHex: '#d97706',
+      number: '04', visual: 'marketing', accentHex: '#d97706',
       href: '/tjenester/markedsforing',
       shortTitle: 'Marketing', pricingFrom: 'From 4,500 kr/mo',
       title: 'Marketing agency Bergen – one agency, all channels',
@@ -311,6 +311,7 @@ function ServiceVisual({ visual, accentHex, visible }: { visual: ServiceEntry['v
   if (visual === 'app') return <AppMockup visible={visible} />
   if (visual === 'camera') return <CameraVisual visible={visible} />
   if (visual === 'social') return <SocialVisual visible={visible} />
+  if (visual === 'marketing') return <MarketingVisual visible={visible} />
   if (visual === 'seo') return <SEOVisual visible={visible} />
   if (visual === 'ai') return <AIVisual visible={visible} />
   return <BrandVisual visible={visible} />
