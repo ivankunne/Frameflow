@@ -328,7 +328,7 @@ export const fotoOgVideografi: Record<'no' | 'en', ServiceContent> = {
   },
   en: {
     meta: {
-      title: 'Photo & Video Production Bergen | Business photography – Frameflow',
+      title: 'Photo & Video Bergen | Business photography – Frameflow',
       description: 'Frameflow produces business photos and video in Bergen for social media, websites and adverts. From NOK 4,500 — delivery within 5–7 working days.',
       ogTitle: 'Business photo and video in Bergen | Frameflow',
       ogImageTitle: 'Business photo and video in Bergen',
@@ -680,7 +680,7 @@ export const aiAutomasjon: Record<'no' | 'en', ServiceContent> = {
   en: {
     meta: {
       title: 'AI Automation Bergen – Automate the time-thieves | Frameflow',
-      description: 'Frameflow builds AI automations for businesses. Enquiry handling, AI chatbot, lead qualification and CRM integration — free up hours every week. From NOK 8,000.',
+      description: 'Frameflow builds AI automations in Bergen. Enquiry handling, AI chatbot, lead qualification and CRM integration — free up hours every week. From NOK 8,000.',
       ogTitle: 'AI Automation Bergen – Automate the time-thieves | Frameflow',
       ogImageTitle: 'AI Automation Bergen',
       ogImageLabel: 'AI Automation',

@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: t('metaDesc'),
     alternates: { canonical },
     openGraph: { title: t('metaTitle'), description: t('metaDesc'), url: canonical, images: [{ url: '/og-image.png', width: 1200, height: 630 }] },
-    robots: { index: false, follow: false },
+    robots: { index: false, follow: true },
     twitter: { card: 'summary_large_image', title: t('metaTitle'), description: t('metaDesc') },
   }
 }
