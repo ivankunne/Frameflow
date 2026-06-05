@@ -1,25 +1,25 @@
 import type { Metadata } from 'next'
-import { webdesign } from '@/lib/serviceContent'
+import { webflow } from '@/lib/serviceContent'
 import ServicePageTemplate from '@/components/ServicePageTemplate'
 import { JsonLd } from '@/components/JsonLd'
 import { buildAlternates, ogLocale } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string }> }
 
-const NO_URL = 'https://www.frameflow.no/tjenester/webdesign'
-const EN_URL = 'https://www.frameflow.no/en/services/web-design'
+const NO_URL = 'https://www.frameflow.no/tjenester/webflow'
+const EN_URL = 'https://www.frameflow.no/en/services/webflow'
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const lang = locale === 'en' ? 'en' : 'no'
-  const m = webdesign[lang].meta
+  const m = webflow[lang].meta
   return {
     title: m.title,
     description: m.description,
     keywords: lang === 'en'
-      ? ['web design Bergen', 'web agency Bergen Norway', 'website development Bergen', 'Webflow Bergen', 'Frameflow']
-      : ['webdesign Bergen', 'nettside Bergen', 'webbyrå Bergen', 'lage nettside Bergen', 'Webflow Bergen', 'Frameflow'],
-    alternates: buildAlternates('/tjenester/webdesign', '/services/web-design', locale),
+      ? ['Webflow Bergen', 'Webflow agency Bergen', 'Webflow developer Bergen', 'Webflow website Bergen', 'Frameflow']
+      : ['Webflow Bergen', 'Webflow-byrå Bergen', 'Webflow utvikler Bergen', 'Webflow nettside Bergen', 'Frameflow'],
+    alternates: buildAlternates('/tjenester/webflow', '/services/webflow', locale),
     openGraph: {
       type: 'website',
       locale: ogLocale(locale),
@@ -39,16 +39,17 @@ const breadcrumbSchema = {
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.frameflow.no' },
     { '@type': 'ListItem', position: 2, name: 'Tjenester', item: 'https://www.frameflow.no/tjenester' },
-    { '@type': 'ListItem', position: 3, name: 'Web design', item: 'https://www.frameflow.no/tjenester/webdesign' },
+    { '@type': 'ListItem', position: 3, name: 'Webflow', item: 'https://www.frameflow.no/tjenester/webflow' },
   ],
 }
 
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Webbyrå og webdesign i Bergen',
+  name: 'Webflow-byrå i Bergen',
+  serviceType: 'Webflow design og utvikling',
   provider: { '@id': 'https://www.frameflow.no/#organization' },
-  description: 'Profesjonelt webbyrå i Bergen – vi lager nettside med fokus på hastighet, SEO og konvertering.',
+  description: 'Webflow-byrå i Bergen – vi designer og bygger raske, SEO-optimaliserte Webflow-nettsider med et CMS du enkelt oppdaterer selv.',
   areaServed: { '@type': 'City', name: 'Bergen' },
   offers: {
     '@type': 'Offer',
@@ -57,10 +58,10 @@ const serviceSchema = {
   },
 }
 
-export default async function WebdesignPage({ params }: Props) {
+export default async function WebflowPage({ params }: Props) {
   const { locale } = await params
   const lang = locale === 'en' ? 'en' : 'no'
-  const c = webdesign[lang]
+  const c = webflow[lang]
 
   const faqSchema = {
     '@context': 'https://schema.org',

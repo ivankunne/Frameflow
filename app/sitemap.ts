@@ -28,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...dual('/om-oss', '/about', 'monthly', 0.8),
     ...dual('/tjenester', '/services', 'monthly', 0.9),
     ...dual('/tjenester/webdesign', '/services/web-design', 'monthly', 0.8),
+    ...dual('/tjenester/webflow', '/services/webflow', 'monthly', 0.8),
     ...dual('/tjenester/foto-og-videografi', '/services/photo-video', 'monthly', 0.8),
     ...dual('/tjenester/sosiale-medier', '/services/social-media', 'monthly', 0.8),
     ...dual('/tjenester/app-utvikling', '/services/app-development', 'monthly', 0.8),

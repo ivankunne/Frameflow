@@ -9,6 +9,7 @@ export const routing = defineRouting({
     '/om-oss': { no: '/om-oss', en: '/about' },
     '/tjenester': { no: '/tjenester', en: '/services' },
     '/tjenester/webdesign': { no: '/tjenester/webdesign', en: '/services/web-design' },
+    '/tjenester/webflow': { no: '/tjenester/webflow', en: '/services/webflow' },
     '/tjenester/seo': { no: '/tjenester/seo', en: '/services/seo' },
     '/tjenester/app-utvikling': { no: '/tjenester/app-utvikling', en: '/services/app-development' },
     '/tjenester/foto-og-videografi': { no: '/tjenester/foto-og-videografi', en: '/services/photo-video' },
