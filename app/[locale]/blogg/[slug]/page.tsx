@@ -129,11 +129,40 @@ export default async function BlogPostPage({ params }: Props) {
     ],
   } : null
 
+  const faqSchema = post.slug === 'webflow-bergen' ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: 'nb-NO',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Er Webflow bra for SEO?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ja. Webflow gir ren kode, rask lastetid og full kontroll på metadata og strukturert data – alt som skal til for et godt SEO-fundament. Resultatene avhenger likevel av riktig oppsett og innhold.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Kan jeg oppdatere Webflow-nettsiden selv?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ja. Webflow har et brukervennlig CMS og en redaktørmodus der du trygt kan endre tekst og bilder uten teknisk kunnskap, og uten å risikere å ødelegge designet.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Hva koster Webflow i måneden?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Selve plattformen koster typisk 200 – 500 kr/mnd avhengig av plan, inkludert hosting og SSL. Utviklingen av selve nettsiden er en separat engangskostnad.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Bør jeg velge Webflow eller WordPress?',
+        acceptedAnswer: { '@type': 'Answer', text: 'For de fleste Bergen-bedrifter er Webflow det enkleste valget: profesjonelt resultat uten løpende vedlikehold. WordPress passer best for store, komplekse nettsteder med spesielle integrasjoner.' },
+      },
+    ],
+  } : null
+
   return (
     <>
       <JsonLd data={articleSchema} />
       <JsonLd data={breadcrumbSchema} />
       {howToSchema && <JsonLd data={howToSchema} />}
+      {faqSchema && <JsonLd data={faqSchema} />}
       <BlogPostClient post={post} relatedPosts={relatedPosts} />
     </>
   )

@@ -42,6 +42,108 @@ export interface Project {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'webflow-bergen',
+    title: 'Webflow i Bergen: Komplett guide til fordeler, pris og prosess (2026)',
+    excerpt: 'Vurderer du Webflow i Bergen? Her er hva Webflow er, fordelene for bedrifter, hva det koster – og hvordan vi bygger nettsider som rangerer i Google.',
+    metaTitle: 'Webflow Bergen: guide, fordeler og pris 2026 | Frameflow',
+    category: 'Webdesign',
+    date: '8. juni 2026',
+    updatedAt: '2026-06-08',
+    readTime: '8 min',
+    relatedService: { title: 'Webflow-utvikling', href: '/tjenester/webflow' },
+    content: `
+Webflow er en moderne plattform for å bygge raske, designfrie og SEO-vennlige nettsider uten å gå på akkord med kvalitet. For en Bergen-bedrift gir Webflow en nettside som ser profesjonell ut, laster lynraskt og er enkel å oppdatere selv – uten sårbare plugins eller dyre lisenser. Her er alt du trenger å vite før du velger Webflow.
+
+## Hva er Webflow?
+
+Webflow er et visuelt verktøy for webutvikling som kombinerer designfrihet med ren, profesjonell kode. I motsetning til maler på Wix eller Squarespace bygges hver Webflow-nettside fritt – men uten at en utvikler må skrive HTML og CSS for hånd. Resultatet er en nettside med samme kvalitet som en skreddersydd løsning, levert raskere og rimeligere.
+
+Plattformen inkluderer hosting på et globalt CDN, et innebygd CMS for blogg og innhold, og automatisk responsivt design for mobil, nettbrett og desktop. For deg som eier nettsiden betyr det færre bevegelige deler og mindre vedlikehold.
+
+## Hvorfor velge Webflow for en Bergen-bedrift?
+
+Webflow løser flere av problemene Bergen-bedrifter ofte møter med eldre WordPress-sider eller billige malløsninger:
+
+- Lynrask lastetid – avgjørende for både brukeropplevelse og Google-rangering
+- Ingen plugins som ruster, krasjer eller utgjør en sikkerhetsrisiko
+- Du kan redigere tekst og bilder selv, uten å være redd for å ødelegge noe
+- Ren kode og full kontroll på SEO-innstillinger fra dag én
+- Designfrihet – nettsiden følger merkevaren din, ikke en mal alle andre bruker
+- Sikker hosting inkludert, med automatisk SSL og backup
+
+For en lokal bedrift som vil skille seg ut i et konkurranseutsatt marked, er kombinasjonen av profesjonelt design og teknisk ytelse vanskelig å matche.
+
+## Webflow vs. WordPress vs. Wix
+
+Valg av plattform avhenger av hva du prioriterer. Her er de viktigste forskjellene.
+
+### WordPress
+
+WordPress er fleksibelt og utbredt, men krever løpende vedlikehold: oppdateringer, plugin-konflikter og sikkerhetshull. Det fungerer godt for store, innholdstunge nettsteder med spesielle behov – men for de fleste Bergen-bedrifter blir det mer komplisert enn nødvendig.
+
+### Wix og Squarespace
+
+Disse er enkle å komme i gang med, men begrenser deg til maler og gir mindre kontroll på SEO og ytelse. Du eier i praksis ikke koden, og det blir vanskelig å vokse ut av plattformen senere.
+
+### Webflow
+
+Webflow treffer midt i blinken for de fleste bedrifter: designfrihet og profesjonell kvalitet som WordPress, men med enkelheten og vedlikeholdsfriheten til en lukket plattform. For en typisk bedriftsnettside i Bergen er det ofte det beste valget.
+
+## Hva koster en Webflow-nettside i Bergen?
+
+Prisen avhenger av omfang, antall sider og hvor skreddersydd designet skal være. Som en realistisk pekepinn på prisnivåene du møter:
+
+- Enkel landingsside (én side): 15 000 – 30 000 kr
+- Bedriftsnettside (5–8 sider): 30 000 – 70 000 kr
+- Større nettside med CMS og blogg: 70 000 – 150 000 kr
+- Webflow-lisens og hosting: ca. 200 – 500 kr/mnd avhengig av plan
+
+Vil du ha et fullstendig bilde av hva en nettside koster i Bergen generelt, har vi skrevet en egen [prisguide for webdesign i Bergen](/blogg/hva-koster-webdesign-bergen-prisguide-2025) som går dypere inn i hva som påvirker prisen.
+
+## Webflow og SEO – en sterk kombinasjon
+
+Webflow er bygget med SEO i tankene. Du får full kontroll på metatitler, metabeskrivelser, alt-tekst, canonical-tagger og strukturert data – uten ekstra plugins. Kombinert med plattformens raske lastetid gir det et solid utgangspunkt for å rangere på søk som «webdesign Bergen» eller bransjespesifikke lokale søk.
+
+Men plattformen alene rangerer ikke nettsiden din. Teknisk SEO må settes opp riktig, og innholdet må treffe hva folk faktisk søker etter. Det henger tett sammen med en gjennomtenkt [SEO-strategi for Bergen-bedrifter](/tjenester/seo) – og en [nettside som er bygget for å konvertere](/tjenester/webdesign) fra starten.
+
+## Slik bygger vi Webflow-nettsider
+
+Hos Frameflow følger vi en strukturert prosess som gir forutsigbarhet og resultater:
+
+- Strategi og kartlegging av mål, målgruppe og søkeord
+- Design tilpasset merkevaren din – ikke en mal
+- Utvikling i Webflow med ren struktur og SEO innebygd
+- Innhold, testing og kvalitetssikring på alle skjermstørrelser
+- Lansering, opplæring og oppfølging så du kan drifte siden selv
+
+Vi har bygget moderne, konverteringsfokuserte nettsider for kunder i både Norge og utlandet – se noen av dem blant [våre prosjekter](/prosjekter).
+
+## Vanlige spørsmål om Webflow i Bergen
+
+### Er Webflow bra for SEO?
+
+Ja. Webflow gir ren kode, rask lastetid og full kontroll på metadata og strukturert data – alt som skal til for et godt SEO-fundament. Resultatene avhenger likevel av riktig oppsett og innhold.
+
+### Kan jeg oppdatere Webflow-nettsiden selv?
+
+Ja. Webflow har et brukervennlig CMS og en redaktørmodus der du trygt kan endre tekst og bilder uten teknisk kunnskap, og uten å risikere å ødelegge designet.
+
+### Hva koster Webflow i måneden?
+
+Selve plattformen koster typisk 200 – 500 kr/mnd avhengig av plan, inkludert hosting og SSL. Utviklingen av selve nettsiden er en separat engangskostnad.
+
+### Bør jeg velge Webflow eller WordPress?
+
+For de fleste Bergen-bedrifter er Webflow det enkleste valget: profesjonelt resultat uten løpende vedlikehold. WordPress passer best for store, komplekse nettsteder med spesielle integrasjoner.
+
+## Klar for en Webflow-nettside i Bergen?
+
+Webflow gir bedrifter i Bergen en nettside som er rask, sikker og enkel å eie – uten kompromiss på design eller synlighet i søk. Vil du vite om det passer for ditt prosjekt?
+
+Les mer om vår [Webflow-utvikling i Bergen](/tjenester/webflow), eller [ta kontakt](/kontakt) for en uforpliktende prat. Lurer du fortsatt på hvilken plattform som passer best, gir [vår guide til å velge webbyrå i Bergen](/blogg/webbyraa-bergen-guide) deg spørsmålene du bør stille før du bestemmer deg.
+    `.trim(),
+  },
+  {
     slug: 'nettbutikk-bergen-ehandel',
     title: 'Nettbutikk i Bergen: Hva koster det å lage nettshop, og hvilken plattform bør du velge?',
     excerpt: 'E-handel vokser – men en nettbutikk som faktisk selger krever mer enn fin design. Hva Bergen-bedrifter bør vite om kostnader, plattformer og konvertering.',
