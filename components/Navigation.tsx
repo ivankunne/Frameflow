@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { usePathname, useRouter, Link } from '@/i18n/navigation'
+import { useParams } from 'next/navigation'
 import { useLocale, useTranslations } from 'next-intl'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
@@ -99,6 +100,7 @@ export default function Navigation() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const pathname = usePathname()
+  const params = useParams()
   const router = useRouter()
   const locale = useLocale()
   const t = useTranslations('nav')
@@ -111,7 +113,10 @@ export default function Navigation() {
   ]
 
   const switchLocale = (code: string) => {
-    router.replace(pathname as any, { locale: code })
+    // Pass the internal pathname together with the current route params so
+    // next-intl can re-localize dynamic routes (e.g. /prosjekter/[slug]).
+    // Passing the bare pathname string would navigate to a literal "[slug]" → 404.
+    router.replace({ pathname, params } as any, { locale: code })
   }
 
   useEffect(() => {

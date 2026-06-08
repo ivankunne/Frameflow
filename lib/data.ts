@@ -11,6 +11,21 @@ export interface BlogPost {
   relatedService?: { title: string; href: string }
 }
 
+export interface ProjectSeo {
+  titleNo: string
+  titleEn: string
+  descNo: string
+  descEn: string
+  keywordsNo: string[]
+  keywordsEn: string[]
+  ogImage: string
+  schemaName: string
+  schemaDescription: string
+  dateCreated: string
+  schemaKeywords: string
+  schemaLocation: string
+}
+
 export interface Project {
   slug: string
   title: string
@@ -22,6 +37,7 @@ export interface Project {
   location: string
   year: string
   results?: string[]
+  seo?: ProjectSeo
 }
 
 export const blogPosts: BlogPost[] = [
@@ -1077,6 +1093,20 @@ export const projects: Project[] = [
       '98% app uptime og stabilitet',
       '1000+ arrangementer oppdaget per måned',
     ],
+    seo: {
+      titleNo: 'h-orbit – Musikkplattform for artister | Frameflow',
+      titleEn: 'h-orbit – Music platform for artists | Frameflow',
+      descNo: 'Frameflow bygde h-orbit, en musikkplattform som samler artister og fans. Brukt av 150+ team-medlemmer og 5000+ daglige interaksjoner.',
+      descEn: 'Frameflow built h-orbit, a music platform connecting artists with fans. Used by 150+ team members with 5000+ daily interactions.',
+      keywordsNo: ['h-orbit', 'musikkplattform', 'app utvikling Bergen', 'Frameflow'],
+      keywordsEn: ['h-orbit', 'music platform app', 'app development Bergen', 'Frameflow'],
+      ogImage: 'https://www.frameflow.no/og?title=h-orbit+%E2%80%93+Musikkplattform+for+artister&label=App+utvikling',
+      schemaName: 'h-orbit – Musikkplattform for artister',
+      schemaDescription: 'En musikkplattform som samler artister og fans på ett sted.',
+      dateCreated: '2025',
+      schemaKeywords: 'App utvikling, Branding, React, Full-stack, musikk, artister',
+      schemaLocation: 'Bergen, Norge',
+    },
   },
   {
     slug: 'sportsbytte',
@@ -1094,6 +1124,20 @@ export const projects: Project[] = [
       'Tydelig visuell identitet og brand guidelines levert',
       'Markant økning i brukerregistreringer etter lansering',
     ],
+    seo: {
+      titleNo: 'Sportsbytte – Webdesign og branding for norsk bytteplatform | Frameflow',
+      titleEn: 'Sportsbytte – Web design and branding for Norwegian sports marketplace | Frameflow',
+      descNo: 'Frameflow skapte ny nettside og visuell identitet for Sportsbytte, Norges plattform for kjøp, salg og bytte av brukt sportsutstyr.',
+      descEn: 'Frameflow created a new website and visual identity for Sportsbytte, Norway\'s platform for buying, selling and trading used sports equipment.',
+      keywordsNo: ['Sportsbytte', 'sportsutstyr plattform', 'webdesign Norge', 'Frameflow'],
+      keywordsEn: ['Sportsbytte', 'sports marketplace Norway', 'web design Norway', 'Frameflow'],
+      ogImage: 'https://www.frameflow.no/og?title=Sportsbytte+%E2%80%93+Webdesign+og+branding&label=Web+design',
+      schemaName: 'Sportsbytte – Webdesign og branding for norsk bytteplatform',
+      schemaDescription: 'Ny nettside og visuell identitet for Sportsbytte – plattformen for kjøp, salg og bytte av brukt sportsutstyr i Norge.',
+      dateCreated: '2025',
+      schemaKeywords: 'Web design, Branding, SEO, sportsbytte, brukt sportsutstyr, Norge',
+      schemaLocation: 'Bergen, Norge',
+    },
   },
   {
     slug: 'marbesa-project-94',
@@ -1111,6 +1155,20 @@ export const projects: Project[] = [
       'Flerspråklig design for internasjonal målgruppe',
       'Høy konverteringsrate på visningsforespørsler',
     ],
+    seo: {
+      titleNo: 'Marbesa Project 94 – Luksus eiendomsnettside | Frameflow',
+      titleEn: 'Marbesa Project 94 – Luxury real estate website | Frameflow',
+      descNo: 'Frameflow designet en eksklusiv nettside for luksus eiendomsprosjektet Marbesa Project 94 i Marbella, Spania.',
+      descEn: 'Frameflow designed an exclusive website for the luxury real estate project Marbesa Project 94 in Marbella, Spain.',
+      keywordsNo: ['Marbesa Project 94', 'luksus eiendom nettside Marbella', 'webdesign Spania', 'Frameflow'],
+      keywordsEn: ['Marbesa Project 94', 'luxury real estate website Marbella', 'web design Spain', 'Frameflow'],
+      ogImage: 'https://www.frameflow.no/og?title=Marbesa+Project+94+%E2%80%93+Luksus+eiendomsnettside&label=Branding',
+      schemaName: 'Marbesa Project 94 – Luksus eiendomsnettside',
+      schemaDescription: 'Eksklusiv nettside for luksus eiendomsprosjektet Marbesa Project 94 i Marbella, Spania.',
+      dateCreated: '2024',
+      schemaKeywords: 'Web design, luksus eiendom, Marbella, webdesign Bergen',
+      schemaLocation: 'Marbella, Spania',
+    },
   },
   {
     slug: 'gv-rentals',
@@ -1128,6 +1186,20 @@ export const projects: Project[] = [
       'Økt bookingrate etter ny nettside',
       'Konsistent visuell identitet på alle kanaler',
     ],
+    seo: {
+      titleNo: 'GV Rentals – Webdesign og sosiale medier | Frameflow',
+      titleEn: 'GV Rentals – Web design and social media in Marbella | Frameflow',
+      descNo: 'Frameflow leverte nettside og løpende sosiale medier innhold for GV Rentals i Marbella. Økt engasjement og booking-rate.',
+      descEn: 'Frameflow delivered a website and ongoing social media content for GV Rentals in Marbella. Increased engagement and booking rate.',
+      keywordsNo: ['GV Rentals', 'ferieutleie nettside Marbella', 'sosiale medier Marbella', 'Frameflow'],
+      keywordsEn: ['GV Rentals', 'vacation rental website Marbella', 'social media management Marbella', 'Frameflow'],
+      ogImage: 'https://www.frameflow.no/og?title=GV+Rentals+%E2%80%93+Webdesign+og+sosiale+medier&label=Sosiale+medier',
+      schemaName: 'GV Rentals – Webdesign og sosiale medier i Marbella',
+      schemaDescription: 'Nettside og løpende sosiale medier-innhold for GV Rentals i Marbella. Økt engasjement og booking-rate.',
+      dateCreated: '2025',
+      schemaKeywords: 'Web design, sosiale medier, utleie Marbella, webdesign Bergen',
+      schemaLocation: 'Marbella, Spania',
+    },
   },
 ]
 
