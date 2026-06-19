@@ -52,6 +52,7 @@ const portfolioSchema = {
     position: index + 1,
     item: {
       '@type': 'CreativeWork',
+      '@id': `https://www.frameflow.no/prosjekter/${project.slug}`,
       name: project.title,
       description: project.description,
       url: `https://www.frameflow.no/prosjekter/${project.slug}`,

@@ -25,10 +25,12 @@ export default function Footer() {
     { href: '/tjenester/webdesign' as const, label: 'Web design' },
     { href: '/tjenester/webflow' as const, label: 'Webflow' },
     { href: '/tjenester/seo' as const, label: 'SEO' },
+    { href: '/tjenester/markedsforing' as const, label: 'Markedsføring' },
     { href: '/tjenester/app-utvikling' as const, label: 'App utvikling' },
     { href: '/tjenester/foto-og-videografi' as const, label: 'Foto og videografi' },
     { href: '/tjenester/sosiale-medier' as const, label: 'Sosiale medier' },
     { href: '/tjenester/branding' as const, label: 'Branding' },
+    { href: '/tjenester/ai-automasjon' as const, label: 'AI-automasjon' },
   ]
 
   return (

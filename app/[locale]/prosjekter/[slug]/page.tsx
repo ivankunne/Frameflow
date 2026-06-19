@@ -53,6 +53,7 @@ export default async function ProjectPage({ params }: Props) {
   const creativeWorkSchema = s && {
     '@context': 'https://schema.org',
     '@type': 'CreativeWork',
+    '@id': `https://www.frameflow.no/prosjekter/${slug}`,
     name: s.schemaName,
     description: s.schemaDescription,
     url: `https://www.frameflow.no/prosjekter/${slug}`,

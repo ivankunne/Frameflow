@@ -53,43 +53,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: 'Frameflow',
-  description: 'Markedsføringsbyrå og webbyrå i Bergen – vi lager nettside, grafisk design, foto og video, sosiale medier og branding under ett tak.',
-  url: 'https://www.frameflow.no',
-  telephone: '+4799853781',
-  email: 'ivan@frameflow.no',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'Damsgårdsveien 83a',
-    addressLocality: 'Bergen',
-    postalCode: '5058',
-    addressCountry: 'NO',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 60.3913,
-    longitude: 5.3221,
-  },
-  areaServed: [
-    { '@type': 'City', name: 'Bergen' },
-    { '@type': 'AdministrativeArea', name: 'Vestland' },
-  ],
-  priceRange: '$$',
-  openingHoursSpecification: {
-    '@type': 'OpeningHoursSpecification',
-    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-    opens: '07:00',
-    closes: '18:00',
-  },
-  sameAs: ['https://www.instagram.com/frameflow_no/', 'https://www.tiktok.com/@frameflow.no'],
-}
-
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
+  inLanguage: 'nb-NO',
   mainEntity: [
     {
       '@type': 'Question',
@@ -165,7 +132,6 @@ export default async function HomePage({ params }: Props) {
       <JsonLd data={organizationSchema} />
       <JsonLd data={websiteSchema} />
       <JsonLd data={personSchema} />
-      <JsonLd data={localBusinessSchema} />
       <JsonLd data={faqSchema} />
       <HomeHero />
       <HomeLogoStrip />

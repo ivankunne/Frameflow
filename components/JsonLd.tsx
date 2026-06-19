@@ -19,6 +19,12 @@ export const organizationSchema = {
     'Frameflow er et markedsføringsbyrå i Bergen som leverer webdesign, foto og video, sosiale medier og branding til bedrifter i Bergen og Vestland.',
   telephone: '+4799853781',
   email: 'ivan@frameflow.no',
+  vatID: 'NO936600018MVA',
+  identifier: {
+    '@type': 'PropertyValue',
+    propertyID: 'NO:organisasjonsnummer',
+    value: '936600018',
+  },
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Damsgårdsveien 83a',
