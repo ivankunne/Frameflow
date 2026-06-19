@@ -17,8 +17,8 @@ function dual(noPath: string, enPath: string, freq: SitemapEntry['changeFrequenc
   const noUrl = `${BASE_URL}${noPath}`
   const enUrl = `${EN_BASE}${enPath}`
   return [
-    { url: noUrl, lastModified: mod, changeFrequency: freq, priority, alternates: { languages: { 'nb-NO': noUrl, 'en': enUrl } } },
-    { url: enUrl, lastModified: mod, changeFrequency: freq, priority: priority * 0.9, alternates: { languages: { 'nb-NO': noUrl, 'en': enUrl } } },
+    { url: noUrl, lastModified: mod, changeFrequency: freq, priority, alternates: { languages: { 'nb-NO': noUrl, 'en': enUrl, 'x-default': noUrl } } },
+    { url: enUrl, lastModified: mod, changeFrequency: freq, priority: priority * 0.9, alternates: { languages: { 'nb-NO': noUrl, 'en': enUrl, 'x-default': noUrl } } },
   ]
 }
 

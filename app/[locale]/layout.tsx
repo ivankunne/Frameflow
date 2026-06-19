@@ -59,6 +59,7 @@ export async function generateMetadata({
       languages: {
         'nb-NO': 'https://www.frameflow.no',
         'en': 'https://www.frameflow.no/en',
+        'x-default': 'https://www.frameflow.no',
       },
     },
     openGraph: {
@@ -117,7 +118,7 @@ export default async function LocaleLayout({
   const messages = await getMessages()
 
   return (
-    <html lang={locale === 'no' ? 'nb' : 'en'} className={`${bricolage.variable} ${figtree.variable}`}>
+    <html lang={locale === 'no' ? 'nb-NO' : 'en'} className={`${bricolage.variable} ${figtree.variable}`}>
       <head>
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly site summary" />
         <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLM-friendly full site content" />

@@ -4,6 +4,11 @@ export const routing = defineRouting({
   locales: ['no', 'en'],
   defaultLocale: 'no',
   localePrefix: 'as-needed',
+  // Never sniff Accept-Language. Googlebot crawls with en-US and would otherwise
+  // be 307-redirected off every canonical Norwegian URL to /en. Norwegian is the
+  // default and is always served at the unprefixed URLs; English is reached only
+  // via explicit /en links and the language switcher.
+  localeDetection: false,
   pathnames: {
     '/': '/',
     '/om-oss': { no: '/om-oss', en: '/about' },
