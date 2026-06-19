@@ -157,12 +157,45 @@ export default async function BlogPostPage({ params }: Props) {
     ],
   } : null
 
+  const guideHowToSchema = post.slug === 'lage-nettside-steg-for-steg-guide-2026' ? {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'Slik lager du en profesjonell nettside steg for steg',
+    description: 'En steg-for-steg guide til å lage en ny nettside – fra mål og innhold til webdesign, plattform, SEO og lansering.',
+    inLanguage: 'nb-NO',
+    author: { '@id': 'https://www.frameflow.no/#ivan-kunne' },
+    publisher: { '@id': 'https://www.frameflow.no/#organization' },
+    step: [
+      { '@type': 'HowToStep', name: 'Sett mål og kartlegg målgruppen', text: 'Avklar hva nettsiden skal oppnå – flere henvendelser, salg eller tillit – og kartlegg hvem du snakker til og hva de søker etter.' },
+      { '@type': 'HowToStep', name: 'Planlegg struktur og sidekart', text: 'Tegn opp hvilke sider nettsiden skal ha før design. Gi hver side ett tydelig tema og én søkeintensjon for bedre SEO.' },
+      { '@type': 'HowToStep', name: 'Skaff innhold før design', text: 'Ha tekst, profesjonelle bilder, video og kundebevis klart før designet låses, slik at designet bygges rundt det faktiske innholdet.' },
+      { '@type': 'HowToStep', name: 'Design som bygger tillit og konverterer', text: 'Lag et design som følger merkevaren, med tydelig verditilbud øverst, én klar call-to-action og mobil-først-prioritering.' },
+      { '@type': 'HowToStep', name: 'Velg riktig plattform', text: 'Velg en plattform som gir rask, sikker og vedlikeholdsvennlig drift – for de fleste bedrifter er Webflow et godt valg.' },
+      { '@type': 'HowToStep', name: 'Bygg inn SEO fra dag én', text: 'Sørg for ren kode, rask lastetid, gjennomtenkt struktur, unike metatitler og -beskrivelser, alt-tekst og strukturert data.' },
+      { '@type': 'HowToStep', name: 'Test, lanser og følg opp', text: 'Test på alle skjermstørrelser, sjekk skjemaer og hastighet, lanser, og følg deretter opp med justeringer og jevnlige oppdateringer.' },
+    ],
+  } : null
+
+  const guideFaqSchema = post.slug === 'lage-nettside-steg-for-steg-guide-2026' ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: 'nb-NO',
+    mainEntity: [
+      { '@type': 'Question', name: 'Hvor lang tid tar det å lage en nettside?', acceptedAnswer: { '@type': 'Answer', text: 'En standard bedriftsnettside tar typisk 3–6 uker fra oppstart til lansering, avhengig av omfang og hvor raskt innhold er på plass. Større nettsider med nettbutikk eller mange sider tar lengre tid.' } },
+      { '@type': 'Question', name: 'Hva trenger jeg før vi starter?', acceptedAnswer: { '@type': 'Answer', text: 'Et tydelig mål, en idé om hvilke sider du trenger, og innhold – tekst, bilder og logo. Har du ikke alt klart, hjelper et godt byrå deg med å få det på plass underveis.' } },
+      { '@type': 'Question', name: 'Kan jeg oppdatere nettsiden selv etterpå?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. På moderne plattformer som Webflow kan du trygt endre tekst og bilder selv i en brukervennlig redaktørmodus, uten teknisk kunnskap og uten å risikere å ødelegge designet.' } },
+      { '@type': 'Question', name: 'Hva koster det å lage en profesjonell nettside?', acceptedAnswer: { '@type': 'Answer', text: 'Hos et byrå starter en skreddersydd bedriftsnettside typisk fra 15 000 kr og oppover, avhengig av antall sider og funksjonalitet.' } },
+    ],
+  } : null
+
   return (
     <>
       <JsonLd data={articleSchema} />
       <JsonLd data={breadcrumbSchema} />
       {howToSchema && <JsonLd data={howToSchema} />}
       {faqSchema && <JsonLd data={faqSchema} />}
+      {guideHowToSchema && <JsonLd data={guideHowToSchema} />}
+      {guideFaqSchema && <JsonLd data={guideFaqSchema} />}
       <BlogPostClient post={post} relatedPosts={relatedPosts} />
     </>
   )

@@ -42,6 +42,107 @@ export interface Project {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'lage-nettside-steg-for-steg-guide-2026',
+    title: 'Slik lager du en profesjonell nettside i 2026: en komplett steg-for-steg guide',
+    excerpt: 'Skal du lage ny nettside? Slik går prosessen steg for steg – fra planlegging og innhold til webdesign, SEO og lansering. En praktisk guide for bedrifter.',
+    metaTitle: 'Lage nettside: steg-for-steg guide 2026 | Frameflow',
+    category: 'Webdesign',
+    date: '19. juni 2026',
+    updatedAt: '2026-06-19',
+    readTime: '9 min',
+    relatedService: { title: 'Web design', href: '/tjenester/webdesign' },
+    content: `
+Å lage en nettside handler om langt mer enn å velge farger og skrive litt tekst. En profesjonell nettside bygges i en tydelig prosess: planlegging, innhold, webdesign, utvikling, SEO og lansering. Følger du de sju stegene under, ender du opp med en nettside som ser bra ut, laster raskt og faktisk gir bedriften din kunder – ikke bare en pen brosjyre ingen finner. Her er hele prosessen forklart steg for steg.
+
+## Hva en nettside egentlig skal gjøre
+
+Før du tegner en eneste knapp: en nettside er et verktøy, ikke et utstillingsvindu. Den skal hjelpe en besøkende med å forstå hva du tilbyr, stole på deg, og ta neste steg – ringe, sende skjema eller bestille. Godt webdesign er derfor balansen mellom form og funksjon: det skal se profesjonelt ut *og* lede besøkende mot en handling.
+
+Det betyr at de viktigste avgjørelsene tas før designfasen. Hopper du rett til «hvordan skal den se ut», bygger du på løs grunn.
+
+## Steg 1: Sett mål og kartlegg målgruppen
+
+Start med ett spørsmål: hva skal nettsiden oppnå? Flere henvendelser, salg i nettbutikk, booking av timer, eller å bygge tillit til merkevaren? Målet styrer alt annet.
+
+Kartlegg deretter hvem du snakker til. Hva googler de? Hvilke innvendinger har de før de kjøper? Jo bedre du kjenner målgruppen, jo lettere er det å skrive innhold og designe en nettside som treffer.
+
+## Steg 2: Planlegg struktur og sidekart
+
+Tegn opp hvilke sider nettsiden skal ha før du tenker på design. En typisk bedriftsnettside har en forside, en eller flere tjenestesider, en om-oss-side, referanser eller prosjekter, en blogg og en kontaktside.
+
+God struktur er også god SEO: hver side bør ha ett tydelig tema og én søkeintensjon. Tjenestesider som er delt opp etter hva folk faktisk søker på – for eksempel egne sider for [webdesign](/tjenester/webdesign), [Webflow](/tjenester/webflow) og [SEO](/tjenester/seo) – rangerer bedre enn én rotete side som prøver å dekke alt.
+
+## Steg 3: Skaff innhold før design
+
+Innhold før design – ikke omvendt. Tekst, bilder og video bør være klart (eller i det minste skissert) før designet låses, slik at designet bygges rundt det faktiske innholdet.
+
+- **Tekst:** Skriv for mennesker først, søkemotorer like etter. Svar på spørsmålene målgruppen faktisk har.
+- **Bilder og video:** Profesjonelle, egne bilder bygger langt mer tillit enn generiske arkivbilder. Gode [foto- og videoproduksjoner](/tjenester/foto-og-videografi) løfter hele nettsiden.
+- **Bevis:** Kundeomtaler, konkrete resultater og logoer du kan vise frem.
+
+## Steg 4: Design som bygger tillit og konverterer
+
+Nå – og først nå – kommer det visuelle. Godt webdesign følger merkevaren din, ikke en mal alle andre bruker. De viktigste prinsippene:
+
+- Tydelig verditilbud øverst på siden, forståelig innen fem sekunder
+- Én klar call-to-action som gjentas strategisk
+- Mobil først – over 60 % av trafikken til de fleste bedriftsnettsteder kommer fra mobil
+- Nok luft, lesbar typografi og en visuell hierarki som leder øyet
+
+Vil du gå dypere i hva som skiller en nettside som selger fra en som bare ser fin ut, har vi skrevet om de [seks elementene i en nettside som konverterer](/blogg/webdesign-bergen-nettside-som-konverterer).
+
+## Steg 5: Velg riktig plattform
+
+Plattformen avgjør hvor rask, sikker og enkel nettsiden blir å eie. WordPress er fleksibelt, men krever løpende vedlikehold. Wix og Squarespace er enkle, men begrenser deg til maler og gir mindre kontroll på SEO. For de fleste bedrifter treffer [Webflow](/tjenester/webflow) midt i blinken: designfrihet og profesjonell kvalitet, uten plugins som ruster.
+
+Usikker på valget? Vår [komplette guide til Webflow](/blogg/webflow-bergen) sammenligner alternativene grundig.
+
+## Steg 6: Bygg inn SEO fra dag én
+
+SEO er ikke noe du legger på til slutt – det er en del av selve fundamentet. Sørg for ren kode, rask lastetid, gjennomtenkt sidestruktur, unike metatitler og metabeskrivelser, alt-tekst på bilder og strukturert data.
+
+For lokale bedrifter er lokal SEO ofte det som gir flest henvendelser. Vår [steg-for-steg-guide til lokal SEO](/blogg/lokal-seo-bergen-guide-2025) viser hvordan du kommer øverst på Google i ditt område uten å betale for annonser. En nettside som er [bygget for SEO fra starten](/tjenester/seo) er alltid billigere enn å reparere en som ikke er det.
+
+## Steg 7: Test, lanser og følg opp
+
+Før lansering: test nettsiden på mobil, nettbrett og desktop, sjekk at alle skjemaer og lenker fungerer, og kjør en hastighetstest i Google PageSpeed Insights – sikt mot en score over 80 på mobil.
+
+Etter lansering er jobben ikke ferdig. Følg med på trafikk, juster innhold som ikke fungerer, og oppdater jevnlig. En nettside er et levende verktøy, ikke et engangsprosjekt. Se hvordan vi har jobbet med dette i [våre prosjekter](/prosjekter).
+
+## Hva koster det å lage en nettside?
+
+Prisen avhenger av omfang og hvem som bygger den – fra noen tusen for en ferdigmal til godt over 100 000 kr for en skreddersydd løsning fra et byrå. Vi har brutt ned alle prisnivåene i en egen [prisoversikt for nettsider](/blogg/nettside-pris-bergen-2026).
+
+## Bør du lage nettsiden selv eller bruke et byrå?
+
+Å lage nettsiden selv kan fungere for en helt enkel side med lite på spill. Men skal nettsiden være en kilde til kunder, lønner det seg nesten alltid å bruke fagfolk – både for design, teknisk kvalitet og SEO. Velger du å hyre noen, gir vår [guide til å velge riktig webbyrå](/blogg/webbyraa-bergen-guide) deg spørsmålene du bør stille før du bestemmer deg.
+
+## Vanlige spørsmål om å lage nettside
+
+### Hvor lang tid tar det å lage en nettside?
+
+En standard bedriftsnettside tar typisk 3–6 uker fra oppstart til lansering, avhengig av omfang og hvor raskt innhold er på plass. Større nettsider med nettbutikk eller mange sider tar lengre tid.
+
+### Hva trenger jeg før vi starter?
+
+Et tydelig mål, en idé om hvilke sider du trenger, og innhold – tekst, bilder og logo. Har du ikke alt klart, hjelper et godt byrå deg med å få det på plass underveis.
+
+### Kan jeg oppdatere nettsiden selv etterpå?
+
+Ja. På moderne plattformer som Webflow kan du trygt endre tekst og bilder selv i en brukervennlig redaktørmodus, uten teknisk kunnskap og uten å risikere å ødelegge designet.
+
+### Hva koster det å lage en profesjonell nettside?
+
+Hos et byrå starter en skreddersydd bedriftsnettside typisk fra 15 000 kr og oppover, avhengig av antall sider og funksjonalitet. Se den fullstendige [prisoversikten](/blogg/nettside-pris-bergen-2026) for detaljer.
+
+## Klar for å lage en ny nettside?
+
+Nå kjenner du hele prosessen – fra mål og innhold til design, SEO og lansering. Vil du ha en nettside som er bygget riktig fra første steg, hjelper vi deg gjerne.
+
+Les mer om hvordan vi jobber med [webdesign](/tjenester/webdesign), eller [ta kontakt](/kontakt) for en uforpliktende prat om prosjektet ditt.
+    `.trim(),
+  },
+  {
     slug: 'webflow-bergen',
     title: 'Webflow i Bergen: Komplett guide til fordeler, pris og prosess (2026)',
     excerpt: 'Vurderer du Webflow i Bergen? Her er hva Webflow er, fordelene for bedrifter, hva det koster – og hvordan vi bygger nettsider som rangerer i Google.',
@@ -140,7 +241,7 @@ For de fleste Bergen-bedrifter er Webflow det enkleste valget: profesjonelt resu
 
 Webflow gir bedrifter i Bergen en nettside som er rask, sikker og enkel å eie – uten kompromiss på design eller synlighet i søk. Vil du vite om det passer for ditt prosjekt?
 
-Les mer om vår [Webflow-utvikling i Bergen](/tjenester/webflow), eller [ta kontakt](/kontakt) for en uforpliktende prat. Lurer du fortsatt på hvilken plattform som passer best, gir [vår guide til å velge webbyrå i Bergen](/blogg/webbyraa-bergen-guide) deg spørsmålene du bør stille før du bestemmer deg.
+Les mer om vår [Webflow-utvikling i Bergen](/tjenester/webflow), eller [ta kontakt](/kontakt) for en uforpliktende prat. Skal du lage nettside fra bunnen, går vår [steg-for-steg guide til å lage en nettside](/blogg/lage-nettside-steg-for-steg-guide-2026) gjennom hele prosessen – og lurer du fortsatt på hvilken plattform som passer best, gir [vår guide til å velge webbyrå i Bergen](/blogg/webbyraa-bergen-guide) deg spørsmålene du bør stille før du bestemmer deg.
     `.trim(),
   },
   {
