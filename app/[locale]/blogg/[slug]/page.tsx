@@ -188,6 +188,18 @@ export default async function BlogPostPage({ params }: Props) {
     ],
   } : null
 
+  const seoAdsFaqSchema = post.slug === 'seo-eller-google-ads-bergen' ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: 'nb-NO',
+    mainEntity: [
+      { '@type': 'Question', name: 'Hva er forskjellen på SEO og Google Ads?', acceptedAnswer: { '@type': 'Answer', text: 'SEO gir organisk synlighet på Google uten å betale per klikk, men tar tid å bygge. Google Ads er betalt annonsering som gir trafikk umiddelbart, men slutter å virke når du stopper å betale.' } },
+      { '@type': 'Question', name: 'Er SEO eller Google Ads billigst?', acceptedAnswer: { '@type': 'Answer', text: 'Google Ads har lavest startkostnad, men du betaler for hvert klikk så lenge annonsene kjører. SEO koster mer i starten, men gir lavere kostnad per kunde over tid fordi trafikken fortsetter uten løpende klikkbetaling.' } },
+      { '@type': 'Question', name: 'Hvor raskt ser jeg resultater med SEO og Google Ads?', acceptedAnswer: { '@type': 'Answer', text: 'Med Google Ads kan du få besøk og henvendelser samme dag annonsene går live. Med SEO ser de fleste Bergen-bedrifter synlig forbedring innen 3–6 måneder, og etablert lokal autoritet innen et år.' } },
+      { '@type': 'Question', name: 'Bør en liten Bergen-bedrift velge SEO eller Google Ads?', acceptedAnswer: { '@type': 'Answer', text: 'Har du begrenset budsjett, anbefaler vi som regel å prioritere lokal SEO for den langsiktige økonomien, og bruke Google Ads i korte perioder når du trenger raske resultater eller vil teste nye søkeord.' } },
+    ],
+  } : null
+
   return (
     <>
       <JsonLd data={articleSchema} />
@@ -196,6 +208,7 @@ export default async function BlogPostPage({ params }: Props) {
       {faqSchema && <JsonLd data={faqSchema} />}
       {guideHowToSchema && <JsonLd data={guideHowToSchema} />}
       {guideFaqSchema && <JsonLd data={guideFaqSchema} />}
+      {seoAdsFaqSchema && <JsonLd data={seoAdsFaqSchema} />}
       <BlogPostClient post={post} relatedPosts={relatedPosts} />
     </>
   )
