@@ -13,6 +13,7 @@ const categoryColors: Record<string, string> = {
   Markedsføring: '#059669',
   Branding: '#92400e',
   SEO: '#b45309',
+  'AI automasjon': '#4f46e5',
 }
 
 export default function BloggClient() {

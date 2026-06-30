@@ -93,6 +93,7 @@ export default async function BlogPostPage({ params }: Props) {
         'Foto & Video': ['bedriftsfoto Bergen', 'videografi Bergen', 'fotograf Bergen'],
         Markedsføring: ['digital markedsføring Bergen', 'markedsføringsbyrå Bergen', 'annonsering Bergen'],
         'App utvikling': ['app utvikling Bergen', 'apputvikling Bergen', 'mobilapp Bergen'],
+        'AI automasjon': ['AI automasjon Bergen', 'automatisering Bergen', 'AI chatbot Bergen'],
       }[post.category] ?? []),
     ].join(', '),
   }
@@ -157,12 +158,71 @@ export default async function BlogPostPage({ params }: Props) {
     ],
   } : null
 
+  const guideHowToSchema = post.slug === 'lage-nettside-steg-for-steg-guide-2026' ? {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'Slik lager du en profesjonell nettside steg for steg',
+    description: 'En steg-for-steg guide til å lage en ny nettside – fra mål og innhold til webdesign, plattform, SEO og lansering.',
+    inLanguage: 'nb-NO',
+    author: { '@id': 'https://www.frameflow.no/#ivan-kunne' },
+    publisher: { '@id': 'https://www.frameflow.no/#organization' },
+    step: [
+      { '@type': 'HowToStep', name: 'Sett mål og kartlegg målgruppen', text: 'Avklar hva nettsiden skal oppnå – flere henvendelser, salg eller tillit – og kartlegg hvem du snakker til og hva de søker etter.' },
+      { '@type': 'HowToStep', name: 'Planlegg struktur og sidekart', text: 'Tegn opp hvilke sider nettsiden skal ha før design. Gi hver side ett tydelig tema og én søkeintensjon for bedre SEO.' },
+      { '@type': 'HowToStep', name: 'Skaff innhold før design', text: 'Ha tekst, profesjonelle bilder, video og kundebevis klart før designet låses, slik at designet bygges rundt det faktiske innholdet.' },
+      { '@type': 'HowToStep', name: 'Design som bygger tillit og konverterer', text: 'Lag et design som følger merkevaren, med tydelig verditilbud øverst, én klar call-to-action og mobil-først-prioritering.' },
+      { '@type': 'HowToStep', name: 'Velg riktig plattform', text: 'Velg en plattform som gir rask, sikker og vedlikeholdsvennlig drift – for de fleste bedrifter er Webflow et godt valg.' },
+      { '@type': 'HowToStep', name: 'Bygg inn SEO fra dag én', text: 'Sørg for ren kode, rask lastetid, gjennomtenkt struktur, unike metatitler og -beskrivelser, alt-tekst og strukturert data.' },
+      { '@type': 'HowToStep', name: 'Test, lanser og følg opp', text: 'Test på alle skjermstørrelser, sjekk skjemaer og hastighet, lanser, og følg deretter opp med justeringer og jevnlige oppdateringer.' },
+    ],
+  } : null
+
+  const guideFaqSchema = post.slug === 'lage-nettside-steg-for-steg-guide-2026' ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: 'nb-NO',
+    mainEntity: [
+      { '@type': 'Question', name: 'Hvor lang tid tar det å lage en nettside?', acceptedAnswer: { '@type': 'Answer', text: 'En standard bedriftsnettside tar typisk 3–6 uker fra oppstart til lansering, avhengig av omfang og hvor raskt innhold er på plass. Større nettsider med nettbutikk eller mange sider tar lengre tid.' } },
+      { '@type': 'Question', name: 'Hva trenger jeg før vi starter?', acceptedAnswer: { '@type': 'Answer', text: 'Et tydelig mål, en idé om hvilke sider du trenger, og innhold – tekst, bilder og logo. Har du ikke alt klart, hjelper et godt byrå deg med å få det på plass underveis.' } },
+      { '@type': 'Question', name: 'Kan jeg oppdatere nettsiden selv etterpå?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. På moderne plattformer som Webflow kan du trygt endre tekst og bilder selv i en brukervennlig redaktørmodus, uten teknisk kunnskap og uten å risikere å ødelegge designet.' } },
+      { '@type': 'Question', name: 'Hva koster det å lage en profesjonell nettside?', acceptedAnswer: { '@type': 'Answer', text: 'Hos et byrå starter en skreddersydd bedriftsnettside typisk fra 15 000 kr og oppover, avhengig av antall sider og funksjonalitet.' } },
+    ],
+  } : null
+
+  const aiAutomasjonFaqSchema = post.slug === 'ai-automasjon-oppgaver-bergen' ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: 'nb-NO',
+    mainEntity: [
+      { '@type': 'Question', name: 'Hva er AI-automasjon for en bedrift?', acceptedAnswer: { '@type': 'Answer', text: 'AI-automasjon er systemer som utfører repetitive, regelbaserte oppgaver automatisk – som å svare på henvendelser, logge leads i CRM eller sende oppfølginger. Målet er ikke å erstatte ansatte, men å frigjøre tiden deres fra rutinearbeid.' } },
+      { '@type': 'Question', name: 'Hvilke oppgaver bør jeg automatisere først?', acceptedAnswer: { '@type': 'Answer', text: 'Begynn med oppgaven som tar mest tid og er enklest å beskrive steg for steg – for de fleste Bergen-bedrifter er det håndtering av innkommende e-post og henvendelser.' } },
+      { '@type': 'Question', name: 'Hva koster det å automatisere med AI?', acceptedAnswer: { '@type': 'Answer', text: 'En enkel automasjon starter fra rundt 8 000 kr eks. mva som engangskostnad. Prisen øker med kompleksiteten, men sparer du noen timer i uken, betaler løsningen seg selv raskt.' } },
+      { '@type': 'Question', name: 'Mister jeg den personlige kontakten med kundene?', acceptedAnswer: { '@type': 'Answer', text: 'Nei. Godt bygde automasjoner håndterer det rutinepregede og sender alt som krever en menneskelig vurdering videre til deg. Du får mer tid til de samtalene som faktisk betyr noe.' } },
+    ],
+  } : null
+
+  const seoAdsFaqSchema = post.slug === 'seo-eller-google-ads-bergen' ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: 'nb-NO',
+    mainEntity: [
+      { '@type': 'Question', name: 'Hva er forskjellen på SEO og Google Ads?', acceptedAnswer: { '@type': 'Answer', text: 'SEO gir organisk synlighet på Google uten å betale per klikk, men tar tid å bygge. Google Ads er betalt annonsering som gir trafikk umiddelbart, men slutter å virke når du stopper å betale.' } },
+      { '@type': 'Question', name: 'Er SEO eller Google Ads billigst?', acceptedAnswer: { '@type': 'Answer', text: 'Google Ads har lavest startkostnad, men du betaler for hvert klikk så lenge annonsene kjører. SEO koster mer i starten, men gir lavere kostnad per kunde over tid fordi trafikken fortsetter uten løpende klikkbetaling.' } },
+      { '@type': 'Question', name: 'Hvor raskt ser jeg resultater med SEO og Google Ads?', acceptedAnswer: { '@type': 'Answer', text: 'Med Google Ads kan du få besøk og henvendelser samme dag annonsene går live. Med SEO ser de fleste Bergen-bedrifter synlig forbedring innen 3–6 måneder, og etablert lokal autoritet innen et år.' } },
+      { '@type': 'Question', name: 'Bør en liten Bergen-bedrift velge SEO eller Google Ads?', acceptedAnswer: { '@type': 'Answer', text: 'Har du begrenset budsjett, anbefaler vi som regel å prioritere lokal SEO for den langsiktige økonomien, og bruke Google Ads i korte perioder når du trenger raske resultater eller vil teste nye søkeord.' } },
+    ],
+  } : null
+
   return (
     <>
       <JsonLd data={articleSchema} />
       <JsonLd data={breadcrumbSchema} />
       {howToSchema && <JsonLd data={howToSchema} />}
       {faqSchema && <JsonLd data={faqSchema} />}
+      {guideHowToSchema && <JsonLd data={guideHowToSchema} />}
+      {guideFaqSchema && <JsonLd data={guideFaqSchema} />}
+      {seoAdsFaqSchema && <JsonLd data={seoAdsFaqSchema} />}
+      {aiAutomasjonFaqSchema && <JsonLd data={aiAutomasjonFaqSchema} />}
       <BlogPostClient post={post} relatedPosts={relatedPosts} />
     </>
   )
