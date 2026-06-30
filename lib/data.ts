@@ -42,6 +42,86 @@ export interface Project {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'ai-automasjon-oppgaver-bergen',
+    title: '5 oppgaver Bergen-bedrifter kan automatisere med AI i 2026',
+    excerpt: 'Bruker du timer på e-post, oppfølging og manuell registrering? Her er 5 oppgaver Bergen-bedrifter kan automatisere med AI – og hva du faktisk sparer på det.',
+    metaTitle: '5 oppgaver Bergen-bedrifter kan automatisere med AI',
+    category: 'AI automasjon',
+    date: '30. juni 2026',
+    updatedAt: '2026-06-30',
+    readTime: '7 min',
+    relatedService: { title: 'AI-automasjon', href: '/tjenester/ai-automasjon' },
+    content: `
+Kort svar: de fleste små og mellomstore bedrifter i Bergen kan spare **5–10 timer i uken** ved å automatisere fem rutineoppgaver – e-posthåndtering, kundechat, lead-registrering, booking og oppfølging. Du trenger ikke bytte ut folk; du frigjør dem fra arbeidet en maskin gjør raskere og mer konsekvent. Her er de fem, i den rekkefølgen vi anbefaler å ta dem.
+
+## 1. Håndtering av innkommende henvendelser
+
+De fleste bedrifter får de samme spørsmålene om og om igjen: åpningstider, pris, tilgjengelighet, «kan dere hjelpe med X?». Hver enkelt e-post er kjapp å svare på – men til sammen spiser de en hel arbeidsdag i uken.
+
+**Det AI kan gjøre:** sortere innkommende e-post automatisk, svare på standardspørsmål med riktig informasjon, og videresende det som krever et menneske til rett person. Du svarer fortsatt personlig på det som betyr noe – maskinen tar resten.
+
+**Hva du sparer:** typisk 3–5 timer i uken, og kundene får svar med en gang i stedet for neste dag.
+
+## 2. AI-chatbot på nettsiden
+
+En kunde som besøker nettsiden din klokka 21 og ikke får svar, er ofte en kunde du mister. En velbygd chatbot fanger opp spørsmålet, svarer på det den kan, og samler inn kontaktinfo til resten.
+
+**Det AI kan gjøre:** svare på vanlige spørsmål døgnet rundt, kvalifisere besøkende, og booke møter eller sende leads rett inn i innboksen din – uten at du er pålogget.
+
+**Hva du sparer:** færre tapte henvendelser utenom arbeidstid, og en lavere terskel for at folk tar kontakt i det hele tatt. En [profesjonell nettside i Bergen](/tjenester/webdesign) med en chatbot på toppen jobber for deg mens du sover.
+
+## 3. Lead-kvalifisering og CRM-logging
+
+Den manuelle jobben med å føre nye kontakter inn i et regneark eller CRM blir nesten alltid nedprioritert – og da forsvinner leads i sprekkene.
+
+**Det AI kan gjøre:** automatisk logge hver henvendelse i CRM-et ditt (HubSpot, Pipedrive, Notion), berike den med tilgjengelig informasjon, og prioritere de heteste leadsene slik at du ringer riktig kunde først.
+
+**Hva du sparer:** ingen tapte leads, og et CRM som faktisk er oppdatert uten at noen må vedlikeholde det.
+
+## 4. Booking og avtalebehandling
+
+Frem-og-tilbake-e-poster for å finne et møtetidspunkt er en klassisk tidstyv – og virker lite profesjonelt.
+
+**Det AI kan gjøre:** la kunden booke direkte i kalenderen din (Calendly, Cal.com), sende automatiske bekreftelser og påminnelser, og håndtere ombooking uten at du løfter en finger.
+
+**Hva du sparer:** færre no-shows, og slutt på e-postpingpongen rundt hvert eneste møte.
+
+## 5. Oppfølging og e-postsekvenser
+
+De fleste salg skjer i oppfølgingen – men oppfølging er nettopp det travle bedrifter glemmer. En kunde som ba om tilbud for to uker siden, blir aldri kontaktet igjen.
+
+**Det AI kan gjøre:** sende automatiske, men personlige oppfølginger til riktig tid – etter et tilbud, etter et kjøp, eller for å vekke en kald lead til live igjen.
+
+**Hva du sparer:** flere lukkede salg fra leads du allerede har betalt for å skaffe.
+
+## Hvor bør du begynne?
+
+Ikke automatiser alt på én gang. Start med oppgaven som stjeler mest tid og er enklest å beskrive som en serie trinn – ofte er det e-posthåndtering (punkt 1). En god tommelfingerregel: **kan du forklare oppgaven steg for steg til en ny ansatt, kan den automatiseres.**
+
+## Hva koster det?
+
+En enkel automasjon starter typisk fra 8 000 kr eks. mva som en engangskostnad. Mer komplekse flyter med AI-behandling, chatbot og flere systemintegrasjoner koster mer – men regnestykket er ofte enkelt: sparer du 5 timer i uken, er investeringen nedbetalt i løpet av få måneder. Se hvordan vi jobber med [AI-automasjon for Bergen-bedrifter](/tjenester/ai-automasjon), eller [ta en uforpliktende prat](/kontakt) om hvor du taper mest tid i dag.
+
+## Ofte stilte spørsmål
+
+### Hva er AI-automasjon for en bedrift?
+
+AI-automasjon er systemer som utfører repetitive, regelbaserte oppgaver automatisk – som å svare på henvendelser, logge leads i CRM eller sende oppfølginger. Målet er ikke å erstatte ansatte, men å frigjøre tiden deres fra rutinearbeid.
+
+### Hvilke oppgaver bør jeg automatisere først?
+
+Begynn med oppgaven som tar mest tid og er enklest å beskrive steg for steg – for de fleste Bergen-bedrifter er det håndtering av innkommende e-post og henvendelser.
+
+### Hva koster det å automatisere med AI?
+
+En enkel automasjon starter fra rundt 8 000 kr eks. mva som engangskostnad. Prisen øker med kompleksiteten, men sparer du noen timer i uken, betaler løsningen seg selv raskt.
+
+### Mister jeg den personlige kontakten med kundene?
+
+Nei. Godt bygde automasjoner håndterer det rutinepregede og sender alt som krever en menneskelig vurdering videre til deg. Du får mer tid til de samtalene som faktisk betyr noe.
+    `.trim(),
+  },
+  {
     slug: 'seo-eller-google-ads-bergen',
     title: 'SEO eller Google Ads: Hva lønner seg for Bergen-bedrifter i 2026?',
     excerpt: 'SEO gir varige resultater, Google Ads gir raske. Men hva passer din Bergen-bedrift? Vi sammenligner kostnad, tid og avkastning – og når du bør kombinere dem.',

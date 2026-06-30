@@ -93,6 +93,7 @@ export default async function BlogPostPage({ params }: Props) {
         'Foto & Video': ['bedriftsfoto Bergen', 'videografi Bergen', 'fotograf Bergen'],
         Markedsføring: ['digital markedsføring Bergen', 'markedsføringsbyrå Bergen', 'annonsering Bergen'],
         'App utvikling': ['app utvikling Bergen', 'apputvikling Bergen', 'mobilapp Bergen'],
+        'AI automasjon': ['AI automasjon Bergen', 'automatisering Bergen', 'AI chatbot Bergen'],
       }[post.category] ?? []),
     ].join(', '),
   }
@@ -188,6 +189,18 @@ export default async function BlogPostPage({ params }: Props) {
     ],
   } : null
 
+  const aiAutomasjonFaqSchema = post.slug === 'ai-automasjon-oppgaver-bergen' ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: 'nb-NO',
+    mainEntity: [
+      { '@type': 'Question', name: 'Hva er AI-automasjon for en bedrift?', acceptedAnswer: { '@type': 'Answer', text: 'AI-automasjon er systemer som utfører repetitive, regelbaserte oppgaver automatisk – som å svare på henvendelser, logge leads i CRM eller sende oppfølginger. Målet er ikke å erstatte ansatte, men å frigjøre tiden deres fra rutinearbeid.' } },
+      { '@type': 'Question', name: 'Hvilke oppgaver bør jeg automatisere først?', acceptedAnswer: { '@type': 'Answer', text: 'Begynn med oppgaven som tar mest tid og er enklest å beskrive steg for steg – for de fleste Bergen-bedrifter er det håndtering av innkommende e-post og henvendelser.' } },
+      { '@type': 'Question', name: 'Hva koster det å automatisere med AI?', acceptedAnswer: { '@type': 'Answer', text: 'En enkel automasjon starter fra rundt 8 000 kr eks. mva som engangskostnad. Prisen øker med kompleksiteten, men sparer du noen timer i uken, betaler løsningen seg selv raskt.' } },
+      { '@type': 'Question', name: 'Mister jeg den personlige kontakten med kundene?', acceptedAnswer: { '@type': 'Answer', text: 'Nei. Godt bygde automasjoner håndterer det rutinepregede og sender alt som krever en menneskelig vurdering videre til deg. Du får mer tid til de samtalene som faktisk betyr noe.' } },
+    ],
+  } : null
+
   const seoAdsFaqSchema = post.slug === 'seo-eller-google-ads-bergen' ? {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -209,6 +222,7 @@ export default async function BlogPostPage({ params }: Props) {
       {guideHowToSchema && <JsonLd data={guideHowToSchema} />}
       {guideFaqSchema && <JsonLd data={guideFaqSchema} />}
       {seoAdsFaqSchema && <JsonLd data={seoAdsFaqSchema} />}
+      {aiAutomasjonFaqSchema && <JsonLd data={aiAutomasjonFaqSchema} />}
       <BlogPostClient post={post} relatedPosts={relatedPosts} />
     </>
   )
