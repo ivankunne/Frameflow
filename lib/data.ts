@@ -515,7 +515,7 @@ Det lønner seg sjelden hvis:
 ❌ Produktene er tunge, skjøre eller krever spesiell emballasje
 ❌ Du ikke har kapasitet til å håndtere returer og klager
 
-Vil du diskutere om nettbutikk er riktig for din bedrift? Se vår [webdesign-tjeneste](/tjenester/webdesign) eller [ta kontakt](/kontakt) – vi hjelper Bergen-bedrifter med å ta de riktige digitale valgene.
+Lurer du på hva en vanlig nettside koster til sammenligning? Se vår [prisoversikt for nettsider i Bergen](/blogg/nettside-pris-bergen-2026). Vil du diskutere om nettbutikk er riktig for din bedrift? Se vår [webdesign-tjeneste i Bergen](/tjenester/webdesign) eller [ta kontakt](/kontakt) – vi hjelper Bergen-bedrifter med å ta de riktige digitale valgene.
 `,
   },
   {
@@ -794,7 +794,7 @@ For Bergen-bedrifter: vis at dere er lokale. Inkluder adressen tydelig på siden
 
 Ferdigmaler: 5 000–15 000 kr. Frilanser: 15 000–50 000 kr. Lokalt byrå: 30 000–120 000 kr.
 
-Vår anbefaling: ikke se på nettside som en kostnad, men som en investering. En nettside som genererer én ekstra kunde i måneden er raskt nedbetalt.
+Vår anbefaling: ikke se på nettside som en kostnad, men som en investering. En nettside som genererer én ekstra kunde i måneden er raskt nedbetalt. For en full [prisoversikt for Bergen-markedet](/blogg/nettside-pris-bergen-2026) og hvordan du [beregner avkastningen (ROI)](/blogg/hva-koster-webdesign-bergen-prisguide-2025) på en ny nettside, har vi egne guider.
 
 Er du klar for å oppgradere din [digitale tilstedeværelse i Bergen](/tjenester/webdesign)? Vi tilbyr gratis konsultasjon der vi ser på din nåværende nettside og gir konkrete forbedringsforslag.
     `.trim(),
@@ -1096,7 +1096,7 @@ Lurer du på hvor du bør starte for din spesifikke bedrift? Se våre [tjenester
     content: `
 ## Nettside som investering – ikke utgift
 
-De fleste Bergen-bedrifter spør «hva koster en nettside?». Det riktige spørsmålet er: «hva gir nettsiden meg tilbake?»
+De fleste Bergen-bedrifter spør «hva koster en nettside?» – og vi har en egen [prisoversikt for nettsider i Bergen](/blogg/nettside-pris-bergen-2026) som svarer på akkurat det. Men det riktige spørsmålet er ofte: «hva gir nettsiden meg tilbake?»
 
 En nettside til 60 000 kr som genererer to nye kunder i måneden – hver verdt 5 000 kr – er nedbetalt på 6 måneder. Deretter tjener den penger hvert eneste år uten ekstra kostnad.
 
@@ -1126,7 +1126,7 @@ Bergen-bedrifter som rangerer i topp 3 på Google for relevante søk, kan forven
 
 ### 2. Konverteringsrate
 
-Det nytter lite å drive trafikk til en side som ikke konverterer. En profesjonelt designet nettside med tydelig CTA, sosialt bevis og rask lastetid konverterer 3–8 % av besøkende til leads. En dårlig side konverterer 0,5–1 %.
+Det nytter lite å drive trafikk til en side som ikke konverterer. En profesjonelt designet nettside med tydelig CTA, sosialt bevis og rask lastetid konverterer 3–8 % av besøkende til leads. En dårlig side konverterer 0,5–1 %. Vil du vite hva som faktisk driver konvertering, har vi brutt det ned i [seks elementer som gjør nettsiden til en salgsmaskin](/blogg/webdesign-bergen-nettside-som-konverterer).
 
 Differansen er enorm: 100 besøkende per dag gir enten 5 eller 80 leads i måneden.
 
