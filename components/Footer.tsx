@@ -22,7 +22,7 @@ export default function Footer() {
   ]
 
   const serviceLinks = [
-    { href: '/tjenester/webdesign' as const, label: 'Web design' },
+    { href: '/tjenester/webdesign' as const, label: 'Webdesign' },
     { href: '/tjenester/webflow' as const, label: 'Webflow' },
     { href: '/tjenester/seo' as const, label: 'SEO' },
     { href: '/tjenester/markedsforing' as const, label: 'Markedsføring' },
