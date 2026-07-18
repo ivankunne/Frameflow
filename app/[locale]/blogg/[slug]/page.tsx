@@ -189,6 +189,18 @@ export default async function BlogPostPage({ params }: Props) {
     ],
   } : null
 
+  const nyNettsideFaqSchema = post.slug === 'trenger-ny-nettside-bergen' ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: 'nb-NO',
+    mainEntity: [
+      { '@type': 'Question', name: 'Hvor ofte bør en bedrift bytte nettside?', acceptedAnswer: { '@type': 'Answer', text: 'Som en tommelfingerregel bør en bedriftsnettside fornyes hvert tredje til femte år. Teknologi, designtrender og Googles krav endrer seg raskt, og en side som var god for fem år siden er ofte utdatert i dag – både teknisk og visuelt.' } },
+      { '@type': 'Question', name: 'Bør jeg lage ny nettside eller oppgradere den gamle?', acceptedAnswer: { '@type': 'Answer', text: 'Kjenner du deg igjen i ett eller to av tegnene, holder det ofte å utbedre akkurat de tingene. Er det tre eller flere – for eksempel treg, ikke mobilvennlig og usynlig på Google samtidig – lønner det seg som regel å bygge nytt, fordi det å lappe på et gammelt fundament fort blir dyrere over tid.' } },
+      { '@type': 'Question', name: 'Hva koster en ny nettside i Bergen?', acceptedAnswer: { '@type': 'Answer', text: 'En skreddersydd bedriftsnettside fra et lokalt byrå ligger typisk i området 35 000–120 000 kr avhengig av omfang. Prisen påvirkes av antall sider, funksjoner og om innhold er inkludert.' } },
+      { '@type': 'Question', name: 'Hvor lang tid tar det å lage en ny nettside?', acceptedAnswer: { '@type': 'Answer', text: 'En standard bedriftsnettside tar typisk tre til seks uker fra oppstart til lansering, avhengig av omfang og hvor raskt innholdet er på plass. Større nettsteder med nettbutikk eller mange sider tar lengre tid.' } },
+    ],
+  } : null
+
   const aiAutomasjonFaqSchema = post.slug === 'ai-automasjon-oppgaver-bergen' ? {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -223,6 +235,7 @@ export default async function BlogPostPage({ params }: Props) {
       {guideFaqSchema && <JsonLd data={guideFaqSchema} />}
       {seoAdsFaqSchema && <JsonLd data={seoAdsFaqSchema} />}
       {aiAutomasjonFaqSchema && <JsonLd data={aiAutomasjonFaqSchema} />}
+      {nyNettsideFaqSchema && <JsonLd data={nyNettsideFaqSchema} />}
       <BlogPostClient post={post} relatedPosts={relatedPosts} />
     </>
   )

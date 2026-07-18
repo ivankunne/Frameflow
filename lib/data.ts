@@ -42,6 +42,78 @@ export interface Project {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'trenger-ny-nettside-bergen',
+    title: 'Trenger Bergen-bedriften din en ny nettside? 7 tegn på at det er på tide',
+    excerpt: 'Er nettsiden din utdatert, treg eller usynlig på Google? Her er 7 tegn på at Bergen-bedriften din trenger en ny nettside – og hva du bør gjøre med det.',
+    metaTitle: 'Trenger du ny nettside? 7 tegn for Bergen-bedrifter',
+    category: 'Webdesign',
+    date: '18. juli 2026',
+    updatedAt: '2026-07-18',
+    readTime: '7 min',
+    relatedService: { title: 'Web design', href: '/tjenester/webdesign' },
+    content: `
+Kort svar: **hvis nettsiden din er treg, vanskelig å bruke på mobil, umulig å finne på Google eller aldri gir deg henvendelser – er det på tide med en ny.** De fleste bedriftsnettsider bør fornyes hvert tredje til femte år. Her er de syv tydeligste tegnene på at Bergen-bedriften din har vokst fra nettsiden sin – og hva du bør gjøre med hvert enkelt.
+
+## 1. Den fungerer dårlig på mobil
+
+Over 60 % av trafikken til lokale bedriftsnettsteder kommer fra mobil. Må besøkende zoome, dra sidelengs eller sikte på knapper som er for små, mister du dem – og Google rangerer mobilvennlige sider høyere. Test din egen side på telefonen akkurat nå: er det en behagelig opplevelse, eller en frustrerende en?
+
+## 2. Den laster for tregt
+
+53 % av mobilbrukere forlater en side som bruker mer enn tre sekunder på å laste. Sidehastighet er både en konverterings- og [rangeringsfaktor på Google](/tjenester/seo). Kjør siden din gjennom Google PageSpeed Insights – er mobilscoren under 50, taper du sannsynligvis kunder hver eneste dag.
+
+## 3. Du finner den ikke på Google
+
+Søker du på tjenesten din pluss «Bergen» og ikke dukker opp på første side, jobber ikke nettsiden for deg. Eldre nettsider mangler ofte det tekniske fundamentet – ren kode, riktig struktur og metadata – som skal til for å rangere lokalt. En ny, [SEO-optimalisert nettside i Bergen](/tjenester/webdesign) bygges med synlighet innebygd fra dag én.
+
+## 4. Den gir deg ingen henvendelser
+
+Har du trafikk, men telefonen ringer ikke og skjemaet står tomt? Da er problemet konvertering, ikke design. En nettside som selger har tydelig verditilbud, klare handlingsknapper og sosialt bevis. Vi har brutt ned nøyaktig hva som skiller en side som konverterer fra en som bare ser fin ut, i vår guide til [nettsiden som salgsmaskin](/blogg/webdesign-bergen-nettside-som-konverterer).
+
+## 5. Du kan ikke oppdatere den selv
+
+Må du ringe en utvikler for å endre en telefonnummer eller legge ut en nyhet, er nettsiden bygget på utdatert teknologi. Moderne nettsider har et brukervennlig redigeringssystem der du trygt endrer tekst og bilder selv – uten teknisk kunnskap og uten å risikere å ødelegge designet.
+
+## 6. Designet ser utdatert ut
+
+85 % av forbrukere sjekker en bedrifts nettside før de kjøper. Ser siden ut som den er fra 2015, overfører besøkende det inntrykket til bedriften din – uansett hvor god du faktisk er. Et moderne, profesjonelt design bygger tillit i løpet av de første sekundene.
+
+## 7. Den speiler ikke bedriften din lenger
+
+Har du fått nye tjenester, ny profil eller flyttet posisjon i markedet siden nettsiden ble laget? Da forteller den feil historie om hvem du er i dag. En nettside som er «uvokst» koster deg troverdighet hos akkurat de kundene du vil ha.
+
+## Ny nettside eller oppgradering av den gamle?
+
+Kjenner du deg igjen i **ett eller to** av punktene, er det ofte nok å fikse akkurat de tingene. Kjenner du deg igjen i **tre eller flere** – særlig tregt, ikke mobilvennlig og usynlig på Google samtidig – lønner det seg som regel å bygge nytt fra bunnen. Å lappe på et gammelt fundament blir fort dyrere enn å gjøre det riktig én gang.
+
+Skal du bygge nytt, tar vår [steg-for-steg-guide til å lage en nettside](/blogg/lage-nettside-steg-for-steg-guide-2026) deg gjennom prosessen, og [prisoversikten for nettsider i Bergen](/blogg/nettside-pris-bergen-2026) viser hva du kan forvente å betale. Er du usikker på hvem som skal gjøre jobben, hjelper [guiden til å velge riktig webbyrå](/blogg/webbyraa-bergen-guide) deg å stille de riktige spørsmålene.
+
+## Hva nå?
+
+Er du i tvil, start med en ærlig test: åpne nettsiden på mobil, ta tiden på hvor raskt den laster, og søk deg selv opp på Google. Svarene forteller deg som regel alt du trenger å vite.
+
+Vil du ha en gratis, uforpliktende vurdering av din nåværende nettside? [Ta kontakt](/kontakt), så ser vi på den sammen og gir deg konkrete råd – enten det er en oppussing eller en helt [ny nettside i Bergen](/tjenester/webdesign) som skal til.
+
+## Ofte stilte spørsmål
+
+### Hvor ofte bør en bedrift bytte nettside?
+
+Som en tommelfingerregel bør en bedriftsnettside fornyes hvert tredje til femte år. Teknologi, designtrender og Googles krav endrer seg raskt, og en side som var god for fem år siden er ofte utdatert i dag – både teknisk og visuelt.
+
+### Bør jeg lage ny nettside eller oppgradere den gamle?
+
+Kjenner du deg igjen i ett eller to av tegnene, holder det ofte å utbedre akkurat de tingene. Er det tre eller flere – for eksempel treg, ikke mobilvennlig og usynlig på Google samtidig – lønner det seg som regel å bygge nytt, fordi det å lappe på et gammelt fundament fort blir dyrere over tid.
+
+### Hva koster en ny nettside i Bergen?
+
+En skreddersydd bedriftsnettside fra et lokalt byrå ligger typisk i området 35 000–120 000 kr avhengig av omfang. Vi har en egen prisoversikt som bryter ned hva som påvirker prisen for Bergen-markedet.
+
+### Hvor lang tid tar det å lage en ny nettside?
+
+En standard bedriftsnettside tar typisk tre til seks uker fra oppstart til lansering, avhengig av omfang og hvor raskt innholdet er på plass. Større nettsteder med nettbutikk eller mange sider tar lengre tid.
+    `.trim(),
+  },
+  {
     slug: 'ai-automasjon-oppgaver-bergen',
     title: '5 oppgaver Bergen-bedrifter kan automatisere med AI i 2026',
     excerpt: 'Bruker du timer på e-post, oppfølging og manuell registrering? Her er 5 oppgaver Bergen-bedrifter kan automatisere med AI – og hva du faktisk sparer på det.',
@@ -228,6 +300,8 @@ Har du begrenset budsjett, anbefaler vi som regel å prioritere lokal SEO for de
     relatedService: { title: 'Web design', href: '/tjenester/webdesign' },
     content: `
 Å lage en nettside handler om langt mer enn å velge farger og skrive litt tekst. En profesjonell nettside bygges i en tydelig prosess: planlegging, innhold, webdesign, utvikling, SEO og lansering. Følger du de sju stegene under, ender du opp med en nettside som ser bra ut, laster raskt og faktisk gir bedriften din kunder – ikke bare en pen brosjyre ingen finner. Her er hele prosessen forklart steg for steg.
+
+Usikker på om du i det hele tatt trenger en ny nettside? Se først [de 7 tegnene på at Bergen-bedriften din bør fornye nettsiden](/blogg/trenger-ny-nettside-bergen) – så vet du om du skal bygge nytt eller pusse opp det du har.
 
 ## Hva en nettside egentlig skal gjøre
 
