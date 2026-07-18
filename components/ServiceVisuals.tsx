@@ -662,7 +662,7 @@ export function BrandVisual({ visible }: { visible: boolean }) {
         <span className="text-[8px] font-semibold uppercase tracking-widest" style={{ color: '#a0a0a0' }}>
           Brand Identity System
         </span>
-        <span className="text-[8px]" style={{ color: '#c0bdb8' }}>v 2.0 · 2025</span>
+        <span className="text-[8px]" style={{ color: '#c0bdb8' }}>v 2.0</span>
       </motion.div>
 
       {/* ── logo mark ── */}
@@ -763,7 +763,7 @@ export function BrandVisual({ visible }: { visible: boolean }) {
         className="shrink-0 flex items-center justify-between pt-3"
         style={{ borderTop: '1px solid rgba(0,0,0,0.07)' }}
       >
-        <span className="text-[7px] font-mono" style={{ color: '#c0bdb8' }}>Brand Manual · Frameflow 2025</span>
+        <span className="text-[7px] font-mono" style={{ color: '#c0bdb8' }}>Brand Manual · Frameflow</span>
         <motion.span
           initial={{ scale: 0.6, opacity: 0 }}
           animate={visible ? { scale: 1, opacity: 1 } : {}}
