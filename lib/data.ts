@@ -388,7 +388,7 @@ Hos et byrå starter en skreddersydd bedriftsnettside typisk fra 15 000 kr og op
 
 Nå kjenner du hele prosessen – fra mål og innhold til design, SEO og lansering. Vil du ha en nettside som er bygget riktig fra første steg, hjelper vi deg gjerne.
 
-Les mer om hvordan vi jobber med [webdesign](/tjenester/webdesign), eller [ta kontakt](/kontakt) for en uforpliktende prat om prosjektet ditt.
+Les mer om hvordan vi jobber med [webdesign i Bergen](/tjenester/webdesign), eller [ta kontakt](/kontakt) for en uforpliktende prat om prosjektet ditt.
     `.trim(),
   },
   {
@@ -1258,7 +1258,7 @@ Bergen har et voksende marked av digitale byråer og frilanser. Valget du tar he
 
 ## 1. Spesialisering vs. bredde
 
-Noen byråer er dypt spesialiserte (f.eks. kun SEO, kun Meta-annonser). Andre, som Frameflow, tilbyr helhetlige løsninger under ett tak – [web](/tjenester/webdesign), [SEO](/tjenester/seo), [branding](/tjenester/branding), [foto](/tjenester/foto-og-videografi) og [sosiale medier](/tjenester/sosiale-medier). Spørsmålet er: hva trenger du mest?
+Noen byråer er dypt spesialiserte (f.eks. kun SEO, kun Meta-annonser). Andre, som Frameflow, tilbyr helhetlige løsninger under ett tak – [webdesign](/tjenester/webdesign), [SEO](/tjenester/seo), [branding](/tjenester/branding), [foto](/tjenester/foto-og-videografi) og [sosiale medier](/tjenester/sosiale-medier). Spørsmålet er: hva trenger du mest?
 
 Hvis du trenger en komplett digital tilstedeværelse bygget opp fra bunnen, er ett byrå som kan håndtere alt ofte mer effektivt enn å koordinere mellom fire leverandører.
 
