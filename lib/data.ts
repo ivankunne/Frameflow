@@ -1581,6 +1581,10 @@ export const projects: Project[] = [
       'Tydelig visuell identitet og brand guidelines levert',
       'Markant økning i brukerregistreringer etter lansering',
     ],
+    image: {
+      src: '/sportsbytte-bento-norsk.png',
+      alt: 'Sportsbytte-dashboard: utvalgt annonse for skøyteski, miljøeffekt med 967 videresolgte varer, Bergen Skiklubb-klubbprofil og utstyrsutforskning',
+    },
     seo: {
       titleNo: 'Sportsbytte – Webdesign og branding for norsk bytteplatform | Frameflow',
       titleEn: 'Sportsbytte – Web design and branding for Norwegian sports marketplace | Frameflow',
