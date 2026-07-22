@@ -3,12 +3,29 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
 import type { Project } from '@/lib/data'
 
 // ─── Project-specific browser mockup ──────────────────────────────────────
 function ProjectBrowserMockup({ project, visible }: { project: Project; visible: boolean }) {
   const slug = project.slug
+
+  if (project.image) {
+    return (
+      <div className="relative w-full overflow-hidden rounded-2xl border border-border shadow-card-hover bg-white">
+        <Image
+          src={project.image.src}
+          alt={project.image.alt}
+          width={3200}
+          height={2000}
+          sizes="(min-width: 1024px) 1152px, 100vw"
+          className="w-full h-auto"
+          priority
+        />
+      </div>
+    )
+  }
 
   return (
     <div className="flex flex-col h-80 overflow-hidden rounded-2xl border border-border shadow-card-hover bg-white">
@@ -556,21 +573,23 @@ export default function ProjectPageTemplate({ project }: { project: Project }) {
             transition={{ duration: 0.6 }}
             className="relative mb-16"
           >
-            {/* Top-left: Lansert + year badge */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.85 }}
-              animate={contentInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ type: 'spring', stiffness: 200, damping: 18, delay: 0.5 }}
-              className="absolute -top-4 -left-4 z-10 bg-white border border-border rounded-xl px-3 py-2 shadow-card hidden sm:flex items-center gap-2"
-            >
-              <span className="w-2 h-2 rounded-full bg-green-500" />
-              <span className="text-[11px] font-semibold text-fg">{t('launched')} · {project.year}</span>
-            </motion.div>
+            {/* Top-left: Lansert + year badge — skipped for real screenshots, which already carry their own on-image UI chrome */}
+            {!project.image && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.85 }}
+                animate={contentInView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ type: 'spring', stiffness: 200, damping: 18, delay: 0.5 }}
+                className="absolute -top-4 -left-4 z-10 bg-white border border-border rounded-xl px-3 py-2 shadow-card hidden sm:flex items-center gap-2"
+              >
+                <span className="w-2 h-2 rounded-full bg-green-500" />
+                <span className="text-[11px] font-semibold text-fg">{t('launched')} · {project.year}</span>
+              </motion.div>
+            )}
 
             <ProjectBrowserMockup project={project} visible={contentInView} />
 
-            {/* Bottom-right: first result badge */}
-            {project.results && project.results[0] && (
+            {/* Bottom-right: first result badge — skipped for real screenshots, same reason */}
+            {!project.image && project.results && project.results[0] && (
               <motion.div
                 initial={{ opacity: 0, scale: 0.85 }}
                 animate={contentInView ? { opacity: 1, scale: 1 } : {}}

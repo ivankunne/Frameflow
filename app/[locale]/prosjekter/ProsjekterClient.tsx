@@ -4,6 +4,7 @@ import React from 'react'
 import { useRef, useState } from 'react'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
 import { useTranslations, useLocale } from 'next-intl'
+import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
 import { projects, type Project } from '@/lib/data'
 import { projectPreviews } from '@/components/ProjectPreviews'
@@ -196,7 +197,17 @@ function ProjectCard({
           className="h-52 w-full shrink-0 relative overflow-hidden p-3 transition-all duration-300"
           style={{ background: '#f5f5f5' }}
         >
-          {Preview ? (
+          {project.image ? (
+            <div className="relative h-full w-full rounded-xl overflow-hidden">
+              <Image
+                src={project.image.src}
+                alt={project.image.alt}
+                fill
+                sizes="(min-width: 768px) 420px, 100vw"
+                className="object-cover object-left-top"
+              />
+            </div>
+          ) : Preview ? (
             <Preview visible={inView} />
           ) : (
             <div

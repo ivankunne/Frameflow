@@ -2,10 +2,13 @@
 
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
+import Image from 'next/image'
+import { getProject } from '@/lib/data'
 
 export function HoOrbitCaseStudy() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-80px' })
+  const project = getProject('ho-orbit')
 
   return (
     <section ref={ref} className="py-16 md:py-24 lg:py-32 px-6 lg:px-8 bg-white relative overflow-hidden">
@@ -85,86 +88,24 @@ export function HoOrbitCaseStudy() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="relative"
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-card-hover border border-border bg-gradient-to-br from-cyan-50 to-cyan-100/50 p-6 min-h-80">
-              {/* App frame - desktop app style */}
-              <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-border/50 h-full flex flex-col">
-                {/* Top bar */}
-                <div className="bg-gradient-to-r from-cyan-900 to-cyan-800 px-6 py-4 text-white flex items-center justify-between shrink-0">
-                  <div className="flex items-center gap-3">
-                    <div className="w-7 h-7 rounded-md bg-cyan-400 flex items-center justify-center">
-                      <span className="text-xs font-bold text-cyan-900">♪</span>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-sm">h-orbit</p>
-                      <p className="text-[10px] text-cyan-200">Discover & Collaborate</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-7 h-7 rounded-full bg-cyan-400 flex items-center justify-center text-[10px] font-bold text-cyan-900">♫</div>
-                  </div>
-                </div>
-
-                {/* Content area */}
-                <div className="flex-1 overflow-hidden">
-                  <div className="grid grid-cols-3 gap-3 p-5">
-                    {/* Sidebar */}
-                    <div className="col-span-1 border-r border-border pr-3 space-y-2">
-                      <div className="text-[10px] font-semibold text-fg-muted uppercase mb-2">Browse</div>
-                      {['My Tracks', 'Collaborators', 'Events'].map((p, i) => (
-                        <div
-                          key={i}
-                          className={`text-xs p-2 rounded-lg cursor-pointer transition-colors ${
-                            i === 0 ? 'bg-cyan-100 text-cyan-900 font-medium' : 'text-fg-muted hover:bg-fg/5'
-                          }`}
-                        >
-                          {p}
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* Main content */}
-                    <div className="col-span-2 space-y-3">
-                      <div className="text-[10px] font-semibold text-fg-muted uppercase mb-2">Your Music Feed</div>
-                      {[
-                        { title: 'Upload new track', status: 'Ready', color: 'bg-blue-100' },
-                        { title: 'Collab request from Luna', status: 'New', color: 'bg-yellow-100' },
-                        { title: 'Indie Music Night - Aug 15', status: 'Interested', color: 'bg-green-100' },
-                      ].map((track, i) => (
-                        <div key={i} className={`${track.color} rounded-lg p-2.5 border border-border/50`}>
-                          <div className="flex items-start gap-2">
-                            <div className="w-4 h-4 rounded-full border border-border mt-0.5 flex-shrink-0" />
-                            <div className="flex-1 min-w-0">
-                              <p className="text-[10px] font-medium text-fg truncate">{track.title}</p>
-                              <p className="text-[8px] text-fg-muted">{track.status}</p>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Bottom stats */}
-                <div className="border-t border-border bg-fg/2 px-5 py-3 grid grid-cols-3 gap-2 shrink-0">
-                  {[
-                    { label: 'Tracks', value: '24' },
-                    { label: 'Collabs', value: '8' },
-                    { label: 'Events', value: '12' },
-                  ].map((stat) => (
-                    <div key={stat.label} className="text-center">
-                      <p className="text-sm font-bold text-cyan-600">{stat.value}</p>
-                      <p className="text-[8px] text-fg-muted">{stat.label}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-card-hover border border-border">
+              {project?.image && (
+                <Image
+                  src={project.image.src}
+                  alt={project.image.alt}
+                  width={3200}
+                  height={2000}
+                  sizes="(min-width: 1024px) 576px, 100vw"
+                  className="w-full h-auto"
+                />
+              )}
 
               {/* Badge */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.85 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ type: 'spring', stiffness: 200, damping: 18, delay: 0.5 }}
-                className="absolute -bottom-3 -right-3 bg-white border border-border rounded-xl px-4 py-2 shadow-card-hover flex items-center gap-2"
+                className="absolute -bottom-3 -left-3 bg-white border border-border rounded-xl px-4 py-2 shadow-card-hover flex items-center gap-2"
               >
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                 <span className="text-[11px] font-semibold text-fg">Live</span>

@@ -37,6 +37,7 @@ export interface Project {
   location: string
   year: string
   results?: string[]
+  image?: { src: string; alt: string }
   seo?: ProjectSeo
 }
 
@@ -1545,6 +1546,10 @@ export const projects: Project[] = [
       '98% app uptime og stabilitet',
       '1000+ arrangementer oppdaget per måned',
     ],
+    image: {
+      src: '/h-orbit-bento-english.png',
+      alt: 'h-orbit-dashboard: avspilling av «Night Light», artist-statistikk med 96 412 månedlige lyttere, artistprofil for Nova Vlecht og kommende arrangementer',
+    },
     seo: {
       titleNo: 'h-orbit – Musikkplattform for artister | Frameflow',
       titleEn: 'h-orbit – Music platform for artists | Frameflow',
