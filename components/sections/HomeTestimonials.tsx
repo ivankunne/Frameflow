@@ -30,35 +30,35 @@ export default function HomeTestimonials() {
           <p className="text-fg-muted max-w-xl leading-relaxed">{t('subtitle')}</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {testimonials.map((item, i) => (
             <motion.div
               key={item.name}
               initial={{ opacity: 0, x: i % 2 === 0 ? -18 : 18, scale: 0.97 }}
               animate={isInView ? { opacity: 1, x: 0, scale: 1 } : {}}
               transition={{ duration: 0.45, delay: 0.1 + i * 0.12 }}
-              className="bg-bg border border-border rounded-xl p-6 shadow-card flex flex-col"
+              className="bg-bg border border-border rounded-2xl p-8 lg:p-10 shadow-card flex flex-col"
             >
-              <div className="flex gap-0.5 mb-3" aria-label="5 of 5 stars">
+              <div className="flex gap-0.5 mb-4" aria-label="5 of 5 stars">
                 {[1,2,3,4,5].map((s) => (
-                  <svg key={s} width="14" height="14" viewBox="0 0 14 14" fill="#f59e0b" aria-hidden="true">
+                  <svg key={s} width="16" height="16" viewBox="0 0 14 14" fill="#f59e0b" aria-hidden="true">
                     <path d="M7 1l1.8 3.6L13 5.3l-3 2.9.7 4.1L7 10.3l-3.7 1.9.7-4.1-3-2.9 4.2-.6z" />
                   </svg>
                 ))}
               </div>
 
-              <p className="text-fg-muted text-[15px] leading-relaxed flex-1 mb-6">{item.quote}</p>
+              <p className="text-fg text-lg lg:text-xl leading-relaxed flex-1 mb-8">{item.quote}</p>
 
-              <div className="mb-4">
+              <div className="mb-5">
                 <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-accent bg-accent-light border border-accent/20 px-2.5 py-1 rounded-full">
                   <span className="w-1 h-1 rounded-full bg-accent" />
                   {item.service}
                 </span>
               </div>
 
-              <div className="flex items-center gap-3 pt-4 border-t border-border">
-                <div className="w-10 h-10 rounded-full bg-accent-light border border-accent/20 flex items-center justify-center shrink-0">
-                  <span className="text-accent text-xs font-semibold">{item.initials}</span>
+              <div className="flex items-center gap-3 pt-5 border-t border-border">
+                <div className="w-11 h-11 rounded-full bg-accent-light border border-accent/20 flex items-center justify-center shrink-0">
+                  <span className="text-accent text-sm font-semibold">{item.initials}</span>
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-fg">{item.name}</p>

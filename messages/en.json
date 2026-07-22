@@ -305,6 +305,7 @@
     "filterBranding": "Branding",
     "filterSocial": "Social media",
     "filterSEO": "SEO",
+    "noResults": "No projects in this category yet.",
     "ctaH2": "Your project could be next.",
     "ctaDesc": "Let's create something great together.",
     "ctaBtn": "Get a quote →"

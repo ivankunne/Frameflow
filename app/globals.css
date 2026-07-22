@@ -125,14 +125,3 @@ body {
   box-shadow: 0 0 40px rgba(33, 114, 181, 0.15);
 }
 
-/* Logo marquee */
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-
-/* Seamless marquee — 4 copies, moves exactly one set (25% of total) */
-@keyframes marquee-quarter {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-25%); }
-}

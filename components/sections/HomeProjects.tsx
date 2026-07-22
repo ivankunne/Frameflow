@@ -81,20 +81,20 @@ export default function HomeProjects() {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {projects.map(({ slug, title, description, tags, result, color, Preview }, i) => {
             const image = getProject(slug)?.image
             return (
             <motion.div key={slug} initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}>
-              <Link href={`/prosjekter/${slug}` as any} className="group block bg-white border border-border rounded-xl p-5 hover:border-accent transition-all duration-250 hover:shadow-blue-sm h-full">
-                <div className="mb-5">
+              <Link href={`/prosjekter/${slug}` as any} className="group block bg-white border border-border rounded-2xl p-6 hover:border-accent transition-all duration-250 hover:shadow-blue-sm h-full">
+                <div className="mb-6">
                   {image ? (
-                    <div className="relative h-36 w-full rounded-lg overflow-hidden">
+                    <div className="relative h-56 sm:h-64 lg:h-72 w-full rounded-xl overflow-hidden">
                       <Image
                         src={image.src}
                         alt={image.alt}
                         fill
-                        sizes="(min-width: 1024px) 360px, 100vw"
+                        sizes="(min-width: 1024px) 620px, 100vw"
                         className="object-cover object-left-top"
                       />
                     </div>
@@ -105,7 +105,7 @@ export default function HomeProjects() {
                 <div className="flex flex-wrap gap-2 mb-4">
                   {tags.map((tag) => <span key={tag} className="text-xs font-medium text-fg-muted">{tag}</span>)}
                 </div>
-                <h3 className="display-text text-2xl text-fg mb-2 group-hover:text-accent transition-colors duration-200">{title}</h3>
+                <h3 className="display-text text-2xl sm:text-3xl text-fg mb-2 group-hover:text-accent transition-colors duration-200">{title}</h3>
                 <p className="text-fg-muted text-sm leading-relaxed mb-6">{description}</p>
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-semibold px-2.5 py-1 rounded-full" style={{ color, backgroundColor: `${color}18` }}>{result}</span>
