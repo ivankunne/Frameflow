@@ -739,8 +739,15 @@ export function AISEOMockup({ visible }: { visible: boolean }) {
           <div className="w-2 h-2 rounded-full bg-[#febc2e]" />
           <div className="w-2 h-2 rounded-full bg-[#28c840]" />
         </div>
-        <div className="flex-1 bg-white border border-border/60 rounded px-2 py-0.5">
-          <span className="text-[9px] text-fg-muted font-mono">beste markedsføringsbyrå i bergen?</span>
+        <div className="flex-1 bg-white border border-border/60 rounded px-2 py-1 flex items-center gap-1.5">
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={visible ? { scaleX: 1 } : {}}
+            transition={{ duration: 0.4, delay: 0.15 }}
+            style={{ transformOrigin: 'left' }}
+            className="h-1.5 w-2/3 bg-fg/12 rounded-full"
+          />
+          <span className="text-[9px] text-fg-muted shrink-0">?</span>
         </div>
       </div>
 
@@ -756,6 +763,7 @@ export function AISEOMockup({ visible }: { visible: boolean }) {
           <div className="space-y-1 mb-1.5">
             <div className="h-1.5 w-full bg-[#8b5cf6]/15 rounded" />
             <div className="h-1.5 w-4/5 bg-[#8b5cf6]/15 rounded" />
+            <div className="h-1.5 w-3/5 bg-[#8b5cf6]/15 rounded" />
           </div>
           <motion.span
             initial={{ opacity: 0, scale: 0.9 }}
@@ -764,7 +772,7 @@ export function AISEOMockup({ visible }: { visible: boolean }) {
             className="inline-flex items-center gap-1 text-[9px] font-semibold px-2 py-1 rounded-full"
             style={{ background: '#ede9fe', color: '#6d28d9' }}
           >
-            ✓ frameflow.no — kilde
+            ✓ nettsiden din — kilde
           </motion.span>
         </motion.div>
 
