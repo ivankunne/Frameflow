@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
-import { JsonLd, organizationSchema, personSchema } from '@/components/JsonLd'
+import { JsonLd, personSchema } from '@/components/JsonLd'
 import OmOssClient from '@/components/OmOssClient'
-import { buildAlternates, ogLocale } from '@/lib/seo'
+import { buildAlternates, buildBreadcrumbSchema, HOME_CRUMB, ogLocale } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -41,20 +41,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.frameflow.no' },
-    { '@type': 'ListItem', position: 2, name: 'Om oss', item: 'https://www.frameflow.no/om-oss' },
-  ],
-}
-
-export default function OmOssPage() {
+export default async function OmOssPage({ params }: Props) {
+  const { locale } = await params
+  const breadcrumbSchema = buildBreadcrumbSchema(locale, [
+    HOME_CRUMB,
+    { name: 'Om oss', nameEn: 'About', noPath: '/om-oss', enPath: '/about' },
+  ])
   return (
     <>
       <JsonLd data={breadcrumbSchema} />
-      <JsonLd data={organizationSchema} />
       <JsonLd data={personSchema} />
       <OmOssClient />
     </>

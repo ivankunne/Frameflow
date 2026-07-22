@@ -1,6 +1,4 @@
-'use client'
-
-import { useTranslations } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 
 const logos: { name: string; weight: string }[] = [
   { name: 'Sportsbytte', weight: 'font-semibold' },
@@ -9,8 +7,8 @@ const logos: { name: string; weight: string }[] = [
   { name: 'Marbesa',    weight: 'font-extrabold tracking-tight' },
 ]
 
-export default function HomeLogoStrip() {
-  const t = useTranslations('home.logos')
+export default async function HomeLogoStrip() {
+  const t = await getTranslations('home.logos')
 
   return (
     <section className="py-12 bg-bg border-y border-border overflow-hidden">

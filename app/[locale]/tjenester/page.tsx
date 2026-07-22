@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { JsonLd } from '@/components/JsonLd'
 import TjenesterClient from './TjenesterClient'
-import { buildAlternates, ogLocale } from '@/lib/seo'
+import { buildAlternates, buildBreadcrumbSchema, HOME_CRUMB, SERVICES_CRUMB, ogLocale } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -31,21 +31,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.frameflow.no' },
-    { '@type': 'ListItem', position: 2, name: 'Tjenester', item: 'https://www.frameflow.no/tjenester' },
-  ],
-}
-
 const serviceListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   name: 'Tjenester – Frameflow Bergen',
   description: 'Digitale tjenester for bedrifter i Bergen: webdesign, SEO, AI automasjon, app utvikling, foto og videografi, sosiale medier og branding.',
-  numberOfItems: 8,
+  numberOfItems: 10,
   itemListElement: [
     {
       '@type': 'ListItem',
@@ -151,11 +142,38 @@ const serviceListSchema = {
         offers: { '@type': 'Offer', priceCurrency: 'NOK', priceSpecification: { '@type': 'PriceSpecification', minPrice: 8000 } },
       },
     },
+    {
+      '@type': 'ListItem',
+      position: 9,
+      item: {
+        '@type': 'Service',
+        name: 'Webflow-byrå i Bergen',
+        description: 'Design og utvikling av raske, SEO-optimaliserte Webflow-nettsider med et CMS du enkelt oppdaterer selv.',
+        url: 'https://www.frameflow.no/tjenester/webflow',
+        provider: { '@id': 'https://www.frameflow.no/#organization' },
+        areaServed: { '@type': 'City', name: 'Bergen' },
+        offers: { '@type': 'Offer', priceCurrency: 'NOK', priceSpecification: { '@type': 'PriceSpecification', minPrice: 15000 } },
+      },
+    },
+    {
+      '@type': 'ListItem',
+      position: 10,
+      item: {
+        '@type': 'Service',
+        name: 'AI SEO og Generative Engine Optimization',
+        description: 'Entitets-SEO, strukturert data og innholdsstrategi som gjør bedriften synlig og siterbar i ChatGPT, Perplexity, Gemini og Google AI Overviews.',
+        url: 'https://www.frameflow.no/tjenester/ai-seo',
+        provider: { '@id': 'https://www.frameflow.no/#organization' },
+        areaServed: { '@type': 'City', name: 'Bergen' },
+        offers: { '@type': 'Offer', priceCurrency: 'NOK', priceSpecification: { '@type': 'PriceSpecification', minPrice: 6500 } },
+      },
+    },
   ],
 }
 
 export default async function TjenesterPage({ params }: Props) {
-  await params
+  const { locale } = await params
+  const breadcrumbSchema = buildBreadcrumbSchema(locale, [HOME_CRUMB, SERVICES_CRUMB])
   return (
     <>
       <JsonLd data={breadcrumbSchema} />

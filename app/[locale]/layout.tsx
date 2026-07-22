@@ -14,6 +14,7 @@ import AvailabilityPill from '@/components/AvailabilityPill'
 import PageTransition from '@/components/PageTransition'
 import CursorFollower from '@/components/CursorFollower'
 import Providers from '@/components/Providers'
+import { JsonLd, organizationSchema, websiteSchema } from '@/components/JsonLd'
 
 const bricolage = Bricolage_Grotesque({
   subsets: ['latin'],
@@ -135,6 +136,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         />
       </head>
       <body suppressHydrationWarning>
+        <JsonLd data={organizationSchema} />
+        <JsonLd data={websiteSchema} />
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-P6W98WB3"

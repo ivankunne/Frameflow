@@ -233,6 +233,7 @@ export const seo: Record<'no' | 'en', ServiceContent> = {
       { title: 'Webdesign', href: '/tjenester/webdesign' },
       { title: 'Sosiale medier', href: '/tjenester/sosiale-medier' },
       { title: 'Branding', href: '/tjenester/branding' },
+      { title: 'AI SEO', href: '/tjenester/ai-seo' },
     ],
     pricingFrom: '4 500 kr/mnd',
     faqs: [
@@ -275,6 +276,7 @@ export const seo: Record<'no' | 'en', ServiceContent> = {
       { title: 'Web design', href: '/tjenester/webdesign' },
       { title: 'Social media', href: '/tjenester/sosiale-medier' },
       { title: 'Branding', href: '/tjenester/branding' },
+      { title: 'AI SEO', href: '/tjenester/ai-seo' },
     ],
     pricingFrom: 'NOK 4,500/mo',
     faqs: [
@@ -669,6 +671,7 @@ export const markedsforing: Record<'no' | 'en', ServiceContent> = {
       { title: 'SEO', href: '/tjenester/seo' },
       { title: 'Webdesign', href: '/tjenester/webdesign' },
       { title: 'Sosiale medier', href: '/tjenester/sosiale-medier' },
+      { title: 'AI SEO', href: '/tjenester/ai-seo' },
     ],
     pricingFrom: '4 500 kr/mnd',
     faqs: [
@@ -712,6 +715,7 @@ export const markedsforing: Record<'no' | 'en', ServiceContent> = {
       { title: 'SEO', href: '/tjenester/seo' },
       { title: 'Web design', href: '/tjenester/webdesign' },
       { title: 'Social media', href: '/tjenester/sosiale-medier' },
+      { title: 'AI SEO', href: '/tjenester/ai-seo' },
     ],
     pricingFrom: 'NOK 4,500/mo',
     faqs: [
@@ -758,6 +762,7 @@ export const aiAutomasjon: Record<'no' | 'en', ServiceContent> = {
       { title: 'Webdesign', href: '/tjenester/webdesign' },
       { title: 'App utvikling', href: '/tjenester/app-utvikling' },
       { title: 'SEO', href: '/tjenester/seo' },
+      { title: 'AI SEO', href: '/tjenester/ai-seo' },
     ],
     pricingFrom: '8 000 kr',
     faqs: [
@@ -801,6 +806,7 @@ export const aiAutomasjon: Record<'no' | 'en', ServiceContent> = {
       { title: 'Web design', href: '/tjenester/webdesign' },
       { title: 'App development', href: '/tjenester/app-utvikling' },
       { title: 'SEO', href: '/tjenester/seo' },
+      { title: 'AI SEO', href: '/tjenester/ai-seo' },
     ],
     pricingFrom: 'NOK 8,000',
     faqs: [

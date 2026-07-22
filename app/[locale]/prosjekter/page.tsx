@@ -3,7 +3,7 @@ import { getTranslations } from 'next-intl/server'
 import { JsonLd } from '@/components/JsonLd'
 import { projects } from '@/lib/data'
 import ProsjekterClient from './ProsjekterClient'
-import { buildAlternates, ogLocale } from '@/lib/seo'
+import { buildAlternates, buildBreadcrumbSchema, HOME_CRUMB, ogLocale } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -32,15 +32,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.frameflow.no' },
-    { '@type': 'ListItem', position: 2, name: 'Prosjekter', item: 'https://www.frameflow.no/prosjekter' },
-  ],
-}
-
 const portfolioSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
@@ -65,7 +56,11 @@ const portfolioSchema = {
 }
 
 export default async function ProsjekterPage({ params }: Props) {
-  await params
+  const { locale } = await params
+  const breadcrumbSchema = buildBreadcrumbSchema(locale, [
+    HOME_CRUMB,
+    { name: 'Prosjekter', nameEn: 'Projects', noPath: '/prosjekter', enPath: '/projects' },
+  ])
   return (
     <>
       <JsonLd data={breadcrumbSchema} />

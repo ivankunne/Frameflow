@@ -1,8 +1,11 @@
 export function JsonLd({ data }: { data: object }) {
+  // Escape </script> and HTML comment sequences so schema values can never
+  // prematurely close the tag or break out into raw markup.
+  const json = JSON.stringify(data).replace(/</g, '\\u003c')
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+      dangerouslySetInnerHTML={{ __html: json }}
     />
   )
 }
@@ -92,7 +95,7 @@ export const websiteSchema = {
   publisher: {
     '@id': 'https://www.frameflow.no/#organization',
   },
-  inLanguage: 'nb-NO',
+  inLanguage: ['nb-NO', 'en'],
   potentialAction: {
     '@type': 'SearchAction',
     target: {

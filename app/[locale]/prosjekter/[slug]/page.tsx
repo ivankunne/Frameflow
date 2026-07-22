@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import { JsonLd } from '@/components/JsonLd'
 import ProjectPageTemplate from '@/components/ProjectPageTemplate'
 import { getProject, projects } from '@/lib/data'
-import { buildAlternates, ogLocale } from '@/lib/seo'
+import { buildAlternates, buildBreadcrumbSchema, HOME_CRUMB, ogLocale } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
 
@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function ProjectPage({ params }: Props) {
-  const { slug } = await params
+  const { locale, slug } = await params
   const project = getProject(slug)
   if (!project) notFound()
 
@@ -63,15 +63,11 @@ export default async function ProjectPage({ params }: Props) {
     locationCreated: { '@type': 'Place', name: s.schemaLocation },
   }
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.frameflow.no' },
-      { '@type': 'ListItem', position: 2, name: 'Prosjekter', item: 'https://www.frameflow.no/prosjekter' },
-      { '@type': 'ListItem', position: 3, name: project.title, item: `https://www.frameflow.no/prosjekter/${slug}` },
-    ],
-  }
+  const breadcrumbSchema = buildBreadcrumbSchema(locale, [
+    HOME_CRUMB,
+    { name: 'Prosjekter', nameEn: 'Projects', noPath: '/prosjekter', enPath: '/projects' },
+    { name: project.title, nameEn: s?.titleEn ?? project.title, noPath: `/prosjekter/${slug}`, enPath: `/projects/${slug}` },
+  ])
 
   return (
     <>

@@ -3,7 +3,7 @@ import { aiSeo } from '@/lib/aiSeoContent'
 import ServicePageTemplate from '@/components/ServicePageTemplate'
 import AISeoSections from '@/components/AISeoSections'
 import { JsonLd } from '@/components/JsonLd'
-import { buildAlternates, ogLocale } from '@/lib/seo'
+import { buildAlternates, buildBreadcrumbSchema, HOME_CRUMB, SERVICES_CRUMB, ogLocale, schemaLanguage } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -31,41 +31,40 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  '@id': 'https://www.frameflow.no/tjenester/ai-seo#breadcrumb',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.frameflow.no' },
-    { '@type': 'ListItem', position: 2, name: 'Tjenester', item: 'https://www.frameflow.no/tjenester' },
-    { '@type': 'ListItem', position: 3, name: 'AI SEO', item: 'https://www.frameflow.no/tjenester/ai-seo' },
-  ],
-}
-
-const serviceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  '@id': 'https://www.frameflow.no/tjenester/ai-seo#service',
-  name: 'AI SEO og Generative Engine Optimization',
-  serviceType: 'AI Search Engine Optimization',
-  provider: { '@id': 'https://www.frameflow.no/#organization' },
-  description: 'Entitets-SEO, strukturert data og innholdsstrategi som gjør bedriften synlig og siterbar i ChatGPT, Perplexity, Gemini og Google AI Overviews.',
-  areaServed: { '@type': 'City', name: 'Bergen' },
-  offers: {
-    '@type': 'Offer',
-    priceCurrency: 'NOK',
-    priceSpecification: { '@type': 'PriceSpecification', priceCurrency: 'NOK', minPrice: 6500 },
-  },
-}
-
 export default async function AISeoPage({ params }: Props) {
   const { locale } = await params
   const lang = locale === 'en' ? 'en' : 'no'
   const c = aiSeo[lang]
 
+  const breadcrumbSchema = {
+    ...buildBreadcrumbSchema(locale, [
+      HOME_CRUMB,
+      SERVICES_CRUMB,
+      { name: 'AI SEO', nameEn: 'AI SEO', noPath: '/tjenester/ai-seo', enPath: '/services/ai-seo' },
+    ]),
+    '@id': 'https://www.frameflow.no/tjenester/ai-seo#breadcrumb',
+  }
+
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': 'https://www.frameflow.no/tjenester/ai-seo#service',
+    name: c.title,
+    serviceType: 'AI Search Engine Optimization',
+    provider: { '@id': 'https://www.frameflow.no/#organization' },
+    description: c.longDescription,
+    areaServed: { '@type': 'City', name: 'Bergen' },
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'NOK',
+      priceSpecification: { '@type': 'PriceSpecification', priceCurrency: 'NOK', minPrice: 6500 },
+    },
+  }
+
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
+    inLanguage: schemaLanguage(locale),
     mainEntity: c.faqs.map((f) => ({
       '@type': 'Question',
       name: f.q,
@@ -80,7 +79,7 @@ export default async function AISeoPage({ params }: Props) {
     url: c.meta.canonical,
     name: c.meta.title,
     description: c.meta.description,
-    inLanguage: lang === 'en' ? 'en' : 'nb-NO',
+    inLanguage: schemaLanguage(locale),
     isPartOf: { '@id': 'https://www.frameflow.no/#website' },
     about: { '@id': 'https://www.frameflow.no/tjenester/ai-seo#service' },
     breadcrumb: { '@id': 'https://www.frameflow.no/tjenester/ai-seo#breadcrumb' },

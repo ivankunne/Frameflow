@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import dynamic from 'next/dynamic'
-import { JsonLd, organizationSchema, websiteSchema, personSchema } from '@/components/JsonLd'
-import { buildAlternates, ogLocale } from '@/lib/seo'
+import { JsonLd, personSchema } from '@/components/JsonLd'
+import { buildAlternates, buildBreadcrumbSchema, HOME_CRUMB, ogLocale } from '@/lib/seo'
 
 import HomeHero from '@/components/sections/HomeHero'
 import HomeLogoStrip from '@/components/sections/HomeLogoStrip'
@@ -126,11 +126,11 @@ const faqSchema = {
 }
 
 export default async function HomePage({ params }: Props) {
-  await params // locale consumed by generateMetadata
+  const { locale } = await params
+  const breadcrumbSchema = buildBreadcrumbSchema(locale, [HOME_CRUMB])
   return (
     <>
-      <JsonLd data={organizationSchema} />
-      <JsonLd data={websiteSchema} />
+      <JsonLd data={breadcrumbSchema} />
       <JsonLd data={personSchema} />
       <JsonLd data={faqSchema} />
       <HomeHero />
