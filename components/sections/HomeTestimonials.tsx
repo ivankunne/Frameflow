@@ -12,7 +12,6 @@ export default function HomeTestimonials() {
   const testimonials = [
     { quote: t('t1'), name: t('t1Author'), jobTitle: t('t1JobTitle'), company: t('t1Role'), service: t('t1Service'), initials: 'TH' },
     { quote: t('t2'), name: t('t2Author'), jobTitle: t('t2JobTitle'), company: t('t2Role'), service: t('t2Service'), initials: 'LH' },
-    { quote: t('t3'), name: t('t3Author'), jobTitle: t('t3JobTitle'), company: t('t3Role'), service: t('t3Service'), initials: 'PG' },
   ]
 
   return (
@@ -31,7 +30,7 @@ export default function HomeTestimonials() {
           <p className="text-fg-muted max-w-xl leading-relaxed">{t('subtitle')}</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
           {testimonials.map((item, i) => (
             <motion.div
               key={item.name}

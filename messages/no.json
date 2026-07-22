@@ -119,11 +119,7 @@
       "horbitDesc": "Workflow-app som samler oppgaver, chat og dokumenter. 150+ team-medlemmer og 5000+ daglige interaksjoner.",
       "horbitStat": "5000+ daglige interaksjoner",
       "sportsbytteDesc": "Komplett webdesign og ny visuell identitet for Norges platform for kjøp, salg og bytte av brukt sportsutstyr.",
-      "sportsbytteStat": "Ny plattform live",
-      "marbesaDesc": "Luksus eiendomsnettside lansert på 3 uker. Genererte 12 kvalifiserte leads i første måned.",
-      "marbesaStat": "Premium luksusestetikk",
-      "gvDesc": "Nettside og sosiale medier som økte bookingrate med 67% i første kvartal etter lansering.",
-      "gvStat": "+67% bookingrate"
+      "sportsbytteStat": "Ny plattform live"
     },
     "testimonials": {
       "label": "Hva kundene sier",
@@ -135,15 +131,10 @@
       "t2": "Frameflow leverte en app som teamet vårt faktisk bruker hver dag. Fra idé til ferdig produkt var prosessen strukturert og smidig – Ivan var tett på hele veien, og det merkes i sluttproduktet.",
       "t2Author": "Lars H.",
       "t2Role": "h-orbit",
-      "t3": "Etter at Frameflow tok over nettsiden og sosiale medier merket vi en tydelig økning i bookingforespørsler. Innholdet er konsistent og profesjonelt, og Ivan er alltid tilgjengelig når vi trenger noe.",
-      "t3Author": "Pablo G.",
-      "t3Role": "GV Rentals",
       "t1JobTitle": "Daglig leder",
       "t1Service": "Web design + Branding",
       "t2JobTitle": "Medgründer",
-      "t2Service": "App utvikling",
-      "t3JobTitle": "Daglig leder",
-      "t3Service": "Web design + Sosiale medier"
+      "t2Service": "App utvikling"
     },
     "faq": {
       "label": "FAQ",
@@ -165,7 +156,7 @@
       "q4": "Hvor lang tid tar det å lage en nettside?",
       "a4": "En standard bedriftsnettside tar typisk 3–6 uker fra oppstart til lansering, avhengig av omfang og tilgang på innhold. Vi setter opp en klar tidsplan fra dag én.",
       "q5": "Jobber dere kun med bedrifter i Bergen?",
-      "a5": "Vi har base i Bergen og kjenner det lokale markedet godt, men jobber like gjerne med bedrifter i resten av Norge og internasjonalt – som med Marbesa Project 94 i Marbella.",
+      "a5": "Vi har base i Bergen og kjenner det lokale markedet godt, men jobber like gjerne med bedrifter i resten av Norge og internasjonalt – som med h-orbit i Amsterdam.",
       "q6": "Hvordan kommer vi i gang?",
       "a6": "Book en gratis 30-minutters samtale via kontaktskjemaet, e-post eller ring +47 99 85 37 81. Ingen forpliktelser – vi hører om prosjektet ditt og forteller deg ærlig hva vi kan gjøre.",
       "q7": "Er Frameflow et webbyrå i Bergen?",

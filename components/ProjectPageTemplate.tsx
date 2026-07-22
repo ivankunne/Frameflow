@@ -43,7 +43,7 @@ function ProjectBrowserMockup({ project, visible }: { project: Project; visible:
             transition={{ delay: 0.4 }}
             className="text-[10px] text-fg-muted font-mono"
           >
-            {slug === 'sportsbytte' ? 'sportsbytte.no' : slug === 'marbesa-project-94' ? 'marbesa-project-94.com' : slug === 'gv-rentals' ? 'gv-rentals.com' : slug === 'ho-orbit' ? 'h-orbit.nl' : `frameflow.no/${slug}`}
+            {slug === 'sportsbytte' ? 'sportsbytte.no' : slug === 'ho-orbit' ? 'h-orbit.nl' : `frameflow.no/${slug}`}
           </motion.span>
         </div>
       </div>
@@ -141,179 +141,6 @@ function ProjectBrowserMockup({ project, visible }: { project: Project; visible:
               <span className="text-[8px] font-semibold text-green-600">Ny plattform live</span>
             </div>
           </motion.div>
-        </div>
-      )}
-
-      {/* ── MARBESA: curtain wipe + center-expand gold rule + elevator cards ── */}
-      {slug === 'marbesa-project-94' && (
-        <div className="flex-1 h-full relative overflow-hidden" style={{ background: 'linear-gradient(160deg, #0d1117 0%, #0f1f2e 50%, #0a1520 100%)' }}>
-          {/* Scene fades in */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={visible ? { opacity: 1 } : {}}
-            transition={{ duration: 0.9, delay: 0.38 }}
-            className="absolute inset-0 p-6"
-          >
-            {/* Nav */}
-            <div className="flex items-center justify-between mb-8">
-              <div className="w-20 h-2.5 rounded-full" style={{ background: '#c9a96e' }} />
-              <div className="flex gap-3">
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="w-8 h-1.5 rounded-full bg-white/20" />
-                ))}
-              </div>
-            </div>
-
-            {/* Gold rule extends from center outward */}
-            <div className="relative h-0.5 w-16 mb-5 overflow-hidden">
-              <motion.div
-                initial={{ scaleX: 0 }}
-                animate={visible ? { scaleX: 1 } : {}}
-                transition={{ duration: 0.55, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                style={{ transformOrigin: 'center', background: 'linear-gradient(90deg, #c9a96e, #e8c97a)' }}
-                className="absolute inset-0 rounded-full"
-              />
-            </div>
-
-            {/* Heading — clip reveal */}
-            <div className="mb-6">
-              <div className="overflow-hidden mb-2">
-                <motion.div
-                  initial={{ y: '110%' }}
-                  animate={visible ? { y: '0%' } : {}}
-                  transition={{ duration: 0.48, delay: 0.68, ease: [0.22, 1, 0.36, 1] }}
-                  className="w-2/3 h-5 bg-white/80 rounded"
-                />
-              </div>
-              <div className="overflow-hidden">
-                <motion.div
-                  initial={{ y: '110%' }}
-                  animate={visible ? { y: '0%' } : {}}
-                  transition={{ duration: 0.4, delay: 0.78, ease: [0.22, 1, 0.36, 1] }}
-                  className="w-1/2 h-3.5 bg-white/45 rounded"
-                />
-              </div>
-            </div>
-
-            {/* CTA — spring pop */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.85 }}
-              animate={visible ? { opacity: 1, scale: 1 } : {}}
-              transition={{ type: 'spring', stiffness: 200, damping: 18, delay: 0.9 }}
-              className="w-28 h-8 rounded-lg flex items-center justify-center"
-              style={{ background: '#c9a96e' }}
-            >
-              <div className="w-14 h-1.5 rounded-full bg-white/70" />
-            </motion.div>
-          </motion.div>
-
-          {/* Property cards — elevator rise (y + scale together) */}
-          <div className="absolute bottom-4 left-6 right-6 grid grid-cols-3 gap-2">
-            {[0, 1, 2].map((i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 28, scale: 0.9 }}
-                animate={visible ? { opacity: 1, y: 0, scale: 1 } : {}}
-                transition={{ duration: 0.45, delay: 0.97 + i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-                className="rounded-lg p-2.5 border"
-                style={{ background: 'rgba(201,169,110,0.07)', borderColor: 'rgba(201,169,110,0.2)' }}
-              >
-                <div className="w-full h-1.5 rounded-full mb-1.5 bg-white/20" />
-                <div className="w-3/4 h-1 rounded-full bg-white/12" />
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Curtain wipe — reveals a hero image area at the right */}
-          <motion.div
-            initial={{ x: 0 }}
-            animate={visible ? { x: '100%' } : {}}
-            transition={{ duration: 0.65, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute top-12 right-6 w-32 bottom-20 rounded-lg z-10 pointer-events-none"
-            style={{ background: '#0a1520' }}
-          />
-          <div
-            className="absolute top-12 right-6 w-32 bottom-20 rounded-lg overflow-hidden"
-            style={{ background: 'linear-gradient(160deg, #1c1508 0%, #2e2010 60%, #1c1508 100%)' }}
-          >
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-12 h-1.5 rounded" style={{ background: 'rgba(201,169,110,0.3)' }} />
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* ── GV RENTALS: search focus + filters from right + diagonal listing entries ── */}
-      {slug === 'gv-rentals' && (
-        <div className="flex-1 bg-white p-5 h-full relative overflow-hidden">
-          {/* Nav */}
-          <motion.div
-            initial={{ opacity: 0, y: -8 }}
-            animate={visible ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.3, delay: 0.48 }}
-            className="flex items-center justify-between mb-4"
-          >
-            <div className="w-18 h-2.5 bg-accent/25 rounded-full" />
-            <div className="flex gap-2 items-center">
-              <div className="w-16 h-6 bg-bg-2 border border-border rounded-md" />
-              <div className="w-14 h-6 bg-accent rounded-md" />
-            </div>
-          </motion.div>
-
-          {/* Search bar — focus animation (border glow) */}
-          <motion.div
-            initial={{ opacity: 0, borderColor: 'rgba(33,114,181,0)' }}
-            animate={visible ? { opacity: 1, borderColor: ['rgba(33,114,181,0)', 'rgba(33,114,181,0.5)', 'rgba(33,114,181,0.25)'] } : {}}
-            transition={{ duration: 0.7, delay: 0.58, times: [0, 0.6, 1] }}
-            className="w-full h-9 bg-bg-2 border-2 rounded-lg mb-3 flex items-center px-3 gap-2"
-          >
-            <div className="w-3 h-3 rounded-full border-2 border-fg/20 shrink-0" />
-            <div className="w-1/3 h-1.5 bg-fg/10 rounded-full" />
-          </motion.div>
-
-          {/* Filter tags — slide from right */}
-          <div className="flex gap-2 mb-4 overflow-hidden">
-            {['Marbella', 'Villa', '2+ sov', 'Pool'].map((tag, i) => (
-              <motion.div
-                key={tag}
-                initial={{ opacity: 0, x: 18 }}
-                animate={visible ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.3, delay: 0.72 + i * 0.07 }}
-                className="shrink-0 h-6 px-2.5 rounded-full border border-border bg-bg-2 flex items-center"
-              >
-                <span className="text-[9px] text-fg-muted font-medium">{tag}</span>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Listing rows — diagonal entry (y + x together) */}
-          {[
-            { bg: '#e8f0f9', delay: 0.82 },
-            { bg: '#fef3c7', delay: 0.94 },
-            { bg: '#fce7f3', delay: 1.06 },
-          ].map((item, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, x: 16, y: 10 }}
-              animate={visible ? { opacity: 1, x: 0, y: 0 } : {}}
-              transition={{ duration: 0.38, delay: item.delay, ease: [0.22, 1, 0.36, 1] }}
-              className="flex items-center gap-3 mb-2.5"
-            >
-              <div className="w-12 h-10 rounded-lg shrink-0" style={{ background: item.bg }} />
-              <div className="flex-1">
-                <div className="w-3/4 h-2 bg-fg/15 rounded mb-1.5" />
-                <div className="w-1/2 h-1.5 bg-fg/8 rounded" />
-              </div>
-              {/* Availability dot — spring pop */}
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={visible ? { scale: 1 } : {}}
-                transition={{ type: 'spring', stiffness: 300, damping: 14, delay: item.delay + 0.15 }}
-                className="w-2 h-2 rounded-full shrink-0"
-                style={{ background: i === 1 ? '#94a3b8' : '#34C759' }}
-              />
-            </motion.div>
-          ))}
         </div>
       )}
 
@@ -480,7 +307,7 @@ function ProjectBrowserMockup({ project, visible }: { project: Project; visible:
         </div>
       )}
 
-      {slug !== 'sportsbytte' && slug !== 'marbesa-project-94' && slug !== 'gv-rentals' && slug !== 'ho-orbit' && (
+      {slug !== 'sportsbytte' && slug !== 'ho-orbit' && (
         <div className="flex-1 relative h-full">
           <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #f0f4fb 0%, #e8f0f9 50%, #f8f8f8 100%)' }} />
           <div className="absolute inset-0 flex items-center justify-center">

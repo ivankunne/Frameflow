@@ -194,19 +194,17 @@ function ProjectCard({
         onMouseLeave={() => setHovered(false)}
       >
         <div
-          className="h-52 w-full shrink-0 relative overflow-hidden p-3 transition-all duration-300"
+          className={`h-52 w-full shrink-0 relative overflow-hidden transition-all duration-300 ${project.image ? '' : 'p-3'}`}
           style={{ background: '#f5f5f5' }}
         >
           {project.image ? (
-            <div className="relative h-full w-full rounded-xl overflow-hidden">
-              <Image
-                src={project.image.src}
-                alt={project.image.alt}
-                fill
-                sizes="(min-width: 768px) 420px, 100vw"
-                className="object-cover object-left-top"
-              />
-            </div>
+            <Image
+              src={project.image.src}
+              alt={project.image.alt}
+              fill
+              sizes="(min-width: 768px) 420px, 100vw"
+              className="object-cover object-left-top"
+            />
           ) : Preview ? (
             <Preview visible={inView} />
           ) : (

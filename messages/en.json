@@ -119,11 +119,7 @@
       "horbitDesc": "Workflow app that brings together tasks, chat and documents. 150+ team members and 5,000+ daily interactions.",
       "horbitStat": "5,000+ daily interactions",
       "sportsbytteDesc": "Complete web design and new visual identity for Norway's platform for buying, selling and swapping used sports equipment.",
-      "sportsbytteStat": "New platform live",
-      "marbesaDesc": "Luxury property website launched in 3 weeks. Generated 12 qualified leads in the first month.",
-      "marbesaStat": "Premium luxury aesthetics",
-      "gvDesc": "Website and social media that increased the booking rate by 67% in the first quarter after launch.",
-      "gvStat": "+67% booking rate"
+      "sportsbytteStat": "New platform live"
     },
     "testimonials": {
       "label": "What clients say",
@@ -135,15 +131,10 @@
       "t2": "Frameflow delivered an app that our team actually uses every day. From idea to finished product, the process was structured and smooth — Ivan was closely involved throughout, and you can tell in the end result.",
       "t2Author": "Lars H.",
       "t2Role": "h-orbit",
-      "t3": "After Frameflow took over the website and social media we noticed a clear increase in booking enquiries. The content is consistent and professional, and Ivan is always available when we need something.",
-      "t3Author": "Pablo G.",
-      "t3Role": "GV Rentals",
       "t1JobTitle": "CEO",
       "t1Service": "Web design + Branding",
       "t2JobTitle": "Co-founder",
-      "t2Service": "App development",
-      "t3JobTitle": "CEO",
-      "t3Service": "Web design + Social media"
+      "t2Service": "App development"
     },
     "faq": {
       "label": "FAQ",
@@ -165,7 +156,7 @@
       "q4": "How long does it take to build a website?",
       "a4": "A standard business website typically takes 3–6 weeks from kickoff to launch, depending on scope and access to content. We set up a clear timeline from day one.",
       "q5": "Do you only work with businesses in Bergen?",
-      "a5": "We're based in Bergen and know the local market well, but we're equally happy working with businesses elsewhere in Norway and internationally — as with Marbesa Project 94 in Marbella.",
+      "a5": "We're based in Bergen and know the local market well, but we're equally happy working with businesses elsewhere in Norway and internationally — as with h-orbit in Amsterdam.",
       "q6": "How do we get started?",
       "a6": "Book a free 30-minute call via the contact form, email or call +47 99 85 37 81. No obligations — we'll hear about your project and tell you honestly what we can do.",
       "q7": "Is Frameflow a web agency in Bergen?",

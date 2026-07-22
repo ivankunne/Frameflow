@@ -66,7 +66,7 @@ const servicesData: Record<'no' | 'en', ServiceEntry[]> = {
       shortTitle: 'Sosiale medier', pricingFrom: 'Fra 3 500 kr/mnd',
       title: 'Sosiale medier som vokser, engasjerer og konverterer',
       description: 'Sosiale medier-håndtering for Bergen-bedrifter. Fra innholdsproduksjon til strategi og community management – konsekvent, autentisk og alltid på merkevaren din.',
-      metric: '+890', metricLabel: 'følgere på 3 måneder', metricSub: 'GV Rentals · Instagram',
+      metric: 'Konsekvent', metricLabel: 'vekst og engasjement', metricSub: 'Strategi, innhold og rapportering',
       includes: ['Innholdskalender', 'Instagram, TikTok, LinkedIn', 'Hashtag-strategi', 'Community management', 'Månedlig rapportering'],
     },
     {
@@ -149,7 +149,7 @@ const servicesData: Record<'no' | 'en', ServiceEntry[]> = {
       shortTitle: 'Social media', pricingFrom: 'From 3,500 kr/mo',
       title: 'Social media that grows, engages and converts',
       description: 'Social media management for Bergen businesses. From content production to strategy and community management – consistent, authentic and always on brand.',
-      metric: '+890', metricLabel: 'followers in 3 months', metricSub: 'GV Rentals · Instagram',
+      metric: 'Consistent', metricLabel: 'growth and engagement', metricSub: 'Strategy, content and reporting',
       includes: ['Content calendar', 'Instagram, TikTok, LinkedIn', 'Hashtag strategy', 'Community management', 'Monthly reporting'],
     },
     {

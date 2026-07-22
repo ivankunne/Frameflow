@@ -3,8 +3,6 @@ import { getTranslations } from 'next-intl/server'
 const logos: { name: string; weight: string }[] = [
   { name: 'Sportsbytte', weight: 'font-semibold' },
   { name: 'h-orbit',    weight: 'font-bold tracking-tight' },
-  { name: 'GV Rentals', weight: 'font-bold' },
-  { name: 'Marbesa',    weight: 'font-extrabold tracking-tight' },
 ]
 
 export default async function HomeLogoStrip() {

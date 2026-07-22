@@ -95,7 +95,7 @@ const faqSchema = {
       name: 'Jobber dere kun med bedrifter i Bergen?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Vi har base i Bergen og kjenner det lokale markedet godt, men jobber like gjerne med bedrifter i resten av Norge og internasjonalt – som med Marbesa Project 94 i Marbella.',
+        text: 'Vi har base i Bergen og kjenner det lokale markedet godt, men jobber like gjerne med bedrifter i resten av Norge og internasjonalt – som med h-orbit i Amsterdam.',
       },
     },
     {

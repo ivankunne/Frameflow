@@ -39,47 +39,6 @@ function SportsbyttePreview({ visible }: { visible: boolean }) {
   )
 }
 
-function MarbesaPreview({ visible }: { visible: boolean }) {
-  return (
-    <div className="h-36 rounded-lg overflow-hidden relative" style={{ background: 'linear-gradient(160deg, #12100e 0%, #1c1710 50%, #241d13 100%)' }}>
-      <div className="absolute inset-0 flex">
-        <div className="flex-1 p-3 flex flex-col justify-center gap-1.5">
-          <motion.div initial={{ opacity: 0, x: -10 }} animate={visible ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.35, delay: 0.32 }} className="w-8 h-1.5 rounded" style={{ background: '#c9a96e' }} />
-          <motion.div initial={{ opacity: 0, x: -10 }} animate={visible ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.3, delay: 0.44 }} className="w-20 h-3 bg-white/25 rounded" />
-          <motion.div initial={{ opacity: 0, x: -10 }} animate={visible ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.28, delay: 0.54 }} className="w-14 h-2.5 bg-white/15 rounded" />
-          <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={visible ? { opacity: 1, scale: 1 } : {}} transition={{ type: 'spring', stiffness: 200, damping: 16, delay: 0.68 }} className="w-14 h-5 rounded-md mt-1" style={{ background: '#c9a96e' }} />
-        </div>
-        <div className="w-24 m-2 rounded-md overflow-hidden flex-shrink-0 relative">
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(160deg, #2a2016 0%, #3d3020 50%, #2a2016 100%)' }} />
-          <motion.div initial={{ x: 0 }} animate={visible ? { x: '100%' } : {}} transition={{ duration: 0.55, delay: 0.5, ease: [0.22, 1, 0.36, 1] }} className="absolute inset-0 z-10" style={{ background: '#1c1710' }} />
-          <div className="relative h-full flex items-center justify-center z-0"><div className="text-center"><div className="w-12 h-1.5 mx-auto rounded mb-1.5" style={{ background: 'rgba(201,169,110,0.45)' }} /><div className="w-8 h-1 mx-auto rounded" style={{ background: 'rgba(201,169,110,0.25)' }} /></div></div>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-function GvRentalsPreview({ visible }: { visible: boolean }) {
-  const listings = [{ color: '#34C759', label: 'Villa Sol', avail: true }, { color: '#2172b5', label: 'Ocean View', avail: false }, { color: '#f59e0b', label: 'Casa Blanca', avail: true }]
-  return (
-    <div className="h-36 rounded-lg overflow-hidden relative bg-white border border-border/40">
-      <div className="absolute inset-0 p-2.5 flex flex-col gap-1.5">
-        <motion.div initial={{ opacity: 0, y: -6 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.28, delay: 0.3 }} className="flex items-center justify-between pb-1.5 border-b border-border/40">
-          <div className="w-14 h-2 bg-fg/20 rounded" />
-          <div className="flex gap-1"><div className="w-5 h-4 bg-bg-2 border border-border rounded text-[8px] flex items-center justify-center text-fg-muted">≡</div><div className="w-12 h-4 bg-accent rounded text-[8px] flex items-center justify-center text-white font-semibold">Book</div></div>
-        </motion.div>
-        {listings.map((item, i) => (
-          <motion.div key={item.label} initial={{ opacity: 0, x: 14 }} animate={visible ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.32, delay: 0.42 + i * 0.1 }} className="flex items-center gap-2 bg-bg-2/60 rounded-md px-2 py-1.5">
-            <div className="w-7 h-7 rounded shrink-0" style={{ background: `${item.color}22`, border: `1px solid ${item.color}28` }} />
-            <div className="flex-1"><div className="w-14 h-1.5 bg-fg/20 rounded mb-1" /><div className="w-10 h-1 bg-fg/10 rounded" /></div>
-            <motion.div initial={{ scale: 0 }} animate={visible ? { scale: 1 } : {}} transition={{ type: 'spring', stiffness: 280, damping: 14, delay: 0.65 + i * 0.1 }} className="w-2 h-2 rounded-full shrink-0" style={{ background: item.avail ? '#34C759' : '#94a3b8' }} />
-          </motion.div>
-        ))}
-      </div>
-    </div>
-  )
-}
-
 function HoOrbitPreview({ visible }: { visible: boolean }) {
   return (
     <div className="h-36 rounded-lg overflow-hidden relative bg-gradient-to-br from-cyan-900 to-cyan-800">
@@ -105,8 +64,6 @@ export default function HomeProjects() {
   const projects = [
     { slug: 'ho-orbit', title: 'h-orbit', description: t('horbitDesc'), tags: ['App utvikling', 'Branding', 'Full-stack'], location: 'Bergen, Norge', result: t('horbitStat'), color: '#06b6d4', Preview: HoOrbitPreview },
     { slug: 'sportsbytte', title: 'Sportsbytte', description: t('sportsbytteDesc'), tags: ['Web design', 'Branding', 'SEO'], location: 'Norge', result: t('sportsbytteStat'), color: '#16a34a', Preview: SportsbyttePreview },
-    { slug: 'marbesa-project-94', title: 'Marbesa Project 94', description: t('marbesaDesc'), tags: ['Web design', 'Branding'], location: 'Marbella, Spania', result: t('marbesaStat'), color: '#C8A882', Preview: MarbesaPreview },
-    { slug: 'gv-rentals', title: 'GV Rentals', description: t('gvDesc'), tags: ['Web design', 'Sosiale medier'], location: 'Marbella, Spania', result: t('gvStat'), color: '#34C759', Preview: GvRentalsPreview },
   ]
 
   return (
@@ -124,8 +81,8 @@ export default function HomeProjects() {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {projects.slice(0, 3).map(({ slug, title, description, tags, result, color, Preview }, i) => {
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
+          {projects.map(({ slug, title, description, tags, result, color, Preview }, i) => {
             const image = getProject(slug)?.image
             return (
             <motion.div key={slug} initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}>
