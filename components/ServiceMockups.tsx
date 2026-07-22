@@ -721,6 +721,78 @@ export function SEOMockup({ visible }: { visible: boolean }) {
   )
 }
 
+// ─── AI SEO: chat answer citing the brand as a source ─────────────────────
+export function AISEOMockup({ visible }: { visible: boolean }) {
+  const engines = [
+    { name: 'ChatGPT', cited: true },
+    { name: 'Perplexity', cited: true },
+    { name: 'Gemini', cited: true },
+    { name: 'Copilot', cited: false },
+  ]
+
+  return (
+    <div className="h-44 bg-white rounded-xl border border-border overflow-hidden shadow-card flex flex-col">
+      {/* Chat chrome */}
+      <div className="bg-bg-2 border-b border-border px-3 py-2 flex items-center gap-2 shrink-0">
+        <div className="flex gap-1 shrink-0">
+          <div className="w-2 h-2 rounded-full bg-[#ff5f57]" />
+          <div className="w-2 h-2 rounded-full bg-[#febc2e]" />
+          <div className="w-2 h-2 rounded-full bg-[#28c840]" />
+        </div>
+        <div className="flex-1 bg-white border border-border/60 rounded px-2 py-0.5">
+          <span className="text-[9px] text-fg-muted font-mono">beste markedsføringsbyrå i bergen?</span>
+        </div>
+      </div>
+
+      <div className="p-3 flex-1 flex flex-col gap-2 overflow-hidden">
+        {/* AI answer bubble */}
+        <motion.div
+          initial={{ opacity: 0, y: 8 }}
+          animate={visible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.35, delay: 0.3 }}
+          className="rounded-lg px-3 py-2"
+          style={{ background: '#f5f3ff', border: '1px solid #ddd6fe' }}
+        >
+          <div className="space-y-1 mb-1.5">
+            <div className="h-1.5 w-full bg-[#8b5cf6]/15 rounded" />
+            <div className="h-1.5 w-4/5 bg-[#8b5cf6]/15 rounded" />
+          </div>
+          <motion.span
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={visible ? { opacity: 1, scale: 1 } : {}}
+            transition={{ type: 'spring', stiffness: 220, damping: 16, delay: 0.7 }}
+            className="inline-flex items-center gap-1 text-[9px] font-semibold px-2 py-1 rounded-full"
+            style={{ background: '#ede9fe', color: '#6d28d9' }}
+          >
+            ✓ frameflow.no — kilde
+          </motion.span>
+        </motion.div>
+
+        {/* engine citation strip */}
+        <div className="grid grid-cols-4 gap-1.5 mt-auto">
+          {engines.map((e, i) => (
+            <motion.div
+              key={e.name}
+              initial={{ opacity: 0, y: 6 }}
+              animate={visible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.3, delay: 1.0 + i * 0.1 }}
+              className="rounded-md py-1 text-center"
+              style={{
+                background: e.cited ? '#f0fdf4' : '#f9fafb',
+                border: `1px solid ${e.cited ? '#bbf7d0' : '#e5e7eb'}`,
+              }}
+            >
+              <p className="text-[7px] font-semibold truncate px-1" style={{ color: e.cited ? '#16a34a' : '#9ca3af' }}>
+                {e.name}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
 // ─── Marketing: multi-channel dashboard ────────────────────────────────────
 export function MarketingMockup({ visible }: { visible: boolean }) {
   const channels = [

@@ -59,10 +59,21 @@ export default async function SosialeMedierPage({ params }: Props) {
   const lang = locale === 'en' ? 'en' : 'no'
   const c = sosialeMedier[lang]
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: c.faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  }
+
   return (
     <>
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={serviceSchema} />
+      <JsonLd data={faqSchema} />
       <ServicePageTemplate
         label={c.label}
         title={c.title}

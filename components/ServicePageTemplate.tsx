@@ -4,7 +4,7 @@ import { useRef, useState } from 'react'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
-import { WebMockup, CameraMockup, SocialMockup, BrandMockup, AppMockup, SEOMockup, AIMockup } from '@/components/ServiceMockups'
+import { WebMockup, CameraMockup, SocialMockup, BrandMockup, AppMockup, SEOMockup, AIMockup, AISEOMockup } from '@/components/ServiceMockups'
 
 interface ServicePageProps {
   label: string
@@ -14,9 +14,10 @@ interface ServicePageProps {
   includes: string[]
   process: { step: string; title: string; description: string }[]
   relatedServices: { title: string; href: string }[]
-  mockupType: 'web' | 'photo' | 'social' | 'brand' | 'app' | 'seo' | 'ai'
+  mockupType: 'web' | 'photo' | 'social' | 'brand' | 'app' | 'seo' | 'ai' | 'aiseo'
   pricingFrom?: string
   faqs?: { q: string; a: string }[]
+  children?: React.ReactNode
 }
 
 function PricingAccordion() {
@@ -97,6 +98,7 @@ function HeroMockup({ mockupType, visible }: { mockupType: string; visible: bool
   if (mockupType === 'app') return <AppMockup visible={visible} />
   if (mockupType === 'seo') return <SEOMockup visible={visible} />
   if (mockupType === 'ai') return <AIMockup visible={visible} />
+  if (mockupType === 'aiseo') return <AISEOMockup visible={visible} />
   return null
 }
 
@@ -111,6 +113,7 @@ export default function ServicePageTemplate({
   mockupType,
   pricingFrom,
   faqs,
+  children,
 }: ServicePageProps) {
   const t = useTranslations('serviceTemplate')
   const heroRef = useRef(null)
@@ -128,6 +131,7 @@ export default function ServicePageTemplate({
     app: t('badgeApp'),
     seo: t('badgeSeo'),
     ai: t('badgeAi'),
+    aiseo: t('badgeAiSeo'),
   }
 
   const badgeLabel = mockupBadgeLabels[mockupType] ?? 'Frameflow'
@@ -241,6 +245,8 @@ export default function ServicePageTemplate({
           </div>
         </div>
       </section>
+
+      {children}
 
       {/* Content */}
       <section ref={contentRef} className="py-14 md:py-20 lg:py-24 px-6 lg:px-8 bg-bg-2">

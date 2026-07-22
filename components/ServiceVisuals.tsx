@@ -534,6 +534,115 @@ export function AIVisual({ visible }: { visible: boolean }) {
   )
 }
 
+// ── 09 AI SEO — AI Citation Dashboard ─────────────────────────────────────
+export function AISeoVisual({ visible }: { visible: boolean }) {
+  const engines = [
+    { name: 'ChatGPT', status: 'Sitert', cited: true, delay: 0.62 },
+    { name: 'Perplexity', status: 'Sitert', cited: true, delay: 0.72 },
+    { name: 'Google AI Overview', status: 'Sitert', cited: true, delay: 0.82 },
+    { name: 'Gemini', status: 'Under vurdering', cited: false, delay: 0.92 },
+  ]
+  const bars = [8, 10, 14, 12, 18, 22, 28, 34, 40, 46, 54, 62]
+
+  return (
+    <div
+      className="h-full w-full rounded-xl overflow-hidden flex flex-col"
+      style={{ background: '#ffffff', border: '1px solid #e5e7eb' }}
+    >
+      {/* header */}
+      <div
+        className="px-5 pt-4 pb-3 flex items-center justify-between shrink-0"
+        style={{ borderBottom: '1px solid rgba(0,0,0,0.06)' }}
+      >
+        <span className="text-[9px] font-bold uppercase tracking-widest" style={{ color: '#9ca3af' }}>
+          AI-synlighet · Bergen
+        </span>
+        <motion.span
+          initial={{ opacity: 0 }}
+          animate={visible ? { opacity: 1 } : {}}
+          transition={{ delay: 0.3 }}
+          className="text-[8px] font-semibold px-2 py-0.5 rounded-full"
+          style={{ background: '#ccfbf1', color: '#0d9488' }}
+        >
+          ↑ Sitert
+        </motion.span>
+      </div>
+
+      {/* big number */}
+      <div className="px-5 pt-4 pb-2 shrink-0">
+        <p className="text-[8px] font-semibold uppercase tracking-widest mb-1.5" style={{ color: '#9ca3af' }}>
+          AI-siteringer denne måneden
+        </p>
+        <div className="flex items-end gap-2">
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={visible ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.4, delay: 0.38 }}
+            className="font-bold tabular-nums leading-none"
+            style={{ fontSize: 36, color: '#0d1f3c', fontFamily: 'var(--font-bricolage)', letterSpacing: '-0.03em' }}
+          >
+            3/4
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={visible ? { opacity: 1 } : {}}
+            transition={{ delay: 0.55 }}
+            className="pb-1"
+          >
+            <span className="text-[11px] font-bold" style={{ color: '#0d9488' }}>AI-motorer</span>
+            <span className="text-[9px] ml-1" style={{ color: '#9ca3af' }}>siterer siden aktivt</span>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* sparkline */}
+      <div className="px-5 pb-3 flex items-end gap-px shrink-0" style={{ height: 32 }}>
+        {bars.map((h, i) => (
+          <motion.div
+            key={i}
+            initial={{ scaleY: 0 }}
+            animate={visible ? { scaleY: 1 } : {}}
+            transition={{ duration: 0.25, delay: 0.5 + i * 0.03, ease: 'easeOut' }}
+            style={{
+              flex: 1,
+              height: `${h}%`,
+              transformOrigin: 'bottom',
+              background: `rgba(13,148,136,${0.12 + (h / 100) * 0.55})`,
+              borderRadius: '2px 2px 0 0',
+            }}
+          />
+        ))}
+      </div>
+
+      {/* engine rows */}
+      <div className="flex-1 px-4 pb-4 flex flex-col gap-1.5 justify-end">
+        {engines.map((e) => (
+          <motion.div
+            key={e.name}
+            initial={{ opacity: 0, x: -8 }}
+            animate={visible ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.28, delay: e.delay }}
+            className="flex items-center gap-2.5 px-3 py-1.5 rounded-lg"
+            style={{ background: '#f9fafb', border: '1px solid #e5e7eb' }}
+          >
+            <div
+              className="w-6 h-6 rounded-md flex items-center justify-center shrink-0 font-bold text-[10px]"
+              style={{
+                background: e.cited ? '#ccfbf1' : '#f3f4f6',
+                color: e.cited ? '#0d9488' : '#9ca3af',
+              }}
+            >
+              {e.cited ? '✓' : '···'}
+            </div>
+            <span className="text-[9px] font-medium flex-1 truncate" style={{ color: '#374151' }}>{e.name}</span>
+            <span className="text-[8px] font-bold shrink-0" style={{ color: e.cited ? '#0d9488' : '#9ca3af' }}>{e.status}</span>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 // ── 04 Markedsføring — Multi-channel Campaign Dashboard ──────────────────
 export function MarketingVisual({ visible }: { visible: boolean }) {
   const channels = [
