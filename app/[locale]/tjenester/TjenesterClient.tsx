@@ -34,7 +34,7 @@ const servicesData: Record<'no' | 'en', ServiceEntry[]> = {
       includes: ['Responsivt design', 'SEO-optimalisering', 'Core Web Vitals', 'CMS-integrasjon', 'Analytics-oppsett'],
     },
     {
-      number: '02', visual: 'app', accentHex: '#06b6d4',
+      number: '02', visual: 'app', accentHex: '#155e75',
       href: '/tjenester/app-utvikling',
       shortTitle: 'App utvikling', pricingFrom: 'Fra 45 000 kr',
       title: 'Apper som løser reelle problemer',
@@ -43,7 +43,7 @@ const servicesData: Record<'no' | 'en', ServiceEntry[]> = {
       includes: ['Full-stack utvikling', 'API design og integrasjon', 'Database design', 'Responsiv design', 'Testing og kvalitetssikring', 'Deployment og hosting'],
     },
     {
-      number: '03', visual: 'camera', accentHex: '#c2410c',
+      number: '03', visual: 'camera', accentHex: '#9a3412',
       href: '/tjenester/foto-og-videografi',
       shortTitle: 'Foto og videografi', pricingFrom: 'Fra 4 500 kr',
       title: 'Innhold som stopper scrollingen og selger',
@@ -52,7 +52,7 @@ const servicesData: Record<'no' | 'en', ServiceEntry[]> = {
       includes: ['Produktfotografering', 'Video for sosiale medier', 'Reels og TikTok', 'Redigering', 'Alle formater'],
     },
     {
-      number: '04', visual: 'marketing', accentHex: '#d97706',
+      number: '04', visual: 'marketing', accentHex: '#92400e',
       href: '/tjenester/markedsforing',
       shortTitle: 'Markedsføring', pricingFrom: 'Fra 4 500 kr/mnd',
       title: 'Markedsføringsbyrå Bergen – ett byrå, alle kanaler',
@@ -79,7 +79,7 @@ const servicesData: Record<'no' | 'en', ServiceEntry[]> = {
       includes: ['Logo og identitet', 'Fargepalett og typografi', 'Brand guidelines', 'Visittkort', 'Digitale maler'],
     },
     {
-      number: '07', visual: 'seo', accentHex: '#16a34a',
+      number: '07', visual: 'seo', accentHex: '#166534',
       href: '/tjenester/seo',
       shortTitle: 'SEO', pricingFrom: 'Fra 4 500 kr/mnd',
       title: 'SEO som gir deg kunder fra Google',
@@ -88,7 +88,7 @@ const servicesData: Record<'no' | 'en', ServiceEntry[]> = {
       includes: ['Teknisk SEO-revisjon', 'Lokal SEO Bergen', 'Søkeordsanalyse', 'Innholdsoptimalisering', 'Google Search Console'],
     },
     {
-      number: '08', visual: 'ai', accentHex: '#6366f1',
+      number: '08', visual: 'ai', accentHex: '#4f46e5',
       href: '/tjenester/ai-automasjon',
       shortTitle: 'AI Automasjon', pricingFrom: 'Fra 8 000 kr',
       title: 'Automasjon som jobber mens du sover',
@@ -97,7 +97,7 @@ const servicesData: Record<'no' | 'en', ServiceEntry[]> = {
       includes: ['Automatisk henvendelseshåndtering', 'AI-chatbot 24/7', 'Lead-kvalifisering', 'CRM-integrasjon', 'E-postsekvenser', 'Make / n8n / Zapier'],
     },
     {
-      number: '09', visual: 'aiseo', accentHex: '#0d9488',
+      number: '09', visual: 'aiseo', accentHex: '#115e59',
       href: '/tjenester/ai-seo',
       shortTitle: 'AI SEO', pricingFrom: 'Fra 6 500 kr/mnd',
       title: 'Bli merkevaren AI-søkemotorene anbefaler',
@@ -117,7 +117,7 @@ const servicesData: Record<'no' | 'en', ServiceEntry[]> = {
       includes: ['Responsive design', 'SEO optimisation', 'Core Web Vitals', 'CMS integration', 'Analytics setup'],
     },
     {
-      number: '02', visual: 'app', accentHex: '#06b6d4',
+      number: '02', visual: 'app', accentHex: '#155e75',
       href: '/tjenester/app-utvikling',
       shortTitle: 'App development', pricingFrom: 'From 45,000 kr',
       title: 'Apps that solve real problems',
@@ -126,7 +126,7 @@ const servicesData: Record<'no' | 'en', ServiceEntry[]> = {
       includes: ['Full-stack development', 'API design and integration', 'Database design', 'Responsive design', 'Testing and QA', 'Deployment and hosting'],
     },
     {
-      number: '03', visual: 'camera', accentHex: '#c2410c',
+      number: '03', visual: 'camera', accentHex: '#9a3412',
       href: '/tjenester/foto-og-videografi',
       shortTitle: 'Photo & video', pricingFrom: 'From 4,500 kr',
       title: 'Content that stops the scroll and sells',
@@ -135,7 +135,7 @@ const servicesData: Record<'no' | 'en', ServiceEntry[]> = {
       includes: ['Product photography', 'Video for social media', 'Reels and TikTok', 'Editing', 'All formats'],
     },
     {
-      number: '04', visual: 'marketing', accentHex: '#d97706',
+      number: '04', visual: 'marketing', accentHex: '#92400e',
       href: '/tjenester/markedsforing',
       shortTitle: 'Marketing', pricingFrom: 'From 4,500 kr/mo',
       title: 'Marketing agency Bergen – one agency, all channels',
@@ -162,7 +162,7 @@ const servicesData: Record<'no' | 'en', ServiceEntry[]> = {
       includes: ['Logo and identity', 'Colour palette and typography', 'Brand guidelines', 'Business cards', 'Digital templates'],
     },
     {
-      number: '07', visual: 'seo', accentHex: '#16a34a',
+      number: '07', visual: 'seo', accentHex: '#166534',
       href: '/tjenester/seo',
       shortTitle: 'SEO', pricingFrom: 'From 4,500 kr/mo',
       title: 'SEO that brings you customers from Google',
@@ -171,7 +171,7 @@ const servicesData: Record<'no' | 'en', ServiceEntry[]> = {
       includes: ['Technical SEO audit', 'Local SEO Bergen', 'Keyword analysis', 'Content optimisation', 'Google Search Console'],
     },
     {
-      number: '08', visual: 'ai', accentHex: '#6366f1',
+      number: '08', visual: 'ai', accentHex: '#4f46e5',
       href: '/tjenester/ai-automasjon',
       shortTitle: 'AI Automation', pricingFrom: 'From 8,000 kr',
       title: 'Automation that works while you sleep',
@@ -180,7 +180,7 @@ const servicesData: Record<'no' | 'en', ServiceEntry[]> = {
       includes: ['Automatic enquiry handling', 'AI chatbot 24/7', 'Lead qualification', 'CRM integration', 'Email sequences', 'Make / n8n / Zapier'],
     },
     {
-      number: '09', visual: 'aiseo', accentHex: '#0d9488',
+      number: '09', visual: 'aiseo', accentHex: '#115e59',
       href: '/tjenester/ai-seo',
       shortTitle: 'AI SEO', pricingFrom: 'From NOK 6,500/mo',
       title: 'Become the brand AI search engines recommend',
@@ -345,6 +345,7 @@ function ServiceSection({ service, index, readMoreLabel }: { service: ServiceEnt
     <section ref={ref} className={`relative py-16 md:py-24 lg:py-32 px-6 lg:px-8 overflow-hidden ${isEven ? 'bg-bg-2' : 'bg-white'}`}>
       <div
         className="absolute -bottom-8 right-0 select-none pointer-events-none"
+        aria-hidden="true"
         style={{
           fontFamily: 'var(--font-bricolage)',
           fontSize: 'clamp(100px, 18vw, 220px)',
@@ -404,7 +405,7 @@ function ServiceSection({ service, index, readMoreLabel }: { service: ServiceEnt
             <Link
               href={service.href as any}
               className="inline-flex items-center gap-2 text-sm font-semibold px-6 py-3 rounded-lg transition-all duration-200 min-h-[44px] bg-white border border-border hover:border-accent hover:text-accent shadow-card group"
-              style={{ color: service.accentHex + 'cc' }}
+              style={{ color: service.accentHex }}
             >
               {readMoreLabel} {service.shortTitle.toLowerCase()}
               <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>

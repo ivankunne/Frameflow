@@ -498,7 +498,7 @@ export function AppMockup({ visible }: { visible: boolean }) {
         initial={{ opacity: 0, y: -8 }}
         animate={visible ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.35, delay: 0.2 }}
-        className="bg-gradient-to-r from-cyan-600 to-cyan-500 px-3.5 py-2.5 text-white flex items-center justify-between shrink-0"
+        className="bg-gradient-to-r from-cyan-800 to-cyan-900 px-3.5 py-2.5 text-white flex items-center justify-between shrink-0"
       >
         <div className="flex items-center gap-2">
           <div className="w-5 h-5 rounded-md bg-cyan-400 flex items-center justify-center text-[7px] font-bold text-cyan-900">
@@ -572,9 +572,9 @@ export function AppMockup({ visible }: { visible: boolean }) {
 // ─── 07 AI Automasjon: workflow pipeline ──────────────────────────────────
 export function AIMockup({ visible }: { visible: boolean }) {
   const steps = [
-    { label: 'Ny henvendelse mottatt', color: '#6366f1', bg: '#eef2ff', border: '#c7d2fe', icon: '↓' },
-    { label: 'AI behandler og svarer', color: '#8b5cf6', bg: '#f5f3ff', border: '#ddd6fe', icon: '◆' },
-    { label: 'Svar sendt · CRM oppdatert', color: '#16a34a', bg: '#f0fdf4', border: '#bbf7d0', icon: '✓' },
+    { label: 'Ny henvendelse mottatt', color: '#4f46e5', bg: '#eef2ff', border: '#c7d2fe', icon: '↓' },
+    { label: 'AI behandler og svarer', color: '#7c3aed', bg: '#f5f3ff', border: '#ddd6fe', icon: '◆' },
+    { label: 'Svar sendt · CRM oppdatert', color: '#166534', bg: '#f0fdf4', border: '#bbf7d0', icon: '✓' },
   ]
 
   return (
@@ -640,7 +640,7 @@ export function AIMockup({ visible }: { visible: boolean }) {
           animate={visible ? { opacity: 1 } : {}}
           transition={{ delay: 1.2 }}
           className="text-[8px] font-semibold"
-          style={{ color: '#16a34a' }}
+          style={{ color: '#166534' }}
         >
           0 manuelt ✓
         </motion.span>
@@ -686,7 +686,7 @@ export function SEOMockup({ visible }: { visible: boolean }) {
               <span className="text-[8px] font-bold" style={{ color: r.highlight ? '#2172b5' : '#9ca3af' }}>#{r.rank}</span>
               <span className="text-[8px] text-fg-muted truncate">{r.url}</span>
               {r.highlight && (
-                <span className="ml-auto text-[7px] font-bold px-1.5 py-0.5 rounded" style={{ background: '#dcfce7', color: '#16a34a' }}>
+                <span className="ml-auto text-[7px] font-bold px-1.5 py-0.5 rounded" style={{ background: '#dcfce7', color: '#166534' }}>
                   Din side ↑
                 </span>
               )}
@@ -790,7 +790,7 @@ export function AISEOMockup({ visible }: { visible: boolean }) {
                 border: `1px solid ${e.cited ? '#bbf7d0' : '#e5e7eb'}`,
               }}
             >
-              <p className="text-[7px] font-semibold truncate px-1" style={{ color: e.cited ? '#16a34a' : '#9ca3af' }}>
+              <p className="text-[7px] font-semibold truncate px-1" style={{ color: e.cited ? '#166534' : '#9ca3af' }}>
                 {e.name}
               </p>
             </motion.div>
@@ -805,9 +805,9 @@ export function AISEOMockup({ visible }: { visible: boolean }) {
 export function MarketingMockup({ visible }: { visible: boolean }) {
   const channels = [
     { label: 'Nettside', value: '+140%', color: '#2172b5' },
-    { label: 'SEO', value: '#1', color: '#16a34a' },
+    { label: 'SEO', value: '#1', color: '#166534' },
     { label: 'Sosiale', value: '+890', color: '#7c3aed' },
-    { label: 'Branding', value: '100%', color: '#d97706' },
+    { label: 'Branding', value: '100%', color: '#92400e' },
   ]
   const bars = [30, 45, 38, 55, 50, 68, 62, 78, 72, 90]
 
@@ -815,7 +815,7 @@ export function MarketingMockup({ visible }: { visible: boolean }) {
     <div className="bg-white rounded-xl border border-border overflow-hidden shadow-card">
       <div className="bg-bg-2 border-b border-border px-3 py-2 flex items-center justify-between">
         <span className="text-[9px] font-semibold text-fg-muted">Frameflow · Bergen · Alle kanaler</span>
-        <span className="text-[8px] font-bold px-1.5 py-0.5 rounded" style={{ background: '#dcfce7', color: '#16a34a' }}>Live</span>
+        <span className="text-[8px] font-bold px-1.5 py-0.5 rounded" style={{ background: '#dcfce7', color: '#166534' }}>Live</span>
       </div>
 
       <div className="grid grid-cols-4 gap-1.5 px-3 pt-3">

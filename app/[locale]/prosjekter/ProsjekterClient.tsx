@@ -291,7 +291,7 @@ function ProjectCard({
               className="flex items-center gap-2.5 rounded-xl px-4 py-3 mb-6"
               style={{ background: meta.accent + '0d', border: `1px solid ${meta.accent}20` }}
             >
-              <span className="text-base" style={{ color: '#22c55e' }}>↑</span>
+              <span className="text-base" style={{ color: '#15803d' }}>↑</span>
               <span className="text-sm font-medium" style={{ color: meta.accent }}>
                 {firstResult}
               </span>
