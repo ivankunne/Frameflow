@@ -43,7 +43,7 @@ function ProjectBrowserMockup({ project, visible }: { project: Project; visible:
             transition={{ delay: 0.4 }}
             className="text-[10px] text-fg-muted font-mono"
           >
-            {slug === 'sportsbytte' ? 'sportsbytte.no' : slug === 'ho-orbit' ? 'h-orbit.nl' : `frameflow.no/${slug}`}
+            {slug === 'sportsbytte' ? 'sportsbytte.no' : slug === 'h-orbit' ? 'h-orbit.nl' : `frameflow.no/${slug}`}
           </motion.span>
         </div>
       </div>
@@ -145,7 +145,7 @@ function ProjectBrowserMockup({ project, visible }: { project: Project; visible:
       )}
 
       {/* ── H-ORBIT: dark music platform — waveform + artist cards + floating player ── */}
-      {slug === 'ho-orbit' && (
+      {slug === 'h-orbit' && (
         <div className="flex-1 h-full relative overflow-hidden" style={{ background: 'linear-gradient(155deg, #08060f 0%, #110d20 55%, #080511 100%)' }}>
           <motion.div
             initial={{ opacity: 0 }}
@@ -307,7 +307,7 @@ function ProjectBrowserMockup({ project, visible }: { project: Project; visible:
         </div>
       )}
 
-      {slug !== 'sportsbytte' && slug !== 'ho-orbit' && (
+      {slug !== 'sportsbytte' && slug !== 'h-orbit' && (
         <div className="flex-1 relative h-full">
           <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #f0f4fb 0%, #e8f0f9 50%, #f8f8f8 100%)' }} />
           <div className="absolute inset-0 flex items-center justify-center">

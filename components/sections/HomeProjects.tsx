@@ -62,7 +62,7 @@ export default function HomeProjects() {
   const t = useTranslations('home.projects')
 
   const projects = [
-    { slug: 'ho-orbit', title: 'h-orbit', description: t('horbitDesc'), tags: ['App utvikling', 'Branding', 'Full-stack'], location: 'Bergen, Norge', result: t('horbitStat'), color: '#06b6d4', Preview: HoOrbitPreview },
+    { slug: 'h-orbit', title: 'h-orbit', description: t('horbitDesc'), tags: ['App utvikling', 'Branding', 'Full-stack'], location: 'Bergen, Norge', result: t('horbitStat'), color: '#06b6d4', Preview: HoOrbitPreview },
     { slug: 'sportsbytte', title: 'Sportsbytte', description: t('sportsbytteDesc'), tags: ['Web design', 'Branding', 'SEO'], location: 'Norge', result: t('sportsbytteStat'), color: '#16a34a', Preview: SportsbyttePreview },
   ]
 
@@ -86,7 +86,7 @@ export default function HomeProjects() {
             const image = getProject(slug)?.image
             return (
             <motion.div key={slug} initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}>
-              <Link href={`/prosjekter/${slug}` as any} className="group block bg-white border border-border rounded-2xl p-6 hover:border-accent transition-all duration-250 hover:shadow-blue-sm h-full">
+              <Link href={{ pathname: '/prosjekter/[slug]', params: { slug } }} className="group block bg-white border border-border rounded-2xl p-6 hover:border-accent transition-all duration-250 hover:shadow-blue-sm h-full">
                 <div className="mb-6">
                   {image ? (
                     <div className="relative h-56 sm:h-64 lg:h-72 w-full rounded-xl overflow-hidden">

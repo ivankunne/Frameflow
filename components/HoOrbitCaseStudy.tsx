@@ -8,7 +8,7 @@ import { getProject } from '@/lib/data'
 export function HoOrbitCaseStudy() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-80px' })
-  const project = getProject('ho-orbit')
+  const project = getProject('h-orbit')
 
   return (
     <section ref={ref} className="py-16 md:py-24 lg:py-32 px-6 lg:px-8 bg-white relative overflow-hidden">

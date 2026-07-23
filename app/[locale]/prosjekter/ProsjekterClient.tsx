@@ -203,7 +203,7 @@ function ProjectCard({
   return (
     <div ref={cardRef}>
       <Link
-        href={`/prosjekter/${project.slug}` as any}
+        href={{ pathname: '/prosjekter/[slug]', params: { slug: project.slug } }}
         className="group flex flex-col bg-white border border-border rounded-2xl overflow-hidden hover:border-accent hover:shadow-blue-sm transition-all duration-300 shadow-card h-full"
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}

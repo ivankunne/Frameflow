@@ -83,13 +83,25 @@ const nextConfig: NextConfig = {
       { source: '/services/:path*', destination: '/tjenester', permanent: true },
       { source: '/case-studies', destination: '/prosjekter', permanent: true },
       { source: '/case-studies/sportsbytte', destination: '/prosjekter/sportsbytte', permanent: true },
-      { source: '/case-studies/:path*', destination: '/prosjekter', permanent: true },
-      // Marbesa Project 94 and GV Rentals case studies were removed (2026-07-22) — send old links to the listing
-      { source: '/prosjekter/marbesa-project-94', destination: '/prosjekter', permanent: true },
-      { source: '/prosjekter/gv-rentals', destination: '/prosjekter', permanent: true },
-      { source: '/en/projects/marbesa-project-94', destination: '/en/projects', permanent: true },
-      { source: '/en/projects/gv-rentals', destination: '/en/projects', permanent: true },
+      // The negative lookahead excludes removed projects with no equivalent content
+      // (artadent, bergen-bakeri, nordic-fit, marbesa-project-94/marbesa-94, gv-rentals)
+      // so those requests fall through to middleware.ts, which returns a real 410 Gone
+      // instead of this catch-all's soft-404 redirect to the listing page. next.config
+      // redirects are matched before middleware runs, so they must be excluded here too.
+      { source: '/case-studies/:slug((?!artadent|bergen-bakeri|nordic-fit|marbesa-project-94|marbesa-94|gv-rentals).*)', destination: '/prosjekter', permanent: true },
+      // 'ho-orbit' was a typo for the h-orbit brand — slug corrected 2026-07-23
+      { source: '/prosjekter/ho-orbit', destination: '/prosjekter/h-orbit', permanent: true },
+      { source: '/en/projects/ho-orbit', destination: '/en/projects/h-orbit', permanent: true },
+      // Evergreen pricing guide's slug had a baked-in year — dropped 2026-07-23 so it
+      // doesn't look stale every January; the year now only lives in the page title.
+      { source: '/blogg/nettside-pris-bergen-2025', destination: '/blogg/nettside-pris-bergen', permanent: true },
+      { source: '/blogg/nettside-pris-bergen-2026', destination: '/blogg/nettside-pris-bergen', permanent: true },
+      { source: '/en/blog/nettside-pris-bergen-2025', destination: '/en/blog/nettside-pris-bergen', permanent: true },
+      { source: '/en/blog/nettside-pris-bergen-2026', destination: '/en/blog/nettside-pris-bergen', permanent: true },
       { source: '/contact', destination: '/kontakt', permanent: true },
+      { source: '/about-us', destination: '/om-oss', permanent: true },
+      { source: '/privacy-policy', destination: '/personvern', permanent: true },
+      { source: '/blog', destination: '/blogg', permanent: true },
       { source: '/project-configurator', destination: '/tilbud', permanent: true },
       { source: '/meeting-scheduler', destination: '/kontakt', permanent: true },
       { source: '/frameflow-advisor', destination: '/tilbud', permanent: true },

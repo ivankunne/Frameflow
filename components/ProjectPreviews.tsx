@@ -111,5 +111,5 @@ export function HoOrbitPreview({ visible }: { visible: boolean }) {
 import type React from 'react'
 export const projectPreviews: Record<string, React.ComponentType<{ visible: boolean }>> = {
   'sportsbytte':        SportsbyttePreview,
-  'ho-orbit':           HoOrbitPreview,
+  'h-orbit':            HoOrbitPreview,
 }
