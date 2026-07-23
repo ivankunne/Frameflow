@@ -152,7 +152,7 @@ export default function KontaktClient() {
                 <p className="text-sm font-semibold text-fg">Ivan Kunne</p>
                 <p className="text-xs text-fg-muted">{t('ivanTitle')} · <a href="tel:+4799853781" className="hover:text-accent transition-colors">+47 99 85 37 81</a> · <a href="mailto:ivan@frameflow.no" className="hover:text-accent transition-colors">ivan@frameflow.no</a></p>
               </div>
-              <span className="hidden sm:flex items-center gap-1.5 text-xs text-green-600 font-medium bg-green-50 border border-green-100 px-2.5 py-1 rounded-full ml-2">
+              <span className="hidden sm:flex items-center gap-1.5 text-xs text-green-700 font-medium bg-green-50 border border-green-100 px-2.5 py-1 rounded-full ml-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
                 {t('ivanReply')}
               </span>

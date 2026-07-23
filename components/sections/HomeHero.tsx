@@ -127,7 +127,7 @@ export default function HomeHero() {
                   ))}
                 </div>
                 <div className="flex items-baseline gap-1">
-                  <span className="text-sm font-bold text-green-600">Live</span>
+                  <span className="text-sm font-bold text-green-700">Live</span>
                   <span className="text-[9px] text-fg-muted">ny plattform</span>
                 </div>
               </div>
@@ -139,7 +139,7 @@ export default function HomeHero() {
                 <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-lg p-2 mb-2">
                   <div className="flex items-center gap-1.5 mb-1.5">
                     <div className="w-3.5 h-3.5 rounded bg-cyan-300/50 flex items-center justify-center shrink-0">
-                      <span className="text-[7px] text-cyan-600 font-bold">♪</span>
+                      <span className="text-[7px] text-cyan-700 font-bold">♪</span>
                     </div>
                     <div className="h-1.5 w-10 bg-fg/10 rounded" />
                   </div>
@@ -150,7 +150,7 @@ export default function HomeHero() {
                   </div>
                 </div>
                 <div className="flex items-baseline gap-1">
-                  <span className="text-sm font-bold text-cyan-600">2 000+</span>
+                  <span className="text-sm font-bold text-cyan-700">2 000+</span>
                   <span className="text-[9px] text-fg-muted">artister</span>
                 </div>
               </div>
