@@ -18,7 +18,7 @@ export default async function HomeLogoStrip() {
         {logos.map((logo) => (
           <span
             key={logo.name}
-            className={`shrink-0 text-fg-muted/70 hover:text-fg transition-colors duration-300 text-lg sm:text-xl select-none ${logo.weight}`}
+            className={`shrink-0 text-fg-muted hover:text-fg transition-colors duration-300 text-lg sm:text-xl select-none ${logo.weight}`}
           >
             {logo.name}
           </span>

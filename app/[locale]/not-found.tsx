@@ -57,6 +57,7 @@ export default function NotFound() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.55, delay: 0.5, ease: 'easeOut' }}
         className="absolute left-10 top-[38%] hidden xl:block -translate-y-1/2"
+        aria-hidden="true"
       >
         <div className="bg-white border border-border rounded-2xl px-4 py-3.5 shadow-card w-44">
           <div className="flex items-center gap-1.5 mb-2.5">
@@ -75,6 +76,7 @@ export default function NotFound() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.55, delay: 0.6, ease: 'easeOut' }}
         className="absolute right-10 top-[38%] hidden xl:block -translate-y-1/2"
+        aria-hidden="true"
       >
         <div className="bg-white border border-border rounded-2xl px-4 py-3.5 shadow-card w-52">
           <p className="text-[9px] font-semibold text-fg-muted uppercase tracking-widest mb-2">URL forsøkt</p>

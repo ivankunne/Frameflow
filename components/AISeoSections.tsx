@@ -208,7 +208,7 @@ export default function AISeoSections({ content, lang }: { content: AISeoContent
                 transition={{ duration: 0.45, delay: 0.06 * i }}
                 className="bg-bg-2 border border-border rounded-xl p-7"
               >
-                <p className="display-text text-3xl text-accent/25 mb-4">{pillar.number}</p>
+                <p className="display-text text-3xl text-accent/25 mb-4" aria-hidden="true">{pillar.number}</p>
                 <h3 className="font-semibold text-fg mb-2.5">{pillar.title}</h3>
                 <p className="text-fg-muted text-sm leading-relaxed">{pillar.description}</p>
               </motion.div>

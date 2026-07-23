@@ -323,7 +323,7 @@ export default function ServicePageTemplate({
                 transition={{ duration: 0.45, delay: 0.1 + i * 0.1 }}
                 className="bg-white border border-border rounded-xl p-8 shadow-card"
               >
-                <p className="display-text text-4xl text-accent/20 mb-6">{step.step}</p>
+                <p className="display-text text-4xl text-accent/20 mb-6" aria-hidden="true">{step.step}</p>
                 <h3 className="font-semibold text-fg mb-3">{step.title}</h3>
                 <p className="text-fg-muted text-sm leading-relaxed">{step.description}</p>
               </motion.div>

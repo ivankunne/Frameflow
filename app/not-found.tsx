@@ -17,7 +17,7 @@ export default function NotFound() {
         style={{ minHeight: '100svh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '3rem 1.5rem', textAlign: 'center', position: 'relative', overflow: 'hidden' }}
       >
         {/* Ghost 404 */}
-        <p style={{ position: 'absolute', fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 'clamp(10rem,25vw,22rem)', lineHeight: 1, color: 'rgba(23,23,23,0.025)', userSelect: 'none', pointerEvents: 'none', letterSpacing: '-0.03em' }}>
+        <p aria-hidden="true" style={{ position: 'absolute', fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 'clamp(10rem,25vw,22rem)', lineHeight: 1, color: 'rgba(23,23,23,0.025)', userSelect: 'none', pointerEvents: 'none', letterSpacing: '-0.03em' }}>
           404
         </p>
 
@@ -31,7 +31,7 @@ export default function NotFound() {
             Denne siden eksisterer ikke.
           </h1>
 
-          <p style={{ color: '#818181', fontSize: '1.0625rem', lineHeight: 1.65, marginBottom: '2.5rem' }}>
+          <p style={{ color: '#6c6c6c', fontSize: '1.0625rem', lineHeight: 1.65, marginBottom: '2.5rem' }}>
             Siden er kanskje flyttet, slettet, eller adressen er feil. La oss hjelpe deg videre.
           </p>
 
@@ -45,7 +45,7 @@ export default function NotFound() {
           </div>
 
           <div style={{ borderTop: '1px solid #e5e5e5', paddingTop: '2rem' }}>
-            <p style={{ fontSize: '0.7rem', fontWeight: 600, color: '#818181', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '1rem' }}>Populære sider</p>
+            <p style={{ fontSize: '0.7rem', fontWeight: 600, color: '#6c6c6c', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '1rem' }}>Populære sider</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '0.375rem 1.5rem' }}>
               {[
                 { href: '/tjenester', label: 'Tjenester' },
@@ -54,7 +54,7 @@ export default function NotFound() {
                 { href: '/om-oss', label: 'Om oss' },
                 { href: '/tilbud', label: 'Be om tilbud' },
               ].map((l) => (
-                <Link key={l.href} href={l.href} style={{ fontSize: '0.875rem', color: '#818181', textDecoration: 'none', fontWeight: 500 }}>
+                <Link key={l.href} href={l.href} style={{ fontSize: '0.875rem', color: '#6c6c6c', textDecoration: 'none', fontWeight: 500 }}>
                   {l.label}
                 </Link>
               ))}

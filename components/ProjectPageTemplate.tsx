@@ -312,7 +312,7 @@ function ProjectBrowserMockup({ project, visible }: { project: Project; visible:
           <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #f0f4fb 0%, #e8f0f9 50%, #f8f8f8 100%)' }} />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center">
-              <p className="display-text text-6xl text-fg/5 mb-4">{project.title}</p>
+              <p className="display-text text-6xl text-fg/5 mb-4" aria-hidden="true">{project.title}</p>
               <p className="text-xs text-fg-muted font-medium">Prosjektbilde</p>
             </div>
           </div>
