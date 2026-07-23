@@ -108,7 +108,7 @@ Kjenner du deg igjen i ett eller to av tegnene, holder det ofte å utbedre akkur
 
 ### Hva koster en ny nettside i Bergen?
 
-En skreddersydd bedriftsnettside fra et lokalt byrå ligger typisk i området 35 000–120 000 kr avhengig av omfang. Vi har en egen prisoversikt som bryter ned hva som påvirker prisen for Bergen-markedet.
+For en middels stor til stor bedriftsnettside fra et lokalt byrå ligger prisen typisk i området 35 000–120 000 kr, avhengig av omfang. Trenger du noe enklere, starter nettsider fra 15 000 kr. Vi har en egen prisoversikt som bryter ned hva som påvirker prisen for Bergen-markedet.
 
 ### Hvor lang tid tar det å lage en ny nettside?
 
@@ -384,7 +384,7 @@ Ja. På moderne plattformer som Webflow kan du trygt endre tekst og bilder selv 
 
 ### Hva koster det å lage en profesjonell nettside?
 
-Hos et byrå starter en skreddersydd bedriftsnettside typisk fra 15 000 kr og oppover, avhengig av antall sider og funksjonalitet. Se den fullstendige [prisoversikten](/blogg/nettside-pris-bergen) for detaljer.
+Hos et byrå starter en enklere skreddersydd bedriftsnettside fra 15 000 kr, mens middels store til store prosjekter typisk ligger i området 35 000–120 000 kr, avhengig av antall sider og funksjonalitet. Se den fullstendige [prisoversikten](/blogg/nettside-pris-bergen) for detaljer.
 
 ## Klar for å lage en ny nettside?
 
