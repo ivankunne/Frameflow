@@ -66,7 +66,7 @@
       "title": "Våre tjenester",
       "subtitle": "Helhetlige løsninger som styrker din digitale tilstedeværelse og gir målbare resultater.",
       "webTitle": "Webdesign i Bergen",
-      "webPrice": "Fra 12 000 kr",
+      "webPrice": "Fra 15 000 kr",
       "webDesc": "Raske, konverteringsfokuserte nettsider for Bergen-bedrifter med SEO innebygd fra dag én. Ingen rot – bare det som fungerer.",
       "appTitle": "App utvikling",
       "appPrice": "Fra 35 000 kr",
@@ -145,10 +145,10 @@
       "chatResponds": "Svarer innen 24 timer",
       "chatStart": "Start samtale →",
       "msg1Client": "Hei! Hva koster en nettside?",
-      "msg1Ivan": "Nettsider starter fra 12 000 kr. Book en gratis samtale, så gir vi deg fast pris!",
+      "msg1Ivan": "Nettsider starter fra 15 000 kr. Book en gratis samtale, så gir vi deg fast pris!",
       "msg2Client": "Perfekt, når passer det?",
       "q1": "Hva koster en nettside i Bergen?",
-      "a1": "En bedriftsnettside starter fra 12 000 kr. Prisen avhenger av omfang, funksjonalitet og design. Vi gir alltid fast pris – ingen overraskelser etterpå. Be om et uforpliktende tilbud, så får du et konkret tall innen 24 timer.",
+      "a1": "En bedriftsnettside starter fra 15 000 kr. Prisen avhenger av omfang, funksjonalitet og design. Vi gir alltid fast pris – ingen overraskelser etterpå. Be om et uforpliktende tilbud, så får du et konkret tall innen 24 timer.",
       "q2": "Hvilke tjenester tilbyr dere?",
       "a2": "Frameflow leverer webdesign, app utvikling, foto og video produksjon, branding og sosiale medier – alt under ett tak. Vi skreddersyr tjenestene til din bedrift og leverer målbare resultater.",
       "q3": "Hva gjør Frameflow annerledes enn andre byrå?",
@@ -289,7 +289,8 @@
     "ctaH2": "Lignende resultater for deg?",
     "ctaDesc": "La oss ta en gratis prat om prosjektet ditt.",
     "ctaAllProjects": "Alle prosjekter",
-    "ctaQuote": "Be om tilbud"
+    "ctaQuote": "Be om tilbud",
+    "faqLabel": "Vanlige spørsmål"
   },
   "projects": {
     "title": "Prosjekter i Bergen",

@@ -66,7 +66,7 @@
       "title": "Our services",
       "subtitle": "End-to-end solutions that strengthen your digital presence and deliver measurable results.",
       "webTitle": "Web design",
-      "webPrice": "From NOK 12,000",
+      "webPrice": "From NOK 15,000",
       "webDesc": "Fast, conversion-focused websites for Bergen businesses with SEO built in from day one. No fluff — just what works.",
       "appTitle": "App development",
       "appPrice": "From NOK 35,000",
@@ -145,10 +145,10 @@
       "chatResponds": "Replies within 24 hours",
       "chatStart": "Start conversation →",
       "msg1Client": "Hi! How much does a website cost?",
-      "msg1Ivan": "Websites start from NOK 12,000. Book a free call and we'll give you a fixed price!",
+      "msg1Ivan": "Websites start from NOK 15,000. Book a free call and we'll give you a fixed price!",
       "msg2Client": "Perfect, when would work?",
       "q1": "How much does a website cost in Bergen?",
-      "a1": "A business website starts from NOK 12,000. The price depends on scope, functionality and design. We always give a fixed price — no surprises afterwards. Request a no-obligation quote and you'll have a concrete figure within 24 hours.",
+      "a1": "A business website starts from NOK 15,000. The price depends on scope, functionality and design. We always give a fixed price — no surprises afterwards. Request a no-obligation quote and you'll have a concrete figure within 24 hours.",
       "q2": "What services do you offer?",
       "a2": "Frameflow delivers web design, app development, photo and video production, branding and social media — all under one roof. We tailor the services to your business and deliver measurable results.",
       "q3": "What makes Frameflow different from other agencies?",
@@ -289,7 +289,8 @@
     "ctaH2": "Similar results for you?",
     "ctaDesc": "Let's have a free chat about your project.",
     "ctaAllProjects": "All projects",
-    "ctaQuote": "Get a quote"
+    "ctaQuote": "Get a quote",
+    "faqLabel": "Frequently asked questions"
   },
   "projects": {
     "title": "Projects in Bergen",

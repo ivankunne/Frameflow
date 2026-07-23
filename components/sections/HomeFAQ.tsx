@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useRef } from 'react'
-import { motion, useInView, AnimatePresence } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 
@@ -136,13 +136,18 @@ export default function HomeFAQ() {
                   <span className={`font-semibold text-sm transition-colors duration-200 ${open === i ? 'text-accent' : 'text-fg group-hover:text-accent'}`}>{faq.q}</span>
                   <span className={`shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-sm transition-all duration-200 ${open === i ? 'bg-accent text-white rotate-45' : 'bg-bg-2 text-fg-muted'}`} aria-hidden>+</span>
                 </button>
-                <AnimatePresence>
-                  {open === i && (
-                    <motion.div id={`faq-answer-${i}`} role="region" initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.22, ease: 'easeInOut' }} className="overflow-hidden">
-                      <p className="text-fg text-sm leading-relaxed px-6 pb-5">{faq.a}</p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                {/* Always rendered (not mount/unmount on open) so every answer is real,
+                    crawlable DOM text on first paint, not just JSON-LD/hydration data. */}
+                <motion.div
+                  id={`faq-answer-${i}`}
+                  role="region"
+                  initial={false}
+                  animate={{ height: open === i ? 'auto' : 0, opacity: open === i ? 1 : 0 }}
+                  transition={{ duration: 0.22, ease: 'easeInOut' }}
+                  style={{ overflow: 'hidden' }}
+                >
+                  <p className="text-fg text-sm leading-relaxed px-6 pb-5">{faq.a}</p>
+                </motion.div>
               </motion.div>
             ))}
           </div>

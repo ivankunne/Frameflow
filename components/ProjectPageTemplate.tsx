@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
@@ -323,6 +323,33 @@ function ProjectBrowserMockup({ project, visible }: { project: Project; visible:
   )
 }
 
+function FaqItem({ q, a }: { q: string; a: string }) {
+  const [open, setOpen] = useState(false)
+  return (
+    <div className="py-5">
+      <button
+        type="button"
+        onClick={() => setOpen(!open)}
+        aria-expanded={open}
+        className="w-full flex items-start justify-between gap-4 text-left group"
+      >
+        <span className="font-semibold text-fg text-sm leading-snug group-hover:text-accent transition-colors">{q}</span>
+        <span className={`text-accent text-lg leading-none shrink-0 transition-transform duration-200 ${open ? 'rotate-45' : ''}`}>+</span>
+      </button>
+      {/* Always rendered (not mount/unmount on open) so the answer is real,
+          crawlable DOM text on first paint, matching the FAQPage schema below. */}
+      <motion.div
+        initial={false}
+        animate={{ height: open ? 'auto' : 0, opacity: open ? 1 : 0 }}
+        transition={{ duration: 0.25, ease: 'easeInOut' }}
+        style={{ overflow: 'hidden' }}
+      >
+        <p className="text-fg-muted text-sm leading-relaxed pt-3">{a}</p>
+      </motion.div>
+    </div>
+  )
+}
+
 export default function ProjectPageTemplate({ project }: { project: Project }) {
   const t = useTranslations('projectTemplate')
   const heroRef = useRef(null)
@@ -485,6 +512,20 @@ export default function ProjectPageTemplate({ project }: { project: Project }) {
           </div>
         </div>
       </section>
+
+      {/* FAQ */}
+      {project.faqs && project.faqs.length > 0 && (
+        <section className="py-14 md:py-20 px-6 lg:px-8 bg-white border-t border-border">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="display-text text-3xl text-fg mb-10">{t('faqLabel')}</h2>
+            <div className="flex flex-col divide-y divide-border">
+              {project.faqs.map((faq, i) => (
+                <FaqItem key={i} q={faq.q} a={faq.a} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA */}
       <section className="py-16 px-6 lg:px-8 bg-white border-t border-border">

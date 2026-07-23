@@ -69,9 +69,23 @@ export default async function ProjectPage({ params }: Props) {
     { name: project.title, nameEn: s?.titleEn ?? project.title, noPath: `/prosjekter/${slug}`, enPath: `/projects/${slug}` },
   ])
 
+  // Project body content (like blog posts) is deliberately NO-only, so — same as
+  // creativeWorkSchema above — this doesn't branch by locale or reference the /en path.
+  const faqSchema = project.faqs && project.faqs.length > 0 && {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: 'nb-NO',
+    mainEntity: project.faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: { '@type': 'Answer', text: faq.a },
+    })),
+  }
+
   return (
     <>
       {creativeWorkSchema && <JsonLd data={creativeWorkSchema} />}
+      {faqSchema && <JsonLd data={faqSchema} />}
       <JsonLd data={breadcrumbSchema} />
       <ProjectPageTemplate project={project} />
     </>

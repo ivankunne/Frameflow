@@ -39,6 +39,7 @@ export interface Project {
   results?: string[]
   image?: { src: string; alt: string }
   seo?: ProjectSeo
+  faqs?: { q: string; a: string }[]
 }
 
 export const blogPosts: BlogPost[] = [
@@ -1564,6 +1565,12 @@ export const projects: Project[] = [
       schemaKeywords: 'App utvikling, Branding, React, Full-stack, musikk, artister',
       schemaLocation: 'Bergen, Norge',
     },
+    faqs: [
+      { q: 'Hva er h-orbit?', a: 'h-orbit er en musikkplattform for artister, bygget av Frameflow. Plattformen lar musikere dele musikken sin, finne samarbeidspartnere og oppdage arrangementer – alt på ett sted.' },
+      { q: 'Hvilke tjenester leverte Frameflow til h-orbit?', a: 'Frameflow sto for app utvikling og branding av h-orbit, fra idé til lansert plattform.' },
+      { q: 'Hvilke resultater har h-orbit oppnådd?', a: 'h-orbit har over 2000 artister på plattformen, 500+ samarbeidsprosjekter startet, 98% app-oppetid og over 1000 arrangementer oppdaget per måned.' },
+      { q: 'Hvor er h-orbit basert?', a: 'h-orbit er basert i Amsterdam, Nederland. Frameflow har base i Bergen, men jobber like gjerne med kunder i resten av Norge og internasjonalt.' },
+    ],
   },
   {
     slug: 'sportsbytte',
@@ -1599,6 +1606,12 @@ export const projects: Project[] = [
       schemaKeywords: 'Web design, Branding, SEO, sportsbytte, brukt sportsutstyr, Norge',
       schemaLocation: 'Bergen, Norge',
     },
+    faqs: [
+      { q: 'Hva er Sportsbytte?', a: 'Sportsbytte er en norsk plattform for kjøp, salg og bytte av brukt sportsutstyr. Frameflow bygget en ny nettside og visuell identitet for plattformen.' },
+      { q: 'Hvilke tjenester leverte Frameflow til Sportsbytte?', a: 'Frameflow leverte webdesign, branding og SEO for Sportsbytte – en komplett digital relansering av plattformen.' },
+      { q: 'Hvilke resultater fikk Sportsbytte etter relanseringen?', a: 'Sportsbytte fikk en moderne, konverteringsfokusert nettside, en tydelig visuell identitet med brand guidelines, og en markant økning i brukerregistreringer etter lansering.' },
+      { q: 'Hvor er Sportsbytte basert?', a: 'Sportsbytte opererer i Norge. Frameflow er basert i Bergen og jobber med kunder i hele landet.' },
+    ],
   },
 ]
 
