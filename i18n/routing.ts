@@ -22,6 +22,7 @@ export const routing = defineRouting({
     '/tjenester/branding': { no: '/tjenester/branding', en: '/services/branding' },
     '/tjenester/markedsforing': { no: '/tjenester/markedsforing', en: '/services/marketing' },
     '/tjenester/ai-automasjon': { no: '/tjenester/ai-automasjon', en: '/services/ai-automation' },
+    '/tjenester/ai-seo': { no: '/tjenester/ai-seo', en: '/services/ai-seo' },
     '/prosjekter': { no: '/prosjekter', en: '/projects' },
     '/prosjekter/[slug]': { no: '/prosjekter/[slug]', en: '/projects/[slug]' },
     '/blogg': { no: '/blogg', en: '/blog' },

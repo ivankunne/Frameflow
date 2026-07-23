@@ -4,7 +4,7 @@ import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { useTranslations, useLocale } from 'next-intl'
 import { Link } from '@/i18n/navigation'
-import { CameraVisual, SocialVisual, BrandVisual, SEOVisual, AIVisual, MarketingVisual } from '@/components/ServiceVisuals'
+import { CameraVisual, SocialVisual, BrandVisual, SEOVisual, AIVisual, MarketingVisual, AISeoVisual } from '@/components/ServiceVisuals'
 import { AppMockup } from '@/components/ServiceMockups'
 
 type ServiceEntry = {
@@ -19,7 +19,7 @@ type ServiceEntry = {
   metricSub: string
   includes: readonly string[]
   accentHex: string
-  visual: 'web' | 'app' | 'camera' | 'social' | 'brand' | 'seo' | 'ai' | 'marketing'
+  visual: 'web' | 'app' | 'camera' | 'social' | 'brand' | 'seo' | 'ai' | 'marketing' | 'aiseo'
 }
 
 const servicesData: Record<'no' | 'en', ServiceEntry[]> = {
@@ -66,7 +66,7 @@ const servicesData: Record<'no' | 'en', ServiceEntry[]> = {
       shortTitle: 'Sosiale medier', pricingFrom: 'Fra 3 500 kr/mnd',
       title: 'Sosiale medier som vokser, engasjerer og konverterer',
       description: 'Sosiale medier-håndtering for Bergen-bedrifter. Fra innholdsproduksjon til strategi og community management – konsekvent, autentisk og alltid på merkevaren din.',
-      metric: '+890', metricLabel: 'følgere på 3 måneder', metricSub: 'GV Rentals · Instagram',
+      metric: 'Konsekvent', metricLabel: 'vekst og engasjement', metricSub: 'Strategi, innhold og rapportering',
       includes: ['Innholdskalender', 'Instagram, TikTok, LinkedIn', 'Hashtag-strategi', 'Community management', 'Månedlig rapportering'],
     },
     {
@@ -95,6 +95,15 @@ const servicesData: Record<'no' | 'en', ServiceEntry[]> = {
       description: 'AI-automasjon for Bergen-bedrifter. Vi bygger systemer som håndterer henvendelser, kvalifiserer leads og oppdaterer CRM automatisk – uten manuell innsats. Du fokuserer på det som faktisk vokser bedriften.',
       metric: '47', metricLabel: 'timer spart/mnd', metricSub: 'Gjennomsnitt · små bedrifter',
       includes: ['Automatisk henvendelseshåndtering', 'AI-chatbot 24/7', 'Lead-kvalifisering', 'CRM-integrasjon', 'E-postsekvenser', 'Make / n8n / Zapier'],
+    },
+    {
+      number: '09', visual: 'aiseo', accentHex: '#0d9488',
+      href: '/tjenester/ai-seo',
+      shortTitle: 'AI SEO', pricingFrom: 'Fra 6 500 kr/mnd',
+      title: 'Bli merkevaren AI-søkemotorene anbefaler',
+      description: 'AI SEO og Generative Engine Optimization for Bergen-bedrifter. Vi bygger entitets-SEO, strukturert data og innhold som gjør at ChatGPT, Perplexity og Google AI Overviews finner og siterer deg.',
+      metric: '3/4', metricLabel: 'AI-motorer siterer', metricSub: 'ChatGPT · Perplexity · Google AI',
+      includes: ['Entitets-SEO', 'Schema.org og strukturert data', 'Semantisk innholdsstrategi', 'Optimalisering for AI Overviews', 'AI-synlighetsrapportering'],
     },
   ],
   en: [
@@ -140,7 +149,7 @@ const servicesData: Record<'no' | 'en', ServiceEntry[]> = {
       shortTitle: 'Social media', pricingFrom: 'From 3,500 kr/mo',
       title: 'Social media that grows, engages and converts',
       description: 'Social media management for Bergen businesses. From content production to strategy and community management – consistent, authentic and always on brand.',
-      metric: '+890', metricLabel: 'followers in 3 months', metricSub: 'GV Rentals · Instagram',
+      metric: 'Consistent', metricLabel: 'growth and engagement', metricSub: 'Strategy, content and reporting',
       includes: ['Content calendar', 'Instagram, TikTok, LinkedIn', 'Hashtag strategy', 'Community management', 'Monthly reporting'],
     },
     {
@@ -169,6 +178,15 @@ const servicesData: Record<'no' | 'en', ServiceEntry[]> = {
       description: 'AI automation for Bergen businesses. We build systems that handle enquiries, qualify leads and update CRM automatically – without manual effort. You focus on what actually grows your business.',
       metric: '47', metricLabel: 'hours saved/mo', metricSub: 'Average · small businesses',
       includes: ['Automatic enquiry handling', 'AI chatbot 24/7', 'Lead qualification', 'CRM integration', 'Email sequences', 'Make / n8n / Zapier'],
+    },
+    {
+      number: '09', visual: 'aiseo', accentHex: '#0d9488',
+      href: '/tjenester/ai-seo',
+      shortTitle: 'AI SEO', pricingFrom: 'From NOK 6,500/mo',
+      title: 'Become the brand AI search engines recommend',
+      description: 'AI SEO and Generative Engine Optimization for growing businesses. We build the entity SEO, structured data and content that make ChatGPT, Perplexity and Google AI Overviews find and cite you.',
+      metric: '3/4', metricLabel: 'AI engines citing', metricSub: 'ChatGPT · Perplexity · Google AI',
+      includes: ['Entity SEO', 'Schema.org and structured data', 'Semantic content strategy', 'Optimisation for AI Overviews', 'AI visibility reporting'],
     },
   ],
 }
@@ -314,6 +332,7 @@ function ServiceVisual({ visual, accentHex, visible }: { visual: ServiceEntry['v
   if (visual === 'marketing') return <MarketingVisual visible={visible} />
   if (visual === 'seo') return <SEOVisual visible={visible} />
   if (visual === 'ai') return <AIVisual visible={visible} />
+  if (visual === 'aiseo') return <AISeoVisual visible={visible} />
   return <BrandVisual visible={visible} />
 }
 

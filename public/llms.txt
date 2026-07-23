@@ -5,11 +5,15 @@
 ## Tjenester
 
 - [Webdesign Bergen](https://www.frameflow.no/tjenester/webdesign): Vi lager raske, SEO-optimaliserte nettsider for Bergen-bedrifter som konverterer besøkende til kunder. Pris fra 15 000 kr.
+- [Webflow Bergen](https://www.frameflow.no/tjenester/webflow): Design og utvikling av raske, SEO-optimaliserte Webflow-nettsider med et CMS du enkelt oppdaterer selv. Pris fra 15 000 kr.
 - [App utvikling Bergen](https://www.frameflow.no/tjenester/app-utvikling): Skreddersydde webapper og mobilapper i React Native, Flutter og Next.js. Fra MVP til fullskala løsninger. Pris fra 45 000 kr.
 - [Sosiale medier Bergen](https://www.frameflow.no/tjenester/sosiale-medier): Strategi, innholdsproduksjon og community management for Instagram, TikTok, Facebook og LinkedIn. Fra 3 500 kr/mnd.
 - [Branding Bergen](https://www.frameflow.no/tjenester/branding): Logo, visuell identitet og brand guidelines som gjør merkevaren din umiskjennelig. Pris fra 8 000 kr.
 - [Foto og videografi Bergen](https://www.frameflow.no/tjenester/foto-og-videografi): Autentisk foto og video for sosiale medier, nettsider og markedsføring. Pris fra 4 500 kr.
+- [Markedsføring Bergen](https://www.frameflow.no/tjenester/markedsforing): Helhetlig digital markedsføring for Bergen-bedrifter – webdesign, SEO, sosiale medier og branding under ett tak. Fra 4 500 kr/mnd.
 - [SEO Bergen](https://www.frameflow.no/tjenester/seo): Lokal søkemotoroptimalisering for Bergen-bedrifter – teknisk SEO, innholdsstrategi og Google Business Profile. Fra 4 500 kr/mnd.
+- [AI Automasjon Bergen](https://www.frameflow.no/tjenester/ai-automasjon): AI-drevne automatiseringer som håndterer henvendelser, kvalifiserer leads og oppdaterer CRM automatisk. Fra 8 000 kr.
+- [AI SEO Bergen](https://www.frameflow.no/tjenester/ai-seo): Entitets-SEO, strukturert data og innholdsstrategi som gjør bedriften synlig og siterbar i ChatGPT, Perplexity, Gemini og Google AI Overviews. Fra 6 500 kr/mnd.
 
 ## Om oss
 
@@ -17,7 +21,7 @@
 
 ## Prosjekter
 
-- [Prosjekter](https://www.frameflow.no/prosjekter): Utvalgte prosjekter vi har levert, inkludert Sportsbytte, GV Rentals, HO Orbit og Marbesa Project 94.
+- [Prosjekter](https://www.frameflow.no/prosjekter): Utvalgte prosjekter vi har levert, inkludert Sportsbytte og h-orbit.
 
 ## Kontakt og tilbud
 
@@ -31,7 +35,7 @@
 - [Webdesign Bergen – nettside som konverterer](https://www.frameflow.no/blogg/webdesign-bergen-nettside-som-konverterer)
 - [Google My Business Bergen – guide](https://www.frameflow.no/blogg/google-my-business-bergen-guide)
 - [Hva koster en nettside i Bergen? Prisguide 2026](https://www.frameflow.no/blogg/hva-koster-webdesign-bergen-prisguide-2025)
-- [Beste markedsføringsbyrå i Bergen 2026](https://www.frameflow.no/blogg/beste-markedsforingsbyrå-bergen-2025)
-- [Hva koster apputvikling i Bergen? Prisguide 2026](https://www.frameflow.no/blogg/app-utvikling-pris-bergen-2025)
+- [Beste markedsføringsbyrå i Bergen 2026](https://www.frameflow.no/blogg/beste-markedsforingsbyraa-bergen-2025)
+- [Hva koster apputvikling i Bergen? Prisguide 2026](https://www.frameflow.no/blogg/app-utvikling-pris-bergen-2026)
 - [SEO-byrå i Bergen – hva koster det og hva bør du forvente?](https://www.frameflow.no/blogg/seo-byraa-bergen)
 - [Logo design i Bergen – pris og hva du bør forvente](https://www.frameflow.no/blogg/logo-design-bergen)

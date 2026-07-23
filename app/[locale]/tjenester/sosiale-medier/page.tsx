@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { sosialeMedier } from '@/lib/serviceContent'
 import ServicePageTemplate from '@/components/ServicePageTemplate'
 import { JsonLd } from '@/components/JsonLd'
-import { buildAlternates, ogLocale } from '@/lib/seo'
+import { buildAlternates, buildBreadcrumbSchema, HOME_CRUMB, SERVICES_CRUMB, ogLocale, schemaLanguage } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -30,39 +30,47 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.frameflow.no' },
-    { '@type': 'ListItem', position: 2, name: 'Tjenester', item: 'https://www.frameflow.no/tjenester' },
-    { '@type': 'ListItem', position: 3, name: 'Sosiale medier', item: 'https://www.frameflow.no/tjenester/sosiale-medier' },
-  ],
-}
-
-const serviceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: 'Sosiale medier i Bergen',
-  provider: { '@id': 'https://www.frameflow.no/#organization' },
-  description: 'Profesjonell håndtering av sosiale medier for Bergen-bedrifter. Innholdsproduksjon, strategi og kanalforvaltning.',
-  areaServed: { '@type': 'City', name: 'Bergen' },
-  offers: {
-    '@type': 'Offer',
-    priceCurrency: 'NOK',
-    priceSpecification: { '@type': 'PriceSpecification', priceCurrency: 'NOK', minPrice: 3500 },
-  },
-}
-
 export default async function SosialeMedierPage({ params }: Props) {
   const { locale } = await params
   const lang = locale === 'en' ? 'en' : 'no'
   const c = sosialeMedier[lang]
 
+  const breadcrumbSchema = buildBreadcrumbSchema(locale, [
+    HOME_CRUMB,
+    SERVICES_CRUMB,
+    { name: 'Sosiale medier', nameEn: 'Social Media', noPath: '/tjenester/sosiale-medier', enPath: '/services/social-media' },
+  ])
+
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: c.title,
+    provider: { '@id': 'https://www.frameflow.no/#organization' },
+    description: c.longDescription,
+    areaServed: { '@type': 'City', name: 'Bergen' },
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'NOK',
+      priceSpecification: { '@type': 'PriceSpecification', priceCurrency: 'NOK', minPrice: 3500 },
+    },
+  }
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: schemaLanguage(locale),
+    mainEntity: c.faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  }
+
   return (
     <>
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={serviceSchema} />
+      <JsonLd data={faqSchema} />
       <ServicePageTemplate
         label={c.label}
         title={c.title}

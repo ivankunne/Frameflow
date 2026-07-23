@@ -185,7 +185,7 @@ export default async function BlogPostPage({ params }: Props) {
       { '@type': 'Question', name: 'Hvor lang tid tar det å lage en nettside?', acceptedAnswer: { '@type': 'Answer', text: 'En standard bedriftsnettside tar typisk 3–6 uker fra oppstart til lansering, avhengig av omfang og hvor raskt innhold er på plass. Større nettsider med nettbutikk eller mange sider tar lengre tid.' } },
       { '@type': 'Question', name: 'Hva trenger jeg før vi starter?', acceptedAnswer: { '@type': 'Answer', text: 'Et tydelig mål, en idé om hvilke sider du trenger, og innhold – tekst, bilder og logo. Har du ikke alt klart, hjelper et godt byrå deg med å få det på plass underveis.' } },
       { '@type': 'Question', name: 'Kan jeg oppdatere nettsiden selv etterpå?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. På moderne plattformer som Webflow kan du trygt endre tekst og bilder selv i en brukervennlig redaktørmodus, uten teknisk kunnskap og uten å risikere å ødelegge designet.' } },
-      { '@type': 'Question', name: 'Hva koster det å lage en profesjonell nettside?', acceptedAnswer: { '@type': 'Answer', text: 'Hos et byrå starter en skreddersydd bedriftsnettside typisk fra 15 000 kr og oppover, avhengig av antall sider og funksjonalitet.' } },
+      { '@type': 'Question', name: 'Hva koster det å lage en profesjonell nettside?', acceptedAnswer: { '@type': 'Answer', text: 'Hos et byrå starter en enklere skreddersydd bedriftsnettside fra 15 000 kr. Middels store til store prosjekter ligger typisk i området 35 000–120 000 kr, avhengig av antall sider og funksjonalitet.' } },
     ],
   } : null
 
@@ -196,7 +196,7 @@ export default async function BlogPostPage({ params }: Props) {
     mainEntity: [
       { '@type': 'Question', name: 'Hvor ofte bør en bedrift bytte nettside?', acceptedAnswer: { '@type': 'Answer', text: 'Som en tommelfingerregel bør en bedriftsnettside fornyes hvert tredje til femte år. Teknologi, designtrender og Googles krav endrer seg raskt, og en side som var god for fem år siden er ofte utdatert i dag – både teknisk og visuelt.' } },
       { '@type': 'Question', name: 'Bør jeg lage ny nettside eller oppgradere den gamle?', acceptedAnswer: { '@type': 'Answer', text: 'Kjenner du deg igjen i ett eller to av tegnene, holder det ofte å utbedre akkurat de tingene. Er det tre eller flere – for eksempel treg, ikke mobilvennlig og usynlig på Google samtidig – lønner det seg som regel å bygge nytt, fordi det å lappe på et gammelt fundament fort blir dyrere over tid.' } },
-      { '@type': 'Question', name: 'Hva koster en ny nettside i Bergen?', acceptedAnswer: { '@type': 'Answer', text: 'En skreddersydd bedriftsnettside fra et lokalt byrå ligger typisk i området 35 000–120 000 kr avhengig av omfang. Prisen påvirkes av antall sider, funksjoner og om innhold er inkludert.' } },
+      { '@type': 'Question', name: 'Hva koster en ny nettside i Bergen?', acceptedAnswer: { '@type': 'Answer', text: 'For en middels stor til stor bedriftsnettside fra et lokalt byrå ligger prisen typisk i området 35 000–120 000 kr. Enklere nettsider starter fra 15 000 kr. Prisen påvirkes av antall sider, funksjoner og om innhold er inkludert.' } },
       { '@type': 'Question', name: 'Hvor lang tid tar det å lage en ny nettside?', acceptedAnswer: { '@type': 'Answer', text: 'En standard bedriftsnettside tar typisk tre til seks uker fra oppstart til lansering, avhengig av omfang og hvor raskt innholdet er på plass. Større nettsteder med nettbutikk eller mange sider tar lengre tid.' } },
     ],
   } : null
@@ -210,6 +210,18 @@ export default async function BlogPostPage({ params }: Props) {
       { '@type': 'Question', name: 'Hvilke oppgaver bør jeg automatisere først?', acceptedAnswer: { '@type': 'Answer', text: 'Begynn med oppgaven som tar mest tid og er enklest å beskrive steg for steg – for de fleste Bergen-bedrifter er det håndtering av innkommende e-post og henvendelser.' } },
       { '@type': 'Question', name: 'Hva koster det å automatisere med AI?', acceptedAnswer: { '@type': 'Answer', text: 'En enkel automasjon starter fra rundt 8 000 kr eks. mva som engangskostnad. Prisen øker med kompleksiteten, men sparer du noen timer i uken, betaler løsningen seg selv raskt.' } },
       { '@type': 'Question', name: 'Mister jeg den personlige kontakten med kundene?', acceptedAnswer: { '@type': 'Answer', text: 'Nei. Godt bygde automasjoner håndterer det rutinepregede og sender alt som krever en menneskelig vurdering videre til deg. Du får mer tid til de samtalene som faktisk betyr noe.' } },
+    ],
+  } : null
+
+  const nettsidePrisFaqSchema = post.slug === 'nettside-pris-bergen' ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: 'nb-NO',
+    mainEntity: [
+      { '@type': 'Question', name: 'Hva koster en nettside i Bergen?', acceptedAnswer: { '@type': 'Answer', text: 'Prisen varierer fra 0 kr for ferdigmaler til over 100 000 kr for enterprise-løsninger. Hos Frameflow starter en skreddersydd bedriftsnettside fra 15 000 kr eks. mva, med fast pris avtalt før oppstart.' } },
+      { '@type': 'Question', name: 'Hva koster det å bruke en frilanser sammenlignet med et byrå?', acceptedAnswer: { '@type': 'Answer', text: 'En frilanser tar typisk 15 000–45 000 kr, med varierende kvalitet. Et lokalt markedsføringsbyrå starter fra samme nivå for enklere nettsider, men ligger normalt i området 35 000–120 000 kr for middels store til store prosjekter – da inkludert skreddersydd design, innebygd lokal SEO og løpende support.' } },
+      { '@type': 'Question', name: 'Hva påvirker prisen på en nettside?', acceptedAnswer: { '@type': 'Answer', text: 'Antall sider, om du bruker en mal eller skreddersydd design, funksjoner som booking og nettbutikk, og om innhold og tekst er inkludert i leveransen.' } },
+      { '@type': 'Question', name: 'Er en dyrere nettside alltid verdt investeringen?', acceptedAnswer: { '@type': 'Answer', text: 'Ikke prisen alene – det er avkastningen som teller. En nettside som gir deg én ekstra kunde i måneden er ofte raskt nedbetalt, selv om den kostet mer i utgangspunktet.' } },
     ],
   } : null
 
@@ -233,6 +245,7 @@ export default async function BlogPostPage({ params }: Props) {
       {faqSchema && <JsonLd data={faqSchema} />}
       {guideHowToSchema && <JsonLd data={guideHowToSchema} />}
       {guideFaqSchema && <JsonLd data={guideFaqSchema} />}
+      {nettsidePrisFaqSchema && <JsonLd data={nettsidePrisFaqSchema} />}
       {seoAdsFaqSchema && <JsonLd data={seoAdsFaqSchema} />}
       {aiAutomasjonFaqSchema && <JsonLd data={aiAutomasjonFaqSchema} />}
       {nyNettsideFaqSchema && <JsonLd data={nyNettsideFaqSchema} />}

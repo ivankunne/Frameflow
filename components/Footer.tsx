@@ -31,6 +31,7 @@ export default function Footer() {
     { href: '/tjenester/sosiale-medier' as const, label: 'Sosiale medier' },
     { href: '/tjenester/branding' as const, label: 'Branding' },
     { href: '/tjenester/ai-automasjon' as const, label: 'AI-automasjon' },
+    { href: '/tjenester/ai-seo' as const, label: 'AI SEO' },
   ]
 
   return (

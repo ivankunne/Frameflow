@@ -233,6 +233,7 @@ export const seo: Record<'no' | 'en', ServiceContent> = {
       { title: 'Webdesign', href: '/tjenester/webdesign' },
       { title: 'Sosiale medier', href: '/tjenester/sosiale-medier' },
       { title: 'Branding', href: '/tjenester/branding' },
+      { title: 'AI SEO', href: '/tjenester/ai-seo' },
     ],
     pricingFrom: '4 500 kr/mnd',
     faqs: [
@@ -275,6 +276,7 @@ export const seo: Record<'no' | 'en', ServiceContent> = {
       { title: 'Web design', href: '/tjenester/webdesign' },
       { title: 'Social media', href: '/tjenester/sosiale-medier' },
       { title: 'Branding', href: '/tjenester/branding' },
+      { title: 'AI SEO', href: '/tjenester/ai-seo' },
     ],
     pricingFrom: 'NOK 4,500/mo',
     faqs: [
@@ -669,6 +671,7 @@ export const markedsforing: Record<'no' | 'en', ServiceContent> = {
       { title: 'SEO', href: '/tjenester/seo' },
       { title: 'Webdesign', href: '/tjenester/webdesign' },
       { title: 'Sosiale medier', href: '/tjenester/sosiale-medier' },
+      { title: 'AI SEO', href: '/tjenester/ai-seo' },
     ],
     pricingFrom: '4 500 kr/mnd',
     faqs: [
@@ -676,7 +679,7 @@ export const markedsforing: Record<'no' | 'en', ServiceContent> = {
       { q: 'Hva gjør Frameflow annerledes enn andre markedsføringsbyrå i Bergen?', a: 'Du snakker alltid direkte med Ivan – personen som faktisk gjør jobben. Ingen juniorer, ingen outsourcing. Vi kjenner Bergen-markedet godt, holder oss til fast pris og tilbyr fornøyd garanti.' },
       { q: 'Trenger jeg alle tjenestene, eller kan jeg velge enkelttjenester?', a: 'Du velger akkurat det du trenger. Vi tilbyr alt fra enkeltleveranser som et nytt logo til helhetlig markedsføring med alle kanaler. De fleste starter med det som gir raskest avkastning og bygger ut derfra.' },
       { q: 'Hvor lenge tar det å se resultater fra digital markedsføring?', a: 'Google Ads og betalt annonsering gir resultater fra dag én. SEO tar typisk 3–6 måneder for merkbar organisk vekst. Sosiale medier bygger engasjement over 2–3 måneder. Vi setter alltid realistiske forventninger fra start.' },
-      { q: 'Jobber dere bare med Bergen-bedrifter?', a: 'Vi har base i Bergen og leverer resultater for lokale bedrifter daglig. Men vi jobber gjerne med bedrifter andre steder i Norge og internasjonalt – som for Marbesa Project 94 i Marbella.' },
+      { q: 'Jobber dere bare med Bergen-bedrifter?', a: 'Vi har base i Bergen og leverer resultater for lokale bedrifter daglig. Men vi jobber gjerne med bedrifter andre steder i Norge og internasjonalt – som for h-orbit i Amsterdam.' },
     ],
   },
   en: {
@@ -712,6 +715,7 @@ export const markedsforing: Record<'no' | 'en', ServiceContent> = {
       { title: 'SEO', href: '/tjenester/seo' },
       { title: 'Web design', href: '/tjenester/webdesign' },
       { title: 'Social media', href: '/tjenester/sosiale-medier' },
+      { title: 'AI SEO', href: '/tjenester/ai-seo' },
     ],
     pricingFrom: 'NOK 4,500/mo',
     faqs: [
@@ -719,7 +723,7 @@ export const markedsforing: Record<'no' | 'en', ServiceContent> = {
       { q: 'What makes Frameflow different from other marketing agencies in Bergen?', a: 'You always speak directly with Ivan — the person who actually does the work. No juniors, no outsourcing. We know the Bergen market well, stick to fixed prices and offer a satisfaction guarantee.' },
       { q: 'Do I need all the services, or can I choose individual ones?', a: 'You choose exactly what you need. We offer everything from individual deliverables like a new logo to full digital marketing with all channels. Most clients start with what gives the fastest return and build from there.' },
       { q: 'How long does it take to see results from digital marketing?', a: 'Google Ads and paid advertising deliver results from day one. SEO typically takes 3–6 months for noticeable organic growth. Social media builds engagement over 2–3 months. We set realistic expectations from the start.' },
-      { q: 'Do you only work with Bergen businesses?', a: 'We are based in Bergen and deliver results for local businesses daily. But we also work with businesses elsewhere in Norway and internationally — as with Marbesa Project 94 in Marbella.' },
+      { q: 'Do you only work with Bergen businesses?', a: 'We are based in Bergen and deliver results for local businesses daily. But we also work with businesses elsewhere in Norway and internationally — as with h-orbit in Amsterdam.' },
     ],
   },
 }
@@ -758,6 +762,7 @@ export const aiAutomasjon: Record<'no' | 'en', ServiceContent> = {
       { title: 'Webdesign', href: '/tjenester/webdesign' },
       { title: 'App utvikling', href: '/tjenester/app-utvikling' },
       { title: 'SEO', href: '/tjenester/seo' },
+      { title: 'AI SEO', href: '/tjenester/ai-seo' },
     ],
     pricingFrom: '8 000 kr',
     faqs: [
@@ -801,6 +806,7 @@ export const aiAutomasjon: Record<'no' | 'en', ServiceContent> = {
       { title: 'Web design', href: '/tjenester/webdesign' },
       { title: 'App development', href: '/tjenester/app-utvikling' },
       { title: 'SEO', href: '/tjenester/seo' },
+      { title: 'AI SEO', href: '/tjenester/ai-seo' },
     ],
     pricingFrom: 'NOK 8,000',
     faqs: [

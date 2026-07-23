@@ -3,23 +3,25 @@
 import { useState, useEffect } from 'react'
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
+import { COOKIE_CONSENT_KEY, CONSENT_ACCEPTED_EVENT } from '@/lib/constants'
 
 export default function CookieBanner() {
   const t = useTranslations('cookies')
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
-    const consent = localStorage.getItem('ff_cookie_consent')
+    const consent = localStorage.getItem(COOKIE_CONSENT_KEY)
     if (!consent) setVisible(true)
   }, [])
 
   function accept() {
-    localStorage.setItem('ff_cookie_consent', 'accepted')
+    localStorage.setItem(COOKIE_CONSENT_KEY, 'accepted')
+    window.dispatchEvent(new Event(CONSENT_ACCEPTED_EVENT))
     setVisible(false)
   }
 
   function reject() {
-    localStorage.setItem('ff_cookie_consent', 'rejected')
+    localStorage.setItem(COOKIE_CONSENT_KEY, 'rejected')
     setVisible(false)
   }
 

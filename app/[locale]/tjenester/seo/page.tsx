@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { seo } from '@/lib/serviceContent'
 import ServicePageTemplate from '@/components/ServicePageTemplate'
 import { JsonLd } from '@/components/JsonLd'
-import { buildAlternates, ogLocale } from '@/lib/seo'
+import { buildAlternates, buildBreadcrumbSchema, HOME_CRUMB, SERVICES_CRUMB, ogLocale, schemaLanguage } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -30,39 +30,47 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.frameflow.no' },
-    { '@type': 'ListItem', position: 2, name: 'Tjenester', item: 'https://www.frameflow.no/tjenester' },
-    { '@type': 'ListItem', position: 3, name: 'SEO', item: 'https://www.frameflow.no/tjenester/seo' },
-  ],
-}
-
-const serviceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: 'SEO og søkemotoroptimalisering i Bergen',
-  provider: { '@id': 'https://www.frameflow.no/#organization' },
-  description: 'Lokal SEO for Bergen-bedrifter – teknisk optimalisering, innholdsstrategi og Google Business Profile-oppsett som gir varig synlighet på Google.',
-  areaServed: { '@type': 'City', name: 'Bergen' },
-  offers: {
-    '@type': 'Offer',
-    priceCurrency: 'NOK',
-    priceSpecification: { '@type': 'PriceSpecification', priceCurrency: 'NOK', minPrice: 4500 },
-  },
-}
-
 export default async function SEOPage({ params }: Props) {
   const { locale } = await params
   const lang = locale === 'en' ? 'en' : 'no'
   const c = seo[lang]
 
+  const breadcrumbSchema = buildBreadcrumbSchema(locale, [
+    HOME_CRUMB,
+    SERVICES_CRUMB,
+    { name: 'SEO', nameEn: 'SEO', noPath: '/tjenester/seo', enPath: '/services/seo' },
+  ])
+
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: c.title,
+    provider: { '@id': 'https://www.frameflow.no/#organization' },
+    description: c.longDescription,
+    areaServed: { '@type': 'City', name: 'Bergen' },
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'NOK',
+      priceSpecification: { '@type': 'PriceSpecification', priceCurrency: 'NOK', minPrice: 4500 },
+    },
+  }
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: schemaLanguage(locale),
+    mainEntity: c.faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  }
+
   return (
     <>
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={serviceSchema} />
+      <JsonLd data={faqSchema} />
       <ServicePageTemplate
         label={c.label}
         title={c.title}

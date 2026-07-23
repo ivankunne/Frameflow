@@ -37,7 +37,7 @@ export default function OmOssClient() {
   const ctaInView = useInView(ctaRef, { once: true, margin: '-80px' })
 
   const stats = [
-    { end: 20, suffix: '+', start: 0, label: t('stat1'), sub: t('stat1Sub') },
+    { end: 5, suffix: '+', start: 0, label: t('stat1'), sub: t('stat1Sub') },
     { end: 98, suffix: '%', start: 0, label: t('stat2'), sub: t('stat2Sub') },
     { end: 140, suffix: '%', start: 0, label: t('stat3'), sub: t('stat3Sub') },
   ]

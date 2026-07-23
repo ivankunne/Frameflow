@@ -21,6 +21,12 @@ Leveringstid: 3–6 uker
 Vi lager raske, konverteringsfokuserte nettsider i Webflow og Next.js med SEO innebygd fra dag én. Inkluderer responsivt design, CMS, Google Analytics, Search Console-oppsett, kontaktskjema og 30 dagers support etter lansering.
 Spørsmål vi svarer på: Hva koster en nettside i Bergen? Hvor lang tid tar det å lage en nettside? Er nettsiden SEO-optimalisert?
 
+### Webflow Bergen
+URL: https://www.frameflow.no/tjenester/webflow
+Pris: Fra 15 000 kr eks. mva.
+Design og utvikling av raske, SEO-optimaliserte Webflow-nettsider med et CMS du enkelt oppdaterer selv, uten teknisk kunnskap.
+Spørsmål vi svarer på: Er Webflow bra for SEO? Kan jeg oppdatere Webflow-nettsiden selv? Bør jeg velge Webflow eller WordPress?
+
 ### App utvikling Bergen
 URL: https://www.frameflow.no/tjenester/app-utvikling
 Pris: Fra 45 000 kr eks. mva.
@@ -51,10 +57,28 @@ Pris: Fra 4 500 kr
 Autentisk bedriftsfotografering og videografi for sosiale medier, nettsider og markedsføring. Levering innen 5–7 virkedager.
 Spørsmål vi svarer på: Hva koster bedriftsfotografering i Bergen? Leverer dere innhold til sosiale medier?
 
+### Markedsføring Bergen
+URL: https://www.frameflow.no/tjenester/markedsforing
+Pris: Fra 4 500 kr/mnd eks. mva.
+Helhetlig digital markedsføring for Bergen-bedrifter under ett tak – webdesign, SEO, sosiale medier og branding, levert av én person uten mellommenn.
+Spørsmål vi svarer på: Hva gjør et markedsføringsbyrå? Hva koster digital markedsføring i Bergen?
+
+### AI Automasjon Bergen
+URL: https://www.frameflow.no/tjenester/ai-automasjon
+Pris: Fra 8 000 kr eks. mva.
+AI-drevne automatiseringer som håndterer henvendelser, kvalifiserer leads og oppdaterer CRM automatisk – uten manuell innsats.
+Spørsmål vi svarer på: Hva er AI-automasjon for en bedrift? Hvilke oppgaver bør jeg automatisere først? Hva koster det å automatisere med AI?
+
+### AI SEO Bergen
+URL: https://www.frameflow.no/tjenester/ai-seo
+Pris: Fra 6 500 kr/mnd eks. mva.
+Entitets-SEO, strukturert data og innholdsstrategi som gjør bedriften synlig og siterbar i ChatGPT, Perplexity, Gemini og Google AI Overviews. Inkluderer Schema.org-markup, semantisk innholdsstrategi og AI-synlighetsrapportering.
+Spørsmål vi svarer på: Hva er AI SEO? Hva er Answer Engine Optimization (AEO)? Hvor lang tid tar AI SEO? Hva koster AI SEO?
+
 ## Prosjekter
 
 URL: https://www.frameflow.no/prosjekter
-Referanseprosjekter: Sportsbytte (sports-bytteplatform), GV Rentals (utleie), HO Orbit, Marbesa Project 94.
+Referanseprosjekter: Sportsbytte (sports-bytteplatform), h-orbit (musikkplattform for artister).
 
 ## Blogg – Artikler om digital markedsføring i Bergen
 
@@ -69,8 +93,8 @@ Forfatter: Ivan Kunne, Frameflow
 - Branding Bergen – bygg merkevare som skiller seg ut: https://www.frameflow.no/blogg/branding-bergen-bygg-merkevare-som-skiller-seg-ut
 - Foto og video for bedrifter i Bergen: https://www.frameflow.no/blogg/foto-video-bedrifter-bergen
 - Digital markedsføring Bergen – 5 kanaler 2026: https://www.frameflow.no/blogg/digital-markedsforing-bergen-5-kanaler-2025
-- Beste markedsføringsbyrå Bergen 2026: https://www.frameflow.no/blogg/beste-markedsforingsbyrå-bergen-2025
-- Hva koster apputvikling i Bergen? Prisguide 2026: https://www.frameflow.no/blogg/app-utvikling-pris-bergen-2025
+- Beste markedsføringsbyrå Bergen 2026: https://www.frameflow.no/blogg/beste-markedsforingsbyraa-bergen-2025
+- Hva koster apputvikling i Bergen? Prisguide 2026: https://www.frameflow.no/blogg/app-utvikling-pris-bergen-2026
 - SEO-byrå i Bergen – hva koster det og hva bør du forvente?: https://www.frameflow.no/blogg/seo-byraa-bergen
 - Logo design i Bergen – pris og hva du bør forvente: https://www.frameflow.no/blogg/logo-design-bergen
 

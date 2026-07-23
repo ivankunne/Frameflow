@@ -4,7 +4,7 @@ import { useRef, useState } from 'react'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
-import { WebMockup, CameraMockup, SocialMockup, BrandMockup, AppMockup, SEOMockup, AIMockup } from '@/components/ServiceMockups'
+import { WebMockup, CameraMockup, SocialMockup, BrandMockup, AppMockup, SEOMockup, AIMockup, AISEOMockup } from '@/components/ServiceMockups'
 
 interface ServicePageProps {
   label: string
@@ -14,9 +14,10 @@ interface ServicePageProps {
   includes: string[]
   process: { step: string; title: string; description: string }[]
   relatedServices: { title: string; href: string }[]
-  mockupType: 'web' | 'photo' | 'social' | 'brand' | 'app' | 'seo' | 'ai'
+  mockupType: 'web' | 'photo' | 'social' | 'brand' | 'app' | 'seo' | 'ai' | 'aiseo'
   pricingFrom?: string
   faqs?: { q: string; a: string }[]
+  children?: React.ReactNode
 }
 
 function PricingAccordion() {
@@ -67,24 +68,22 @@ function FaqItem({ q, a }: { q: string; a: string }) {
       <button
         type="button"
         onClick={() => setOpen(!open)}
+        aria-expanded={open}
         className="w-full flex items-start justify-between gap-4 text-left group"
       >
         <span className="font-semibold text-fg text-sm leading-snug group-hover:text-accent transition-colors">{q}</span>
         <span className={`text-accent text-lg leading-none shrink-0 transition-transform duration-200 ${open ? 'rotate-45' : ''}`}>+</span>
       </button>
-      <AnimatePresence initial={false}>
-        {open && (
-          <motion.div
-            key="a"
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.25, ease: 'easeInOut' }}
-          >
-            <p className="text-fg-muted text-sm leading-relaxed pt-3">{a}</p>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Always rendered (not mount/unmount) so the answer is real, crawlable DOM
+          text on first paint — not just JSON-LD — for engines that don't read schema. */}
+      <motion.div
+        initial={false}
+        animate={{ height: open ? 'auto' : 0, opacity: open ? 1 : 0 }}
+        transition={{ duration: 0.25, ease: 'easeInOut' }}
+        style={{ overflow: 'hidden' }}
+      >
+        <p className="text-fg-muted text-sm leading-relaxed pt-3">{a}</p>
+      </motion.div>
     </div>
   )
 }
@@ -97,6 +96,7 @@ function HeroMockup({ mockupType, visible }: { mockupType: string; visible: bool
   if (mockupType === 'app') return <AppMockup visible={visible} />
   if (mockupType === 'seo') return <SEOMockup visible={visible} />
   if (mockupType === 'ai') return <AIMockup visible={visible} />
+  if (mockupType === 'aiseo') return <AISEOMockup visible={visible} />
   return null
 }
 
@@ -111,6 +111,7 @@ export default function ServicePageTemplate({
   mockupType,
   pricingFrom,
   faqs,
+  children,
 }: ServicePageProps) {
   const t = useTranslations('serviceTemplate')
   const heroRef = useRef(null)
@@ -128,6 +129,7 @@ export default function ServicePageTemplate({
     app: t('badgeApp'),
     seo: t('badgeSeo'),
     ai: t('badgeAi'),
+    aiseo: t('badgeAiSeo'),
   }
 
   const badgeLabel = mockupBadgeLabels[mockupType] ?? 'Frameflow'
@@ -174,10 +176,27 @@ export default function ServicePageTemplate({
                 initial={{ opacity: 0, y: 20 }}
                 animate={heroInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.25 }}
-                className="text-fg-muted text-lg max-w-2xl leading-relaxed mb-10"
+                className="text-fg-muted text-lg max-w-2xl leading-relaxed mb-6"
               >
                 {description}
               </motion.p>
+
+              {/* Quick answer — reuses the existing pricing FAQ verbatim (single source of
+                  truth) as a self-contained, entity-named answer near the top of the page,
+                  for engines that extract text without clicking the FAQ accordion below. */}
+              {faqs && faqs[0] && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={heroInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  className="bg-bg-2 border border-border rounded-xl p-5 max-w-2xl mb-8"
+                >
+                  <p className="text-xs font-semibold text-accent uppercase tracking-widest mb-2">{t('quickAnswerLabel')}</p>
+                  <h2 className="font-semibold text-fg text-base mb-1.5">{faqs[0].q}</h2>
+                  <p className="text-fg-muted text-sm leading-relaxed">{faqs[0].a}</p>
+                </motion.div>
+              )}
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={heroInView ? { opacity: 1, y: 0 } : {}}
@@ -242,6 +261,8 @@ export default function ServicePageTemplate({
         </div>
       </section>
 
+      {children}
+
       {/* Content */}
       <section ref={contentRef} className="py-14 md:py-20 lg:py-24 px-6 lg:px-8 bg-bg-2">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
@@ -302,7 +323,7 @@ export default function ServicePageTemplate({
                 transition={{ duration: 0.45, delay: 0.1 + i * 0.1 }}
                 className="bg-white border border-border rounded-xl p-8 shadow-card"
               >
-                <p className="display-text text-4xl text-accent/20 mb-6">{step.step}</p>
+                <p className="display-text text-4xl text-accent/20 mb-6" aria-hidden="true">{step.step}</p>
                 <h3 className="font-semibold text-fg mb-3">{step.title}</h3>
                 <p className="text-fg-muted text-sm leading-relaxed">{step.description}</p>
               </motion.div>

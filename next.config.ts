@@ -37,14 +37,16 @@ const securityHeaders = [
     key: 'Content-Security-Policy',
     value: [
       "default-src 'self'",
-      `script-src 'self' 'unsafe-inline'${isProd ? '' : " 'unsafe-eval'"}`,
+      `script-src 'self' 'unsafe-inline' https://www.googletagmanager.com${isProd ? '' : " 'unsafe-eval'"}`,
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' data: https://fonts.gstatic.com",
-      "img-src 'self' data: blob:",
+      "img-src 'self' data: blob: https://www.googletagmanager.com",
       "media-src 'none'",
       "object-src 'none'",
-      "connect-src 'self' https://api.resend.com",
-      "frame-src 'none'",
+      // Google Tag Manager + GA4 hits (region-sharded google-analytics.com subdomains)
+      "connect-src 'self' https://api.resend.com https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com",
+      // Only Google's own domain, for the <noscript> GTM fallback iframe below
+      "frame-src https://www.googletagmanager.com",
       "frame-ancestors 'none'",
       "base-uri 'self'",
       "form-action 'self'",
@@ -83,10 +85,25 @@ const nextConfig: NextConfig = {
       { source: '/services/:path*', destination: '/tjenester', permanent: true },
       { source: '/case-studies', destination: '/prosjekter', permanent: true },
       { source: '/case-studies/sportsbytte', destination: '/prosjekter/sportsbytte', permanent: true },
-      { source: '/case-studies/gv-rentals', destination: '/prosjekter/gv-rentals', permanent: true },
-      { source: '/case-studies/marbesa-94', destination: '/prosjekter/marbesa-project-94', permanent: true },
-      { source: '/case-studies/:path*', destination: '/prosjekter', permanent: true },
+      // The negative lookahead excludes removed projects with no equivalent content
+      // (artadent, bergen-bakeri, nordic-fit, marbesa-project-94/marbesa-94, gv-rentals)
+      // so those requests fall through to middleware.ts, which returns a real 410 Gone
+      // instead of this catch-all's soft-404 redirect to the listing page. next.config
+      // redirects are matched before middleware runs, so they must be excluded here too.
+      { source: '/case-studies/:slug((?!artadent|bergen-bakeri|nordic-fit|marbesa-project-94|marbesa-94|gv-rentals).*)', destination: '/prosjekter', permanent: true },
+      // 'ho-orbit' was a typo for the h-orbit brand — slug corrected 2026-07-23
+      { source: '/prosjekter/ho-orbit', destination: '/prosjekter/h-orbit', permanent: true },
+      { source: '/en/projects/ho-orbit', destination: '/en/projects/h-orbit', permanent: true },
+      // Evergreen pricing guide's slug had a baked-in year — dropped 2026-07-23 so it
+      // doesn't look stale every January; the year now only lives in the page title.
+      { source: '/blogg/nettside-pris-bergen-2025', destination: '/blogg/nettside-pris-bergen', permanent: true },
+      { source: '/blogg/nettside-pris-bergen-2026', destination: '/blogg/nettside-pris-bergen', permanent: true },
+      { source: '/en/blog/nettside-pris-bergen-2025', destination: '/en/blog/nettside-pris-bergen', permanent: true },
+      { source: '/en/blog/nettside-pris-bergen-2026', destination: '/en/blog/nettside-pris-bergen', permanent: true },
       { source: '/contact', destination: '/kontakt', permanent: true },
+      { source: '/about-us', destination: '/om-oss', permanent: true },
+      { source: '/privacy-policy', destination: '/personvern', permanent: true },
+      { source: '/blog', destination: '/blogg', permanent: true },
       { source: '/project-configurator', destination: '/tilbud', permanent: true },
       { source: '/meeting-scheduler', destination: '/kontakt', permanent: true },
       { source: '/frameflow-advisor', destination: '/tilbud', permanent: true },

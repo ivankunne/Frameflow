@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import Link from 'next/link'
 import { JsonLd } from '@/components/JsonLd'
+import { buildBreadcrumbSchema, HOME_CRUMB } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -19,17 +20,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.frameflow.no' },
-    { '@type': 'ListItem', position: 2, name: 'Personvern', item: 'https://www.frameflow.no/personvern' },
-  ],
-}
-
 export default async function PersonvernPage({ params }: Props) {
-  await params
+  const { locale } = await params
+  const breadcrumbSchema = buildBreadcrumbSchema(locale, [
+    HOME_CRUMB,
+    { name: 'Personvern', nameEn: 'Privacy', noPath: '/personvern', enPath: '/privacy' },
+  ])
   return (
     <>
     <JsonLd data={breadcrumbSchema} />

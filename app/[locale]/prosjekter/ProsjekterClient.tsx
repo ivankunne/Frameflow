@@ -4,6 +4,7 @@ import React from 'react'
 import { useRef, useState } from 'react'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
 import { useTranslations, useLocale } from 'next-intl'
+import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
 import { projects, type Project } from '@/lib/data'
 import { projectPreviews } from '@/components/ProjectPreviews'
@@ -30,16 +31,26 @@ const tagGradient: Record<string, string> = {
 
 type TagMeta = { color: string; bg: string; border: string; accent: string }
 
-const NO_FILTERS = ['Alle', 'Web design', 'App utvikling', 'Branding', 'Sosiale medier', 'SEO'] as const
-const EN_FILTERS = ['All', 'Web design', 'App development', 'Branding', 'Social media', 'SEO'] as const
+// English labels for tags actually used in lib/data.ts — filters are derived from
+// the live project list so a tag with zero remaining projects never shows up.
+const TAG_LABEL_EN: Record<string, string> = {
+  'Web design': 'Web design',
+  'App utvikling': 'App development',
+  Branding: 'Branding',
+  'Sosiale medier': 'Social media',
+  SEO: 'SEO',
+  'Full-stack': 'Full-stack',
+  React: 'React',
+}
 
 export default function ProsjekterClient() {
   const t = useTranslations('projects')
   const locale = useLocale()
   const isEn = locale === 'en'
 
-  const filters = isEn ? EN_FILTERS : NO_FILTERS
-  type Filter = typeof filters[number]
+  const uniqueNoTags = Array.from(new Set(projects.flatMap((p) => p.tags)))
+  const filters = [isEn ? 'All' : 'Alle', ...uniqueNoTags.map((tag) => (isEn ? TAG_LABEL_EN[tag] ?? tag : tag))]
+  type Filter = string
 
   const heroRef = useRef(null)
   const heroInView = useInView(heroRef, { once: true })
@@ -47,11 +58,12 @@ export default function ProsjekterClient() {
   const gridInView = useInView(gridRef, { once: true, margin: '-60px' })
   const [activeFilter, setActiveFilter] = useState<Filter>(filters[0])
 
-  const filterTagMap: Record<string, string> = isEn
-    ? { 'Web design': 'Web design', 'App development': 'App utvikling', 'Branding': 'Branding', 'Social media': 'Sosiale medier', 'SEO': 'SEO' }
-    : { 'Web design': 'Web design', 'App utvikling': 'App utvikling', 'Branding': 'Branding', 'Sosiale medier': 'Sosiale medier', 'SEO': 'SEO' }
+  const filterTagMap: Record<string, string> = Object.fromEntries(
+    uniqueNoTags.map((tag) => [isEn ? TAG_LABEL_EN[tag] ?? tag : tag, tag])
+  )
 
   const activeNoTag = activeFilter === filters[0] ? null : filterTagMap[activeFilter]
+  const filteredProjects = projects.filter((p) => !activeNoTag || p.tags.includes(activeNoTag))
 
   return (
     <>
@@ -124,24 +136,28 @@ export default function ProsjekterClient() {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 auto-rows-fr">
-            {projects.filter((p) => !activeNoTag || p.tags.includes(activeNoTag)).map((project, i) => {
-              const primaryTag = project.tags[0]
-              const meta: TagMeta = tagMeta[primaryTag] || { color: '#818181', bg: '#f8f8f8', border: '#e5e5e5', accent: '#818181' }
-              const firstResult = project.results?.[0]
-              const Preview = projectPreviews[project.slug]
-              return (
-                <motion.div
-                  key={project.slug}
-                  initial={{ opacity: 0, y: 28 }}
-                  animate={gridInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.5, delay: i * 0.08 }}
-                >
-                  <ProjectCard project={project} meta={meta} firstResult={firstResult ?? null} Preview={Preview} primaryTag={primaryTag} index={i} />
-                </motion.div>
-              )
-            })}
-          </div>
+          {filteredProjects.length === 0 ? (
+            <p className="text-center text-fg-muted text-sm py-16">{t('noResults')}</p>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 auto-rows-fr">
+              {filteredProjects.map((project, i) => {
+                const primaryTag = project.tags[0]
+                const meta: TagMeta = tagMeta[primaryTag] || { color: '#818181', bg: '#f8f8f8', border: '#e5e5e5', accent: '#818181' }
+                const firstResult = project.results?.[0]
+                const Preview = projectPreviews[project.slug]
+                return (
+                  <motion.div
+                    key={project.slug}
+                    initial={{ opacity: 0, y: 28 }}
+                    animate={gridInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.5, delay: i * 0.08 }}
+                  >
+                    <ProjectCard project={project} meta={meta} firstResult={firstResult ?? null} Preview={Preview} primaryTag={primaryTag} index={i} />
+                  </motion.div>
+                )
+              })}
+            </div>
+          )}
 
         </div>
       </section>
@@ -187,16 +203,24 @@ function ProjectCard({
   return (
     <div ref={cardRef}>
       <Link
-        href={`/prosjekter/${project.slug}` as any}
+        href={{ pathname: '/prosjekter/[slug]', params: { slug: project.slug } }}
         className="group flex flex-col bg-white border border-border rounded-2xl overflow-hidden hover:border-accent hover:shadow-blue-sm transition-all duration-300 shadow-card h-full"
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
         <div
-          className="h-52 w-full shrink-0 relative overflow-hidden p-3 transition-all duration-300"
+          className={`h-52 w-full shrink-0 relative overflow-hidden transition-all duration-300 ${project.image ? '' : 'p-3'}`}
           style={{ background: '#f5f5f5' }}
         >
-          {Preview ? (
+          {project.image ? (
+            <Image
+              src={project.image.src}
+              alt={project.image.alt}
+              fill
+              sizes="(min-width: 768px) 420px, 100vw"
+              className="object-cover object-left-top"
+            />
+          ) : Preview ? (
             <Preview visible={inView} />
           ) : (
             <div

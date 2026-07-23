@@ -11,6 +11,11 @@ export const ADDRESS_MAPS_HREF = 'https://maps.google.com/?q=Damsgårdsveien+83a
 export const INSTAGRAM_URL = 'https://www.instagram.com/frameflow_no/'
 export const TIKTOK_URL = 'https://tiktok.com/@frameflow.no'
 
+// ── Consent ───────────────────────────────────────────────────────────────────
+// Gates analytics (GTM) loading — see CookieBanner.tsx and GoogleTagManager.tsx.
+export const COOKIE_CONSENT_KEY = 'ff_cookie_consent'
+export const CONSENT_ACCEPTED_EVENT = 'ff-consent-accepted'
+
 // ── Navigation ────────────────────────────────────────────────────────────────
 export const NAV_LINKS = [
   { href: '/om-oss', label: 'Om oss' },

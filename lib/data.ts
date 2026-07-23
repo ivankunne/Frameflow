@@ -37,7 +37,9 @@ export interface Project {
   location: string
   year: string
   results?: string[]
+  image?: { src: string; alt: string }
   seo?: ProjectSeo
+  faqs?: { q: string; a: string }[]
 }
 
 export const blogPosts: BlogPost[] = [
@@ -86,7 +88,7 @@ Har du fått nye tjenester, ny profil eller flyttet posisjon i markedet siden ne
 
 Kjenner du deg igjen i **ett eller to** av punktene, er det ofte nok å fikse akkurat de tingene. Kjenner du deg igjen i **tre eller flere** – særlig tregt, ikke mobilvennlig og usynlig på Google samtidig – lønner det seg som regel å bygge nytt fra bunnen. Å lappe på et gammelt fundament blir fort dyrere enn å gjøre det riktig én gang.
 
-Skal du bygge nytt, tar vår [steg-for-steg-guide til å lage en nettside](/blogg/lage-nettside-steg-for-steg-guide-2026) deg gjennom prosessen, og [prisoversikten for nettsider i Bergen](/blogg/nettside-pris-bergen-2026) viser hva du kan forvente å betale. Er du usikker på hvem som skal gjøre jobben, hjelper [guiden til å velge riktig webbyrå](/blogg/webbyraa-bergen-guide) deg å stille de riktige spørsmålene.
+Skal du bygge nytt, tar vår [steg-for-steg-guide til å lage en nettside](/blogg/lage-nettside-steg-for-steg-guide-2026) deg gjennom prosessen, og [prisoversikten for nettsider i Bergen](/blogg/nettside-pris-bergen) viser hva du kan forvente å betale. Er du usikker på hvem som skal gjøre jobben, hjelper [guiden til å velge riktig webbyrå](/blogg/webbyraa-bergen-guide) deg å stille de riktige spørsmålene.
 
 ## Hva nå?
 
@@ -106,7 +108,7 @@ Kjenner du deg igjen i ett eller to av tegnene, holder det ofte å utbedre akkur
 
 ### Hva koster en ny nettside i Bergen?
 
-En skreddersydd bedriftsnettside fra et lokalt byrå ligger typisk i området 35 000–120 000 kr avhengig av omfang. Vi har en egen prisoversikt som bryter ned hva som påvirker prisen for Bergen-markedet.
+For en middels stor til stor bedriftsnettside fra et lokalt byrå ligger prisen typisk i området 35 000–120 000 kr, avhengig av omfang. Trenger du noe enklere, starter nettsider fra 15 000 kr. Vi har en egen prisoversikt som bryter ned hva som påvirker prisen for Bergen-markedet.
 
 ### Hvor lang tid tar det å lage en ny nettside?
 
@@ -360,7 +362,7 @@ Etter lansering er jobben ikke ferdig. Følg med på trafikk, juster innhold som
 
 ## Hva koster det å lage en nettside?
 
-Prisen avhenger av omfang og hvem som bygger den – fra noen tusen for en ferdigmal til godt over 100 000 kr for en skreddersydd løsning fra et byrå. Vi har brutt ned alle prisnivåene i en egen [prisoversikt for nettsider](/blogg/nettside-pris-bergen-2026).
+Prisen avhenger av omfang og hvem som bygger den – fra noen tusen for en ferdigmal til godt over 100 000 kr for en skreddersydd løsning fra et byrå. Vi har brutt ned alle prisnivåene i en egen [prisoversikt for nettsider](/blogg/nettside-pris-bergen).
 
 ## Bør du lage nettsiden selv eller bruke et byrå?
 
@@ -382,7 +384,7 @@ Ja. På moderne plattformer som Webflow kan du trygt endre tekst og bilder selv 
 
 ### Hva koster det å lage en profesjonell nettside?
 
-Hos et byrå starter en skreddersydd bedriftsnettside typisk fra 15 000 kr og oppover, avhengig av antall sider og funksjonalitet. Se den fullstendige [prisoversikten](/blogg/nettside-pris-bergen-2026) for detaljer.
+Hos et byrå starter en enklere skreddersydd bedriftsnettside fra 15 000 kr, mens middels store til store prosjekter typisk ligger i området 35 000–120 000 kr, avhengig av antall sider og funksjonalitet. Se den fullstendige [prisoversikten](/blogg/nettside-pris-bergen) for detaljer.
 
 ## Klar for å lage en ny nettside?
 
@@ -589,7 +591,7 @@ Det lønner seg sjelden hvis:
 ❌ Produktene er tunge, skjøre eller krever spesiell emballasje
 ❌ Du ikke har kapasitet til å håndtere returer og klager
 
-Lurer du på hva en vanlig nettside koster til sammenligning? Se vår [prisoversikt for nettsider i Bergen](/blogg/nettside-pris-bergen-2026). Vil du diskutere om nettbutikk er riktig for din bedrift? Se vår [webdesign-tjeneste i Bergen](/tjenester/webdesign) eller [ta kontakt](/kontakt) – vi hjelper Bergen-bedrifter med å ta de riktige digitale valgene.
+Lurer du på hva en vanlig nettside koster til sammenligning? Se vår [prisoversikt for nettsider i Bergen](/blogg/nettside-pris-bergen). Vil du diskutere om nettbutikk er riktig for din bedrift? Se vår [webdesign-tjeneste i Bergen](/tjenester/webdesign) eller [ta kontakt](/kontakt) – vi hjelper Bergen-bedrifter med å ta de riktige digitale valgene.
 `,
   },
   {
@@ -868,7 +870,7 @@ For Bergen-bedrifter: vis at dere er lokale. Inkluder adressen tydelig på siden
 
 Ferdigmaler: 5 000–15 000 kr. Frilanser: 15 000–50 000 kr. Lokalt byrå: 30 000–120 000 kr.
 
-Vår anbefaling: ikke se på nettside som en kostnad, men som en investering. En nettside som genererer én ekstra kunde i måneden er raskt nedbetalt. For en full [prisoversikt for Bergen-markedet](/blogg/nettside-pris-bergen-2026) og hvordan du [beregner avkastningen (ROI)](/blogg/hva-koster-webdesign-bergen-prisguide-2025) på en ny nettside, har vi egne guider.
+Vår anbefaling: ikke se på nettside som en kostnad, men som en investering. En nettside som genererer én ekstra kunde i måneden er raskt nedbetalt. For en full [prisoversikt for Bergen-markedet](/blogg/nettside-pris-bergen) og hvordan du [beregner avkastningen (ROI)](/blogg/hva-koster-webdesign-bergen-prisguide-2025) på en ny nettside, har vi egne guider.
 
 Er du klar for å oppgradere din [digitale tilstedeværelse i Bergen](/tjenester/webdesign)? Vi tilbyr gratis konsultasjon der vi ser på din nåværende nettside og gir konkrete forbedringsforslag.
     `.trim(),
@@ -922,7 +924,7 @@ GBP er bare én brikke i det større bildet – se hele vår [guide til lokal SE
     `.trim(),
   },
   {
-    slug: 'nettside-pris-bergen-2026',
+    slug: 'nettside-pris-bergen',
     title: 'Hva koster en nettside i Bergen? Komplett prisoversikt for 2026',
     excerpt: 'Usikker på hva du bør betale for en ny nettside? Vi bryter ned prisene for Bergen-markedet – fra enkle nettsteder til skreddersydde løsninger.',
     category: 'Webdesign',
@@ -1170,7 +1172,7 @@ Lurer du på hvor du bør starte for din spesifikke bedrift? Se våre [tjenester
     content: `
 ## Nettside som investering – ikke utgift
 
-De fleste Bergen-bedrifter spør «hva koster en nettside?» – og vi har en egen [prisoversikt for nettsider i Bergen](/blogg/nettside-pris-bergen-2026) som svarer på akkurat det. Men det riktige spørsmålet er ofte: «hva gir nettsiden meg tilbake?»
+De fleste Bergen-bedrifter spør «hva koster en nettside?» – og vi har en egen [prisoversikt for nettsider i Bergen](/blogg/nettside-pris-bergen) som svarer på akkurat det. Men det riktige spørsmålet er ofte: «hva gir nettsiden meg tilbake?»
 
 En nettside til 60 000 kr som genererer to nye kunder i måneden – hver verdt 5 000 kr – er nedbetalt på 6 måneder. Deretter tjener den penger hvert eneste år uten ekstra kostnad.
 
@@ -1529,7 +1531,7 @@ Se hva [Frameflow tilbyr innen branding og logodesign](/tjenester/branding) – 
 
 export const projects: Project[] = [
   {
-    slug: 'ho-orbit',
+    slug: 'h-orbit',
     title: 'h-orbit',
     client: 'h-orbit',
     description: 'Musikkplattform for artister – dele musikk, samarbeid og arrangementer',
@@ -1545,6 +1547,10 @@ export const projects: Project[] = [
       '98% app uptime og stabilitet',
       '1000+ arrangementer oppdaget per måned',
     ],
+    image: {
+      src: '/h-orbit-bento-english.png',
+      alt: 'h-orbit-dashboard: avspilling av «Night Light», artist-statistikk med 96 412 månedlige lyttere, artistprofil for Nova Vlecht og kommende arrangementer',
+    },
     seo: {
       titleNo: 'h-orbit – Musikkplattform for artister | Frameflow',
       titleEn: 'h-orbit – Music platform for artists | Frameflow',
@@ -1559,6 +1565,12 @@ export const projects: Project[] = [
       schemaKeywords: 'App utvikling, Branding, React, Full-stack, musikk, artister',
       schemaLocation: 'Bergen, Norge',
     },
+    faqs: [
+      { q: 'Hva er h-orbit?', a: 'h-orbit er en musikkplattform for artister, bygget av Frameflow. Plattformen lar musikere dele musikken sin, finne samarbeidspartnere og oppdage arrangementer – alt på ett sted.' },
+      { q: 'Hvilke tjenester leverte Frameflow til h-orbit?', a: 'Frameflow sto for app utvikling og branding av h-orbit, fra idé til lansert plattform.' },
+      { q: 'Hvilke resultater har h-orbit oppnådd?', a: 'h-orbit har over 2000 artister på plattformen, 500+ samarbeidsprosjekter startet, 98% app-oppetid og over 1000 arrangementer oppdaget per måned.' },
+      { q: 'Hvor er h-orbit basert?', a: 'h-orbit er basert i Amsterdam, Nederland. Frameflow har base i Bergen, men jobber like gjerne med kunder i resten av Norge og internasjonalt.' },
+    ],
   },
   {
     slug: 'sportsbytte',
@@ -1576,6 +1588,10 @@ export const projects: Project[] = [
       'Tydelig visuell identitet og brand guidelines levert',
       'Markant økning i brukerregistreringer etter lansering',
     ],
+    image: {
+      src: '/sportsbytte-bento-norsk.png',
+      alt: 'Sportsbytte-dashboard: utvalgt annonse for skøyteski, miljøeffekt med 967 videresolgte varer, Bergen Skiklubb-klubbprofil og utstyrsutforskning',
+    },
     seo: {
       titleNo: 'Sportsbytte – Webdesign og branding for norsk bytteplatform | Frameflow',
       titleEn: 'Sportsbytte – Web design and branding for Norwegian sports marketplace | Frameflow',
@@ -1590,68 +1606,12 @@ export const projects: Project[] = [
       schemaKeywords: 'Web design, Branding, SEO, sportsbytte, brukt sportsutstyr, Norge',
       schemaLocation: 'Bergen, Norge',
     },
-  },
-  {
-    slug: 'marbesa-project-94',
-    title: 'Marbesa Project 94',
-    client: 'Marbesa Project 94',
-    description: 'Webdesign for et luksus eiendomsprosjekt i Marbella, Spania',
-    fullDescription:
-      'Marbesa Project 94 er et eksklusivt luksus-eiendomsprosjekt i Marbella. Vi skapte en nettside som formidler det høye prisnivået og den eksklusive livsstilen prosjektet representerer, med fokus på internasjonal målgruppe.',
-    challenge: 'Et nytt luksusprosjekt uten digital identitet, som skulle appellere til et kresent internasjonalt marked med høye forventninger til estetikk.',
-    tags: ['Web design', 'Branding'],
-    location: 'Marbella, Spania',
-    year: '2026',
-    results: [
-      'Luksusestetikk som matcher prosjektets posisjonering',
-      'Flerspråklig design for internasjonal målgruppe',
-      'Høy konverteringsrate på visningsforespørsler',
+    faqs: [
+      { q: 'Hva er Sportsbytte?', a: 'Sportsbytte er en norsk plattform for kjøp, salg og bytte av brukt sportsutstyr. Frameflow bygget en ny nettside og visuell identitet for plattformen.' },
+      { q: 'Hvilke tjenester leverte Frameflow til Sportsbytte?', a: 'Frameflow leverte webdesign, branding og SEO for Sportsbytte – en komplett digital relansering av plattformen.' },
+      { q: 'Hvilke resultater fikk Sportsbytte etter relanseringen?', a: 'Sportsbytte fikk en moderne, konverteringsfokusert nettside, en tydelig visuell identitet med brand guidelines, og en markant økning i brukerregistreringer etter lansering.' },
+      { q: 'Hvor er Sportsbytte basert?', a: 'Sportsbytte opererer i Norge. Frameflow er basert i Bergen og jobber med kunder i hele landet.' },
     ],
-    seo: {
-      titleNo: 'Marbesa Project 94 – Luksus eiendomsnettside | Frameflow',
-      titleEn: 'Marbesa Project 94 – Luxury real estate website | Frameflow',
-      descNo: 'Frameflow designet en eksklusiv nettside for luksus eiendomsprosjektet Marbesa Project 94 i Marbella, Spania.',
-      descEn: 'Frameflow designed an exclusive website for the luxury real estate project Marbesa Project 94 in Marbella, Spain.',
-      keywordsNo: ['Marbesa Project 94', 'luksus eiendom nettside Marbella', 'webdesign Spania', 'Frameflow'],
-      keywordsEn: ['Marbesa Project 94', 'luxury real estate website Marbella', 'web design Spain', 'Frameflow'],
-      ogImage: 'https://www.frameflow.no/og?title=Marbesa+Project+94+%E2%80%93+Luksus+eiendomsnettside&label=Branding',
-      schemaName: 'Marbesa Project 94 – Luksus eiendomsnettside',
-      schemaDescription: 'Eksklusiv nettside for luksus eiendomsprosjektet Marbesa Project 94 i Marbella, Spania.',
-      dateCreated: '2024',
-      schemaKeywords: 'Web design, luksus eiendom, Marbella, webdesign Bergen',
-      schemaLocation: 'Marbella, Spania',
-    },
-  },
-  {
-    slug: 'gv-rentals',
-    title: 'GV Rentals',
-    client: 'GV Rentals',
-    description: 'Webdesign og sosiale medier innhold for utleiebyrå i Marbella',
-    fullDescription:
-      'GV Rentals er et utleiebyrå i Marbella som trengte en sterk digital tilstedeværelse. Vi leverte både nettside og løpende sosiale medier innhold – en blanding av eiendomsvisninger, lifestyle innhold og lokale tips.',
-    challenge: 'Uten nettsted og sosiale medier gikk potensielle leietakere til konkurrenter. Byrået hadde ingen konsistent visuell identitet på tvers av kanaler.',
-    tags: ['Web design', 'Sosiale medier'],
-    location: 'Marbella, Spania',
-    year: '2026',
-    results: [
-      'Betydelig høyere engasjement på sosiale medier',
-      'Økt bookingrate etter ny nettside',
-      'Konsistent visuell identitet på alle kanaler',
-    ],
-    seo: {
-      titleNo: 'GV Rentals – Webdesign og sosiale medier | Frameflow',
-      titleEn: 'GV Rentals – Web design and social media in Marbella | Frameflow',
-      descNo: 'Frameflow leverte nettside og løpende sosiale medier innhold for GV Rentals i Marbella. Økt engasjement og booking-rate.',
-      descEn: 'Frameflow delivered a website and ongoing social media content for GV Rentals in Marbella. Increased engagement and booking rate.',
-      keywordsNo: ['GV Rentals', 'ferieutleie nettside Marbella', 'sosiale medier Marbella', 'Frameflow'],
-      keywordsEn: ['GV Rentals', 'vacation rental website Marbella', 'social media management Marbella', 'Frameflow'],
-      ogImage: 'https://www.frameflow.no/og?title=GV+Rentals+%E2%80%93+Webdesign+og+sosiale+medier&label=Sosiale+medier',
-      schemaName: 'GV Rentals – Webdesign og sosiale medier i Marbella',
-      schemaDescription: 'Nettside og løpende sosiale medier-innhold for GV Rentals i Marbella. Økt engasjement og booking-rate.',
-      dateCreated: '2025',
-      schemaKeywords: 'Web design, sosiale medier, utleie Marbella, webdesign Bergen',
-      schemaLocation: 'Marbella, Spania',
-    },
   },
 ]
 

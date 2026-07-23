@@ -1,14 +1,31 @@
 'use client'
 
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
 import type { Project } from '@/lib/data'
 
 // ─── Project-specific browser mockup ──────────────────────────────────────
 function ProjectBrowserMockup({ project, visible }: { project: Project; visible: boolean }) {
   const slug = project.slug
+
+  if (project.image) {
+    return (
+      <div className="relative w-full overflow-hidden rounded-2xl border border-border shadow-card-hover bg-white">
+        <Image
+          src={project.image.src}
+          alt={project.image.alt}
+          width={3200}
+          height={2000}
+          sizes="(min-width: 1024px) 1152px, 100vw"
+          className="w-full h-auto"
+          priority
+        />
+      </div>
+    )
+  }
 
   return (
     <div className="flex flex-col h-80 overflow-hidden rounded-2xl border border-border shadow-card-hover bg-white">
@@ -26,7 +43,7 @@ function ProjectBrowserMockup({ project, visible }: { project: Project; visible:
             transition={{ delay: 0.4 }}
             className="text-[10px] text-fg-muted font-mono"
           >
-            {slug === 'sportsbytte' ? 'sportsbytte.no' : slug === 'marbesa-project-94' ? 'marbesa-project-94.com' : slug === 'gv-rentals' ? 'gv-rentals.com' : slug === 'ho-orbit' ? 'h-orbit.nl' : `frameflow.no/${slug}`}
+            {slug === 'sportsbytte' ? 'sportsbytte.no' : slug === 'h-orbit' ? 'h-orbit.nl' : `frameflow.no/${slug}`}
           </motion.span>
         </div>
       </div>
@@ -127,181 +144,8 @@ function ProjectBrowserMockup({ project, visible }: { project: Project; visible:
         </div>
       )}
 
-      {/* ── MARBESA: curtain wipe + center-expand gold rule + elevator cards ── */}
-      {slug === 'marbesa-project-94' && (
-        <div className="flex-1 h-full relative overflow-hidden" style={{ background: 'linear-gradient(160deg, #0d1117 0%, #0f1f2e 50%, #0a1520 100%)' }}>
-          {/* Scene fades in */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={visible ? { opacity: 1 } : {}}
-            transition={{ duration: 0.9, delay: 0.38 }}
-            className="absolute inset-0 p-6"
-          >
-            {/* Nav */}
-            <div className="flex items-center justify-between mb-8">
-              <div className="w-20 h-2.5 rounded-full" style={{ background: '#c9a96e' }} />
-              <div className="flex gap-3">
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="w-8 h-1.5 rounded-full bg-white/20" />
-                ))}
-              </div>
-            </div>
-
-            {/* Gold rule extends from center outward */}
-            <div className="relative h-0.5 w-16 mb-5 overflow-hidden">
-              <motion.div
-                initial={{ scaleX: 0 }}
-                animate={visible ? { scaleX: 1 } : {}}
-                transition={{ duration: 0.55, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                style={{ transformOrigin: 'center', background: 'linear-gradient(90deg, #c9a96e, #e8c97a)' }}
-                className="absolute inset-0 rounded-full"
-              />
-            </div>
-
-            {/* Heading — clip reveal */}
-            <div className="mb-6">
-              <div className="overflow-hidden mb-2">
-                <motion.div
-                  initial={{ y: '110%' }}
-                  animate={visible ? { y: '0%' } : {}}
-                  transition={{ duration: 0.48, delay: 0.68, ease: [0.22, 1, 0.36, 1] }}
-                  className="w-2/3 h-5 bg-white/80 rounded"
-                />
-              </div>
-              <div className="overflow-hidden">
-                <motion.div
-                  initial={{ y: '110%' }}
-                  animate={visible ? { y: '0%' } : {}}
-                  transition={{ duration: 0.4, delay: 0.78, ease: [0.22, 1, 0.36, 1] }}
-                  className="w-1/2 h-3.5 bg-white/45 rounded"
-                />
-              </div>
-            </div>
-
-            {/* CTA — spring pop */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.85 }}
-              animate={visible ? { opacity: 1, scale: 1 } : {}}
-              transition={{ type: 'spring', stiffness: 200, damping: 18, delay: 0.9 }}
-              className="w-28 h-8 rounded-lg flex items-center justify-center"
-              style={{ background: '#c9a96e' }}
-            >
-              <div className="w-14 h-1.5 rounded-full bg-white/70" />
-            </motion.div>
-          </motion.div>
-
-          {/* Property cards — elevator rise (y + scale together) */}
-          <div className="absolute bottom-4 left-6 right-6 grid grid-cols-3 gap-2">
-            {[0, 1, 2].map((i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 28, scale: 0.9 }}
-                animate={visible ? { opacity: 1, y: 0, scale: 1 } : {}}
-                transition={{ duration: 0.45, delay: 0.97 + i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-                className="rounded-lg p-2.5 border"
-                style={{ background: 'rgba(201,169,110,0.07)', borderColor: 'rgba(201,169,110,0.2)' }}
-              >
-                <div className="w-full h-1.5 rounded-full mb-1.5 bg-white/20" />
-                <div className="w-3/4 h-1 rounded-full bg-white/12" />
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Curtain wipe — reveals a hero image area at the right */}
-          <motion.div
-            initial={{ x: 0 }}
-            animate={visible ? { x: '100%' } : {}}
-            transition={{ duration: 0.65, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute top-12 right-6 w-32 bottom-20 rounded-lg z-10 pointer-events-none"
-            style={{ background: '#0a1520' }}
-          />
-          <div
-            className="absolute top-12 right-6 w-32 bottom-20 rounded-lg overflow-hidden"
-            style={{ background: 'linear-gradient(160deg, #1c1508 0%, #2e2010 60%, #1c1508 100%)' }}
-          >
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-12 h-1.5 rounded" style={{ background: 'rgba(201,169,110,0.3)' }} />
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* ── GV RENTALS: search focus + filters from right + diagonal listing entries ── */}
-      {slug === 'gv-rentals' && (
-        <div className="flex-1 bg-white p-5 h-full relative overflow-hidden">
-          {/* Nav */}
-          <motion.div
-            initial={{ opacity: 0, y: -8 }}
-            animate={visible ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.3, delay: 0.48 }}
-            className="flex items-center justify-between mb-4"
-          >
-            <div className="w-18 h-2.5 bg-accent/25 rounded-full" />
-            <div className="flex gap-2 items-center">
-              <div className="w-16 h-6 bg-bg-2 border border-border rounded-md" />
-              <div className="w-14 h-6 bg-accent rounded-md" />
-            </div>
-          </motion.div>
-
-          {/* Search bar — focus animation (border glow) */}
-          <motion.div
-            initial={{ opacity: 0, borderColor: 'rgba(33,114,181,0)' }}
-            animate={visible ? { opacity: 1, borderColor: ['rgba(33,114,181,0)', 'rgba(33,114,181,0.5)', 'rgba(33,114,181,0.25)'] } : {}}
-            transition={{ duration: 0.7, delay: 0.58, times: [0, 0.6, 1] }}
-            className="w-full h-9 bg-bg-2 border-2 rounded-lg mb-3 flex items-center px-3 gap-2"
-          >
-            <div className="w-3 h-3 rounded-full border-2 border-fg/20 shrink-0" />
-            <div className="w-1/3 h-1.5 bg-fg/10 rounded-full" />
-          </motion.div>
-
-          {/* Filter tags — slide from right */}
-          <div className="flex gap-2 mb-4 overflow-hidden">
-            {['Marbella', 'Villa', '2+ sov', 'Pool'].map((tag, i) => (
-              <motion.div
-                key={tag}
-                initial={{ opacity: 0, x: 18 }}
-                animate={visible ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.3, delay: 0.72 + i * 0.07 }}
-                className="shrink-0 h-6 px-2.5 rounded-full border border-border bg-bg-2 flex items-center"
-              >
-                <span className="text-[9px] text-fg-muted font-medium">{tag}</span>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Listing rows — diagonal entry (y + x together) */}
-          {[
-            { bg: '#e8f0f9', delay: 0.82 },
-            { bg: '#fef3c7', delay: 0.94 },
-            { bg: '#fce7f3', delay: 1.06 },
-          ].map((item, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, x: 16, y: 10 }}
-              animate={visible ? { opacity: 1, x: 0, y: 0 } : {}}
-              transition={{ duration: 0.38, delay: item.delay, ease: [0.22, 1, 0.36, 1] }}
-              className="flex items-center gap-3 mb-2.5"
-            >
-              <div className="w-12 h-10 rounded-lg shrink-0" style={{ background: item.bg }} />
-              <div className="flex-1">
-                <div className="w-3/4 h-2 bg-fg/15 rounded mb-1.5" />
-                <div className="w-1/2 h-1.5 bg-fg/8 rounded" />
-              </div>
-              {/* Availability dot — spring pop */}
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={visible ? { scale: 1 } : {}}
-                transition={{ type: 'spring', stiffness: 300, damping: 14, delay: item.delay + 0.15 }}
-                className="w-2 h-2 rounded-full shrink-0"
-                style={{ background: i === 1 ? '#94a3b8' : '#34C759' }}
-              />
-            </motion.div>
-          ))}
-        </div>
-      )}
-
       {/* ── H-ORBIT: dark music platform — waveform + artist cards + floating player ── */}
-      {slug === 'ho-orbit' && (
+      {slug === 'h-orbit' && (
         <div className="flex-1 h-full relative overflow-hidden" style={{ background: 'linear-gradient(155deg, #08060f 0%, #110d20 55%, #080511 100%)' }}>
           <motion.div
             initial={{ opacity: 0 }}
@@ -463,18 +307,45 @@ function ProjectBrowserMockup({ project, visible }: { project: Project; visible:
         </div>
       )}
 
-      {slug !== 'sportsbytte' && slug !== 'marbesa-project-94' && slug !== 'gv-rentals' && slug !== 'ho-orbit' && (
+      {slug !== 'sportsbytte' && slug !== 'h-orbit' && (
         <div className="flex-1 relative h-full">
           <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #f0f4fb 0%, #e8f0f9 50%, #f8f8f8 100%)' }} />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center">
-              <p className="display-text text-6xl text-fg/5 mb-4">{project.title}</p>
+              <p className="display-text text-6xl text-fg/5 mb-4" aria-hidden="true">{project.title}</p>
               <p className="text-xs text-fg-muted font-medium">Prosjektbilde</p>
             </div>
           </div>
           <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-accent to-blue-400" />
         </div>
       )}
+    </div>
+  )
+}
+
+function FaqItem({ q, a }: { q: string; a: string }) {
+  const [open, setOpen] = useState(false)
+  return (
+    <div className="py-5">
+      <button
+        type="button"
+        onClick={() => setOpen(!open)}
+        aria-expanded={open}
+        className="w-full flex items-start justify-between gap-4 text-left group"
+      >
+        <span className="font-semibold text-fg text-sm leading-snug group-hover:text-accent transition-colors">{q}</span>
+        <span className={`text-accent text-lg leading-none shrink-0 transition-transform duration-200 ${open ? 'rotate-45' : ''}`}>+</span>
+      </button>
+      {/* Always rendered (not mount/unmount on open) so the answer is real,
+          crawlable DOM text on first paint, matching the FAQPage schema below. */}
+      <motion.div
+        initial={false}
+        animate={{ height: open ? 'auto' : 0, opacity: open ? 1 : 0 }}
+        transition={{ duration: 0.25, ease: 'easeInOut' }}
+        style={{ overflow: 'hidden' }}
+      >
+        <p className="text-fg-muted text-sm leading-relaxed pt-3">{a}</p>
+      </motion.div>
     </div>
   )
 }
@@ -556,21 +427,23 @@ export default function ProjectPageTemplate({ project }: { project: Project }) {
             transition={{ duration: 0.6 }}
             className="relative mb-16"
           >
-            {/* Top-left: Lansert + year badge */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.85 }}
-              animate={contentInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ type: 'spring', stiffness: 200, damping: 18, delay: 0.5 }}
-              className="absolute -top-4 -left-4 z-10 bg-white border border-border rounded-xl px-3 py-2 shadow-card hidden sm:flex items-center gap-2"
-            >
-              <span className="w-2 h-2 rounded-full bg-green-500" />
-              <span className="text-[11px] font-semibold text-fg">{t('launched')} · {project.year}</span>
-            </motion.div>
+            {/* Top-left: Lansert + year badge — skipped for real screenshots, which already carry their own on-image UI chrome */}
+            {!project.image && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.85 }}
+                animate={contentInView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ type: 'spring', stiffness: 200, damping: 18, delay: 0.5 }}
+                className="absolute -top-4 -left-4 z-10 bg-white border border-border rounded-xl px-3 py-2 shadow-card hidden sm:flex items-center gap-2"
+              >
+                <span className="w-2 h-2 rounded-full bg-green-500" />
+                <span className="text-[11px] font-semibold text-fg">{t('launched')} · {project.year}</span>
+              </motion.div>
+            )}
 
             <ProjectBrowserMockup project={project} visible={contentInView} />
 
-            {/* Bottom-right: first result badge */}
-            {project.results && project.results[0] && (
+            {/* Bottom-right: first result badge — skipped for real screenshots, same reason */}
+            {!project.image && project.results && project.results[0] && (
               <motion.div
                 initial={{ opacity: 0, scale: 0.85 }}
                 animate={contentInView ? { opacity: 1, scale: 1 } : {}}
@@ -639,6 +512,20 @@ export default function ProjectPageTemplate({ project }: { project: Project }) {
           </div>
         </div>
       </section>
+
+      {/* FAQ */}
+      {project.faqs && project.faqs.length > 0 && (
+        <section className="py-14 md:py-20 px-6 lg:px-8 bg-white border-t border-border">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="display-text text-3xl text-fg mb-10">{t('faqLabel')}</h2>
+            <div className="flex flex-col divide-y divide-border">
+              {project.faqs.map((faq, i) => (
+                <FaqItem key={i} q={faq.q} a={faq.a} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA */}
       <section className="py-16 px-6 lg:px-8 bg-white border-t border-border">
