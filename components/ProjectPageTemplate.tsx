@@ -133,12 +133,12 @@ function ProjectBrowserMockup({ project, visible }: { project: Project; visible:
             className="absolute bottom-4 right-4 bg-white border rounded-xl p-3 shadow-card-hover"
             style={{ borderColor: 'rgba(22,163,74,0.2)', maxWidth: '168px' }}
           >
-            <p className="text-[8px] font-mono text-green-600 mb-0.5">sportsbytte.no</p>
+            <p className="text-[8px] font-mono text-green-700 mb-0.5">sportsbytte.no</p>
             <p className="text-[9px] font-semibold text-fg mb-1 leading-tight">Sportsbytte – Kjøp og selg sportsutstyr</p>
             <p className="text-[8px] text-fg-muted leading-tight">Norges markedsplass for brukt utstyr...</p>
             <div className="flex items-center gap-1 mt-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-              <span className="text-[8px] font-semibold text-green-600">Ny plattform live</span>
+              <span className="text-[8px] font-semibold text-green-700">Ny plattform live</span>
             </div>
           </motion.div>
         </div>
@@ -494,14 +494,14 @@ export default function ProjectPageTemplate({ project }: { project: Project }) {
                 animate={contentInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.26 }}
               >
-                <span className="inline-flex items-center gap-2 text-green-600 text-xs font-semibold uppercase tracking-widest mb-4">
+                <span className="inline-flex items-center gap-2 text-green-700 text-xs font-semibold uppercase tracking-widest mb-4">
                   <span className="w-4 h-px bg-green-500" /> {t('labelResults')}
                 </span>
                 <ul className="flex flex-col gap-3">
                   {project.results.map((result, i) => (
                     <li key={i} className="flex items-start gap-2.5 text-fg-muted">
                       <span className="w-4 h-4 rounded-md bg-green-50 border border-green-100 flex items-center justify-center shrink-0 mt-0.5">
-                        <span className="text-green-600 text-[9px] font-bold">✓</span>
+                        <span className="text-green-700 text-[9px] font-bold">✓</span>
                       </span>
                       <span className="text-sm">{result}</span>
                     </li>

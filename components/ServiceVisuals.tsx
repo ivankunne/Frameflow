@@ -237,7 +237,7 @@ export function SocialVisual({ visible }: { visible: boolean }) {
           className="flex items-center gap-1.5"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-          <span className="text-[9px] font-semibold text-green-600">Live</span>
+          <span className="text-[9px] font-semibold text-green-700">Live</span>
         </motion.div>
       </div>
 

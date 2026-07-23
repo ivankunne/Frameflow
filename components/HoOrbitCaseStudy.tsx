@@ -26,7 +26,7 @@ export function HoOrbitCaseStudy() {
           transition={{ duration: 0.5 }}
           className="mb-12 md:mb-16"
         >
-          <span className="inline-flex items-center gap-2 text-cyan-600 text-xs font-semibold uppercase tracking-widest mb-4">
+          <span className="inline-flex items-center gap-2 text-cyan-700 text-xs font-semibold uppercase tracking-widest mb-4">
             <span className="w-4 h-px bg-cyan-600" /> Case Study
           </span>
           <h2 className="display-text text-3xl sm:text-4xl lg:text-5xl text-fg">h-orbit</h2>
@@ -71,7 +71,7 @@ export function HoOrbitCaseStudy() {
                       className="flex items-center gap-2 text-fg-muted"
                     >
                       <span className="w-5 h-5 rounded-full bg-cyan-100 border border-cyan-300 flex items-center justify-center shrink-0">
-                        <span className="text-cyan-600 text-[10px] font-bold">✓</span>
+                        <span className="text-cyan-700 text-[10px] font-bold">✓</span>
                       </span>
                       <span className="text-sm">{item}</span>
                     </motion.li>
