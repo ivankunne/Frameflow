@@ -18,7 +18,7 @@ function SportsbyttePreview({ visible }: { visible: boolean }) {
         </motion.div>
         <div className="flex gap-1.5 mb-3">
           {categories.map((cat, i) => (
-            <motion.div key={cat} initial={{ opacity: 0, scale: 0.8 }} animate={visible ? { opacity: 1, scale: 1 } : {}} transition={{ type: 'spring', stiffness: 240, damping: 16, delay: 0.42 + i * 0.08 }} className="px-2 h-5 rounded-full text-[8px] font-semibold flex items-center" style={{ background: i === 0 ? '#16a34a' : '#16a34a18', color: i === 0 ? '#fff' : '#16a34a' }}>{cat}</motion.div>
+            <motion.div key={cat} initial={{ opacity: 0, scale: 0.8 }} animate={visible ? { opacity: 1, scale: 1 } : {}} transition={{ type: 'spring', stiffness: 240, damping: 16, delay: 0.42 + i * 0.08 }} className="px-2 h-5 rounded-full text-[8px] font-semibold flex items-center" style={{ background: i === 0 ? '#166534' : '#16653418', color: i === 0 ? '#fff' : '#166534' }}>{cat}</motion.div>
           ))}
         </div>
         <div className="flex flex-col gap-1.5">
@@ -62,8 +62,8 @@ export default function HomeProjects() {
   const t = useTranslations('home.projects')
 
   const projects = [
-    { slug: 'h-orbit', title: 'h-orbit', description: t('horbitDesc'), tags: ['App utvikling', 'Branding', 'Full-stack'], location: 'Bergen, Norge', result: t('horbitStat'), color: '#06b6d4', Preview: HoOrbitPreview },
-    { slug: 'sportsbytte', title: 'Sportsbytte', description: t('sportsbytteDesc'), tags: ['Web design', 'Branding', 'SEO'], location: 'Norge', result: t('sportsbytteStat'), color: '#16a34a', Preview: SportsbyttePreview },
+    { slug: 'h-orbit', title: 'h-orbit', description: t('horbitDesc'), tags: ['App utvikling', 'Branding', 'Full-stack'], location: 'Bergen, Norge', result: t('horbitStat'), color: '#155e75', Preview: HoOrbitPreview },
+    { slug: 'sportsbytte', title: 'Sportsbytte', description: t('sportsbytteDesc'), tags: ['Web design', 'Branding', 'SEO'], location: 'Norge', result: t('sportsbytteStat'), color: '#166534', Preview: SportsbyttePreview },
   ]
 
   return (

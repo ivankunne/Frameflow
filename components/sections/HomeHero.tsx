@@ -258,9 +258,9 @@ export default function HomeHero() {
             >
               <p className="text-[9px] font-semibold text-fg-muted uppercase tracking-widest mb-2">Lighthouse</p>
               {[
-                { label: 'Performance', score: 98, color: '#22c55e' },
-                { label: 'SEO', score: 97, color: '#22c55e' },
-                { label: 'Best Pract.', score: 92, color: '#22c55e' },
+                { label: 'Performance', score: 98, color: '#15803d' },
+                { label: 'SEO', score: 97, color: '#15803d' },
+                { label: 'Best Pract.', score: 92, color: '#15803d' },
               ].map((row) => (
                 <div key={row.label} className="flex items-center gap-2 mb-1 last:mb-0">
                   <span className="text-[9px] text-fg-muted w-16 shrink-0">{row.label}</span>

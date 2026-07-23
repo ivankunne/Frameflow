@@ -194,12 +194,12 @@ export function SocialVisual({ visible }: { visible: boolean }) {
     { d: 'Sø', ig: 54, tt: 44 },
   ]
   const platforms = [
-    { name: 'Instagram', val: '4.2K', color: '#e1306c', dot: '◈' },
+    { name: 'Instagram', val: '4.2K', color: '#ca2b61', dot: '◈' },
     { name: 'TikTok', val: '8.7K', color: '#171717', dot: '◆' },
-    { name: 'LinkedIn', val: '1.2K', color: '#0077b5', dot: '◉' },
+    { name: 'LinkedIn', val: '1.2K', color: '#0073af', dot: '◉' },
   ]
   const metrics = [
-    { icon: '♥', label: 'Likes', val: '2.3K', c: '#e1306c' },
+    { icon: '♥', label: 'Likes', val: '2.3K', c: '#ca2b61' },
     { icon: '●', label: 'Comments', val: '341', c: '#2172b5' },
     { icon: '↗', label: 'Delt', val: '189', c: '#7c3aed' },
     { icon: '★', label: 'Lagret', val: '94', c: '#f59e0b' },
@@ -262,7 +262,7 @@ export function SocialVisual({ visible }: { visible: boolean }) {
             transition={{ delay: 0.62 }}
             className="pb-1"
           >
-            <span className="text-[11px] font-bold" style={{ color: '#22c55e' }}>↑ +23%</span>
+            <span className="text-[11px] font-bold" style={{ color: '#15803d' }}>↑ +23%</span>
             <span className="text-[9px] ml-1" style={{ color: '#818181' }}>vs forrige uke</span>
           </motion.div>
         </div>
@@ -345,7 +345,7 @@ export function SEOVisual({ visible }: { visible: boolean }) {
           animate={visible ? { opacity: 1 } : {}}
           transition={{ delay: 0.3 }}
           className="text-[8px] font-semibold px-2 py-0.5 rounded-full"
-          style={{ background: '#dcfce7', color: '#16a34a' }}
+          style={{ background: '#dcfce7', color: '#166534' }}
         >
           ↑ Forbedring
         </motion.span>
@@ -372,7 +372,7 @@ export function SEOVisual({ visible }: { visible: boolean }) {
             transition={{ delay: 0.55 }}
             className="pb-1"
           >
-            <span className="text-[11px] font-bold" style={{ color: '#22c55e' }}>↑ +11.5</span>
+            <span className="text-[11px] font-bold" style={{ color: '#15803d' }}>↑ +11.5</span>
             <span className="text-[9px] ml-1" style={{ color: '#9ca3af' }}>vs 3 mnd siden</span>
           </motion.div>
         </div>
@@ -412,13 +412,13 @@ export function SEOVisual({ visible }: { visible: boolean }) {
               className="w-6 h-6 rounded-md flex items-center justify-center shrink-0 font-bold text-[11px]"
               style={{
                 background: k.pos <= 3 ? '#dcfce7' : '#dbeafe',
-                color: k.pos <= 3 ? '#16a34a' : '#2172b5',
+                color: k.pos <= 3 ? '#166534' : '#1a5d9a',
               }}
             >
               {k.pos}
             </div>
             <span className="text-[9px] font-medium flex-1 truncate" style={{ color: '#374151' }}>{k.kw}</span>
-            <span className="text-[9px] font-bold shrink-0" style={{ color: '#22c55e' }}>+{k.change}</span>
+            <span className="text-[9px] font-bold shrink-0" style={{ color: '#15803d' }}>+{k.change}</span>
           </motion.div>
         ))}
       </div>
@@ -456,7 +456,7 @@ export function AIVisual({ visible }: { visible: boolean }) {
           className="flex items-center gap-1.5"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-          <span className="text-[8px] font-semibold" style={{ color: '#16a34a' }}>94% auto</span>
+          <span className="text-[8px] font-semibold" style={{ color: '#166534' }}>94% auto</span>
         </motion.div>
       </div>
 
@@ -481,7 +481,7 @@ export function AIVisual({ visible }: { visible: boolean }) {
             transition={{ delay: 0.55 }}
             className="pb-1"
           >
-            <span className="text-[11px] font-bold" style={{ color: '#22c55e' }}>↑ 47 i dag</span>
+            <span className="text-[11px] font-bold" style={{ color: '#15803d' }}>↑ 47 i dag</span>
             <span className="text-[9px] ml-1" style={{ color: '#9ca3af' }}>henvendelser</span>
           </motion.div>
         </div>
@@ -519,14 +519,14 @@ export function AIVisual({ visible }: { visible: boolean }) {
           >
             <div
               className="w-6 h-6 rounded-md flex items-center justify-center shrink-0 font-bold text-[10px]"
-              style={{ background: '#eef2ff', color: '#6366f1', border: '1px solid #c7d2fe' }}
+              style={{ background: '#eef2ff', color: '#4f46e5', border: '1px solid #c7d2fe' }}
             >
               →
             </div>
             <span className="text-[9px] font-medium flex-1 truncate" style={{ color: '#374151' }}>
               {a.trigger} → {a.action}
             </span>
-            <span className="text-[8px] font-mono shrink-0" style={{ color: '#22c55e' }}>{a.time}</span>
+            <span className="text-[8px] font-mono shrink-0" style={{ color: '#15803d' }}>{a.time}</span>
           </motion.div>
         ))}
       </div>
@@ -562,7 +562,7 @@ export function AISeoVisual({ visible }: { visible: boolean }) {
           animate={visible ? { opacity: 1 } : {}}
           transition={{ delay: 0.3 }}
           className="text-[8px] font-semibold px-2 py-0.5 rounded-full"
-          style={{ background: '#ccfbf1', color: '#0d9488' }}
+          style={{ background: '#ccfbf1', color: '#115e59' }}
         >
           ↑ Sitert
         </motion.span>
@@ -589,7 +589,7 @@ export function AISeoVisual({ visible }: { visible: boolean }) {
             transition={{ delay: 0.55 }}
             className="pb-1"
           >
-            <span className="text-[11px] font-bold" style={{ color: '#0d9488' }}>AI-motorer</span>
+            <span className="text-[11px] font-bold" style={{ color: '#115e59' }}>AI-motorer</span>
             <span className="text-[9px] ml-1" style={{ color: '#9ca3af' }}>siterer siden aktivt</span>
           </motion.div>
         </div>
@@ -629,13 +629,13 @@ export function AISeoVisual({ visible }: { visible: boolean }) {
               className="w-6 h-6 rounded-md flex items-center justify-center shrink-0 font-bold text-[10px]"
               style={{
                 background: e.cited ? '#ccfbf1' : '#f3f4f6',
-                color: e.cited ? '#0d9488' : '#9ca3af',
+                color: e.cited ? '#115e59' : '#9ca3af',
               }}
             >
               {e.cited ? '✓' : '···'}
             </div>
             <span className="text-[9px] font-medium flex-1 truncate" style={{ color: '#374151' }}>{e.name}</span>
-            <span className="text-[8px] font-bold shrink-0" style={{ color: e.cited ? '#0d9488' : '#9ca3af' }}>{e.status}</span>
+            <span className="text-[8px] font-bold shrink-0" style={{ color: e.cited ? '#115e59' : '#9ca3af' }}>{e.status}</span>
           </motion.div>
         ))}
       </div>
@@ -647,9 +647,9 @@ export function AISeoVisual({ visible }: { visible: boolean }) {
 export function MarketingVisual({ visible }: { visible: boolean }) {
   const channels = [
     { icon: '◎', name: 'Webdesign', metric: '+140%', color: '#2172b5', delay: 0.62 },
-    { icon: '◈', name: 'SEO Bergen', metric: '#1', color: '#16a34a', delay: 0.72 },
+    { icon: '◈', name: 'SEO Bergen', metric: '#1', color: '#166534', delay: 0.72 },
     { icon: '◆', name: 'Sosiale medier', metric: '+890', color: '#7c3aed', delay: 0.82 },
-    { icon: '★', name: 'Branding', metric: '100%', color: '#d97706', delay: 0.92 },
+    { icon: '★', name: 'Branding', metric: '100%', color: '#92400e', delay: 0.92 },
   ]
   const bars = [22, 32, 28, 42, 38, 56, 48, 68, 60, 78, 70, 90]
 
@@ -672,7 +672,7 @@ export function MarketingVisual({ visible }: { visible: boolean }) {
           className="flex items-center gap-1.5"
         >
           <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: '#d97706' }} />
-          <span className="text-[8px] font-semibold" style={{ color: '#d97706' }}>4 kanaler aktive</span>
+          <span className="text-[8px] font-semibold" style={{ color: '#92400e' }}>4 kanaler aktive</span>
         </motion.div>
       </div>
 
@@ -696,7 +696,7 @@ export function MarketingVisual({ visible }: { visible: boolean }) {
             transition={{ delay: 0.55 }}
             className="pb-1"
           >
-            <span className="text-[11px] font-bold" style={{ color: '#22c55e' }}>↑ vekst</span>
+            <span className="text-[11px] font-bold" style={{ color: '#15803d' }}>↑ vekst</span>
             <span className="text-[9px] ml-1" style={{ color: '#9ca3af' }}>under ett tak</span>
           </motion.div>
         </div>

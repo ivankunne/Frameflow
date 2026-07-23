@@ -29,7 +29,7 @@ export function SportsbyttePreview({ visible }: { visible: boolean }) {
               animate={visible ? { opacity: 1, scale: 1 } : {}}
               transition={{ type: 'spring', stiffness: 240, damping: 16, delay: 0.42 + i * 0.08 }}
               className="px-2.5 h-6 rounded-full text-[9px] font-semibold flex items-center"
-              style={{ background: i === 0 ? '#16a34a' : '#16a34a18', color: i === 0 ? '#fff' : '#16a34a' }}
+              style={{ background: i === 0 ? '#166534' : '#16653418', color: i === 0 ? '#fff' : '#166534' }}
             >
               {cat}
             </motion.div>
