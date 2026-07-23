@@ -37,14 +37,16 @@ const securityHeaders = [
     key: 'Content-Security-Policy',
     value: [
       "default-src 'self'",
-      `script-src 'self' 'unsafe-inline'${isProd ? '' : " 'unsafe-eval'"}`,
+      `script-src 'self' 'unsafe-inline' https://www.googletagmanager.com${isProd ? '' : " 'unsafe-eval'"}`,
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' data: https://fonts.gstatic.com",
-      "img-src 'self' data: blob:",
+      "img-src 'self' data: blob: https://www.googletagmanager.com",
       "media-src 'none'",
       "object-src 'none'",
-      "connect-src 'self' https://api.resend.com",
-      "frame-src 'none'",
+      // Google Tag Manager + GA4 hits (region-sharded google-analytics.com subdomains)
+      "connect-src 'self' https://api.resend.com https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com",
+      // Only Google's own domain, for the <noscript> GTM fallback iframe below
+      "frame-src https://www.googletagmanager.com",
       "frame-ancestors 'none'",
       "base-uri 'self'",
       "form-action 'self'",
