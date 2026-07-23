@@ -38,7 +38,7 @@
   },
   "home": {
     "hero": {
-      "label": "20+ prosjekter levert i Bergen",
+      "label": "5+ års erfaring i Bergen",
       "h1Line1": "Markedsføring",
       "h1Line2": "i Bergen –",
       "h1Line3": "som leverer.",
@@ -52,8 +52,8 @@
       "lastProjects": "Siste prosjekter · Bergen, Norge"
     },
     "stats": {
-      "projects": "Prosjekter levert",
-      "projectsSub": "For bedrifter i Bergen og Vestland",
+      "experience": "Års erfaring",
+      "experienceSub": "Med digital markedsføring og webdesign",
       "services": "Tjenester under ett tak",
       "servicesSub": "Web, SEO, AI, foto, sosiale medier og mer",
       "traffic": "Mer organisk trafikk",
@@ -187,8 +187,8 @@
     "founderBio1": "Jeg er opprinnelig fra Nederland, men flyttet til Norge i 2023. Siden da har jeg bygget solid kompetanse innen sosiale medier, markedsføring, webdesign og merkevarebygging.",
     "founderBio2": "Nå bruker jeg alt jeg har lært i praksis: å hjelpe bedrifter med å se profesjonelle ut, kommunisere tydelig og fremstå sterkt på nett.",
     "founded": "Frameflow ble grunnlagt i Bergen i 2025 med ett mål: å gi bedrifter en digital tilstedeværelse som faktisk leverer resultater.",
-    "stat1": "Prosjekter levert",
-    "stat1Sub": "Webdesign, branding, sosiale medier",
+    "stat1": "Års erfaring",
+    "stat1Sub": "Med digital markedsføring og webdesign",
     "stat2": "Kundetilfredshet",
     "stat2Sub": "Basert på kundeevalueringer",
     "stat3": "Mer organisk trafikk",
@@ -220,7 +220,7 @@
       "h1Part1": "Tjenester som",
       "h1Part2": "faktisk virker",
       "stat1": "07 tjenester",
-      "stat2": "20+ prosjekter levert",
+      "stat2": "5+ års erfaring",
       "stat3": "Bergen, Norge",
       "stat4": "Svar innen 24 timer",
       "ctaH2": "Klar for å komme i gang?",
@@ -294,8 +294,8 @@
   },
   "projects": {
     "title": "Prosjekter i Bergen",
-    "description": "Se hvordan vi har hjulpet 20+ bedrifter i Bergen og internasjonalt med webdesign, app utvikling og branding. Se resultatene våre.",
-    "subtitle": "Se resultat fra 20+ prosjekter innen webdesign, app utvikling og branding.",
+    "description": "Se hvordan Frameflow, med 5+ års erfaring, har hjulpet bedrifter i Bergen og internasjonalt med webdesign, app utvikling og branding.",
+    "subtitle": "Se resultater fra prosjekter innen webdesign, app utvikling og branding, bygget med 5+ års erfaring.",
     "label": "Vårt arbeid",
     "h1Part1": "Prosjekter som",
     "h1Part2": "snakker for seg",

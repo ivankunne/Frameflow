@@ -27,7 +27,7 @@ export default function HomeStats() {
   const t = useTranslations('home.stats')
 
   const stats = [
-    { value: 20, suffix: '+', label: t('projects'), note: t('projectsSub') },
+    { value: 5, suffix: '+', label: t('experience'), note: t('experienceSub') },
     { value: 7, suffix: '', label: t('services'), note: t('servicesSub') },
     { value: 140, suffix: '%', label: t('traffic'), note: t('trafficSub') },
     { value: 24, suffix: 't', label: t('response'), note: t('responseSub') },
