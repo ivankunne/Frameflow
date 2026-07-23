@@ -68,24 +68,22 @@ function FaqItem({ q, a }: { q: string; a: string }) {
       <button
         type="button"
         onClick={() => setOpen(!open)}
+        aria-expanded={open}
         className="w-full flex items-start justify-between gap-4 text-left group"
       >
         <span className="font-semibold text-fg text-sm leading-snug group-hover:text-accent transition-colors">{q}</span>
         <span className={`text-accent text-lg leading-none shrink-0 transition-transform duration-200 ${open ? 'rotate-45' : ''}`}>+</span>
       </button>
-      <AnimatePresence initial={false}>
-        {open && (
-          <motion.div
-            key="a"
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.25, ease: 'easeInOut' }}
-          >
-            <p className="text-fg-muted text-sm leading-relaxed pt-3">{a}</p>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Always rendered (not mount/unmount) so the answer is real, crawlable DOM
+          text on first paint — not just JSON-LD — for engines that don't read schema. */}
+      <motion.div
+        initial={false}
+        animate={{ height: open ? 'auto' : 0, opacity: open ? 1 : 0 }}
+        transition={{ duration: 0.25, ease: 'easeInOut' }}
+        style={{ overflow: 'hidden' }}
+      >
+        <p className="text-fg-muted text-sm leading-relaxed pt-3">{a}</p>
+      </motion.div>
     </div>
   )
 }
@@ -178,10 +176,27 @@ export default function ServicePageTemplate({
                 initial={{ opacity: 0, y: 20 }}
                 animate={heroInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.25 }}
-                className="text-fg-muted text-lg max-w-2xl leading-relaxed mb-10"
+                className="text-fg-muted text-lg max-w-2xl leading-relaxed mb-6"
               >
                 {description}
               </motion.p>
+
+              {/* Quick answer — reuses the existing pricing FAQ verbatim (single source of
+                  truth) as a self-contained, entity-named answer near the top of the page,
+                  for engines that extract text without clicking the FAQ accordion below. */}
+              {faqs && faqs[0] && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={heroInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  className="bg-bg-2 border border-border rounded-xl p-5 max-w-2xl mb-8"
+                >
+                  <p className="text-xs font-semibold text-accent uppercase tracking-widest mb-2">{t('quickAnswerLabel')}</p>
+                  <h2 className="font-semibold text-fg text-base mb-1.5">{faqs[0].q}</h2>
+                  <p className="text-fg-muted text-sm leading-relaxed">{faqs[0].a}</p>
+                </motion.div>
+              )}
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={heroInView ? { opacity: 1, y: 0 } : {}}
