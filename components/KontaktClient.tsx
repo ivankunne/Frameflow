@@ -3,6 +3,7 @@
 import { useState, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
 import { PHONE, PHONE_HREF, EMAIL, EMAIL_HREF, ADDRESS, ADDRESS_MAPS_HREF, INSTAGRAM_URL } from '@/lib/constants'
 
@@ -145,8 +146,8 @@ export default function KontaktClient() {
               transition={{ duration: 0.4, delay: 0.5 }}
               className="inline-flex items-center gap-4 bg-white border border-border rounded-2xl px-5 py-4 shadow-card mb-10"
             >
-              <div className="w-10 h-10 rounded-full bg-accent-light border border-accent/20 flex items-center justify-center shrink-0">
-                <span className="display-text text-sm text-accent-hover">IK</span>
+              <div className="w-10 h-10 rounded-full overflow-hidden border border-accent/20 shrink-0 relative">
+                <Image src="/avatar.png" alt={`Ivan Kunne – ${t('ivanTitle')}, Frameflow`} fill sizes="40px" className="object-cover" />
               </div>
               <div>
                 <p className="text-sm font-semibold text-fg">Ivan Kunne</p>

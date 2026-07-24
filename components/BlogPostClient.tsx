@@ -101,8 +101,8 @@ export default function BlogPostClient({
             transition={{ duration: 0.5, delay: 0.35 }}
             className="flex items-center gap-4 mt-10 pt-8 border-t border-border"
           >
-            <div className="w-10 h-10 rounded-full bg-accent-light border border-accent/20 flex items-center justify-center shrink-0">
-              <span className="display-text text-sm text-fg">IK</span>
+            <div className="w-10 h-10 rounded-full overflow-hidden border border-accent/20 shrink-0 relative">
+              <Image src="/avatar.png" alt="Ivan Kunne, daglig leder i Frameflow" fill sizes="40px" className="object-cover" />
             </div>
             <div>
               <p className="font-sans font-medium text-fg text-sm">Ivan Kunne</p>
@@ -225,8 +225,8 @@ export default function BlogPostClient({
       <section className="py-10 px-6 lg:px-8 bg-bg border-t border-border">
         <div className="max-w-3xl mx-auto">
           <div className="flex items-start gap-5 p-6 bg-bg-2 border border-border rounded-2xl shadow-card">
-            <div className="w-14 h-14 rounded-full bg-accent-light border-2 border-accent/20 flex items-center justify-center shrink-0">
-              <span className="display-text text-lg text-accent-hover">IK</span>
+            <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-accent/20 shrink-0 relative">
+              <Image src="/avatar.png" alt="Ivan Kunne, daglig leder i Frameflow" fill sizes="56px" className="object-cover" />
             </div>
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 mb-1">
