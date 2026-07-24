@@ -3,6 +3,7 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
 import { blogPosts } from '@/lib/data'
 
@@ -62,12 +63,25 @@ export default function BloggClient() {
         <div className="max-w-7xl mx-auto">
           <Link href={`/blogg/${featured.slug}` as any} className="group grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="aspect-video bg-white rounded-2xl border border-border overflow-hidden relative shadow-card">
-              <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #f0f4fb 0%, #e8f0f9 100%)' }} />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-xs font-semibold" style={{ color: categoryColors[featured.category] || '#2172b5' }}>
-                  {featured.category}
-                </span>
-              </div>
+              {featured.image ? (
+                <Image
+                  src={featured.image.src}
+                  alt={featured.image.alt}
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover"
+                  priority
+                />
+              ) : (
+                <>
+                  <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #f0f4fb 0%, #e8f0f9 100%)' }} />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-xs font-semibold" style={{ color: categoryColors[featured.category] || '#2172b5' }}>
+                      {featured.category}
+                    </span>
+                  </div>
+                </>
+              )}
               <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-accent to-blue-400" />
             </div>
             <div>
@@ -97,17 +111,30 @@ export default function BloggClient() {
               animate={gridInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.45, delay: i * 0.08 }}
             >
-              <Link href={`/blogg/${post.slug}` as any} className="group block bg-white border border-border rounded-xl p-6 hover:border-accent hover:shadow-blue-sm transition-all duration-200 h-full shadow-card">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-xs font-semibold" style={{ color: categoryColors[post.category] || '#2172b5' }}>{post.category}</span>
-                  <span className="text-fg-muted text-xs">·</span>
-                  <span className="text-fg-muted text-xs">{post.readTime}</span>
-                </div>
-                <h3 className="font-semibold text-fg mb-3 group-hover:text-accent transition-colors duration-200 leading-snug">{post.title}</h3>
-                <p className="text-fg-muted text-sm leading-relaxed mb-5 line-clamp-3">{post.excerpt}</p>
-                <div className="flex items-center justify-between mt-auto pt-4 border-t border-border">
-                  <p className="text-xs font-medium text-fg-muted">{post.date}</p>
-                  <span aria-hidden className="text-fg-muted group-hover:text-accent group-hover:translate-x-1 transition-all duration-200 text-sm">→</span>
+              <Link href={`/blogg/${post.slug}` as any} className="group flex flex-col bg-white border border-border rounded-xl overflow-hidden hover:border-accent hover:shadow-blue-sm transition-all duration-200 h-full shadow-card">
+                {post.image && (
+                  <div className="aspect-video relative overflow-hidden shrink-0">
+                    <Image
+                      src={post.image.src}
+                      alt={post.image.alt}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                )}
+                <div className="p-6 flex flex-col flex-1">
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="text-xs font-semibold" style={{ color: categoryColors[post.category] || '#2172b5' }}>{post.category}</span>
+                    <span className="text-fg-muted text-xs">·</span>
+                    <span className="text-fg-muted text-xs">{post.readTime}</span>
+                  </div>
+                  <h3 className="font-semibold text-fg mb-3 group-hover:text-accent transition-colors duration-200 leading-snug">{post.title}</h3>
+                  <p className="text-fg-muted text-sm leading-relaxed mb-5 line-clamp-3">{post.excerpt}</p>
+                  <div className="flex items-center justify-between mt-auto pt-4 border-t border-border">
+                    <p className="text-xs font-medium text-fg-muted">{post.date}</p>
+                    <span aria-hidden className="text-fg-muted group-hover:text-accent group-hover:translate-x-1 transition-all duration-200 text-sm">→</span>
+                  </div>
                 </div>
               </Link>
             </motion.div>

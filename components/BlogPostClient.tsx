@@ -4,6 +4,7 @@ import React from 'react'
 import { Link } from '@/i18n/navigation'
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
+import Image from 'next/image'
 import type { BlogPost } from '@/lib/data'
 
 function renderInline(text: string): React.ReactNode {
@@ -108,6 +109,24 @@ export default function BlogPostClient({
               <p className="label-text text-xs text-fg-muted">Daglig leder, Frameflow Bergen</p>
             </div>
           </motion.div>
+
+          {post.image && (
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={heroInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="aspect-video relative rounded-2xl overflow-hidden border border-border shadow-card-hover mt-10"
+            >
+              <Image
+                src={post.image.src}
+                alt={post.image.alt}
+                fill
+                sizes="(min-width: 1024px) 768px, 100vw"
+                className="object-cover"
+                priority
+              />
+            </motion.div>
+          )}
         </div>
       </section>
 
@@ -239,13 +258,26 @@ export default function BlogPostClient({
                 <Link
                   key={p.slug}
                   href={`/blogg/${p.slug}` as any}
-                  className="group block bg-white border border-border rounded-xl p-6 hover:border-accent hover:shadow-blue-sm transition-all duration-200 shadow-card"
+                  className="group block bg-white border border-border rounded-xl overflow-hidden hover:border-accent hover:shadow-blue-sm transition-all duration-200 shadow-card"
                 >
-                  <p className="text-xs font-semibold text-accent mb-3">{p.category}</p>
-                  <h4 className="font-semibold text-fg text-sm leading-snug mb-3 group-hover:text-accent transition-colors duration-200">
-                    {p.title}
-                  </h4>
-                  <p className="text-xs text-fg-muted">{p.date}</p>
+                  {p.image && (
+                    <div className="aspect-video relative overflow-hidden">
+                      <Image
+                        src={p.image.src}
+                        alt={p.image.alt}
+                        fill
+                        sizes="(min-width: 768px) 33vw, 100vw"
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  )}
+                  <div className="p-6">
+                    <p className="text-xs font-semibold text-accent mb-3">{p.category}</p>
+                    <h4 className="font-semibold text-fg text-sm leading-snug mb-3 group-hover:text-accent transition-colors duration-200">
+                      {p.title}
+                    </h4>
+                    <p className="text-xs text-fg-muted">{p.date}</p>
+                  </div>
                 </Link>
               ))}
             </div>

@@ -9,6 +9,7 @@ export interface BlogPost {
   metaTitle?: string
   content: string
   relatedService?: { title: string; href: string }
+  image?: { src: string; alt: string }
 }
 
 export interface ProjectSeo {
@@ -53,6 +54,7 @@ export const blogPosts: BlogPost[] = [
     updatedAt: '2026-07-18',
     readTime: '7 min',
     relatedService: { title: 'Web design', href: '/tjenester/webdesign' },
+    image: { src: '/blog/trenger-ny-nettside-bergen.png', alt: 'Illustrasjon av en nettside under bygging med wireframe-elementer, som symboliserer behovet for en oppgradert nettside' },
     content: `
 Kort svar: **hvis nettsiden din er treg, vanskelig å bruke på mobil, umulig å finne på Google eller aldri gir deg henvendelser – er det på tide med en ny.** De fleste bedriftsnettsider bør fornyes hvert tredje til femte år. Her er de syv tydeligste tegnene på at Bergen-bedriften din har vokst fra nettsiden sin – og hva du bør gjøre med hvert enkelt.
 
@@ -125,6 +127,7 @@ En standard bedriftsnettside tar typisk tre til seks uker fra oppstart til lanse
     updatedAt: '2026-06-30',
     readTime: '7 min',
     relatedService: { title: 'AI-automasjon', href: '/tjenester/ai-automasjon' },
+    image: { src: '/blog/ai-automasjon-oppgaver-bergen.png', alt: 'Illustrasjon av automatiserte arbeidsflyter og AI-drevne prosesser for bedrifter' },
     content: `
 Kort svar: de fleste små og mellomstore bedrifter i Bergen kan spare **5–10 timer i uken** ved å automatisere fem rutineoppgaver – e-posthåndtering, kundechat, lead-registrering, booking og oppfølging. Du trenger ikke bytte ut folk; du frigjør dem fra arbeidet en maskin gjør raskere og mer konsekvent. Her er de fem, i den rekkefølgen vi anbefaler å ta dem.
 
@@ -205,6 +208,7 @@ Nei. Godt bygde automasjoner håndterer det rutinepregede og sender alt som krev
     updatedAt: '2026-06-30',
     readTime: '8 min',
     relatedService: { title: 'Markedsføring', href: '/tjenester/markedsforing' },
+    image: { src: '/blog/seo-eller-google-ads-bergen.png', alt: 'Illustrasjon som sammenligner organisk søk og betalt annonsering' },
     content: `
 Kort svar: **Google Ads gir deg trafikk fra dag én, mens SEO bygger varig synlighet som koster mindre over tid.** For de fleste Bergen-bedrifter er ikke spørsmålet enten–eller, men *når* du bruker hva. Under går vi gjennom kostnad, tid til resultater og avkastning – og hvorfor de to ofte fungerer best sammen.
 
@@ -300,6 +304,7 @@ Har du begrenset budsjett, anbefaler vi som regel å prioritere lokal SEO for de
     updatedAt: '2026-06-19',
     readTime: '9 min',
     relatedService: { title: 'Web design', href: '/tjenester/webdesign' },
+    image: { src: '/blog/lage-nettside-steg-for-steg-guide-2026.png', alt: 'Illustrasjon av stegene i å bygge en ny nettside, fra wireframe til ferdig design' },
     content: `
 Å lage en nettside handler om langt mer enn å velge farger og skrive litt tekst. En profesjonell nettside bygges i en tydelig prosess: planlegging, innhold, webdesign, utvikling, SEO og lansering. Følger du de sju stegene under, ender du opp med en nettside som ser bra ut, laster raskt og faktisk gir bedriften din kunder – ikke bare en pen brosjyre ingen finner. Her er hele prosessen forklart steg for steg.
 
@@ -403,6 +408,7 @@ Les mer om hvordan vi jobber med [webdesign i Bergen](/tjenester/webdesign), ell
     updatedAt: '2026-06-08',
     readTime: '8 min',
     relatedService: { title: 'Webflow-utvikling', href: '/tjenester/webflow' },
+    image: { src: '/blog/webflow-bergen.png', alt: 'Illustrasjon av nettsidedesign bygget i Webflow med wireframe-elementer' },
     content: `
 Webflow er en moderne plattform for å bygge raske, designfrie og SEO-vennlige nettsider uten å gå på akkord med kvalitet. For en Bergen-bedrift gir Webflow en nettside som ser profesjonell ut, laster lynraskt og er enkel å oppdatere selv – uten sårbare plugins eller dyre lisenser. Her er alt du trenger å vite før du velger Webflow.
 
@@ -505,6 +511,7 @@ Les mer om vår [Webflow-utvikling i Bergen](/tjenester/webflow), eller [ta kont
     updatedAt: '2026-05-08',
     readTime: '8 min',
     relatedService: { title: 'Web design', href: '/tjenester/webdesign' },
+    image: { src: '/blog/nettbutikk-bergen-ehandel.png', alt: 'Illustrasjon av en nettbutikk med produktkort og handlevogn-elementer' },
     content: `
 ## Nettbutikk i Bergen: muligheter og utfordringer
 
@@ -604,6 +611,7 @@ Lurer du på hva en vanlig nettside koster til sammenligning? Se vår [prisovers
     updatedAt: '2026-05-10',
     readTime: '7 min',
     relatedService: { title: 'SEO', href: '/tjenester/seo' },
+    image: { src: '/blog/google-ads-bergen.png', alt: 'Illustrasjon av annonsekampanjer og betalt søk i Google Ads' },
     content: `
 ## Hva er Google Ads – og hvorfor bruker Bergen-bedrifter det?
 
@@ -685,6 +693,7 @@ Vil du vite om Google Ads er riktig for din Bergen-bedrift? [Ta kontakt med Fram
     updatedAt: '2026-05-12',
     readTime: '7 min',
     relatedService: { title: 'Web design', href: '/tjenester/webdesign' },
+    image: { src: '/blog/webbyraa-bergen-guide.png', alt: 'Illustrasjon av et webdesignprosjekt med nettside- og UI-elementer' },
     content: `
 ## Hva er egentlig forskjellen på webbyrå i Bergen?
 
@@ -769,6 +778,7 @@ Vil du ha en uforpliktende prat om hva slags nettside som passer din bedrift? Se
     updatedAt: '2026-03-10',
     readTime: '9 min',
     relatedService: { title: 'SEO', href: '/tjenester/seo' },
+    image: { src: '/blog/lokal-seo-bergen-guide-2025.png', alt: 'Illustrasjon av lokal søkemotoroptimalisering og Google-rangering' },
     content: `
 ## Hva er lokal SEO, og hvorfor er det viktig for Bergen-bedrifter?
 
@@ -833,6 +843,7 @@ Har du spørsmål om [lokal SEO i Bergen](/tjenester/seo) for din Bergen-bedrift
     readTime: '7 min',
     metaTitle: 'Nettside som konverterer: 6 elementer for Bergen-bedrifter',
     relatedService: { title: 'Web design', href: '/tjenester/webdesign' },
+    image: { src: '/blog/webdesign-bergen-nettside-som-konverterer.png', alt: 'Illustrasjon av konverteringsoptimalisert nettsidedesign med tydelige call-to-action-elementer' },
     content: `
 ## Hvorfor de fleste nettsider ikke konverterer
 
@@ -885,6 +896,7 @@ Er du klar for å oppgradere din [digitale tilstedeværelse i Bergen](/tjenester
     readTime: '8 min',
     metaTitle: 'Google Business Profile Bergen: Komplett optimeringsguide',
     relatedService: { title: 'SEO', href: '/tjenester/seo' },
+    image: { src: '/blog/google-my-business-bergen-guide.png', alt: 'Illustrasjon av en Google Business Profile-bedriftsprofil' },
     content: `
 ## Hva er Google Business Profile og hvorfor er det kritisk?
 
@@ -933,6 +945,7 @@ GBP er bare én brikke i det større bildet – se hele vår [guide til lokal SE
     readTime: '6 min',
     metaTitle: 'Hva koster nettside i Bergen? Komplett prisoversikt 2026',
     relatedService: { title: 'Web design', href: '/tjenester/webdesign' },
+    image: { src: '/blog/nettside-pris-bergen.png', alt: 'Illustrasjon av prisoversikt og nettsideelementer for bedriftsnettsider' },
     content: `
 ## Hvorfor varierer nettside-priser så mye?
 
@@ -977,6 +990,7 @@ Hos Frameflow inkluderer vi alltid strategisk gjennomgang, [skreddersydd webdesi
     readTime: '8 min',
     metaTitle: 'Sosiale medier Bergen: Strategi som faktisk gir resultater',
     relatedService: { title: 'Sosiale medier', href: '/tjenester/sosiale-medier' },
+    image: { src: '/blog/sosiale-medier-strategi-bergen-bedrifter.png', alt: 'Illustrasjon av sosiale medier-innhold og innleggsplanlegging' },
     content: `
 ## Virkeligheten om sosiale medier for lokale bedrifter
 
@@ -1023,6 +1037,7 @@ Mål nettstedtrafikk fra sosiale medier, direkte meldinger og forespørsler, rek
     readTime: '7 min',
     metaTitle: 'Branding i Bergen: Bygg en merkevare som folk husker',
     relatedService: { title: 'Branding', href: '/tjenester/branding' },
+    image: { src: '/blog/branding-bergen-bygg-merkevare-som-skiller-seg-ut.png', alt: 'Illustrasjon av logodesign, fargepalett og merkevareelementer' },
     content: `
 ## Hva er egentlig branding?
 
@@ -1075,6 +1090,7 @@ Frameflow tilbyr [skreddersydd branding](/tjenester/branding) for Bergen-bedrift
     readTime: '6 min',
     metaTitle: 'Bedriftsfoto og video Bergen: Slik vinner du med innhold',
     relatedService: { title: 'Foto og video', href: '/tjenester/foto-og-videografi' },
+    image: { src: '/blog/foto-video-bedrifter-bergen.png', alt: 'Illustrasjon av profesjonelt foto- og videoinnhold for bedrifter' },
     content: `
 ## Bildet som koster deg kunder
 
@@ -1123,6 +1139,7 @@ Bergen som kulisse er en av de uunngåelige fordelene med å drive bedrift her. 
     readTime: '7 min',
     metaTitle: 'Digital markedsføring Bergen: De 5 viktigste kanalene',
     relatedService: { title: 'Sosiale medier', href: '/tjenester/sosiale-medier' },
+    image: { src: '/blog/digital-markedsforing-bergen-5-kanaler-2025.png', alt: 'Illustrasjon av digitale markedsføringskanaler og kampanjeelementer' },
     content: `
 ## Ikke alle kanaler passer for alle Bergen-bedrifter
 
@@ -1169,6 +1186,7 @@ Lurer du på hvor du bør starte for din spesifikke bedrift? Se våre [tjenester
     readTime: '6 min',
     metaTitle: 'Nettside ROI Bergen: Hva gir webdesign deg tilbake?',
     relatedService: { title: 'Web design', href: '/tjenester/webdesign' },
+    image: { src: '/blog/hva-koster-webdesign-bergen-prisguide-2025.png', alt: 'Illustrasjon av nettsideinvestering og webdesignelementer med avkastningsfokus' },
     content: `
 ## Nettside som investering – ikke utgift
 
@@ -1253,6 +1271,7 @@ Hos Frameflow bygger vi nettsider der avkastning er målet fra dag én. [Ta kont
     readTime: '7 min',
     metaTitle: 'Markedsføringsbyrå Bergen: Slik velger du riktig partner',
     relatedService: { title: 'Tjenester', href: '/tjenester' },
+    image: { src: '/blog/beste-markedsforingsbyraa-bergen-2025.png', alt: 'Illustrasjon av et markedsføringsbyrås strategi- og kampanjearbeid' },
     content: `
 ## Å velge riktig byrå er avgjørende
 
@@ -1298,6 +1317,7 @@ Se hva vi tilbyr på våre [tjenestesider](/tjenester), eller book en gratis sam
     updatedAt: '2026-05-08',
     readTime: '8 min',
     relatedService: { title: 'App utvikling', href: '/tjenester/app-utvikling' },
+    image: { src: '/blog/app-utvikling-pris-bergen-2026.png', alt: 'Illustrasjon av mobilapp-utvikling med skjermelementer og grensesnitt' },
     content: `
 ## Hva koster en app i Bergen?
 
@@ -1376,6 +1396,7 @@ Les mer om vår [apputvikling i Bergen](/tjenester/app-utvikling), eller ta kont
     updatedAt: '2026-05-08',
     readTime: '7 min',
     relatedService: { title: 'SEO', href: '/tjenester/seo' },
+    image: { src: '/blog/seo-byraa-bergen.png', alt: 'Illustrasjon av et SEO-byrås arbeid med søkemotoroptimalisering og rangering' },
     content: `
 ## Hva gjør et SEO-byrå i Bergen?
 
@@ -1454,6 +1475,7 @@ Hos Frameflow integrerer vi SEO i alt vi gjør – nettsider bygges med SEO fra 
     updatedAt: '2026-05-08',
     readTime: '6 min',
     relatedService: { title: 'Branding', href: '/tjenester/branding' },
+    image: { src: '/blog/logo-design-bergen.png', alt: 'Illustrasjon av logodesign, fargepalett og visittkort-merkevareelementer' },
     content: `
 ## Hva koster logo design i Bergen?
 
