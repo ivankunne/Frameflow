@@ -50,7 +50,7 @@ function ChatWidget({ visible, chatResponds, chatExample, msg1Client, msg1Ivan, 
           >
             <span className={`text-[11px] leading-relaxed px-3 py-2 rounded-xl max-w-[85%] ${
               msg.from === 'ivan'
-                ? 'bg-accent-light text-accent rounded-tl-sm'
+                ? 'bg-accent-light text-accent-hover rounded-tl-sm'
                 : 'bg-bg-2 text-fg rounded-tr-sm'
             }`}>
               {msg.text}
@@ -146,7 +146,7 @@ export default function KontaktClient() {
               className="inline-flex items-center gap-4 bg-white border border-border rounded-2xl px-5 py-4 shadow-card mb-10"
             >
               <div className="w-10 h-10 rounded-full bg-accent-light border border-accent/20 flex items-center justify-center shrink-0">
-                <span className="display-text text-sm text-accent">IK</span>
+                <span className="display-text text-sm text-accent-hover">IK</span>
               </div>
               <div>
                 <p className="text-sm font-semibold text-fg">Ivan Kunne</p>
@@ -161,7 +161,7 @@ export default function KontaktClient() {
               initial={{ opacity: 0, y: 10 }}
               animate={heroInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4 }}
-              className="inline-flex items-center gap-2 bg-accent-light border border-accent/20 text-accent text-xs font-semibold px-3 py-1.5 rounded-full mb-6"
+              className="inline-flex items-center gap-2 bg-accent-light border border-accent/20 text-accent-hover text-xs font-semibold px-3 py-1.5 rounded-full mb-6"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
               {t('label')}
@@ -290,7 +290,7 @@ export default function KontaktClient() {
                   />
                   <label htmlFor="consent" className="text-xs text-fg-muted leading-relaxed cursor-pointer">
                     {t('consentText')}{' '}
-                    <Link href="/personvern" className="text-accent hover:underline">{t('consentPrivacy')}</Link>.
+                    <Link href="/personvern" className="text-accent underline underline-offset-2">{t('consentPrivacy')}</Link>.
                   </label>
                 </div>
                 {serverError && (

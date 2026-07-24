@@ -98,7 +98,7 @@ export default function TilbudClient() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={heroInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.4 }}
-                className="inline-flex items-center gap-2 bg-accent-light border border-accent/20 text-accent text-xs font-semibold px-3 py-1.5 rounded-full mb-6"
+                className="inline-flex items-center gap-2 bg-accent-light border border-accent/20 text-accent-hover text-xs font-semibold px-3 py-1.5 rounded-full mb-6"
               >
                 {t('label')}
               </motion.span>
