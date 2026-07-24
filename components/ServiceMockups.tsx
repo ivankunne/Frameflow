@@ -601,7 +601,7 @@ export function AIMockup({ visible }: { visible: boolean }) {
               <span className="text-[9px] font-medium text-fg-muted flex-1">{step.label}</span>
               {i === 1 ? (
                 <motion.span
-                  animate={visible ? { opacity: [1, 0.3, 1] } : {}}
+                  animate={visible ? { scale: [1, 1.2, 1] } : {}}
                   transition={{ duration: 1, delay: 0.8, repeat: Infinity }}
                   className="text-[8px] font-bold shrink-0"
                   style={{ color: step.color }}

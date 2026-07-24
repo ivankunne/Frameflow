@@ -386,7 +386,7 @@ export default function ProjectPageTemplate({ project }: { project: Project }) {
               >
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag) => (
-                    <span key={tag} className="text-xs font-semibold text-accent bg-accent-light border border-accent/20 px-3 py-1 rounded-full">
+                    <span key={tag} className="text-xs font-semibold text-accent-hover bg-accent-light border border-accent/20 px-3 py-1 rounded-full">
                       {tag}
                     </span>
                   ))}
