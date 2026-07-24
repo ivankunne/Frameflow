@@ -683,7 +683,7 @@ export function SEOMockup({ visible }: { visible: boolean }) {
             className={`p-2 rounded-lg ${r.highlight ? 'bg-accent/5 border border-accent/20' : 'bg-bg-2 border border-border/50'}`}
           >
             <div className="flex items-center gap-1.5 mb-0.5">
-              <span className="text-[8px] font-bold" style={{ color: r.highlight ? '#2172b5' : '#9ca3af' }}>#{r.rank}</span>
+              <span className={`text-[8px] font-bold ${r.highlight ? 'text-accent' : 'text-fg-muted'}`}>#{r.rank}</span>
               <span className="text-[8px] text-fg-muted truncate">{r.url}</span>
               {r.highlight && (
                 <span className="ml-auto text-[7px] font-bold px-1.5 py-0.5 rounded" style={{ background: '#dcfce7', color: '#166534' }}>
