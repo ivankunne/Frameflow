@@ -54,7 +54,7 @@ export const blogPosts: BlogPost[] = [
     updatedAt: '2026-07-18',
     readTime: '7 min',
     relatedService: { title: 'Web design', href: '/tjenester/webdesign' },
-    image: { src: '/blog/trenger-ny-nettside-bergen.png', alt: 'Illustrasjon av en nettside under bygging med wireframe-elementer, som symboliserer behovet for en oppgradert nettside' },
+    image: { src: '/blog/trenger-ny-nettside-bergen.png', alt: 'Illustrasjon av en sjekkliste med syv tegn på at en bedrift bør fornye nettsiden sin' },
     content: `
 Kort svar: **hvis nettsiden din er treg, vanskelig å bruke på mobil, umulig å finne på Google eller aldri gir deg henvendelser – er det på tide med en ny.** De fleste bedriftsnettsider bør fornyes hvert tredje til femte år. Her er de syv tydeligste tegnene på at Bergen-bedriften din har vokst fra nettsiden sin – og hva du bør gjøre med hvert enkelt.
 
@@ -693,7 +693,7 @@ Vil du vite om Google Ads er riktig for din Bergen-bedrift? [Ta kontakt med Fram
     updatedAt: '2026-05-12',
     readTime: '7 min',
     relatedService: { title: 'Web design', href: '/tjenester/webdesign' },
-    image: { src: '/blog/webbyraa-bergen-guide.png', alt: 'Illustrasjon av et webdesignprosjekt med nettside- og UI-elementer' },
+    image: { src: '/blog/webbyraa-bergen-guide.png', alt: 'Illustrasjon av søk og sammenligning av webbyråer basert på vurderinger, med ett verifisert valg fremhevet' },
     content: `
 ## Hva er egentlig forskjellen på webbyrå i Bergen?
 
@@ -990,7 +990,7 @@ Hos Frameflow inkluderer vi alltid strategisk gjennomgang, [skreddersydd webdesi
     readTime: '8 min',
     metaTitle: 'Sosiale medier Bergen: Strategi som faktisk gir resultater',
     relatedService: { title: 'Sosiale medier', href: '/tjenester/sosiale-medier' },
-    image: { src: '/blog/sosiale-medier-strategi-bergen-bedrifter.png', alt: 'Illustrasjon av sosiale medier-innhold og innleggsplanlegging' },
+    image: { src: '/blog/sosiale-medier-strategi-bergen-bedrifter.png', alt: 'Illustrasjon av et sosiale medier-innlegg med engasjement, en sjekkliste og en vekstkurve' },
     content: `
 ## Virkeligheten om sosiale medier for lokale bedrifter
 
@@ -1271,7 +1271,7 @@ Hos Frameflow bygger vi nettsider der avkastning er målet fra dag én. [Ta kont
     readTime: '7 min',
     metaTitle: 'Markedsføringsbyrå Bergen: Slik velger du riktig partner',
     relatedService: { title: 'Tjenester', href: '/tjenester' },
-    image: { src: '/blog/beste-markedsforingsbyraa-bergen-2025.png', alt: 'Illustrasjon av et markedsføringsbyrås strategi- og kampanjearbeid' },
+    image: { src: '/blog/beste-markedsforingsbyraa-bergen-2025.png', alt: 'Illustrasjon av vekstresultater og kundeanmeldelser for et markedsføringsbyrå, med ett verifisert valg' },
     content: `
 ## Å velge riktig byrå er avgjørende
 
@@ -1478,7 +1478,7 @@ Hos Frameflow integrerer vi SEO i alt vi gjør – nettsider bygges med SEO fra 
     updatedAt: '2026-05-08',
     readTime: '6 min',
     relatedService: { title: 'Branding', href: '/tjenester/branding' },
-    image: { src: '/blog/logo-design-bergen.png', alt: 'Illustrasjon av logodesign, fargepalett og visittkort-merkevareelementer' },
+    image: { src: '/blog/logo-design-bergen.png', alt: 'Illustrasjon av ulike logoalternativer og en prisoversikt for logodesign' },
     content: `
 ## Hva koster logo design i Bergen?
 
