@@ -1548,7 +1548,7 @@ export const projects: Project[] = [
       '1000+ arrangementer oppdaget per måned',
     ],
     image: {
-      src: '/h-orbit-bento-english.png',
+      src: '/h-orbit-bento-english-fullbleed.png',
       alt: 'h-orbit-dashboard: avspilling av «Night Light», artist-statistikk med 96 412 månedlige lyttere, artistprofil for Nova Vlecht og kommende arrangementer',
     },
     seo: {
@@ -1589,7 +1589,7 @@ export const projects: Project[] = [
       'Markant økning i brukerregistreringer etter lansering',
     ],
     image: {
-      src: '/sportsbytte-bento-norsk.png',
+      src: '/sportsbytte-bento-norsk-fullbleed.png',
       alt: 'Sportsbytte-dashboard: utvalgt annonse for skøyteski, miljøeffekt med 967 videresolgte varer, Bergen Skiklubb-klubbprofil og utstyrsutforskning',
     },
     seo: {

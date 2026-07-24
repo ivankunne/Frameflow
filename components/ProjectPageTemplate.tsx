@@ -17,8 +17,8 @@ function ProjectBrowserMockup({ project, visible }: { project: Project; visible:
         <Image
           src={project.image.src}
           alt={project.image.alt}
-          width={3200}
-          height={2000}
+          width={2720}
+          height={1616}
           sizes="(min-width: 1024px) 1152px, 100vw"
           className="w-full h-auto"
           priority
