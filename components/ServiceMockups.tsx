@@ -108,7 +108,7 @@ export function CameraMockup({ visible }: { visible: boolean }) {
           className="flex items-center gap-1.5"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
-          <span className="text-[8px] font-mono uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.3)' }}>
+          <span className="text-[8px] font-mono uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.55)' }}>
             4K · 24fps
           </span>
         </motion.div>
@@ -117,7 +117,7 @@ export function CameraMockup({ visible }: { visible: boolean }) {
           animate={visible ? { opacity: 1 } : {}}
           transition={{ delay: 0.4 }}
           className="text-[8px] font-mono tabular-nums"
-          style={{ color: 'rgba(255,255,255,0.22)' }}
+          style={{ color: 'rgba(255,255,255,0.55)' }}
         >
           00:00:03:18
         </motion.span>
@@ -190,7 +190,7 @@ export function CameraMockup({ visible }: { visible: boolean }) {
             animate={visible ? { opacity: 1 } : {}}
             transition={{ delay: 0.45 }}
             className="text-[7px] uppercase tracking-widest font-semibold shrink-0"
-            style={{ color: 'rgba(255,255,255,0.22)' }}
+            style={{ color: 'rgba(255,255,255,0.55)' }}
           >
             Fargesetting
           </motion.p>
@@ -207,7 +207,7 @@ export function CameraMockup({ visible }: { visible: boolean }) {
               animate={visible ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.3, delay: 0.52 + i * 0.08 }}
             >
-              <span className="text-[7px] block mb-0.5" style={{ color: 'rgba(255,255,255,0.22)' }}>
+              <span className="text-[7px] block mb-0.5" style={{ color: 'rgba(255,255,255,0.55)' }}>
                 {item.label}
               </span>
               <div
