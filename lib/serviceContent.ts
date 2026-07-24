@@ -637,6 +637,9 @@ export const branding: Record<'no' | 'en', ServiceContent> = {
       { q: 'How long does a branding project take?', a: 'A complete branding project typically takes 2–4 weeks, including concept, presentation and revisions.' },
       { q: 'Can I use the brand across all media?', a: 'Yes, you receive all files in vector format (SVG, PDF, PNG) that work in all sizes — from business cards to banners.' },
       { q: 'What is the difference between graphic design and logo design?', a: 'Logo design is about the logo symbol and logotype — the core of your brand. Graphic design is broader and includes everything visual: colour palette, typography, templates, icons and printed materials. At Frameflow we deliver both as a combined branding package.' },
+      { q: 'Do I need professional branding even as a small business?', a: 'Yes — precisely because you are small. A small business competes against players with bigger marketing budgets. A strong visual identity makes you look more professional than many competitors and builds trust from the first moment. It is often the small business that needs to look big the most.' },
+      { q: 'What is the difference between a Canva logo and professional logo design?', a: 'A Canva logo is quick, but built on a template hundreds of other businesses use. Professional logo design is uniquely made for your business, tested against competitors, and scalable to any size without loss of quality. You own all rights and receive vector files for everything from business cards to vehicle wraps.' },
+      { q: 'How do we collaborate with Frameflow on a branding project?', a: 'We start with a discovery conversation mapping your business, target audience and market. We then present concept options for approval. You are involved at every step — we never deliver anything without your sign-off. After completion you receive all files and a brand guide.' },
     ],
   },
 }
