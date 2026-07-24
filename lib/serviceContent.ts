@@ -237,10 +237,12 @@ export const seo: Record<'no' | 'en', ServiceContent> = {
     ],
     pricingFrom: '4 500 kr/mnd',
     faqs: [
-      { q: 'Hva koster SEO i Bergen?', a: 'SEO-tjenester fra Frameflow starter fra 4 500 kr/mnd eks. mva. Prisen avhenger av konkurransesituasjonen i din bransje, antall søkeord du vil rangere på og hva slags innholdsarbeid som kreves. Vi gir alltid et fast månedlig tilbud uten skjulte kostnader.' },
+      { q: 'Hva koster SEO i Bergen?', a: 'SEO-tjenester fra Frameflow starter fra 4 500 kr/mnd eks. mva – vår grunnleggende pakke. En standard pakke med teknisk SEO, innhold og rapportering ligger typisk på 5 000–12 000 kr/mnd, mens fullservice med tett oppfølging ligger på 12 000–30 000 kr/mnd. Prisen avhenger av konkurransesituasjonen i din bransje, antall søkeord du vil rangere på og hva slags innholdsarbeid som kreves. Vi gir alltid et fast månedlig tilbud uten skjulte kostnader.' },
       { q: 'Hvor lang tid tar det å se resultater fra SEO?', a: 'De fleste Bergen-bedrifter ser målbare forbedringer i løpet av 3–6 måneder. Lokal SEO gir ofte raskere resultater enn nasjonal SEO fordi konkurransen er lavere. Tekniske forbedringer og Google Business Profile-oppsett kan gi synlige resultater innen noen uker.' },
       { q: 'Hva er lokal SEO og trenger jeg det?', a: 'Lokal SEO handler om å rangere på Google når folk søker etter tjenester i Bergen og Vestland. Hvis du driver en lokal bedrift og ønsker kunder fra nærområdet, er lokal SEO langt mer effektivt enn generell SEO. Vi optimaliserer Google Business Profile, NAP-konsistens og lokale søkeord.' },
       { q: 'Er SEO fortsatt verdt det i 2026?', a: 'Ja – organisk søketrafikk er fortsatt den mest kostnadseffektive og varige kilden til nye kunder. Til forskjell fra annonsering stopper ikke trafikken den dagen du slutter å betale. Godt SEO-arbeid gir synlighet som varer i årevis.' },
+      { q: 'Bør jeg ansette et SEO-byrå eller gjøre det selv?', a: 'Har du tid og vilje til å lære det tekniske, kan du komme langt selv med riktig Google Business Profile-oppsett og grunnleggende on-page SEO. Et byrå lønner seg når du vil ha kontinuerlig fremgang uten å bruke egne timer på det, eller når konkurransen i bransjen din krever mer avansert teknisk og innholdsmessig arbeid enn du har kapasitet til selv.' },
+      { q: 'Hvor lenge bør jeg binde meg til et SEO-byrå?', a: 'Hos Frameflow er det ingen bindingstid – du betaler måned for måned og kan avslutte når du vil. Vi anbefaler likevel å regne minst 3–6 måneder for å vurdere resultater reelt, siden SEO er langsiktig arbeid. Vær skeptisk til byråer som krever lange bindingstider uten å vise fremgang underveis.' },
     ],
   },
   en: {
@@ -280,10 +282,12 @@ export const seo: Record<'no' | 'en', ServiceContent> = {
     ],
     pricingFrom: 'NOK 4,500/mo',
     faqs: [
-      { q: 'How much does SEO cost?', a: 'SEO services from Frameflow start from NOK 4,500/mo excl. VAT. The price depends on competition in your industry, the number of keywords you want to rank for and the amount of content work required.' },
+      { q: 'How much does SEO cost?', a: 'SEO services from Frameflow start from NOK 4,500/mo excl. VAT for our basic package. A standard package with technical SEO, content and reporting typically runs NOK 5,000–12,000/mo, while full-service with close follow-up runs NOK 12,000–30,000/mo. The price depends on competition in your industry, the number of keywords you want to rank for and the amount of content work required.' },
       { q: 'How long does it take to see results from SEO?', a: 'Most businesses see measurable improvements within 3–6 months. Local SEO often gives faster results than national SEO because competition is lower.' },
       { q: 'What is local SEO and do I need it?', a: 'Local SEO is about ranking on Google when people search for services near Bergen. If you run a local business and want customers from your area, local SEO is far more effective than generic SEO.' },
       { q: 'Is SEO still worth it in 2026?', a: 'Yes — organic search traffic is still the most cost-effective and lasting source of new customers. Unlike advertising, the traffic does not stop when you stop paying. Good SEO work gives visibility that lasts for years.' },
+      { q: 'Should I hire an SEO agency or do it myself?', a: 'If you have the time and willingness to learn the technical side, you can get far on your own with a proper Google Business Profile setup and basic on-page SEO. An agency pays off when you want continuous progress without spending your own hours on it, or when competition in your industry demands more advanced technical and content work than you have capacity for.' },
+      { q: 'How long should I commit to an SEO agency?', a: 'At Frameflow there is no lock-in — you pay month to month and can stop whenever you want. We still recommend allowing at least 3–6 months to judge results fairly, since SEO is long-term work. Be wary of agencies that require long lock-in periods without showing progress along the way.' },
     ],
   },
 }

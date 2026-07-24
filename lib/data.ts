@@ -1390,7 +1390,8 @@ Les mer om vår [apputvikling i Bergen](/tjenester/app-utvikling), eller ta kont
   {
     slug: 'seo-byraa-bergen',
     title: 'SEO-byrå i Bergen: Hva koster det og hva bør du forvente?',
-    excerpt: 'Leter du etter et SEO-byrå i Bergen? Her er hva det koster, hva som gir resultater, og hvilke spørsmål du bør stille før du skriver under på en avtale.',
+    excerpt: 'Vurderer du å sette bort SEO-arbeidet? En uavhengig oversikt over priser, hva som gir resultater, og spørsmålene du bør stille før du signerer.',
+    metaTitle: 'Hva koster et SEO-byrå i Bergen? Pris og forventninger 2026',
     category: 'SEO',
     date: '8. mai 2026',
     updatedAt: '2026-05-08',
@@ -1398,6 +1399,8 @@ Les mer om vår [apputvikling i Bergen](/tjenester/app-utvikling), eller ta kont
     relatedService: { title: 'SEO', href: '/tjenester/seo' },
     image: { src: '/blog/seo-byraa-bergen.png', alt: 'Illustrasjon av et SEO-byrås arbeid med søkemotoroptimalisering og rangering' },
     content: `
+Vurderer du allerede å outsource SEO-arbeidet? Se hva som inngår i [Frameflows SEO-tjeneste i Bergen](/tjenester/seo) og få et konkret pristilbud – eller fortsett å lese for en uavhengig oversikt over hva du bør se etter i et byrå, uansett hvem du velger.
+
 ## Hva gjør et SEO-byrå i Bergen?
 
 Et SEO-byrå hjelper bedriften din å rangere høyere på Google for søkeord potensielle kunder faktisk bruker. For Bergen-bedrifter handler dette primært om lokal SEO – å dukke opp når noen søker «[din tjeneste] Bergen».
