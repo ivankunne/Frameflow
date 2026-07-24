@@ -177,7 +177,7 @@ export default function BlogPostClient({
 
           {/* CTA in post */}
           <div className="mt-8 p-8 bg-accent-light border border-accent/20 rounded-2xl">
-            <span className="inline-flex items-center gap-2 text-accent text-xs font-semibold uppercase tracking-widest mb-4">
+            <span className="inline-flex items-center gap-2 text-accent-hover text-xs font-semibold uppercase tracking-widest mb-4">
               <span className="w-4 h-px bg-accent" /> Trenger du hjelp?
             </span>
             <h3 className="display-text text-2xl text-fg mb-3">La Frameflow ta seg av det.</h3>
@@ -207,7 +207,7 @@ export default function BlogPostClient({
         <div className="max-w-3xl mx-auto">
           <div className="flex items-start gap-5 p-6 bg-bg-2 border border-border rounded-2xl shadow-card">
             <div className="w-14 h-14 rounded-full bg-accent-light border-2 border-accent/20 flex items-center justify-center shrink-0">
-              <span className="display-text text-lg text-accent">IK</span>
+              <span className="display-text text-lg text-accent-hover">IK</span>
             </div>
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 mb-1">
