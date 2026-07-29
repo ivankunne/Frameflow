@@ -47,6 +47,14 @@ export default async function BransjerPage({ params }: Props) {
     eiendomsmegler: '/industries/real-estate-agent',
     advokat: '/industries/lawyer',
     restaurant: '/industries/restaurant',
+    frisor: '/industries/hairdresser',
+    fysioterapeut: '/industries/physiotherapist',
+    handverker: '/industries/tradesperson',
+    regnskapsforer: '/industries/accountant',
+    treningssenter: '/industries/gym',
+    bilverksted: '/industries/auto-repair-shop',
+    veterinaer: '/industries/veterinarian',
+    optiker: '/industries/optician',
   }
 
   const itemListSchema = {
