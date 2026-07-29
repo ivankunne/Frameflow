@@ -43,3 +43,4 @@ export function buildBreadcrumbSchema(locale: string, items: BreadcrumbInput[]) 
 
 export const HOME_CRUMB: BreadcrumbInput = { name: 'Hjem', nameEn: 'Home', noPath: '', enPath: '' }
 export const SERVICES_CRUMB: BreadcrumbInput = { name: 'Tjenester', nameEn: 'Services', noPath: '/tjenester', enPath: '/services' }
+export const INDUSTRIES_CRUMB: BreadcrumbInput = { name: 'Bransjer', nameEn: 'Industries', noPath: '/bransjer', enPath: '/industries' }

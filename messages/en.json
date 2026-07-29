@@ -4,6 +4,7 @@
     "backToHome": "Frameflow – back to homepage",
     "about": "About",
     "services": "Services",
+    "industries": "Industries",
     "projects": "Projects",
     "blog": "Blog",
     "bookCall": "Book a call",
@@ -228,6 +229,23 @@
       "ctaQuote": "Get a quote",
       "ctaContact": "Contact us",
       "readMore": "Read more about"
+    }
+  },
+  "industries": {
+    "index": {
+      "label": "Industries we work with",
+      "h1Part1": "Websites tailored",
+      "h1Part2": "to your industry",
+      "description": "We build websites tailored to specific industries — with features, content and local SEO that are actually relevant to your customers, not a generic template with your logo pasted on.",
+      "stat1": "4 industries",
+      "stat2": "Tailored content and features",
+      "stat3": "Bergen, Norway",
+      "stat4": "Fixed price from NOK 15,000",
+      "ctaLabel": "See website for",
+      "ctaH2": "Didn't find your industry?",
+      "ctaDesc": "We build websites for all kinds of businesses in Bergen. Get in touch and we'll figure out what fits your industry.",
+      "ctaQuote": "Get a quote",
+      "ctaContact": "Contact us"
     }
   },
   "serviceTemplate": {

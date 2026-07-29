@@ -1,48 +1,45 @@
 import type { Metadata } from 'next'
-import { webdesign } from '@/lib/serviceContent'
+import { advokat } from '@/lib/industryContent'
 import ServicePageTemplate from '@/components/ServicePageTemplate'
+import RelatedIndustries from '@/components/RelatedIndustries'
 import { JsonLd } from '@/components/JsonLd'
-import { buildAlternates, buildBreadcrumbSchema, HOME_CRUMB, SERVICES_CRUMB, ogLocale, schemaLanguage } from '@/lib/seo'
-import IndustriesShowcase from '@/components/IndustriesShowcase'
+import { buildAlternates, buildBreadcrumbSchema, HOME_CRUMB, INDUSTRIES_CRUMB, ogLocale, schemaLanguage } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string }> }
-
-const NO_URL = 'https://www.frameflow.no/tjenester/webdesign'
-const EN_URL = 'https://www.frameflow.no/en/services/web-design'
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const lang = locale === 'en' ? 'en' : 'no'
-  const m = webdesign[lang].meta
+  const m = advokat[lang].meta
   return {
     title: m.title,
     description: m.description,
     keywords: lang === 'en'
-      ? ['web design Bergen', 'web agency Bergen Norway', 'website development Bergen', 'Webflow Bergen', 'Frameflow']
-      : ['webdesign Bergen', 'nettside Bergen', 'webbyrå Bergen', 'lage nettside Bergen', 'Webflow Bergen', 'Frameflow'],
-    alternates: buildAlternates('/tjenester/webdesign', '/services/web-design', locale),
+      ? ['law firm website Bergen', 'web design for lawyers', 'lawyer website Bergen', 'Frameflow']
+      : ['nettside for advokat', 'advokat nettside Bergen', 'webdesign advokatfirma', 'Frameflow'],
+    alternates: buildAlternates('/bransjer/advokat', '/industries/lawyer', locale),
     openGraph: {
       type: 'website',
       locale: ogLocale(locale),
       siteName: 'Frameflow',
       title: m.ogTitle,
       description: m.description,
-      url: locale === 'en' ? EN_URL : NO_URL,
+      url: m.canonical,
       images: [{ url: `https://www.frameflow.no/og?title=${encodeURIComponent(m.ogImageTitle)}&label=${encodeURIComponent(m.ogImageLabel)}`, width: 1200, height: 630, alt: m.ogAlt }],
     },
     twitter: { card: 'summary_large_image', title: m.ogTitle, description: m.description },
   }
 }
 
-export default async function WebdesignPage({ params }: Props) {
+export default async function AdvokatPage({ params }: Props) {
   const { locale } = await params
   const lang = locale === 'en' ? 'en' : 'no'
-  const c = webdesign[lang]
+  const c = advokat[lang]
 
   const breadcrumbSchema = buildBreadcrumbSchema(locale, [
     HOME_CRUMB,
-    SERVICES_CRUMB,
-    { name: 'Webdesign', nameEn: 'Web Design', noPath: '/tjenester/webdesign', enPath: '/services/web-design' },
+    INDUSTRIES_CRUMB,
+    { name: 'Advokat', nameEn: 'Lawyer', noPath: '/bransjer/advokat', enPath: '/industries/lawyer' },
   ])
 
   const serviceSchema = {
@@ -52,6 +49,8 @@ export default async function WebdesignPage({ params }: Props) {
     provider: { '@id': 'https://www.frameflow.no/#organization' },
     description: c.longDescription,
     areaServed: { '@type': 'City', name: 'Bergen' },
+    audience: { '@type': 'Audience', audienceType: lang === 'en' ? 'Law firms' : 'Advokatfirmaer' },
+    serviceType: lang === 'en' ? 'Web design for law firms' : 'Nettside for advokatfirmaer',
     offers: {
       '@type': 'Offer',
       priceCurrency: 'NOK',
@@ -86,8 +85,10 @@ export default async function WebdesignPage({ params }: Props) {
         mockupType="web"
         pricingFrom={c.pricingFrom}
         faqs={c.faqs}
+        breadcrumbLabel={lang === 'en' ? 'Industries' : 'Bransjer'}
+        breadcrumbHref="/bransjer"
       >
-        <IndustriesShowcase locale={locale} />
+        <RelatedIndustries current="advokat" locale={locale} />
       </ServicePageTemplate>
     </>
   )

@@ -18,6 +18,9 @@ interface ServicePageProps {
   pricingFrom?: string
   faqs?: { q: string; a: string }[]
   children?: React.ReactNode
+  /** Overrides the breadcrumb's middle crumb — defaults to "Tjenester"/Services. */
+  breadcrumbLabel?: string
+  breadcrumbHref?: string
 }
 
 function PricingAccordion() {
@@ -112,6 +115,8 @@ export default function ServicePageTemplate({
   pricingFrom,
   faqs,
   children,
+  breadcrumbLabel,
+  breadcrumbHref,
 }: ServicePageProps) {
   const t = useTranslations('serviceTemplate')
   const heroRef = useRef(null)
@@ -148,7 +153,7 @@ export default function ServicePageTemplate({
           >
             <Link href="/" className="hover:text-fg transition-colors">{t('home')}</Link>
             <span>/</span>
-            <Link href="/tjenester" className="hover:text-fg transition-colors">{t('services')}</Link>
+            <Link href={(breadcrumbHref ?? '/tjenester') as any} className="hover:text-fg transition-colors">{breadcrumbLabel ?? t('services')}</Link>
             <span>/</span>
             <span className="text-fg">{title}</span>
           </motion.nav>

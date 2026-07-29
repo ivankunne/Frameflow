@@ -16,6 +16,7 @@ export default function Footer() {
   const navLinks = [
     { href: '/om-oss' as const, label: tNav('about') },
     { href: '/tjenester' as const, label: tNav('services') },
+    { href: '/bransjer' as const, label: tNav('industries') },
     { href: '/prosjekter' as const, label: tNav('projects') },
     { href: '/blogg' as const, label: tNav('blog') },
     { href: '/kontakt' as const, label: tNav('contact') },
