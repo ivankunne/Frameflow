@@ -503,7 +503,7 @@ export const fysioterapeut: Record<'no' | 'en', ServiceContent> = {
       { q: 'Er nettsiden trygg for pasientopplysninger?', a: 'Ja. Kontaktskjemaer bygges med kryptert overføring og uten unødvendig lagring av helseopplysninger, i tråd med GDPR.' },
       { q: 'Kan vi presentere behandlere med egne spesialiseringer?', a: 'Ja, og vi anbefaler det – pasienter vil ofte finne en behandler med relevant erfaring for akkurat deres plage før de bestiller time.' },
       { q: 'Hjelper dere med lokal SEO for fysioterapeuter i Bergen?', a: 'Ja. Vi optimaliserer for søk som «fysioterapeut ryggplager Bergen» eller «idrettsfysioterapi Åsane».' },
-      { q: 'Hvor lang tid tar det å lage nettsiden?', a: 'En standard klinikknettside tar typisk 3–5 uker fra oppstart til lansering.' },
+      { q: 'Hvor lang tid tar det å lage nettsiden?', a: 'En standard klinikknettside tar typisk 3–5 uker fra oppstart til lansering, avhengig av antall behandlerprofiler og om dere trenger integrasjon mot timebestillingssystem.' },
     ],
   },
   en: {
@@ -547,7 +547,7 @@ export const fysioterapeut: Record<'no' | 'en', ServiceContent> = {
       { q: 'Is the website secure for patient information?', a: 'Yes. Contact forms are built with encrypted transmission and without unnecessary storage of health data, in line with GDPR.' },
       { q: 'Can we present therapists with their own specialisations?', a: 'Yes, and we recommend it — patients often want to find a therapist with relevant experience for their specific condition before booking.' },
       { q: 'Do you help with local SEO for physiotherapists in Bergen?', a: 'Yes. We optimise for searches like "physiotherapist back pain Bergen" or "sports physiotherapy Åsane".' },
-      { q: 'How long does it take to build the website?', a: 'A standard clinic website typically takes 3–5 weeks from start to launch.' },
+      { q: 'How long does it take to build the website?', a: 'A standard clinic website typically takes 3–5 weeks from start to launch, depending on the number of therapist profiles and whether you need booking-system integration.' },
     ],
   },
 }
@@ -594,7 +594,7 @@ export const handverker: Record<'no' | 'en', ServiceContent> = {
       { q: 'Kan kunder be om tilbud direkte på nettsiden?', a: 'Ja. Vi setter opp et tilbudsskjema som er raskt å fylle ut, slik at potensielle kunder tar kontakt uten å måtte ringe først.' },
       { q: 'Hjelper dere med lokal SEO for håndverkere i Bergen?', a: 'Ja. Vi optimaliserer for søk som «elektriker Åsane» eller «rørlegger akutt Bergen».' },
       { q: 'Kan vi ha en tydelig CTA for akutte oppdrag?', a: 'Ja, dette er spesielt viktig for elektrikere og rørleggere. Vi plasserer et tydelig nødnummer eller akutt-CTA øverst på nettsiden.' },
-      { q: 'Hvor lang tid tar det å lage nettsiden?', a: 'En standard nettside for et håndverksfirma tar typisk 3–5 uker fra oppstart til lansering.' },
+      { q: 'Hvor lang tid tar det å lage nettsiden?', a: 'En standard nettside for et håndverksfirma tar typisk 3–5 uker fra oppstart til lansering, avhengig av antall referanseprosjekter som skal presenteres og omfanget av tjenesteoversikten.' },
     ],
   },
   en: {
@@ -638,7 +638,7 @@ export const handverker: Record<'no' | 'en', ServiceContent> = {
       { q: 'Can customers request a quote directly on the website?', a: 'Yes. We set up a quote form that is quick to fill out, so potential customers get in touch without having to call first.' },
       { q: 'Do you help with local SEO for tradespeople in Bergen?', a: 'Yes. We optimise for searches like "electrician Åsane" or "emergency plumber Bergen".' },
       { q: 'Can we have a clear call-to-action for urgent jobs?', a: 'Yes, this is especially important for electricians and plumbers. We place a clear emergency number or CTA at the top of the website.' },
-      { q: 'How long does it take to build the website?', a: 'A standard trade business website typically takes 3–5 weeks from start to launch.' },
+      { q: 'How long does it take to build the website?', a: 'A standard trade business website typically takes 3–5 weeks from start to launch, depending on the number of project references to present and the scope of the service overview.' },
     ],
   },
 }
@@ -684,7 +684,7 @@ export const regnskapsforer: Record<'no' | 'en', ServiceContent> = {
       { q: 'Kan potensielle kunder be om et uforpliktende tilbud?', a: 'Ja. Vi setter opp et enkelt kontaktskjema der potensielle kunder raskt kan be om en uforpliktende samtale eller tilbud.' },
       { q: 'Hjelper dere med SEO for regnskapsførere i Bergen?', a: 'Ja. Vi optimaliserer for søk som «regnskapsfører byggebransjen Bergen» eller «regnskapsbyrå Åsane».' },
       { q: 'Kan vi fremheve bransjer vi har spesialkompetanse på?', a: 'Ja, og vi anbefaler det – mange bedrifter foretrekker en regnskapsfører med erfaring fra akkurat deres bransje.' },
-      { q: 'Hvor lang tid tar det å lage nettsiden?', a: 'En standard nettside for et regnskapsførerfirma tar typisk 3–5 uker fra oppstart til lansering.' },
+      { q: 'Hvor lang tid tar det å lage nettsiden?', a: 'En standard nettside for et regnskapsførerfirma tar typisk 3–5 uker fra oppstart til lansering, avhengig av antall sider og om dere ønsker fagartikler som del av leveransen.' },
       { q: 'Kan nettsiden bygge tillit for en tjeneste som handler om økonomi?', a: 'Ja – det er utgangspunktet for designet. Tydelig presentasjon av autorisasjon, erfaring og kundeomtaler bygger den tilliten regnskapstjenester er avhengige av.' },
     ],
   },
@@ -728,7 +728,7 @@ export const regnskapsforer: Record<'no' | 'en', ServiceContent> = {
       { q: 'Can potential clients request a no-obligation quote?', a: 'Yes. We set up a simple contact form where potential clients can quickly request a no-obligation conversation or quote.' },
       { q: 'Do you help with SEO for accountants in Bergen?', a: 'Yes. We optimise for searches like "accountant construction industry Bergen" or "accounting firm Åsane".' },
       { q: 'Can we highlight industries we specialise in?', a: 'Yes, and we recommend it — many businesses prefer an accountant with experience in their specific industry.' },
-      { q: 'How long does it take to build the website?', a: 'A standard accounting firm website typically takes 3–5 weeks from start to launch.' },
+      { q: 'How long does it take to build the website?', a: 'A standard accounting firm website typically takes 3–5 weeks from start to launch, depending on the number of pages and whether you want articles included.' },
       { q: 'Can the website build trust for a service centred on finances?', a: 'Yes — that is the starting point for the design. Clear presentation of authorisation, experience and client testimonials builds the trust accounting services depend on.' },
     ],
   },
@@ -777,7 +777,7 @@ export const treningssenter: Record<'no' | 'en', ServiceContent> = {
       { q: 'Kan vi vise timeplan for gruppetimer som er enkel å oppdatere?', a: 'Ja, det er en forutsetning. Dere kan endre timeplanen selv når som helst, uten å kontakte en utvikler.' },
       { q: 'Hjelper dere med lokal SEO for treningssentre i Bergen?', a: 'Ja. Vi optimaliserer for søk som «treningssenter Bergenhus» eller «gruppetimer Åsane».' },
       { q: 'Kan kundene booke personlig trener på nettsiden?', a: 'Ja. Vi setter opp trenerprofiler slik at kundene kan velge og booke PT-timer direkte.' },
-      { q: 'Hvor lang tid tar det å lage nettsiden?', a: 'En standard nettside for et treningssenter tar typisk 3–5 uker fra oppstart til lansering.' },
+      { q: 'Hvor lang tid tar det å lage nettsiden?', a: 'En standard nettside for et treningssenter tar typisk 3–5 uker fra oppstart til lansering, avhengig av om dere trenger integrasjon mot medlemssystem og omfanget av innhold.' },
     ],
   },
   en: {
@@ -822,7 +822,7 @@ export const treningssenter: Record<'no' | 'en', ServiceContent> = {
       { q: 'Can we show a class schedule that is easy to update?', a: 'Yes, that is a requirement. You can change the schedule yourself at any time, without contacting a developer.' },
       { q: 'Do you help with local SEO for gyms in Bergen?', a: 'Yes. We optimise for searches like "gym Bergenhus" or "group classes Åsane".' },
       { q: 'Can clients book a personal trainer on the website?', a: 'Yes. We set up trainer profiles so clients can choose and book PT sessions directly.' },
-      { q: 'How long does it take to build the website?', a: 'A standard gym website typically takes 3–5 weeks from start to launch.' },
+      { q: 'How long does it take to build the website?', a: 'A standard gym website typically takes 3–5 weeks from start to launch, depending on whether you need membership-system integration and the scope of content.' },
     ],
   },
 }
@@ -868,7 +868,7 @@ export const bilverksted: Record<'no' | 'en', ServiceContent> = {
       { q: 'Kan vi ha et skjema for prisoverslag?', a: 'Ja. Dette gjør det enkelt for potensielle kunder å få en pekepinn på pris før de bestiller time.' },
       { q: 'Hjelper dere med lokal SEO for bilverksteder i Bergen?', a: 'Ja. Vi optimaliserer for søk som «bilverksted Åsane» eller «dekkskift Bergen».' },
       { q: 'Kan vi vise frem kundeomtaler for å bygge tillit?', a: 'Ja, og vi anbefaler det sterkt – tillit er den viktigste faktoren når folk velger bilverksted.' },
-      { q: 'Hvor lang tid tar det å lage nettsiden?', a: 'En standard nettside for et bilverksted tar typisk 3–5 uker fra oppstart til lansering.' },
+      { q: 'Hvor lang tid tar det å lage nettsiden?', a: 'En standard nettside for et bilverksted tar typisk 3–5 uker fra oppstart til lansering, avhengig av om dere trenger integrasjon mot bestillingssystem og omfanget av tjenester som skal presenteres.' },
     ],
   },
   en: {
@@ -911,7 +911,7 @@ export const bilverksted: Record<'no' | 'en', ServiceContent> = {
       { q: 'Can we have a price estimate request form?', a: 'Yes. This makes it easy for potential customers to get a sense of price before booking.' },
       { q: 'Do you help with local SEO for auto repair shops in Bergen?', a: 'Yes. We optimise for searches like "auto repair shop Åsane" or "tyre change Bergen".' },
       { q: 'Can we show customer reviews to build trust?', a: 'Yes, and we strongly recommend it — trust is the biggest factor when people choose an auto repair shop.' },
-      { q: 'How long does it take to build the website?', a: 'A standard auto repair shop website typically takes 3–5 weeks from start to launch.' },
+      { q: 'How long does it take to build the website?', a: 'A standard auto repair shop website typically takes 3–5 weeks from start to launch, depending on whether you need booking-system integration and the scope of services presented.' },
     ],
   },
 }
@@ -958,7 +958,7 @@ export const veterinaer: Record<'no' | 'en', ServiceContent> = {
       { q: 'Er det tydelig hvordan man når dere ved akutte tilfeller?', a: 'Ja, dette prioriterer vi høyt i designet. Nødtelefon og akutt-informasjon plasseres synlig øverst på nettsiden.' },
       { q: 'Hjelper dere med lokal SEO for veterinærer i Bergen?', a: 'Ja. Vi optimaliserer for søk som «veterinær akutt Bergen» eller «dyreklinikk Åsane».' },
       { q: 'Kan vi vise frem omtaler fra dyreeiere?', a: 'Ja, og vi anbefaler det – omtaler fra andre dyreeiere bygger tillit hos bekymrede kunder.' },
-      { q: 'Hvor lang tid tar det å lage nettsiden?', a: 'En standard klinikknettside tar typisk 3–5 uker fra oppstart til lansering.' },
+      { q: 'Hvor lang tid tar det å lage nettsiden?', a: 'En standard klinikknettside tar typisk 3–5 uker fra oppstart til lansering, avhengig av antall sider og om dere trenger integrasjon mot timebestillingssystem.' },
     ],
   },
   en: {
@@ -1002,7 +1002,7 @@ export const veterinaer: Record<'no' | 'en', ServiceContent> = {
       { q: 'Is it clear how to reach you in an emergency?', a: 'Yes, we prioritise this heavily in the design. Emergency phone number and information are placed prominently at the top of the website.' },
       { q: 'Do you help with local SEO for veterinarians in Bergen?', a: 'Yes. We optimise for searches like "emergency vet Bergen" or "veterinary clinic Åsane".' },
       { q: 'Can we show reviews from pet owners?', a: 'Yes, and we recommend it — reviews from other pet owners build trust with worried customers.' },
-      { q: 'How long does it take to build the website?', a: 'A standard clinic website typically takes 3–5 weeks from start to launch.' },
+      { q: 'How long does it take to build the website?', a: 'A standard clinic website typically takes 3–5 weeks from start to launch, depending on the number of pages and whether you need booking-system integration.' },
     ],
   },
 }
@@ -1049,7 +1049,7 @@ export const optiker: Record<'no' | 'en', ServiceContent> = {
       { q: 'Kan vi vise frem brillekolleksjoner på nettsiden?', a: 'Ja. Vi bygger en visning av kolleksjonene og merkene dere fører, som er enkel å oppdatere selv.' },
       { q: 'Hjelper dere med lokal SEO for optikere i Bergen?', a: 'Ja. Vi optimaliserer for søk som «optiker Bergen sentrum» eller «synsundersøkelse Åsane».' },
       { q: 'Kan vi selge kontaktlinser eller tilbehør i nettbutikk?', a: 'Ja, vi kan sette opp en enkel nettbutikk-løsning for linser og tilbehør som et tillegg til hovednettsiden.' },
-      { q: 'Hvor lang tid tar det å lage nettsiden?', a: 'En standard nettside for en optikerbutikk tar typisk 3–5 uker fra oppstart til lansering.' },
+      { q: 'Hvor lang tid tar det å lage nettsiden?', a: 'En standard nettside for en optikerbutikk tar typisk 3–5 uker fra oppstart til lansering, avhengig av om dere ønsker nettbutikk-funksjonalitet og omfanget av produktvisning.' },
     ],
   },
   en: {
@@ -1093,7 +1093,7 @@ export const optiker: Record<'no' | 'en', ServiceContent> = {
       { q: 'Can we showcase eyewear collections on the website?', a: 'Yes. We build a display of the collections and brands you carry, which is easy to update yourself.' },
       { q: 'Do you help with local SEO for opticians in Bergen?', a: 'Yes. We optimise for searches like "optician Bergen city centre" or "eye exam Åsane".' },
       { q: 'Can we sell contact lenses or accessories online?', a: 'Yes, we can set up a simple online store solution for lenses and accessories as an addition to the main website.' },
-      { q: 'How long does it take to build the website?', a: 'A standard optician website typically takes 3–5 weeks from start to launch.' },
+      { q: 'How long does it take to build the website?', a: 'A standard optician website typically takes 3–5 weeks from start to launch, depending on whether you want online store functionality and the scope of product display.' },
     ],
   },
 }
