@@ -237,6 +237,19 @@ export default async function BlogPostPage({ params }: Props) {
     ],
   } : null
 
+  const fotoPrisFaqSchema = post.slug === 'bedriftsfotografering-pris-bergen' ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: 'nb-NO',
+    mainEntity: [
+      { '@type': 'Question', name: 'Hva koster bedriftsfotografering i Bergen?', acceptedAnswer: { '@type': 'Answer', text: 'En halvdags bedriftsfotografering koster typisk 4 000–8 000 kr. Bedriftsfilm ligger på 12 000–30 000 kr, mens løpende innholdsproduksjon til sosiale medier koster 3 000–8 000 kr/mnd. Prisen avhenger av antall timer, antall bilder som redigeres og bruksrettigheter.' } },
+      { '@type': 'Question', name: 'Bør vi velge frilansfotograf eller et byrå?', acceptedAnswer: { '@type': 'Answer', text: 'En frilansfotograf er ofte billigst for et enkeltstående oppdrag. Et byrå koster mer per time, men leverer bilder tilpasset nettsiden og merkevaren din direkte, og kan kombinere fotografering med andre tjenester i én leveranse.' } },
+      { '@type': 'Question', name: 'Hvor lang tid tar det å få ferdige bilder?', acceptedAnswer: { '@type': 'Answer', text: 'De fleste leverer redigerte bilder innen 5–7 virkedager etter fotografering. Video tar normalt noe lengre tid på grunn av redigering og fargekorrigering.' } },
+      { '@type': 'Question', name: 'Trenger vi nye bedriftsfoto hvert år?', acceptedAnswer: { '@type': 'Answer', text: 'Ikke nødvendigvis. Hovedbildene bør fornyes hvert 1–2 år, eller når teamet, lokalet eller produktutvalget endrer seg vesentlig. Innhold beregnet på sosiale medier bør derimot fornyes løpende.' } },
+      { '@type': 'Question', name: 'Kan vi bruke de samme bildene i annonser og på sosiale medier?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, så lenge bruksretten dere har avtalt dekker det. Avklar dette før fotograferingen, siden utvidet bruksrett i betalte annonser noen ganger prises høyere enn ren organisk bruk.' } },
+    ],
+  } : null
+
   return (
     <>
       <JsonLd data={articleSchema} />
@@ -249,6 +262,7 @@ export default async function BlogPostPage({ params }: Props) {
       {seoAdsFaqSchema && <JsonLd data={seoAdsFaqSchema} />}
       {aiAutomasjonFaqSchema && <JsonLd data={aiAutomasjonFaqSchema} />}
       {nyNettsideFaqSchema && <JsonLd data={nyNettsideFaqSchema} />}
+      {fotoPrisFaqSchema && <JsonLd data={fotoPrisFaqSchema} />}
       <BlogPostClient post={post} relatedPosts={relatedPosts} />
     </>
   )

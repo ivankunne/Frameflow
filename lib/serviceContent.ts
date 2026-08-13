@@ -417,10 +417,12 @@ export const fotoOgVideografi: Record<'no' | 'en', ServiceContent> = {
     ],
     pricingFrom: '4 500 kr',
     faqs: [
-      { q: 'Hva koster bedriftsfotografering i Bergen?', a: 'Bedriftsfotografering fra Frameflow starter fra 4 500 kr. Prisen avhenger av antall timer, lokasjon og antall bilder som skal redigeres.' },
+      { q: 'Hva koster bedriftsfotografering i Bergen?', a: 'Bedriftsfotografering fra Frameflow starter fra 4 500 kr for en halvdags fotografering. Bedriftsfilm (60–90 sek) ligger på 12 000–30 000 kr, mens månedlig innholdsproduksjon for sosiale medier koster 3 000–8 000 kr/mnd. Prisen avhenger av antall timer, lokasjon og antall bilder som skal redigeres.' },
       { q: 'Leverer dere innhold til sosiale medier?', a: 'Ja, vi produserer foto og video optimalisert for Instagram, TikTok, LinkedIn og andre plattformer – i riktig format og størrelse.' },
       { q: 'Hvor raskt leveres bildene etter fotografering?', a: 'Redigerte bilder og video leveres vanligvis innen 5–7 virkedager etter fotografering.' },
       { q: 'Kan dere kombinere foto og sosiale medier?', a: 'Ja, vi tilbyr pakker som kombinerer innholdsproduksjon med administrasjon av sosiale medier for en sømløs løsning.' },
+      { q: 'Bør vi leie inn en fotograf eller ta bildene selv?', a: 'Mobilbilder kan fungere til raske oppdateringer, men profesjonelle bilder gir markant høyere engasjement og et mer troverdig førsteinntrykk – spesielt på nettsiden og i annonser der kvaliteten avgjør om folk stoler på deg. For de fleste bedrifter lønner en profesjonell fotografering seg raskt.' },
+      { q: 'Hvor ofte bør vi fornye bedriftsfotoene våre?', a: 'De fleste bedrifter bør fornye hovedbildene sine hvert 1–2 år, eller når teamet, lokalet eller produktutvalget endrer seg vesentlig. Innhold til sosiale medier bør fornyes løpende, gjerne månedlig.' },
     ],
   },
   en: {
@@ -458,10 +460,12 @@ export const fotoOgVideografi: Record<'no' | 'en', ServiceContent> = {
     ],
     pricingFrom: 'NOK 4,500',
     faqs: [
-      { q: 'How much does business photography cost?', a: 'Business photography from Frameflow starts from NOK 4,500. The price depends on the number of hours, location and number of images to be edited.' },
+      { q: 'How much does business photography cost?', a: 'Business photography from Frameflow starts from NOK 4,500 for a half-day shoot. Business film (60–90 sec) runs NOK 12,000–30,000, while monthly social media content production costs NOK 3,000–8,000/mo. The price depends on the number of hours, location and number of images to be edited.' },
       { q: 'Do you produce content for social media?', a: 'Yes, we produce photos and video optimised for Instagram, TikTok, LinkedIn and other platforms — in the right format and size.' },
       { q: 'How quickly are the images delivered after the shoot?', a: 'Edited images and video are normally delivered within 5–7 working days after the shoot.' },
       { q: 'Can you combine photo and social media?', a: 'Yes, we offer packages that combine content production with social media management for a seamless solution.' },
+      { q: 'Should we hire a photographer or take the photos ourselves?', a: 'Phone photos can work for quick updates, but professional photos deliver noticeably higher engagement and a more credible first impression — especially on your website and in ads where quality determines whether people trust you. For most businesses, professional photography pays for itself quickly.' },
+      { q: 'How often should we refresh our business photos?', a: 'Most businesses should refresh their main photos every 1–2 years, or when the team, premises or product range change significantly. Social media content should be refreshed continuously, ideally monthly.' },
     ],
   },
 }

@@ -1130,6 +1130,81 @@ Bergen som kulisse er en av de uunngåelige fordelene med å drive bedrift her. 
     `.trim(),
   },
   {
+    slug: 'bedriftsfotografering-pris-bergen',
+    title: 'Bedriftsfotografering i Bergen: Hva koster det og hva bør du forvente?',
+    excerpt: 'Vurderer du å leie inn en fotograf? En uavhengig prisguide til bedriftsfotografering i Bergen – hva de ulike typene koster og hva som påvirker prisen.',
+    metaTitle: 'Hva koster bedriftsfotografering i Bergen? Prisguide',
+    category: 'Foto & Video',
+    date: '13. august 2026',
+    updatedAt: '2026-08-13',
+    readTime: '7 min',
+    relatedService: { title: 'Foto og video', href: '/tjenester/foto-og-videografi' },
+    content: `
+Vurderer du allerede å leie inn en fotograf? Se hva som inngår i [Frameflows tjeneste for foto og videografi](/tjenester/foto-og-videografi) og få et konkret pristilbud – eller fortsett å lese for en uavhengig oversikt over hva bedriftsfotografering faktisk koster i Bergen.
+
+## Hva koster bedriftsfotografering i Bergen?
+
+Prisen varierer mye med type oppdrag. Her er et realistisk bilde av hva du kan forvente:
+
+| Type | Pris | Hva du får |
+|---|---|---|
+| Halvdags bedriftsfotografering | 4 000–8 000 kr | Portrett-, team- og lokalebilder til nettside og sosiale medier |
+| Produktfotografering | 2 500–6 000 kr | Bilder på hvit bakgrunn og i kontekst for nettbutikk og annonser |
+| Bedriftsfilm (60–90 sek) | 12 000–30 000 kr | Historiefortelling for hjemmeside, LinkedIn og annonser |
+| Drone-fotografering | 2 000–4 000 kr | Tillegg til ordinær fotografering, unikt perspektiv over Bergen |
+| Månedlig innholdsproduksjon | 3 000–8 000 kr/mnd | Løpende bilder og video til sosiale medier, produsert i bulk |
+
+## Hva som påvirker prisen
+
+- **Antall timer på location.** En times fotografering koster mindre enn en hel dag, men gir naturlig nok færre motiver å velge mellom.
+- **Antall ferdigredigerte bilder.** De fleste fotografer priser etter hvor mange bilder som skal fargekorrigeres og leveres, ikke bare hvor mange som tas.
+- **Lokasjon og reisetid.** Fotografering utenfor Bergen sentrum, eller på flere lokasjoner samme dag, påvirker prisen.
+- **Bruksrettigheter.** Skal bildene brukes i betalte annonser eller kun organisk på sosiale medier og nettside? Utvidet bruksrett koster ofte noe mer.
+- **Video vs. stillbilde.** Video krever mer tid til planlegging, opptak og redigering, og prises derfor høyere per time enn ren fotografering.
+
+## Fotograf, byrå eller gjør det selv?
+
+**Gjør det selv (mobilkamera):** Fungerer til raske oppdateringer på sosiale medier, men gir sjelden godt nok resultat til nettside, annonser eller Google Business Profile – bilder her er noe av det som påvirker førsteinntrykket mest.
+
+**Frilansfotograf:** Ofte det rimeligste alternativet for et enkeltoppdrag. Kvaliteten varierer mer enn hos et byrå, så be alltid om å se tidligere arbeid som ligner ditt eget behov.
+
+**Byrå som Frameflow:** Dyrere per time enn en frilanser, men du får en helhetlig leveranse – bildene tilpasses nettsiden og merkevaren din direkte, og kan kombineres med [sosiale medier-forvaltning](/tjenester/sosiale-medier) eller [webdesign](/tjenester/webdesign) i samme leveranse. Lønner seg mest når innholdet skal brukes på tvers av flere kanaler.
+
+## Slik forbereder du en vellykket fotoseanse
+
+1. **Lag en motivliste på forhånd.** Hvilke rom, produkter eller ansatte skal med? En tydelig liste sparer tid og penger på selve dagen.
+2. **Rydd og planlegg lyssetting.** Fotografen kan tilføre lys, men et ryddig og godt naturlig belyst lokale gir bedre resultater raskere.
+3. **Avklar bruksområde før du bestiller.** Fortell om bildene skal brukes i annonser, på nettsiden eller kun sosiale medier – det påvirker hvilken oppløsning og hvilket format som trengs.
+4. **Sett av mer tid enn du tror du trenger.** De fleste oppdrag tar litt lengre tid enn planlagt når man også skal fange spontane, autentiske øyeblikk.
+
+## Ofte stilte spørsmål
+
+### Hva koster bedriftsfotografering i Bergen?
+
+En halvdags bedriftsfotografering koster typisk 4 000–8 000 kr. Bedriftsfilm ligger på 12 000–30 000 kr, mens løpende innholdsproduksjon til sosiale medier koster 3 000–8 000 kr/mnd. Prisen avhenger av antall timer, antall bilder som redigeres og bruksrettigheter.
+
+### Bør vi velge frilansfotograf eller et byrå?
+
+En frilansfotograf er ofte billigst for et enkeltstående oppdrag. Et byrå koster mer per time, men leverer bilder tilpasset nettsiden og merkevaren din direkte, og kan kombinere fotografering med andre tjenester i én leveranse.
+
+### Hvor lang tid tar det å få ferdige bilder?
+
+De fleste leverer redigerte bilder innen 5–7 virkedager etter fotografering. Video tar normalt noe lengre tid på grunn av redigering og fargekorrigering.
+
+### Trenger vi nye bedriftsfoto hvert år?
+
+Ikke nødvendigvis. Hovedbildene bør fornyes hvert 1–2 år, eller når teamet, lokalet eller produktutvalget endrer seg vesentlig. Innhold beregnet på sosiale medier bør derimot fornyes løpende.
+
+### Kan vi bruke de samme bildene i annonser og på sosiale medier?
+
+Ja, så lenge bruksretten dere har avtalt dekker det. Avklar dette før fotograferingen, siden utvidet bruksrett i betalte annonser noen ganger prises høyere enn ren organisk bruk.
+
+## Neste steg
+
+Vil du vite mer om hvorfor kvalitetsinnhold faktisk gir flere kunder, ikke bare hvordan det prises? Vår guide til [profesjonell foto og video for Bergen-bedrifter](/blogg/foto-video-bedrifter-bergen) går gjennom tallene bak. Klar til å bestille? Se vår [foto- og videotjeneste](/tjenester/foto-og-videografi), eller [ta kontakt](/kontakt) for et konkret pristilbud tilpasset ditt behov.
+    `.trim(),
+  },
+  {
     slug: 'digital-markedsforing-bergen-5-kanaler-2025',
     title: 'Digital markedsføring i Bergen: De 5 viktigste kanalene for lokale bedrifter i 2026',
     excerpt: 'Med begrenset tid og budsjett må Bergen-bedrifter velge riktige markedsføringskanaler. Her er de fem som gir mest igjen for lokale Bergen-bedrifter.',
