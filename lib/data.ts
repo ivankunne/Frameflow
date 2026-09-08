@@ -1627,6 +1627,77 @@ Nå vet du hva du bør se etter, hva du bør betale, og spørsmålene du skal st
 Se hva [Frameflow tilbyr innen branding og logodesign](/tjenester/branding) – eller [ta kontakt](/kontakt) for å høre om vi passer for prosjektet ditt. Etter at logoen er på plass, er neste steg gjerne en [profesjonell nettside i Bergen](/tjenester/webdesign) som presenterer merkevaren din korrekt.
     `.trim(),
   },
+  {
+    slug: 'usynlig-for-chatgpt-bergen',
+    title: 'Er bedriften din usynlig for ChatGPT? 6 tegn du bør sjekke',
+    excerpt: 'Flere og flere søker med ChatGPT og Perplexity i stedet for Google. Her er seks tegn på at bedriften din er usynlig for AI-søk – og hvordan du sjekker det selv.',
+    metaTitle: 'Usynlig for ChatGPT? 6 tegn du bør sjekke i Bergen',
+    category: 'AI SEO',
+    date: '8. september 2026',
+    updatedAt: '2026-09-08',
+    readTime: '7 min',
+    relatedService: { title: 'AI SEO', href: '/tjenester/ai-seo' },
+    image: { src: '/blog/ai-automasjon-oppgaver-bergen.png', alt: 'Illustrasjon av en digital arbeidsflyt og en sjekkliste med fem punkter' },
+    content: `
+Vil du vite nøyaktig hva som skal til for at ChatGPT og Google AI Overviews anbefaler bedriften din? Se hva som inngår i [Frameflows AI SEO-tjeneste](/tjenester/ai-seo) – eller fortsett å lese for seks konkrete tegn du kan sjekke selv, helt gratis, i løpet av fem minutter.
+
+## Test det selv: Spør ChatGPT om bedriften din
+
+Før du leser videre, gjør denne testen. Åpne ChatGPT, Perplexity eller Google og spør noe en potensiell kunde faktisk ville spurt – for eksempel «beste [din bransje] i Bergen» eller «anbefal en [din tjeneste] i [din bydel]». Dukker bedriften din opp? Blir den beskrevet riktig? Nevnes konkurrentene dine i stedet?
+
+Svarer du «nei», «vet ikke» eller «konkurrentene mine, ikke meg» på noen av spørsmålene, er du ikke alene – de aller fleste lokale bedrifter er usynlige for AI-søk i dag, rett og slett fordi nettsiden deres aldri er bygget for å bli forstått av en språkmodell.
+
+## 6 tegn på at bedriften din er usynlig for AI-søk
+
+### 1. Ingen strukturert data (schema markup)
+
+Sjekk nettsiden din med [Google Rich Results Test](https://search.google.com/test/rich-results). Får du ingen treff, mangler nettsiden strukturert data – den maskinlesbare beskrivelsen AI-systemer bruker for å forstå hvem dere er og hva dere tilbyr, i stedet for å måtte tolke det fra løs tekst.
+
+### 2. Inkonsekvent navn, adresse og telefon (NAP)
+
+Søk opp bedriftsnavnet ditt sammen med «Bergen». Står navnet, adressen og telefonnummeret skrevet identisk på nettsiden, Google Business Profile, Facebook og eventuelle bransjekataloger? Selv små avvik – «AS» ett sted og ikke et annet, gammel adresse i en gammel oppføring – gjør det vanskeligere for AI-systemer å slå sammen informasjonen til én sikker entitet.
+
+### 3. Ingen tydelige svar på vanlige spørsmål
+
+AI-genererte svar er bygget av konkrete spørsmål-og-svar-par. Har nettsiden din en FAQ-seksjon som faktisk svarer på det kundene lurer på – pris, leveringstid, hvordan dere jobber – eller er all informasjonen spredt utover lange avsnitt uten klare spørsmål å hente svaret fra?
+
+### 4. Konkurrentene dukker opp i AI-svar, men ikke du
+
+Gjorde testen øverst i artikkelen at en konkurrent ble anbefalt i stedet for deg? Det er som regel ikke tilfeldig – konkurrenten har trolig sterkere entitetssignaler, mer strukturert innhold eller flere troverdige kilder som nevner dem, ikke nødvendigvis et bedre produkt.
+
+### 5. Nettsiden mangler en tydelig «om oss»-side med reell informasjon
+
+AI-systemer leter etter en tydelig beskrivelse av hvem dere er: grunnlagt når, av hvem, hvilken erfaring, hvilket område dere dekker. En tynn «om oss»-side med kun en logo og noen få setninger gir lite å bygge en sikker anbefaling på.
+
+### 6. Ingen omtaler eller eksterne kilder nevner bedriften
+
+Har dere Google-anmeldelser? Er dere nevnt i lokale nyheter, bransjenettverk eller samarbeidspartneres nettsider? AI-systemer vekter troverdighet ut fra hvor mange uavhengige kilder som bekrefter det samme om dere – null omtale andre steder enn deres egen nettside er et svakt signal.
+
+## Hva gjør du med funnene?
+
+Kjenner du deg igjen i ett eller to av tegnene, er det ofte nok å rette opp nettopp de tingene – strukturert data og NAP-konsistens kan for eksempel rettes uten en stor ombygging. Kjenner du deg igjen i tre eller flere, er det som regel et tegn på at nettsiden aldri har vært bygget med AI-synlighet i tankene, og en helhetlig gjennomgang lønner seg.
+
+Hos Frameflow starter vi alltid med akkurat denne kartleggingen – vi sjekker hvordan ChatGPT, Perplexity og Google AI Overviews i dag omtaler (eller overser) bedriften din, før vi bygger en plan for [AI SEO og Generative Engine Optimization](/tjenester/ai-seo). Det bygger videre på – og krever ikke at du dropper – klassisk [SEO](/tjenester/seo), som fortsatt er fundamentet AI-systemene henter mye av informasjonen sin fra.
+
+## Ofte stilte spørsmål
+
+### Hvordan sjekker jeg selv om ChatGPT kjenner til bedriften min?
+
+Spør ChatGPT eller Perplexity et spørsmål en kunde faktisk ville stilt, som «beste [tjeneste] i Bergen». Dukker dere opp, og er beskrivelsen riktig? Det er den raskeste og mest direkte testen, og den er helt gratis å gjøre selv.
+
+### Koster det noe å teste AI-synligheten sin?
+
+Nei, å teste det selv koster ingenting – du trenger bare å stille de riktige spørsmålene i ChatGPT, Perplexity eller Google. Det som koster er arbeidet med å faktisk forbedre synligheten, dersom testen avdekker svakheter.
+
+### Er strukturert data noe jeg kan sette opp selv, eller trenger jeg hjelp?
+
+Enkel strukturert data kan settes opp selv med riktig verktøy og noe teknisk kompetanse. Skal det gjøres riktig på tvers av en hel nettside – med korrekte @id-referanser og entitetskoblinger – krever det som regel utviklerkompetanse for å unngå feil som gjør mer skade enn nytte.
+
+### Hvor ofte bør jeg sjekke om bedriften min dukker opp i AI-svar?
+
+Vi anbefaler en enkel sjekk hver 1.–2. måned, siden AI-modellene oppdateres og endrer seg jevnlig. En grundigere gjennomgang, gjerne kombinert med klassiske SEO-tall fra Search Console, bør gjøres kvartalsvis.
+    `.trim(),
+  },
 ]
 
 export const projects: Project[] = [
