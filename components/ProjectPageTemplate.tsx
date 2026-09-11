@@ -402,6 +402,17 @@ export default function ProjectPageTemplate({ project }: { project: Project }) {
               transition={{ duration: 0.5, delay: 0.25 }}
               className="lg:col-span-4 flex flex-col gap-6 lg:border-l lg:border-border lg:pl-12 self-end pb-2"
             >
+              {project.clientLogo && (
+                <div className="relative h-10 w-full max-w-[180px]">
+                  <Image
+                    src={project.clientLogo.src}
+                    alt={project.clientLogo.alt}
+                    fill
+                    sizes="180px"
+                    className="object-contain object-left"
+                  />
+                </div>
+              )}
               {[
                 { label: t('labelClient'), value: project.client },
                 { label: t('labelLocation'), value: project.location },

@@ -5,7 +5,6 @@ import { JsonLd, personSchema } from '@/components/JsonLd'
 import { buildAlternates, buildBreadcrumbSchema, HOME_CRUMB, ogLocale, schemaLanguage } from '@/lib/seo'
 
 import HomeHero from '@/components/sections/HomeHero'
-import HomeLogoStrip from '@/components/sections/HomeLogoStrip'
 import HomeStats from '@/components/sections/HomeStats'
 import HomeServices from '@/components/sections/HomeServices'
 import HomeAbout from '@/components/sections/HomeAbout'
@@ -85,7 +84,6 @@ export default async function HomePage({ params }: Props) {
       <JsonLd data={personSchema} />
       <JsonLd data={faqSchema} />
       <HomeHero />
-      <HomeLogoStrip />
       <HomeStats />
       <HomeServices />
       <HomeAbout />

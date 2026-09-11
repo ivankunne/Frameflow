@@ -94,6 +94,7 @@ export default async function BlogPostPage({ params }: Props) {
         Markedsføring: ['digital markedsføring Bergen', 'markedsføringsbyrå Bergen', 'annonsering Bergen'],
         'App utvikling': ['app utvikling Bergen', 'apputvikling Bergen', 'mobilapp Bergen'],
         'AI automasjon': ['AI automasjon Bergen', 'automatisering Bergen', 'AI chatbot Bergen'],
+        'AI SEO': ['AI SEO Bergen', 'synlig i ChatGPT', 'Generative Engine Optimization'],
       }[post.category] ?? []),
     ].join(', '),
   }
@@ -250,6 +251,18 @@ export default async function BlogPostPage({ params }: Props) {
     ],
   } : null
 
+  const aiSeoSignsFaqSchema = post.slug === 'usynlig-for-chatgpt-bergen' ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: 'nb-NO',
+    mainEntity: [
+      { '@type': 'Question', name: 'Hvordan sjekker jeg selv om ChatGPT kjenner til bedriften min?', acceptedAnswer: { '@type': 'Answer', text: 'Spør ChatGPT eller Perplexity et spørsmål en kunde faktisk ville stilt, som «beste [tjeneste] i Bergen». Dukker dere opp, og er beskrivelsen riktig? Det er den raskeste og mest direkte testen, og den er helt gratis å gjøre selv.' } },
+      { '@type': 'Question', name: 'Koster det noe å teste AI-synligheten sin?', acceptedAnswer: { '@type': 'Answer', text: 'Nei, å teste det selv koster ingenting – du trenger bare å stille de riktige spørsmålene i ChatGPT, Perplexity eller Google. Det som koster er arbeidet med å faktisk forbedre synligheten, dersom testen avdekker svakheter.' } },
+      { '@type': 'Question', name: 'Er strukturert data noe jeg kan sette opp selv, eller trenger jeg hjelp?', acceptedAnswer: { '@type': 'Answer', text: 'Enkel strukturert data kan settes opp selv med riktig verktøy og noe teknisk kompetanse. Skal det gjøres riktig på tvers av en hel nettside – med korrekte @id-referanser og entitetskoblinger – krever det som regel utviklerkompetanse for å unngå feil som gjør mer skade enn nytte.' } },
+      { '@type': 'Question', name: 'Hvor ofte bør jeg sjekke om bedriften min dukker opp i AI-svar?', acceptedAnswer: { '@type': 'Answer', text: 'Vi anbefaler en enkel sjekk hver 1.–2. måned, siden AI-modellene oppdateres og endrer seg jevnlig. En grundigere gjennomgang, gjerne kombinert med klassiske SEO-tall fra Search Console, bør gjøres kvartalsvis.' } },
+    ],
+  } : null
+
   return (
     <>
       <JsonLd data={articleSchema} />
@@ -263,6 +276,7 @@ export default async function BlogPostPage({ params }: Props) {
       {aiAutomasjonFaqSchema && <JsonLd data={aiAutomasjonFaqSchema} />}
       {nyNettsideFaqSchema && <JsonLd data={nyNettsideFaqSchema} />}
       {fotoPrisFaqSchema && <JsonLd data={fotoPrisFaqSchema} />}
+      {aiSeoSignsFaqSchema && <JsonLd data={aiSeoSignsFaqSchema} />}
       <BlogPostClient post={post} relatedPosts={relatedPosts} />
     </>
   )

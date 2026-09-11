@@ -119,8 +119,8 @@
       "seeAll": "Se alle prosjekter",
       "horbitDesc": "Workflow-app som samler oppgaver, chat og dokumenter. 150+ team-medlemmer og 5000+ daglige interaksjoner.",
       "horbitStat": "5000+ daglige interaksjoner",
-      "sportsbytteDesc": "Komplett webdesign og ny visuell identitet for Norges platform for kjøp, salg og bytte av brukt sportsutstyr.",
-      "sportsbytteStat": "Ny plattform live"
+      "betlehemDesc": "Løpende nettsidevedlikehold og SEO-opprydning for Betlehem, Bergens Indremisjon sin Webflow-side.",
+      "betlehemStat": "SEO-gjennomgang fullført"
     },
     "testimonials": {
       "label": "Hva kundene sier",
@@ -173,9 +173,6 @@
       "description": "Gratis konsultasjon. Svar innen 24 timer. Ingen forpliktelser.",
       "getQuote": "Få et gratis tilbud →",
       "seeProjects": "Se våre prosjekter"
-    },
-    "logos": {
-      "label": "Bedrifter vi har hjulpet å vokse"
     }
   },
   "about": {
@@ -271,6 +268,7 @@
     "factor3Title": "Innhold og bilder",
     "factor3Desc": "Trenger du foto/video i tillegg? Vi tilbyr pakker som kombinerer tjenester.",
     "faq": "Vanlige spørsmål",
+    "caseStudy": "Se resultatet i praksis",
     "related": "Andre tjenester",
     "response": "Svar innen 24 timer – alltid",
     "badgeWeb": "SEO optimalisert",
