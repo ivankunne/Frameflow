@@ -15,6 +15,8 @@ export type ServiceContent = {
   includes: string[]
   process: { step: string; title: string; description: string }[]
   relatedServices: { title: string; href: string }[]
+  /** Slug of a lib/data.ts project to feature as proof ("see it in action") on this service page. */
+  relatedProjectSlug?: string
   pricingFrom: string
   faqs: { q: string; a: string }[]
 }
@@ -134,6 +136,7 @@ export const webflow: Record<'no' | 'en', ServiceContent> = {
       'Migrering fra WordPress eller andre plattformer',
       'Opplæring så du kan oppdatere innholdet selv',
       '30 dagers support etter lansering',
+      'Løpende vedlikehold og SEO-oppfølging for eksisterende Webflow-sider',
     ],
     process: [
       { step: '01', title: 'Strategi og design', description: 'Vi kartlegger mål og målgruppe, og designer en nettside som matcher merkevaren din og guider besøkende mot handling.' },
@@ -145,6 +148,7 @@ export const webflow: Record<'no' | 'en', ServiceContent> = {
       { title: 'SEO', href: '/tjenester/seo' },
       { title: 'Branding', href: '/tjenester/branding' },
     ],
+    relatedProjectSlug: 'betlehem',
     pricingFrom: '15 000 kr',
     faqs: [
       { q: 'Hvorfor velge Webflow?', a: 'Webflow kombinerer skreddersydd design med et visuelt CMS du kan oppdatere selv. Du slipper plugins og oppdateringsmas som med WordPress, og får raskere, sikrere nettsider med ren kode – uten å være låst til en utvikler for hver lille endring.' },
@@ -152,6 +156,7 @@ export const webflow: Record<'no' | 'en', ServiceContent> = {
       { q: 'Kan dere migrere nettsiden min til Webflow?', a: 'Ja, vi migrerer gjerne fra WordPress, Squarespace eller andre plattformer. Vi flytter innhold, setter opp redirects så du ikke mister SEO-verdi, og bygger siden på nytt med bedre struktur og hastighet.' },
       { q: 'Hva koster en Webflow-nettside i Bergen?', a: 'Webflow-prosjekter hos Frameflow starter fra 15 000 kr eks. mva. Prisen avhenger av antall sider, CMS-behov og designkompleksitet. Du får alltid fast pris før vi starter. Webflows egen lisens kommer i tillegg som en liten månedlig kostnad.' },
       { q: 'Webflow eller WordPress – hva passer best?', a: 'Webflow passer best når du vil ha rask, sikker nettside med skreddersydd design og enkel redigering. WordPress kan passe ved svært spesifikke plugin-behov. Vi rådgir deg ærlig ut fra prosjektet ditt – ikke ut fra hva som er enklest for oss.' },
+      { q: 'Vedlikeholder dere eksisterende Webflow-nettsider?', a: 'Ja. Vi tar gjerne over løpende vedlikehold av Webflow-sider vi ikke har bygget selv – innholdsoppdateringer, tekniske endringer og SEO-oppfølging. Se hvordan vi gjør det for Betlehem, Bergens Indremisjon i våre prosjekter.' },
     ],
   },
   en: {
@@ -177,6 +182,7 @@ export const webflow: Record<'no' | 'en', ServiceContent> = {
       'Migration from WordPress or other platforms',
       'Training so you can update content yourself',
       '30 days support after launch',
+      'Ongoing maintenance and SEO follow-up for existing Webflow sites',
     ],
     process: [
       { step: '01', title: 'Strategy and design', description: 'We map goals and audience, then design a site that matches your brand and guides visitors towards action.' },
@@ -188,6 +194,7 @@ export const webflow: Record<'no' | 'en', ServiceContent> = {
       { title: 'SEO', href: '/tjenester/seo' },
       { title: 'Branding', href: '/tjenester/branding' },
     ],
+    relatedProjectSlug: 'betlehem',
     pricingFrom: 'NOK 15,000',
     faqs: [
       { q: 'Why choose Webflow?', a: 'Webflow combines custom design with a visual CMS you can update yourself. No plugins or constant updates like WordPress, and faster, more secure sites with clean code — without being tied to a developer for every small change.' },
@@ -195,6 +202,7 @@ export const webflow: Record<'no' | 'en', ServiceContent> = {
       { q: 'Can you migrate my site to Webflow?', a: 'Yes, we happily migrate from WordPress, Squarespace or other platforms. We move content, set up redirects so you do not lose SEO value, and rebuild the site with better structure and speed.' },
       { q: 'How much does a Webflow website cost in Bergen?', a: 'Webflow projects at Frameflow start from NOK 15,000 excl. VAT. The price depends on the number of pages, CMS needs and design complexity. You always get a fixed price before we start. Webflow’s own licence is a small additional monthly cost.' },
       { q: 'Webflow or WordPress — which is best?', a: 'Webflow is best when you want a fast, secure site with custom design and easy editing. WordPress can suit very specific plugin needs. We advise you honestly based on your project — not on what is easiest for us.' },
+      { q: 'Do you maintain existing Webflow websites?', a: "Yes. We're happy to take over ongoing maintenance of Webflow sites we didn't build ourselves — content updates, technical changes and SEO follow-up. See how we do this for Betlehem, Bergens Indremisjon in our projects." },
     ],
   },
 }

@@ -83,6 +83,7 @@ export default async function WebflowPage({ params }: Props) {
         includes={c.includes}
         process={c.process}
         relatedServices={c.relatedServices}
+        relatedProjectSlug={c.relatedProjectSlug}
         mockupType="web"
         pricingFrom={c.pricingFrom}
         faqs={c.faqs}
