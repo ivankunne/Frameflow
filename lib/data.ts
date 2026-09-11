@@ -1706,6 +1706,10 @@ export const projects: Project[] = [
     slug: 'h-orbit',
     title: 'h-orbit',
     client: 'h-orbit',
+    clientLogo: {
+      src: '/h-orbit-logo.png',
+      alt: 'h-orbit-logo',
+    },
     description: 'Musikkplattform for artister – dele musikk, samarbeid og arrangementer',
     fullDescription:
       'h-orbit er en musikkplattform designet for spirende artister. Vi bygde en intuitiv app hvor musikere kan dele musikken sin, finne samarbeidsmuligheter med andre artister, oppdage arrangementer og musikkrelaterte muligheter – alt på ett sted.',
