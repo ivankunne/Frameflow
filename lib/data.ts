@@ -31,6 +31,7 @@ export interface Project {
   slug: string
   title: string
   client: string
+  clientLogo?: { src: string; alt: string }
   description: string
   fullDescription: string
   challenge?: string
@@ -1782,6 +1783,52 @@ export const projects: Project[] = [
       { q: 'Hvilke tjenester leverte Frameflow til Sportsbytte?', a: 'Frameflow leverte webdesign, branding og SEO for Sportsbytte – en komplett digital relansering av plattformen.' },
       { q: 'Hvilke resultater fikk Sportsbytte etter relanseringen?', a: 'Sportsbytte fikk en moderne, konverteringsfokusert nettside, en tydelig visuell identitet med brand guidelines, og en markant økning i brukerregistreringer etter lansering.' },
       { q: 'Hvor er Sportsbytte basert?', a: 'Sportsbytte opererer i Norge. Frameflow er basert i Bergen og jobber med kunder i hele landet.' },
+    ],
+  },
+  {
+    slug: 'betlehem',
+    title: 'Betlehem, Bergens Indremisjon',
+    client: 'Betlehem, Bergens Indremisjon',
+    clientLogo: {
+      src: '/betlehem-logo.svg',
+      alt: 'Betlehem, Bergens Indremisjons logo',
+    },
+    description: 'Løpende nettsidevedlikehold og SEO-opprydning for Betlehem, Bergens Indremisjon sin Webflow-side.',
+    fullDescription:
+      'Frameflow tok over det løpende vedlikeholdet av nettsiden til Betlehem, Bergens Indremisjon – bygget på Webflow. Vi holder kalender, arrangementer og innhold oppdatert, følger opp tekniske endringer fortløpende, og har gått gjennom nettsidens SEO-grunnlag som hadde svekket seg noe over tid.',
+    challenge: 'Nettsiden hadde mistet noe av sin SEO-helse over tid – metadata, strukturert data og tekniske detaljer trengte en gjennomgang for at Betlehem skulle være synlige for de som søker etter fellesskap, arrangementer og trosinnhold i Bergen.',
+    tags: ['Webflow', 'SEO', 'Vedlikehold'],
+    location: 'Bergen, Norge',
+    year: '2026',
+    results: [
+      'Fullstendig SEO-gjennomgang og opprydning av metadata',
+      'Kontinuerlig oppdatert kalender og arrangementsinnhold',
+      'Rask oppfølging av innholdsendringer på Webflow',
+      'Stabil, sikker og oppdatert nettsideplattform',
+    ],
+    image: {
+      src: '/betlehem-forside.png',
+      alt: 'Forsiden til Betlehem, Bergens Indremisjon med kommende arrangementer som Fredagsklubben og YA',
+    },
+    seo: {
+      titleNo: 'Betlehem, Bergens Indremisjon – Webflow-vedlikehold og SEO | Frameflow',
+      titleEn: 'Betlehem, Bergens Indremisjon – Webflow maintenance and SEO | Frameflow',
+      descNo: 'Frameflow vedlikeholder nettsiden til Betlehem, Bergens Indremisjon på Webflow, med løpende innholdsoppdateringer og SEO-forbedringer.',
+      descEn: 'Frameflow maintains the Webflow website for Betlehem, Bergens Indremisjon, with ongoing content updates and SEO improvements.',
+      keywordsNo: ['Betlehem Bergens Indremisjon', 'Webflow vedlikehold', 'SEO Bergen', 'Frameflow'],
+      keywordsEn: ['Betlehem Bergens Indremisjon', 'Webflow maintenance', 'SEO Bergen', 'Frameflow'],
+      ogImage: 'https://www.frameflow.no/og?title=Betlehem+%E2%80%93+Webflow-vedlikehold+og+SEO&label=Webflow',
+      schemaName: 'Betlehem, Bergens Indremisjon – Webflow-vedlikehold og SEO',
+      schemaDescription: 'Løpende nettsidevedlikehold og SEO-forbedringer for Betlehem, Bergens Indremisjon på Webflow.',
+      dateCreated: '2026',
+      schemaKeywords: 'Webflow, SEO, vedlikehold, Betlehem, Bergens Indremisjon, Bergen',
+      schemaLocation: 'Bergen, Norge',
+    },
+    faqs: [
+      { q: 'Hva gjør Frameflow for Betlehem, Bergens Indremisjon?', a: 'Frameflow leverer løpende vedlikehold av nettsiden til Betlehem, Bergens Indremisjon, som er bygget på Webflow. Dette inkluderer innholdsoppdateringer, tekniske endringer og SEO-forbedringer.' },
+      { q: 'Hvilken plattform er nettsiden bygget på?', a: 'Nettsiden til Betlehem er bygget på Webflow. Frameflow tilbyr vedlikehold og videreutvikling for bedrifter og organisasjoner som allerede har en Webflow-side.' },
+      { q: 'Hva innebar SEO-arbeidet for Betlehem?', a: 'Frameflow gikk gjennom nettsidens tekniske SEO-grunnlag – metadata, strukturert data og innholdsstruktur – for å styrke synligheten i søkemotorer.' },
+      { q: 'Hvor holder Betlehem, Bergens Indremisjon til?', a: 'Betlehem, Bergens Indremisjon holder til i Bergen, og er en del av Indremisjonsforbundet.' },
     ],
   },
 ]
