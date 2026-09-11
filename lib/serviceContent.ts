@@ -243,6 +243,7 @@ export const seo: Record<'no' | 'en', ServiceContent> = {
       { title: 'Branding', href: '/tjenester/branding' },
       { title: 'AI SEO', href: '/tjenester/ai-seo' },
     ],
+    relatedProjectSlug: 'betlehem',
     pricingFrom: '4 500 kr/mnd',
     faqs: [
       { q: 'Hva koster SEO i Bergen?', a: 'SEO-tjenester fra Frameflow starter fra 4 500 kr/mnd eks. mva. Endelig pris avhenger av konkurransesituasjonen i din bransje, antall søkeord du vil rangere på og hva slags innholdsarbeid som kreves – vi ser på dette sammen i en gratis samtale og gir deg et fast månedlig tilbud uten skjulte kostnader før noe avtales.' },
@@ -288,6 +289,7 @@ export const seo: Record<'no' | 'en', ServiceContent> = {
       { title: 'Branding', href: '/tjenester/branding' },
       { title: 'AI SEO', href: '/tjenester/ai-seo' },
     ],
+    relatedProjectSlug: 'betlehem',
     pricingFrom: 'NOK 4,500/mo',
     faqs: [
       { q: 'How much does SEO cost?', a: 'SEO services from Frameflow start from NOK 4,500/mo excl. VAT. The final price depends on competition in your industry, the number of keywords you want to rank for and the amount of content work required — we work through this together in a free call and give you a fixed monthly quote with no hidden costs before anything is agreed.' },
