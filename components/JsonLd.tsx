@@ -19,7 +19,7 @@ export const organizationSchema = {
   logo: 'https://www.frameflow.no/logo.png',
   image: 'https://www.frameflow.no/og-image.png',
   description:
-    'Frameflow er et markedsføringsbyrå i Bergen som leverer webdesign, foto og video, sosiale medier og branding til bedrifter i Bergen og Vestland.',
+    'Frameflow er et markedsføringsbyrå og webbyrå i Bergen (org.nr. 936 600 018) som leverer webdesign, SEO, foto og video, sosiale medier, branding og AI-tjenester til bedrifter i Bergen, Vestland og Norge. Grunnlagt av Ivan Kunne.',
   telephone: '+4799853781',
   email: 'ivan@frameflow.no',
   foundingDate: '2025',
@@ -91,6 +91,7 @@ export const organizationSchema = {
     'Branding',
     'SEO',
     'Lokal SEO Bergen',
+    'Markedsføring Vestland',
     'AI-automasjon',
     'AI SEO',
   ],

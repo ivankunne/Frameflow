@@ -777,11 +777,13 @@ Vil du vite om Google Ads er riktig for din Bergen-bedrift? [Ta kontakt med Fram
     metaTitle: 'Webbyrå i Bergen: Slik velger du riktig byrå i 2026',
     category: 'Webdesign',
     date: '12. mai 2026',
-    updatedAt: '2026-05-12',
+    updatedAt: '2026-09-23',
     readTime: '7 min',
     relatedService: { title: 'Web design', href: '/tjenester/webdesign' },
     image: { src: '/blog/webbyraa-bergen-guide.png', alt: 'Illustrasjon av søk og sammenligning av webbyråer basert på vurderinger, med ett verifisert valg fremhevet' },
     content: `
+Kort svar: **velg webbyrå i Bergen etter hvem som faktisk gjør jobben, om SEO er innebygd, og om du får fast pris – ikke bare etter peneste mockup.** Under er typene aktører, syv spørsmål du bør stille, og hva som skiller et byrå som leverer synlighet fra ett som bare leverer design.
+
 ## Hva er egentlig forskjellen på webbyrå i Bergen?
 
 Begrepet «webbyrå» dekker alt fra en frilanser som jobber deltid fra hybelen til et byrå med 50 ansatte og ti millioner i omsetning. Prisen kan variere fra 5 000 kr til 500 000 kr for det som tilsynelatende er samme produkt: en nettside.
@@ -862,11 +864,13 @@ Vil du ha en uforpliktende prat om hva slags nettside som passer din bedrift? Se
     metaTitle: 'Slik rangerer du på Google i Bergen – guide til lokal SEO',
     category: 'SEO',
     date: '10. mars 2026',
-    updatedAt: '2026-03-10',
+    updatedAt: '2026-09-23',
     readTime: '9 min',
     relatedService: { title: 'SEO', href: '/tjenester/seo' },
     image: { src: '/blog/lokal-seo-bergen-guide-2025.png', alt: 'Illustrasjon av lokal søkemotoroptimalisering og Google-rangering' },
     content: `
+Kort svar: **lokal SEO er det som får Bergen-bedriften din til å dukke opp når folk søker «din tjeneste + Bergen» – uten å betale per klikk.** Start med Google Business Profile, deretter nettside, anmeldelser og lokalt innhold. Hos [Frameflow](/tjenester/seo) starter løpende lokal SEO fra 4 500 kr/mnd.
+
 ## Hva er lokal SEO, og hvorfor er det viktig for Bergen-bedrifter?
 
 Lokal SEO handler om å optimalisere din digitale tilstedeværelse slik at du dukker opp når folk i Bergen søker etter produkter eller tjenester du tilbyr. Når noen skriver «tannlege Bergen» eller «frisør Bergenhus» på Google, er det lokal SEO som bestemmer hvem som vises øverst.
@@ -1028,12 +1032,14 @@ GBP er bare én brikke i det større bildet – se hele vår [guide til lokal SE
     excerpt: 'Usikker på hva du bør betale for en ny nettside? Vi bryter ned prisene for Bergen-markedet – fra enkle nettsteder til skreddersydde løsninger.',
     category: 'Webdesign',
     date: '20. februar 2026',
-    updatedAt: '2026-02-20',
+    updatedAt: '2026-09-23',
     readTime: '6 min',
     metaTitle: 'Hva koster nettside i Bergen? Komplett prisoversikt 2026',
     relatedService: { title: 'Web design', href: '/tjenester/webdesign' },
     image: { src: '/blog/nettside-pris-bergen.png', alt: 'Illustrasjon av prisoversikt og nettsideelementer for bedriftsnettsider' },
     content: `
+Kort svar: **en bedriftsnettside i Bergen koster typisk fra ca. 15 000 kr for en enkel løsning, 35 000–120 000 kr hos et lokalt byrå, og mer for e-handel eller komplekse systemer.** Hos [Frameflow](/tjenester/webdesign) starter webdesign fra 15 000 kr eks. mva. med fast pris – under ser du hva som driver forskjellen.
+
 ## Hvorfor varierer nettside-priser så mye?
 
 «Hva koster en nettside?» er litt som å spørre «hva koster en bil?» Svaret er alt fra 50 000 til 2 millioner kroner. For Bergen-bedrifter er det viktig å forstå hva du faktisk betaler for.
