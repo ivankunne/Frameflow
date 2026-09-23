@@ -54,6 +54,12 @@ export const vestlandContent = {
       'Løpende Webflow-vedlikehold og SEO-opprydning for Betlehem i Bergen. Organisasjonen ligger i Vestland fylke – men vi sier det rett ut: dette er et Bergen-prosjekt, ikke «hele Vestland».',
     proofSlug: 'betlehem',
     proofCta: 'Se prosjektet',
+    blogTitle: 'Les mer i bloggen',
+    blogName: 'Markedsføring i Vestland: Hva du trenger når byrået sitter i Bergen',
+    blogText:
+      'En praktisk gjennomgang av nettside, SEO, branding, Webflow og markedsføringsbyrå-valg for bedrifter i Bergen og Vestland – med lenker til tjenestene våre.',
+    blogSlug: 'markedsforing-vestland-bergen',
+    blogCta: 'Les artikkelen',
     howTitle: 'Slik jobber vi utenfor Bergen',
     howItems: [
       {
@@ -145,6 +151,12 @@ export const vestlandContent = {
       'Ongoing Webflow maintenance and SEO clean-up for Betlehem in Bergen. The organisation is in Vestland county — and we say it straight: this is a Bergen project, not “all of Vestland”.',
     proofSlug: 'betlehem',
     proofCta: 'See the project',
+    blogTitle: 'Read more on the blog',
+    blogName: 'Marketing in Vestland: What you need when the agency is in Bergen',
+    blogText:
+      'A practical look at websites, SEO, branding, Webflow and choosing a marketing agency for businesses in Bergen and Vestland — with links to our services.',
+    blogSlug: 'markedsforing-vestland-bergen',
+    blogCta: 'Read the article',
     howTitle: 'How we work outside Bergen',
     howItems: [
       {

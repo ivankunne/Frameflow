@@ -46,6 +46,92 @@ export interface Project {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'markedsforing-vestland-bergen',
+    title: 'Markedsføring i Vestland: Hva du trenger når byrået sitter i Bergen',
+    excerpt: 'Driver du bedrift i Vestland – i Bergen eller utenfor? Slik henger nettside, SEO, branding og markedsføring sammen når du jobber med et lokalt byrå.',
+    metaTitle: 'Markedsføring i Vestland | Nettside, SEO og branding',
+    category: 'Markedsføring',
+    date: '23. september 2026',
+    updatedAt: '2026-09-23',
+    readTime: '8 min',
+    relatedService: { title: 'Markedsføring', href: '/tjenester/markedsforing' },
+    image: {
+      src: '/blog/markedsforing-vestland-bergen.png',
+      alt: 'Abstrakt illustrasjon av Vestlandskysten i myke blåtoner – markedsføring for bedrifter i Vestland',
+    },
+    content: `
+Kort svar: **de fleste bedrifter i Vestland trenger det samme digitale fundamentet** – en rask [nettside](/tjenester/webdesign), synlighet på Google, tydelig merkevare og innhold som faktisk gir henvendelser. Forskjellen er hvor du er, og hvor byrået ditt er.
+
+Frameflow er et [markedsføringsbyrå i Bergen](/tjenester/markedsforing). Vi hjelper bedrifter i Bergen og resten av Vestland – ærlig om at de fleste kundene våre er i Bergen-regionen, og at mye av det digitale arbeidet fungerer like godt på avstand. Mer om hvordan vi jobber regionalt finner du på siden vår om [markedsføring og webdesign i Vestland](/vestland).
+
+## Bergen først – Vestland deretter
+
+Søkeordene folk bruker er lokale. «Webdesign Bergen», «SEO Bergen», «branding Bergen» og «Webflow Bergen» er typiske søk når noen leter etter hjelp her. Det er også der konkurransen er skarpest – og der et lokalt byrå har størst sjanse til å levere raskt, både digitalt og fysisk.
+
+Utenfor Bergen (Askøy, Øygarden, Sotra, Voss, Stord, Sogn og Fjordane-området) er søkemengden ofte lavere, men intensjonen er den samme: **folk vil finne en leverandør som forstår Vestland-markedet**, ikke bare et generisk nettsidefirma i Oslo.
+
+## Hva bør være på plass?
+
+### 1. Nettside og webdesign
+
+En [nettside i Bergen](/tjenester/webdesign) – eller hvor som helst i Vestland – er fortsatt salgsflaten din. Den må laste raskt på mobil, være enkel å oppdatere, og være bygget for søk fra dag én. Leser du mer om tegnene på at det er på tide å fornye, har vi en egen guide: [Trenger du ny nettside?](/blogg/trenger-ny-nettside-bergen).
+
+Mange bedrifter velger [Webflow i Bergen](/tjenester/webflow) fordi de får profesjonelt design uten å miste kontrollen over innholdet. Vi vedlikeholder også eksisterende Webflow-sider – for eksempel for [Betlehem / Bergens Indremisjon](/prosjekter/betlehem).
+
+### 2. SEO som treffer lokalt
+
+[SEO i Bergen](/tjenester/seo) handler om å bli funnet når noen søker etter det du tilbyr *her*. For Vestland-bedrifter utenfor byen betyr det ofte: Google Business Profile, tydelig adresse/NAP, og innhold som speiler hvor du faktisk holder til – ikke bare «vi er landsdekkende».
+
+Har du allerede en side, er lokal SEO ofte raskere å forbedre enn å bygge merkevare fra null. Se også [guiden til lokal SEO i Bergen](/blogg/lokal-seo-bergen-guide-2025).
+
+### 3. Branding som folk husker
+
+[Branding i Bergen](/tjenester/branding) er ikke logo for logoens skyld. Det er navn, tone, farger og budskap som gjør at du skilles fra neste bedrift i samme bransje – enten kunden sitter i Åsane eller på Sotra. Mer om hvordan vi tenker merkevare: [Branding som folk husker](/blogg/branding-bergen-bygg-merkevare-som-skiller-seg-ut).
+
+### 4. Foto, video og sosiale medier
+
+[Foto og videografi](/tjenester/foto-og-videografi) er det som får nettsiden og profilene dine til å føles ekte. For oppdrag utenfor Bergen avtaler vi det per prosjekt – det er ærligere enn å love «vi er overalt hver uke». Sosiale medier fungerer godt på avstand når strategien er klar.
+
+### 5. App-utvikling og AI-automasjon (når det faktisk trengs)
+
+Ikke alle Vestland-bedrifter trenger en app. Men hvis du har et produkt eller en intern prosess som krever det, finnes [app-utvikling](/tjenester/app-utvikling) som eget spor. Det samme gjelder [AI-automasjon](/tjenester/ai-automasjon): start med konkrete oppgaver (tilbud, oppfølging, rapporter) – ikke «AI fordi alle snakker om det». Vi har listet praktiske eksempler i [5 oppgaver Bergen-bedrifter kan automatisere](/blogg/ai-automasjon-oppgaver-bergen).
+
+## Markedsføringsbyrå i Bergen – hva kan du forvente?
+
+Et godt [markedsføringsbyrå i Bergen](/tjenester/markedsforing) bør kunne:
+
+- Bygge eller forbedre [webdesign](/tjenester/webdesign) og teknisk fundament
+- Kjøre [SEO](/tjenester/seo) mot lokale søk
+- Holde merkevare og innhold konsistent ([branding](/tjenester/branding), sosiale medier)
+- Si nei til ting som ikke passer – eller være ærlige om at foto/video utenfor byen koster tid og reise
+
+Det er også det vi beskriver på [Vestland-siden](/vestland): basert i Bergen, åpne for Vestland, ingen oppdiktede kundelister.
+
+## Hva bør du gjøre nå?
+
+1. Sjekk om du dukker opp på Google for tjenesten din + sted (Bergen eller kommunen din).
+2. Test nettsiden på mobil med PageSpeed Insights – LCP under ca. 2,5 sekunder er et sunt mål.
+3. Velg én prioritet: synlighet (SEO), konvertering (nettside) eller troverdighet (branding/foto).
+4. Snakk med noen som faktisk sitter i Vestland – ikke bare et fjernleverandør-skjema.
+
+Vil du ha en konkret vurdering? [Be om tilbud](/tilbud) eller [ta kontakt](/kontakt). Du snakker direkte med Ivan.
+
+## Ofte stilte spørsmål
+
+### Kan et Bergen-byrå hjelpe bedrifter andre steder i Vestland?
+
+Ja – særlig på nettside, Webflow, SEO, branding og digital markedsføring. Foto- og videooppdrag utenfor Bergen avtaler vi etter prosjekt. Les mer på [Frameflow for Vestland](/vestland).
+
+### Hva er viktigst først: nettside, SEO eller branding?
+
+Har du ingen brukbar nettside, start der. Har du en side ingen finner, prioriter SEO. Har du trafikk men lav tillit, sats på branding og bedre innhold.
+
+### Rangerer dere på «webdesign Bergen» og lignende søk?
+
+Vi jobber kontinuerlig med synlighet på søk som webdesign, nettside, SEO, Webflow, branding og markedsføringsbyrå i Bergen. Rangeringer svinger – det som varer er innhold, teknikk og ekte lokale signaler.
+    `.trim(),
+  },
+  {
     slug: 'trenger-ny-nettside-bergen',
     title: 'Trenger Bergen-bedriften din en ny nettside? 7 tegn på at det er på tide',
     excerpt: 'Er nettsiden din utdatert, treg eller usynlig på Google? Her er 7 tegn på at Bergen-bedriften din trenger en ny nettside – og hva du bør gjøre med det.',

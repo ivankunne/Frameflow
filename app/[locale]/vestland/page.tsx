@@ -157,6 +157,20 @@ export default async function VestlandPage({ params }: Props) {
 
         <section className="px-6 lg:px-8 py-16 bg-white">
           <div className="max-w-3xl mx-auto">
+            <h2 className="display-text text-2xl sm:text-3xl text-fg mb-3">{c.blogTitle}</h2>
+            <p className="text-lg font-semibold text-fg mb-3">{c.blogName}</p>
+            <p className="text-fg leading-relaxed font-body mb-6">{c.blogText}</p>
+            <Link
+              href={{ pathname: '/blogg/[slug]', params: { slug: c.blogSlug } }}
+              className="text-sm font-semibold text-accent hover:text-accent-hover transition-colors"
+            >
+              {c.blogCta} →
+            </Link>
+          </div>
+        </section>
+
+        <section className="px-6 lg:px-8 py-16 bg-bg-2 border-y border-border">
+          <div className="max-w-3xl mx-auto">
             <h2 className="display-text text-2xl sm:text-3xl text-fg mb-8">{c.howTitle}</h2>
             <ol className="space-y-8">
               {c.howItems.map((item, i) => (
@@ -172,7 +186,7 @@ export default async function VestlandPage({ params }: Props) {
           </div>
         </section>
 
-        <section className="px-6 lg:px-8 py-16 bg-bg-2 border-y border-border">
+        <section className="px-6 lg:px-8 py-16 bg-white">
           <div className="max-w-3xl mx-auto">
             <h2 className="display-text text-2xl sm:text-3xl text-fg mb-8">
               {lang === 'en' ? 'FAQ' : 'Ofte stilte spørsmål'}
