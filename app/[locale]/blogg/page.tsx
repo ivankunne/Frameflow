@@ -13,8 +13,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const canonical = locale === 'en' ? 'https://www.frameflow.no/en/blog' : 'https://www.frameflow.no/blogg'
   const isEn = locale === 'en'
   return {
-    title: t('title') + ' – Frameflow',
-    description: t('description'),
+    title: `${t('metaTitle')} | Frameflow`,
+    description: t('metaDescription'),
     keywords: isEn
       ? ['web design blog Bergen', 'digital marketing tips Norway', 'SEO guide Bergen', 'Frameflow blog']
       : ['webdesign blogg Bergen', 'digital markedsføring tips', 'SEO guide Bergen', 'Frameflow blogg'],
@@ -23,12 +23,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'website',
       locale: ogLocale(locale),
       siteName: 'Frameflow',
-      title: t('title') + ' | Frameflow',
-      description: t('description'),
+      title: `${t('metaTitle')} | Frameflow`,
+      description: t('metaDescription'),
       url: canonical,
-      images: [{ url: '/og-image.png', width: 1200, height: 630, alt: t('title') + ' | Frameflow' }],
+      images: [{ url: '/og-image.png', width: 1200, height: 630, alt: `${t('metaTitle')} | Frameflow` }],
     },
-    twitter: { card: 'summary_large_image', title: t('title') + ' | Frameflow', description: t('description') },
+    twitter: { card: 'summary_large_image', title: `${t('metaTitle')} | Frameflow`, description: t('metaDescription') },
   }
 }
 

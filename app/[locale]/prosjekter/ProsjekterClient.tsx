@@ -95,9 +95,17 @@ export default function ProsjekterClient() {
             initial={{ opacity: 0, y: 20 }}
             animate={heroInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-fg-muted text-lg max-w-xl leading-relaxed mb-10"
+            className="text-fg-muted text-lg max-w-xl leading-relaxed mb-6"
           >
             {t('description')}
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={heroInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.45, delay: 0.28 }}
+            className="text-fg text-base max-w-2xl leading-relaxed mb-10"
+          >
+            {t('intro')}
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 14 }}

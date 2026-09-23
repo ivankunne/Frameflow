@@ -26,12 +26,12 @@ export type AISeoContent = {
 export const aiSeo: Record<'no' | 'en', AISeoContent> = {
   no: {
     meta: {
-      title: 'AI SEO & GEO – bli sitert av ChatGPT og Google AI | Frameflow',
-      description: 'AI SEO og Generative Engine Optimization fra Frameflow: entitets-SEO, strukturert data og innholdsstrategi som gjør bedriften synlig i ChatGPT, Perplexity og Google AI Overviews. Fra 6 500 kr/mnd.',
-      ogTitle: 'AI SEO & GEO – bli sitert av ChatGPT og Google AI | Frameflow',
-      ogImageTitle: 'AI SEO & GEO',
+      title: 'AI SEO Bergen – synlig i ChatGPT og AI Overviews | Frameflow',
+      description: 'Bli anbefalt i ChatGPT, Perplexity og Google AI Overviews. AI SEO og entitetsoptimalisering for bedrifter i Bergen. Fra 6 500 kr/mnd.',
+      ogTitle: 'AI SEO Bergen – synlig i ChatGPT og AI Overviews | Frameflow',
+      ogImageTitle: 'AI SEO Bergen',
       ogImageLabel: 'AI SEO',
-      ogAlt: 'AI SEO og Generative Engine Optimization – Frameflow',
+      ogAlt: 'AI SEO og Generative Engine Optimization – Frameflow Bergen',
       canonical: 'https://www.frameflow.no/tjenester/ai-seo',
     },
     label: 'Tjeneste',
@@ -119,12 +119,12 @@ export const aiSeo: Record<'no' | 'en', AISeoContent> = {
   },
   en: {
     meta: {
-      title: 'AI SEO & GEO – get cited by ChatGPT and Google AI | Frameflow',
-      description: 'AI SEO and Generative Engine Optimization from Frameflow: entity SEO, structured data and content strategy that make your business visible in ChatGPT, Perplexity and Google AI Overviews. From NOK 6,500/mo.',
-      ogTitle: 'AI SEO & GEO – get cited by ChatGPT and Google AI | Frameflow',
-      ogImageTitle: 'AI SEO & GEO',
+      title: 'AI SEO Bergen – visible in ChatGPT and AI Overviews | Frameflow',
+      description: 'Get recommended in ChatGPT, Perplexity and Google AI Overviews. AI SEO and entity optimisation for Bergen businesses. From NOK 6,500/mo.',
+      ogTitle: 'AI SEO Bergen – visible in ChatGPT and AI Overviews | Frameflow',
+      ogImageTitle: 'AI SEO Bergen',
       ogImageLabel: 'AI SEO',
-      ogAlt: 'AI SEO and Generative Engine Optimization – Frameflow',
+      ogAlt: 'AI SEO and Generative Engine Optimization – Frameflow Bergen',
       canonical: 'https://www.frameflow.no/en/services/ai-seo',
     },
     label: 'Service',

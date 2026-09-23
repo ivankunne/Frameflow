@@ -37,11 +37,14 @@ export const organizationSchema = {
     addressCountry: 'NO',
     addressRegion: 'Vestland',
   },
+  // OpenStreetMap node for Damsgårdsveien 83A, 5058 Bergen (Gyldenpris / Årstad)
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 60.3913,
-    longitude: 5.3221,
+    latitude: 60.381299,
+    longitude: 5.320508,
   },
+  hasMap:
+    'https://www.google.com/maps/search/?api=1&query=Damsg%C3%A5rdsveien+83a+5058+Bergen',
   areaServed: [
     { '@type': 'City', name: 'Bergen' },
     { '@type': 'AdministrativeArea', name: 'Vestland' },
@@ -80,11 +83,16 @@ export const organizationSchema = {
   ],
   knowsAbout: [
     'Webdesign',
+    'Webflow',
+    'Next.js',
     'Digital markedsføring',
     'Sosiale medier',
     'Foto og videografi',
     'Branding',
     'SEO',
+    'Lokal SEO Bergen',
+    'AI-automasjon',
+    'AI SEO',
   ],
 }
 
@@ -98,14 +106,8 @@ export const websiteSchema = {
     '@id': 'https://www.frameflow.no/#organization',
   },
   inLanguage: ['nb-NO', 'en'],
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: {
-      '@type': 'EntryPoint',
-      urlTemplate: 'https://www.frameflow.no/blogg?q={search_term_string}',
-    },
-    'query-input': 'required name=search_term_string',
-  },
+  // SearchAction omitted until /blogg exposes a real search results UI for ?q=.
+  // Declaring a broken SearchAction risks Rich Results rejection.
 }
 
 export const personSchema = {

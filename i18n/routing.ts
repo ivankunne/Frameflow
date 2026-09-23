@@ -9,6 +9,11 @@ export const routing = defineRouting({
   // default and is always served at the unprefixed URLs; English is reached only
   // via explicit /en links and the language switcher.
   localeDetection: false,
+  // Disable next-intl's automatic HTTP Link hreflang headers. They emit the
+  // internal locale code "no", while HTML <link rel="alternate"> and the sitemap
+  // correctly use "nb-NO". Conflicting codes confuse crawlers — we rely on
+  // generateMetadata / sitemap alternates instead.
+  alternateLinks: false,
   pathnames: {
     '/': '/',
     '/om-oss': { no: '/om-oss', en: '/about' },

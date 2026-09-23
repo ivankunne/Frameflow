@@ -104,6 +104,10 @@ const nextConfig: NextConfig = {
       { source: '/about-us', destination: '/om-oss', permanent: true },
       { source: '/privacy-policy', destination: '/personvern', permanent: true },
       { source: '/blog', destination: '/blogg', permanent: true },
+      // Legacy/internal EN path leak: folder is /blogg under [locale], so /en/blogg
+      // was crawlable. Canonical Norwegian URLs live at /blogg (posts are NO-only).
+      { source: '/en/blogg', destination: '/blogg', permanent: true },
+      { source: '/en/blogg/:slug*', destination: '/blogg/:slug*', permanent: true },
       { source: '/project-configurator', destination: '/tilbud', permanent: true },
       { source: '/meeting-scheduler', destination: '/kontakt', permanent: true },
       { source: '/frameflow-advisor', destination: '/tilbud', permanent: true },

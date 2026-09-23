@@ -199,7 +199,7 @@
   "services": {
     "index": {
       "title": "Tjenester i Bergen",
-      "description": "Webdesign, SEO, AI automasjon, app utvikling, foto og videografi, sosiale medier og branding for bedrifter i Bergen. Syv tjenester som gir målbare resultater.",
+      "description": "Webdesign, SEO, app, foto, sosiale medier og branding for Bergen-bedrifter. Ti tjenester med fast pris og målbare resultater.",
       "webTitle": "Webdesign i Bergen",
       "webDesc": "Skreddersydde nettsider med SEO innebygd fra dag én. Konverterer besøkende til kunder.",
       "seoTitle": "SEO og søkemotoroptimalisering i Bergen",
@@ -233,7 +233,7 @@
       "label": "Bransjer vi jobber med",
       "h1Part1": "Nettsider tilpasset",
       "h1Part2": "din bransje",
-      "description": "Vi bygger nettsider skreddersydd for spesifikke bransjer – med funksjoner, innhold og lokal SEO som faktisk er relevant for kundene dine, ikke en generisk mal med logoen din limt på.",
+      "description": "Nettsider skreddersydd for din bransje i Bergen – med riktige funksjoner, innhold og lokal SEO, ikke en generisk mal.",
       "stat1": "12 bransjer",
       "stat2": "Skreddersydd innhold og funksjoner",
       "stat3": "Bergen, Norge",
@@ -309,14 +309,15 @@
     "faqLabel": "Vanlige spørsmål"
   },
   "projects": {
-    "title": "Prosjekter i Bergen",
-    "description": "Se hvordan Frameflow, med 5+ års erfaring, har hjulpet bedrifter i Bergen og internasjonalt med webdesign, app utvikling og branding.",
+    "title": "Utvalgte prosjekter – webdesign og branding",
+    "description": "Se hvordan Frameflow har hjulpet bedrifter i Bergen og internasjonalt med webdesign, app utvikling, branding og Webflow-vedlikehold – blant annet Betlehem, Sportsbytte og h-orbit.",
+    "intro": "Her er et utvalg av prosjekter Ivan har levert gjennom Frameflow. Porteføljen spenner fra løpende Webflow-vedlikehold og SEO for Betlehem (Bergens Indremisjon), via webdesign og branding for Sportsbytte, til app-utvikling for musikkplattformen h-orbit. Hvert prosjekt er bygget med SEO, ytelse og tydelig konvertering som krav fra start – ikke som etterpåklokskap. Se case-sidene for utfordring, løsning og resultater, eller ta kontakt hvis du vil diskutere et lignende oppdrag for bedriften din i Bergen.",
     "subtitle": "Se resultater fra prosjekter innen webdesign, app utvikling og branding, bygget med 5+ års erfaring.",
     "label": "Vårt arbeid",
     "h1Part1": "Prosjekter som",
     "h1Part2": "snakker for seg",
     "statLocation": "Bergen & internasjonalt",
-    "statTypes": "Web · Branding · Sosiale medier",
+    "statTypes": "Web · Branding · App",
     "filterAll": "Alle",
     "filterWeb": "Web design",
     "filterApp": "App utvikling",
@@ -331,7 +332,9 @@
   "blog": {
     "label": "Innsikt og kunnskap",
     "title": "Blogg",
+    "metaTitle": "Blogg om webdesign, SEO og markedsføring i Bergen",
     "description": "Tips, guider og innsikt om webdesign, sosiale medier, branding og digital markedsføring for Bergen-bedrifter.",
+    "metaDescription": "Guider om nettside, lokal SEO, Webflow og markedsføring for bedrifter i Bergen. Skrevet av Frameflow – praktisk og uten byråprat.",
     "readTime": "lesing"
   },
   "contact": {
@@ -381,13 +384,14 @@
     "next3Desc": "Vi sender et konkret, uforpliktende tilbud."
   },
   "quote": {
-    "metaTitle": "Få gratis tilbud – Frameflow markedsføringsbyrå Bergen",
-    "metaDesc": "Få et skreddersydd tilbud fra Frameflow markedsføringsbyrå i Bergen. Webdesign, foto og video, sosiale medier og branding. Svar innen 24 timer.",
+    "metaTitle": "Be om tilbud – webdesign og markedsføring i Bergen",
+    "metaDesc": "Få et uforpliktende tilbud på nettside, SEO eller markedsføring. Fast pris, svar innen 24 timer fra Ivan hos Frameflow i Bergen.",
     "ogTitle": "Be om tilbud – Frameflow Bergen",
     "ogDesc": "Få et skreddersydd tilbud fra Frameflow. Webdesign, foto og video, sosiale medier og branding. Svar innen 24 timer.",
     "title": "Be om tilbud",
     "label": "Start her",
     "desc": "Fortell oss om prosjektet ditt. Svar innen 24 timer – ingen forpliktelser.",
+    "intro": "Bruk skjemaet til å be om et konkret tilbud på webdesign, foto og video, sosiale medier eller branding. Du får fast pris – ikke timeestimater som løper løpsk – og svar fra Ivan personlig innen 24 timer. Webdesign starter typisk fra 15 000 kr, SEO og markedsføring fra 4 500 kr/mnd. Usikker på omfanget? Book heller en gratis samtale først, så avklarer vi hva som faktisk trengs.",
     "contactPrompt": "Vil du bare ta en prat først?",
     "contactCta": "Book en gratis samtale →",
     "guarantee1": "Fast pris – ingen overraskelser",

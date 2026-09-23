@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
@@ -9,6 +9,26 @@ export default function HomeHero() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
   const t = useTranslations('home.hero')
+  // SSR + first paint must show the H1 at full opacity (no opacity:0 inline styles
+  // that hide the heading from users without JS / before hydration). Animate only
+  // after mount.
+  const [ready, setReady] = useState(false)
+  useEffect(() => {
+    setReady(true)
+  }, [])
+
+  const line = (delay: number) =>
+    ready
+      ? {
+          initial: { opacity: 0, y: 20 } as const,
+          animate: isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 },
+          transition: { type: 'spring' as const, damping: 22, stiffness: 200, delay },
+        }
+      : {
+          initial: false as const,
+          animate: { opacity: 1, y: 0 },
+          transition: { duration: 0 },
+        }
 
   return (
     <section
@@ -27,8 +47,8 @@ export default function HomeHero() {
           {/* Left — text content */}
           <div>
             <motion.div
-              initial={{ opacity: 0, y: -6 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              initial={ready ? { opacity: 0, y: -6 } : false}
+              animate={isInView || !ready ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.3 }}
               className="mb-6"
             >
@@ -38,31 +58,22 @@ export default function HomeHero() {
               </span>
             </motion.div>
 
+            {/* Single accessible H1 string for SEO/screen readers; visual lines below */}
             <h1 className="display-text text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-fg max-w-xl mb-6 leading-[1.02]">
-              <motion.span
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ type: 'spring', damping: 22, stiffness: 200, delay: 0.05 }}
-                className="block"
-              >
-                {t('h1Line1')}
-              </motion.span>
-              <motion.span
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ type: 'spring', damping: 22, stiffness: 200, delay: 0.12 }}
-                className="block"
-              >
-                {t('h1Line2')}
-              </motion.span>
-              <motion.span
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ type: 'spring', damping: 22, stiffness: 200, delay: 0.19 }}
-                className="block gradient-text"
-              >
-                {t('h1Line3')}
-              </motion.span>
+              <span className="sr-only">
+                {t('h1Line1')} {t('h1Line2')} {t('h1Line3')}
+              </span>
+              <span aria-hidden="true">
+                <motion.span {...line(0.05)} className="block">
+                  {t('h1Line1')}
+                </motion.span>
+                <motion.span {...line(0.12)} className="block">
+                  {t('h1Line2')}
+                </motion.span>
+                <motion.span {...line(0.19)} className="block gradient-text">
+                  {t('h1Line3')}
+                </motion.span>
+              </span>
             </h1>
 
             <motion.div
@@ -90,12 +101,12 @@ export default function HomeHero() {
               </div>
 
               <div className="flex flex-wrap gap-x-5 gap-y-1.5 mt-4">
-                {([t('trust1'), t('trust2'), t('trust3')] as string[]).map((line) => (
-                  <span key={line} className="flex items-center gap-1.5 text-xs text-fg-muted">
+                {([t('trust1'), t('trust2'), t('trust3')] as string[]).map((trust) => (
+                  <span key={trust} className="flex items-center gap-1.5 text-xs text-fg-muted">
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="text-green-500 shrink-0">
                       <path d="M2 6.5l2.5 2.5L10 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
-                    {line}
+                    {trust}
                   </span>
                 ))}
               </div>

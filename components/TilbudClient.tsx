@@ -121,6 +121,14 @@ export default function TilbudClient() {
               <motion.p
                 initial={{ opacity: 0, y: 16 }}
                 animate={heroInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.45, delay: 0.3 }}
+                className="text-fg text-sm leading-relaxed mb-4"
+              >
+                {t('intro')}
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 16 }}
+                animate={heroInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.4, delay: 0.35 }}
                 className="text-sm text-fg-muted mb-8"
               >

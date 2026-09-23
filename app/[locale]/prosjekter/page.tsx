@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const canonical = locale === 'en' ? 'https://www.frameflow.no/en/projects' : 'https://www.frameflow.no/prosjekter'
   const isEn = locale === 'en'
   return {
-    title: t('title') + ' – Frameflow',
+    title: `${t('title')} | Frameflow`,
     description: t('description'),
     keywords: isEn
       ? ['projects Bergen', 'web design portfolio Norway', 'Frameflow case studies']
@@ -23,12 +23,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'website',
       locale: ogLocale(locale),
       siteName: 'Frameflow',
-      title: t('title') + ' | Frameflow',
+      title: `${t('title')} | Frameflow`,
       description: t('description'),
       url: canonical,
-      images: [{ url: '/og-image.png', width: 1200, height: 630, alt: t('title') + ' | Frameflow' }],
+      images: [{ url: '/og-image.png', width: 1200, height: 630, alt: `${t('title')} | Frameflow` }],
     },
-    twitter: { card: 'summary_large_image', title: t('title') + ' | Frameflow', description: t('description') },
+    twitter: { card: 'summary_large_image', title: `${t('title')} | Frameflow`, description: t('description') },
   }
 }
 

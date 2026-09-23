@@ -199,7 +199,7 @@
   "services": {
     "index": {
       "title": "Services in Bergen",
-      "description": "Web design, SEO, AI automation, app development, photo and videography, social media and branding for businesses in Bergen. Seven services that deliver measurable results.",
+      "description": "Web design, SEO, apps, photo, social media and branding for Bergen businesses. Ten services with fixed pricing and measurable results.",
       "webTitle": "Web design in Bergen",
       "webDesc": "Custom websites with SEO built in from day one. Converts visitors into customers.",
       "seoTitle": "SEO and search engine optimisation in Bergen",
@@ -233,7 +233,7 @@
       "label": "Industries we work with",
       "h1Part1": "Websites tailored",
       "h1Part2": "to your industry",
-      "description": "We build websites tailored to specific industries — with features, content and local SEO that are actually relevant to your customers, not a generic template with your logo pasted on.",
+      "description": "Websites tailored to your industry in Bergen — with the right features, content and local SEO, not a generic template.",
       "stat1": "12 industries",
       "stat2": "Tailored content and features",
       "stat3": "Bergen, Norway",
@@ -309,14 +309,15 @@
     "faqLabel": "Frequently asked questions"
   },
   "projects": {
-    "title": "Projects in Bergen",
-    "description": "See how Frameflow, with 5+ years of experience, has helped businesses in Bergen and internationally with web design, app development and branding.",
+    "title": "Selected projects – web design and branding",
+    "description": "See how Frameflow has helped businesses in Bergen and internationally with web design, app development, branding and Webflow maintenance — including Betlehem, Sportsbytte and h-orbit.",
+    "intro": "A selection of projects Ivan has delivered through Frameflow. The portfolio ranges from ongoing Webflow maintenance and SEO for Betlehem (Bergens Indremisjon), to web design and branding for Sportsbytte, to app development for the music platform h-orbit. Every project is built with SEO, performance and clear conversion as requirements from day one. Open each case for challenge, solution and results, or get in touch to discuss a similar project for your business in Bergen.",
     "subtitle": "See results from projects in web design, app development and branding, built with 5+ years of experience.",
     "label": "Our work",
     "h1Part1": "Projects that",
     "h1Part2": "speak for themselves",
     "statLocation": "Bergen & international",
-    "statTypes": "Web · Branding · Social media",
+    "statTypes": "Web · Branding · App",
     "filterAll": "All",
     "filterWeb": "Web design",
     "filterApp": "App development",
@@ -331,7 +332,9 @@
   "blog": {
     "label": "Insights and knowledge",
     "title": "Blog",
+    "metaTitle": "Blog on web design, SEO and marketing in Bergen",
     "description": "Tips, guides and insights on web design, social media, branding and digital marketing for Bergen businesses.",
+    "metaDescription": "Guides on websites, local SEO, Webflow and marketing for Bergen businesses. Written by Frameflow — practical, no agency fluff.",
     "readTime": "read"
   },
   "contact": {
@@ -381,13 +384,14 @@
     "next3Desc": "We send a concrete, no-obligation quote."
   },
   "quote": {
-    "metaTitle": "Get a free quote – Frameflow marketing agency Bergen",
-    "metaDesc": "Get a tailored quote from Frameflow marketing agency in Bergen. Web design, photo and video, social media and branding. Reply within 24 hours.",
+    "metaTitle": "Request a quote – web design and marketing in Bergen",
+    "metaDesc": "Get a no-obligation quote for a website, SEO or marketing. Fixed price, reply within 24 hours from Ivan at Frameflow in Bergen.",
     "ogTitle": "Request a quote – Frameflow Bergen",
     "ogDesc": "Get a tailored quote from Frameflow. Web design, photo and video, social media and branding. Reply within 24 hours.",
     "title": "Request a quote",
     "label": "Start here",
     "desc": "Tell us about your project. Reply within 24 hours – no obligation.",
+    "intro": "Use the form to request a concrete quote for web design, photo and video, social media or branding. You get a fixed price — not open-ended hourly estimates — and a personal reply from Ivan within 24 hours. Web design typically starts from NOK 15,000; SEO and marketing from NOK 4,500/mo. Unsure about scope? Book a free call first and we’ll clarify what you actually need.",
     "contactPrompt": "Just want to chat first?",
     "contactCta": "Book a free call →",
     "guarantee1": "Fixed price – no surprises",

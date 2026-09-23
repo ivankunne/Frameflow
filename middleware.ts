@@ -19,8 +19,22 @@ const GONE_PROJECT_SLUGS = new Set([
 
 const GONE_PROJECT_PATH = /^\/(?:en\/projects|prosjekter|case-studies)\/([^/]+)\/?$/
 
+// App Router folder is app/[locale]/blogg/..., so /en/blogg/* is reachable even
+// though next-intl pathnames map EN blog to /en/blog/*. Those ghosts serve
+// Norwegian copy with lang=en — 301 to the Norwegian canonical.
+const EN_BLOGG_PATH = /^\/en\/blogg(\/.*)?$/
+
 export default function middleware(request: NextRequest) {
-  const match = request.nextUrl.pathname.match(GONE_PROJECT_PATH)
+  const { pathname } = request.nextUrl
+
+  const enBlogg = pathname.match(EN_BLOGG_PATH)
+  if (enBlogg) {
+    const url = request.nextUrl.clone()
+    url.pathname = `/blogg${enBlogg[1] ?? ''}`
+    return NextResponse.redirect(url, 308)
+  }
+
+  const match = pathname.match(GONE_PROJECT_PATH)
   if (match && GONE_PROJECT_SLUGS.has(match[1])) {
     return new NextResponse('Gone', { status: 410 })
   }
