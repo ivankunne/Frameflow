@@ -48,6 +48,7 @@ export const routing = defineRouting({
     '/kontakt': { no: '/kontakt', en: '/contact' },
     '/tilbud': { no: '/tilbud', en: '/quote' },
     '/personvern': { no: '/personvern', en: '/privacy' },
+    '/vestland': { no: '/vestland', en: '/vestland' },
   },
 })
 

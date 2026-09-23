@@ -5,10 +5,10 @@ import { JsonLd, personSchema } from '@/components/JsonLd'
 import { buildAlternates, buildBreadcrumbSchema, HOME_CRUMB, ogLocale, schemaLanguage } from '@/lib/seo'
 
 import HomeHero from '@/components/sections/HomeHero'
-import HomeStats from '@/components/sections/HomeStats'
-import HomeServices from '@/components/sections/HomeServices'
-import HomeAbout from '@/components/sections/HomeAbout'
 
+const HomeStats = dynamic(() => import('@/components/sections/HomeStats'))
+const HomeServices = dynamic(() => import('@/components/sections/HomeServices'))
+const HomeAbout = dynamic(() => import('@/components/sections/HomeAbout'))
 const HomeProcess = dynamic(() => import('@/components/sections/HomeProcess'))
 const HomeProjects = dynamic(() => import('@/components/sections/HomeProjects'))
 const HomeTestimonials = dynamic(() => import('@/components/sections/HomeTestimonials'))

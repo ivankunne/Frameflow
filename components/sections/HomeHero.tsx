@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
@@ -9,26 +9,6 @@ export default function HomeHero() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
   const t = useTranslations('home.hero')
-  // SSR + first paint must show the H1 at full opacity (no opacity:0 inline styles
-  // that hide the heading from users without JS / before hydration). Animate only
-  // after mount.
-  const [ready, setReady] = useState(false)
-  useEffect(() => {
-    setReady(true)
-  }, [])
-
-  const line = (delay: number) =>
-    ready
-      ? {
-          initial: { opacity: 0, y: 20 } as const,
-          animate: isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 },
-          transition: { type: 'spring' as const, damping: 22, stiffness: 200, delay },
-        }
-      : {
-          initial: false as const,
-          animate: { opacity: 1, y: 0 },
-          transition: { duration: 0 },
-        }
 
   return (
     <section
@@ -44,80 +24,57 @@ export default function HomeHero() {
       <div className="max-w-7xl mx-auto w-full relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-          {/* Left — text content */}
+          {/* Left — text content. H1 + lead stay fully opaque for LCP. */}
           <div>
-            <motion.div
-              initial={ready ? { opacity: 0, y: -6 } : false}
-              animate={isInView || !ready ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.3 }}
-              className="mb-6"
-            >
+            <div className="mb-6">
               <span className="inline-flex items-center gap-2 text-xs font-semibold text-fg-muted border border-border bg-white px-3 py-1.5 rounded-full shadow-card">
                 <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
                 {t('label')}
               </span>
-            </motion.div>
+            </div>
 
-            {/* Single accessible H1 string for SEO/screen readers; visual lines below */}
             <h1 className="display-text text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-fg max-w-xl mb-6 leading-[1.02]">
-              <span className="sr-only">
-                {t('h1Line1')} {t('h1Line2')} {t('h1Line3')}
-              </span>
-              <span aria-hidden="true">
-                <motion.span {...line(0.05)} className="block">
-                  {t('h1Line1')}
-                </motion.span>
-                <motion.span {...line(0.12)} className="block">
-                  {t('h1Line2')}
-                </motion.span>
-                <motion.span {...line(0.19)} className="block gradient-text">
-                  {t('h1Line3')}
-                </motion.span>
-              </span>
+              <span className="block">{t('h1Line1')}</span>
+              <span className="block">{t('h1Line2')}</span>
+              <span className="block gradient-text">{t('h1Line3')}</span>
             </h1>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-              <p className="text-fg text-lg max-w-md leading-relaxed font-body mb-8">
-                {t('description')}
-              </p>
+            <p className="text-fg text-lg max-w-md leading-relaxed font-body mb-8">
+              {t('description')}
+            </p>
 
-              <div className="flex flex-wrap items-center gap-3">
-                <Link
-                  href="/tilbud"
-                  className="text-sm font-semibold bg-accent hover:bg-accent-hover text-white px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center shadow-blue-sm"
-                >
-                  {t('getQuote')}
-                </Link>
-                <Link
-                  href="/kontakt"
-                  className="text-sm font-semibold text-fg border border-border hover:border-accent hover:text-accent px-6 py-3 rounded-lg transition-all duration-200 min-h-[44px] flex items-center gap-1 bg-white shadow-card"
-                >
-                  {t('contact')}
-                </Link>
-              </div>
+            <div className="flex flex-wrap items-center gap-3">
+              <Link
+                href="/tilbud"
+                className="text-sm font-semibold bg-accent hover:bg-accent-hover text-white px-6 py-3 rounded-lg transition-colors min-h-[44px] flex items-center shadow-blue-sm"
+              >
+                {t('getQuote')}
+              </Link>
+              <Link
+                href="/kontakt"
+                className="text-sm font-semibold text-fg border border-border hover:border-accent hover:text-accent px-6 py-3 rounded-lg transition-all duration-200 min-h-[44px] flex items-center gap-1 bg-white shadow-card"
+              >
+                {t('contact')}
+              </Link>
+            </div>
 
-              <div className="flex flex-wrap gap-x-5 gap-y-1.5 mt-4">
-                {([t('trust1'), t('trust2'), t('trust3')] as string[]).map((trust) => (
-                  <span key={trust} className="flex items-center gap-1.5 text-xs text-fg-muted">
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="text-green-500 shrink-0">
-                      <path d="M2 6.5l2.5 2.5L10 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                    {trust}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
+            <div className="flex flex-wrap gap-x-5 gap-y-1.5 mt-4">
+              {([t('trust1'), t('trust2'), t('trust3')] as string[]).map((trust) => (
+                <span key={trust} className="flex items-center gap-1.5 text-xs text-fg-muted">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="text-green-500 shrink-0">
+                    <path d="M2 6.5l2.5 2.5L10 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  {trust}
+                </span>
+              ))}
+            </div>
           </div>
 
-          {/* Mobile-only proof cards */}
+          {/* Mobile-only proof cards — below LCP text, safe to animate */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.55 }}
+            transition={{ duration: 0.5, delay: 0.35 }}
             className="block lg:hidden mt-8"
           >
             <div className="grid grid-cols-2 gap-3">
@@ -133,7 +90,7 @@ export default function HomeHero() {
                       style={{ background: `rgba(22,163,74,${0.25 + i * 0.13})` }}
                       initial={{ height: 0 }}
                       animate={isInView ? { height: `${h * 0.28}px` } : {}}
-                      transition={{ duration: 0.4, delay: 0.7 + i * 0.06, ease: 'easeOut' }}
+                      transition={{ duration: 0.4, delay: 0.5 + i * 0.06, ease: 'easeOut' }}
                     />
                   ))}
                 </div>
@@ -177,13 +134,13 @@ export default function HomeHero() {
           <motion.div
             initial={{ opacity: 0, x: 24 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.15 }}
             className="relative hidden lg:block"
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.8, y: 8 }}
               animate={isInView ? { opacity: 1, scale: 1, y: 0 } : {}}
-              transition={{ type: 'spring', stiffness: 200, damping: 18, delay: 0.5 }}
+              transition={{ type: 'spring', stiffness: 200, damping: 18, delay: 0.35 }}
               className="absolute -top-4 -left-4 z-10 bg-white border border-border rounded-xl px-3 py-2 shadow-card flex items-center gap-2"
             >
               <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
@@ -210,16 +167,11 @@ export default function HomeHero() {
                 className="h-0.5 bg-accent origin-left"
                 initial={{ scaleX: 0 }}
                 animate={isInView ? { scaleX: 1 } : {}}
-                transition={{ duration: 0.5, delay: 0.3, ease: [0.4, 0, 0.2, 1] }}
+                transition={{ duration: 0.5, delay: 0.25, ease: [0.4, 0, 0.2, 1] }}
               />
 
               <div className="bg-white overflow-hidden">
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={isInView ? { opacity: 1 } : {}}
-                  transition={{ duration: 0.2, delay: 0.35 }}
-                  className="px-5 py-3 flex items-center justify-between border-b border-border/40"
-                >
+                <div className="px-5 py-3 flex items-center justify-between border-b border-border/40">
                   <div className="w-14 h-3 bg-fg/20 rounded" />
                   <div className="flex items-center gap-2.5">
                     <div className="w-7 h-2 bg-fg/10 rounded" />
@@ -227,35 +179,32 @@ export default function HomeHero() {
                     <div className="w-7 h-2 bg-fg/10 rounded" />
                     <div className="w-16 h-6 rounded-md" style={{ background: '#2172b5' }} />
                   </div>
-                </motion.div>
+                </div>
 
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={isInView ? { opacity: 1 } : {}}
-                  transition={{ duration: 0.3, delay: 0.45 }}
+                <div
                   className="mx-5 mt-5 rounded-xl overflow-hidden h-24 relative"
                   style={{ background: 'linear-gradient(135deg, #1a3a5c 0%, #1e4f80 50%, #2172b5 100%)' }}
                 >
                   <div className="absolute inset-0 flex flex-col justify-center px-5">
-                    <motion.div initial={{ scaleX: 0 }} animate={isInView ? { scaleX: 1 } : {}} transition={{ duration: 0.35, delay: 0.52 }} className="w-20 h-2 rounded mb-2.5" style={{ background: 'rgba(255,255,255,0.4)', transformOrigin: 'left' }} />
-                    <motion.div initial={{ scaleX: 0 }} animate={isInView ? { scaleX: 1 } : {}} transition={{ duration: 0.35, delay: 0.58 }} className="w-32 h-4 rounded mb-2" style={{ background: 'rgba(255,255,255,0.9)', transformOrigin: 'left' }} />
-                    <motion.div initial={{ scaleX: 0 }} animate={isInView ? { scaleX: 1 } : {}} transition={{ duration: 0.3, delay: 0.63 }} className="w-24 h-2.5 rounded" style={{ background: 'rgba(255,255,255,0.25)', transformOrigin: 'left' }} />
+                    <div className="w-20 h-2 rounded mb-2.5" style={{ background: 'rgba(255,255,255,0.4)' }} />
+                    <div className="w-32 h-4 rounded mb-2" style={{ background: 'rgba(255,255,255,0.9)' }} />
+                    <div className="w-24 h-2.5 rounded" style={{ background: 'rgba(255,255,255,0.25)' }} />
                   </div>
-                </motion.div>
+                </div>
 
                 <div className="px-5 py-4 space-y-2.5">
                   {[0.85, 0.95, 0.9].map((w, i) => (
-                    <motion.div key={i} initial={{ opacity: 0, x: -8 }} animate={isInView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.2, delay: 0.65 + i * 0.05 }} className="h-2 rounded bg-fg/8" style={{ width: `${w * 100}%` }} />
+                    <div key={i} className="h-2 rounded bg-fg/8" style={{ width: `${w * 100}%` }} />
                   ))}
                 </div>
 
                 <div className="px-5 pb-5 grid grid-cols-3 gap-2.5">
-                  {[{ delay: 0.72, accent: 'rgba(33,114,181,0.12)' }, { delay: 0.77, accent: 'rgba(33,114,181,0.07)' }, { delay: 0.82, accent: 'rgba(33,114,181,0.10)' }].map((card, i) => (
-                    <motion.div key={i} initial={{ opacity: 0, y: 6 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.3, delay: card.delay }} className="bg-bg-2 border border-border rounded-lg p-2.5">
-                      <div className="h-5 rounded mb-2" style={{ background: card.accent }} />
+                  {['rgba(33,114,181,0.12)', 'rgba(33,114,181,0.07)', 'rgba(33,114,181,0.10)'].map((accent, i) => (
+                    <div key={i} className="bg-bg-2 border border-border rounded-lg p-2.5">
+                      <div className="h-5 rounded mb-2" style={{ background: accent }} />
                       <div className="w-3/4 h-1.5 bg-fg/12 rounded mb-1.5" />
                       <div className="w-full h-1.5 bg-fg/7 rounded" />
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
               </div>
@@ -264,7 +213,7 @@ export default function HomeHero() {
             <motion.div
               initial={{ opacity: 0, scale: 0.85, y: 8 }}
               animate={isInView ? { opacity: 1, scale: 1, y: 0 } : {}}
-              transition={{ type: 'spring', stiffness: 200, damping: 18, delay: 0.75 }}
+              transition={{ type: 'spring', stiffness: 200, damping: 18, delay: 0.55 }}
               className="absolute -bottom-4 -right-4 z-10 bg-white border border-border rounded-xl px-3 py-2.5 shadow-card-hover"
             >
               <p className="text-[9px] font-semibold text-fg-muted uppercase tracking-widest mb-2">Lighthouse</p>
@@ -276,7 +225,7 @@ export default function HomeHero() {
                 <div key={row.label} className="flex items-center gap-2 mb-1 last:mb-0">
                   <span className="text-[9px] text-fg-muted w-16 shrink-0">{row.label}</span>
                   <div className="flex-1 h-1 bg-fg/6 rounded-full overflow-hidden w-16">
-                    <motion.div className="h-full rounded-full" style={{ background: row.color }} initial={{ width: 0 }} animate={isInView ? { width: `${row.score}%` } : {}} transition={{ duration: 0.6, delay: 0.8, ease: 'easeOut' }} />
+                    <motion.div className="h-full rounded-full" style={{ background: row.color }} initial={{ width: 0 }} animate={isInView ? { width: `${row.score}%` } : {}} transition={{ duration: 0.6, delay: 0.6, ease: 'easeOut' }} />
                   </div>
                   <span className="text-[9px] font-bold shrink-0" style={{ color: row.color }}>{row.score}</span>
                 </div>

@@ -17,6 +17,7 @@ export default function Footer() {
     { href: '/om-oss' as const, label: tNav('about') },
     { href: '/tjenester' as const, label: tNav('services') },
     { href: '/bransjer' as const, label: tNav('industries') },
+    { href: '/vestland' as const, label: tNav('vestland') },
     { href: '/prosjekter' as const, label: tNav('projects') },
     { href: '/blogg' as const, label: tNav('blog') },
     { href: '/kontakt' as const, label: tNav('contact') },

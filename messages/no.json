@@ -13,6 +13,7 @@
     "closeMenu": "Lukk meny",
     "getQuoteFree": "Få et gratis tilbud →",
     "contact": "Ta kontakt",
+    "vestland": "Vestland",
     "langSwitch": "EN"
   },
   "footer": {
@@ -334,7 +335,7 @@
     "title": "Blogg",
     "metaTitle": "Blogg om webdesign, SEO og markedsføring i Bergen",
     "description": "Tips, guider og innsikt om webdesign, sosiale medier, branding og digital markedsføring for Bergen-bedrifter.",
-    "metaDescription": "Guider om nettside, lokal SEO, Webflow og markedsføring for bedrifter i Bergen. Skrevet av Frameflow – praktisk og uten byråprat.",
+    "metaDescription": "Guider om nettside, lokal SEO, Webflow og digital markedsføring for bedrifter i Bergen. Praktiske råd fra Frameflow – skrevet uten byråprat.",
     "readTime": "lesing"
   },
   "contact": {

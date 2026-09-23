@@ -51,6 +51,11 @@ function build(): string {
   }
   lines.push('')
 
+  lines.push('## Områder')
+  lines.push('')
+  lines.push(`- [Vestland](${BASE}/vestland): Frameflow er basert i Bergen og leverer webdesign, SEO, foto/video og branding til bedrifter i Vestland. Ærlig om lokal tilstedeværelse — de fleste kundene er i Bergen-regionen.`)
+  lines.push('')
+
   lines.push('## Om oss')
   lines.push('')
   lines.push(`- [Om Frameflow](${BASE}/om-oss): Frameflow ble grunnlagt av Ivan Kunne i Bergen. Vi er et lite, dedikert byrå med fokus på målbare resultater for lokale bedrifter i Bergen og Vestland.`)

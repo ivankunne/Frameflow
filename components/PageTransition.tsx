@@ -1,19 +1,10 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { usePathname } from 'next/navigation'
-
+/**
+ * Pass-through wrapper. A global opacity:0 → 1 fade on mount delayed LCP on
+ * the homepage (hero text was painted invisible). Soft page fades aren't worth
+ * that cost; route changes already feel instant.
+ */
 export default function PageTransition({ children }: { children: React.ReactNode }) {
-  const pathname = usePathname()
-
-  return (
-    <motion.div
-      key={pathname}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.18, ease: 'easeOut' }}
-    >
-      {children}
-    </motion.div>
-  )
+  return <>{children}</>
 }

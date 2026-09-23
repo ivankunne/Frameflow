@@ -54,6 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...dual('/blogg', '/blog', 'weekly', 0.8),
     ...dual('/kontakt', '/contact', 'yearly', 0.7),
     ...dual('/tilbud', '/quote', 'yearly', 0.6),
+    ...dual('/vestland', '/vestland', 'monthly', 0.75),
   ]
 
   const projectPages: SitemapEntry[] = projects.flatMap((project) => {

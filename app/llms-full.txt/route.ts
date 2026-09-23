@@ -100,6 +100,7 @@ function build(): string {
   lines.push(`- Kontaktside: ${BASE}/kontakt`)
   lines.push(`- Be om tilbud: ${BASE}/tilbud`)
   lines.push(`- Om oss: ${BASE}/om-oss`)
+  lines.push(`- Vestland: ${BASE}/vestland`)
 
   return lines.join('\n') + '\n'
 }

@@ -13,6 +13,7 @@
     "closeMenu": "Close menu",
     "getQuoteFree": "Get a free quote →",
     "contact": "Contact us",
+    "vestland": "Vestland",
     "langSwitch": "NO"
   },
   "footer": {
@@ -334,7 +335,7 @@
     "title": "Blog",
     "metaTitle": "Blog on web design, SEO and marketing in Bergen",
     "description": "Tips, guides and insights on web design, social media, branding and digital marketing for Bergen businesses.",
-    "metaDescription": "Guides on websites, local SEO, Webflow and marketing for Bergen businesses. Written by Frameflow — practical, no agency fluff.",
+    "metaDescription": "Guides on websites, local SEO, Webflow and digital marketing for Bergen businesses. Practical advice from Frameflow — written without agency fluff.",
     "readTime": "read"
   },
   "contact": {
