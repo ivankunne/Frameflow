@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
 import { WebMockup, CameraMockup, SocialMockup, BrandMockup, AppMockup, SEOMockup, AIMockup, AISEOMockup } from '@/components/ServiceMockups'
-import { getProject } from '@/lib/data'
+import { getProject, getBlogPost } from '@/lib/data'
 
 interface ServicePageProps {
   label: string
@@ -18,6 +18,8 @@ interface ServicePageProps {
   relatedServices: { title: string; href: string }[]
   /** Slug of a lib/data.ts project to feature as proof ("see it in action"). */
   relatedProjectSlug?: string
+  /** Slug of a blog post to cross-link from this service page. */
+  relatedBlogSlug?: string
   mockupType: 'web' | 'photo' | 'social' | 'brand' | 'app' | 'seo' | 'ai' | 'aiseo'
   pricingFrom?: string
   faqs?: { q: string; a: string }[]
@@ -116,6 +118,7 @@ export default function ServicePageTemplate({
   process,
   relatedServices,
   relatedProjectSlug,
+  relatedBlogSlug,
   mockupType,
   pricingFrom,
   faqs,
@@ -124,6 +127,7 @@ export default function ServicePageTemplate({
   breadcrumbHref,
 }: ServicePageProps) {
   const relatedProject = relatedProjectSlug ? getProject(relatedProjectSlug) : undefined
+  const relatedBlog = relatedBlogSlug ? getBlogPost(relatedBlogSlug) : undefined
   const t = useTranslations('serviceTemplate')
   const heroRef = useRef(null)
   const heroInView = useInView(heroRef, { once: true })
@@ -414,6 +418,32 @@ export default function ServicePageTemplate({
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-semibold text-fg group-hover:text-accent transition-colors">{relatedProject.title}</p>
                     <p className="text-xs text-fg-muted truncate">{relatedProject.description}</p>
+                  </div>
+                  <span aria-hidden className="text-fg-muted group-hover:text-accent group-hover:translate-x-1 transition-all duration-200 shrink-0">→</span>
+                </Link>
+              </div>
+            )}
+            {relatedBlog && (
+              <div className="mb-8">
+                <p className="text-xs font-semibold text-fg-muted uppercase tracking-widest mb-4">{t('relatedGuide')}</p>
+                <Link
+                  href={{ pathname: '/blogg/[slug]', params: { slug: relatedBlog.slug } }}
+                  className="group flex items-center gap-4 bg-white border border-border rounded-xl p-4 hover:border-accent transition-all duration-200 max-w-md shadow-card"
+                >
+                  {relatedBlog.image && (
+                    <div className="relative w-20 h-14 rounded-lg overflow-hidden shrink-0">
+                      <Image
+                        src={relatedBlog.image.src}
+                        alt={relatedBlog.image.alt}
+                        fill
+                        sizes="80px"
+                        className="object-cover"
+                      />
+                    </div>
+                  )}
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-semibold text-fg group-hover:text-accent transition-colors line-clamp-2">{relatedBlog.title}</p>
+                    <p className="text-xs text-fg-muted truncate">{relatedBlog.excerpt}</p>
                   </div>
                   <span aria-hidden className="text-fg-muted group-hover:text-accent group-hover:translate-x-1 transition-all duration-200 shrink-0">→</span>
                 </Link>

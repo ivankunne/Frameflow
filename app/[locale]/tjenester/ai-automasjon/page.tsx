@@ -79,6 +79,7 @@ export default async function AIAutomasjonPage({ params }: Props) {
         includes={c.includes}
         process={c.process}
         relatedServices={c.relatedServices}
+        relatedBlogSlug={c.relatedBlogSlug}
         mockupType="ai"
         pricingFrom={c.pricingFrom}
         faqs={c.faqs}

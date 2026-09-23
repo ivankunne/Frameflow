@@ -17,6 +17,8 @@ export type ServiceContent = {
   relatedServices: { title: string; href: string }[]
   /** Slug of a lib/data.ts project to feature as proof ("see it in action") on this service page. */
   relatedProjectSlug?: string
+  /** Slug of a lib/data.ts blog post to cross-link from this service page. */
+  relatedBlogSlug?: string
   pricingFrom: string
   faqs: { q: string; a: string }[]
 }
@@ -56,6 +58,7 @@ export const webdesign: Record<'no' | 'en', ServiceContent> = {
       { title: 'SEO', href: '/tjenester/seo' },
       { title: 'Branding', href: '/tjenester/branding' },
     ],
+    relatedBlogSlug: 'webdesign-bergen-nettside-som-konverterer',
     pricingFrom: '15 000 kr',
     faqs: [
       { q: 'Hva koster en nettside i Bergen?', a: 'Nettsider fra Frameflow starter fra 15 000 kr eks. mva. Prisen avhenger av antall sider, funksjoner og designkompleksitet. Vi gir alltid et fast tilbud uten skjulte kostnader.' },
@@ -100,6 +103,7 @@ export const webdesign: Record<'no' | 'en', ServiceContent> = {
       { title: 'SEO', href: '/tjenester/seo' },
       { title: 'Branding', href: '/tjenester/branding' },
     ],
+    relatedBlogSlug: 'webdesign-bergen-nettside-som-konverterer',
     pricingFrom: 'NOK 15,000',
     faqs: [
       { q: 'How much does a website cost?', a: 'Websites from Frameflow start from NOK 15,000 excl. VAT. The price depends on the number of pages, features and design complexity. We always give a fixed quote with no hidden costs.' },
@@ -149,6 +153,7 @@ export const webflow: Record<'no' | 'en', ServiceContent> = {
       { title: 'Branding', href: '/tjenester/branding' },
     ],
     relatedProjectSlug: 'betlehem',
+    relatedBlogSlug: 'webflow-bergen',
     pricingFrom: '15 000 kr',
     faqs: [
       { q: 'Hvorfor velge Webflow?', a: 'Webflow kombinerer skreddersydd design med et visuelt CMS du kan oppdatere selv. Du slipper plugins og oppdateringsmas som med WordPress, og får raskere, sikrere nettsider med ren kode – uten å være låst til en utvikler for hver lille endring.' },
@@ -195,6 +200,7 @@ export const webflow: Record<'no' | 'en', ServiceContent> = {
       { title: 'Branding', href: '/tjenester/branding' },
     ],
     relatedProjectSlug: 'betlehem',
+    relatedBlogSlug: 'webflow-bergen',
     pricingFrom: 'NOK 15,000',
     faqs: [
       { q: 'Why choose Webflow?', a: 'Webflow combines custom design with a visual CMS you can update yourself. No plugins or constant updates like WordPress, and faster, more secure sites with clean code — without being tied to a developer for every small change.' },
@@ -244,6 +250,7 @@ export const seo: Record<'no' | 'en', ServiceContent> = {
       { title: 'AI SEO', href: '/tjenester/ai-seo' },
     ],
     relatedProjectSlug: 'betlehem',
+    relatedBlogSlug: 'lokal-seo-bergen-guide-2025',
     pricingFrom: '4 500 kr/mnd',
     faqs: [
       { q: 'Hva koster SEO i Bergen?', a: 'SEO-tjenester fra Frameflow starter fra 4 500 kr/mnd eks. mva. Endelig pris avhenger av konkurransesituasjonen i din bransje, antall søkeord du vil rangere på og hva slags innholdsarbeid som kreves – vi ser på dette sammen i en gratis samtale og gir deg et fast månedlig tilbud uten skjulte kostnader før noe avtales.' },
@@ -290,6 +297,7 @@ export const seo: Record<'no' | 'en', ServiceContent> = {
       { title: 'AI SEO', href: '/tjenester/ai-seo' },
     ],
     relatedProjectSlug: 'betlehem',
+    relatedBlogSlug: 'lokal-seo-bergen-guide-2025',
     pricingFrom: 'NOK 4,500/mo',
     faqs: [
       { q: 'How much does SEO cost?', a: 'SEO services from Frameflow start from NOK 4,500/mo excl. VAT. The final price depends on competition in your industry, the number of keywords you want to rank for and the amount of content work required — we work through this together in a free call and give you a fixed monthly quote with no hidden costs before anything is agreed.' },
@@ -338,6 +346,7 @@ export const appUtvikling: Record<'no' | 'en', ServiceContent> = {
       { title: 'Web design', href: '/tjenester/webdesign' },
       { title: 'Foto og videografi', href: '/tjenester/foto-og-videografi' },
     ],
+    relatedBlogSlug: 'app-utvikling-pris-bergen-2026',
     pricingFrom: '45 000 kr',
     faqs: [
       { q: 'Hva koster det å lage en app?', a: 'Apputvikling fra Frameflow starter fra 45 000 kr for en MVP. Fullskala løsninger prises individuelt etter scope og kompleksitet.' },
@@ -381,6 +390,7 @@ export const appUtvikling: Record<'no' | 'en', ServiceContent> = {
       { title: 'Web design', href: '/tjenester/webdesign' },
       { title: 'Photo & video', href: '/tjenester/foto-og-videografi' },
     ],
+    relatedBlogSlug: 'app-utvikling-pris-bergen-2026',
     pricingFrom: 'NOK 45,000',
     faqs: [
       { q: 'How much does it cost to build an app?', a: 'App development from Frameflow starts from NOK 45,000 for an MVP. Full-scale solutions are priced individually based on scope and complexity.' },
@@ -425,6 +435,7 @@ export const fotoOgVideografi: Record<'no' | 'en', ServiceContent> = {
       { title: 'Sosiale medier', href: '/tjenester/sosiale-medier' },
       { title: 'Branding', href: '/tjenester/branding' },
     ],
+    relatedBlogSlug: 'foto-video-bedrifter-bergen',
     pricingFrom: '4 500 kr',
     faqs: [
       { q: 'Hva koster bedriftsfotografering i Bergen?', a: 'Bedriftsfotografering fra Frameflow starter fra 4 500 kr for en halvdags fotografering. Bedriftsfilm (60–90 sek) ligger på 12 000–30 000 kr, mens månedlig innholdsproduksjon for sosiale medier koster 3 000–8 000 kr/mnd. Prisen avhenger av antall timer, lokasjon og antall bilder som skal redigeres.' },
@@ -468,6 +479,7 @@ export const fotoOgVideografi: Record<'no' | 'en', ServiceContent> = {
       { title: 'Social media', href: '/tjenester/sosiale-medier' },
       { title: 'Branding', href: '/tjenester/branding' },
     ],
+    relatedBlogSlug: 'foto-video-bedrifter-bergen',
     pricingFrom: 'NOK 4,500',
     faqs: [
       { q: 'How much does business photography cost?', a: 'Business photography from Frameflow starts from NOK 4,500 for a half-day shoot. Business film (60–90 sec) runs NOK 12,000–30,000, while monthly social media content production costs NOK 3,000–8,000/mo. The price depends on the number of hours, location and number of images to be edited.' },
@@ -514,6 +526,7 @@ export const sosialeMedier: Record<'no' | 'en', ServiceContent> = {
       { title: 'Branding', href: '/tjenester/branding' },
       { title: 'Web design', href: '/tjenester/webdesign' },
     ],
+    relatedBlogSlug: 'sosiale-medier-strategi-bergen-bedrifter',
     pricingFrom: '3 500 kr / mnd',
     faqs: [
       { q: 'Hva koster administrasjon av sosiale medier?', a: 'Sosiale medier-pakker fra Frameflow starter fra 3 500 kr per måned, avhengig av antall plattformer og innholdsmengde.' },
@@ -555,6 +568,7 @@ export const sosialeMedier: Record<'no' | 'en', ServiceContent> = {
       { title: 'Branding', href: '/tjenester/branding' },
       { title: 'Web design', href: '/tjenester/webdesign' },
     ],
+    relatedBlogSlug: 'sosiale-medier-strategi-bergen-bedrifter',
     pricingFrom: 'NOK 3,500/mo',
     faqs: [
       { q: 'How much does social media management cost?', a: 'Social media packages from Frameflow start from NOK 3,500 per month, depending on the number of platforms and amount of content.' },
@@ -599,6 +613,7 @@ export const branding: Record<'no' | 'en', ServiceContent> = {
       { title: 'Foto og videografi', href: '/tjenester/foto-og-videografi' },
       { title: 'Sosiale medier', href: '/tjenester/sosiale-medier' },
     ],
+    relatedBlogSlug: 'branding-bergen-bygg-merkevare-som-skiller-seg-ut',
     pricingFrom: '8 000 kr',
     faqs: [
       { q: 'Hva er inkludert i en brandingpakke?', a: 'Alle brandingpakker inkluderer logo, fargepalett, typografi og brand guidelines. Vi leverer alle filer i vektorformat for bruk på nett og i trykk.' },
@@ -644,6 +659,7 @@ export const branding: Record<'no' | 'en', ServiceContent> = {
       { title: 'Photo & video', href: '/tjenester/foto-og-videografi' },
       { title: 'Social media', href: '/tjenester/sosiale-medier' },
     ],
+    relatedBlogSlug: 'branding-bergen-bygg-merkevare-som-skiller-seg-ut',
     pricingFrom: 'NOK 8,000',
     faqs: [
       { q: 'What is included in a branding package?', a: 'All branding packages include logo, colour palette, typography and brand guidelines. We deliver all files in vector format for use online and in print.' },
@@ -694,6 +710,7 @@ export const markedsforing: Record<'no' | 'en', ServiceContent> = {
       { title: 'Sosiale medier', href: '/tjenester/sosiale-medier' },
       { title: 'AI SEO', href: '/tjenester/ai-seo' },
     ],
+    relatedBlogSlug: 'markedsforing-vestland-bergen',
     pricingFrom: '4 500 kr/mnd',
     faqs: [
       { q: 'Hva koster digital markedsføring fra et byrå i Bergen?', a: 'Løpende markedsføring starter fra 4 500 kr/mnd for én tjeneste som SEO eller sosiale medier. Helhetspakker med webdesign, SEO og sosiale medier prises individuelt basert på omfang. Vi gir alltid fast pris – ingen overraskelser.' },
@@ -738,6 +755,7 @@ export const markedsforing: Record<'no' | 'en', ServiceContent> = {
       { title: 'Social media', href: '/tjenester/sosiale-medier' },
       { title: 'AI SEO', href: '/tjenester/ai-seo' },
     ],
+    relatedBlogSlug: 'markedsforing-vestland-bergen',
     pricingFrom: 'NOK 4,500/mo',
     faqs: [
       { q: 'What does digital marketing from a Bergen agency cost?', a: 'Ongoing marketing starts from NOK 4,500/mo for one service such as SEO or social media. Full packages with web design, SEO and social media are priced individually based on scope. We always give a fixed price — no surprises.' },
@@ -785,6 +803,7 @@ export const aiAutomasjon: Record<'no' | 'en', ServiceContent> = {
       { title: 'SEO', href: '/tjenester/seo' },
       { title: 'AI SEO', href: '/tjenester/ai-seo' },
     ],
+    relatedBlogSlug: 'ai-automasjon-oppgaver-bergen',
     pricingFrom: '8 000 kr',
     faqs: [
       { q: 'Hva kan AI-automasjon gjøre for bedriften min?', a: 'Den kan håndtere alle repetitive, regelbaserte oppgaver: svare på standardhenvendelser, sortere og videresende e-poster, logge leads i CRM, sende oppfølgings-e-poster, bekrefte bookinger og mye mer. En god tommelfingerregel: hvis du kan beskrive oppgaven som en serie trinn, kan den automatiseres.' },
@@ -829,6 +848,7 @@ export const aiAutomasjon: Record<'no' | 'en', ServiceContent> = {
       { title: 'SEO', href: '/tjenester/seo' },
       { title: 'AI SEO', href: '/tjenester/ai-seo' },
     ],
+    relatedBlogSlug: 'ai-automasjon-oppgaver-bergen',
     pricingFrom: 'NOK 8,000',
     faqs: [
       { q: 'What can AI automation do for my business?', a: 'It can handle all repetitive, rule-based tasks: reply to standard enquiries, sort and forward emails, log leads in CRM, send follow-up emails, confirm bookings and much more. A good rule of thumb: if you can describe the task as a series of steps, it can be automated.' },

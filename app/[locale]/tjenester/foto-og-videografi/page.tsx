@@ -79,6 +79,7 @@ export default async function FotoOgVideografiPage({ params }: Props) {
         includes={c.includes}
         process={c.process}
         relatedServices={c.relatedServices}
+        relatedBlogSlug={c.relatedBlogSlug}
         mockupType="photo"
         pricingFrom={c.pricingFrom}
         faqs={c.faqs}

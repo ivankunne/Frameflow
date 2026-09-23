@@ -82,6 +82,7 @@ export default async function MarkedsforingPage({ params }: Props) {
         includes={c.includes}
         process={c.process}
         relatedServices={c.relatedServices}
+        relatedBlogSlug={c.relatedBlogSlug}
         mockupType="seo"
         pricingFrom={c.pricingFrom}
         faqs={c.faqs}

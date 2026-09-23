@@ -80,6 +80,7 @@ export default async function SEOPage({ params }: Props) {
         process={c.process}
         relatedServices={c.relatedServices}
         relatedProjectSlug={c.relatedProjectSlug}
+        relatedBlogSlug={c.relatedBlogSlug}
         mockupType="seo"
         pricingFrom={c.pricingFrom}
         faqs={c.faqs}

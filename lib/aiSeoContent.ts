@@ -16,6 +16,7 @@ export type AISeoContent = {
   process: { step: string; title: string; description: string }[]
   relatedServices: { title: string; href: string }[]
   pricingFrom: string
+  relatedBlogSlug?: string
   faqs: { q: string; a: string }[]
   definitions: { aiSeoTerm: string; aiSeo: string; geoTerm: string; geo: string; aeoTerm: string; aeo: string }
   howSearchChanged: { title: string; body: string; engines: string[] }
@@ -65,6 +66,7 @@ export const aiSeo: Record<'no' | 'en', AISeoContent> = {
       { title: 'AI Automasjon', href: '/tjenester/ai-automasjon' },
     ],
     pricingFrom: '6 500 kr/mnd',
+    relatedBlogSlug: 'usynlig-for-chatgpt-bergen',
     faqs: [
       { q: 'Hva er AI SEO?', a: 'AI SEO er arbeidet med å gjøre nettsiden og innholdet ditt forståelig, troverdig og siterbart for AI-drevne søk og svartjenester som ChatGPT, Perplexity, Gemini og Google AI Overviews. Der klassisk SEO optimaliserer for rangering i en liste med lenker, optimaliserer AI SEO for å bli valgt ut som selve kilden til svaret.' },
       { q: 'Hva er Generative Engine Optimization (GEO)?', a: 'GEO er en bredere betegnelse for AI SEO, hentet fra forskning på hvordan generative AI-systemer velger og siterer kilder. Begrepene brukes ofte om hverandre – GEO understreker at målgruppen nå kan være en språkmodell like gjerne som en person som scroller gjennom søkeresultater.' },
@@ -158,6 +160,7 @@ export const aiSeo: Record<'no' | 'en', AISeoContent> = {
       { title: 'AI Automation', href: '/tjenester/ai-automasjon' },
     ],
     pricingFrom: 'NOK 6,500/mo',
+    relatedBlogSlug: 'usynlig-for-chatgpt-bergen',
     faqs: [
       { q: 'What is AI SEO?', a: 'AI SEO is the work of making your website and content understandable, trustworthy and citable for AI-driven search and answer engines like ChatGPT, Perplexity, Gemini and Google AI Overviews. Where classic SEO optimises for ranking in a list of links, AI SEO optimises for being chosen as the source behind the answer itself.' },
       { q: 'What is Generative Engine Optimization (GEO)?', a: 'GEO is a broader term for AI SEO, drawn from research into how generative AI systems select and cite sources. The terms are often used interchangeably — GEO emphasises that the audience can now be a language model just as often as a person scrolling through search results.' },

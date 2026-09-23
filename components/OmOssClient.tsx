@@ -67,10 +67,23 @@ export default function OmOssClient() {
             initial={{ opacity: 0, y: 20 }}
             animate={heroInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.25 }}
-            className="text-fg-muted text-base sm:text-lg max-w-2xl leading-relaxed mb-6 lg:mb-8"
+            className="text-fg-muted text-base sm:text-lg max-w-2xl leading-relaxed mb-4"
           >
             {t('description')}
           </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={heroInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.4, delay: 0.3 }}
+            className="mb-6 lg:mb-8"
+          >
+            <Link
+              href="/vestland"
+              className="text-sm font-semibold text-accent hover:text-accent-hover transition-colors"
+            >
+              {t('vestlandLink')}
+            </Link>
+          </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={heroInView ? { opacity: 1, y: 0 } : {}}

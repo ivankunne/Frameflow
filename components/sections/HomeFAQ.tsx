@@ -146,7 +146,17 @@ export default function HomeFAQ() {
                   transition={{ duration: 0.22, ease: 'easeInOut' }}
                   style={{ overflow: 'hidden' }}
                 >
-                  <p className="text-fg text-sm leading-relaxed px-6 pb-5">{faq.a}</p>
+                  <div className="px-6 pb-5">
+                    <p className="text-fg text-sm leading-relaxed">{faq.a}</p>
+                    {i === 4 && (
+                      <Link
+                        href="/vestland"
+                        className="inline-block mt-3 text-sm font-semibold text-accent hover:text-accent-hover transition-colors"
+                      >
+                        {t('a5Link')}
+                      </Link>
+                    )}
+                  </div>
                 </motion.div>
               </motion.div>
             ))}

@@ -80,12 +80,20 @@ export default function HomeAbout() {
               ))}
             </div>
 
-            <Link
-              href="/om-oss"
-              className="text-sm font-semibold text-fg border border-border hover:border-accent hover:text-accent px-6 py-3 rounded-lg transition-all duration-200 inline-flex items-center gap-2 min-h-[44px] shadow-card"
-            >
-              {t('readMore')}
-            </Link>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/om-oss"
+                className="text-sm font-semibold text-fg border border-border hover:border-accent hover:text-accent px-6 py-3 rounded-lg transition-all duration-200 inline-flex items-center gap-2 min-h-[44px] shadow-card"
+              >
+                {t('readMore')}
+              </Link>
+              <Link
+                href="/vestland"
+                className="text-sm font-semibold text-accent hover:text-accent-hover px-2 py-3 transition-colors inline-flex items-center min-h-[44px]"
+              >
+                {t('vestlandLink')}
+              </Link>
+            </div>
           </motion.div>
         </div>
       </div>

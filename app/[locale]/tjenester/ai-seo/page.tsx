@@ -99,6 +99,7 @@ export default async function AISeoPage({ params }: Props) {
         includes={c.includes}
         process={c.process}
         relatedServices={c.relatedServices}
+        relatedBlogSlug={c.relatedBlogSlug}
         mockupType="aiseo"
         pricingFrom={c.pricingFrom}
         faqs={c.faqs}

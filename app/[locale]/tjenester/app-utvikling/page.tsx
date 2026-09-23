@@ -80,6 +80,7 @@ export default async function AppUtviklingPage({ params }: Props) {
         includes={c.includes}
         process={c.process}
         relatedServices={c.relatedServices}
+        relatedBlogSlug={c.relatedBlogSlug}
         mockupType="app"
         pricingFrom={c.pricingFrom}
         faqs={c.faqs}
