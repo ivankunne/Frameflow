@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import dynamic from 'next/dynamic'
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { JsonLd, personSchema } from '@/components/JsonLd'
 import { buildAlternates, buildBreadcrumbSchema, HOME_CRUMB, ogLocale, schemaLanguage } from '@/lib/seo'
 
@@ -76,6 +76,7 @@ async function buildHomeFaqSchema(locale: string) {
 
 export default async function HomePage({ params }: Props) {
   const { locale } = await params
+  setRequestLocale(locale)
   const breadcrumbSchema = buildBreadcrumbSchema(locale, [HOME_CRUMB])
   const faqSchema = await buildHomeFaqSchema(locale)
   return (

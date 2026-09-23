@@ -4,6 +4,7 @@ import { JsonLd } from '@/components/JsonLd'
 import ProjectPageTemplate from '@/components/ProjectPageTemplate'
 import { getProject, projects } from '@/lib/data'
 import { buildAlternates, buildBreadcrumbSchema, HOME_CRUMB, ogLocale } from '@/lib/seo'
+import { setRequestLocale } from 'next-intl/server'
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
 
@@ -46,6 +47,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ProjectPage({ params }: Props) {
   const { locale, slug } = await params
+  setRequestLocale(locale)
   const project = getProject(slug)
   if (!project) notFound()
 

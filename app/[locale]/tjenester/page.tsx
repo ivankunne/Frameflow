@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { JsonLd } from '@/components/JsonLd'
 import TjenesterClient from './TjenesterClient'
 import { buildAlternates, buildBreadcrumbSchema, HOME_CRUMB, SERVICES_CRUMB, ogLocale } from '@/lib/seo'
@@ -173,6 +173,7 @@ const serviceListSchema = {
 
 export default async function TjenesterPage({ params }: Props) {
   const { locale } = await params
+  setRequestLocale(locale)
   const breadcrumbSchema = buildBreadcrumbSchema(locale, [HOME_CRUMB, SERVICES_CRUMB])
   return (
     <>

@@ -3,7 +3,8 @@ import { notFound } from 'next/navigation'
 import { JsonLd } from '@/components/JsonLd'
 import { blogPosts, getBlogPost } from '@/lib/data'
 import BlogPostClient from '@/components/BlogPostClient'
-import { buildAlternates, ogLocale } from '@/lib/seo'
+import { buildAlternates, norwegianDateToIso, ogLocale } from '@/lib/seo'
+import { setRequestLocale } from 'next-intl/server'
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
 
@@ -38,7 +39,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: 'Frameflow',
       url: noUrl,
       authors: ['Ivan Kunne'],
-      publishedTime: post.updatedAt ?? post.date,
+      publishedTime: norwegianDateToIso(post.date),
+      modifiedTime: post.updatedAt ?? norwegianDateToIso(post.date),
       images: [{ url: '/og-image.png', width: 1200, height: 630, alt: post.metaTitle ?? post.title }],
     },
     twitter: {
@@ -50,18 +52,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function BlogPostPage({ params }: Props) {
-  const { slug } = await params
+  const { locale, slug } = await params
+  setRequestLocale(locale)
   const post = getBlogPost(slug)
   if (!post) notFound()
 
-  const publishedDate = post.updatedAt ?? post.date
+  const publishedDate = norwegianDateToIso(post.date)
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: post.title,
     description: post.excerpt,
     datePublished: publishedDate,
-    dateModified: publishedDate,
+    dateModified: post.updatedAt ?? publishedDate,
     articleSection: post.category,
     image: {
       '@type': 'ImageObject',

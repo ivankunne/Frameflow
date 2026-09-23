@@ -3,6 +3,7 @@ import { webflow } from '@/lib/serviceContent'
 import ServicePageTemplate from '@/components/ServicePageTemplate'
 import { JsonLd } from '@/components/JsonLd'
 import { buildAlternates, buildBreadcrumbSchema, HOME_CRUMB, SERVICES_CRUMB, ogLocale, schemaLanguage } from '@/lib/seo'
+import { setRequestLocale } from 'next-intl/server'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -35,6 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function WebflowPage({ params }: Props) {
   const { locale } = await params
+  setRequestLocale(locale)
   const lang = locale === 'en' ? 'en' : 'no'
   const c = webflow[lang]
 
