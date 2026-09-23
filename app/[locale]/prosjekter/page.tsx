@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { JsonLd } from '@/components/JsonLd'
 import { projects } from '@/lib/data'
 import ProsjekterClient from './ProsjekterClient'
@@ -57,6 +57,7 @@ const portfolioSchema = {
 
 export default async function ProsjekterPage({ params }: Props) {
   const { locale } = await params
+  setRequestLocale(locale)
   const breadcrumbSchema = buildBreadcrumbSchema(locale, [
     HOME_CRUMB,
     { name: 'Prosjekter', nameEn: 'Projects', noPath: '/prosjekter', enPath: '/projects' },

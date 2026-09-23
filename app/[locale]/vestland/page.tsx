@@ -3,6 +3,7 @@ import { Link } from '@/i18n/navigation'
 import { JsonLd } from '@/components/JsonLd'
 import { vestlandContent } from '@/lib/vestlandContent'
 import { buildAlternates, buildBreadcrumbSchema, HOME_CRUMB, ogLocale, schemaLanguage } from '@/lib/seo'
+import { setRequestLocale } from 'next-intl/server'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -34,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function VestlandPage({ params }: Props) {
   const { locale } = await params
+  setRequestLocale(locale)
   const lang = locale === 'en' ? 'en' : 'no'
   const c = vestlandContent[lang]
 

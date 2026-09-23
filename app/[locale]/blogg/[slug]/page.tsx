@@ -4,6 +4,7 @@ import { JsonLd } from '@/components/JsonLd'
 import { blogPosts, getBlogPost } from '@/lib/data'
 import BlogPostClient from '@/components/BlogPostClient'
 import { buildAlternates, norwegianDateToIso, ogLocale } from '@/lib/seo'
+import { setRequestLocale } from 'next-intl/server'
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
 
@@ -51,7 +52,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function BlogPostPage({ params }: Props) {
-  const { slug } = await params
+  const { locale, slug } = await params
+  setRequestLocale(locale)
   const post = getBlogPost(slug)
   if (!post) notFound()
 
