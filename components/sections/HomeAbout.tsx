@@ -14,7 +14,7 @@ export default function HomeAbout() {
   const points = [t('point1'), t('point2'), t('point3'), t('point4')]
 
   return (
-    <section ref={ref} className="py-16 md:py-24 lg:py-32 px-6 lg:px-8 bg-white">
+    <section ref={ref} className="py-16 md:py-24 lg:py-32 px-6 lg:px-8 bg-white overflow-x-clip">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 items-center">
 
