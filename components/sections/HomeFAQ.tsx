@@ -132,10 +132,12 @@ export default function HomeFAQ() {
           <div className="lg:col-span-8">
             {faqs.map((faq, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 12 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.4, delay: 0.1 + i * 0.07 }} className={`bg-white border rounded-xl mb-3 overflow-hidden transition-all duration-200 ${open === i ? 'border-accent shadow-blue-sm' : 'border-border shadow-card'}`}>
-                <button onClick={() => setOpen(open === i ? null : i)} className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left group min-h-[56px]" aria-expanded={open === i} aria-controls={`faq-answer-${i}`}>
-                  <span className={`font-semibold text-sm transition-colors duration-200 ${open === i ? 'text-accent' : 'text-fg group-hover:text-accent'}`}>{faq.q}</span>
-                  <span className={`shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-sm transition-all duration-200 ${open === i ? 'bg-accent text-white rotate-45' : 'bg-bg-2 text-fg-muted'}`} aria-hidden>+</span>
-                </button>
+                <h3>
+                  <button onClick={() => setOpen(open === i ? null : i)} className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left group min-h-[56px]" aria-expanded={open === i} aria-controls={`faq-answer-${i}`}>
+                    <span className={`font-semibold text-sm transition-colors duration-200 ${open === i ? 'text-accent' : 'text-fg group-hover:text-accent'}`}>{faq.q}</span>
+                    <span className={`shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-sm transition-all duration-200 ${open === i ? 'bg-accent text-white rotate-45' : 'bg-bg-2 text-fg-muted'}`} aria-hidden>+</span>
+                  </button>
+                </h3>
                 {/* Always rendered (not mount/unmount on open) so every answer is real,
                     crawlable DOM text on first paint, not just JSON-LD/hydration data. */}
                 <motion.div

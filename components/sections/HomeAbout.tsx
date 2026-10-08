@@ -31,7 +31,6 @@ export default function HomeAbout() {
                 fill
                 className="object-cover object-top"
                 sizes="(max-width: 768px) 100vw, 50vw"
-                priority
               />
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-accent to-blue-400" />
             </div>

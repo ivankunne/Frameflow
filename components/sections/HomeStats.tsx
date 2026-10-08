@@ -1,14 +1,18 @@
 'use client'
 
 import { useRef, useEffect, useState } from 'react'
-import { motion, useInView } from 'framer-motion'
+import { motion, useInView, useReducedMotion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 
+// Starts at the final value so the server-rendered HTML carries the real number;
+// the count-up runs while the card is still fading in from opacity 0.
 function Counter({ target, suffix, trigger }: { target: number; suffix: string; trigger: boolean }) {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(target)
+  const reduceMotion = useReducedMotion()
   useEffect(() => {
-    if (!trigger) return
+    if (!trigger || reduceMotion) return
     let frame = 0
+    setCount(0)
     const totalFrames = 80
     const id = setInterval(() => {
       frame++
@@ -17,7 +21,7 @@ function Counter({ target, suffix, trigger }: { target: number; suffix: string; 
       if (frame >= totalFrames) clearInterval(id)
     }, 16)
     return () => clearInterval(id)
-  }, [trigger, target])
+  }, [trigger, target, reduceMotion])
   return <span>{count}{suffix}</span>
 }
 
