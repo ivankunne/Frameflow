@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { JsonLd } from '@/components/JsonLd'
 import { blogPosts } from '@/lib/data'
 import BloggClient from './BloggClient'
@@ -46,6 +46,7 @@ const collectionPageSchema = {
 
 export default async function BloggPage({ params }: Props) {
   const { locale } = await params
+  setRequestLocale(locale)
   const breadcrumbSchema = buildBreadcrumbSchema(locale, [
     HOME_CRUMB,
     { name: 'Blogg', nameEn: 'Blog', noPath: '/blogg', enPath: '/blog' },

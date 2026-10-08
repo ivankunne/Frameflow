@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { JsonLd, personSchema } from '@/components/JsonLd'
 import OmOssClient from '@/components/OmOssClient'
 import { buildAlternates, buildBreadcrumbSchema, HOME_CRUMB, ogLocale } from '@/lib/seo'
+import { setRequestLocale } from 'next-intl/server'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -43,6 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function OmOssPage({ params }: Props) {
   const { locale } = await params
+  setRequestLocale(locale)
   const breadcrumbSchema = buildBreadcrumbSchema(locale, [
     HOME_CRUMB,
     { name: 'Om oss', nameEn: 'About', noPath: '/om-oss', enPath: '/about' },
