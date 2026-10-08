@@ -197,7 +197,7 @@ Kjenner du deg igjen i ett eller to av tegnene, holder det ofte å utbedre akkur
 
 ### Hva koster en ny nettside i Bergen?
 
-For en middels stor til stor bedriftsnettside fra et lokalt byrå ligger prisen typisk i området 35 000–120 000 kr, avhengig av omfang. Trenger du noe enklere, starter nettsider fra 15 000 kr. Vi har en egen prisoversikt som bryter ned hva som påvirker prisen for Bergen-markedet.
+Prisen varierer mye med omfang og hvem som bygger den – fra enklere løsninger fra 15 000 kr til store skreddersydde prosjekter. Vi har brutt ned hele [prisbildet for nettsider i Bergen](/blogg/nettside-pris-bergen) i en egen guide, med konkrete priser for hvert nivå.
 
 ### Hvor lang tid tar det å lage en ny nettside?
 
@@ -429,7 +429,7 @@ Nå – og først nå – kommer det visuelle. Godt webdesign følger merkevaren
 
 - Tydelig verditilbud øverst på siden, forståelig innen fem sekunder
 - Én klar call-to-action som gjentas strategisk
-- Mobil først – over 60 % av trafikken til de fleste bedriftsnettsteder kommer fra mobil
+- Mobil først – de fleste besøkende kommer fra telefonen sin, ikke en datamaskin
 - Nok luft, lesbar typografi og en visuell hierarki som leder øyet
 
 Vil du gå dypere i hva som skiller en nettside som selger fra en som bare ser fin ut, har vi skrevet om de [seks elementene i en nettside som konverterer](/blogg/webdesign-bergen-nettside-som-konverterer).
@@ -472,11 +472,11 @@ Et tydelig mål, en idé om hvilke sider du trenger, og innhold – tekst, bilde
 
 ### Kan jeg oppdatere nettsiden selv etterpå?
 
-Ja. På moderne plattformer som Webflow kan du trygt endre tekst og bilder selv i en brukervennlig redaktørmodus, uten teknisk kunnskap og uten å risikere å ødelegge designet.
+Ja. Alle nettsider vi bygger leveres med et CMS du logger deg inn i selv, slik at du kan oppdatere tekst og bytte ut bilder når som helst – uten å måtte kontakte en utvikler for små endringer.
 
 ### Hva koster det å lage en profesjonell nettside?
 
-Hos et byrå starter en enklere skreddersydd bedriftsnettside fra 15 000 kr, mens middels store til store prosjekter typisk ligger i området 35 000–120 000 kr, avhengig av antall sider og funksjonalitet. Se den fullstendige [prisoversikten](/blogg/nettside-pris-bergen) for detaljer.
+Prisen starter fra 15 000 kr hos et byrå og øker med antall sider, funksjonalitet og innholdsarbeid. Se den fullstendige [prisoversikten for nettsider i Bergen](/blogg/nettside-pris-bergen) for et konkret bilde av hva ulike prosjektstørrelser koster.
 
 ## Klar for å lage en ny nettside?
 
@@ -831,7 +831,7 @@ Du bør eie domenet, hostingkontoen og kildekoden til nettsiden. Noen byrå lås
 | Løsning | Pris |
 |---|---|
 | Malbasert nettside (Wix/Squarespace) | 5 000–15 000 kr |
-| WordPress-nettside med tilpassing | 15 000–45 000 kr |
+| WordPress-nettside med tilpassing | 18 000–50 000 kr |
 | Skreddersydd nettside med SEO | 45 000–150 000 kr |
 | Webapplikasjon / kompleks løsning | 100 000–500 000 kr |
 
