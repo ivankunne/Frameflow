@@ -5,7 +5,7 @@ import { motion, useInView } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
-import { getProject } from '@/lib/data'
+import type { Project } from '@/lib/data'
 
 function HoOrbitPreview({ visible }: { visible: boolean }) {
   return (
@@ -24,7 +24,7 @@ function HoOrbitPreview({ visible }: { visible: boolean }) {
   )
 }
 
-export default function HomeProjects() {
+export default function HomeProjects({ images }: { images: Record<string, Project['image']> }) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-80px' })
   const t = useTranslations('home.projects')
@@ -60,7 +60,7 @@ export default function HomeProjects() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {projects.map(({ slug, title, description, tags, result, color, Preview }, i) => {
-            const image = getProject(slug)?.image
+            const image = images[slug]
             return (
             <motion.div key={slug} initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}>
               <Link href={{ pathname: '/prosjekter/[slug]', params: { slug } }} className="group block bg-white border border-border rounded-2xl p-6 hover:border-accent transition-all duration-250 hover:shadow-blue-sm h-full">

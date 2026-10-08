@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { JsonLd, personSchema } from '@/components/JsonLd'
 import { buildAlternates, buildBreadcrumbSchema, HOME_CRUMB, ogLocale, schemaLanguage } from '@/lib/seo'
+import { getProject } from '@/lib/data'
 
 import HomeHero from '@/components/sections/HomeHero'
 
@@ -79,6 +80,11 @@ export default async function HomePage({ params }: Props) {
   setRequestLocale(locale)
   const breadcrumbSchema = buildBreadcrumbSchema(locale, [HOME_CRUMB])
   const faqSchema = await buildHomeFaqSchema(locale)
+  // Resolved here so lib/data.ts (all blog post bodies) stays out of the client bundle.
+  const projectImages = {
+    'h-orbit': getProject('h-orbit')?.image,
+    betlehem: getProject('betlehem')?.image,
+  }
   return (
     <>
       <JsonLd data={breadcrumbSchema} />
@@ -89,7 +95,7 @@ export default async function HomePage({ params }: Props) {
       <HomeServices />
       <HomeAbout />
       <HomeProcess />
-      <HomeProjects />
+      <HomeProjects images={projectImages} />
       <HomeTestimonials />
       <HomeFAQ />
       <HomeCTA />
