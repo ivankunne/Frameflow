@@ -7,6 +7,17 @@ import { Link } from '@/i18n/navigation'
 
 type Step = 1 | 2 | 3
 
+const SERVICE_ICONS: Record<string, React.ReactNode> = {
+  webdesign: <><rect x="3" y="4" width="18" height="12" rx="2" /><path d="M8 20h8M12 16v4" /></>,
+  'app-utvikling': <><rect x="7" y="3" width="10" height="18" rx="2" /><path d="M11 18h2" /></>,
+  seo: <><circle cx="11" cy="11" r="6" /><path d="M20 20l-4.5-4.5" /></>,
+  markedsforing: <><path d="M3 10v4a1 1 0 001 1h2l5 4V5L6 9H4a1 1 0 00-1 1z" /><path d="M15 9a3 3 0 010 6M18 6a7 7 0 010 12" /></>,
+  'foto-video': <><path d="M4 8h3l2-2h6l2 2h3a1 1 0 011 1v9a1 1 0 01-1 1H4a1 1 0 01-1-1V9a1 1 0 011-1z" /><circle cx="12" cy="13" r="3.5" /></>,
+  'sosiale-medier': <path d="M4 5h16a1 1 0 011 1v10a1 1 0 01-1 1h-9l-5 4v-4H4a1 1 0 01-1-1V6a1 1 0 011-1z" />,
+  branding: <path d="M12 3l2.5 5.5L20 11l-5.5 2.5L12 19l-2.5-5.5L4 11l5.5-2.5z" />,
+  usikker: <><circle cx="12" cy="12" r="9" /><path d="M9.5 9.5a2.5 2.5 0 015 0c0 1.5-2.5 2-2.5 3.5M12 17h.01" /></>,
+}
+
 export default function TilbudClient() {
   const t = useTranslations('quote')
   const heroRef = useRef(null)
@@ -25,9 +36,13 @@ export default function TilbudClient() {
 
   const services = [
     { id: 'webdesign', label: t('service1Label'), description: t('service1Desc') },
+    { id: 'app-utvikling', label: t('serviceAppLabel'), description: t('serviceAppDesc') },
+    { id: 'seo', label: t('serviceSeoLabel'), description: t('serviceSeoDesc') },
+    { id: 'markedsforing', label: t('serviceMarketingLabel'), description: t('serviceMarketingDesc') },
     { id: 'foto-video', label: t('service2Label'), description: t('service2Desc') },
     { id: 'sosiale-medier', label: t('service3Label'), description: t('service3Desc') },
     { id: 'branding', label: t('service4Label'), description: t('service4Desc') },
+    { id: 'usikker', label: t('serviceUnsureLabel'), description: t('serviceUnsureDesc') },
   ]
 
   const budgets = [
@@ -249,16 +264,43 @@ export default function TilbudClient() {
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10">
                           {services.map((service) => {
                             const selected = selectedServices.includes(service.id)
+                            const unsure = service.id === 'usikker'
                             return (
                               <button
                                 key={service.id}
+                                type="button"
+                                aria-pressed={selected}
                                 onClick={() => toggleService(service.id)}
-                                className={`p-5 rounded-xl border text-left transition-all duration-200 min-h-[80px] ${
-                                  selected ? 'border-accent bg-accent-light shadow-blue-sm' : 'border-border bg-bg shadow-card hover:border-accent/40'
+                                className={`group relative flex items-start gap-3.5 p-4 pr-10 rounded-xl border text-left transition-all duration-200 min-h-[84px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 ${
+                                  selected
+                                    ? 'border-accent bg-accent-light shadow-blue-sm'
+                                    : unsure
+                                      ? 'border-dashed border-border bg-bg-2 hover:border-accent/50'
+                                      : 'border-border bg-bg shadow-card hover:border-accent/40 hover:-translate-y-0.5 motion-reduce:hover:translate-y-0'
                                 }`}
                               >
-                                <p className="font-semibold text-fg text-sm mb-1">{service.label}</p>
-                                <p className="text-xs text-fg-muted">{service.description}</p>
+                                <span
+                                  aria-hidden
+                                  className={`w-10 h-10 rounded-lg flex items-center justify-center shrink-0 transition-colors duration-200 ${
+                                    selected ? 'bg-accent text-white' : 'bg-accent-light text-accent group-hover:bg-accent/15'
+                                  }`}
+                                >
+                                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+                                    {SERVICE_ICONS[service.id]}
+                                  </svg>
+                                </span>
+                                <span className="flex flex-col">
+                                  <span className="font-semibold text-fg text-sm mb-1">{service.label}</span>
+                                  <span className="text-xs text-fg-muted leading-relaxed">{service.description}</span>
+                                </span>
+                                <span
+                                  aria-hidden
+                                  className={`absolute top-3 right-3 w-5 h-5 rounded-full flex items-center justify-center transition-all duration-200 ${
+                                    selected ? 'bg-accent text-white' : 'border border-border bg-bg text-transparent'
+                                  }`}
+                                >
+                                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5.5l2 2L8 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                                </span>
                               </button>
                             )
                           })}

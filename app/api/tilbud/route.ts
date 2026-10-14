@@ -8,7 +8,7 @@ const MAX_COMPANY     = 200
 const MAX_DESCRIPTION = 4000
 
 // ── Allowed enum values ───────────────────────────────────────────────────────
-const VALID_SERVICES: readonly string[]  = ['webdesign', 'foto-video', 'sosiale-medier', 'branding']
+const VALID_SERVICES: readonly string[]  = ['webdesign', 'app-utvikling', 'seo', 'markedsforing', 'foto-video', 'sosiale-medier', 'branding', 'usikker']
 const VALID_BUDGETS:  readonly string[]  = ['under-10k', '10-25k', '25-50k', 'over-50k']
 const VALID_TIMELINES: readonly string[] = ['asap', '1-2mnd', '3-6mnd', 'fleksibel']
 
@@ -43,9 +43,13 @@ function isRateLimited(ip: string): boolean {
 // ── Human-readable labels (safe, hardcoded — never user-controlled) ───────────
 const SERVICE_LABELS: Record<string, string> = {
   webdesign:       'Web design',
+  'app-utvikling': 'App utvikling',
+  seo:             'SEO',
+  markedsforing:   'Markedsføring',
   'foto-video':    'Foto og video',
   'sosiale-medier':'Sosiale medier',
   branding:        'Branding',
+  usikker:         'Usikker – trenger hjelp til å velge',
 }
 const BUDGET_LABELS: Record<string, string> = {
   'under-10k': 'Under 10 000 kr',
