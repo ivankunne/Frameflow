@@ -85,6 +85,7 @@ export default async function WebdesignPage({ params }: Props) {
         includes={c.includes}
         process={c.process}
         relatedServices={c.relatedServices}
+        relatedProjectSlug={c.relatedProjectSlug}
         relatedBlogSlug={c.relatedBlogSlug}
         mockupType="web"
         pricingFrom={c.pricingFrom}

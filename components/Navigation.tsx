@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { usePathname, useRouter, Link } from '@/i18n/navigation'
+import { usePathname, Link } from '@/i18n/navigation'
 import { useParams } from 'next/navigation'
 import { useLocale, useTranslations } from 'next-intl'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -26,7 +26,7 @@ const LANGUAGES = [
   { code: 'en', flag: '/united-kingdom.png', label: 'English' },
 ] as const
 
-function LangDropdown({ locale, onSwitch }: { locale: string; onSwitch: (code: string) => void }) {
+function LangDropdown({ locale, pathname, params }: { locale: string; pathname: string; params: Record<string, string | string[]> }) {
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
 
@@ -57,41 +57,42 @@ function LangDropdown({ locale, onSwitch }: { locale: string; onSwitch: (code: s
           <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
         </svg>
       </button>
-      <AnimatePresence>
-        {open && (
-          <motion.ul
-            initial={{ opacity: 0, y: -6, scale: 0.97 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -6, scale: 0.97 }}
-            transition={{ duration: 0.15 }}
-            role="listbox"
-            className="absolute right-0 mt-1.5 w-36 bg-bg border border-border rounded-xl shadow-card-hover overflow-hidden z-50"
-          >
-            {LANGUAGES.map(lang => (
-              <li key={lang.code}>
-                <button
-                  role="option"
-                  aria-selected={locale === lang.code}
-                  onClick={() => { onSwitch(lang.code); setOpen(false) }}
-                  className={`w-full flex items-center gap-2.5 px-3.5 py-2.5 text-sm transition-colors ${
-                    locale === lang.code
-                      ? 'bg-accent/10 text-accent font-semibold'
-                      : 'text-fg hover:bg-bg-2 font-medium'
-                  }`}
-                >
-                  <Image src={lang.flag} alt={lang.label} width={18} height={18} className="rounded-sm object-cover shrink-0" />
-                  <span>{lang.label}</span>
-                  {locale === lang.code && (
-                    <svg className="ml-auto w-3.5 h-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                  )}
-                </button>
-              </li>
-            ))}
-          </motion.ul>
-        )}
-      </AnimatePresence>
+      <motion.ul
+        initial={false}
+        animate={{ opacity: open ? 1 : 0, y: open ? 0 : -6, scale: open ? 1 : 0.97 }}
+        transition={{ duration: 0.15 }}
+        role="listbox"
+        aria-hidden={!open}
+        className={`absolute right-0 mt-1.5 w-36 bg-bg border border-border rounded-xl shadow-card-hover overflow-hidden z-50 ${
+          open ? '' : 'pointer-events-none'
+        }`}
+      >
+        {LANGUAGES.map(lang => (
+          <li key={lang.code}>
+            <Link
+              href={{ pathname, params } as any}
+              locale={lang.code}
+              role="option"
+              aria-selected={locale === lang.code}
+              tabIndex={open ? undefined : -1}
+              onClick={() => setOpen(false)}
+              className={`w-full flex items-center gap-2.5 px-3.5 py-2.5 text-sm transition-colors ${
+                locale === lang.code
+                  ? 'bg-accent/10 text-accent font-semibold'
+                  : 'text-fg hover:bg-bg-2 font-medium'
+              }`}
+            >
+              <Image src={lang.flag} alt={lang.label} width={18} height={18} className="rounded-sm object-cover shrink-0" />
+              <span>{lang.label}</span>
+              {locale === lang.code && (
+                <svg className="ml-auto w-3.5 h-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              )}
+            </Link>
+          </li>
+        ))}
+      </motion.ul>
     </div>
   )
 }
@@ -101,7 +102,6 @@ export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false)
   const pathname = usePathname()
   const params = useParams()
-  const router = useRouter()
   const locale = useLocale()
   const t = useTranslations('nav')
 
@@ -111,13 +111,6 @@ export default function Navigation() {
     { href: '/prosjekter' as const, label: t('projects') },
     { href: '/blogg' as const, label: t('blog') },
   ]
-
-  const switchLocale = (code: string) => {
-    // Pass the internal pathname together with the current route params so
-    // next-intl can re-localize dynamic routes (e.g. /prosjekter/[slug]).
-    // Passing the bare pathname string would navigate to a literal "[slug]" → 404.
-    router.replace({ pathname, params } as any, { locale: code })
-  }
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -171,7 +164,7 @@ export default function Navigation() {
 
           {/* Desktop CTA + lang switcher */}
           <div className="hidden md:flex items-center gap-3">
-            <LangDropdown locale={locale} onSwitch={switchLocale} />
+            <LangDropdown locale={locale} pathname={pathname} params={params as any} />
             <Link
               href="/kontakt"
               className="text-sm font-semibold text-fg hover:text-accent border border-fg/15 hover:border-accent/50 bg-bg-2 px-5 py-2 rounded-lg transition-all min-h-[44px] flex items-center shadow-card"
@@ -215,7 +208,7 @@ export default function Navigation() {
               <Link href="/" aria-label={t('backToHome')}>
                 <Wordmark />
               </Link>
-              <LangDropdown locale={locale} onSwitch={switchLocale} />
+              <LangDropdown locale={locale} pathname={pathname} params={params as any} />
             </div>
 
             <nav className="flex flex-col gap-2">

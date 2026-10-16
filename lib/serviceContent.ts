@@ -58,6 +58,7 @@ export const webdesign: Record<'no' | 'en', ServiceContent> = {
       { title: 'SEO', href: '/tjenester/seo' },
       { title: 'Branding', href: '/tjenester/branding' },
     ],
+    relatedProjectSlug: 'sportsbytte',
     relatedBlogSlug: 'webdesign-bergen-nettside-som-konverterer',
     pricingFrom: '15 000 kr',
     faqs: [
@@ -103,6 +104,7 @@ export const webdesign: Record<'no' | 'en', ServiceContent> = {
       { title: 'SEO', href: '/tjenester/seo' },
       { title: 'Branding', href: '/tjenester/branding' },
     ],
+    relatedProjectSlug: 'sportsbytte',
     relatedBlogSlug: 'webdesign-bergen-nettside-som-konverterer',
     pricingFrom: 'NOK 15,000',
     faqs: [
@@ -613,6 +615,7 @@ export const branding: Record<'no' | 'en', ServiceContent> = {
       { title: 'Foto og videografi', href: '/tjenester/foto-og-videografi' },
       { title: 'Sosiale medier', href: '/tjenester/sosiale-medier' },
     ],
+    relatedProjectSlug: 'sportsbytte',
     relatedBlogSlug: 'branding-bergen-bygg-merkevare-som-skiller-seg-ut',
     pricingFrom: '8 000 kr',
     faqs: [
@@ -659,6 +662,7 @@ export const branding: Record<'no' | 'en', ServiceContent> = {
       { title: 'Photo & video', href: '/tjenester/foto-og-videografi' },
       { title: 'Social media', href: '/tjenester/sosiale-medier' },
     ],
+    relatedProjectSlug: 'sportsbytte',
     relatedBlogSlug: 'branding-bergen-bygg-merkevare-som-skiller-seg-ut',
     pricingFrom: 'NOK 8,000',
     faqs: [

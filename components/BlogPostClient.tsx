@@ -189,7 +189,7 @@ export default function BlogPostClient({
                 href={post.relatedService.href as any}
                 className="text-sm font-semibold text-accent hover:text-accent-hover flex items-center gap-1.5 transition-colors shrink-0"
               >
-                Les mer →
+                Les mer om {post.relatedService.title} →
               </Link>
             </div>
           )}

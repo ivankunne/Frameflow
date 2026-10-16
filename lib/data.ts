@@ -854,7 +854,7 @@ Det er fristende å velge et stort oslobyrå med imponerende referanser. Men for
 ✅ Leverer kode og design du eier fullt ut
 ✅ Har supportavtale etter lansering
 
-Vil du ha en uforpliktende prat om hva slags nettside som passer din bedrift? Se vår [webdesign-tjeneste i Bergen](/tjenester/webdesign) – eller [ta kontakt](/kontakt) for en gratis prat. Vi leverer nettsider med [SEO](/tjenester/seo) innebygd fra dag én.
+Vil du ha en uforpliktende prat om hva slags nettside som passer din bedrift? Se vår [webdesign-tjeneste i Bergen](/tjenester/webdesign) – eller [ta kontakt](/kontakt) for en gratis prat. Vi leverer nettsider med [SEO](/tjenester/seo) innebygd fra dag én. Vurderer du et bredere markedsføringsbyrå fremfor et rendyrket webbyrå? Vår guide til [å velge markedsføringsbyrå i Bergen](/blogg/beste-markedsforingsbyraa-bergen-2025) går gjennom de samme vurderingene for et bredere tjenestespekter.
 `,
   },
   {
@@ -1480,6 +1480,7 @@ Se hva vi tilbyr på våre [tjenestesider](/tjenester), eller book en gratis sam
     slug: 'app-utvikling-pris-bergen-2026',
     title: 'Hva koster apputvikling i Bergen? Komplett prisguide 2026',
     excerpt: 'Prisen på en app varierer enormt – fra 45 000 kr for en MVP til 500 000+ for fullskala løsninger. Her er hva som påvirker prisen og hva du får for pengene.',
+    metaTitle: 'Pris for apputvikling i Bergen – guide 2026',
     category: 'App utvikling',
     date: '8. mai 2026',
     updatedAt: '2026-05-08',
@@ -1641,6 +1642,7 @@ Hos Frameflow integrerer vi SEO i alt vi gjør – nettsider bygges med SEO fra 
     slug: 'logo-design-bergen',
     title: 'Logo design i Bergen: Hva koster det og hva bør du forvente?',
     excerpt: 'Kjøperguide for Bergen-bedrifter: hva koster logodesign, hva bør leveransen inkludere, og hvilke spørsmål du MÅ stille designeren din.',
+    metaTitle: 'Hva koster logodesign i Bergen? Pris og forventninger 2026',
     category: 'Branding',
     date: '8. mai 2026',
     updatedAt: '2026-05-08',
