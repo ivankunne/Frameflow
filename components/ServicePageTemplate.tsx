@@ -335,7 +335,8 @@ export default function ServicePageTemplate({
             </span>
             <h2 className="display-text text-3xl sm:text-4xl text-fg">{t('processLabel')}</h2>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* 4 steps would leave one orphan card on a 3-column row, so give them their own row. */}
+          <div className={`grid grid-cols-1 md:grid-cols-2 gap-6 ${process.length === 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'}`}>
             {process.map((step, i) => (
               <motion.div
                 key={step.step}
