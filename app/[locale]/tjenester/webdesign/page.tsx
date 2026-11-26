@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { webdesign } from '@/lib/serviceContent'
 import ServicePageTemplate from '@/components/ServicePageTemplate'
+import WebdesignSections from '@/components/WebdesignSections'
+import { webdesignGuide } from '@/lib/webdesignGuideContent'
 import { JsonLd } from '@/components/JsonLd'
 import { buildAlternates, buildBreadcrumbSchema, HOME_CRUMB, SERVICES_CRUMB, ogLocale, schemaLanguage } from '@/lib/seo'
 import IndustriesShowcase from '@/components/IndustriesShowcase'
@@ -85,11 +87,13 @@ export default async function WebdesignPage({ params }: Props) {
         includes={c.includes}
         process={c.process}
         relatedServices={c.relatedServices}
+        relatedProjectSlug={c.relatedProjectSlug}
         relatedBlogSlug={c.relatedBlogSlug}
         mockupType="web"
         pricingFrom={c.pricingFrom}
         faqs={c.faqs}
       >
+        <WebdesignSections content={webdesignGuide[lang]} />
         <IndustriesShowcase locale={locale} />
       </ServicePageTemplate>
     </>
