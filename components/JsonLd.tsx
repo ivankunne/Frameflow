@@ -58,6 +58,12 @@ export const organizationSchema = {
       opens: '07:00',
       closes: '18:00',
     },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Saturday', 'Sunday'],
+      opens: '11:00',
+      closes: '16:00',
+    },
   ],
   sameAs: [
     'https://www.instagram.com/frameflow_no/',
