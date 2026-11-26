@@ -652,9 +652,9 @@ export function AIMockup({ visible }: { visible: boolean }) {
 // ─── SEO: Google Search Console style ranking dashboard ───────────────────
 export function SEOMockup({ visible }: { visible: boolean }) {
   const results = [
-    { rank: 1, title: 'Frameflow – Markedsføringsbyrå Bergen', url: 'frameflow.no', highlight: true },
+    { rank: 1, title: 'Frameflow – SEO-byrå i Bergen', url: 'frameflow.no', highlight: true },
     { rank: 2, title: 'Annet byrå i Bergen', url: 'example.no', highlight: false },
-    { rank: 3, title: 'Digital markedsføring Bergen', url: 'eksempel.no', highlight: false },
+    { rank: 3, title: 'Søkemotoroptimalisering Bergen', url: 'eksempel.no', highlight: false },
   ]
   const bars = [22, 35, 28, 48, 42, 60, 55, 74, 68, 88]
 
@@ -668,7 +668,7 @@ export function SEOMockup({ visible }: { visible: boolean }) {
           <div className="w-2 h-2 rounded-full bg-[#28c840]" />
         </div>
         <div className="flex-1 bg-white border border-border/60 rounded-full px-3 py-0.5 flex items-center gap-2">
-          <span className="text-[9px] text-fg-muted font-mono">google.com · markedsføring Bergen</span>
+          <span className="text-[9px] text-fg-muted font-mono">google.com · seo bergen</span>
         </div>
       </div>
 

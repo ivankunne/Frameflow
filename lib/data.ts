@@ -921,7 +921,7 @@ Mange bedrifter har metabeskrivelser uten å nevne Bergen – en enorm bortkaste
 
 Lokal SEO er en investering. Med konsekvent innsats kan du forvente synlig forbedring innen 3–6 måneder, og etablert lokal autoritet innen et år.
 
-Har du spørsmål om [lokal SEO i Bergen](/tjenester/seo) for din Bergen-bedrift? Ta gjerne kontakt med oss for en gratis gjennomgang. Vurderer du å sette bort jobben i stedet, kan det være verdt å lese hva et [SEO-byrå i Bergen koster](/blogg/seo-byraa-bergen) før du bestemmer deg.
+Har du spørsmål om lokal SEO for din Bergen-bedrift? Ta gjerne kontakt med oss for en gratis gjennomgang. Vurderer du å sette bort jobben i stedet, se hva et [SEO-byrå i Bergen](/tjenester/seo) koster og hva du bør kreve før du bestemmer deg.
     `.trim(),
   },
   {
@@ -1553,88 +1553,6 @@ Når du kontakter et apputviklingsbyrå i Bergen, bør tilbudet alltid inkludere
 Frameflow bygger skreddersydde apper for Bergen-bedrifter. Vi gir alltid fast pris, starter med MVP, og leverer kode du eier. Priser fra 45 000 kr.
 
 Les mer om vår [apputvikling i Bergen](/tjenester/app-utvikling), eller ta kontakt for en gratis samtale om prosjektet ditt – du får et konkret prisestimat innen 24 timer. Mange app-prosjekter starter med et [nettsted som konverterer](/tjenester/webdesign) – vi tilbyr begge deler under ett tak.
-    `.trim(),
-  },
-  {
-    slug: 'seo-byraa-bergen',
-    title: 'SEO-byrå i Bergen: Hva koster det og hva bør du forvente?',
-    excerpt: 'Vurderer du å sette bort SEO-arbeidet? En uavhengig oversikt over priser, hva som gir resultater, og spørsmålene du bør stille før du signerer.',
-    metaTitle: 'Hva koster et SEO-byrå i Bergen? Pris og forventninger 2026',
-    category: 'SEO',
-    date: '8. mai 2026',
-    updatedAt: '2026-05-08',
-    readTime: '7 min',
-    relatedService: { title: 'SEO', href: '/tjenester/seo' },
-    image: { src: '/blog/seo-byraa-bergen.png', alt: 'Illustrasjon av et SEO-byrås arbeid med søkemotoroptimalisering og rangering' },
-    content: `
-Vurderer du allerede å outsource SEO-arbeidet? Se hva som inngår i [Frameflows SEO-tjeneste i Bergen](/tjenester/seo) og få et konkret pristilbud – eller fortsett å lese for en uavhengig oversikt over hva du bør se etter i et byrå, uansett hvem du velger.
-
-## Hva gjør et SEO-byrå i Bergen?
-
-Et SEO-byrå hjelper bedriften din å rangere høyere på Google for søkeord potensielle kunder faktisk bruker. For Bergen-bedrifter handler dette primært om lokal SEO – å dukke opp når noen søker «[din tjeneste] Bergen».
-
-En god SEO-pakke fra et Bergen-byrå dekker typisk:
-
-- **Teknisk SEO:** Hastighet, mobiloptimalisering, strukturert data, canonical-tagger
-- **On-page SEO:** Titler, metabeskrivelser, H1-struktur, intern lenkebygging
-- **Innhold:** Bloggposter og landingssider rettet mot søkeord du vil rangere på
-- **Lokal SEO:** Google Business Profile, NAP-konsistens, lokale sitering
-
-## Hva koster SEO-tjenester i Bergen?
-
-Her er et realistisk bilde av prisnivåene du vil møte:
-
-| Tjenestenivå | Månedlig pris | Hva du får |
-|---|---|---|
-| Grunnleggende SEO | 2 000 – 4 000 kr/mnd | Teknisk oppsett, månedlig rapport |
-| Standard SEO-pakke | 5 000 – 12 000 kr/mnd | Teknisk + innhold + rapportering |
-| Fullservice SEO | 12 000 – 30 000 kr/mnd | Alt inkludert, tett oppfølging |
-| Engangsoppsett | 8 000 – 25 000 kr | Teknisk SEO, ingen løpende arbeid |
-
-Merk: Billigste alternativ er ikke alltid best. SEO som leverer reelle resultater krever tid og kompetanse – det finnes ingen snarvei.
-
-## Hva skiller et godt SEO-byrå fra et dårlig?
-
-### De gode:
-- Viser deg faktiske rangeringer og trafikktall
-- Forklarer hva de gjør og hvorfor
-- Gir realistiske forventninger (SEO tar tid – typisk 3–6 måneder)
-- Rapporterer på resultater, ikke bare aktivitet
-- Eier ikke domenene dine eller holder deg «låst inne»
-
-### De dårlige:
-- Lover side 1 på Google innen 30 dager (urealistisk)
-- Er vage om metodene sine
-- Selger «100 backlinks» for billig pris (risikabelt)
-- Rapporterer på «aktivitet» (antall timer, innlegg) fremfor resultater
-
-## Lokal SEO vs. nasjonal SEO – hva trenger du?
-
-For de fleste Bergen-bedrifter er **lokal SEO** den høyest-prioriterte investeringen – vil du gjøre mye av det selv, tar vår [komplette guide til lokal SEO](/blogg/lokal-seo-bergen-guide-2025) deg gjennom stegene. Det handler om å dominere søk som:
-
-- «tannlege Bergen»
-- «webdesign byrå Bergen»
-- «regnskapsfører Bergenhus»
-- «restaurant Sandviken»
-
-Nasjonal SEO (konkurrere på søkeord uten by-navn) er langt vanskeligere og dyrere – og ofte unødvendig for lokale Bergen-bedrifter.
-
-## Google Business Profile – det viktigste SEO-grepet du kan ta gratis
-
-Før du betaler et SEO-byrå en krone: sørg for at Google Business Profile er 100 % komplett og oppdatert. Det er det enkeltgrepet som gir mest lokal synlighet for minst innsats – følg vår [optimeringsguide for Google Business Profile](/blogg/google-my-business-bergen-guide) for å gjøre det riktig.
-
-Sjekkliste:
-- Riktig kategori
-- Oppdaterte åpningstider
-- Profesjonelle bilder (minst 5–10)
-- Svar på alle anmeldelser
-- Legg inn Bergen i beskrivelsesteksten
-
-## Hva Frameflow leverer
-
-Hos Frameflow integrerer vi SEO i alt vi gjør – nettsider bygges med SEO fra dag én, ikke som ettertanke. Vi setter opp strukturert data, teknisk SEO og Google Search Console som standard på alle prosjekter.
-
-Ønsker du en gjennomgang av SEO-situasjonen din? Les mer om vår [SEO-tjeneste i Bergen](/tjenester/seo), eller book en gratis samtale – vi ser raskt hva som kan forbedres. SEO og en [profesjonell nettside i Bergen](/tjenester/webdesign) henger tett sammen – vi bygger begge med synlighet fra dag én.
     `.trim(),
   },
   {

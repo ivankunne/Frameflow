@@ -100,6 +100,10 @@ const nextConfig: NextConfig = {
       { source: '/blogg/nettside-pris-bergen-2026', destination: '/blogg/nettside-pris-bergen', permanent: true },
       { source: '/en/blog/nettside-pris-bergen-2025', destination: '/en/blog/nettside-pris-bergen', permanent: true },
       { source: '/en/blog/nettside-pris-bergen-2026', destination: '/en/blog/nettside-pris-bergen', permanent: true },
+      // SEO buyer's guide merged into the SEO service page (2026-11-26) to end the
+      // "SEO Bergen" cannibalization — the blog post outranked /tjenester/seo.
+      { source: '/blogg/seo-byraa-bergen', destination: '/tjenester/seo', permanent: true },
+      { source: '/en/blog/seo-byraa-bergen', destination: '/en/services/seo', permanent: true },
       { source: '/contact', destination: '/kontakt', permanent: true },
       { source: '/about-us', destination: '/om-oss', permanent: true },
       { source: '/privacy-policy', destination: '/personvern', permanent: true },

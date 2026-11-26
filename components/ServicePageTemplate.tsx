@@ -22,6 +22,10 @@ interface ServicePageProps {
   relatedBlogSlug?: string
   mockupType: 'web' | 'photo' | 'social' | 'brand' | 'app' | 'seo' | 'ai' | 'aiseo'
   pricingFrom?: string
+  /** Overrides the "per prosjekt, eks. mva" label under the price (e.g. for monthly retainers). */
+  pricingUnit?: string
+  /** Overrides the generic price-factor accordion items with service-specific ones. */
+  pricingFactors?: { title: string; body: string }[]
   faqs?: { q: string; a: string }[]
   children?: React.ReactNode
   /** Overrides the breadcrumb's middle crumb — defaults to "Tjenester"/Services. */
@@ -29,11 +33,11 @@ interface ServicePageProps {
   breadcrumbHref?: string
 }
 
-function PricingAccordion() {
+function PricingAccordion({ items }: { items?: { title: string; body: string }[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
   const t = useTranslations('serviceTemplate')
 
-  const accordionItems = [
+  const accordionItems = items ?? [
     { title: t('factor1Title'), body: t('factor1Desc') },
     { title: t('factor2Title'), body: t('factor2Desc') },
     { title: t('factor3Title'), body: t('factor3Desc') },
@@ -121,6 +125,8 @@ export default function ServicePageTemplate({
   relatedBlogSlug,
   mockupType,
   pricingFrom,
+  pricingUnit,
+  pricingFactors,
   faqs,
   children,
   breadcrumbLabel,
@@ -361,7 +367,7 @@ export default function ServicePageTemplate({
               <div className="bg-white border border-border rounded-xl p-8 shadow-card-hover">
                 <p className="text-xs font-semibold text-fg-muted uppercase tracking-widest mb-3">{t('from')}</p>
                 <p className="display-text text-4xl text-fg mb-2">{pricingFrom}</p>
-                <p className="text-sm text-fg-muted mb-8">{t('perProject')}</p>
+                <p className="text-sm text-fg-muted mb-8">{pricingUnit ?? t('perProject')}</p>
                 <Link
                   href="/kontakt"
                   className="text-sm font-semibold bg-accent hover:bg-accent-hover text-white px-6 py-3 rounded-lg transition-colors min-h-[44px] inline-flex items-center gap-2 shadow-blue-sm"
@@ -372,7 +378,7 @@ export default function ServicePageTemplate({
 
               <div>
                 <p className="text-sm font-semibold text-fg mb-4">{t('priceFactors')}</p>
-                <PricingAccordion />
+                <PricingAccordion items={pricingFactors} />
               </div>
             </div>
           </div>
