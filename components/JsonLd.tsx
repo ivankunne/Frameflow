@@ -43,8 +43,8 @@ export const organizationSchema = {
     latitude: 60.381299,
     longitude: 5.320508,
   },
-  hasMap:
-    'https://www.google.com/maps/search/?api=1&query=Damsg%C3%A5rdsveien+83a+5058+Bergen',
+  // Google Business Profile listing (stable CID link, not a search or share URL)
+  hasMap: 'https://www.google.com/maps?cid=14184770104176190311',
   areaServed: [
     { '@type': 'City', name: 'Bergen' },
     { '@type': 'AdministrativeArea', name: 'Vestland' },
@@ -69,7 +69,7 @@ export const organizationSchema = {
     'https://www.instagram.com/frameflow_no/',
     'https://www.tiktok.com/@frameflow.no',
     'https://www.linkedin.com/in/frameflow-ivan-kunne-612106398/',
-    'https://share.google/Lvsa0adlhzqe8wl5P',
+    'https://www.google.com/maps?cid=14184770104176190311',
     'https://data.brreg.no/enhetsregisteret/api/enheter/936600018',
   ],
   founder: {
