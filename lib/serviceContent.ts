@@ -20,6 +20,10 @@ export type ServiceContent = {
   /** Slug of a lib/data.ts blog post to cross-link from this service page. */
   relatedBlogSlug?: string
   pricingFrom: string
+  /** Overrides the template's "per prosjekt" price label (e.g. monthly retainers). */
+  pricingUnit?: string
+  /** Service-specific price factors; omit to use the template's generic ones. */
+  pricingFactors?: { title: string; body: string }[]
   faqs: { q: string; a: string }[]
 }
 
@@ -216,18 +220,18 @@ export const webflow: Record<'no' | 'en', ServiceContent> = {
 export const seo: Record<'no' | 'en', ServiceContent> = {
   no: {
     meta: {
-      title: 'SEO Bergen – Lokal søkemotoroptimalisering | Frameflow',
-      description: 'Ingen bindingstid. Frameflow hjelper Bergen-bedrifter å rangere høyere på Google med lokal SEO, teknisk optimalisering og innholdsstrategi. Fra 4 500 kr/mnd.',
-      ogTitle: 'SEO Bergen – Lokal søkemotoroptimalisering | Frameflow',
-      ogImageTitle: 'SEO for Bergen-bedrifter',
+      title: 'SEO-byrå Bergen – lokal søkemotoroptimalisering | Frameflow',
+      description: 'SEO-byrå i Bergen uten bindingstid: teknisk SEO, Google Business Profile og innhold som rangerer. Fra 4 500 kr/mnd – se prisnivåer og hva du bør kreve.',
+      ogTitle: 'SEO-byrå Bergen – lokal søkemotoroptimalisering | Frameflow',
+      ogImageTitle: 'SEO-byrå i Bergen',
       ogImageLabel: 'SEO',
-      ogAlt: 'SEO Bergen – Frameflow',
+      ogAlt: 'SEO-byrå i Bergen – Frameflow',
       canonical: 'https://www.frameflow.no/tjenester/seo',
     },
     label: 'Tjeneste',
-    title: 'SEO som gir deg kunder fra Google',
-    description: 'Kort svar: lokal SEO i Bergen fra Frameflow starter fra 4 500 kr/mnd eks. mva., uten bindingstid. Vi hjelper deg til side 1 med teknisk SEO, Google Business Profile og innhold som rangerer.',
-    longDescription: 'Kort svar: SEO fra Frameflow i Bergen koster fra 4 500 kr/mnd, og de fleste ser målbare resultater innen 3–6 måneder. SEO er ikke en engangsoppgave – det er et kontinuerlig arbeid som bygger synlighet over tid. Vi starter med teknisk revisjon, kartlegger søkeordene kundene dine bruker, og lager innhold som treffer dem. Vi spesialiserer oss på lokal SEO for Bergen og Vestland, der du har størst sjanse til å slå konkurrentene raskt.',
+    title: 'SEO-byrå i Bergen – søkemotoroptimalisering som gir kunder',
+    description: 'Frameflow er et SEO-byrå i Bergen som hjelper lokale bedrifter å bli funnet på Google – med teknisk SEO, Google Business Profile og innhold som treffer det kundene dine faktisk søker etter.',
+    longDescription: 'Søkemotoroptimalisering er løpende arbeid, ikke en engangsjobb. Vi starter med en teknisk gjennomgang av nettstedet ditt, kartlegger hvilke søk kundene dine i Bergen bruker, og bygger deretter innhold og lokale signaler som gjør at Google forstår hva du tilbyr og hvor. For de fleste Bergen-bedrifter er lokal SEO den raskeste veien til flere henvendelser: en komplett Google Business Profile, konsistente kontaktopplysninger og sider som svarer på «[tjeneste] Bergen». Du får én fast kontaktperson, en månedlig rapport med faktiske rangeringer og trafikk, og ingen bindingstid.',
     includes: [
       'Teknisk SEO-revisjon og feilretting',
       'Lokal SEO og Google Business Profile',
@@ -252,6 +256,12 @@ export const seo: Record<'no' | 'en', ServiceContent> = {
     relatedProjectSlug: 'betlehem',
     relatedBlogSlug: 'lokal-seo-bergen-guide-2025',
     pricingFrom: '4 500 kr/mnd',
+    pricingUnit: 'per måned, eks. mva · ingen bindingstid',
+    pricingFactors: [
+      { title: 'Konkurransen i bransjen', body: 'Å rangere som tannlege i Bergen krever mer arbeid enn i en nisje med få aktører. Jo hardere konkurranse, jo mer innhold og lenkearbeid trengs.' },
+      { title: 'Antall tjenester og søkeord', body: 'Én tjeneste i Bergen er en mindre jobb enn ti tjenester i hele Vestland. Vi prioriterer søkene som faktisk gir kunder.' },
+      { title: 'Utgangspunktet til nettsiden', body: 'En treg eller teknisk svak nettside må ryddes før innholdsarbeidet gir full effekt. Det avdekker vi i den første revisjonen.' },
+    ],
     faqs: [
       { q: 'Hva koster SEO i Bergen?', a: 'SEO-tjenester fra Frameflow starter fra 4 500 kr/mnd eks. mva. Endelig pris avhenger av konkurransesituasjonen i din bransje, antall søkeord du vil rangere på og hva slags innholdsarbeid som kreves – vi ser på dette sammen i en gratis samtale og gir deg et fast månedlig tilbud uten skjulte kostnader før noe avtales.' },
       { q: 'Hvor lang tid tar det å se resultater fra SEO?', a: 'De fleste Bergen-bedrifter ser målbare forbedringer i løpet av 3–6 måneder. Lokal SEO gir ofte raskere resultater enn nasjonal SEO fordi konkurransen er lavere. Tekniske forbedringer og Google Business Profile-oppsett kan gi synlige resultater innen noen uker.' },
@@ -263,18 +273,18 @@ export const seo: Record<'no' | 'en', ServiceContent> = {
   },
   en: {
     meta: {
-      title: 'SEO Bergen – Local search engine optimisation | Frameflow',
-      description: 'No lock-in. Frameflow helps businesses rank higher on Google with local SEO, technical optimisation and content strategy. From NOK 4,500/mo.',
-      ogTitle: 'SEO Bergen – Local search engine optimisation | Frameflow',
-      ogImageTitle: 'SEO for businesses in Bergen',
+      title: 'SEO Agency Bergen – local search engine optimisation | Frameflow',
+      description: 'SEO agency in Bergen with no lock-in: technical SEO, Google Business Profile and content that ranks. From NOK 4,500/mo — see price levels and what to expect.',
+      ogTitle: 'SEO Agency Bergen – local search engine optimisation | Frameflow',
+      ogImageTitle: 'SEO agency in Bergen',
       ogImageLabel: 'SEO',
-      ogAlt: 'SEO Bergen – Frameflow',
+      ogAlt: 'SEO agency in Bergen – Frameflow',
       canonical: 'https://www.frameflow.no/en/services/seo',
     },
     label: 'Service',
-    title: 'SEO that gets you customers from Google',
-    description: 'Short answer: local SEO in Bergen from Frameflow starts at NOK 4,500/mo excl. VAT, with no lock-in. We help you reach page 1 with technical SEO, Google Business Profile and content that ranks.',
-    longDescription: 'Short answer: SEO from Frameflow in Bergen starts at NOK 4,500/mo, and most clients see measurable results within 3–6 months. SEO is not a one-time task — it is continuous work that builds visibility over time. We start with a technical audit, map the keywords your customers use, and create content that reaches them. We specialise in local SEO for Bergen and Vestland, where you have the best chance of beating competitors quickly.',
+    title: 'SEO agency in Bergen – search engine optimisation that brings customers',
+    description: 'Frameflow is an SEO agency in Bergen that helps local businesses get found on Google — with technical SEO, Google Business Profile and content that matches what your customers actually search for.',
+    longDescription: 'Search engine optimisation is ongoing work, not a one-off job. We start with a technical review of your site, map the searches your customers in Bergen use, and then build content and local signals that help Google understand what you offer and where. For most businesses in Bergen, local SEO is the fastest route to more enquiries: a complete Google Business Profile, consistent contact details and pages that answer "[service] Bergen". You get one fixed point of contact, a monthly report with actual rankings and traffic, and no lock-in.',
     includes: [
       'Technical SEO audit and fixes',
       'Local SEO and Google Business Profile',
@@ -299,6 +309,12 @@ export const seo: Record<'no' | 'en', ServiceContent> = {
     relatedProjectSlug: 'betlehem',
     relatedBlogSlug: 'lokal-seo-bergen-guide-2025',
     pricingFrom: 'NOK 4,500/mo',
+    pricingUnit: 'per month, excl. VAT · no lock-in',
+    pricingFactors: [
+      { title: 'Competition in your industry', body: 'Ranking as a dentist in Bergen takes more work than in a niche with few players. The tougher the competition, the more content and link work is needed.' },
+      { title: 'Number of services and keywords', body: 'One service in Bergen is a smaller job than ten services across Vestland. We prioritise the searches that actually bring customers.' },
+      { title: 'Your website’s starting point', body: 'A slow or technically weak site needs fixing before content work has full effect. We uncover this in the first audit.' },
+    ],
     faqs: [
       { q: 'How much does SEO cost?', a: 'SEO services from Frameflow start from NOK 4,500/mo excl. VAT. The final price depends on competition in your industry, the number of keywords you want to rank for and the amount of content work required — we work through this together in a free call and give you a fixed monthly quote with no hidden costs before anything is agreed.' },
       { q: 'How long does it take to see results from SEO?', a: 'Most businesses see measurable improvements within 3–6 months. Local SEO often gives faster results than national SEO because competition is lower.' },

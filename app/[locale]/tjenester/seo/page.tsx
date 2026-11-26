@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { seo } from '@/lib/serviceContent'
+import { seoGuide } from '@/lib/seoGuideContent'
 import ServicePageTemplate from '@/components/ServicePageTemplate'
+import SeoGuideSections from '@/components/SeoGuideSections'
 import { JsonLd } from '@/components/JsonLd'
 import { buildAlternates, buildBreadcrumbSchema, HOME_CRUMB, SERVICES_CRUMB, ogLocale, schemaLanguage } from '@/lib/seo'
 import { setRequestLocale } from 'next-intl/server'
@@ -15,8 +17,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: m.title,
     description: m.description,
     keywords: lang === 'en'
-      ? ['SEO Bergen', 'local SEO Norway', 'search engine optimisation Bergen', 'Google ranking Bergen', 'Frameflow']
-      : ['SEO Bergen', 'søkemotoroptimalisering Bergen', 'lokal SEO Bergen', 'Google rangering Bergen', 'Frameflow'],
+      ? ['SEO Bergen', 'SEO agency Bergen', 'local SEO Norway', 'search engine optimisation Bergen', 'Frameflow']
+      : ['SEO Bergen', 'SEO-byrå Bergen', 'søkemotoroptimalisering Bergen', 'lokal SEO Bergen', 'Frameflow'],
     alternates: buildAlternates('/tjenester/seo', '/services/seo', locale),
     openGraph: {
       type: 'website',
@@ -85,8 +87,12 @@ export default async function SEOPage({ params }: Props) {
         relatedBlogSlug={c.relatedBlogSlug}
         mockupType="seo"
         pricingFrom={c.pricingFrom}
+        pricingUnit={c.pricingUnit}
+        pricingFactors={c.pricingFactors}
         faqs={c.faqs}
-      />
+      >
+        <SeoGuideSections content={seoGuide[lang]} />
+      </ServicePageTemplate>
     </>
   )
 }
